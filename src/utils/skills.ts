@@ -3,13 +3,14 @@ export const SKILLS = [
 	"JavaScript",
 	"Python",
 	".NET",
-	"HTML",
-	"CSS",
 	"React",
 	"Next.js",
 	"Redux",
+	"React Native",
 	"Tailwind CSS",
 	"SASS",
+	"HTML",
+	"CSS",
 	"Node.js",
 	"Express",
 	"Flask",
@@ -20,8 +21,10 @@ export const SKILLS = [
 	"Testing Library",
 	"Github Actions",
 	"Docker",
-	"Bash",
 	"Linux",
+	"Bash",
+	"Ansible",
+	"Azure",
 ];
 
 export function formatSkillPath(skill: string) {
