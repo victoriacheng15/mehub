@@ -1,25 +1,25 @@
 #!/bin/bash
 
-echo "Enter the name of the post branch: "
-read -r post_branch
+echo "Enter the name of the blog branch: "
+read -r blog_branch
 
-if [[ -n "$post_branch" ]]; then
-  git switch -c post/"$post_branch"
+if [[ -n "$blog_branch" ]]; then
+  git switch -c blog/"$blog_branch"
 else
   echo "no input provided, skipping the git branch command."
 fi
 
 cd src/content/blog || exit
 
-echo "Enter the title of the post: "
+echo "Enter the title of the blog: "
 read -r title
-echo "Enter the description of the post: "
+echo "Enter the description of the blog: "
 read -r description
 echo "Enter tags: "
 read -r tags
-echo "Enter month: "
+echo "Enter month (default is current month): "
 read -r mm
-echo "Enter day: "
+echo "Enter day (default is current day): "
 read -r dd
 
 slug=$(echo "$title" | tr '[:upper:]' '[:lower:]' | tr -d '-' | sed 's/ \{1,\}/ /g' | tr -d ':' | sed 's/ \+/-/g')
