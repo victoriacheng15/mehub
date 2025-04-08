@@ -3,7 +3,6 @@ title: "Learning SQL: Subqueries"
 description: "Master SQL subqueries & operators (ANY, ALL, EXISTS) with clear examples. Learn nested queries for WHERE, FROM, SELECT clauses—boost your SQL skills today!"
 date: 2025-04-08
 tags: [sql]
-draft: true
 ---
 
 ## What is a Subquery?
