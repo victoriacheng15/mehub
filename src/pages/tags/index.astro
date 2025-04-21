@@ -14,11 +14,11 @@ const tagCounts = tags
 
 <BaseLayout title="Tags" description="Explore a collection of posts categorized by topics.">
   <h1 class="text-4xl font-bold my-8 text-secondary-300">Tags</h1>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     {tagCounts.map(({ name, count }) => (
       <a
         href={`/tags/${name}`}
-        class="p-4 bg-secondary-950 rounded-md hover:bg-secondary-900 duration-300 ease-in-out"
+        class="rounded-md shadow-md shadow-orange-900 dark:bg-primary-900 border border-primary-100 dark:border-primary-700 p-4 hover:shadow-lg transition-transform hover:-translate-y-2 duration-300"
       >
         <div class="flex items-center justify-between">
           <span class="text-lg font-medium">#{name}</span>
