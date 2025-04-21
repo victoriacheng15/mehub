@@ -23,7 +23,7 @@ const { currentPage, totalPages, baseUrl } = Astro.props;
 		currentPage < totalPages && (
 			<a
 				href={`${baseUrl}${currentPage + 1}`}
-				class="bg-secondary-950 text-primary-50 my-8 rounded-md px-4 py-2 hover:bg-secondary-900 transition-colors duration-300"
+				class="bg-secondary-950 ml-auto text-primary-50 my-8 rounded-md px-4 py-2 hover:bg-secondary-900 transition-colors duration-300"
 			>
 				Next
 			</a>
