@@ -15,7 +15,7 @@ const imageWidth = 800;
 const imageHeight = 400;
 ---
 
-<article class="border-secondary-500 grid gap-6 rounded-md border p-6">
+<article class="rounded-md shadow-md shadow-secondary-900 dark:bg-primary-900 p-6 hover:shadow-lg transition-transform hover:-translate-y-2 duration-300 border border-primary-100 dark:border-primary-700">
 	{
 		image && (
 			<a href={`/blog/${post.id}`} class="mb-4 block">
@@ -31,12 +31,12 @@ const imageHeight = 400;
 			</a>
 		)
 	}
-	<header class="flex flex-col gap-6">
+	<header class="flex flex-col gap-2">
 		<PostDate date={date} />
 		<h2 class="text-xl font-bold">
 			<a
 				href={`/blog/${post.id}`}
-				class="text-secondary-200 hover:text-secondary-300 duration-300 ease-in-out"
+				class="text-secondary-600 dark:text-secondary-300 hover:text-secondary-500 dark:hover:text-secondary-100 transition-colors duration-300"
 			>
 				{title}
 			</a>
