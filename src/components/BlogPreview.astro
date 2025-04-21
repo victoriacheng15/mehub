@@ -15,7 +15,9 @@ const imageWidth = 800;
 const imageHeight = 400;
 ---
 
-<article class="rounded-md shadow-md shadow-secondary-900 dark:bg-primary-900 p-6 hover:shadow-lg transition-transform hover:-translate-y-2 duration-300 border border-primary-100 dark:border-primary-700">
+<article
+	class="shadow-secondary-900 dark:bg-primary-900 border-primary-100 dark:border-primary-700 rounded-md border p-6 shadow-md transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg"
+>
 	{
 		image && (
 			<a href={`/blog/${post.id}`} class="mb-4 block">
