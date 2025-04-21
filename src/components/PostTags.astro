@@ -6,12 +6,12 @@ interface Props {
 const { tags } = Astro.props;
 ---
 
-<div class="flex flex-wrap gap-2">
+<div class="mt-4 flex flex-wrap gap-2">
 	{
 		tags.map((tag) => (
 			<a
 				href={`/tags/${tag}`}
-				class="bg-secondary-950 hover:bg-secondary-900 rounded-full px-3 py-1 text-sm duration-300 ease-in-out"
+				class="bg-primary-950 hover:bg-primary-900 rounded-full px-3 py-1 text-sm duration-300 ease-in-out"
 			>
 				#{tag}
 			</a>

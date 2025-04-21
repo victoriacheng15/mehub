@@ -5,30 +5,30 @@ export default {
 		extend: {
 			colors: {
 				primary: {
-					50: "#e4f1ff",
-					100: "#cfe4ff",
-					200: "#a8cbff",
-					300: "#74a7ff",
-					400: "#3e70ff",
-					500: "#133aff",
-					600: "#0023ff",
-					700: "#0023ff",
-					800: "#001fe4",
-					900: "#0012b0",
-					950: "#000435",
+					50:  "#eaf1ff",   // very light blue
+					100: "#d6e3ff",   // light pastel
+					200: "#adc8ff",   // soft sky blue
+					300: "#7aaaff",   // mid-tone blue
+					400: "#478cff",   // medium
+					500: "#1f6fff",   // strong blue
+					600: "#004fd6",   // deep blue
+					700: "#003cb3",   // dark blue
+					800: "#002c8a",   // navy tone
+					900: "#001a66",   // very dark blue
+					950: "#000d33",   // almost black with blue
 				},
 				secondary: {
-					50: "#fff5ed",
-					100: "#ffe8d4",
-					200: "#ffcda8",
-					300: "#ffaa71",
-					400: "#ff8040",
-					500: "#fe5711",
-					600: "#ef3c07",
-					700: "#c62908",
-					800: "#9d230f",
-					900: "#7e1f10",
-					950: "#440c06",
+					50:  "#fff2ed",   // very light
+					100: "#ffdcd1",   // soft coral
+					200: "#ffb4a3",   // warm mid-light
+					300: "#ff8166",   // energetic coral
+					400: "#ff5733",   // bold + readable
+					500: "#e6461f",   // slightly deeper
+					600: "#c73714",   // punchy but solid
+					700: "#a82b10",   // deep orange-red
+					800: "#88220d",   // dark red-orange
+					900: "#5c1608",   // bold dark base
+					950: "#310800",   // nearly black with warm tint
 				},
 			},
 			typography: {
