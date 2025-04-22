@@ -3,7 +3,6 @@ title: "Learning SQL: UNION and UNION ALL"
 description: "Learn the difference between SQL UNION and UNION ALL—how to combine query results, remove duplicates, and optimize performance. Essential for data analysis! 🚀"
 date: 2025-04-22
 tags: [sql]
-draft: true
 ---
 
 ## What are UNION and UNION ALL?
