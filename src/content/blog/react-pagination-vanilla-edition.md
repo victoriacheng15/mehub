@@ -17,7 +17,7 @@ I decided to implement pagination. But I had no idea how to do it. I went to my 
 
 At first, I created pagination with JavaScript first to see how the functions were implemented. But why JavaScript? To be honest, I am not sure why I did this first. Suppose I was curious to see how it works with JavaScript. Also, React works almost the same way as JavaScript, minus the hooks part.
 
-<img src="https://user-images.githubusercontent.com/35031228/179285865-d17c5340-1316-4301-9943-8b3d5a42af22.gif" alt="">
+![image](https://user-images.githubusercontent.com/35031228/179285865-d17c5340-1316-4301-9943-8b3d5a42af22.gif)
 
 You can [see Live Site](https://victoriacheng15.github.io/pagination-changing-demo/) and [code here](https://github.com/victoriacheng15/pagination-changing-demo/blob/main/script.js) if you are curious to see how I wrote with JavaScript.
 
@@ -69,29 +69,29 @@ const displayPages = pageNumbers.slice(startPage, endPage);
 
 ```js
 const handleNext = (page) => {
-	// get displayPages length
-	const FIVE = displayPages.length;
-	// In order to make sure the page stays at the middle
-	const condition = page <= Math.floor(FIVE / 2);
-	if (condition) {
-		// for the first 5 pages,
-		// We will increase page by 1 when click next is happening
-		setCurrentPage(page + 1);
-		// we want it to stay at 0 and 5 for start index and end index
-		setStartPage(0);
-		setEndPage(5);
-	} else {
-		// This is to check where the page is now
-		// If the page is greater than totalPage,
-		// true => return totalPages which is 21, prevent page goes over
-		// false => return page + 1
-		// Same idea apply for startPage and endPage
-		setCurrentPage(page >= totalPages ? totalPages : page + 1);
-		// totalPage - 2 is to make sure the last 5 pages doesn't cut off and
-		// keep display 5 pages
-		setStartPage(page >= totalPages - 2 ? totalPages - 5 : startPage + 1);
-		setEndPage(page >= totalPages ? totalPages : endPage + 1);
-	}
+ // get displayPages length
+ const FIVE = displayPages.length;
+ // In order to make sure the page stays at the middle
+ const condition = page <= Math.floor(FIVE / 2);
+ if (condition) {
+  // for the first 5 pages,
+  // We will increase page by 1 when click next is happening
+  setCurrentPage(page + 1);
+  // we want it to stay at 0 and 5 for start index and end index
+  setStartPage(0);
+  setEndPage(5);
+ } else {
+  // This is to check where the page is now
+  // If the page is greater than totalPage,
+  // true => return totalPages which is 21, prevent page goes over
+  // false => return page + 1
+  // Same idea apply for startPage and endPage
+  setCurrentPage(page >= totalPages ? totalPages : page + 1);
+  // totalPage - 2 is to make sure the last 5 pages doesn't cut off and
+  // keep display 5 pages
+  setStartPage(page >= totalPages - 2 ? totalPages - 5 : startPage + 1);
+  setEndPage(page >= totalPages ? totalPages : endPage + 1);
+ }
 };
 ```
 
@@ -101,7 +101,7 @@ From the Pagination component:
 
 ```js
 <Button typeBtn="paginationBtn" onClick={() => handleNext(currentPage)}>
-	<RiArrowDropLeftLine />
+ <RiArrowDropLeftLine />
 </Button>
 ```
 
@@ -111,23 +111,23 @@ Once you figure out how the logic works for the forward navigation, backward nav
 
 ```js
 const handlePrev = (page) => {
-	// This condition is to make sure highlight
-	// page will stay at the middle if navigate backward
-	const condition = page > totalPages - 2;
-	if (condition) {
-		setCurrentPage(page - 1);
-		// similar as above,
-		// make sure both start and end pages start at their pages
-		// page 17 for start
-		// page 21 for end
-		setStartPage(condition ? totalPages - 5 : startPage - 1);
-		setEndPage(condition ? totalPages : endPage - 1);
-	} else {
-		// as usual, need to make sure it doesn't go below 1
-		setCurrentPage(page <= 1 ? 1 : page - 1);
-		setStartPage(startPage <= 0 ? 0 : startPage - 1);
-		setEndPage(endPage <= 5 ? 5 : endPage - 1);
-	}
+ // This condition is to make sure highlight
+ // page will stay at the middle if navigate backward
+ const condition = page > totalPages - 2;
+ if (condition) {
+  setCurrentPage(page - 1);
+  // similar as above,
+  // make sure both start and end pages start at their pages
+  // page 17 for start
+  // page 21 for end
+  setStartPage(condition ? totalPages - 5 : startPage - 1);
+  setEndPage(condition ? totalPages : endPage - 1);
+ } else {
+  // as usual, need to make sure it doesn't go below 1
+  setCurrentPage(page <= 1 ? 1 : page - 1);
+  setStartPage(startPage <= 0 ? 0 : startPage - 1);
+  setEndPage(endPage <= 5 ? 5 : endPage - 1);
+ }
 };
 ```
 
@@ -151,6 +151,6 @@ Of course, I was frustrated on why it didn't work sometimes and tried different 
 
 - [React JS Pagination With API | React pagination](https://www.youtube.com/watch?v=FHBXhBtA1Dg)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and reading this!

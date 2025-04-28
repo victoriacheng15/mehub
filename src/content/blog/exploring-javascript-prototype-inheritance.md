@@ -13,10 +13,10 @@ Prototype inheritance is a mechanism for object-oriented programming that allows
 
 ```js
 const animalObj = {
-	sound: "unknown",
-	makeSound() {
-		return this.sound;
-	},
+ sound: "unknown",
+ makeSound() {
+  return this.sound;
+ },
 };
 ```
 
@@ -42,18 +42,18 @@ console.log(`${dog.name}: ${dog.makeSound()}`); // Burger: Woof!
 
 ```js
 const cat = Object.create(animalObj, {
-	name: {
-		value: "Leo",
-		writable: true,
-		enumerable: true,
-		configurable: true,
-	},
-	sound: {
-		value: "Meow!",
-		writable: true,
-		enumerable: true,
-		configurable: true,
-	},
+ name: {
+  value: "Leo",
+  writable: true,
+  enumerable: true,
+  configurable: true,
+ },
+ sound: {
+  value: "Meow!",
+  writable: true,
+  enumerable: true,
+  configurable: true,
+ },
 });
 
 // change writeable to false, then you cannot change sound value
@@ -61,7 +61,7 @@ const cat = Object.create(animalObj, {
 
 // change enumerable to false for the sound, then the key wont be in console
 // for (const key in cat) {
-// 	console.log({ key })
+//  console.log({ key })
 // }
 
 console.log(cat);
@@ -80,11 +80,11 @@ There are 2 ways to create instances of animals with names and sounds.
 ```js
 // Animal constructor
 function Animal(name, sound) {
-	this.name = name;
-	this.sound = sound;
-	this.makeSound = function () {
-		return this.sound;
-	};
+ this.name = name;
+ this.sound = sound;
+ this.makeSound = function () {
+  return this.sound;
+ };
 }
 
 // can either write the makeSound method in the Animal function
@@ -121,7 +121,7 @@ console.log(cat1);
 
 cat1.sound = "meow1";
 cat1.makeSound = function () {
-	return this.sound;
+ return this.sound;
 };
 
 console.log(cat1);
@@ -156,9 +156,9 @@ To customize the `cat1` object with its own `sound` property and `makeSound` met
 
 ## Resources
 
-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" target="_blank" rel="noopener noreferrer">MDN - Inheritance and the prototype chain</a>
-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create" target="_blank" rel="noopener noreferrer">MDN - Object.create()</a>
+- [MDN - Inheritance and the prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [MDN - Object.create()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

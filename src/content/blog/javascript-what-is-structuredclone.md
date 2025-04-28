@@ -21,11 +21,11 @@ A `shallow copy` creates a reference to the original object rather than creating
 
 ```js
 const original = {
-	hello: "world",
-	motto: "it is so awesome",
-	address: {
-		province: "Awesome Province",
-	},
+ hello: "world",
+ motto: "it is so awesome",
+ address: {
+  province: "Awesome Province",
+ },
 };
 
 const copied = { ...original };
@@ -115,23 +115,23 @@ A `deep copy` creates a completely new copy of the entire object, including any 
 
 ```js
 const obj = {
-	hello: "world",
-	a: {
-		b: "b",
-		c: "c",
-	},
+ hello: "world",
+ a: {
+  b: "b",
+  c: "c",
+ },
 };
 
 const original = {
-	a: new Date(),
-	b: NaN,
-	c: new Function(),
-	d: undefined,
-	e: function () {},
-	f: Number,
-	g: false,
-	h: Infinity,
-	i: obj,
+ a: new Date(),
+ b: NaN,
+ c: new Function(),
+ d: undefined,
+ e: function () {},
+ f: Number,
+ g: false,
+ h: Infinity,
+ i: obj,
 };
 ```
 
@@ -170,22 +170,22 @@ Now, `structuredClone` can be used to copy objects. Keep in mind, it doesn't sup
 
 ```js
 const obj = {
-	hello: "world",
-	a: {
-		b: "b",
-		c: "c",
-	},
+ hello: "world",
+ a: {
+  b: "b",
+  c: "c",
+ },
 };
 
 // Functions are not supported, which is why they are removed from this.
 const original = {
-	a: new Date(),
-	b: NaN,
-	d: undefined,
-	g: false,
-	h: Infinity,
-	i: obj,
-	j: [1, 2, 3, 4, 5],
+ a: new Date(),
+ b: NaN,
+ d: undefined,
+ g: false,
+ h: Infinity,
+ i: obj,
+ j: [1, 2, 3, 4, 5],
 };
 
 const cloned = structuredClone(original);
@@ -259,6 +259,6 @@ It is advisable to use the `structuredClone()` method for creating a deep copy o
 - [MDN Docs - Deep copy](https://developer.mozilla.org/en-US/docs/Glossary/Deep_copy)
 - [Lodash - clone() and cloneDeep()](https://lodash.com/docs/4.17.15#clone)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

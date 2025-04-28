@@ -13,7 +13,7 @@ Functions are _building blocks_ of the program. They allow the code to be called
 
 ```js
 function greeting() {
-	console.log("Hello everyone!");
+ console.log("Hello everyone!");
 }
 
 greeting(); // Hello everyone!
@@ -26,13 +26,13 @@ let name = "Penguin";
 
 // method 1
 function greeting() {
-	console.log("Hello " + name + "!");
+ console.log("Hello " + name + "!");
 }
 
 // method 2 with template string, a new feature in ES6
 function greeting() {
-	console.log(`Hello ${name}!`);
-	// use 'back-tick' key, next to number 1 on keyboard instead of single or double quotes
+ console.log(`Hello ${name}!`);
+ // use 'back-tick' key, next to number 1 on keyboard instead of single or double quotes
 }
 
 greeting(); // Hello Penguin!
@@ -42,7 +42,7 @@ What if you need to greet many visitors and their names are not Penguin? You can
 
 ```js
 function greeting(name) {
-	console.log(`Hello ${name}!`);
+ console.log(`Hello ${name}!`);
 }
 
 greeting("Anna"); // Hello Anna!
@@ -58,22 +58,22 @@ What if you forgot to pass an argument to `name`? The console will show `Hello u
 ```js
 // method 1
 function greeting(name = "Stranger") {
-	console.log(`Hello ${name}!`);
+ console.log(`Hello ${name}!`);
 }
 
 // method 2
 function greeting(name) {
-	if (name === undefined) {
-		console.log("Hello Stranger!");
-	} else {
-		console.log(`Hello ${name}!`);
-	}
+ if (name === undefined) {
+  console.log("Hello Stranger!");
+ } else {
+  console.log(`Hello ${name}!`);
+ }
 }
 
 // method 3
 function greeting(name) {
-	name = name || "Stranger";
-	console.log(`Hello ${name}!`);
+ name = name || "Stranger";
+ console.log(`Hello ${name}!`);
 }
 ```
 
@@ -82,12 +82,12 @@ function greeting(name) {
 ```js
 // first:  Function Declaration, which is what you have been read so far
 function sayHi() {
-	console.log("Hello");
+ console.log("Hello");
 }
 
 // second: Function Expression
 const sayHi = function () {
-	console.log("Hello");
+ console.log("Hello");
 };
 ```
 
@@ -114,11 +114,11 @@ If you declare a function inside a function, you cannot call the inside function
 
 ```js
 function sayHello() {
-	console.log("Hello!");
-	// the inside function
-	function anotherHello() {
-		console.log("Hello from anotherHello");
-	}
+ console.log("Hello!");
+ // the inside function
+ function anotherHello() {
+  console.log("Hello from anotherHello");
+ }
 }
 
 sayHello(); // Hello!
@@ -129,13 +129,13 @@ Function declarations are their block scopes. If a function was declared within 
 
 ```js
 function sayHello() {
-	console.log("Hello!");
-	// the inside function
-	function anotherHello() {
-		console.log("Hello from anotherHello");
-	}
-	// call it from sayHello's curly bracket
-	anotherHello();
+ console.log("Hello!");
+ // the inside function
+ function anotherHello() {
+  console.log("Hello from anotherHello");
+ }
+ // call it from sayHello's curly bracket
+ anotherHello();
 }
 
 sayHello(); // Hello! and Hello from anotherHello
@@ -150,7 +150,7 @@ The basic:
 ```js
 // regular function
 function func() {
-	return expression;
+ return expression;
 }
 // arrow function
 const func = () => expression;
@@ -161,7 +161,7 @@ Both functions work the same way and will return the same expression. The arrow 
 ```js
 // regular function
 const sum = function (a, b) {
-	return a + b;
+ return a + b;
 };
 // arrow function
 const sum = (a, b) => a + b;
@@ -172,18 +172,18 @@ Let's convert this function to arrow function!
 ```js
 // regular function
 function sayHello() {
-	console.log("Hello!");
-	function anotherHello() {
-		console.log("Hello from anotherHello");
-	}
-	anotherHello();
+ console.log("Hello!");
+ function anotherHello() {
+  console.log("Hello from anotherHello");
+ }
+ anotherHello();
 }
 
 // arrow function
 const sayHello = () => {
-	console.log("Hello!");
-	const anotherHello = () => console.log("Hello from anotherHello");
-	anotherHello();
+ console.log("Hello!");
+ const anotherHello = () => console.log("Hello from anotherHello");
+ anotherHello();
 };
 ```
 
@@ -194,17 +194,17 @@ It stands for `Immediately-Invoked Function Expression`. How does it work? It ru
 ```js
 // regular function
 (function () {
-	// code to run
+ // code to run
 })();
 
 // arrow function
 (() => {
-	// code to run
+ // code to run
 })();
 ```
 
 Why do we write IIFE? It allows us to avoid polluting the global namespace.
 
-# Thank you!
+## Thank you
 
 Thank you for reading my blog! 😊

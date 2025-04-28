@@ -21,7 +21,7 @@ print(my_tuple[0])  # Output: 1
 print(my_tuple[3])  # Output: 'a'
 ```
 
-## Tuple Methods:
+## Tuple Methods
 
 - count()
 
@@ -43,7 +43,7 @@ print(my_tuple.index("b"))
 # Output: 1 (index of first occurrence of "b")
 ```
 
-## Operations on Tuples:
+## Operations on Tuples
 
 - Join Tuples:
 
@@ -69,29 +69,29 @@ print(three) # Output: 3
 
 ## Differences between Tuples and Lists
 
-### Syntax:
+### Syntax
 
 - **Tuples**: Defined using _parentheses_ and elements separated by commas.
   - Example: `(1, 2, 3)`
 - **Lists**: Defined using _square brackets_ and elements separated by commas.
   - Example: `[1, 2, 3]`
 
-### Mutability:
+### Mutability
 
 - **Tuples**: _Immutable_; elements cannot be altered after creation.
 - **Lists**: _Mutable_; elements can be altered after creation.
 
-### Performance:
+### Performance
 
 - **Tuples**: Offer _slightly better performance_ because of immutability, especially in scenarios involving iteration and accessing elements.
 - **Lists**: May have _slightly lower performance_ compared to tuples because of mutability, especially in scenarios involving iteration and accessing elements.
 
-### Use Cases:
+### Use Cases
 
 - **Tuples**: Preferred for situations where data integrity and immutability are crucial, such as representing _fixed collections of elements_ (e.g., coordinates, database records).
 - **Lists**: Favored for _dynamic data manipulation_, such as adding, removing, or modifying elements, as they support such operations efficiently.
 
-## Speed Comparison between List and Tuple:
+## Speed Comparison between List and Tuple
 
 ```python
 from timeit import timeit
@@ -114,6 +114,6 @@ print(tuple_time)
 
 This code will output the time taken to create lists and tuples, each repeated 1,000,000 times. By comparing these times, you can observe the difference in speed between creating lists and tuples.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

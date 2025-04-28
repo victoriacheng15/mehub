@@ -29,11 +29,11 @@ console.log("Array comparsion", [] === []); // false
 console.log("Object comparsion", {} === {}); // false
 
 function ff1() {
-	return "hi";
+ return "hi";
 }
 
 function ff2() {
-	return "hi";
+ return "hi";
 }
 
 console.log("Function comparion", ff1 === ff2); // false
@@ -45,13 +45,13 @@ console.log("Function comparion", ff1 === ff2); // false
 
 As you can see, I typed `hello` (5 letters) and the console shows it logged the same thing 5 times. This tells us that the app was re-rendered 5 times.
 
-<img src="https://user-images.githubusercontent.com/35031228/213028318-be0c50c3-20a8-4e31-8007-5b99363449c8.gif" alt="the console log will log 5 times as you type hello without useCallback">
+![the console log will log 5 times as you type hello without useCallback](https://user-images.githubusercontent.com/35031228/213028318-be0c50c3-20a8-4e31-8007-5b99363449c8.gif)
 
 ### With useCallback
 
 Let's add `useCallback` hook. I typed `hello` like I did before and the console doesn't show any logged value. This is because `useCallback` hook knows the function value is the same as before, therefore, the app did not re-render.
 
-<img src="https://user-images.githubusercontent.com/35031228/213028316-ac34dd90-f6c8-4c93-a793-281ac56e375b.gif" alt="the console log doesn't log anything as you type with useCallback">
+![the console log doesn't log anything as you type with useCallback](https://user-images.githubusercontent.com/35031228/213028316-ac34dd90-f6c8-4c93-a793-281ac56e375b.gif)
 
 ### Test Code
 
@@ -59,29 +59,29 @@ I borrowed partial code from Dave Gray's video and I listed it as one of the res
 
 ```jsx
 function App() {
-	const [userInput, setUserInput] = useState("");
-	const [num1] = useState(4);
-	const [num2] = useState(5);
+ const [userInput, setUserInput] = useState("");
+ const [num1] = useState(4);
+ const [num2] = useState(5);
 
-	const sum = () => num1 + num2;
-	// const sum = useCallback(() => num1 + num2, [num1, num2]);
+ const sum = () => num1 + num2;
+ // const sum = useCallback(() => num1 + num2, [num1, num2]);
 
-	useEffect(() => {
-		console.log(`New sum value: ${sum()}`);
-	}, [sum]);
+ useEffect(() => {
+  console.log(`New sum value: ${sum()}`);
+ }, [sum]);
 
-	return (
-		<main className="App">
-			<input
-				type="text"
-				placeholder="input"
-				value={userInput}
-				onChange={(e) => setUserInput(e.target.value)}
-			/>
-			<h2>Output: {userInput || "--"}</h2>
-			<h2>Sum: {sum()}</h2>
-		</main>
-	);
+ return (
+  <main className="App">
+   <input
+    type="text"
+    placeholder="input"
+    value={userInput}
+    onChange={(e) => setUserInput(e.target.value)}
+   />
+   <h2>Output: {userInput || "--"}</h2>
+   <h2>Sum: {sum()}</h2>
+  </main>
+ );
 }
 ```
 
@@ -95,6 +95,6 @@ The `useCallback` hook and the `useMemo` hook have similar functionality in prev
 - [Understanding useMemo and useCallback by Josh Comeau](https://www.joshwcomeau.com/react/usememo-and-usecallback/)
 - [useCallback Explained | React Hooks by Dave Gray](https://www.youtube.com/watch?v=FB_kOSHk1DM&list=PL0Zuz27SZ-6PSdiQpSxO9zxvB0ns6m3ta&index=1&t=2s)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

@@ -11,7 +11,7 @@ The `readonly` modifier in TypeScript is a powerful tool that enables you to cre
 
 ```ts
 type Readonly<T> = {
-	readonly [P in keyof T]: T[P];
+ readonly [P in keyof T]: T[P];
 };
 ```
 
@@ -21,13 +21,13 @@ Consider a scenario where you have a crucial configuration object, and it is mos
 
 ```ts
 interface Configuration {
-	apiKey: string;
-	serverUrl: string;
+ apiKey: string;
+ serverUrl: string;
 }
 
 const config: Configuration = {
-	apiKey: "abc123",
-	serverUrl: "https://api.example.com",
+ apiKey: "abc123",
+ serverUrl: "https://api.example.com",
 };
 
 config.apiKey = "def456"; // can change
@@ -38,13 +38,13 @@ With the provided code snippet, it allows anyone to change both properties of th
 
 ```ts
 interface Configuration {
-	apiKey: string;
-	serverUrl: string;
+ apiKey: string;
+ serverUrl: string;
 }
 
 const config: Readonly<Configuration> = {
-	apiKey: "abc123",
-	serverUrl: "https://api.example.com",
+ apiKey: "abc123",
+ serverUrl: "https://api.example.com",
 };
 
 config.apiKey = "def456"; // cannot change
@@ -55,16 +55,16 @@ config.serverUrl = "https://api.example.com/v2"; // cannot change
 
 ```ts
 interface Configuration {
-	apiKey: string;
-	serverUrl: string;
+ apiKey: string;
+ serverUrl: string;
 }
 
 type CantChange = Readonly<Configuration>;
 
 // or
 interface Configuration {
-	readonly apiKey: string;
-	readonly serverUrl: string;
+ readonly apiKey: string;
+ readonly serverUrl: string;
 }
 ```
 
@@ -74,6 +74,6 @@ By employing `Readonly`, you transform the object into a read-only structure, sa
 
 [TS Handbook - Readonly](https://www.typescriptlang.org/docs/handbook/utility-types.html#readonlytype)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

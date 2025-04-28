@@ -39,8 +39,8 @@ Have you ever wondered why your good habits seem to slip away easily while bad h
 
 ## Resources
 
-- <a href="https://jamesclear.com/" target="_blank" rel="noopener noreferrer">James Clear Site</a>
+- [James Clear Site](https://jamesclear.com/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

@@ -38,8 +38,8 @@ Additionally, the book provides invaluable guidance, concepts, and strategies fo
 
 ## Resources
 
-- <a href="https://www.limitlessbook.com/" target="_blank" rel="noopener noreferrer">Limitless Book website</a>
+- [Limitless Book website](https://www.limitlessbook.com/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

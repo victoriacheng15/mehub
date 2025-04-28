@@ -33,6 +33,6 @@ You can check out this Ted Talk at [this link](https://www.ted.com/talks/marion_
 - **Fundamentals of Data Engineering Plan and Build Robust Data Systems**
   - Explores the essential practices for managing and processing data effectively. Key insights include designing data models, centralizing data in warehouses, and automating workflows through ETL and data pipelines. Emphasizes integrating and cleansing data, handling big data with advanced technologies, and implementing strong data governance and security measures. The field focuses on ensuring data quality, leveraging cloud technologies, and providing a foundation for informed decision-making and insights.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

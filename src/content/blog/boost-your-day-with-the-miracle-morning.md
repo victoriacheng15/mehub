@@ -65,6 +65,6 @@ When it comes to reading, I've discovered that reading just 10 pages each day is
 
 Finally, the book emphasizes the importance of focusing only on what you can control. This mindset shift has been crucial for me. It's amazing how much more manageable stress becomes when you let go of things outside your control and concentrate on what you can actually influence. It’s not just a method; it’s a way to enhance your overall well-being.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

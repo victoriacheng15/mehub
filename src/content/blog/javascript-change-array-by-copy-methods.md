@@ -78,6 +78,6 @@ At the time of posting, these methods should work with most browsers, if unsure,
 
 [MDN Docs - with()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

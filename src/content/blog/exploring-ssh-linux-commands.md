@@ -86,7 +86,7 @@ This automates key installation in `~/.ssh/authorized_keys`.
 
 - Log in securely without a password:
 
-```
+```bash
 ssh -i ~/.ssh/id_rsa user@remote-server
 ```
 
@@ -148,6 +148,6 @@ The **SSH command** is the backbone of secure remote server management in Linu
 
 **Happy remote computing!** 🖥️🔒
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

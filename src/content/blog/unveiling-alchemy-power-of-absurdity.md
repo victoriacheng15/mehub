@@ -9,7 +9,7 @@ tags: [book]
 
 In "Alchemy: The Surprising Power of Ideas That Don't Make Sense," author Rory Sutherland delves into how unconventional thinking and ideas that initially seem absurd can lead to remarkable breakthroughs and innovations. Sutherland challenges conventional wisdom by showing how embracing the irrational and illogical can lead to powerful and transformative results.
 
-## The Power of the Absurd:
+## The Power of the Absurd
 
 - **The Value of the Absurd:**
   This concept revolves around the idea that unconventional and seemingly irrational solutions can be more effective than traditional ones. Sutherland argues that thinking outside the box, or in this case, embracing ideas that seem absurd, can lead to unexpected successes. These unconventional approaches often bypass the constraints of conventional logic and open up new avenues for innovation.
@@ -35,6 +35,6 @@ In a world where conventional wisdom often reigns supreme, "Alchemy" encourages 
 
 For some inspiring insights from the book, check out these [quotes from the book on Goodreads](https://www.goodreads.com/work/quotes/46190767-alchemy-the-surprising-power-of-ideas-that-don-t-make-sense).
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

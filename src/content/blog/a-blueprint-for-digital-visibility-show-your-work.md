@@ -9,7 +9,7 @@ tags: [book]
 
 The book “Show Your Work” by Austin Kleon is a guide for creators navigating self-promotion in the digital age. It promotes transparency, urging individuals to openly share their creative process and victories. The goal is to gain visibility, connect with like-minded individuals, and contribute meaningfully to creative communities. Through ten principles, the book empowers readers to share, teach, and network effectively, fostering a fulfilling creative experience in the era of social media.
 
-## 10 Ways:
+## 10 Ways
 
 1. Share Something Small Every Day:
    - Consistently share bits of your creative process. It doesn't have to be a masterpiece; small, regular updates can engage your audience.
@@ -42,6 +42,6 @@ If you seek a framework for showcasing work in the digital era, this book is inv
 
 [Show Your Work! by Austin Kleon](https://austinkleon.com/show-your-work/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

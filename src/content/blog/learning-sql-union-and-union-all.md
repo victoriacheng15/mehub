@@ -21,7 +21,7 @@ Both operators require that the queries being combined have the **same number o
 - **`UNION`** performs a **distinct operation**, eliminating duplicate rows.
 - **`UNION ALL`** **does not remove duplicates**, making it faster since it skips the deduplication step.
 
-### Basic Syntax:
+### Basic Syntax
 
 ```sql
 -- Using UNION (removes duplicates)
@@ -77,14 +77,14 @@ SELECT customer_id, customer_name FROM customers_west;
 1. **Column Matching:** Queries must have the same number of columns with compatible data types.
 2. **Performance:** `UNION ALL` is faster than `UNION` because it doesn’t remove duplicates.
 3. **Ordering:** If you need sorted results, add `ORDER BY` at the **end of the last query**.
-    
+
     ```sql
     SELECT name FROM employees
     UNION ALL
     SELECT name FROM contractors
     ORDER BY name;
     ```
-    
+
 4. **Use in Complex Queries:** You can combine `UNION` with `WHERE`, `GROUP BY`, and other clauses.
 
 ## Recap
@@ -98,6 +98,6 @@ SELECT customer_id, customer_name FROM customers_west;
 
 [PostgreSQL UNION](https://neon.tech/postgresql/postgresql-tutorial/postgresql-union)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

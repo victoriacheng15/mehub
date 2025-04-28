@@ -33,7 +33,7 @@ You also can find communities on discord or slack. [Here](https://github.com/thi
 
 > Pro tip - always send a note to the people that you want to connect with on LinkedIn!
 
-## Always keep tracking!
+## Always keep tracking
 
 Use either Google sheet or notion to track the people that you have made a connection with.
 

@@ -107,6 +107,6 @@ This will pull up the manual for the `find` command, packed with details and exa
 
 The `find` command is a powerful ally in your Linux toolkit, perfect for searching for files and directories based on a variety of criteria. Whether you're a seasoned pro or just getting started with Linux, mastering `find` will save you time and effort in navigating your filesystem. So next time you need to hunt down a file, just remember: `find` is your friend!
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

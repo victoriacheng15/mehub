@@ -9,7 +9,7 @@ tags: [book]
 
 This book written by Austin Kleon is a compelling and insightful book that challenges traditional notions of creativity. Published in 2012, this concise yet impactful guide offers a fresh perspective on the creative process, encouraging readers to embrace influence, remix ideas, and liberate their creativity. Kleon argues that nothing is truly original and that all artists build upon existing ideas to create something new.
 
-## Ideas:
+## Ideas
 
 1. Steal Like an Artist:
    - Exploring the concept that all creative work is inspired by and builds upon existing ideas.
@@ -44,6 +44,6 @@ This book is for those who want to play the creativity game, not stealing in a s
 
 [Show Your Work! by Austin Kleon](https://austinkleon.com/steal/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

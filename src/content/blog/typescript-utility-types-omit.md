@@ -11,7 +11,7 @@ In TypeScript, the `Omit` utility type is a convenient tool for creating new typ
 
 ```ts
 type Omit<T, K extends string | number | symbol> = {
-	[P in Exclude<keyof T, K>]: T[P];
+ [P in Exclude<keyof T, K>]: T[P];
 };
 ```
 
@@ -21,18 +21,18 @@ Suppose you have a `Product` type that includes properties like `id`, `name`, `p
 
 ```ts
 type Product = {
-	id: number;
-	name: string;
-	price: number;
-	category: string;
+ id: number;
+ name: string;
+ price: number;
+ category: string;
 };
 
 type SimplifiedProduct = Omit<Product, "id" | "category">;
 
 const simplifiedProduct: SimplifiedProduct = {
-	name: "Widget",
-	price: 19.99,
-	// No "id" and "category" properties allowed here
+ name: "Widget",
+ price: 19.99,
+ // No "id" and "category" properties allowed here
 };
 ```
 
@@ -48,6 +48,6 @@ You might find this concept resembling one of the utility types called `Exclude`
 
 [TypeScript Utility Types - Exclude](https://victoriacheng15.vercel.app/posts/typescript-utility-types-exclude)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

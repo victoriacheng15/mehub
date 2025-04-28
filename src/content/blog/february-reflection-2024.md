@@ -33,6 +33,6 @@ And here's a bonus discovery, Makefile is awesome! It allows you to set up comma
 - [Smart Brevity - Your Path to Effective Communication](https://victoriacheng15.vercel.app/posts/smart-brevity-your-path-to-effective-communication)
 - [TypeScript Utility Types - ReturnType](https://victoriacheng15.vercel.app/posts/typescript-utility-types-returntype)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

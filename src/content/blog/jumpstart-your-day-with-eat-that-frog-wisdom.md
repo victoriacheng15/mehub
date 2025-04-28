@@ -9,7 +9,7 @@ tags: [book]
 
 "Eat That Frog!" by Brian Tracy is a transformative self-help book offering practical guidance on conquering procrastination, enhancing time management, and boosting productivity. Tracy's compelling metaphor encourages readers to address their most challenging tasks, or 'frogs,' first, enabling efficient goal attainment. With actionable strategies, the book equips individuals to overcome common productivity hurdles and take charge of their lives. For those seeking increased productivity and progress toward their aspirations, "Eat That Frog!" provides a roadmap to harness time effectively and realize their full potential.
 
-## Key Points:
+## Key Points
 
 - **Set Clear Goals:** Begin by setting clear, specific goals for yourself. Knowing what you want to achieve will help you prioritize your tasks effectively.
 - **Prioritize Tasks:** Identify the most important and impactful tasks on your to-do list and tackle them first. These are your "frogs." By addressing them early, you prevent them from lingering and draining your energy.
@@ -30,6 +30,6 @@ This book offers practical guidance and strategies for individuals seeking to im
 
 This book's concepts can, to some extent, align with the ideas presented in the "Atomic Habits" and "Deep Work" books. Ultimately, the objective is to enhance your productivity, time management skills, and adherence to effective planning strategies.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

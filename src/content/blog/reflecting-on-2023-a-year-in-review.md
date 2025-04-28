@@ -68,6 +68,6 @@ I didn't publish the monthly reflections for October and November, so I'm includ
 - [TypeScript Utility Types - NonNullable](https://victoriacheng15.vercel.app/posts/typescript-utility-types-nonnullable)
 - [Unignorable Mastery - So Good They Can't Ignore You](https://victoriacheng15.vercel.app/posts/unignorable-mastery-so-good-they-cant-ignore-you)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

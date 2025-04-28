@@ -31,6 +31,6 @@ In essence, the key takeaway is to avoid fixating solely on what's immediately i
 
 [Ryan Holiday Home page](https://ryanholiday.net/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

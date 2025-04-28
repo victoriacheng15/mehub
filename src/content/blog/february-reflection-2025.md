@@ -35,6 +35,6 @@ Cybersecurity All-in-One For Dummies:
 
 - A comprehensive guide covering essential cybersecurity topics like threat prevention, network security, data protection, cloud/mobile security, incident response, and compliance. Practical, accessible, and actionable for all skill levels.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

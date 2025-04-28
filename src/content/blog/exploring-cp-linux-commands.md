@@ -94,6 +94,6 @@ man cp
 
 These commands provide comprehensive documentation and explanations for each option
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

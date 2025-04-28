@@ -43,6 +43,6 @@ Distractions are everywhere, making it hard to stay focused. To reduce distracti
 
 Staying organized can be tough. Do your best, but if you find it overwhelming, don't panic! Take a moment to think and reflect on what you did and how you can improve.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

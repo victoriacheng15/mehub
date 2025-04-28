@@ -41,16 +41,10 @@ git remote -v
 
 This can be particularly helpful when you change the repository name or if the repository has been moved to a new location.
 
-### How to Find the SSH or HTTPS URL
-
-If you need visual assistance on finding the SSH or HTTPS URL for your repository, watch this short clip:
-
-<iframe width="560" height="315" src="https://github.com/victoriacheng15/victoriacheng15.vercel.app/assets/35031228/d2581d53-a54e-4df0-97b7-521bf61e16bf" frameborder="0" allowfullscreen></iframe>
-
 ## Resources
 
 [Managing remote repositories - GitHub Docs](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

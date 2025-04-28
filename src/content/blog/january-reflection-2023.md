@@ -49,6 +49,6 @@ I particularly like:
 
 Cypress is a JavaScript testing framework that aims to simplify end-to-end testing and increase its reliability. From what I have read in the documentation, Cypress can also be utilized for unit testing, which involves testing individual pieces of code to ensure they function as intended. One benefit of Cypress is that it has a built-in browser and executes tests in the same environment as the application, which I believe makes it easier to debug and maintain the tests. I am excited to further explore this testing framework with the Hacker News project.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

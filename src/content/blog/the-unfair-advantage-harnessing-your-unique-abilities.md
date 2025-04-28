@@ -26,6 +26,6 @@ Each person possesses distinct potentials and advantages. This book serves as a 
 
 If you're seeking to enhance your skills and performance, this book is the ideal choice for you!
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

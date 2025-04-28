@@ -29,6 +29,6 @@ I particularly appreciate the concept of "progressive summarization" as it enabl
 
 [The Building a Second Brain Book](https://www.buildingasecondbrain.com/book)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

@@ -17,7 +17,7 @@ In constant time (O(1)), finding a name takes the same amount of time, regardles
 
 ```js
 function findNameConstantTime(names, index) {
-	return names[index];
+ return names[index];
 }
 
 // Usage
@@ -33,14 +33,14 @@ Linear time (O(n)) represents a linear search, checking names one by one until f
 
 ```js
 function linearTime(names, targetName) {
-	for (let i = 0; i < names.length; i++) {
-		const name = names[i];
-		if (name === targetName) {
-			return { index: i, name };
-		}
-	}
+ for (let i = 0; i < names.length; i++) {
+  const name = names[i];
+  if (name === targetName) {
+   return { index: i, name };
+  }
+ }
 
-	return -1;
+ return -1;
 }
 
 // Usage
@@ -56,24 +56,24 @@ Logarithmic time (O(log n)) characterizes a binary search, where the list is sor
 
 ```js
 function logarithmicTime(names, targetName) {
-	let low = 0;
-	let high = names.length - 1;
+ let low = 0;
+ let high = names.length - 1;
 
-	while (low <= high) {
-		const mid = Math.floor((low + high) / 2);
-		const midName = names[mid];
+ while (low <= high) {
+  const mid = Math.floor((low + high) / 2);
+  const midName = names[mid];
 
-		if (midName === targetName) {
-			return { index: mid, name: midName };
-		}
+  if (midName === targetName) {
+   return { index: mid, name: midName };
+  }
 
-		if (midName < targetName) {
-			low = mid + 1;
-		} else {
-			high = mid - 1;
-		}
-	}
-	return -1;
+  if (midName < targetName) {
+   low = mid + 1;
+  } else {
+   high = mid - 1;
+  }
+ }
+ return -1;
 }
 
 // Usage
@@ -89,25 +89,25 @@ Quadratic time (O(n^2)) arises with nested loops, where each iteration increases
 
 ```js
 function quadraticTime(names) {
-	const result = [];
+ const result = [];
 
-	for (let i = 0; i < names.length; i++) {
-		const name1 = names[i];
+ for (let i = 0; i < names.length; i++) {
+  const name1 = names[i];
 
-		for (let j = 0; j < names.length; j++) {
-			const name2 = names[j];
-			result.push(`${i + 1} ${j + 1} - ${name1} + ${name2}`);
-		}
-	}
+  for (let j = 0; j < names.length; j++) {
+   const name2 = names[j];
+   result.push(`${i + 1} ${j + 1} - ${name1} + ${name2}`);
+  }
+ }
 
-	return result;
+ return result;
 }
 
 // Usage
 const nameList = ["Alice", "Bob", "Charlie", "David"];
 const results = quadraticTime(nameList);
 for (const result of results) {
-	console.log(result);
+ console.log(result);
 }
 // 1 1 - Alice + Alice
 // 1 2 - Alice + Bob
@@ -137,6 +137,6 @@ The power of Big O notation lies in its ability to compare different algorithms.
 
 [Big-O Notation: A Simple Explanation with Examples](https://betterprogramming.pub/big-o-notation-a-simple-explanation-with-examples-a56347d1daca)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

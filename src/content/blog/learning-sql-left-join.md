@@ -19,21 +19,21 @@ The `LEFT JOIN` command helps you create relationships between tables while reta
 
 ```sql
 SELECT 
-	column1, 
-	column2, 
-	...  
+ column1, 
+ column2, 
+ ...  
 FROM table1  
 LEFT JOIN table2  
 ON table1.common_column = table2.common_column;  
 ```
 
-Example: 
+Example:
 
 ```sql
 SELECT 
-	employees.employee_id, 
-	employees.name, 
-	departments.department_name  
+ employees.employee_id, 
+ employees.name, 
+ departments.department_name  
 FROM employees  
 LEFT JOIN departments  
 ON employees.department_id = departments.department_id;  
@@ -49,9 +49,9 @@ Example:
 
 ```sql
 SELECT 
-	e.employee_id, 
-	e.name, 
-	d.department_name  
+ e.employee_id, 
+ e.name, 
+ d.department_name  
 FROM employees e  
 LEFT JOIN departments d  
 ON e.department_id = d.department_id;  
@@ -69,8 +69,8 @@ Example:
 
 ```sql
 SELECT 
-	employee_id, name, 
-	COALESCE(department_name, 'No Department') AS department_name  
+ employee_id, name, 
+ COALESCE(department_name, 'No Department') AS department_name  
 FROM employees  
 LEFT JOIN departments  
 ON employees.department_id = departments.department_id;  
@@ -97,6 +97,6 @@ The `LEFT JOIN` command is a valuable tool in SQL for preserving all data from t
 
 [PostgreSQL LEFT JOIN](https://neon.tech/postgresql/postgresql-tutorial/postgresql-left-join)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

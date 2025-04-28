@@ -50,6 +50,6 @@ scp path/file.txt pi_username@ip_address:path/file.txt
 
 [Remmina](https://remmina.org/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

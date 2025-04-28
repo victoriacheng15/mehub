@@ -92,6 +92,6 @@ The second project entailed adding multiple cubes with different materials, show
 
 [Materials Demo](https://victoriacheng15.github.io/three-js-demo/3-materials/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

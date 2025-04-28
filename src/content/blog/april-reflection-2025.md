@@ -12,17 +12,19 @@ So, there’s this whole **“vibe coding”** thing popping up—tools like C
 
 ### From the Sidelines: What I'm Noticing
 
-**For Non-Coders: The Wild West of Developme**
+#### For Non-Coders: The Wild West of Developme
 
 On one hand, it's pretty cool:
+
 - **Lowered Barriers**: Tools that generate code from prompts could enable more people to prototype ideas, potentially increasing indie projects and startups.
 - **Quality Concerns**: Without technical oversight, these projects risk poor scalability or security flaws—like AI-generated authentication code with hidden vulnerabilities.
 
 But there's a flip side:
+
 - **Quality Roulette**: That AI-generated login system might work... until it leaks all your data
 - **The Expertise Gap**: Without tech-savvy oversight, these projects could become maintenance nightmares
 
-**For Developers: A Changing Job Description**
+#### For Developers: A Changing Job Description
 
 What fascinates me most is how this shifts our role:
 
@@ -76,6 +78,6 @@ The One Thing
 
 - Challenges multitasking and diluted focus by advocating extreme prioritization of your single most impactful task. Details how "focusing question" (What's the ONE Thing I can do to make everything else easier?) drives extraordinary results in work and life. Offers practical strategies to eliminate distractions, build productivity habits, and achieve mastery through sequential focus.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

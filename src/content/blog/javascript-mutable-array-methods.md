@@ -41,7 +41,7 @@ console.log(teas); // [ 'milk tea', 'green milk tea', 'coffee milk tea' ]
 
 ## shfit()
 
-_It looks like the milk tea will be in the same shoes as mango milk tea_
+It looks like the milk tea will be in the same shoes as mango milk tea
 
 This method is similar to pop(), but it removes the first item of the array and will return the first item as well.
 
@@ -162,18 +162,18 @@ console.log(sortedNums);
 // [ 10, 2, 4, 5, 70, 8 ], this only sorts based on the first number of each number
 
 const ascending = nums.sort((a, b) => {
-	if (a > b) {
-		return 1;
-	}
-	return -1;
+ if (a > b) {
+  return 1;
+ }
+ return -1;
 });
 console.log("ascending", ascending); // ascending [ 2, 4, 5, 8, 10, 70 ]
 
 const descending = nums.sort((a, b) => {
-	if (a < b) {
-		return 1;
-	}
-	return -1;
+ if (a < b) {
+  return 1;
+ }
+ return -1;
 });
 console.log("descending", descending); // descending [ 70, 10, 8, 5, 4, 2 ]
 ```
@@ -218,6 +218,6 @@ Keep in mind, these methods will mutate your array. If you need to keep the orig
 
 I love bubble teas, which is why I used bubble teas as an example. 😆
 
-## Thank you!
+## Thank you
 
 Thank you for your time and reading this! Feel free to share your feedback in the comment below, and follow me on [@viktoriacheng15](https://twitter.com/viktoriacheng15)

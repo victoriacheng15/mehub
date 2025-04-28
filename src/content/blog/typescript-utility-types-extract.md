@@ -37,6 +37,6 @@ The `Extract` utility type is a tool in TypeScript that allows you to create a
 
 [TS Handbook - Extract](https://www.typescriptlang.org/docs/handbook/utility-types.html#extracttype-union)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

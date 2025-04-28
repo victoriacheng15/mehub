@@ -184,6 +184,6 @@ print(dictionary)
 
 [How to Use sorted() and .sort() in Python by Real Python](https://realpython.com/python-sort/#ordering-values-with-sort)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

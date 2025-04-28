@@ -5,7 +5,7 @@ date: 2025-04-01
 tags: [networking]
 ---
 
-# What is SSL or TLS?
+## What is SSL or TLS?
 
 **SSL (Secure Sockets Layer)** and **TLS (Transport Layer Security)** are protocols designed to secure communication over the internet.
 
@@ -16,7 +16,7 @@ Both SSL and TLS encrypt data sent between two devices, like your browser and a 
 
 **In simple terms**, SSL/TLS acts like a secret language two parties use to communicate privately, even in a crowded room.
 
-# Steps of the SSL/TLS Handshake
+## Steps of the SSL/TLS Handshake
 
 Before any secure data is exchanged, the client (e.g., your browser) and the server (e.g., a website) must establish a secure connection. This process is called the **SSL/TLS Handshake**. Here's how it works:
 
@@ -39,7 +39,7 @@ Before any secure data is exchanged, the client (e.g., your browser) and the ser
 - The client and server exchange final messages to confirm the handshake is complete.
 - From this point forward, all communication is encrypted and secure.
 
-# Why is SSL/TLS Important?
+## Why is SSL/TLS Important?
 
 Without SSL/TLS, communication on the internet would be vulnerable to:
 
@@ -47,13 +47,13 @@ Without SSL/TLS, communication on the internet would be vulnerable to:
 - **Tampering**: Attackers could modify the data you send or receive.
 - **Impersonation**: You wouldn’t be able to verify that the website or service you’re connecting to is legitimate.
 
-### With SSL/TLS:
+### With SSL/TLS
 
 - You see the **padlock icon** in your browser, signaling that your connection is secure.
 - Your personal information remains private, even on public Wi-Fi.
 - Websites gain your trust by providing a secure environment.
 
-# Analogy: Sending a Secret Letter
+## Analogy: Sending a Secret Letter
 
 Imagine you want to send a secret letter to a friend:
 
@@ -64,7 +64,7 @@ Imagine you want to send a secret letter to a friend:
 
 This process ensures privacy, trust, and security—just like SSL/TLS ensures when you browse the web.
 
-# Recap
+## Recap
 
 - **SSL and TLS** are protocols that secure online communication by encrypting data and verifying identities.
 - The **SSL/TLS Handshake** is a process where the client and server establish a secure connection by agreeing on encryption methods, verifying identities, and creating a session key.
@@ -79,6 +79,6 @@ By ensuring encryption, authentication, and data integrity, SSL/TLS enables a se
 
 [digicert - What is SSL, TLS & HTTPS?](https://www.digicert.com/what-is-ssl-tls-and-https)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

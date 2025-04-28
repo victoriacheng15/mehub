@@ -11,7 +11,7 @@ In TypeScript, `ReturnType<Type>` is a utility type that allows developers to ex
 
 ```ts
 type ReturnType<T extends (...args: any) => any> =>
-		T extends (...args: any) => infer R ? R : any
+  T extends (...args: any) => infer R ? R : any
 ```
 
 ## How does ReturnType work?
@@ -20,7 +20,7 @@ Example 1: return the type of a function returning a number
 
 ```ts
 function getNumber(): number {
-	return 42;
+ return 42;
 }
 
 type NumberReturnType = ReturnType<typeof getNumber>;
@@ -31,7 +31,7 @@ Example 2: return the type of a function returning an object
 
 ```ts
 function getObject(): { name: string; age: number; isMarried: boolean } {
-	return { name: "John", age: 30, isMarried: false };
+ return { name: "John", age: 30, isMarried: false };
 }
 
 type ObjectReturnType = ReturnType<typeof getObject>;
@@ -42,7 +42,7 @@ Example 3: return the type of a function returning an array
 
 ```ts
 function getArray(): number[] {
-	return [1, 2, 3, 4, 5];
+ return [1, 2, 3, 4, 5];
 }
 
 type ArrayReturnType = ReturnType<typeof getArray>;
@@ -63,7 +63,7 @@ The function is designed to return a number, and in this particular instance, th
 
 ```ts
 function getNumber() {
-	return 42;
+ return 42;
 }
 
 type NumberReturnType = ReturnType<typeof getNumber>;
@@ -75,7 +75,7 @@ In certain scenarios, if you receive an array with numbers as input and intend t
 
 ```ts
 function getArray(...arr: number[]): string[] {
-	return [...arr].map(String);
+ return [...arr].map(String);
 }
 type ArrayReturnType = ReturnType<typeof getArray>;
 // ArrayReturnType = string[]
@@ -86,15 +86,15 @@ Consider a scenario where we have a function named `fetchUsers` responsible for 
 
 ```ts
 async function fetchUsers(): Promise<
-	Array<{
-		name: string;
-		isMarried: boolean;
-		address: { street: string };
-	}>
+ Array<{
+  name: string;
+  isMarried: boolean;
+  address: { street: string };
+ }>
 > {
-	const response = await fetch("https://api.example.com/user");
-	const data = await response.json();
-	return data;
+ const response = await fetch("https://api.example.com/user");
+ const data = await response.json();
+ return data;
 }
 
 type UserReturnType = ReturnType<typeof fetchUsers>;
@@ -109,6 +109,6 @@ type UserReturnType = ReturnType<typeof fetchUsers>;
 
 [TS Handbook - ReturnType](https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

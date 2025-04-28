@@ -33,8 +33,8 @@ This book provides two valuable insights that have resonated with me and are cur
 
 ## Resources
 
-- <a href="https://calnewport.com/" target="_blank" rel="noopener noreferrer">Author of Deep Work, Study Hacks Blog - Cal Newport</a>
+- [Author of Deep Work, Study Hacks Blog - Cal Newport](https://calnewport.com/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

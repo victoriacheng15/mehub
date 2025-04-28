@@ -29,10 +29,6 @@ After finished university and back to home in Canada, I had a hard time to find 
 
 From this point, I went on a search spree to find relative and more information what programming languages to learn and what path to take on Google. At first, I decided to try Python based on the recommendation. I was reading Python tutorial and did exercises as the tutorial shows. Beside Python, I looked into cybersecurity, and bought a couple of e-books to read. At the time, I was directionless and alone. I had no idea what to do and where to start. Until I remembered, I took web development as my minor when I was in university, then I decided to go the web development direction.
 
-This gif described my feeling at the time very well.
-
-<iframe src="https://giphy.com/embed/jphuDUCPSsC10tEwo0" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/door-gate-begin-jphuDUCPSsC10tEwo0">via GIPHY</a></p>
-
 And now I look back, I realized why I didn't learn Python well because I was only reading them without building any projects.
 
 ### Self-learning web development part-time for a year
@@ -49,7 +45,7 @@ I personally didn't want to get on social media, but with a little push from 100
 
 The [50th days of the 100 Days of Code](https://www.linkedin.com/feed/update/urn:li:activity:6919663033073950720/) post on Linkedin.
 
-## Thank you!
+## Thank you
 
 If you are reading this, I want to say thank you for taking your time and read the whole blog about me and my journey to the tech industry. 😍
 
@@ -58,5 +54,3 @@ If you are interested to get to know more about me or just want to talk about so
 [LinkedIn](https://www.linkedin.com/in/victoriacheng15/)
 
 [Twitter](https://twitter.com/viktoriacheng15)
-
-<iframe src="https://giphy.com/embed/sdbFgcxdUXpq7u85Mn" width="270" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/ASUofficial-asl-thanksgiving-american-sign-language-sdbFgcxdUXpq7u85Mn">via GIPHY</a></p>

@@ -32,6 +32,6 @@ Cybersecurity is another key area I want to explore. With the growing number of 
 
 By working on these goals, I aim to build a strong, well-rounded skill set in cloud computing, DevOps, SQL, and cybersecurity throughout the coming year.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

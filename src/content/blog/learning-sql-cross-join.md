@@ -105,6 +105,6 @@ By understanding `CROSS JOIN`, you’ll be able to handle more advanced SQL scen
 
 [PostgreSQL CROSS JOIN](https://neon.tech/postgresql/postgresql-tutorial/postgresql-cross-join)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

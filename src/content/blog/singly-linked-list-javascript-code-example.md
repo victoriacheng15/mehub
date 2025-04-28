@@ -21,10 +21,10 @@ It represents a single node in the linked list with two properties: `value` to s
 
 ```js
 class Node {
-	constructor(value) {
-		this.value = value;
-		this.next = null;
-	}
+ constructor(value) {
+  this.value = value;
+  this.next = null;
+ }
 }
 ```
 
@@ -36,31 +36,31 @@ class Node {
 
 ```js
 class LinkedList {
-	constructor() {
-		this.head = null;
-		this.size = 0;
-	}
+ constructor() {
+  this.head = null;
+  this.size = 0;
+ }
 
-	isEmpty() {
-		return this.size === 0;
-	}
+ isEmpty() {
+  return this.size === 0;
+ }
 
-	getSize() {
-		return this.size;
-	}
+ getSize() {
+  return this.size;
+ }
 
-	print() {
-		if (this.isEmpty()) {
-			return "the list is empty";
-		}
-		let curr = this.head;
-		let ListValues = "";
-		while (curr) {
-			ListValues += `${curr.value} `;
-			curr = curr.next;
-		}
-		return ListValues;
-	}
+ print() {
+  if (this.isEmpty()) {
+   return "the list is empty";
+  }
+  let curr = this.head;
+  let ListValues = "";
+  while (curr) {
+   ListValues += `${curr.value} `;
+   curr = curr.next;
+  }
+  return ListValues;
+ }
 }
 ```
 
@@ -161,12 +161,12 @@ search(value) {
  while(curr){
   // If the curr value is equal to the value, return the index
   if (curr.value === value) {
-	  return index
-	}
-	// Update curr node to the next node
-	curr = curr.next
-	// Increase index by 1
-	index++
+   return index
+ }
+ // Update curr node to the next node
+ curr = curr.next
+ // Increase index by 1
+ index++
   }
   // Return -1 if value is not found after traversed the list
  return -1
@@ -202,116 +202,116 @@ Here is the full code for this post.
 
 ```js
 class Node {
-	constructor(value) {
-		this.value = value;
-		this.next = null;
-	}
+ constructor(value) {
+  this.value = value;
+  this.next = null;
+ }
 }
 
 class LinkedList {
-	constructor() {
-		this.head = null;
-		this.size = 0;
-	}
+ constructor() {
+  this.head = null;
+  this.size = 0;
+ }
 
-	isEmpty() {
-		return this.size === 0;
-	}
+ isEmpty() {
+  return this.size === 0;
+ }
 
-	getSize() {
-		return this.size;
-	}
+ getSize() {
+  return this.size;
+ }
 
-	prepend(value) {
-		const node = new Node(value);
+ prepend(value) {
+  const node = new Node(value);
 
-		if (this.isEmpty()) {
-			this.head = node;
-		} else {
-			node.next = this.head;
-			this.head = node;
-		}
-		this.size += 1;
-	}
+  if (this.isEmpty()) {
+   this.head = node;
+  } else {
+   node.next = this.head;
+   this.head = node;
+  }
+  this.size += 1;
+ }
 
-	append(value) {
-		const node = new Node(value);
+ append(value) {
+  const node = new Node(value);
 
-		if (this.isEmpty()) {
-			this.head = node;
-		} else {
-			let prev = this.head;
-			while (prev.next) {
-				prev = prev.next;
-			}
-			prev.next = node;
-		}
+  if (this.isEmpty()) {
+   this.head = node;
+  } else {
+   let prev = this.head;
+   while (prev.next) {
+    prev = prev.next;
+   }
+   prev.next = node;
+  }
 
-		this.size += 1;
-	}
+  this.size += 1;
+ }
 
-	removeFrom(index) {
-		if (index < 0 || index >= this.size) {
-			return null;
-		}
+ removeFrom(index) {
+  if (index < 0 || index >= this.size) {
+   return null;
+  }
 
-		let removedNode;
-		if (index === 0) {
-			removedNode = this.head;
-			this.head = this.head.next;
-		} else {
-			let prev = this.head;
-			for (let i = 0; i < index - 1; i += 1) {
-				prev = prev.next;
-			}
-			removedNode = prev.next;
-			prev.next = removedNode.next;
-		}
-		this.size -= 1;
-		return removedNode.value;
-	}
+  let removedNode;
+  if (index === 0) {
+   removedNode = this.head;
+   this.head = this.head.next;
+  } else {
+   let prev = this.head;
+   for (let i = 0; i < index - 1; i += 1) {
+    prev = prev.next;
+   }
+   removedNode = prev.next;
+   prev.next = removedNode.next;
+  }
+  this.size -= 1;
+  return removedNode.value;
+ }
 
-	reverse() {
-		let prev = null;
-		let curr = this.head;
-		while (curr) {
-			let { next } = curr; //  let next = curr.next;
-			curr.next = prev;
-			prev = curr;
-			curr = next;
-		}
-		this.head = prev;
-	}
+ reverse() {
+  let prev = null;
+  let curr = this.head;
+  while (curr) {
+   let { next } = curr; //  let next = curr.next;
+   curr.next = prev;
+   prev = curr;
+   curr = next;
+  }
+  this.head = prev;
+ }
 
-	search(value) {
-		if (this.isEmpty()) {
-			return -1;
-		}
+ search(value) {
+  if (this.isEmpty()) {
+   return -1;
+  }
 
-		let index = 0;
-		let curr = this.head;
-		while (curr) {
-			if (curr.value === value) {
-				return index;
-			}
-			curr = curr.next;
-			index++;
-		}
-		return -1;
-	}
+  let index = 0;
+  let curr = this.head;
+  while (curr) {
+   if (curr.value === value) {
+    return index;
+   }
+   curr = curr.next;
+   index++;
+  }
+  return -1;
+ }
 
-	print() {
-		if (this.isEmpty()) {
-			return "the list is empty";
-		}
-		let curr = this.head;
-		let ListValues = "";
-		while (curr) {
-			ListValues += `${curr.value} `;
-			curr = curr.next;
-		}
-		return ListValues;
-	}
+ print() {
+  if (this.isEmpty()) {
+   return "the list is empty";
+  }
+  let curr = this.head;
+  let ListValues = "";
+  while (curr) {
+   ListValues += `${curr.value} `;
+   curr = curr.next;
+  }
+  return ListValues;
+ }
 }
 ```
 
@@ -331,6 +331,6 @@ I appreicate the way Codevolution, a Youtuber, explains the process of coding a 
 
 [JavaScript Data Structure 22 - Linked List Reverse](https://www.youtube.com/watch?v=S9kMVEUg-x4&list=PLC3y8-rFHvwg6nsAOfC5Is18KB2DrVOJy&index=21&pp=iAQB)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

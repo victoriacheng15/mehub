@@ -16,7 +16,7 @@ The `JOIN` command helps you create meaningful relationships between tables. You
 
 The default `JOIN` (also known as an `INNER JOIN`) returns rows that have matching values in both tables based on the condition specified in the `ON` clause.
 
-Syntax: 
+Syntax:
 
 ```sql
 SELECT column1, column2, ...
@@ -26,7 +26,7 @@ JOIN table2
 ON table1.common_column = table2.common_column;
 ```
 
-Example: 
+Example:
 
 ```sql
 SELECT employees.employee_id, employees.name, departments.department_name
@@ -50,7 +50,7 @@ In this example, only rows with matching `department_id` values in both the `emp
 
 The `USING` clause is a simpler way to specify a `JOIN` when the columns being matched have the same name in both tables. It eliminates the need to explicitly qualify the column names.
 
-Syntax: 
+Syntax:
 
 ```sql
 SELECT column1, column2, ...
@@ -59,7 +59,7 @@ JOIN table2
 USING (common_column);
 ```
 
-Example: 
+Example:
 
 ```sql
 SELECT employee_id, name, department_name
@@ -74,7 +74,7 @@ This works like the previous `ON` example, but since `department_id` is a shared
 
 A `NATURAL JOIN` automatically matches all columns with the same name in the joined tables. It simplifies the query further but requires caution since unintended matches can occur if tables have multiple columns with the same name.
 
-Syntax: 
+Syntax:
 
 ```sql
 SELECT column1, column2, ...
@@ -82,7 +82,7 @@ FROM table1
 NATURAL JOIN table2;
 ```
 
-Example: 
+Example:
 
 ```sql
 SELECT employee_id, name, department_name
@@ -131,6 +131,6 @@ The `JOIN` command is a powerful way to combine data from multiple tables in SQL
 
 [PostgreSQL INNER JOIN](https://neon.tech/postgresql/postgresql-tutorial/postgresql-inner-join)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

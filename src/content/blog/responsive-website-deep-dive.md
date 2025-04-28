@@ -19,13 +19,13 @@ But why?
 
 ### Use percentage for container width
 
-The container will have 90% of the browser's width and it will adjust dynamically as you scale it to be narrow or wide with a maximum width of 500px. The second example use this `min()` CSS function, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/min(%29">see MDN</a>. This function takes 2 parameters, the **first **parameter takes minimum width and the **second** parameter takes maximum width. You also write one less CSS line!
+The container will have 90% of the browser's width and it will adjust dynamically as you scale it to be narrow or wide with a maximum width of 500px. The second example uses this `min()` CSS function, [see MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/min()). This function takes 2 parameters, the **first** parameter takes minimum width and the **second** parameter takes maximum width. You also write one less CSS line!
 
 ```css
 .container {
-	margin: 0 auto;
-	width: 90%;
-	max-width: 500px;
+ margin: 0 auto;
+ width: 90%;
+ max-width: 500px;
 }
 ```
 
@@ -33,14 +33,14 @@ or
 
 ```css
 .container {
-	margin: 0 auto;
-	width: min(90%, 500px);
+ margin: 0 auto;
+ width: min(90%, 500px);
 }
 ```
 
 ### Use clamp() function
 
-This function takes 3 parameters - min, val, and max, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp(%29">check it out on MDN</a>.
+This function takes 3 parameters - min, val, and max, [check it out on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp()).
 
 - min: minimum font size
 - val(value): scaling size
@@ -50,7 +50,7 @@ This function takes 3 parameters - min, val, and max, <a href="https://developer
 
 ```css
 h1 {
-	font-size: clamp(2rem, 10vw, 5rem);
+ font-size: clamp(2rem, 10vw, 5rem);
 }
 ```
 
@@ -60,17 +60,17 @@ Use `flex-wrap` property and set the value to `wrap`. This will allow you have m
 
 ```css
 main {
-	padding: 30px;
-	display: flex;
-	flex-wrap: wrap; /* this!! */
-	gap: 1rem;
-	background: lightcoral;
+ padding: 30px;
+ display: flex;
+ flex-wrap: wrap; /* this!! */
+ gap: 1rem;
+ background: lightcoral;
 }
 
 section {
-	background: white;
-	flex: 1 1 200px;
-	height: 100px;
+ background: white;
+ flex: 1 1 200px;
+ height: 100px;
 }
 ```
 
@@ -78,21 +78,21 @@ section {
 
 Let's break down `repeat(auto-fill, minmax(150px, 1fr))`:
 
-- `repeat()` => this takes 2 parameters, **number of columns** and **value(s)**. e.g.` repeat(4, 1fr)` or `repeat(4, 100px 1fr)`
+- `repeat()` => this takes 2 parameters, **number of columns** and **value(s)**. e.g.`repeat(4, 1fr)` or `repeat(4, 100px 1fr)`
 - `minmax()` => this takes 2 parameters, **minimum width** and **maximum width**. e.g. `minmax(200px, 1fr)`
 - Combine both of them => `repeat(auto-fill, minmax(150px, 1fr)`
 
-_auto-fill is a value that you tell the browser, "please take care of them for me"_
+#### Auto-fill: Let the browser handle it for you
 
 There are two values that you can use for this, auto-fill and auto-fit. This [article](https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/) from CSS-Trick breaks it down nicely!
 
 ```css
 main {
-	padding: 30px;
-	background: lightblue;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-	gap: 1rem;
+ padding: 30px;
+ background: lightblue;
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+ gap: 1rem;
 }
 ```
 
@@ -109,9 +109,9 @@ e.g.
 
 ```css
 @media screen (min-width: 500px) {
-	.something {
-		/* do something */
-	}
+ .something {
+  /* do something */
+ }
 }
 ```
 

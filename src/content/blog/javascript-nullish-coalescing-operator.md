@@ -85,7 +85,7 @@ console.log(check); // 2nd value
 
 APIs often return values that may contain null or undefined. This is particularly common when retrieving complex data structures with missing or incomplete information. For instance, some countries may not have a `capital` property in an API response. In such cases, there are two ways to display the capital name: either display the actual value if it exists or show `N/A` as a default value.
 
-You can check out <a href="https://restcountries.com/v3.1/alpha?codes=ca,gl" target="_blank" rel="noopener noreferrer">what information the API returns for Canada and Antarctica</a>.
+You can check out [what information the API returns for Canada and Antarctica](https://restcountries.com/v3.1/alpha?codes=ca,gl).
 
 ### First Method: conditional (ternary) Operator
 
@@ -107,9 +107,9 @@ Choosing between the nullish coalescing operator and the logical OR operator can
 
 ## Resources
 
-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing" target="_blank" rel="noopener noreferrer">MDN Docs - Nullish coalescing operator (??)</a>
-- <a href="https://javascript.info/nullish-coalescing-operator" target="_blank" rel="noopener noreferrer">JavaScript Info - Nullish coalescing operator (??)</a>
+- [MDN Docs - Nullish coalescing operator (??)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+- [JavaScript Info - Nullish coalescing operator (??)](https://javascript.info/nullish-coalescing-operator)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

@@ -23,11 +23,11 @@ another_set = set([1, 2, 3, 4, 5])
 
 Internally, Python sets are implemented using a data structure called a hash table, which allows for fast lookups, insertions, and deletions. When you add an element to a set, Python calculates the hash value of the element and stores it in a way that allows for quick retrieval. This makes operations like checking membership or performing set operations (such as union, intersection, and difference) very efficient, even for large sets.
 
-## Set Methods:
+## Set Methods
 
 After understanding how sets work, let's explore some of the common methods available for manipulating sets:
 
-### `add()`:
+### `add()`
 
 - Adds an element to the set.
 
@@ -38,7 +38,7 @@ my_set.add(4)
 print(my_set)  # Output: {1, 2, 3, 4}
 ```
 
-### `clear()`:
+### `clear()`
 
 - Removes all elements from the set.
 
@@ -49,7 +49,7 @@ my_set.clear()
 print(my_set)  # Output: set()
 ```
 
-### `copy()`:
+### `copy()`
 
 - Return a copy of the set
 
@@ -82,7 +82,7 @@ print("Original set1 after difference_update()", set1)
 # 👉 Output: {1, 2}
 ```
 
-### `discard()`:
+### `discard()`
 
 - Removes a specified element from the set if it is present.
 
@@ -93,7 +93,7 @@ my_set.discard(2)
 print(my_set)  # Output: {1, 3, 4}
 ```
 
-### `intersection()` vs `intersection_update()`:
+### `intersection()` vs `intersection_update()`
 
 - `intersection()`: Returns a new set containing elements that are present in both sets. It does _not modify the original sets_, but rather returns a new set with elements that are common to both sets.
 - `intersection_update()`: _Modifies the original set_ by removing the elements that are not present in the specified set(s). After the operation, the original set will only contain elements that are common to both the original set and the specified set(s).
@@ -118,7 +118,7 @@ print("Original set1 after intersection_update():", set1)
 # 👉 Output: {3}
 ```
 
-### `isdisjoint()`:
+### `isdisjoint()`
 
 - Returns True if there are no common elements between two sets, indicating that their intersection is empty.
 
@@ -136,7 +136,7 @@ set2 = {4, 5, 6}
 print(set1.isdisjoint(set2))  # Output: False
 ```
 
-### `issubset()`:
+### `issubset()`
 
 - Returns True if all elements of the set are present in another specified set.
 
@@ -153,7 +153,7 @@ set2 = {1, 2, 3, 4}
 print(set1.issubset(set2))  # Output: False
 ```
 
-### `issuperset()`:
+### `issuperset()`
 
 - Returns True if all elements of another specified set are present in this set.
 
@@ -170,7 +170,7 @@ set2 = {1, 2, 3, 4}
 print(set1.issuperset(set2))  # Output: False
 ```
 
-### `pop()`:
+### `pop()`
 
 - Removes and returns an arbitrary element from the set.
 
@@ -182,7 +182,7 @@ print("Popped element:", popped_element) # Popped element: 1
 print("Set after popping:", my_set) #S et after popping: {2, 3, 4}
 ```
 
-### `remove()`:
+### `remove()`
 
 - Removes a specified element from the set.
 
@@ -193,7 +193,7 @@ my_set.remove(3)
 print(my_set)  # Output: {1, 2, 4}
 ```
 
-### `symmetric_difference()` vs `symmetric_difference_update()`:
+### `symmetric_difference()` vs `symmetric_difference_update()`
 
 - `symmetric_difference()`: Returns a new set containing elements that are present in either of the sets, but not in both. It does _not modify the original sets_ but rather returns a new set with elements that are unique to each set.
 - `symmetric_difference_update()`: _Modifies the original_ set by inserting the symmetric differences from this set and another set.
@@ -219,7 +219,7 @@ print("Original set1 after symmetric_difference_update():", set1)
 
 ```
 
-### `union()`:
+### `union()`
 
 - Returns a new set containing all unique elements from both sets.
 
@@ -231,7 +231,7 @@ union_result = set1.union(set2)
 print(union_result)  # Output: {1, 2, 3, 4, 5}
 ```
 
-### `update()`:
+### `update()`
 
 - Update the set with the union of this set and others
 
@@ -243,6 +243,6 @@ set1.update(set2)
 print(set1)  # Output: {1, 2, 3, 4, 5}
 ```
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

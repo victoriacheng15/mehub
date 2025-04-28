@@ -11,7 +11,7 @@ The `Required` type in TypeScript is a built-in type that allows you to transfor
 
 ```ts
 type Required<T> = {
-	[P in keyof T]-?: T[P];
+ [P in keyof T]-?: T[P];
 };
 ```
 
@@ -21,22 +21,22 @@ In the provided code snippet, we define an object of type `Form` with certain pr
 
 ```ts
 interface Form {
-	name?: string;
-	email?: string;
-	message?: string;
+ name?: string;
+ email?: string;
+ message?: string;
 }
 
 const userData: Form = {
-	name: "Isabella",
-	email: "Isabella@gmail.com",
-	message: "A message without Required",
+ name: "Isabella",
+ email: "Isabella@gmail.com",
+ message: "A message without Required",
 };
 
 function updateUserName(newData: Form, updates: Form) {
-	return {
-		...newData,
-		...updates,
-	};
+ return {
+  ...newData,
+  ...updates,
+ };
 }
 
 const updatedUserData = updateUserName(userData, { name: "Emma" });
@@ -53,16 +53,16 @@ Imagine a scenario where you need to update all the user information. In such ca
 
 ```ts
 function updateAllData(newData: Form, updates: Required<Form>) {
-	return {
-		...newData,
-		...updates,
-	};
+ return {
+  ...newData,
+  ...updates,
+ };
 }
 
 const newUserData = {
-	name: "Olivia",
-	email: "Olivia@example.com",
-	message: "new message with Required",
+ name: "Olivia",
+ email: "Olivia@example.com",
+ message: "new message with Required",
 };
 
 const updatedAllUserData = updateAllData(userData, newUserData);
@@ -83,9 +83,9 @@ When you copy the provided code snippet and hover your mouse over **`Form`**, yo
 
 ```ts
 type Form = {
-	name?: string;
-	email?: string;
-	message?: string;
+ name?: string;
+ email?: string;
+ message?: string;
 };
 
 type AllRequired = Required<Form>;
@@ -95,6 +95,6 @@ type AllRequired = Required<Form>;
 
 - [TS Handbook - Required](https://www.typescriptlang.org/docs/handbook/utility-types.html#requiredtype)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

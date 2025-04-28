@@ -7,9 +7,9 @@ tags: [react]
 
 ## Intro
 
-In my <a href="https://victoriacheng15.vercel.app/posts/nextjs-state-management-with-redux-toolkit-part-1" target="_blank" rel="noopener noreferrer">previous post</a>, I covered setting up Redux Toolkit and fetching stories from the top category. However, the application now needs to display stories from the show and job categories as well. As a result, the code needs to be refactored to create a reusable initial state object and function.
+In my [previous post](https://victoriacheng15.vercel.app/posts/nextjs-state-management-with-redux-toolkit-part-1), I covered setting up Redux Toolkit and fetching stories from the top category. However, the application now needs to display stories from the show and job categories as well. As a result, the code needs to be refactored to create a reusable initial state object and function.
 
-**Full code**
+### Full code
 
 ```ts
 // src/features/topSlice.ts
@@ -23,61 +23,61 @@ const BASE_URL = "https://hacker-news.firebaseio.com/v0";
 type LoadingStatus = "idle" | "loading" | "succeeded" | "failed";
 
 interface StoryResponse {
-	details: IItem[];
-	loadingStatus: LoadingStatus;
-	error: string;
-	page: number;
-	limit: number;
+ details: IItem[];
+ loadingStatus: LoadingStatus;
+ error: string;
+ page: number;
+ limit: number;
 }
 
 type Pagination = Pick<StoryResponse, "page"| "limit">
 
 const initialState: StoryResponse = {
-	details: [],
-	loadingStatus: "idle",
-	error: "",
-	page: 0,
-	limit: 10,
+ details: [],
+ loadingStatus: "idle",
+ error: "",
+ page: 0,
+ limit: 10,
 };
 
 export const fetchTopStories = createAsyncThunk(
-	"tops/topsStoryDetails",
-	async ({ page, limit }: Pagination) => {
-		const res = await axios.get(`${BASE_URL}/topstories.json`);
+ "tops/topsStoryDetails",
+ async ({ page, limit }: Pagination) => {
+  const res = await axios.get(`${BASE_URL}/topstories.json`);
 
-		const promises: IItem[] = res.data.slice(page, limit).map((id) => {
-			const res = await axios.get(`${BASE_URL}/item/${id}.json`);
-			return res.data;
-		});
+  const promises: IItem[] = res.data.slice(page, limit).map((id) => {
+   const res = await axios.get(`${BASE_URL}/item/${id}.json`);
+   return res.data;
+  });
 
-		const details = await Promise.all(promise);
-		return details;
-	}
+  const details = await Promise.all(promise);
+  return details;
+ }
 );
 
 const topsSlice = createSlice({
-	name: "tops",
-	initialState,
-	reducers: {
-		loadMoreStories: (state) => {
-			state.loadingStatus = "idle";
-			state.limit += 10;
-		},
-	},
-	extraReducers: (builder) => {
-		builder
-			.addCase(fetchTopStories.pending, (state) => {
-				state.loadingStatus = "loading";
-			})
-			.addCase(fetchTopStories.fulfilled, (state, action) => {
-				state.loadingStatus = "succeeded";
-				state.details = [...action.payload];
-			})
-			.addCase(fetchTopStories.rejected, (state, action) => {
-				state.loadingStatus = "failed";
-				state.error = action.error.message!;
-			});
-	},
+ name: "tops",
+ initialState,
+ reducers: {
+  loadMoreStories: (state) => {
+   state.loadingStatus = "idle";
+   state.limit += 10;
+  },
+ },
+ extraReducers: (builder) => {
+  builder
+   .addCase(fetchTopStories.pending, (state) => {
+    state.loadingStatus = "loading";
+   })
+   .addCase(fetchTopStories.fulfilled, (state, action) => {
+    state.loadingStatus = "succeeded";
+    state.details = [...action.payload];
+   })
+   .addCase(fetchTopStories.rejected, (state, action) => {
+    state.loadingStatus = "failed";
+    state.error = action.error.message!;
+   });
+ },
 });
 
 export const { loadMoreStories } = topsSlice.actions;
@@ -88,19 +88,19 @@ export default topsSlice;
 
 // src/pages/top.tsx
 function top() {
-	const dispatch = useAppDispatch();
+ const dispatch = useAppDispatch();
 
-	const { details, status, error, page, limit } = useAppSelector(selectTops);
+ const { details, status, error, page, limit } = useAppSelector(selectTops);
 
-	useEffect(() => {
-		if (status === "idle") {
-			dispatch(fetchTopStories({ page, limit }));
-		}
-	}, [dispatch, status, page, limit]);
+ useEffect(() => {
+  if (status === "idle") {
+   dispatch(fetchTopStories({ page, limit }));
+  }
+ }, [dispatch, status, page, limit]);
 
-	return (
-		// do your magic here!
-	);
+ return (
+  // do your magic here!
+ );
 }
 
 export default top;
@@ -117,11 +117,11 @@ import { IItem } from "hacker-news-api-types";
 type LoadingStatus = "idle" | "loading" | "succeeded" | "failed";
 
 interface StoryResponse {
-	details: IItem[];
-	loadingStatus: LoadingStatus;
-	error: string;
-	page: number;
-	limit: number;
+ details: IItem[];
+ loadingStatus: LoadingStatus;
+ error: string;
+ page: number;
+ limit: number;
 }
 
 type Pagination = Pick<StoryResponse, "page" | "limit">;
@@ -151,31 +151,31 @@ const BASE_URL = "https://hacker-news.firebaseio.com/v0";
 const DETAIL_URL = (id: number) => `${BASE_URL}/item/${id}.json`;
 
 function getStoryType(type: string) {
-	return `${BASE_URL}/${type}stories.json`;
+ return `${BASE_URL}/${type}stories.json`;
 }
 
 // this is to fetch details of each story ID
 async function getIdDetails(id: number) {
-	const res = await axios.get(DETAIL_URL(id));
-	return res.data;
+ const res = await axios.get(DETAIL_URL(id));
+ return res.data;
 }
 
 export async function getAllDetails(type: string, page: number, limit: number) {
-	// get array of story IDs
-	const res = await axios.get(getStoryType(type));
-	const details = res.data;
+ // get array of story IDs
+ const res = await axios.get(getStoryType(type));
+ const details = res.data;
 
-	// mapped through first 10 IDs and then Promise.all()
-	const promises: IItem[] = details.slice(page, limit).map(getIdDetails);
-	return await Promise.all(promises);
+ // mapped through first 10 IDs and then Promise.all()
+ const promises: IItem[] = details.slice(page, limit).map(getIdDetails);
+ return await Promise.all(promises);
 }
 
 export const initialState: StoryResponse = {
-	details: [],
-	loadingStatus: "idle",
-	error: "",
-	page: 0,
-	limit: 10,
+ details: [],
+ loadingStatus: "idle",
+ error: "",
+ page: 0,
+ limit: 10,
 };
 ```
 
@@ -203,42 +203,42 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 // change below
 export const fetchTopStories = createAsyncThunk(
-	// change below
-	"tops/topsStoryDetails",
-	async ({ page, limit }: Pagination) => {
-		// change below
-		const details = await getAllDetails("top", page, limit);
-		return details;
-	},
+ // change below
+ "tops/topsStoryDetails",
+ async ({ page, limit }: Pagination) => {
+  // change below
+  const details = await getAllDetails("top", page, limit);
+  return details;
+ },
 );
 // change below
 const topsSlice = createSlice({
-	// change below
-	name: "tops",
-	initialState,
-	reducers: {
-		loadMoreStories: (state) => {
-			state.loadingStatus = "idle";
-			state.limit += 10;
-		},
-	},
-	extraReducers: (builder) => {
-		builder
-			// change below
-			.addCase(fetchTopStories.pending, (state) => {
-				state.loadingStatus = "loading";
-			})
-			// change below
-			.addCase(fetchTopStories.fulfilled, (state, action) => {
-				state.loadingStatus = "succeeded";
-				state.details = [...action.payload];
-			})
-			// change below
-			.addCase(fetchTopStories.rejected, (state, action) => {
-				state.loadingStatus = "failed";
-				state.error = action.error.message!;
-			});
-	},
+ // change below
+ name: "tops",
+ initialState,
+ reducers: {
+  loadMoreStories: (state) => {
+   state.loadingStatus = "idle";
+   state.limit += 10;
+  },
+ },
+ extraReducers: (builder) => {
+  builder
+   // change below
+   .addCase(fetchTopStories.pending, (state) => {
+    state.loadingStatus = "loading";
+   })
+   // change below
+   .addCase(fetchTopStories.fulfilled, (state, action) => {
+    state.loadingStatus = "succeeded";
+    state.details = [...action.payload];
+   })
+   // change below
+   .addCase(fetchTopStories.rejected, (state, action) => {
+    state.loadingStatus = "failed";
+    state.error = action.error.message!;
+   });
+ },
 });
 
 // change below
@@ -265,20 +265,20 @@ Repeat the same process for the job category.
 ```ts
 // change below
 function top() {
-	const dispatch = useAppDispatch();
+ const dispatch = useAppDispatch();
   // change below
-	const { details, status, error, page, limit, loadMoreStories } = useAppSelector(selectTops);
+ const { details, status, error, page, limit, loadMoreStories } = useAppSelector(selectTops);
 
-	useEffect(() => {
-		if (status === "idle") {
+ useEffect(() => {
+  if (status === "idle") {
       // change below
-			dispatch(fetchTopStories({ page, limit }));
-		}
-	}, [dispatch, status, page, limit]);
+   dispatch(fetchTopStories({ page, limit }));
+  }
+ }, [dispatch, status, page, limit]);
 
-	return (
-		// do your magic here!
-	);
+ return (
+  // do your magic here!
+ );
 }
 // change below
 export default top;
@@ -290,11 +290,11 @@ Have you noticed that you do need to import `useAppDispatch` and `useAppSelector
 
 ```ts
 const {
-	details: tops,
-	loadingStatus: topLoading,
-	error: topError,
-	page: topPage,
-	limit: topLimit,
+ details: tops,
+ loadingStatus: topLoading,
+ error: topError,
+ page: topPage,
+ limit: topLimit,
 } = useAppSelector(selectTops);
 ```
 
@@ -309,54 +309,54 @@ import { fetchTopStories, selectTops, loadMoreStories as loadMoreTop } from "@/f
 // utilize import as statement to rename loadMoreStories to loadMore{type}
 
 export function useFetchAllStories() {
-	const dispatch = useAppDispatch();
+ const dispatch = useAppDispatch();
 
-	const {
-		details: tops,
-		loadingStatus: topLoading,
-		error: topError,
-		page: topPage,
-		limit: topLimit,
-	} = useAppSelector(selectTops);
+ const {
+  details: tops,
+  loadingStatus: topLoading,
+  error: topError,
+  page: topPage,
+  limit: topLimit,
+ } = useAppSelector(selectTops);
 
-	const topPagination = {
-		page: topPage,
-		limit: topLimit,
-	};
+ const topPagination = {
+  page: topPage,
+  limit: topLimit,
+ };
 
-	// include dispatch keyword for any dispatch() action
-	const dispatchTopStories = () => dispatch(fetchTopStories(topPagination));
-	const dispatchMoreTop = () => dispatch(loadMoreTop());
+ // include dispatch keyword for any dispatch() action
+ const dispatchTopStories = () => dispatch(fetchTopStories(topPagination));
+ const dispatchMoreTop = () => dispatch(loadMoreTop());
 
-	// repeat the same process for show and job categories
+ // repeat the same process for show and job categories
 
-	// this below to useEffect is to display top 5 recent stories on the homepage
-	const allLoadingConditions =
-		topLoading === "idle" && showLoading === "idle" && jobLoading === "idle";
+ // this below to useEffect is to display top 5 recent stories on the homepage
+ const allLoadingConditions =
+  topLoading === "idle" && showLoading === "idle" && jobLoading === "idle";
 
-	const standardPagination = {
-		page: 0,
-		limit: 10,
-	};
+ const standardPagination = {
+  page: 0,
+  limit: 10,
+ };
 
-	useEffect(() => {
-		if (allLoadingConditions) {
-			dispatch(fetchTopStories(standardPagination));
-			dispatch(fetchShowStories(standardPagination));
-			dispatch(fetchJobStories(standardPagination));
-		}
-	}, [dispatch, allLoadingConditions]);
+ useEffect(() => {
+  if (allLoadingConditions) {
+   dispatch(fetchTopStories(standardPagination));
+   dispatch(fetchShowStories(standardPagination));
+   dispatch(fetchJobStories(standardPagination));
+  }
+ }, [dispatch, allLoadingConditions]);
 
-	return {
-		tops,
-		topLoading,
-		topError,
-		topPage,
-		topLimit,
-		dispatchTopStories,
-		dispatchMoreTop,
-		// repeat the same process for the rest, and replace top to show/job
-	};
+ return {
+  tops,
+  topLoading,
+  topError,
+  topPage,
+  topLimit,
+  dispatchTopStories,
+  dispatchMoreTop,
+  // repeat the same process for the rest, and replace top to show/job
+ };
 }
 ```
 
@@ -373,25 +373,25 @@ import { useFetchAllStories } from "./useFetchAllStories";
 
 // change below
 export function useFetchTop() {
-	// change below
-	const { tops, topLoading, topError, topLimit, dispatchTopStories, dispatchMoreTop } =
-		useFetchAllStories();
+ // change below
+ const { tops, topLoading, topError, topLimit, dispatchTopStories, dispatchMoreTop } =
+  useFetchAllStories();
 
-	useEffect(() => {
-		if (topLoading === "idle") {
-			// change below
-			dispatchTopStories();
-		}
-		// change below
-	}, [dispatchTopStories, topLoading, topLimit]);
+ useEffect(() => {
+  if (topLoading === "idle") {
+   // change below
+   dispatchTopStories();
+  }
+  // change below
+ }, [dispatchTopStories, topLoading, topLimit]);
 
-	// change below
-	return {
-		tops,
-		topLoading,
-		topError,
-		dispatchMoreTop,
-	};
+ // change below
+ return {
+  tops,
+  topLoading,
+  topError,
+  dispatchMoreTop,
+ };
 }
 ```
 
@@ -401,19 +401,19 @@ _Before:_
 
 ```ts
 function top() {
-	const dispatch = useAppDispatch();
+ const dispatch = useAppDispatch();
 
-	const { details, status, error, page, limit } = useAppSelector(selectTops);
+ const { details, status, error, page, limit } = useAppSelector(selectTops);
 
-	useEffect(() => {
-		if (status === "idle") {
-			dispatch(fetchTopStories({ page, limit }));
-		}
-	}, [dispatch, status, page, limit]);
+ useEffect(() => {
+  if (status === "idle") {
+   dispatch(fetchTopStories({ page, limit }));
+  }
+ }, [dispatch, status, page, limit]);
 
-	return (
-		// do your magic here!
-	);
+ return (
+  // do your magic here!
+ );
 }
 
 export default top;
@@ -425,9 +425,9 @@ _After:_
 function top() {
   const { tops, topLoading, topError, dispatchMoreTop } = useFetchTop();
 
-	return (
-		// do your magic here!
-	);
+ return (
+  // do your magic here!
+ );
 }
 
 export default top;
@@ -443,9 +443,8 @@ To summarize: Write the code in its simplest form initially, and then improve it
 
 ## Resources
 
-- <a href="https://github.com/victoriacheng15/hacker-news-next" target="_blank" rel="noopener noreferrer">
-    hacker-news-next repository</a>
+- [hacker-news-next repository](https://github.com/victoriacheng15/hacker-news-next)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

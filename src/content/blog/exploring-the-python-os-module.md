@@ -154,10 +154,13 @@ Additionally, you can get a list of available functions, constants, and methods 
 
 3. For more detailed information on any function or the entire module, use the `help()` function. For example:
    - To see an overview of the `os` module:
+
      ```python
      help(os)
      ```
+
    - To see information about a specific submodule like `os.path`:
+
      ```python
      help(os.path)
      ```
@@ -168,6 +171,6 @@ This will provide descriptions, usage, and examples for each function or submodu
 
 [os — Miscellaneous operating system interfaces by Python Docs](https://docs.python.org/3/library/os.html)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

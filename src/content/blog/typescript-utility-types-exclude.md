@@ -44,9 +44,9 @@ To do this, you can use the `Exclude` utility type. Applying `Exclude<Fruit, { t
 
 ```ts
 type Fruit =
-	| { type: "apple"; color: "red" | "green"; taste: "sweet" }
-	| { type: "banana"; color: "yellow"; taste: "sweet" }
-	| { type: "orange"; color: "orange"; taste: "sweet" | "sour" };
+ | { type: "apple"; color: "red" | "green"; taste: "sweet" }
+ | { type: "banana"; color: "yellow"; taste: "sweet" }
+ | { type: "orange"; color: "orange"; taste: "sweet" | "sour" };
 
 type FruitsWithoutApple = Exclude<Fruit, { type: "apple" }>;
 ```
@@ -59,6 +59,6 @@ The `Exclude` utility type empowers you to precisely customize your TypeScript t
 
 [TS Handbook - Exclude](https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

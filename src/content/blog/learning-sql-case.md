@@ -88,6 +88,6 @@ By mastering the CASE statement, you can make your SQL queries more dynamic and 
 
 [PostgreSQL CASE](https://neon.tech/postgresql/postgresql-tutorial/postgresql-case)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

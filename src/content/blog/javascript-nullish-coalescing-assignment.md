@@ -93,6 +93,6 @@ The Nullish Coalescing Assignment (`??=`) operator in JavaScript is a convenient
 
 [MDN Docs - Nullish coalescing assignment (??=)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

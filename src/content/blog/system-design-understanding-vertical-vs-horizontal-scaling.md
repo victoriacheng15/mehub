@@ -49,6 +49,6 @@ Vertical and horizontal scaling are approaches to handle increased system loads,
 
 [Horizontal vs. Vertical Scaling – How to Scale a Database](https://www.freecodecamp.org/news/horizontal-vs-vertical-scaling-in-database/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

@@ -11,14 +11,14 @@ It is a built-in utility type that extracts the parameter types of a function. I
 
 ```ts
 type Parameters<T extends (...args: any) => any> =
-	T extends (..args: infer P) => any ? P: never
+ T extends (..args: infer P) => any ? P: never
 ```
 
 ## How Does Parameters Work?
 
 ```ts
 function myFunc(a: string, b: number, c: boolean) {
-	//...
+ //...
 }
 
 type myParams = Parameters<typeof myFunc>;
@@ -51,6 +51,6 @@ The Parameters utility type in TypeScript is a valuable tool, allowing developer
 
 [TS Handbook - Parameters](https://www.typescriptlang.org/docs/handbook/utility-types.html?#parameterstype)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

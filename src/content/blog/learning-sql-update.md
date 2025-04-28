@@ -88,6 +88,6 @@ The `UPDATE` statement is essential for modifying existing data in SQL tables. B
 
 [PostgreSQL UPDATE](https://neon.tech/postgresql/postgresql-tutorial/postgresql-update)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

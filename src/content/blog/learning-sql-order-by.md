@@ -76,6 +76,6 @@ The `ORDER BY` clause is an essential SQL feature for sorting query results. It 
 
 [PostgreSQL ORDER BY](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-order-by/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

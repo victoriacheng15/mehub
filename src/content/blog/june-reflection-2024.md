@@ -9,7 +9,7 @@ tags: [reflection]
 
 June is here, marking the halfway point of the year and highlighting how time flies. 🕊️
 
-### School!
+### School
 
 I've committed to pursuing a degree! I am studying software development at the Southern Alberta Institute of Technology. This new journey has been both exciting and challenging. In May, I focused on developing a planning system to organize my schedule, which is why I skipped the May reflection. Now, I am balancing classes, homework, self-directed learning, and personal time. Using insights from the book “Make Time,” my gaol is to maintain a good balance between these tasks with an effective planning system.
 
@@ -30,6 +30,6 @@ I've started setting aside a specific time each day for reading. It's taking tim
 - **Version Control with Git**:
   - This book is a practical guide to using Git, a widely used version control system. It covers key concepts such as repositories, branches, commits, and merging. It empowers developers to manage and collaborate on software projects effectively.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

@@ -121,6 +121,6 @@ The `WHERE` clause allows you to filter records and retrieve only the data that 
 
 [PostgreSQL LIKE](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-like/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

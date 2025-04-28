@@ -17,35 +17,35 @@ The most common example is fetching data from API, which usually looks like the 
 import { useEffect, useState } from "react";
 
 function App() {
-	const [data, setData] = useState([]);
-	const [loading, setLoading] = useState(true);
-	const [error, setError] = useState(null);
+ const [data, setData] = useState([]);
+ const [loading, setLoading] = useState(true);
+ const [error, setError] = useState(null);
 
-	useEffect(() => {
-		const fetchData = async () => {
-			try {
-				const res = await fetch("https://my-api.com/data");
-				const data = await res.json();
-				setData(data);
-			} catch (error) {
-				setError(error);
-			}
-			setLoading(false);
-		};
+ useEffect(() => {
+  const fetchData = async () => {
+   try {
+    const res = await fetch("https://my-api.com/data");
+    const data = await res.json();
+    setData(data);
+   } catch (error) {
+    setError(error);
+   }
+   setLoading(false);
+  };
 
-		fetchData();
-	}, []);
+  fetchData();
+ }, []);
 
-	if (loading) return <p>Loading...</p>;
-	if (error) return <p>{error.message}</p>;
+ if (loading) return <p>Loading...</p>;
+ if (error) return <p>{error.message}</p>;
 
-	return (
-		<div>
-			{data.map((item) => (
-				<p>{item.name}</p>
-			))}
-		</div>
-	);
+ return (
+  <div>
+   {data.map((item) => (
+    <p>{item.name}</p>
+   ))}
+  </div>
+ );
 }
 ```
 
@@ -64,7 +64,7 @@ useEffect(() => {
 
 ```js
 useEffect(() => {
-	// Perform some side effect
+ // Perform some side effect
 }, []); // <-- see this array
 ```
 
@@ -78,15 +78,15 @@ Let's see what will happen if there are two useEffect hooks with different value
 
 ```js
 useEffect(() => {
-	// Perform some side effect
+ // Perform some side effect
 }, [value1]);
 
 useEffect(() => {
-	// Perform some side effect
+ // Perform some side effect
 }, [value2]);
 ```
 
-<img src="https://user-images.githubusercontent.com/35031228/207716615-ccb03d54-edf0-4e01-86d5-4e5a255269de.gif" alt="">
+![image 1](https://user-images.githubusercontent.com/35031228/207716615-ccb03d54-edf0-4e01-86d5-4e5a255269de.gif)
 
 Both hooks were running every time the count value is changed.
 
@@ -96,15 +96,15 @@ Let's see what happens if the first useEffect has `value1` and `value2` while th
 
 ```js
 useEffect(() => {
-	// Perform some side effect
+ // Perform some side effect
 }, [value1, value2]);
 
 useEffect(() => {
-	// Perform some side effect
+ // Perform some side effect
 }, [value2]);
 ```
 
-<img src="https://user-images.githubusercontent.com/35031228/207718037-ad3a274d-54df-4901-9427-220009017477.gif" alt="">
+![image 1](https://user-images.githubusercontent.com/35031228/207716615-ccb03d54-edf0-4e01-86d5-4e5a255269de.gif)
 
 Notice when I clicked the 2nd button, both useEffects were called? It is because the first useEffect has `count` and `count1` in its dependency array
 
@@ -114,19 +114,19 @@ Let's see what happens if the first useEffect has a value in the array while the
 
 ```js
 useEffect(() => {
-	// Perform some side effect
+ // Perform some side effect
 }, [value1]);
 
 useEffect(() => {
-	// Perform some side effect
+ // Perform some side effect
 });
 ```
 
-<img src="https://user-images.githubusercontent.com/35031228/207721083-d0ed73bc-93d9-45ff-9a6f-799776860a94.gif" alt="">
+![image 3](https://user-images.githubusercontent.com/35031228/207721083-d0ed73bc-93d9-45ff-9a6f-799776860a94.gif)
 
 As you can see, by clicking the first button, both useEffects were called. Imagine this as a huge app that does many things, the useEffect without an empty array will run on _every render_. Action A will run the useEffect. Action B will run the useEffect as well. And more actions will run the useEffect! This will have many unnecessary renders and cause performance issues.
 
-<img src="https://user-images.githubusercontent.com/35031228/207722474-e7827488-d110-42fd-a2cb-6dee3940038d.gif" alt="">
+![image 4](https://user-images.githubusercontent.com/35031228/207722474-e7827488-d110-42fd-a2cb-6dee3940038d.gif)
 
 My rule of thumb is always to add an empty array in the useEffect. At least, you can know and make sure the component will only run once after the initial render.
 
@@ -142,38 +142,38 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-	const [count, setCount] = useState(0);
-	const [count1, setCount1] = useState(0);
+ const [count, setCount] = useState(0);
+ const [count1, setCount1] = useState(0);
 
-	function handleClick() {
-		setCount((prev) => prev + 1);
-	}
+ function handleClick() {
+  setCount((prev) => prev + 1);
+ }
 
-	function handleClick1() {
-		setCount1((prev) => prev + 5);
-	}
+ function handleClick1() {
+  setCount1((prev) => prev + 5);
+ }
 
-	useEffect(() => {
-		console.log(`the count: ${count}`);
-	}, [count]);
+ useEffect(() => {
+  console.log(`the count: ${count}`);
+ }, [count]);
 
-	useEffect(() => {
-		console.log(`the count1: ${count1}`);
-	}, []);
+ useEffect(() => {
+  console.log(`the count1: ${count1}`);
+ }, []);
 
-	return (
-		<main>
-			<h1>Hello</h1>
-			<p>count: {count}</p>
-			<p>count1: {count1}</p>
-			<button type="button" onClick={handleClick}>
-				click for count
-			</button>
-			<button type="button" onClick={handleClick1}>
-				click for count1
-			</button>
-		</main>
-	);
+ return (
+  <main>
+   <h1>Hello</h1>
+   <p>count: {count}</p>
+   <p>count1: {count1}</p>
+   <button type="button" onClick={handleClick}>
+    click for count
+   </button>
+   <button type="button" onClick={handleClick1}>
+    click for count1
+   </button>
+  </main>
+ );
 }
 
 export default App;
@@ -197,26 +197,26 @@ It is very similar to how would you write in the App or other components. Instea
 import { useEffect, useState } from "react";
 
 const useFetchApi = () => {
-	const [data, setData] = useState([]);
-	const [loading, setLoading] = useState(true);
-	const [error, setError] = useState(null);
+ const [data, setData] = useState([]);
+ const [loading, setLoading] = useState(true);
+ const [error, setError] = useState(null);
 
-	useEffect(() => {
-		const fetchData = async () => {
-			try {
-				const res = await fetch("https://my-api.com/data");
-				const data = await res.json();
-				setData(data);
-			} catch (error) {
-				setError(error);
-			}
-			setLoading(false);
-		};
+ useEffect(() => {
+  const fetchData = async () => {
+   try {
+    const res = await fetch("https://my-api.com/data");
+    const data = await res.json();
+    setData(data);
+   } catch (error) {
+    setError(error);
+   }
+   setLoading(false);
+  };
 
-		fetchData();
-	}, []);
+  fetchData();
+ }, []);
 
-	return { data, loading, error };
+ return { data, loading, error };
 };
 
 export default useFetchApi;
@@ -243,6 +243,6 @@ export default Something;
 - [React docs - useEffect](https://beta.reactjs.org/apis/react/useEffect)
 - [How the useEffect Hook Works (with Examples)](https://daveceddia.com/useeffect-hook-examples/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

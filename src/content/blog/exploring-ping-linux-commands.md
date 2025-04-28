@@ -99,6 +99,6 @@ man ping
 
 The `ping` command is a handy tool for testing network connectivity and diagnosing issues. Whether you’re checking if a website is online, measuring response times, or troubleshooting your internet connection, `ping` is a must-know command for anyone working with Linux or managing networks. With its simple syntax and useful options, it’s easy to use and provides valuable information about your network’s performance. Happy pinging!
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

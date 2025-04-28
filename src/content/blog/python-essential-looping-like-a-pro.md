@@ -11,7 +11,7 @@ In Python, loops are essential constructs that allow you to execute a block of c
 
 ```python
 for i in range(5):
-	print(i)
+ print(i)
 
 """
 Output:
@@ -23,7 +23,7 @@ Output:
 """
 ```
 
-## The for Loop:
+## The for Loop
 
 The `for` loop is used to iterate over a sequence of elements such as lists, tuples, sets, or dictionaries. It executes a block of code for each item in the sequence.
 
@@ -122,7 +122,7 @@ Fruit Values: red
 """
 ```
 
-## The while Loop:
+## The while Loop
 
 The `while` loop in Python repeats a block of code as long as a specified condition remains true. It's particularly useful when the number of iterations is unknown beforehand.
 
@@ -149,7 +149,7 @@ At index 2 is cherry
 """
 ```
 
-### Dictionary Example:
+### Dictionary Example
 
 Lets say if you want to loop through a dictionary, there are extra steps to setup first
 
@@ -171,7 +171,7 @@ index: 2, key: cherry
 """
 ```
 
-## Loop Control Statements:
+## Loop Control Statements
 
 Python provides loop control statements such as `break`, `continue`, and `else` to control the flow of the loop.
 
@@ -232,6 +232,6 @@ Watermelon is not found.
 
 [Python Docs - 5.6 Loop Techniques](https://docs.python.org/3/tutorial/datastructures.html#looping-techniques)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

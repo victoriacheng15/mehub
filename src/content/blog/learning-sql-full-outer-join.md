@@ -106,6 +106,6 @@ By understanding `FULL OUTER JOIN`, you’ll be able to work with more complex d
 
 [PostgreSQL FULL OUTER JOIN](https://neon.tech/postgresql/postgresql-tutorial/postgresql-full-outer-join)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

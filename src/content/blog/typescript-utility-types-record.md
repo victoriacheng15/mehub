@@ -11,7 +11,7 @@ The `Record` utility type is designed to help you define objects with a specific
 
 ```ts
 type Record<K extends string | number | symbol, T> = {
-	[P in K]: T;
+ [P in K]: T;
 };
 ```
 
@@ -35,10 +35,10 @@ Before we move onto examples, when you see `string | number`, it is a type union
 type User = Record<string, string | number>;
 
 const user: User = {
-	name: "Mia",
-	email: "mia@example.com",
-	age: 25,
-	gender: "female",
+ name: "Mia",
+ email: "mia@example.com",
+ age: 25,
+ gender: "female",
 };
 ```
 
@@ -48,9 +48,9 @@ const user: User = {
 type User = Record<"name" | "age" | "email", string | number>;
 
 const user: User = {
-	name: "Mia",
-	email: "mia@example.com",
-	age: 30,
+ name: "Mia",
+ email: "mia@example.com",
+ age: 30,
 };
 ```
 
@@ -61,12 +61,12 @@ type Address = Record<"street" | "city", string>;
 type User = Record<"name" | "age" | "address", string | number | Address>;
 
 const user: User = {
-	name: "Mia",
-	age: 30,
-	address: {
-		street: "123 Main St",
-		city: "Anytown",
-	},
+ name: "Mia",
+ age: 30,
+ address: {
+  street: "123 Main St",
+  city: "Anytown",
+ },
 };
 ```
 
@@ -91,6 +91,6 @@ type User3 = Record<"name" | "age" | "address", string | number | Address>;
 
 - [TS Handbook - Record](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

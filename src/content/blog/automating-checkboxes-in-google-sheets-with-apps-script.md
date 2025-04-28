@@ -20,11 +20,13 @@ Google Apps Script, a JavaScript-based language, automates and enhances tasks ac
    - Click on `Extensions` and then select `Apps Script`
 2. **Initialize the Script:**
    - The initial code will look like this:
+
      ```js
      function myFunction() {
-     	//
+      //
      }
      ```
+
 3. **Rename the Function:**
 
    - Change the function name to `addCheckboxes`:
@@ -32,38 +34,38 @@ Google Apps Script, a JavaScript-based language, automates and enhances tasks ac
      ```js
      // Define a function named addCheckboxes
      function addCheckboxes() {
-     	// Get the active sheet of the spreadsheet
-     	const spreadsheet = SpreadsheetApp.getActiveSheet();
+      // Get the active sheet of the spreadsheet
+      const spreadsheet = SpreadsheetApp.getActiveSheet();
 
-     	// Define the range where the data is located (e.g., "invitation" range)
-     	// or A2:E
-     	const range = spreadsheet.getRange("invitation");
+      // Define the range where the data is located (e.g., "invitation" range)
+      // or A2:E
+      const range = spreadsheet.getRange("invitation");
 
-     	// Get the values from the specified range
-     	const list = range.getValues();
+      // Get the values from the specified range
+      const list = range.getValues();
 
-     	// Iterate through each row in the list
-     	list.forEach((person, index) => {
-     		// Extract data for each person
-     		const firstName = person[1];
-     		const lastName = person[2];
-     		const email = person[3];
-     		const inviteCol = person[4];
+      // Iterate through each row in the list
+      list.forEach((person, index) => {
+       // Extract data for each person
+       const firstName = person[1];
+       const lastName = person[2];
+       const email = person[3];
+       const inviteCol = person[4];
 
-     		// Check if all required data is present and invite column is empty
-     		if (firstName && lastName && email && iunviteCol === "") {
-     			// Get the cell where the checkbox will be inserted
-     			// index + 1, becasue it starts from 2nd row
-     			// 5 is the E column that we want to add checkboxes
-     			const cell = range.getCell(index + 1, 5).getA1Notation();
+       // Check if all required data is present and invite column is empty
+       if (firstName && lastName && email && iunviteCol === "") {
+        // Get the cell where the checkbox will be inserted
+        // index + 1, becasue it starts from 2nd row
+        // 5 is the E column that we want to add checkboxes
+        const cell = range.getCell(index + 1, 5).getA1Notation();
 
-     			// Uncomment the following line if you want to log the cell location
-     			// Logger.log(cell);
+        // Uncomment the following line if you want to log the cell location
+        // Logger.log(cell);
 
-     			// Insert a checkbox in the specified cell
-     			spreadsheet.getRange([cell]).insertCheckboxes();
-     		}
-     	});
+        // Insert a checkbox in the specified cell
+        spreadsheet.getRange([cell]).insertCheckboxes();
+       }
+      });
      }
      ```
 
@@ -88,6 +90,6 @@ Google Apps Script, a JavaScript-based language, automates and enhances tasks ac
 
 [Apps Script Reference for the Sheets](https://developers.google.com/apps-script/reference/spreadsheet)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

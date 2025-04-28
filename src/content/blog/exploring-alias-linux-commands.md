@@ -15,7 +15,7 @@ The basic syntax of the `alias` command:
 alias new_command="original_command"
 ```
 
-## Temporary alias:
+## Temporary alias
 
 A temporary alias is designed for short-term use within the current session. It serves as a quick, one-time shortcut for specific commands. However, please note that the alias is only available for the duration of the open terminal session and is lost when the terminal is closed.
 
@@ -27,11 +27,11 @@ alias night='echo "good night"'
 
 Now, you can run the `night` command directly in your terminal and this alias will be active only for the current session, providing a convenient shortcut for the duration of your terminal use.
 
-## Permanent alias:
+## Permanent alias
 
 A permanent alias serves as a convenient shortcut for long-term use, persisting across various sessions in your terminal. To establish a permanent alias, you need to integrate the alias command into the configuration file linked to your terminal. It's essential to select the appropriate configuration file based on your current shell.
 
-### For Bash Users:
+### For Bash Users
 
 If Bash is your shell of choice, you'll find the configuration file at `~/.bashrc`. To create a permanent alias, execute the following commands:
 
@@ -40,7 +40,7 @@ echo 'alias bye="echo \"good night\""' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-### For Zsh Users:
+### For Zsh Users
 
 Zsh users, on the other hand, need to tweak the code block slightly. Replace `.bashrc` with `.zshrc` to make the alias configuration compatible with Zsh:
 
@@ -65,6 +65,6 @@ I've added a couple of links below that lead to fantastic and practical alias id
 
 [awesome-bash-alias](https://vikaskyadav.github.io/awesome-bash-alias/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

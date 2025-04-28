@@ -46,6 +46,6 @@ This reflection draws inspiration from Addy Osmaniâ€™s LinkedIn post titled [ðŸš
 - **Find Your Why by Simon Sinek** - Offers a practical guide to discovering your personal purpose and how to live it out daily.
 - **Understanding Distributed Systems by Robert Vitillo** - Teaches core principles of building, scalable, fault-tolerant cloud applications, focuses on practical concepts like replication and resiliency.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

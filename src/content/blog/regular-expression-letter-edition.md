@@ -28,7 +28,7 @@ e.g.
 
 When you only focus on one type at a time, it is not so overwhelming. So I am slowly learning about it little by little over time. In the end, it is not bad after all. And it can be really powerful and useful once you get it.
 
-## Codewars problems:
+## Codewars problems
 
 ### First problem
 
@@ -45,9 +45,9 @@ Test.assertSimilar( capitals('CodEWaRs'), [0,3,4,6] );
 
 ```js
 const capitals = (word) => {
-	const regex = /[A-Z]/g;
-	const capIndex = (char) => word.indexOf(char);
-	return word.match(regex).map(capIndex);
+ const regex = /[A-Z]/g;
+ const capIndex = (char) => word.indexOf(char);
+ return word.match(regex).map(capIndex);
 };
 ```
 
@@ -64,9 +64,9 @@ The input string will only consist of lowercase letters and/or spaces.
 
 ```js
 function getCount(str) {
-	const vowels = /[aeiou]/gi;
-	const checkMatch = str.match(vowels);
-	return checkMatch !== null ? checkMatch.length : 0;
+ const vowels = /[aeiou]/gi;
+ const checkMatch = str.match(vowels);
+ return checkMatch !== null ? checkMatch.length : 0;
 }
 ```
 
@@ -82,6 +82,6 @@ Example: `/aBc/i` would match `AbC`.
 
 [regex101: build, test, and debug regex](https://regex101.com/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and reading. I hope this helps you. Please feel free to let me know if you have any questions or feedback. 😀

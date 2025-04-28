@@ -13,7 +13,7 @@ took the opportunity to explore Next.js and Redux Toolkit. In this
 blog post, I will provide a detailed guide on how I configured Redux Toolkit to
 manage the application's state.
 
-You could check out the <a href="https://hacker-news-next.vercel.app/" target="_blank" rel="noopener noreferrer">deployed site</a> here.
+You could check out the [deployed site](https://hacker-news-next.vercel.app/) here.
 
 Let's go!
 
@@ -35,9 +35,9 @@ do.
 import { configureStore } from "@reduxjs/toolkit";
 
 export const store = configureStore({
-	reducer: {
-		// empty for now
-	},
+ reducer: {
+  // empty for now
+ },
 });
 
 // this is to infer the AppState and AppDispatch types from the store
@@ -80,23 +80,23 @@ const BASE_URL = "https://hacker-news.firebaseio.com/v0";
 type LoadingStatus = "idle" | "loading" | "succeeded" | "failed";
 
 interface StoryResponse {
-	// IItem is from the hacker-news-api-types package,
-	// you can check out the link in the resources below
-	details: IItem[];
-	loadingStatus: LoadingStatus;
-	error: string;
-	page: number;
-	limit: number;
+ // IItem is from the hacker-news-api-types package,
+ // you can check out the link in the resources below
+ details: IItem[];
+ loadingStatus: LoadingStatus;
+ error: string;
+ page: number;
+ limit: number;
 }
 
 type Pagination = Pick<StoryResponse, "page" | "limit">;
 
 const initialState: StoryResponse = {
-	details: [],
-	loadingStatus: "idle",
-	error: "",
-	page: 0,
-	limit: 10,
+ details: [],
+ loadingStatus: "idle",
+ error: "",
+ page: 0,
+ limit: 10,
 };
 ```
 
@@ -106,22 +106,22 @@ const initialState: StoryResponse = {
 
 ```ts
 export const fetchTopStories = createAsyncThunk(
-	// name for this asynchronous operation
-	"tops/topsStoryDetails",
-	async ({ page, limit }: Pagination) => {
-		// this will return an array of story ids
-		const res = await axios.get(`${BASE_URL}/topstories.json`);
+ // name for this asynchronous operation
+ "tops/topsStoryDetails",
+ async ({ page, limit }: Pagination) => {
+  // this will return an array of story ids
+  const res = await axios.get(`${BASE_URL}/topstories.json`);
 
-		// and then we will need to fetch details of each story id
-		// with limit, this is to limit the amount of data to fetch
-		const promises: IItem[] = res.data.slice(page, limit).map((id) => {
-			const res = await axios.get(`${BASE_URL}/item/${id}.json`);
-			return res.data;
-		});
+  // and then we will need to fetch details of each story id
+  // with limit, this is to limit the amount of data to fetch
+  const promises: IItem[] = res.data.slice(page, limit).map((id) => {
+   const res = await axios.get(`${BASE_URL}/item/${id}.json`);
+   return res.data;
+  });
 
-		const details = await Promise.all(promise);
-		return details;
-	},
+  const details = await Promise.all(promise);
+  return details;
+ },
 );
 ```
 
@@ -131,29 +131,29 @@ Note: for the async function, you will need to pass the page and limit as an _ob
 
 This is a function that accepts a name for this slice, an initial state, and an object of reducer functions.
 
-**name**
+##### name
 
 This is the name for this slice. I named it `tops` in this case
 
-**initial state**
+##### initial state
 
 Initial values for details (stories), loading status, error, page, and limit
 
 ```ts
 const initialState: StoryResponse = {
-	details: [],
-	loadingStatus: "idle",
-	error: "",
-	page: 0,
-	limit: 10,
+ details: [],
+ loadingStatus: "idle",
+ error: "",
+ page: 0,
+ limit: 10,
 };
 ```
 
-**reducers**
+##### reducers
 
 I set the limit to 10 stories on the first load to reduce the waiting time for users, which means I need to set up a function called `loadMoreStore` to display more stories if users reach the bottom of the page.
 
-**extraReducer**
+##### extraReducer
 
 extraReducer is similar to the switch statement and allows us to manage stats based on pending, fulfilled, and rejected.
 
@@ -165,32 +165,32 @@ Let's return to the `loadMoreStories` function. A little story, while coding it,
 
 ```ts
 const topsSlice = createSlice({
-	name: "tops",
-	initialState,
-	reducers: {
-		loadMoreStories: (state) => {
-			state.loadingStatus = "idle";
-			state.limit += 10;
-		},
-	},
-	extraReducers: (builder) => {
-		builder
-			.addCase(fetchTopStories.pending, (state) => {
-				state.loadingStatus = "loading";
-			})
-			.addCase(fetchTopStories.fulfilled, (state, action) => {
-				state.loadingStatus = "succeeded";
-				state.details = [...action.payload];
-			})
-			.addCase(fetchTopStories.rejected, (state, action) => {
-				state.loadingStatus = "failed";
-				state.error = action.error.message!;
-			});
-	},
+ name: "tops",
+ initialState,
+ reducers: {
+  loadMoreStories: (state) => {
+   state.loadingStatus = "idle";
+   state.limit += 10;
+  },
+ },
+ extraReducers: (builder) => {
+  builder
+   .addCase(fetchTopStories.pending, (state) => {
+    state.loadingStatus = "loading";
+   })
+   .addCase(fetchTopStories.fulfilled, (state, action) => {
+    state.loadingStatus = "succeeded";
+    state.details = [...action.payload];
+   })
+   .addCase(fetchTopStories.rejected, (state, action) => {
+    state.loadingStatus = "failed";
+    state.error = action.error.message!;
+   });
+ },
 });
 ```
 
-**Lastly**
+##### Lastly
 
 Finally, we reach the last part after setting up `store`, `createAsyncThunk`, `createSlice`, and more. There are a couple of things that we need to do.
 
@@ -211,13 +211,13 @@ Remember we set up the store at the beginning, but leave the reducer object empt
 import topSlice from "./features/topSlice"
 
 export const store = configureStore({
-	reducer: {
-		[topsSlice.name]: topSlice.reducer
-		// alternative way
-		// for this, you would need to write "export default topsSlice.reducer" and then import it as "topsReducer"
-		// I tend to make typos here and there, I decide to go with first method instead :P
-		tops: topsReducer
-	},
+ reducer: {
+  [topsSlice.name]: topSlice.reducer
+  // alternative way
+  // for this, you would need to write "export default topsSlice.reducer" and then import it as "topsReducer"
+  // I tend to make typos here and there, I decide to go with first method instead :P
+  tops: topsReducer
+ },
 });
 ```
 
@@ -230,21 +230,21 @@ import { fetchTopDetails, selectTops, loadMore } from "@/features/topStorisSlice
 import { useAppDispatch, useAppSelector } from "@/hooks"; // hooks.ts
 
 function top() {
-	const dispatch = useAppDispatch();
-	// utilize destructuring method
-	// these values will be the names that you set up for the initialState object
-	const { details, loadingStatus, error, page, limit } = useAppSelector(selectTops);
+ const dispatch = useAppDispatch();
+ // utilize destructuring method
+ // these values will be the names that you set up for the initialState object
+ const { details, loadingStatus, error, page, limit } = useAppSelector(selectTops);
 
-	useEffect(() => {
-		// remember the little story? this is the reason why I have to change the loading status back to idle
-		if (loadingStatus === "idle") {
-			dispatch(fetchTopDetails({ page, limit }));
-		}
-	}, [dispatch, loadingStatus, page, limit]);
+ useEffect(() => {
+  // remember the little story? this is the reason why I have to change the loading status back to idle
+  if (loadingStatus === "idle") {
+   dispatch(fetchTopDetails({ page, limit }));
+  }
+ }, [dispatch, loadingStatus, page, limit]);
 
-	return (
-		// do your magic here
-	);
+ return (
+  // do your magic here
+ );
 }
 
 export default top;
@@ -266,63 +266,63 @@ const BASE_URL = "https://hacker-news.firebaseio.com/v0";
 type LoadingStatus = "idle" | "loading" | "succeeded" | "failed";
 
 interface StoryResponse {
-	// IItem is from the hacker-news-api-types package,
-	// you can check out the link in the resources below
-	details: IItem[];
-	loadingStatus: LoadingStatus;
-	error: string;
-	page: number;
-	limit: number;
+ // IItem is from the hacker-news-api-types package,
+ // you can check out the link in the resources below
+ details: IItem[];
+ loadingStatus: LoadingStatus;
+ error: string;
+ page: number;
+ limit: number;
 }
 
 type Pagination = Pick<StoryResponse, "page"| "limit">
 
 const initialState: StoryResponse = {
-	details: [],
-	loadingStatus: "idle",
-	error: "",
-	page: 0,
-	limit: 10,
+ details: [],
+ loadingStatus: "idle",
+ error: "",
+ page: 0,
+ limit: 10,
 };
 
 export const fetchTopStories = createAsyncThunk(
-	"tops/topsStoryDetails",
-	async ({ page, limit }: Pagination) => {
-		const res = await axios.get(`${BASE_URL}/topstories.json`);
+ "tops/topsStoryDetails",
+ async ({ page, limit }: Pagination) => {
+  const res = await axios.get(`${BASE_URL}/topstories.json`);
 
-		const promises: IItem[] = res.data.slice(page, limit).map((id) => {
-			const res = await axios.get(`${BASE_URL}/item/${id}.json`);
-			return res.data;
-		});
+  const promises: IItem[] = res.data.slice(page, limit).map((id) => {
+   const res = await axios.get(`${BASE_URL}/item/${id}.json`);
+   return res.data;
+  });
 
-		const details = await Promise.all(promise);
-		return details;
-	}
+  const details = await Promise.all(promise);
+  return details;
+ }
 );
 
 const topsSlice = createSlice({
-	name: "tops",
-	initialState,
-	reducers: {
-		loadMoreStories: (state) => {
-			state.loadingStatus = "idle";
-			state.limit += 10;
-		},
-	},
-	extraReducers: (builder) => {
-		builder
-			.addCase(fetchTopStories.pending, (state) => {
-				state.loadingStatus = "loading";
-			})
-			.addCase(fetchTopStories.fulfilled, (state, action) => {
-				state.loadingStatus = "succeeded";
-				state.details = [...action.payload];
-			})
-			.addCase(fetchTopStories.rejected, (state, action) => {
-				state.loadingStatus = "failed";
-				state.error = action.error.message!;
-			});
-	},
+ name: "tops",
+ initialState,
+ reducers: {
+  loadMoreStories: (state) => {
+   state.loadingStatus = "idle";
+   state.limit += 10;
+  },
+ },
+ extraReducers: (builder) => {
+  builder
+   .addCase(fetchTopStories.pending, (state) => {
+    state.loadingStatus = "loading";
+   })
+   .addCase(fetchTopStories.fulfilled, (state, action) => {
+    state.loadingStatus = "succeeded";
+    state.details = [...action.payload];
+   })
+   .addCase(fetchTopStories.rejected, (state, action) => {
+    state.loadingStatus = "failed";
+    state.error = action.error.message!;
+   });
+ },
 });
 
 export const { loadMoreStories } = topsSlice.actions;
@@ -333,19 +333,19 @@ export default topsSlice;
 
 // src/pages/top.tsx
 function top() {
-	const dispatch = useAppDispatch();
+ const dispatch = useAppDispatch();
 
-	const { details, status, error, page, limit } = useAppSelector(selectTops);
+ const { details, status, error, page, limit } = useAppSelector(selectTops);
 
-	useEffect(() => {
-		if (status === "idle") {
-			dispatch(fetchTopStories({ page, limit }));
-		}
-	}, [dispatch, status, page, limit]);
+ useEffect(() => {
+  if (status === "idle") {
+   dispatch(fetchTopStories({ page, limit }));
+  }
+ }, [dispatch, status, page, limit]);
 
-	return (
-		// do your magic here!
-	);
+ return (
+  // do your magic here!
+ );
 }
 
 export default top;
@@ -361,13 +361,13 @@ For part 2, let's see the refactoring action and how I expand the fetching funct
 
 ## Resources
 
-- <a href="https://github.com/HackerNews/API" target="_blank" rel="noopener noreferrer">Hacker News API</a>
-- <a href="https://www.youtube.com/playlist?list=PL0Zuz27SZ-6M1J5I1w2-uZx36Qp6qhjKo" target="_blank" rel="noopener noreferrer">Redux Toolkit by Dave Gray</a>
-- <a href="https://redux-toolkit.js.org/tutorials/typescript" target="_blank" rel="noopener noreferrer">Redux Toolkit - TypeScript Quick Start</a>
-- <a href="https://redux-toolkit.js.org/api/createAsyncThunk" target="_blank" rel="noopener noreferrer">Redux Toolkit - createAsyncThunk</a>
-- <a href="https://redux-toolkit.js.org/api/createSlice" target="_blank" rel="noopener noreferrer">Redux Toolkit - createSlice</a>
-- <a href="https://www.npmjs.com/package/hacker-news-api-types" target="_blank" rel="noopener noreferrer">hacker-news-api-types</a>
+- [Hacker News API](https://github.com/HackerNews/API)
+- [Redux Toolkit by Dave Gray](https://www.youtube.com/playlist?list=PL0Zuz27SZ-6M1J5I1w2-uZx36Qp6qhjKo)
+- [Redux Toolkit - TypeScript Quick Start](https://redux-toolkit.js.org/tutorials/typescript)
+- [Redux Toolkit - createAsyncThunk](https://redux-toolkit.js.org/api/createAsyncThunk)
+- [Redux Toolkit - createSlice](https://redux-toolkit.js.org/api/createSlice)
+- [hacker-news-api-types](https://www.npmjs.com/package/hacker-news-api-types)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

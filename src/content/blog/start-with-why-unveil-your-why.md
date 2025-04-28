@@ -9,7 +9,7 @@ tags: [book]
 
 Embark on a thought-provoking journey with 'Start with Why' by Simon Sinek, where the author unravels the essence of inspirational leadership and success. Sinek challenges conventional thinking, urging us to prioritize the 'why' before the 'how' and 'what.' Through real-world examples, he illustrates how a clear sense of purpose drives individuals and organizations to achieve lasting impact and fulfillment. This compelling book invites readers to reevaluate their approach to leadership, igniting a deeper understanding of motivation and innovation in the pursuit of meaningful goals.
 
-## Sinek’s Strategies:
+## Sinek’s Strategies
 
 1. **Clarify Your Purpose:**
    - Reflect on your personal and organizational values.
@@ -42,6 +42,6 @@ This compelling exploration delves into the concept of understanding personal or
 
 Worth the read, it opens up different perspectives, encouraging a deeper understanding of the driving forces behind meaningful endeavors.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

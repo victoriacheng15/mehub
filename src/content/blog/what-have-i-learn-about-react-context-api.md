@@ -11,7 +11,7 @@ I have a project "REST Countries API with color theme switcher" from Frontend Me
 
 Also, check out the [live site](https://fem-rest-countries-api-vc.vercel.app/) for what it does before moving on.
 
-## Let's start on the topic:
+## Let's start on the topic
 
 It is better to see the codebase in action and why the API is awesome! Without the API, props will have to pass down from component to component. There can be more layers of components. I often had to go and back forth between files while working on this project. I think this could be really difficult to debug the app when you have to figure out where the props originally came from. Let's think about this if the app is large with thousands of components and passing props down through the tree root alike structure.....? I think you get the idea.
 
@@ -21,63 +21,63 @@ Let's start on what the file looks like before.
 
 ```js
 function Main() {
-	// this is from the useFetchCountries.jsx where I set up for data, loading and list
-	const { countries, loading, list, setList } = useFetchCountries();
-	// this is for the search bar where the users will type to search
-	const [searchTerm, setSearchTerm] = useState("");
-	// this is for select region, like America, Asia, etc
-	const [selectRegion, setSelectRegion] = useState("");
-	// this is for the pagintation that will display 12 countries each page
-	const [countriesPerPage] = useState(12);
-	// this is to show the current page, e.g. page 1, page 2..etc
-	const [currentPage, setCurrentPage] = useState(1);
+ // this is from the useFetchCountries.jsx where I set up for data, loading and list
+ const { countries, loading, list, setList } = useFetchCountries();
+ // this is for the search bar where the users will type to search
+ const [searchTerm, setSearchTerm] = useState("");
+ // this is for select region, like America, Asia, etc
+ const [selectRegion, setSelectRegion] = useState("");
+ // this is for the pagintation that will display 12 countries each page
+ const [countriesPerPage] = useState(12);
+ // this is to show the current page, e.g. page 1, page 2..etc
+ const [currentPage, setCurrentPage] = useState(1);
 
-	// a function to filter countries based on the search value
-	const handleSearch = (searchValue) => {
-		const value = searchValue.toLowerCase();
-		setSearchTerm(value);
-		const searchFiltered = countries.filter(({ name }) => {
-			const countryName = name.official.toLowerCase();
-			return countryName.includes(value);
-		});
-		setList(searchFiltered);
-	};
+ // a function to filter countries based on the search value
+ const handleSearch = (searchValue) => {
+  const value = searchValue.toLowerCase();
+  setSearchTerm(value);
+  const searchFiltered = countries.filter(({ name }) => {
+   const countryName = name.official.toLowerCase();
+   return countryName.includes(value);
+  });
+  setList(searchFiltered);
+ };
 
-	// a function to filter countries based on its region
-	const handleSelect = (selectValue) => {
-		setSelectRegion(selectValue);
-		const selectFiltered = countries.filter(({ region }) => region.includes(selectValue));
+ // a function to filter countries based on its region
+ const handleSelect = (selectValue) => {
+  setSelectRegion(selectValue);
+  const selectFiltered = countries.filter(({ region }) => region.includes(selectValue));
 
-		setList(selectFiltered);
-	};
+  setList(selectFiltered);
+ };
 
-	// set up 12 countries display on each page
-	// and they go into pagination component
-	const idxOfLastCountries = currentPage * countriesPerPage; // 1 * 12 = 12
-	const idxOfFirstCountries = idxOfLastCountries - countriesPerPage; // 12 - 12 = 1
-	const currentCountries = list.slice(idxOfFirstCountries, idxOfLastCountries);
+ // set up 12 countries display on each page
+ // and they go into pagination component
+ const idxOfLastCountries = currentPage * countriesPerPage; // 1 * 12 = 12
+ const idxOfFirstCountries = idxOfLastCountries - countriesPerPage; // 12 - 12 = 1
+ const currentCountries = list.slice(idxOfFirstCountries, idxOfLastCountries);
 
-	return (
-		<main className="">
-			<div className="">
-				<Form
-					searchValue={searchTerm}
-					onChangeSearch={(e) => handleSearch(e.target.value)}
-					optionValue={selectRegion}
-					onChangeSelect={(e) => handleSelect(e.target.value)}
-				/>
-				<Routes>
-					<Route path="/" element={<Countries countries={currentCountries} loading={loading} />} />
-				</Routes>
-				<Pagination
-					countriesPerPage={countriesPerPage}
-					totalCountries={list.length}
-					currentPage={currentPage}
-					setCurrentPage={setCurrentPage}
-				/>
-			</div>
-		</main>
-	);
+ return (
+  <main className="">
+   <div className="">
+    <Form
+     searchValue={searchTerm}
+     onChangeSearch={(e) => handleSearch(e.target.value)}
+     optionValue={selectRegion}
+     onChangeSelect={(e) => handleSelect(e.target.value)}
+    />
+    <Routes>
+     <Route path="/" element={<Countries countries={currentCountries} loading={loading} />} />
+    </Routes>
+    <Pagination
+     countriesPerPage={countriesPerPage}
+     totalCountries={list.length}
+     currentPage={currentPage}
+     setCurrentPage={setCurrentPage}
+    />
+   </div>
+  </main>
+ );
 }
 ```
 
@@ -85,7 +85,7 @@ This is the whole code for the `Main` component. It does look messy. We also nee
 
 _A picture worth a thousand words!_
 
-<img src="https://user-images.githubusercontent.com/35031228/197290382-fec0a809-44bf-49d6-a0bc-609b301c05da.png" alt="shows the process of passing props down from main to search and select components">
+![shows the process of passing props down from main to search and select components](https://user-images.githubusercontent.com/35031228/197290382-fec0a809-44bf-49d6-a0bc-609b301c05da.png)
 
 As the illustration and code show, `searchTerm`, `selectRegion`, `handleSearch`, and `handleSelect` were defined in the `Main` component. For the `Search` and `Select` to work, they will have to get props from `Main`.
 
@@ -99,20 +99,20 @@ Now, let's see what it looks like after using the API!
 
 ```js
 function Countries() {
-	const { loading } = useContext(CountriesContext);
-	const { currentCountries } = useContext(PaginationContext);
+ const { loading } = useContext(CountriesContext);
+ const { currentCountries } = useContext(PaginationContext);
 
-	if (loading) return <Spinner />;
+ if (loading) return <Spinner />;
 
-	return (
-		<>
-			<Form />
-			<section className="">
-				// this is a grid that display country cards which is the homepage
-			</section>
-			<Pagination />
-		</>
-	);
+ return (
+  <>
+   <Form />
+   <section className="">
+    // this is a grid that display country cards which is the homepage
+   </section>
+   <Pagination />
+  </>
+ );
 }
 ```
 
@@ -127,36 +127,36 @@ First, `createContext` needs to be imported.
 const CountriesContext = createContext();
 
 export function CountriesProvider({ children }) {
-	// from useFetchCountries.jsx under hook folder
-	const { countries, loading, list, setList } = useFetchCountries();
-	// these lovely useState hooks for search and select
-	const [searchTerm, setSearchTerm] = useState("");
-	const [selectRegion, setSelectRegion] = useState("");
+ // from useFetchCountries.jsx under hook folder
+ const { countries, loading, list, setList } = useFetchCountries();
+ // these lovely useState hooks for search and select
+ const [searchTerm, setSearchTerm] = useState("");
+ const [selectRegion, setSelectRegion] = useState("");
 
-	const handleSearch = (searchValue) => {
-		// the code is deinfed above
-	};
+ const handleSearch = (searchValue) => {
+  // the code is deinfed above
+ };
 
-	const handleSelect = (selectValue) => {
-		// the code is deinfed above
-	};
+ const handleSelect = (selectValue) => {
+  // the code is deinfed above
+ };
 
-	return (
-		// remember the line of code that was created with `createContext`?
-		// you put all functions and useState hooks that will be used by other components
-		<CountriesContext.Provider
-			value={{
-				loading,
-				list,
-				searchTerm,
-				selectRegion,
-				handleSearch,
-				handleSelect,
-			}}
-		>
-			{children}
-		</CountriesContext.Provider>
-	);
+ return (
+  // remember the line of code that was created with `createContext`?
+  // you put all functions and useState hooks that will be used by other components
+  <CountriesContext.Provider
+   value={{
+    loading,
+    list,
+    searchTerm,
+    selectRegion,
+    handleSearch,
+    handleSelect,
+   }}
+  >
+   {children}
+  </CountriesContext.Provider>
+ );
 }
 
 export default CountriesContext;
@@ -164,18 +164,18 @@ export default CountriesContext;
 
 Let's see the code from before and after with `Form` component. Notice the `after` code doesn't take any props like the `before` code? This is the advantage of `Context API`.
 
-_Before_
+### _Before_
 
 ```js
 <Form
-	searchValue={searchTerm}
-	onChangeSearch={(e) => handleSearch(e.target.value)}
-	optionValue={selectRegion}
-	onChangeSelect={(e) => handleSelect(e.target.value)}
+ searchValue={searchTerm}
+ onChangeSearch={(e) => handleSearch(e.target.value)}
+ optionValue={selectRegion}
+ onChangeSelect={(e) => handleSelect(e.target.value)}
 />
 ```
 
-_After_
+### _After_
 
 ```js
 // wow no props to pass down!!!
@@ -186,23 +186,23 @@ First, go to the `SearchBar` component that needs one or more values from the `C
 
 ```js
 function SearchBar() {
-	// remember the `CountriesContext` that was created in the context file?
-	// you only call the value that you need for this component
-	// searchTerm, handleSearch in this case and then pass them to value and onChange below
-	const { searchTerm, handleSearch } = useContext(CountriesContext);
+ // remember the `CountriesContext` that was created in the context file?
+ // you only call the value that you need for this component
+ // searchTerm, handleSearch in this case and then pass them to value and onChange below
+ const { searchTerm, handleSearch } = useContext(CountriesContext);
 
-	return (
-		<div className="">
-			<IoSearchSharp className="" />
-			<input
-				value={searchTerm}
-				onChange={(e) => handleSearch(e.target.value)}
-				className=""
-				type="text"
-				placeholder="Search for a country..."
-			/>
-		</div>
-	);
+ return (
+  <div className="">
+   <IoSearchSharp className="" />
+   <input
+    value={searchTerm}
+    onChange={(e) => handleSearch(e.target.value)}
+    className=""
+    type="text"
+    placeholder="Search for a country..."
+   />
+  </div>
+ );
 }
 ```
 
@@ -240,6 +240,6 @@ Advantages:
   - This is where I actually understand `Context API`, highly recommend following along and trying to implement it in your project(s)!
 - [Prop Drilling by Kent C. Dodds](https://kentcdodds.com/blog/prop-drilling)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

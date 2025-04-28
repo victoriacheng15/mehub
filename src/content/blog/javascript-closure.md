@@ -11,7 +11,7 @@ In JavaScript, closure is a combination of a function and the lexical environmen
 
 ```js
 function lexical() {
-	// This is the lexical environment
+ // This is the lexical environment
 }
 ```
 
@@ -21,51 +21,51 @@ In simpler terms, a closure allows a function to access variables from its outer
 
 ```js
 function test() {
-	const a = "a";
-	console.log(
-		"test:",
-		typeof a !== "undefined" ? "a" : new Error("Variable 'a' does not exist in test"),
-	);
-	console.log(
-		"test:",
-		typeof b !== "undefined" ? "b" : new Error("Variable 'b' does not exist in test"),
-	);
-	console.log(
-		"test:",
-		typeof c !== "undefined" ? "c" : new Error("Variable 'c' does not exist in test"),
-	);
+ const a = "a";
+ console.log(
+  "test:",
+  typeof a !== "undefined" ? "a" : new Error("Variable 'a' does not exist in test"),
+ );
+ console.log(
+  "test:",
+  typeof b !== "undefined" ? "b" : new Error("Variable 'b' does not exist in test"),
+ );
+ console.log(
+  "test:",
+  typeof c !== "undefined" ? "c" : new Error("Variable 'c' does not exist in test"),
+ );
 
-	return function test2() {
-		const b = "b";
-		console.log(
-			"test2:",
-			typeof a !== "undefined" ? a : new Error("Variable 'a' does not exist in test2"),
-		);
-		console.log(
-			"test2:",
-			typeof b !== "undefined" ? b : new Error("Variable 'b' does not exist in test2"),
-		);
-		console.log(
-			"test2:",
-			typeof c !== "undefined" ? c : new Error("Variable 'c' does not exist in test2"),
-		);
+ return function test2() {
+  const b = "b";
+  console.log(
+   "test2:",
+   typeof a !== "undefined" ? a : new Error("Variable 'a' does not exist in test2"),
+  );
+  console.log(
+   "test2:",
+   typeof b !== "undefined" ? b : new Error("Variable 'b' does not exist in test2"),
+  );
+  console.log(
+   "test2:",
+   typeof c !== "undefined" ? c : new Error("Variable 'c' does not exist in test2"),
+  );
 
-		return function test3() {
-			const c = "c";
-			console.log(
-				"test3:",
-				typeof a !== "undefined" ? a : new Error("Variable 'a' does not exist in test3"),
-			);
-			console.log(
-				"test3:",
-				typeof b !== "undefined" ? b : new Error("Variable 'b' does not exist in test3"),
-			);
-			console.log(
-				"test3:",
-				typeof c !== "undefined" ? c : new Error("Variable 'c' does not exist in test3"),
-			);
-		};
-	};
+  return function test3() {
+   const c = "c";
+   console.log(
+    "test3:",
+    typeof a !== "undefined" ? a : new Error("Variable 'a' does not exist in test3"),
+   );
+   console.log(
+    "test3:",
+    typeof b !== "undefined" ? b : new Error("Variable 'b' does not exist in test3"),
+   );
+   console.log(
+    "test3:",
+    typeof c !== "undefined" ? c : new Error("Variable 'c' does not exist in test3"),
+   );
+  };
+ };
 }
 
 test()()();
@@ -98,6 +98,6 @@ I hope the provided example helps to illustrate this concept effectively!
 - [MDN docs - Closure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 - [JS Info - Closure](https://javascript.info/closure)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

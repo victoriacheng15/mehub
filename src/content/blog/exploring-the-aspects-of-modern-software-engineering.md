@@ -40,6 +40,6 @@ Here are a couple of ways to improve your software quality, productivity, and sa
 
 Based on my reading, it’s important to note that although these practices may be effective at Google, they may not work as well in other organizations or teams. This implies that while these books are valuable resources for software engineers, they have different focuses and scopes. I would recomm
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

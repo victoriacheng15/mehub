@@ -65,6 +65,6 @@ Similarly, the TCP 3-way handshake ensures both devices are aligned and ready to
 
 [What is a TCP 3-Way Handshake? by Think Cloudly](https://thinkcloudly.com/blogs/cyber-security/tcp-3-way-handshake/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

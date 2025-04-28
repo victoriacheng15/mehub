@@ -11,7 +11,7 @@ In Brian P. Moran's book, he presents a fresh approach to goal setting and produ
 
 Have you ever questioned why your year-long resolutions often fall short? This aligns with one of the four concepts outlined below. The issue lies in the duration of long-term goals—they are often too long. Halfway through the year, unforeseen circumstances or situations can cause us to lose focus. If we could condense yearly planning into 12-week cycles, how might it benefit you?
 
-## The Concepts That I Resonated With:
+## The Concepts That I Resonated With
 
 - The Flaws of Annual Planning:
   - Traditional annual planning often leads to procrastination, loss of focus, and decreased motivation.
@@ -44,6 +44,6 @@ Or if you are just curious, you definitely should read the book since it may off
 
 - [12 Week Year](https://12weekyear.com/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

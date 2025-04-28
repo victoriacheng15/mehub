@@ -9,7 +9,7 @@ tags: [python]
 
 Python lists offer a flexible way to store and manipulate collections of items. In this guide, we'll delve into Python lists, exploring their methods, and providing examples of how they can be used with arrays. At its core, a Python list is an ordered collection of items. These items can be any of data types - integers, strings, floats, even other lists. Lists are mutable, meaning you can modify them after creation, which make them versatile for various programming tasks.
 
-### Creating Lists:
+### Creating Lists
 
 ```python
 my_list = [1, 2, 3, 4, 5]
@@ -18,7 +18,7 @@ my_list = [1, 2, 3, 4, 5]
 my_list2 = list([1, 2, 3, 4, 5])
 ```
 
-### Accessing Elements:
+### Accessing Elements
 
 ```python
 print(my_list[0])  # Output: 1
@@ -28,7 +28,7 @@ print(my_list2[0])  # Output: 1
 print(my_list2[-1]) # Output: 5
 ```
 
-## Python List Methods:
+## Python List Methods
 
 - append(): Adds an item to the end of the list
 
@@ -187,6 +187,6 @@ print(nums)
 
 [5.1. More on Lists - Python docs](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

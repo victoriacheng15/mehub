@@ -9,7 +9,7 @@ tags: [book]
 
 Smart Brevity is a communication strategy focused on conveying key messages clearly and concisely, catering to today's fast-paced environment. It aims to ensure quick understanding without overwhelming audiences with unnecessary details. By prioritizing brevity without compromising substance, Smart Brevity enhances communication efficiency, allowing individuals and organizations to successfully convey messages in a time-sensitive world.
 
-## Tips:
+## Tips
 
 1. **Know Your Audience:**
    Understand who you are communicating with and tailor your message to their level of knowledge and interest.
@@ -40,6 +40,6 @@ In the current information-rich landscape, numerous elements compete for attenti
 
 This book is perfect for individuals aiming to improve their communication skills and effectively convey essential story points to readers.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

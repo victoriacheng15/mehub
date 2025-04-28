@@ -97,6 +97,6 @@ The layered design of the OSI model ensures that different devices and software 
 
 [What Is The OSI Model? Definition, Layers, and Importance](https://www.spiceworks.com/tech/networking/articles/what-is-osi-model/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

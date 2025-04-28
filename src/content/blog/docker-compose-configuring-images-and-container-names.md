@@ -15,11 +15,11 @@ Example:
 # docker-compose.yaml
 version: "3"
 services:
-	app:
-		image: your_image_name # 👈
-		container_name: your_container_name # 👈
-		build:
-			# do stuff
+ app:
+  image: your_image_name # 👈
+  container_name: your_container_name # 👈
+  build:
+   # do stuff
 ```
 
 ## Bonus
@@ -38,6 +38,6 @@ docker cp folder container_id:path/folder
 
 [Docker Docs - Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

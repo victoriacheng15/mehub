@@ -111,6 +111,6 @@ This collection of links provides information and demonstrations on various type
 - **Shadows:** Three types of lights supporting shadow generation: directional, spot, and point lights. [Demo](https://victoriacheng15.github.io/three-js-demo/9-shadows/) | [DirectionalLightShadow Docs](https://threejs.org/docs/index.html?q=shadow#api/en/lights/shadows/DirectionalLightShadow) | [SpotLightShadow Docs](https://threejs.org/docs/index.html?q=shadow#api/en/lights/shadows/SpotLightShadow) | [PointLightShadow Docs](https://threejs.org/docs/index.html?q=shadow#api/en/lights/shadows/PointLightShadow)
 - **Particles:** Creating particle effects using **`BufferGeometry`** to achieve a galaxy-like appearance. [Demo](https://victoriacheng15.github.io/three-js-demo/10-particles/) | [BufferGeometry Docs](https://threejs.org/docs/index.html?q=point#api/en/core/BufferGeometry) | [PointsMaterial Docs](https://threejs.org/docs/index.html?q=point#api/en/materials/PointsMaterial)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

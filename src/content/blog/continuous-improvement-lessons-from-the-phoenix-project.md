@@ -9,7 +9,7 @@ tags: [book]
 
 This book is a compelling business novel that follows the journey of IT manager Bill Palmer as he takes on the daunting task of saving a failing company's troubled IT department. With the company on the verge of collapse due to constant system outages and dissatisfied customers, Bill embraces the principles of DevOps and embarks on a transformative mission to improve operations. Through the power of collaboration, automation, and a culture of continuous improvement, Bill strives to resurrect the company from the ashes and bring about a profound shift in how IT can drive business success.
 
-## The Top 4 Concepts:
+## The Top 4 Concepts
 
 **The Three Ways:** The book introduces the concept of the Three Ways, which are foundational principles of DevOps thinking. They include understanding the entire value stream, creating fast feedback loops, and fostering a culture of continuous experimentation and learning.
 
@@ -42,6 +42,6 @@ If you're looking for an engaging read that highlights the remarkable outcomes o
 - [The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win on goodreads](https://www.goodreads.com/en/book/show/17255186)
 - [The Phoenix Project: 10 Minute Summary](https://www.runn.io/blog/the-phoenix-project-summary)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

@@ -30,13 +30,13 @@ Let's use different examples and say there are 2 greeting functions. Both of the
 
 ```js
 function greet() {
-	console.log("hello");
+ console.log("hello");
 }
 
 greet(); // hello
 
 var greeting = function () {
-	console.log("hey");
+ console.log("hey");
 };
 
 greeting(); // hey
@@ -48,14 +48,14 @@ However, if you are trying to move function callings before the declaration. The
 greet(); // hello
 
 function greet() {
-	console.log("hello");
+ console.log("hello");
 }
 
 greeting();
 // TypeError: greeting is not a function
 
 var greeting = function () {
-	console.log("hey");
+ console.log("hey");
 };
 ```
 
@@ -68,7 +68,7 @@ greeting();
 // ReferenceError: Cannot access 'greeting' before initialization
 
 let greeting = function () {
-	console.log("hey");
+ console.log("hey");
 };
 ```
 
@@ -109,6 +109,6 @@ Let's think this way, books have sequels. e.g. Harry Potter books have 1 to 7 se
 - [JavaScript Info - The old "var"](https://javascript.info/var)
 - [Web Dev Simplified - Learn JavaScript Hoisting In 5 Minutes](https://www.youtube.com/watch?v=EvfRXyKa_GI)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

@@ -29,12 +29,12 @@ Let’s see an example with the object:
 
 ```ts
 type MyObject =
-	| {
-			name: string | null;
-			age: number | undefined;
-	  }
-	| null
-	| undefined;
+ | {
+   name: string | null;
+   age: number | undefined;
+   }
+ | null
+ | undefined;
 
 type NonNullsObject = NonNullable<MyObject>;
 // { name: string | null; age: number | undefined; }
@@ -46,8 +46,8 @@ If you want to make the properties of an object non-nullable, you would have to 
 
 ```ts
 type MyObject = {
-	name: NonNullable<string | null>;
-	age: NonNullable<number | undefined>;
+ name: NonNullable<string | null>;
+ age: NonNullable<number | undefined>;
 };
 ```
 
@@ -75,6 +75,6 @@ In TypeScript, the `NonNullable` is a utility type that excludes null and und
 
 [TS Handbook - NonNullable](https://www.typescriptlang.org/docs/handbook/utility-types.html#nonnullabletype)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

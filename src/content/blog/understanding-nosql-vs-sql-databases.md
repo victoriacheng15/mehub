@@ -13,7 +13,7 @@ In our digital age, databases are indispensable for many applications, from e-co
 
 NoSQL, which stand for "Not only SQL," breaks away from SQL's rigid structure by storing data in diverse formats such as key-value pairs, documents, columns, and graphs. This flexibility enables NoSQL to handle large volumes of unstructured and semi-structured data efficiently. Popular examples include MongoDB, Amazon DynamoDB, and Apache Cassandra.
 
-### Pros and Cons of NoSQL:
+### Pros and Cons of NoSQL
 
 _Pros:_
 
@@ -31,7 +31,7 @@ _Cons:_
 
 SQL, which stands for "Structured Query Language," is a programming language designed for managing relational databases. It stores data in tables with predefined structures of rows and columns, ensuring data integrity and enabling complex queries and reporting. Examples include MySQL, PostgreSQL, and SQLite.
 
-### Pros and Cons of SQL:
+### Pros and Cons of SQL
 
 _Pros:_
 
@@ -70,6 +70,6 @@ Choosing the right database depends on your specific data requirements. SQL data
 
 [SQL vs NoSQL: 5 Critical Differences](https://www.integrate.io/blog/the-sql-vs-nosql-difference/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!
