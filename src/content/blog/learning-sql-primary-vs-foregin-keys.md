@@ -17,7 +17,7 @@ Think of PRIMARY KEY as a unique identifier (like a Social Security Number), whi
 
 ## How Do PRIMARY and FOREIGN Keys Work?
 
-### **PRIMARY KEY: Ensuring Uniqueness**
+### PRIMARY KEY: Ensuring Uniqueness
 
 A PRIMARY KEY ensures that:
 
