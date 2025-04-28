@@ -12,7 +12,8 @@
     "format": "biome format ./src --write && prettier -w ./src/**/*.astro",
     "post": "./scripts/new_post.sh",
     "publish": "./scripts/publish_post.sh",
-    "status": "./scripts/check_pr_status.sh"
+    "status": "./scripts/check_pr_status.sh",
+    "lint:md": "npx markdownlint-cli --fix src/content/blog/*.md"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.11",
