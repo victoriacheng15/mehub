@@ -45,6 +45,6 @@ man uniq
 
 [7 Linux Uniq Command Examples to Remove Duplicate Lines from File](https://www.thegeekstuff.com/2013/05/uniq-command-examples/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

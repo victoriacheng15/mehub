@@ -82,6 +82,6 @@ Garbage collection in JavaScript simplifies memory management, allowing develope
 
 [JavaScript Info Garbage collection](https://javascript.info/garbage-collection)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

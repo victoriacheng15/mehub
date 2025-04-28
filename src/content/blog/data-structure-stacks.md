@@ -24,39 +24,39 @@ The stack data structure supports two main operation:
 
 ```js
 class Stack {
-	constructor() {
-		this.items = [];
-	}
+ constructor() {
+  this.items = [];
+ }
 
-	// Add a new element to the top of the stack
-	push(element) {
-		this.items.push(element);
-	}
+ // Add a new element to the top of the stack
+ push(element) {
+  this.items.push(element);
+ }
 
-	// Remove the first elemet from the stack
-	pop() {
-		return this.items.pop();
-	}
+ // Remove the first elemet from the stack
+ pop() {
+  return this.items.pop();
+ }
 
-	// Get the value of the first element
-	peek() {
-		return this.items[this.items.length - 1];
-	}
+ // Get the value of the first element
+ peek() {
+  return this.items[this.items.length - 1];
+ }
 
-	// Check if the stack is empty
-	isEmpty() {
-		return this.items.length === 0;
-	}
+ // Check if the stack is empty
+ isEmpty() {
+  return this.items.length === 0;
+ }
 
-	// Get the number of elements in the stack
-	size() {
-		return this.items.length;
-	}
+ // Get the number of elements in the stack
+ size() {
+  return this.items.length;
+ }
 
-	// Print all the elements in the stack
-	print() {
-		console.log(this.items);
-	}
+ // Print all the elements in the stack
+ print() {
+  console.log(this.items);
+ }
 }
 
 const stack = new Stack();
@@ -137,6 +137,6 @@ if __name__ == "__main__":
 
 ```
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

@@ -17,11 +17,11 @@ I resonated with this quote by Lao Tzu. To gain knowledge, one should actively a
 
 ## Blogs
 
-- <a href="https://victoriacheng15.vercel.app/posts/typescript-utility-types-awaited" target="_blank" rel="noopener noreferrer">TypeScript Utility Types Awaited</a>
-- <a href="https://victoriacheng15.vercel.app/posts/javascript-optional-chaining-operator" target="_blank" rel="noopener noreferrer">JavaScript Optional Chaining Operator</a>
-- <a href="https://victoriacheng15.vercel.app/posts/unleashing-your-limitless-potential-from-the-limitless-book" target="_blank" rel="noopener noreferrer">Unleashing Your Limitless Potential from the Limitless Book</a>
-- <a href="https://victoriacheng15.vercel.app/posts/javascript-promise-promise-all-and-async-await" target="_blank" rel="noopener noreferrer">JavaScript - Promise, Promise All, and async/await</a>
-- <a href="https://victoriacheng15.vercel.app/posts/atomic-habits-transforming-lives-with-lasting-habits" target="_blank" rel="noopener noreferrer">Atomic Habits - Transforming Lives with Lasting Habits</a>
+- [TypeScript Utility Types Awaited](https://victoriacheng15.vercel.app/posts/typescript-utility-types-awaited)
+- [JavaScript Optional Chaining Operator](https://victoriacheng15.vercel.app/posts/javascript-optional-chaining-operator)
+- [Unleashing Your Limitless Potential from the Limitless Book](https://victoriacheng15.vercel.app/posts/unleashing-your-limitless-potential-from-the-limitless-book)
+- [JavaScript - Promise, Promise All, and async/await](https://victoriacheng15.vercel.app/posts/javascript-promise-promise-all-and-async-await)
+- [Atomic Habits - Transforming Lives with Lasting Habits](https://victoriacheng15.vercel.app/posts/atomic-habits-transforming-lives-with-lasting-habits)
 
 ## Books
 
@@ -33,8 +33,8 @@ I resonated with this quote by Lao Tzu. To gain knowledge, one should actively a
 
 ## Harvard CS50
 
-- <a href="https://www.youtube.com/watch?v=8mAITcNt710" target="_blank" rel="noopener noreferrer">Harvard CS50 – Full Computer Science University Course on Youtube</a>
-- <a href="https://cs50.harvard.edu/x/2023/" target="_blank" rel="noopener noreferrer">Harvard CS50 Class Materials</a>
+- [Harvard CS50 – Full Computer Science University Course on Youtube](https://www.youtube.com/watch?v=8mAITcNt710)
+- [Harvard CS50 Class Materials](https://cs50.harvard.edu/x/2023/)
 
 ### Memory
 
@@ -112,8 +112,8 @@ I resonated with this quote by Lao Tzu. To gain knowledge, one should actively a
 
 Rate limiting is a distributed system pattern that controls access to resources. It prevents resource starvation, reduces costs, and avoids server overload. Examples include limiting tweets on Twitter and reading requests on Google Docs API. It finds applications in social media platforms, online ticketing, cloud storage APIs, and SaaS platforms. The core concepts are the limit, window, and identifier. Rate-limiting responses include blocking (denying access), throttling (slowing down requests), and shaping (lower priority for exceeding limits).
 
-- <a href="https://blog.bytebytego.com/p/rate-limiting-fundamentals" target="_blank" rel="noopener noreferrer">Rate Limiting Fundamentals By Alex Xu</a>
+- [Rate Limiting Fundamentals By Alex Xu](https://blog.bytebytego.com/p/rate-limiting-fundamentals)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

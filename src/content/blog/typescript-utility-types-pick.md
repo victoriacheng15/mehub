@@ -21,16 +21,16 @@ We can declare `User` type like below.
 
 ```ts
 interface User {
-	id: number;
-	name: string;
-	email: string;
-	username: string;
-	address: {
-		street: string;
-		suite: string;
-		city: string;
-		zipcode: string;
-	};
+ id: number;
+ name: string;
+ email: string;
+ username: string;
+ address: {
+  street: string;
+  suite: string;
+  city: string;
+  zipcode: string;
+ };
 }
 ```
 
@@ -48,16 +48,16 @@ Hovering the cursor to `UserCard` after copying and pasting the code below to th
 
 ```ts
 interface User {
-	id: number;
-	name: string;
-	email: string;
-	username: string;
-	address: {
-		street: string;
-		suite: string;
-		city: string;
-		zipcode: string;
-	};
+ id: number;
+ name: string;
+ email: string;
+ username: string;
+ address: {
+  street: string;
+  suite: string;
+  city: string;
+  zipcode: string;
+ };
 }
 
 type UserCard = Pick<User, "id" | "username" | "email">;
@@ -69,6 +69,6 @@ In general, the **`Pick`** utility type serves as a valuable tool, enabling you 
 
 [TS Handbook - Pick](https://www.typescriptlang.org/docs/handbook/utility-types.html#picktype-keys)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

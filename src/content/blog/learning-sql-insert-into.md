@@ -92,6 +92,6 @@ The `INSERT INTO` statement is fundamental for adding new data to your tables. W
 
 [PostgreSQL INSERT](https://neon.tech/postgresql/postgresql-tutorial/postgresql-insert)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

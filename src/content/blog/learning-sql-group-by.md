@@ -63,6 +63,6 @@ By mastering `GROUP BY`, you can efficiently summarize and analyze data in SQL.
 
 [PostgreSQL GROUP BY](https://neon.tech/postgresql/postgresql-tutorial/postgresql-group-by)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

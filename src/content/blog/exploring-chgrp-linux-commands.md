@@ -109,6 +109,6 @@ chgrp --help
 
 The `chgrp` command is a powerful tool for managing group ownership in Linux, especially in environments where different users collaborate on shared files and directories. Whether you’re changing the group ownership of a single file or an entire directory tree, `chgrp` makes the process easy and efficient. Mastering this command will help you manage file permissions more effectively in your Linux system.
 
-## Thank You!
+## Thank You
 
 Thank you for taking the time to read this!

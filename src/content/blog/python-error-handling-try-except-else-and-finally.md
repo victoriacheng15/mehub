@@ -134,6 +134,6 @@ Using `try`, `except`, `else`, and `finally` blocks can make your Python code mu
 
 [Built-in Exceptions by Python Docs](https://docs.python.org/3/library/exceptions.html)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

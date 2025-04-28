@@ -15,6 +15,8 @@ Moreover. if something has already hapened, let us leave it behind in the past, 
 
 > Once you replace negative thoughts with positive ones, you’ll start having positive results. By Willie Nelson
 
+-
+
 > No matter what you're going through, there's a light at the end of the tunnel and it may seem hard to get to it but you can do it and just keep working towards it and you'll find the positive side of things. By Demi Lovato
 
 Ideas to help reduce worry:
@@ -52,6 +54,6 @@ I've been a bit lax with my daily reading this month, taking it as a mini break.
 - [Data Structure - Queues](https://victoriacheng15.vercel.app/posts/data-structure-queues)
 - [Exploring cp - Linux Commands](https://victoriacheng15.vercel.app/posts/exploring-cp-linux-commands)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

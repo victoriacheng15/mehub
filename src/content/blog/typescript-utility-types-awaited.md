@@ -17,8 +17,8 @@ Let's fetch the users data from the `JSONPlaceholder`.
 
 ```ts
 interface User {
-	id: number;
-	name: string;
+ id: number;
+ name: string;
 }
 ```
 
@@ -26,9 +26,9 @@ First, we define types for users data and let's keep this simple, we will define
 
 ```ts
 async function getUsers(): Promise<User[]> {
-	const url = "https://jsonplaceholder.typicode.com/users";
-	const res = await fetch(url);
-	return res.json();
+ const url = "https://jsonplaceholder.typicode.com/users";
+ const res = await fetch(url);
+ return res.json();
 }
 ```
 
@@ -39,14 +39,14 @@ type Users = Awaited<ReturnType<typeof getUsers>>;
 // type Users1 = Awaited<Promise<User[]>>;
 
 (async function processData() {
-	const users: Users = await getUsers();
-	console.log(users.slice(0, 2));
+ const users: Users = await getUsers();
+ console.log(users.slice(0, 2));
 })();
 ```
 
 To define the `Users` type, there are two ways:
 
-1.  Using `ReturnType` and `Awaited`
+1. Using `ReturnType` and `Awaited`
 
 ```ts
 type Users = Awaited<ReturnType<typeof getUsers>>;
@@ -83,22 +83,22 @@ type ShowPromiseType = Awaited<ReturnType<() => Promise<number>>>;
 
 ```ts
 interface User {
-	id: number;
-	name: string;
+ id: number;
+ name: string;
 }
 
 async function getUsers(): Promise<User[]> {
-	const url = "https://jsonplaceholder.typicode.com/users";
-	const res = await fetch(url);
-	return res.json();
+ const url = "https://jsonplaceholder.typicode.com/users";
+ const res = await fetch(url);
+ return res.json();
 }
 
 type Users = Awaited<ReturnType<typeof getUsers>>;
 // type Users1 = Awaited<Promise<User[]>>;
 
 (async function processData() {
-	const users: Users = await getUsers();
-	console.log(users.slice(0, 2));
+ const users: Users = await getUsers();
+ console.log(users.slice(0, 2));
 })();
 ```
 
@@ -113,9 +113,9 @@ To keep this simple, `Promise` will return the promise object of whichever type 
 
 ## Resources
 
-- <a href="https://www.typescriptlang.org/docs/handbook/utility-types.html#awaitedtype" target="_blank" rel="noopener noreferrer">TS Handbook - Awaited Utility Type</a>
-- <a href="https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype" target="_blank" rel="noopener noreferrer">TS Handbook - ReturnType Utility Type</a>
+- [TS Handbook - Awaited Utility Type](https://www.typescriptlang.org/docs/handbook/utility-types.html#awaitedtype)
+- [TS Handbook - ReturnType Utility Type](https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

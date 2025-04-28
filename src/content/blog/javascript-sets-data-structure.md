@@ -28,7 +28,7 @@ Have you noticed that there is only one `2` in the array after `console.log`? Th
 
 Keep in mind, lower and upper case letters are NOT the same. `'A' === 'a'` will return false in browser console.
 
-## Codewars problem:
+## Codewars problem
 
 An isogram is a word that has _no repeating letters_, consecutive or non-consecutive.
 
@@ -44,7 +44,7 @@ Example: (Input => Output)
 
 - "moOse" => false (ignore letter case)
 
-### First method (without using Set);
+### First method (without using Set)
 
 - Set up the newArr to take characters in
 
@@ -58,18 +58,18 @@ Example: (Input => Output)
 
 ```js
 function isIsogram(str) {
-	const newArr = [];
-	const strArr = [...str.toLowerCase()];
-	strArr.forEach((char) => {
-		if (!newArr.includes(char)) {
-			newArr.push(char);
-		}
-	});
-	return newArr.length === str.length;
+ const newArr = [];
+ const strArr = [...str.toLowerCase()];
+ strArr.forEach((char) => {
+  if (!newArr.includes(char)) {
+   newArr.push(char);
+  }
+ });
+ return newArr.length === str.length;
 }
 ```
 
-### Second method:
+### Second method
 
 - Convert str to lower cases
 
@@ -81,12 +81,12 @@ function isIsogram(str) {
 
 ```js
 function isIsogram(str) {
-	return new Set(str.toLowerCaser()).size === length;
+ return new Set(str.toLowerCaser()).size === length;
 }
 
 // if use spread operator instead
 function isIsogram(str) {
-	return [...new Set(str.toLowerCase())].length === length;
+ return [...new Set(str.toLowerCase())].length === length;
 }
 ```
 
@@ -96,7 +96,7 @@ Make sure to convert them to lower case first and then remove any duplications. 
 
 As you can see, both methods work. The first method writes more lines of code, while the second method is one-line!
 
-# Resources
+## Resources
 
 [MDN - Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
 
@@ -104,6 +104,6 @@ As you can see, both methods work. The first method writes more lines of code, w
 
 [MDN - Set.prototype.size](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/size)
 
-# Thank you!
+## Thank you
 
 Thank you for your time and reading. I hope this helps you. Please feel free to let me know if you have any questions or feedback. 😀

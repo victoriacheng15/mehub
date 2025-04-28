@@ -38,7 +38,7 @@ range(start, stop, step)
 
 ```python
 for num in range(5):
-	print(num)
+ print(num)
 
 """
 0
@@ -53,7 +53,7 @@ for num in range(5):
 
 ```python
 for num in range(3, 8):
-	print(num)
+ print(num)
 
 """
 3
@@ -68,7 +68,7 @@ for num in range(3, 8):
 
 ```python
 for num in range(50, 101, 10):
-	print(num)
+ print(num)
 
 """
 50
@@ -84,7 +84,7 @@ for num in range(50, 101, 10):
 
 ```python
 for num in range(20, 10, -2):
-	print(num)
+ print(num)
 
 """
 20
@@ -121,6 +121,6 @@ The `range()` method in Python is a useful and important tool that makes it easy
 
 [Python range() Function Example by freeCodeCamp](https://www.freecodecamp.org/news/python-range-function-example/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

@@ -17,13 +17,13 @@ The syntax looks this
 element.onclick = makeChange;
 
 function makeChange() {
-	// do something
+ // do something
 }
 
 or;
 
 element.onclick = function makeChange() {
-	// do something
+ // do something
 };
 ```
 
@@ -46,7 +46,7 @@ As you can see, the `addEventListener` takes 3 arguments
 
 ```js
 function makeChange() {
-	// do something
+ // do something
 }
 
 element.addEventListener("click", makeChange);
@@ -65,25 +65,25 @@ element.addEventListener("click", makeChange);
 
 ```html
 <body>
-	<div class="one">
-		<div class="two">
-			<div class="three"></div>
-		</div>
-	</div>
+ <div class="one">
+  <div class="two">
+   <div class="three"></div>
+  </div>
+ </div>
 </body>
 ```
 
 ```js
 function logText() {
-	console.log(this.classList.value);
+ console.log(this.classList.value);
 }
 // capture
 divs.forEach((div) => {
-	div.addEventListener("click", logText, { capture: true });
+ div.addEventListener("click", logText, { capture: true });
 });
 // useCapture
 divs.forEach((div) => {
-	div.addEventListener("click", logText, { useCapture: true });
+ div.addEventListener("click", logText, { useCapture: true });
 });
 ```
 
@@ -110,11 +110,11 @@ You can check this [Can I Use](https://caniuse.com/) site to see what browser ve
 
 - [onclick](https://caniuse.com/?search=onclick)
 
-<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1645650000185/YOdNQ_WiR.png" alt="">
+![Image 1](https://cdn.hashnode.com/res/hashnode/image/upload/v1645650000185/YOdNQ_WiR.png)
 
 - [addEventLister](https://caniuse.com/?search=addeventlistener)
 
-<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1645649826103/R9qluuUoj.png" alt="">
+![Image 2](https://cdn.hashnode.com/res/hashnode/image/upload/v1645649826103/R9qluuUoj.png)
 
 sources:
 
@@ -127,6 +127,6 @@ sources:
 
 Both onclick and addEventlistener are supported on almost all browsers beside `Internet Explorer version 6 - 8`. But, which one to use? It boils down to what are you trying to achieve. Does it do one thing only, you may go with onclick for a short and simple way to write. However, addEventListener is recommended to use.
 
-## Thank you!
+## Thank you
 
 Thank you for reading my blog! 😊

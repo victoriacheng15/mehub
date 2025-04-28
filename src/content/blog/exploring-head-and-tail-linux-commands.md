@@ -35,6 +35,7 @@ tail [option] [file]
 | -c, --bytes | Print the first c bytes of each file |
 | -q, --quiet, --silent | Never print headers giving file names |
 | -v, --verbose | Always print headers giving file names |
+
 - Options for `tail`
 
 | Option | Description |
@@ -61,6 +62,6 @@ tail --help
 man tail
 ```
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

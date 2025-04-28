@@ -74,6 +74,6 @@ I've also dabbled in using time blocks, and I genuinely appreciate the concept o
 - **Scroll-based animation**: Creating a scroll-based animation where users can scroll downwards to reveal distinct 3D objects with particles in the background. [Demo](https://victoriacheng15.github.io/three-js-demo/12-scroll-based-animation/)
 - **Water Texture**: Generating a water texture with texture images that display a water material and permits users to adjust parameters like displacement scale, ambient occlusion intensity, and more. [Demo](https://victoriacheng15.github.io/three-js-demo/13-water-texture/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

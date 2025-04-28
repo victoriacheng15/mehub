@@ -88,6 +88,6 @@ Lambda functions in Python provide a concise and efficient way to create small, 
 
 [Lambda Functions in Python](https://www.freecodecamp.org/news/lambda-functions-in-python/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

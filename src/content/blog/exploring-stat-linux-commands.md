@@ -17,8 +17,8 @@ Outputs:
 
 ```bash
   File: example.txt
-  Size: 11         	Blocks: 8          IO Block: 4096   regular file
-Device: 8dh/141d	Inode: 16122795    Links: 1
+  Size: 11          Blocks: 8          IO Block: 4096   regular file
+Device: 8dh/141d Inode: 16122795    Links: 1
 Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
 Access: 2024-03-04 02:46:31.029094886 +0000
 Modify: 2024-03-04 02:46:31.029094886 +0000
@@ -62,6 +62,6 @@ If you want to learn more about the `stat` command and its options directly in t
 man stat
 ```
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

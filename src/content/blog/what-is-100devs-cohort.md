@@ -38,10 +38,10 @@ We dived into navigation, form, input types, and CSS fundamentals.
 
 ```html
 <nav>
-	<ul>
-		<li><a href="#">Home</a></li>
-		<li><a href="#">About</a></li>
-	</ul>
+ <ul>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+ </ul>
 </nav>
 ```
 
@@ -49,10 +49,10 @@ We dived into navigation, form, input types, and CSS fundamentals.
 
 ```html
 <form action="">
-	<label for="name">name</label>
-	<input type="text" name="name" value="John Doe" />
-	<label for="email">email</label>
-	<input type="email" name="email" value="example@email.com" />
+ <label for="name">name</label>
+ <input type="text" name="name" value="John Doe" />
+ <label for="email">email</label>
+ <input type="email" name="email" value="example@email.com" />
 </form>
 ```
 
@@ -66,8 +66,8 @@ What is CSS and how do you write it? CSS stands for Cascading Style Sheets and i
 
 ```css
 h1 {
-	color: red;
-	font-size: 5em;
+ color: red;
+ font-size: 5em;
 }
 ```
 
@@ -86,52 +86,52 @@ What is specificity? There are 3 types of selector, Type, Class, and ID.
 - ID selector holds the value of **1-0-0**
 - _!important_ will override all of above
 
-<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1644166544526/89ha8ahry.png" alt="">
+![CSS specificity chart](https://cdn.hashnode.com/res/hashnode/image/upload/v1644166544526/89ha8ahry.png)
 
 ## Week 3
 
 We dived deeper into the Box model and FLOAT!
 
-<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1644166902966/Ev3TYFNdpL.png" alt="the box modal shows content, padding, border and margin">
+![the box modal shows content, padding, border and margin](https://cdn.hashnode.com/res/hashnode/image/upload/v1644166902966/Ev3TYFNdpL.png)
 
 In short, it is basically the size of the content box with padding (green), border (yellow), and margin(brown).
 
 Recreated this layout with float only!
 
-<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1644167035914/aspFkPdGN.png" alt="creating layout with float only">
+![reating layout with float only](https://cdn.hashnode.com/res/hashnode/image/upload/v1644167035914/aspFkPdGN.png)
 
 ```css
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
 
 body {
-	width: 90%;
-	margin: 0 auto;
+ width: 90%;
+ margin: 0 auto;
 }
 
 header,
 section,
 footer {
-	border: 3px solid orange;
-	background: lightgray;
-	height: 100px;
+ border: 3px solid orange;
+ background: lightgray;
+ height: 100px;
 }
 
 section {
-	float: left;
-	height: 200px;
-	width: 33.3333%;
+ float: left;
+ height: 200px;
+ width: 33.3333%;
 }
 
 .wider {
-	width: 50%;
+ width: 50%;
 }
 
 footer {
-	clear: both;
+ clear: both;
 }
 ```
 
@@ -141,7 +141,7 @@ The classes from both weeks are heavily focused on responsive CSS. It uses a med
 
 ```css
 @media screen (min-width: 768px) {
-	/* do something */
+ /* do something */
 }
 ```
 

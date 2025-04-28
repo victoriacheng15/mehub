@@ -54,13 +54,13 @@ The test code is provided below.
 
 Watch how quickly the `New Todo` text is added to the list. It is very slow.
 
-<img src="https://user-images.githubusercontent.com/35031228/211906233-0e3fe9fc-3273-47b0-9f38-d5fa8fce318a.gif" alt="">
+![image 1](https://user-images.githubusercontent.com/35031228/211906233-0e3fe9fc-3273-47b0-9f38-d5fa8fce318a.gif)
 
 ### With useMemo
 
 Watch the `New Todo` text again. Noticed it is adding quickly and smoothly.
 
-<img src="https://user-images.githubusercontent.com/35031228/211906235-be3476e9-7665-4466-bbd3-0e75b481bf71.gif" alt="">
+![image 2](https://user-images.githubusercontent.com/35031228/211906235-be3476e9-7665-4466-bbd3-0e75b481bf71.gif)
 
 ### Test Code
 
@@ -68,47 +68,47 @@ I kidnapped this code from [W3Schools](https://www.w3schools.com/react/react_use
 
 ```jsx
 export default function App() {
-	const [count, setCount] = useState(0);
-	const [todos, setTodos] = useState([]);
-	const calculation = expensiveCalculation(count);
-	// const calculation = useMemo(() => {
-	//   return expensiveCalculation(count)
-	// }, [count]);
+ const [count, setCount] = useState(0);
+ const [todos, setTodos] = useState([]);
+ const calculation = expensiveCalculation(count);
+ // const calculation = useMemo(() => {
+ //   return expensiveCalculation(count)
+ // }, [count]);
 
-	const increment = () => {
-		setCount((c) => c + 1);
-	};
+ const increment = () => {
+  setCount((c) => c + 1);
+ };
 
-	const addTodo = () => {
-		setTodos((t) => [...t, "New Todo"]);
-	};
+ const addTodo = () => {
+  setTodos((t) => [...t, "New Todo"]);
+ };
 
-	return (
-		<main>
-			<div>
-				<h2>My Todos</h2>
-				<button onClick={addTodo}>Add Todo</button>
-				{todos.map((todo, index) => {
-					return <p key={index}>{todo}</p>;
-				})}
-			</div>
-			<hr />
-			<div>
-				Count: {count}
-				<button onClick={increment}>+</button>
-				<h2>Expensive Calculation</h2>
-				{calculation}
-			</div>
-		</main>
-	);
+ return (
+  <main>
+   <div>
+    <h2>My Todos</h2>
+    <button onClick={addTodo}>Add Todo</button>
+    {todos.map((todo, index) => {
+     return <p key={index}>{todo}</p>;
+    })}
+   </div>
+   <hr />
+   <div>
+    Count: {count}
+    <button onClick={increment}>+</button>
+    <h2>Expensive Calculation</h2>
+    {calculation}
+   </div>
+  </main>
+ );
 }
 
 const expensiveCalculation = (num) => {
-	console.log("Calculating...");
-	for (let i = 0; i < 1000000000; i++) {
-		num += 1;
-	}
-	return num;
+ console.log("Calculating...");
+ for (let i = 0; i < 1000000000; i++) {
+  num += 1;
+ }
+ return num;
 };
 ```
 
@@ -126,6 +126,6 @@ Check the resources below if you would like to see more examples.
 - [Understanding useMemo and useCallback by Josh Comeau](https://www.joshwcomeau.com/react/usememo-and-usecallback/)
 - [useMemo Explained | React Hooks by Dave Gray](https://www.youtube.com/watch?v=oR8gUi1LfWY&list=PL0Zuz27SZ-6PSdiQpSxO9zxvB0ns6m3ta&index=2)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

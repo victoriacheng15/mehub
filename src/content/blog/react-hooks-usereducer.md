@@ -18,29 +18,29 @@ The `useReducer` takes 2 arguments: a reducer function and an initial state.
 import { useReducer } from "react";
 
 const initialState = {
-	count: 0,
+ count: 0,
 };
 
 function reducer(state, action) {
-	switch (action.type) {
-		case "increment":
-			return { count: state.count + 1 };
-		case "decrement":
-			return { count: state.count - 1 };
-		default:
-			throw new Error("unknown action");
-	}
+ switch (action.type) {
+  case "increment":
+   return { count: state.count + 1 };
+  case "decrement":
+   return { count: state.count - 1 };
+  default:
+   throw new Error("unknown action");
+ }
 }
 
 function Counter() {
-	const [state, dispatch] = useReducer(reducer, initialState);
-	return (
-		<>
-			Count: {state.count}
-			<button onClick={() => dispatch({ type: "increment" })}>+</button>
-			<button onClick={() => dispatch({ type: "decrement" })}>-</button>
-		</>
-	);
+ const [state, dispatch] = useReducer(reducer, initialState);
+ return (
+  <>
+   Count: {state.count}
+   <button onClick={() => dispatch({ type: "increment" })}>+</button>
+   <button onClick={() => dispatch({ type: "decrement" })}>-</button>
+  </>
+ );
 }
 ```
 
@@ -65,27 +65,27 @@ Let's see how you fetch data with `useState` and `useReducer`
 import { useState, useEffect } from "react";
 
 const useFetchApi = () => {
-	const [data, setData] = useState([]);
-	const [loading, setLoading] = useState(true);
-	const [error, setError] = useState(null);
+ const [data, setData] = useState([]);
+ const [loading, setLoading] = useState(true);
+ const [error, setError] = useState(null);
 
-	useEffect(() => {
-		const fetchData = async () => {
-			const url = "https://jsonplaceholder.typicode.com/todos";
-			try {
-				const res = await fetch(url);
-				const data = await res.json();
-				setData(data);
-			} catch (error) {
-				setError(error);
-			}
-			setLoading(false);
-		};
+ useEffect(() => {
+  const fetchData = async () => {
+   const url = "https://jsonplaceholder.typicode.com/todos";
+   try {
+    const res = await fetch(url);
+    const data = await res.json();
+    setData(data);
+   } catch (error) {
+    setError(error);
+   }
+   setLoading(false);
+  };
 
-		fetchData();
-	}, []);
+  fetchData();
+ }, []);
 
-	return { data, loading, error };
+ return { data, loading, error };
 };
 
 export default useFetchApi;
@@ -95,7 +95,7 @@ export default useFetchApi;
 
 Before we move on to the next section, when you update the state in React, it is recommended to copy the object before modify with the spread operator and keep the original state original!
 
-<img src="https://user-images.githubusercontent.com/35031228/208515994-4a4d6960-326a-462b-8139-7f0a1816161f.gif" alt="">
+![image](https://user-images.githubusercontent.com/35031228/208515994-4a4d6960-326a-462b-8139-7f0a1816161f.gif)
 
 - `...state` copy everything from `state` to `updatedState`
 - `count: 5` will update the count to `5` from `0`
@@ -107,57 +107,57 @@ Before we move on to the next section, when you update the state in React, it is
 import { useEffect, useReducer } from "react";
 
 const initialState = {
-	data: [],
-	loading: true,
-	error: null,
+ data: [],
+ loading: true,
+ error: null,
 };
 
 const FETCH_SUCCESS = "fetch_success";
 const FETCH_ERROR = "fetch_error";
 
 const reducer = (state, action) => {
-	switch (action.type) {
-		case FETCH_SUCCESS:
-			return {
-				...state,
-				data: action.payload,
-				loading: false,
-			};
-		case FETCH_ERROR:
-			return {
-				...state,
-				loading: false,
-				error: action.payload,
-			};
-		default:
-			throw new Error(`Unknown action: ${action.type}`);
-	}
+ switch (action.type) {
+  case FETCH_SUCCESS:
+   return {
+    ...state,
+    data: action.payload,
+    loading: false,
+   };
+  case FETCH_ERROR:
+   return {
+    ...state,
+    loading: false,
+    error: action.payload,
+   };
+  default:
+   throw new Error(`Unknown action: ${action.type}`);
+ }
 };
 
 const useFetchApi = () => {
-	const [{ data, loading, error }, dispatch] = useReducer(reducer, initialState);
-	// you could write like this
-	// const [state, dispatch] = useReducer(reducer, initialState)
+ const [{ data, loading, error }, dispatch] = useReducer(reducer, initialState);
+ // you could write like this
+ // const [state, dispatch] = useReducer(reducer, initialState)
 
-	useEffect(() => {
-		const fetchData = async () => {
-			const url = "https://jsonplaceholder.typicode.com/todos";
-			try {
-				const res = await fetch(url);
-				const data = await res.json();
-				// if you write state, this needs to be state.data
-				dispatch({ type: FETCH_SUCCESS, payload: data });
-			} catch (error) {
-				// same as above, need to be state.error
-				dispatch({ type: FETCH_ERROR, payload: error });
-			}
-		};
+ useEffect(() => {
+  const fetchData = async () => {
+   const url = "https://jsonplaceholder.typicode.com/todos";
+   try {
+    const res = await fetch(url);
+    const data = await res.json();
+    // if you write state, this needs to be state.data
+    dispatch({ type: FETCH_SUCCESS, payload: data });
+   } catch (error) {
+    // same as above, need to be state.error
+    dispatch({ type: FETCH_ERROR, payload: error });
+   }
+  };
 
-		fetchData();
-	}, []);
+  fetchData();
+ }, []);
 
-	// return state
-	return { data, loading, error };
+ // return state
+ return { data, loading, error };
 };
 
 export default useFetchApi;
@@ -174,14 +174,14 @@ import useFetchApi from "./hooks/useFetchApi";
 function App() {
   //I prefer destructuring,
   // so I don't have to write "state." over and over! :D
-	const { data, loading, error } = useFetchApi();
+ const { data, loading, error } = useFetchApi();
 
-	if(loading) return <h2>Loading...</h2>
-	if(error) return <h2>Whoops, Something has gone wrong...!</h2>
+ if(loading) return <h2>Loading...</h2>
+ if(error) return <h2>Whoops, Something has gone wrong...!</h2>
 
-	return (
+ return (
     // render the page with lovely data!
-	);
+ );
 }
 
 export default App;
@@ -204,6 +204,6 @@ In the end, both `useReducer` and `useState` hooks have their pros and cons. Cho
 - [MDN docs - spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - [3 Reasons to useReducer() over useState()](<https://dev.to/spukas/3-reasons-to-usereducer-over-usestate-43ad#:%7E:text=useReducer()%20is%20an%20alternative,understand%20for%20you%20and%20colleagues>)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

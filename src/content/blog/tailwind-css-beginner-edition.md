@@ -39,7 +39,7 @@ There are few ways to get start:
 
 Anyway, let's see the differences between them!
 
-# Vanilla CSS vs Tailwind CSS
+## Vanilla CSS vs Tailwind CSS
 
 In general, CSS has a selector like `section`, `.class`, `#id`, etc, declaration block, property and value.
 
@@ -47,8 +47,8 @@ Vanilla CSS
 
 ```css
 section {
-	width: 90%;
-	background: lightgreen;
+ width: 90%;
+ background: lightgreen;
 }
 ```
 
@@ -82,19 +82,19 @@ The CSS way:
 
 ```css
 .this-is-the-css-way {
-	width: 75%;
+ width: 75%;
 }
 
 .this-is-the-css-way-2 {
-	width: 90%;
+ width: 90%;
 }
 
 .this-is-the-css-way-3 {
-	width: 100vw;
+ width: 100vw;
 }
 
 .this-is-the-css-way-4 {
-	width: min-content;
+ width: min-content;
 }
 ```
 
@@ -102,19 +102,19 @@ The Tailwind way:
 
 ```html
 <section class="w-3/4">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nostrum.
+ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nostrum.
 </section>
 
 <section class="w-11/12">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nostrum.
+ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nostrum.
 </section>
 
 <section class="w-screen">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nostrum.
+ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nostrum.
 </section>
 
 <section class="w-min">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nostrum.
+ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nostrum.
 </section>
 ```
 
@@ -130,12 +130,12 @@ The CSS way:
 
 ```css
 .this-is-the-css-way {
-	/* use either rgba() or hsla() or your prefer style */
-	background: red;
+ /* use either rgba() or hsla() or your prefer style */
+ background: red;
 }
 
 .this-is-the-css-way-2 {
-	background: linear-gradient(to left, blue, lightblue);
+ background: linear-gradient(to left, blue, lightblue);
 }
 ```
 
@@ -143,11 +143,11 @@ The Tailwind way:
 
 ```html
 <section class="bg-blue-500">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nostrum.
+ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nostrum.
 </section>
 
 <section class="bg-gradient-to-l from-blue-600 to-blue-300">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nostrum.
+ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nostrum.
 </section>
 ```
 
@@ -161,11 +161,11 @@ The CSS way:
 
 ```css
 h1 {
-	font-size: 3rem;
-	font-weight: 700;
-	color: orange;
-	text-align: center;
-	text-transform: uppercase;
+ font-size: 3rem;
+ font-weight: 700;
+ color: orange;
+ text-align: center;
+ text-transform: uppercase;
 }
 ```
 
@@ -173,7 +173,7 @@ The Tailwind way:
 
 ```html
 <h1 class="text-center text-xl font-bold uppercase text-orange-600">
-	Hey, Tailwind CSS is awesome
+ Hey, Tailwind CSS is awesome
 </h1>
 ```
 
@@ -199,14 +199,14 @@ The CSS way:
 
 ```css
 section {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
 section {
-	display: grid;
-	grid-template-columns: repeat(2, min(0, 1fr));
+ display: grid;
+ grid-template-columns: repeat(2, min(0, 1fr));
 }
 ```
 
@@ -214,11 +214,11 @@ The Tailwind way:
 
 ```html
 <section class="flex items-center justify-center">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nostrum.
+ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nostrum.
 </section>
 
 <section class="grid grid-cols-2">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nostrum.
+ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nostrum.
 </section>
 ```
 
@@ -238,15 +238,15 @@ The CSS way:
 
 ```css
 h1 {
-	font-size: 3rem;
-	font-weight: 700;
-	color: orange;
+ font-size: 3rem;
+ font-weight: 700;
+ color: orange;
 }
 
 @media only screen and (max-width: 640px) {
-	h1 {
-		color: orange;
-	}
+ h1 {
+  color: orange;
+ }
 }
 ```
 
@@ -256,7 +256,7 @@ The Tailwind way:
 <h1 class="text-xl font-bold text-orange-600 sm:text-blue-600">Hey, Tailwind CSS is awesome</h1>
 ```
 
-# Systems
+## 3 Systems
 
 Tailwind CSS uses certain systems for several properties in general.
 
@@ -280,11 +280,11 @@ Examples:
 
 ```html
 <div class="top-[117px]">
-	<!-- ... -->
+ <!-- ... -->
 </div>
 
 <div class="bg-[#bada55] text-[22px] before:content-['Festivus']">
-	<!-- ... -->
+ <!-- ... -->
 </div>
 ```
 
@@ -296,17 +296,17 @@ Another downside, it makes HTML more bloated with all class names. You probably 
 @tailwind utilities;
 
 @layer components {
-	.btn {
-		@apply all the class names you need for this element;
-	}
+ .btn {
+  @apply all the class names you need for this element;
+ }
 
-	.card {
-		@apply all the class names you need for this element;
-	}
+ .card {
+  @apply all the class names you need for this element;
+ }
 }
 ```
 
-# Resources
+## Resources
 
 As always, if not sure how to write certain properties, you can always look up on the Tailwind CSS docs.
 
@@ -314,6 +314,6 @@ As always, if not sure how to write certain properties, you can always look up o
 
 [Cheat sheet](https://nerdcave.com/tailwind-cheat-sheet)
 
-# Thank you!
+## Thank you
 
 Thank you for your time and reading. I hope this helps you. Please feel free to let me know if you have any questions or feedback. 😀

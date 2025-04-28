@@ -22,12 +22,12 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-			# do stuff
-	job2:
+   # do stuff
+ job2:
     needs: [job1]
     runs-on: ubuntu-latest
     steps:
-			# If job1 is completed then do stuff
+   # If job1 is completed then do stuff
 
 ```
 
@@ -38,15 +38,15 @@ Example:
 ```yaml
   job3:
     needs: [job1, job2]
-		runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
     steps:
-			# If job1and job2 are completed then do stuff
+   # If job1and job2 are completed then do stuff
 ```
 
 ## Resources
 
 [GitHub Docs - needs](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

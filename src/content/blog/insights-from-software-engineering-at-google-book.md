@@ -32,6 +32,6 @@ From this book, I gained insights into the distinction between programming and s
 
 Moreover, the book emphasizes an essential lesson: every choice requires making trade-offs. The crucial factor lies in identifying which trade-offs yield greater benefits in the long run. By asking the right questions and leveraging existing data, we can enhance our decision-making and optimize our software development processes for enduring success.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

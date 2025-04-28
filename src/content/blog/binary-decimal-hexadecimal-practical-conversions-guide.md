@@ -10,11 +10,11 @@ tags: [dsa]
 We use numbers every day, but how do computers understand and store information? Enter the fascinating world of binary (0s and 1s), decimal (our familiar 0-9 system), and hexadecimal (a blend of numbers and letters). Unravel the secrets of computer communication and gain a deeper appreciation for how these languages power the digital world!
 
 - **Binary (base-2):**
-    - The core language of computers uses just 0s and 1s. This aligns with the on/off states of electronic circuits, making it fundamental for hardware.
+  - The core language of computers uses just 0s and 1s. This aligns with the on/off states of electronic circuits, making it fundamental for hardware.
 - **Decimal (base-10):**
-    - Our everyday number system (0-9), is used for everyday calculations, currency, and counting objects.
+  - Our everyday number system (0-9), is used for everyday calculations, currency, and counting objects.
 - **Hexadecimal (base-16):**
-    - A shorthand for binary, using digits 0-9 and letters A-F (representing 10-15). This makes long binary strings more human-readable, like web color codes (#FF0000 for red).
+  - A shorthand for binary, using digits 0-9 and letters A-F (representing 10-15). This makes long binary strings more human-readable, like web color codes (#FF0000 for red).
 
 Understanding these systems is your key to unlocking more complex concepts in computing. Think IP address conversion or data encoding – each system plays a crucial role in the digital world. By learning these "languages," you'll gain a deeper appreciation for how computers work their magic behind the scenes.
 
@@ -109,11 +109,11 @@ Remember, in a hexadecimal system, digits range from 0 to F, corresponding to de
 A step-by-step breakdown on converting **3F** to binary:
 
 - Convert each hex digit to decimal - hex digits 0 - 9 are the same in decimal, while hex digits A to F correspond to decimal values 10 to 15.
-    - **3** in hex is **3** in decimal.
-    - **F** in hex is **15** in decimal.
+  - **3** in hex is **3** in decimal.
+  - **F** in hex is **15** in decimal.
 - Follow the **Binary to Decimal** section above, and try to do it yourself:
-    - Convert 3 to binary, and we will get **0011**.
-    - Convert 15 to binary and we will get **1111**.
+  - Convert 3 to binary, and we will get **0011**.
+  - Convert 15 to binary and we will get **1111**.
 
 > Bonus Tip: The table acts as a cheat sheet for binary, decimal, and hexadecimal conversion. No manual
 calculation is needed!
@@ -123,7 +123,6 @@ calculation is needed!
 Open your calculator app and look for a "programmer" mode. This mode usually lets you see numbers in different formats, like decimal, binary, and hexadecimal.
 
 [![Link to the video on How to convert numbers between bin, dec, and hex with calculator](https://img.youtube.com/vi/01CjNZavt2w/0.jpg)](https://youtube.com/shorts/01CjNZavt2w)
-
 
 ## Recap
 
@@ -139,6 +138,6 @@ By the way, if you're curious about how binary numbers work and how they represe
 
 [How Do Numerical Conversions Work in Computer Systems? Explained With Examples](https://www.freecodecamp.org/news/how-do-numerical-conversions-work/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

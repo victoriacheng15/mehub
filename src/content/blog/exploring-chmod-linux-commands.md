@@ -88,6 +88,6 @@ man chmod
 
 The `chmod` command is a crucial tool for managing file permissions in Linux. By using it wisely, you can control access to your files and ensure that only the right users have the appropriate permissions. Understanding how to use `chmod` is essential for anyone working with Linux systems!
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

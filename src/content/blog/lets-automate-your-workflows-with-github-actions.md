@@ -39,7 +39,7 @@ name: ci-jest
 
 This is the name of the workflow. You could leave it empty, but it is better to have a name so you can see what it does in the `Actions` tab of the repo.
 
-<img src="https://user-images.githubusercontent.com/35031228/201541653-73bf69b4-c0dd-4e37-93fc-74ce4831ee01.png" alt="">
+![Image](https://user-images.githubusercontent.com/35031228/201541653-73bf69b4-c0dd-4e37-93fc-74ce4831ee01.png)
 
 ```yaml
 on:
@@ -81,11 +81,11 @@ Think this way, you are set up a brand new folder and needs packages. You are in
 
 You can check how and what it runs by go to `Actions` tab of the repo. By the way, `min stack` is what I named for the PR.
 
-<img src="https://user-images.githubusercontent.com/35031228/201543053-05b008cf-6994-4ba9-ae80-7bcb4e5b28aa.png" alt="">
+![Image](https://user-images.githubusercontent.com/35031228/201543053-05b008cf-6994-4ba9-ae80-7bcb4e5b28aa.png)
 
 If you are curious, you cna expand the dropdown and see what it does.
 
-<img src="https://user-images.githubusercontent.com/35031228/201786708-c66d3a4a-8191-480c-ab83-802cd061ef70.png" alt="">
+![Image](https://user-images.githubusercontent.com/35031228/201786708-c66d3a4a-8191-480c-ab83-802cd061ef70.png)
 
 You also can set name for each `uses` action like below. Make sure there is no `-` for `uses`.
 
@@ -165,7 +165,7 @@ A tip for you, try to click all clickable links in `Actions` tab to see where ea
 
 > Note: for some reason, I cannot type "check" in the label box, so I used "press" instead. 😅
 
-<img src="https://user-images.githubusercontent.com/35031228/201784096-d99aa0a4-e017-477e-956a-4695f9e94b3e.png" alt="">
+![Image](https://user-images.githubusercontent.com/35031228/201784096-d99aa0a4-e017-477e-956a-4695f9e94b3e.png)
 
 I hope this blog will help you to start with workflows quickly and start to automate repeated tasks for you!
 
@@ -177,6 +177,6 @@ I hope this blog will help you to start with workflows quickly and start to auto
 - [Learn GitHub Actions - Official Docs](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
 - [GitHub Actions Crash Course By Laith Academy](https://www.youtube.com/watch?v=1oJQRlz1v94)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

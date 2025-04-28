@@ -29,12 +29,12 @@ It is a useful feature in JavaScript for handling situations where you need to a
 
 ```js
 const user = {
-	id: 1,
-	name: "John",
-	address: {
-		city: "New York",
-		zipcode: "10001",
-	},
+ id: 1,
+ name: "John",
+ address: {
+  city: "New York",
+  zipcode: "10001",
+ },
 };
 
 const city = user?.address?.city;
@@ -48,27 +48,27 @@ console.log(country); // output: undefined
 
 ```js
 const fetchData = () => {
-	return new Promise((resolve, reject) => {
-		setTimeout(() => {
-			resolve({
-				data: {
-					users: [
-						{ id: 1, name: "John" },
-						{ id: 2, name: "Jane" },
-					],
-				},
-			});
-		}, 1000);
-	});
+ return new Promise((resolve, reject) => {
+  setTimeout(() => {
+   resolve({
+    data: {
+     users: [
+      { id: 1, name: "John" },
+      { id: 2, name: "Jane" },
+     ],
+    },
+   });
+  }, 1000);
+ });
 };
 
 fetchData()
-	.then((response) => {
-		response?.data?.users?.forEach((user) => {
-			console.log(user.name);
-		});
-	})
-	.catch((error) => console.error(error));
+ .then((response) => {
+  response?.data?.users?.forEach((user) => {
+   console.log(user.name);
+  });
+ })
+ .catch((error) => console.error(error));
 ```
 
 - Conditional rendering in UI
@@ -79,24 +79,24 @@ There are 2 options for this. First, `<p>Country: {user?.address?.country ?? "N/
 import React from "react";
 
 const UserProfile = () => {
-	const user = {
-		id: 1,
-		name: "John",
-		address: {
-			city: "New York",
-			zipcode: "10001",
-			// country: "Somewhere",
-		},
-	};
+ const user = {
+  id: 1,
+  name: "John",
+  address: {
+   city: "New York",
+   zipcode: "10001",
+   // country: "Somewhere",
+  },
+ };
 
-	return (
-		<div>
-			<h1>Welcome, {user.name}!</h1>
-			<p>City: {user?.address?.city}</p>
-			<p>Country: {user?.address?.country ?? "N/A"}</p>
-			{user?.address?.country && <p>Country: {user?.address?.country}</p>}
-		</div>
-	);
+ return (
+  <div>
+   <h1>Welcome, {user.name}!</h1>
+   <p>City: {user?.address?.city}</p>
+   <p>Country: {user?.address?.country ?? "N/A"}</p>
+   {user?.address?.country && <p>Country: {user?.address?.country}</p>}
+  </div>
+ );
 };
 ```
 
@@ -104,23 +104,23 @@ const UserProfile = () => {
 
 ```js
 const apiResponse = {
-	data: {
-		user: {
-			id: 1,
-			name: "John",
-			orders: [
-				{ id: 1, product: "Phone", quantity: 2 },
-				{ id: 2, product: "Laptop", quantity: 1 },
-			],
-		},
-	},
+ data: {
+  user: {
+   id: 1,
+   name: "John",
+   orders: [
+    { id: 1, product: "Phone", quantity: 2 },
+    { id: 2, product: "Laptop", quantity: 1 },
+   ],
+  },
+ },
 };
 
 const orders = apiResponse?.data?.user?.orders;
 if (orders) {
-	orders.forEach((order) => {
-		console.log(`Order: ${order.id}, Product: ${order.product}`);
-	});
+ orders.forEach((order) => {
+  console.log(`Order: ${order.id}, Product: ${order.product}`);
+ });
 }
 ```
 
@@ -146,9 +146,9 @@ For function, you can write it like `user.admin?.()`, if it exists, it will retu
 
 ```js
 const user = {
-	admin() {
-		return "I am an admin";
-	},
+ admin() {
+  return "I am an admin";
+ },
 };
 
 console.log(user.admin?.()); // output: I am an admin
@@ -164,9 +164,9 @@ The optional chaining operator is an awesome feature that simplifies code and re
 
 ## Resources
 
-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining" target="_blank" rel="noopener noreferrer">MDN Docs - Optional Chaining</a>
-- <a href="https://victoriacheng15.vercel.app/posts/nextjs-state-management-with-redux-toolkit-part-1" target="_blank" rel="noopener noreferrer">JS Info - Optional Chaining</a>
+- [MDN Docs - Optional Chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [JS Info - Optional Chaining](https://victoriacheng15.vercel.app/posts/nextjs-state-management-with-redux-toolkit-part-1)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

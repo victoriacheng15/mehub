@@ -60,6 +60,6 @@ man touch
 
 [Linux Command - touch](https://linuxcommand.org/lc3_man_pages/touch1.html)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

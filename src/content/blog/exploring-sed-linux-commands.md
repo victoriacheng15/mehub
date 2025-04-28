@@ -80,6 +80,6 @@ man sed
 
 [15 Useful ‘sed’ Command Tips and Tricks for Linux SysAdmins](https://www.tecmint.com/linux-sed-command-tips-tricks/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

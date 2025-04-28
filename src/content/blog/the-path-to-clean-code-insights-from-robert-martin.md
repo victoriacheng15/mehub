@@ -47,8 +47,8 @@ Always keep in mind that the codebase you are working on will be read not only b
 
 ## Resources
 
-- <a href="https://www.amazon.ca/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882" target="_blank" rel="noopener noreferrer">Clean Code: A Handbook of Agile Software Craftsmanship</a>
+- [Clean Code: A Handbook of Agile Software Craftsmanship](https://www.amazon.ca/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

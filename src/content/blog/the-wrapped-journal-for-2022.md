@@ -23,7 +23,7 @@ Participating in the 100 Days of Code challenge was a great motivation for me, a
 
 - **React Hooks**:
 
-<iframe src="https://giphy.com/embed/WRQBXSCnEFJIuxktnw" width="480" height="307" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/math-lady-meme-WRQBXSCnEFJIuxktnw">via GIPHY</a></p>
+![Alt Text](https://giphy.com/gifs/math-lady-meme-WRQBXSCnEFJIuxktnw)
 
 The GIF above described my feeling about useContext hook. I didn't understand them until freeCodeCamp has a video on [React JavaScript Framework for Beginners - Project-Based Course](https://www.youtube.com/watch?v=u6gSSpfsoOQ&t=6810s) and this is where I finally understand about `useContext` hook. `useReducer` hook is pretty awesome as well since it allows you to update and manage states with ease by using object to store information and then update states based on the action.
 
@@ -64,10 +64,8 @@ A couple of things that I would like to do next year:
 
 I cannot promise that I will do them all, however, I am going to try to build a system/environment that will help me to plan and learn the technologies that I am interested in.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this! I hope your year is good and wonderful as well!
 
 Here is to the year 2023!
-
-<iframe src="https://giphy.com/embed/clk44N1gC274ZeI7dn" width="480" height="336" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Corolle-2023-corolle-nouvelan-clk44N1gC274ZeI7dn">via GIPHY</a></p>

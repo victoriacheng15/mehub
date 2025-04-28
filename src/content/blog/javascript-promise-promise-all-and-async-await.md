@@ -16,19 +16,19 @@ Promises are a way to handle asynchronous operations in JavaScript. A promise re
 ```js
 // Creating a Promise that resolves after a timeout
 const myPromise = new Promise((resolve, reject) => {
-	setTimeout(() => {
-		resolve("Promise resolved!");
-	}, 2000);
+ setTimeout(() => {
+  resolve("Promise resolved!");
+ }, 2000);
 });
 
 // Using the Promise
 myPromise
-	.then((result) => {
-		console.log(result);
-	})
-	.catch((error) => {
-		console.log(error);
-	});
+ .then((result) => {
+  console.log(result);
+ })
+ .catch((error) => {
+  console.log(error);
+ });
 ```
 
 ### Promise.all()
@@ -39,20 +39,20 @@ It is a method that takes an array of promises as input and returns a new promis
 // Creating an array of promises
 const promise1 = Promise.resolve("Promise 1 resolved");
 const promise2 = new Promise((resolve, reject) => {
-	setTimeout(() => {
-		resolve("Promise 2 resolved");
-	}, 3000);
+ setTimeout(() => {
+  resolve("Promise 2 resolved");
+ }, 3000);
 });
 const promise3 = fetch("https://api.example.com/data"); // Example of an HTTP request
 
 // Using Promise.all()
 Promise.all([promise1, promise2, promise3])
-	.then((results) => {
-		console.log(results);
-	})
-	.catch((error) => {
-		console.log(error);
-	});
+ .then((results) => {
+  console.log(results);
+ })
+ .catch((error) => {
+  console.log(error);
+ });
 ```
 
 ### async/await
@@ -65,20 +65,20 @@ It is a feature introduced in ES2017 (ES8) that provides a more readable way to 
 ```js
 // Example asynchronous function using async/await
 function fetchData() {
-	return new Promise((resolve, reject) => {
-		setTimeout(() => {
-			resolve("Data fetched successfully!");
-		}, 2000);
-	});
+ return new Promise((resolve, reject) => {
+  setTimeout(() => {
+   resolve("Data fetched successfully!");
+  }, 2000);
+ });
 }
 
 async function getData() {
-	try {
-		const result = await fetchData();
-		console.log(result);
-	} catch (error) {
-		console.log(error);
-	}
+ try {
+  const result = await fetchData();
+  console.log(result);
+ } catch (error) {
+  console.log(error);
+ }
 }
 
 // Calling the async function
@@ -91,11 +91,11 @@ Promises are the fundamental building blocks for handling asynchronous operation
 
 ## Resources
 
-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank" rel="noopener noreferrer">MDN Docs - Promise</a>
-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all" target="_blank" rel="noopener noreferrer">MDN Docs - Promise.all()</a>
-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank" rel="noopener noreferrer">MDN Docs - async function</a>
-- <a href="https://www.freecodecamp.org/news/asynchronous-programming-in-javascript/" target="_blank" rel="noopener noreferrer">fCC - Asynchronous Programming in JavaScript – Guide for Beginners</a>
+- [MDN Docs - Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [MDN Docs - Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
+- [MDN Docs - async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+- [fCC - Asynchronous Programming in JavaScript – Guide for Beginners](https://www.freecodecamp.org/news/asynchronous-programming-in-javascript/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

@@ -90,6 +90,6 @@ As I mentioned at the beginning, I thought this needs to be consecutive 100 days
 
 I kept [the so detailed or not so detailed log](https://github.com/victoriacheng15/100daysofcode/blob/main/r1-log.md) on GitHub with resources that I used to learn.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and reading this! Feel free to share your thoughts in the comment below, and follow me on [@viktoriacheng15](https://twitter.com/viktoriacheng15)

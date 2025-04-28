@@ -11,9 +11,9 @@ I think this month is pretty productive. I have done a couple of things:
 
 - Published a blog about how to set up and deploy a TS node app
 - Read chapter 1 of the System Design Interview
-- Learned about API versioning and how to implement versioning from <a href="https://www.freecodecamp.org/news/rest-api-design-best-practices-build-a-rest-api" target="_blank" rel="noopener noreferrer">REST API Design Best Practices Handbook</a>
+- Learned about API versioning and how to implement versioning from [REST API Design Best Practices Handbook](https://www.freecodecamp.org/news/rest-api-design-best-practices-build-a-rest-api)
 - Understood about largest contentful paint and cumulative layout shift
-- Discovered that Jest has a feature that you can loop through an array of test cases without using either `forEach`` or `for of` loops
+- Discovered that Jest has a feature that you can loop through an array of test cases without using either `forEach`` or`for of` loops
 
 ### Setup and deploy a TS node app
 
@@ -32,7 +32,7 @@ Most deployment services have similar settings but focus on the `build` and `sta
 },
 ```
 
-You could check this <a href="https://victoriacheng15.vercel.app/posts/a-simple-guide-to-setting-up-and-deploying-node-with-typescript" target="_blank" rel="noopener noreferrer">blog</a> for more details.
+You could check this [blog](https://victoriacheng15.vercel.app/posts/a-simple-guide-to-setting-up-and-deploying-node-with-typescript) for more details.
 
 ### Chapter 1 of the System Design Interview
 
@@ -48,13 +48,13 @@ I learned about:
 
 This chapter has prompted me to consider the inner workings of a website, particularly how servers and databases are managed. For instance, when browsing through posts on LinkedIn or Twitter, the posts are probably being served from one of several cloned databases. Conversely, when creating a post, the content is likely sent to the master database.
 
-- <a href="https://www.linkedin.com/posts/victoriacheng15_systemdesign-softwareengineering-activity-7043226359703212032-2xqM?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
+- [LinkedIn post](https://www.linkedin.com/posts/victoriacheng15_systemdesign-softwareengineering-activity-7043226359703212032-2xqM?utm_source=share&utm_medium=member_desktop)
 
 ### API versioning
 
 Over time, there will be improvements, new functionalities and more changes to the API. To manage these updates effectively, it is important to version the API. For the `ai-image-generation` project, I have implemented this practice by creating `v1` folder within the `src` directory and moving both `controllers` and `routes` folders into the `v1` folders. This allows for future improvement to the API by creating `v2` folder, enabling users to continue using older versions of the API if necessary, rather than being forced to switch to the latest version.
 
-```
+```json
 // folder structure
 | src
 | -- v1
@@ -62,9 +62,9 @@ Over time, there will be improvements, new functionalities and more changes to t
 | ---- routes
 ```
 
-- <a href="https://www.linkedin.com/posts/victoriacheng15_typescript-softwareengineering-javascript-activity-7041831400752242688-Hs5P?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
-- <a href="https://www.freecodecamp.org/news/rest-api-design-best-practices-build-a-rest-api" target="_blank" rel="noopener noreferrer">The Handbook</a>
-- <a href="https://github.com/victoriacheng15/ai-image-generation/tree/main/server/src/v1" target="_blank" rel="noopener noreferrer">ai-image-generation code on GitHub</a>
+- [LinkedIn post](https://www.linkedin.com/posts/victoriacheng15_typescript-softwareengineering-javascript-activity-7041831400752242688-Hs5P?utm_source=share&utm_medium=member_desktop)
+- [The Handbook](https://www.freecodecamp.org/news/rest-api-design-best-practices-build-a-rest-api)
+- [ai-image-generation code on GitHub](https://github.com/victoriacheng15/ai-image-generation/tree/main/server/src/v1)
 
 ### Google Lighthouse
 
@@ -72,13 +72,13 @@ It is an open-source tool developed by Google that is used to audit and measure 
 
 I used the Google Lighthouse tool to assess the performance of my projects. However, the tool highlighted some crucial oversights, such as the absence of a meta description and an ARIA label for social links. I took immediate action to rectify these issues. Upon further analysis of the tool's report, I discovered that there were still two areas causing problems.
 
-**Largest contentful paint (LCP)**
+#### Largest contentful paint (LCP)
 
 LCP is a metric used to measure the loading performance of a web page. It measures the time it takes for the largest content element on a web page, such as an image, video, or block-level text element, to be fully rendered in the viewport. A couple of ways to optimize LCP is to make sure that the element can start loading as early as possible, render as soon as resources are loaded, and more.
 
-- <a href="https://www.linkedin.com/posts/victoriacheng15_coding-improvement-softwareengineering-activity-7044681649657155585-6TEd?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener noreferrer">LinkedIn post</a>
+- [LinkedIn post](https://www.linkedin.com/posts/victoriacheng15_coding-improvement-softwareengineering-activity-7044681649657155585-6TEd?utm_source=share&utm_medium=member_desktop)
 
-**Cumulative layout shift (CLS)**
+#### Cumulative layout shift (CLS)
 
 It is a measure of the largest burst of layout shift scores for all unexpected layout shifts that happen during your stay on the webpage. The most common causes for poor CLS are images without dimensions, dynamically injected content and more.
 
@@ -89,8 +89,8 @@ Let's say a page has a cover image on top of the page.
 
 Additionally, you can implement a skeleton layout for dynamically injected content. This enables you to display placeholders that inform readers that content is forthcoming, thus reducing the likelihood of layout shifts. By using this approach, I was able to significantly improve the Cumulative Layout Shift (CLS) from 0.344 to 0.033, which yielded impressive results. This experience surprised me and highlighted the importance of considering the use of skeleton layouts in the future.
 
-- <a href="https://www.linkedin.com/posts/victoriacheng15_coding-softwareengineering-improvement-activity-7045097140867518464-ZwGu?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener noreferrer">LinkedIn post - part 1</a>
-- <a href="https://www.linkedin.com/posts/victoriacheng15_coding-softewareengineering-nextjs-activity-7046171092901646336-lhXW?utm_source=share&utm_medium=member_desktop" target="_blank" rel="noopener noreferrer"> LinkedIn post - part 2</a>
+- [LinkedIn post - part 1](https://www.linkedin.com/posts/victoriacheng15_coding-softwareengineering-improvement-activity-7045097140867518464-ZwGu?utm_source=share&utm_medium=member_desktop)
+- [LinkedIn post - part 2](https://www.linkedin.com/posts/victoriacheng15_coding-softewareengineering-nextjs-activity-7046171092901646336-lhXW?utm_source=share&utm_medium=member_desktop)
 
 ### Jest - `test.each(table)(name, fn, timeout)`
 
@@ -98,44 +98,44 @@ First, you set up cases array with input(s) and expected, and then used `for of`
 
 This is pretty amazing. It allows me to reduce the code by one line and it looks cleaner.
 
-**Before**
+#### Before
 
 ```js
 describe("isograms", () => {
-	const cases: [string, boolean][] = [
-		["Dermatoglyphics", true],
-		["isogram", true],
-		["aba", false],
-		["moOse", false],
-	];
+ const cases: [string, boolean][] = [
+  ["Dermatoglyphics", true],
+  ["isogram", true],
+  ["aba", false],
+  ["moOse", false],
+ ];
 
-	for (const [str, output] of cases) {
-		it(`should return ${output} when str = ${str}`, () => {
-			expect(isIsogram(str)).toBe(output);
-		});
-	}
+ for (const [str, output] of cases) {
+  it(`should return ${output} when str = ${str}`, () => {
+   expect(isIsogram(str)).toBe(output);
+  });
+ }
 });
 ```
 
-**After**
+#### After
 
 ```js
 describe("isograms", () => {
-	const cases: [string, boolean][] = [
-		["Dermatoglyphics", true],
-		["isogram", true],
-		["aba", false],
-		["moOse", false],
-	];
+ const cases: [string, boolean][] = [
+  ["Dermatoglyphics", true],
+  ["isogram", true],
+  ["aba", false],
+  ["moOse", false],
+ ];
 
-	it.each(cases)("when str = '%s', should return '%s'", (str, output) => {
-		expect(isIsogram(str)).toBe(output);
-	});
+ it.each(cases)("when str = '%s', should return '%s'", (str, output) => {
+  expect(isIsogram(str)).toBe(output);
+ });
 });
 ```
 
-See more in this <a href="https://jestjs.io/docs/api#testeachtablename-fn-timeout" target="_blank" rel="noopener noreferrer">section</a> of the Jest docs.
+See more in this [section](https://jestjs.io/docs/api#testeachtablename-fn-timeout) of the Jest docs.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

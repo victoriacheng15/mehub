@@ -33,29 +33,29 @@ const myValue = useRef(null);
 import { useState, useEffect, useRef } from "react";
 
 export default function App() {
-	const [count, setCount] = useState(0);
+ const [count, setCount] = useState(0);
 
-	function handleClick() {
-		setCount((prevCount) => prevCount + 1);
-		console.log(`You clicked ${count} times!`);
-	}
+ function handleClick() {
+  setCount((prevCount) => prevCount + 1);
+  console.log(`You clicked ${count} times!`);
+ }
 
-	useEffect(() => {
-		console.log("re-rendering");
-	}, [count]);
+ useEffect(() => {
+  console.log("re-rendering");
+ }, [count]);
 
-	// let ref = useRef(0);
+ // let ref = useRef(0);
 
-	// function handleClick() {
-	// 	ref.current++;
-	// 	console.log(`You clicked ${ref.current} times!`);
-	// }
+ // function handleClick() {
+ //  ref.current++;
+ //  console.log(`You clicked ${ref.current} times!`);
+ // }
 
-	// useEffect(() => {
-	// 	console.log("re-rendering")
-	// }, [ref])
+ // useEffect(() => {
+ //  console.log("re-rendering")
+ // }, [ref])
 
-	return <button onClick={handleClick}>Click me!</button>;
+ return <button onClick={handleClick}>Click me!</button>;
 }
 ```
 
@@ -68,6 +68,6 @@ The `useRef` hook is a tool in React for managing mutable values and interacting
 - [useRef - React Docs](https://react.dev/reference/react/useRef)
 - [BUILD a React Timer with useRef | React Hooks useRef Tutorial by Dave Gray](https://www.youtube.com/watch?v=s6UAuFzL308)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

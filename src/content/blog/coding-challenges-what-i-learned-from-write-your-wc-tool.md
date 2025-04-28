@@ -20,21 +20,21 @@ wc[options][files];
 
 ## What I Learned from this Project
 
-**Test-Driven Development (TDD) Approach:**
+### Test-Driven Development (TDD) Approach
 
 Switching to Test-Driven Development (TDD) was a bit tricky since I usually code first and test later, or sometimes, skip tests. But this time, I committed to doing TDD. I noticed that starting with tests makes you think about the main functions you need. You write functions without actual code, then sort out the order. The initial code might not look great, but the process of writing tests and refining the code ensures your functions work correctly.
 
-**classes in JavaScript**
+### classes in JavaScript
 
 While I usually prefer using functions in JavaScript, experimenting with classes for this project brought some benefits. Using classes not only provided a more structured and encapsulated approach, especially when dealing with multiple functions related to the wc tool but additionally, it meant I didn't need to see the function keyword every couple of lines. This approach facilitated a cleaner code organization
 
 Ultimately, the choice between functions and classes depends on the specific requirements of your project. Functions are excellent for simplicity and smaller tasks, while classes offer more structure and encapsulation for larger and more complex applications.
 
-**spyOn Utility:**
+### spyOn Utility
 
 The **`spyOn`** utility in testing frameworks like Jest proved valuable for observing the behavior of functions without invoking their original implementations. This was particularly useful for testing functions that interacted with external dependencies, such as reading file contents.
 
-**process.stdin:**
+### process.stdin
 
 `process.stdin` emerged as a key component—a readable stream in Node.js representing the standard input (stdin) of the current process. This feature enables a Node.js program to receive input from the user via the command line or from other processes, enhancing interactivity and command-line functionality.
 
@@ -50,6 +50,6 @@ After this exploration, I've also provided handy links to further resources. You
 
 [cc-write-your-own-wc repo](https://github.com/victoriacheng15/cc-write-your-own-wc/tree/main#readme)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

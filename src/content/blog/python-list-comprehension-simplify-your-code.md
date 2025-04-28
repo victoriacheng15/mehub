@@ -26,19 +26,19 @@ Here's a breakdown of each part:
 
 We'll compare the traditional for loop with the shorter list comprehension method. Using examples, we'll show how each one makes a list of numbers from 0 to 4.
 
-### For loop example:
+### For loop example
 
 ```python
 numbers = []
 
 for num in range(5):
-	numbers.append(num)
+ numbers.append(num)
 
 print(numbers)
 # Output: [0, 1, 2, 3, 4]
 ```
 
-### List comprehension example:
+### List comprehension example
 
 ```python
 numbers = [num for num in range(5)]
@@ -137,6 +137,6 @@ In this example, the list comprehension iterates over each sublist in the nested
 
 [How to use list comprehension in Python by 2MinutesPy](https://www.youtube.com/watch?v=a3eE5kslhek)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

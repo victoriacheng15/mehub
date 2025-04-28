@@ -26,6 +26,6 @@ Understanding complex architectural concepts is a challenge for me, but designin
 
 Without a doubt, this is a book that I plan to revisit down the road, once I've gained a deeper understanding of architectural design principles.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

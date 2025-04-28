@@ -64,6 +64,6 @@ In essence, if the original value of a variable is either `null`, `undefined`,
 
 [MDN Docs - Logical OR assignment (||=)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

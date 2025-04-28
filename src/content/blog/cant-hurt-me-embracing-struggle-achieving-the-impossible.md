@@ -30,6 +30,6 @@ In `Can't Hurt Me`, David Goggins shares his extraordinary journey from a troubl
 
 This book resonated with me due to its emphasis on the process, similar to what I've encountered in other works like "Atomic Habits." Focusing on the process keeps you on course and moving toward your primary objectives. I also appreciate the author's idea of cultivating a resilient mindset by pushing past limits to become a better self.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

@@ -47,6 +47,6 @@ A hash table maps keys to values, *allowing fast data retrieval with average ope
 
 [Data Structure - Hash Tables by HackerEarth](https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

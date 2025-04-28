@@ -24,7 +24,7 @@ Disadvantages:
 
 ## Props drilling
 
-<img src="https://user-images.githubusercontent.com/35031228/210663654-ce79c986-a04c-4e34-964d-42053f8ec6be.png" alt="diagram shows a tree of components">
+![diagram shows a tree of components](https://user-images.githubusercontent.com/35031228/210663654-ce79c986-a04c-4e34-964d-42053f8ec6be.png)
 
 Props drilling is the process of passing data down through multiple levels of the component tree in order to reach a lower-level component that needs the data. For example, if component E needs data from the top-level component `component A`, you would need to pass the data through `component B` and `component C` before it reaches `component E`.
 
@@ -47,27 +47,27 @@ Let's you have a hook that will fetch Todos from [JSON Placeholder](https://json
 import { useState, useEffect } from "react";
 
 const useFetchApi = () => {
-	const [data, setData] = useState([]);
-	const [loading, setLoading] = useState(true);
-	const [error, setError] = useState(null);
+ const [data, setData] = useState([]);
+ const [loading, setLoading] = useState(true);
+ const [error, setError] = useState(null);
 
-	useEffect(() => {
-		const fetchData = async () => {
-			const url = "https://jsonplaceholder.typicode.com/todos";
-			try {
-				const res = await fetch(url);
-				const data = await res.json();
-				setData(data);
-			} catch (error) {
-				setError(error);
-			}
-			setLoading(false);
-		};
+ useEffect(() => {
+  const fetchData = async () => {
+   const url = "https://jsonplaceholder.typicode.com/todos";
+   try {
+    const res = await fetch(url);
+    const data = await res.json();
+    setData(data);
+   } catch (error) {
+    setError(error);
+   }
+   setLoading(false);
+  };
 
-		fetchData();
-	}, []);
+  fetchData();
+ }, []);
 
-	return { data, loading, error };
+ return { data, loading, error };
 };
 
 export default useFetchApi;
@@ -91,16 +91,16 @@ import useFetchApi from "../hooks/useFetchState";
 const TodoContext = createContext();
 
 export function TodoProvider({ children }) {
-	const { data, loading, error } = useFetchApi();
+ const { data, loading, error } = useFetchApi();
 
-	// if you need to filter data for a search function or something,
-	// you can define functions here and then add to the value below
+ // if you need to filter data for a search function or something,
+ // you can define functions here and then add to the value below
 
-	return <TodoContext.Provider value={{ data, error, loading }}>{children}</TodoContext.Provider>;
+ return <TodoContext.Provider value={{ data, error, loading }}>{children}</TodoContext.Provider>;
 }
 
 export function useTodoContext() {
-	return useContext(TodoContext);
+ return useContext(TodoContext);
 }
 ```
 
@@ -113,15 +113,15 @@ export function useTodoContext() {
 import { TodoProvider } from "./contexts/todoContext";
 
 function App() {
-	return (
-		<TodoProvider>
-			<SomeProvider>
-				{/* if you have more than one context file, 
+ return (
+  <TodoProvider>
+   <SomeProvider>
+    {/* if you have more than one context file, 
           you can nested provider(s) like this */}
-				{/* your components or routes or anything */}
-			</SomeProvider>
-		</TodoProvider>
-	);
+    {/* your components or routes or anything */}
+   </SomeProvider>
+  </TodoProvider>
+ );
 }
 
 export default App;
@@ -129,7 +129,7 @@ export default App;
 
 Remember this diagram?
 
-<img src="https://user-images.githubusercontent.com/35031228/210663654-ce79c986-a04c-4e34-964d-42053f8ec6be.png" alt="diagram shows a tree of components">
+![diagram shows a tree of components](https://user-images.githubusercontent.com/35031228/210663654-ce79c986-a04c-4e34-964d-42053f8ec6be.png)
 
 To access todo data from `component G`, you can import the `useTodoContext` hook and destructure the data at line 5. For example:
 
@@ -138,17 +138,17 @@ To access todo data from `component G`, you can import the `useTodoContext` hook
 import { useTodoContext } from "../contexts/todoContext";
 
 function Todo() {
-	const { data } = useTodoContext();
+ const { data } = useTodoContext();
 
-	return (
-		<ul>
-			{data.slice(0, 15).map((todo) => (
-				<li key={todo.id}>
-					<p>{todo.title}</p>
-				</li>
-			))}
-		</ul>
-	);
+ return (
+  <ul>
+   {data.slice(0, 15).map((todo) => (
+    <li key={todo.id}>
+     <p>{todo.title}</p>
+    </li>
+   ))}
+  </ul>
+ );
 }
 
 export default Todo;
@@ -158,7 +158,7 @@ This will allow you to access the todo data from the `TodoContext` in `component
 
 ```js
 export function useTodoContext() {
-	return useContext(TodoContext);
+ return useContext(TodoContext);
 }
 ```
 
@@ -174,6 +174,6 @@ By using useContext, you can make your code more concise and maintainable. Howev
 
 - [useContext - React Docs (beta)](https://beta.reactjs.org/reference/react/useContext)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

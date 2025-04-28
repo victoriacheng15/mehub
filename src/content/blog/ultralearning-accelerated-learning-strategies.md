@@ -36,6 +36,6 @@ These approaches closely resemble those in [Learning How to Learn by Barbara Oak
 
 If you're seeking ways to enhance the learning process, both `Learning How to Learn` and `Ultralearning` are undoubtedly must-reads.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

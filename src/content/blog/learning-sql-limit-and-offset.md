@@ -85,6 +85,6 @@ The `LIMIT` and `OFFSET` clauses are essential for managing and controlling the 
 
 [PostgreSQL LIMIT](https://neon.tech/postgresql/postgresql-tutorial/postgresql-limit)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

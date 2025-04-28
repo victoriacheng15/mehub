@@ -20,8 +20,8 @@ While I didn’t write a reflection for October, I spent that time refining my j
 ## Books I’ve Read
 
 - **Fundamentals of Software Architecture:**
-    - A practical guide to designing effective software systems. It covers key topics like architectural styles, trade-offs, decision-making, and adaptability. Emphasizing both technical and leadership skills, it equips architects to align designs with business goals, manage complexity, and embrace continuous evolution
+  - A practical guide to designing effective software systems. It covers key topics like architectural styles, trade-offs, decision-making, and adaptability. Emphasizing both technical and leadership skills, it equips architects to align designs with business goals, manage complexity, and embrace continuous evolution
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

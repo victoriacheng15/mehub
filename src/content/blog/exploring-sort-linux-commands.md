@@ -41,6 +41,6 @@ sort --help
 man sort
 ```
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

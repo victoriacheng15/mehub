@@ -76,6 +76,6 @@ Column aliases are a simple yet powerful feature in SQL that can improve the cla
 
 [SQL Alias: Everything You Need to Know About AS in SQL](https://www.dbvis.com/thetable/sql-alias-everything-you-need-to-know-about-as-in-sql/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

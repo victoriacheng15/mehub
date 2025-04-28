@@ -32,6 +32,6 @@ If you’re unsure or uncertain about what to do in the future, I think this boo
 - **The Strangest Secret: How to Live the Life You Desire**
   - Earl Nightingale's classic emphasizes the power of thought and goal-setting. His key message is that "we become what we think about," encouraging readers to define their goals clearly. Nightingale stresses that success is a journey, not a destination, and highlights the importance of self-discipline, gratitude, and maintaining a positive mindset. By focusing on goals and thinking positively, anyone can achieve the life they desire.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

@@ -50,11 +50,11 @@ let's use `typeof` to check the key type.
 
 ```js
 map.forEach((_, key) => {
-	console.log(`key value: ${key} | type: ${typeof key}`);
+ console.log(`key value: ${key} | type: ${typeof key}`);
 });
 
 Object.keys(object).map((key) => {
-	console.log(`key value: ${key} | type: ${typeof key}`);
+ console.log(`key value: ${key} | type: ${typeof key}`);
 });
 ```
 
@@ -74,11 +74,11 @@ key value: true | type: string
 
 According to the MDN docs, Map offers better performance while the object is not optimized.
 
-<img src="https://user-images.githubusercontent.com/35031228/217649940-3963e5bd-8c96-458f-926e-a39e35056ad9.png" alt="Map offers better performance if need to frequent additions and removals of key-value pairs while object is not optimized">
+![Map offers better performance if need to frequent additions and removals of key-value pairs while object is not optimized](https://user-images.githubusercontent.com/35031228/217649940-3963e5bd-8c96-458f-926e-a39e35056ad9.png)
 
 At this moment, Map is supported in all major browsers based on [caniuse.com](https://caniuse.com/mdn-javascript_builtins_map).
 
-<img src="https://user-images.githubusercontent.com/35031228/217653562-bd683908-a4dc-4119-9f62-4a5f3ae5f797.png" alt="which browser can use the Map">
+![which browser can use the Map](https://user-images.githubusercontent.com/35031228/217653562-bd683908-a4dc-4119-9f62-4a5f3ae5f797.png)
 
 ## Methods
 
@@ -86,11 +86,11 @@ Let's say you have character data that you need to add to `Map` object.
 
 ```js
 const characters = [
-	{ id: 1, name: "The Doctor", age: 900 },
-	{ id: 2, name: "Rose Tyler", age: 26 },
-	{ id: 3, name: "Martha Jones", age: 27 },
-	{ id: 4, name: "Donna Noble", age: 31 },
-	{ id: 5, name: "Amy Pond", age: 26 },
+ { id: 1, name: "The Doctor", age: 900 },
+ { id: 2, name: "Rose Tyler", age: 26 },
+ { id: 3, name: "Martha Jones", age: 27 },
+ { id: 4, name: "Donna Noble", age: 31 },
+ { id: 5, name: "Amy Pond", age: 26 },
 ];
 
 const map = new Map();
@@ -102,11 +102,11 @@ This method is to add or update an element with a key and a value.
 
 ```js
 for (const character of characters) {
-	map.set(character.id, character);
+ map.set(character.id, character);
 }
 // or
 characters.forEach((character) => {
-	map.set(character.id, character);
+ map.set(character.id, character);
 });
 ```
 
@@ -254,6 +254,6 @@ If you are curious about the performance between Map and object, Zhenghao explai
 - [Map -The Modern JavaScript Tutorial](https://javascript.info/map-set#map)
 - [Map vs Object - Zhenghao](https://www.zhenghao.io/posts/object-vs-map)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

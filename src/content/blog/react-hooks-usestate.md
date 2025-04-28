@@ -13,18 +13,18 @@ What is `useState` hook? It is a feature in React that allow functional componen
 import React, { useState } from "react";
 
 function App() {
-	const [count, setCount] = useState(0);
+ const [count, setCount] = useState(0);
 
-	function handleClick() {
-		setCount(count + 1);
-	}
+ function handleClick() {
+  setCount(count + 1);
+ }
 
-	return (
-		<div>
-			<p>You clicked {count} times</p>
-			<button onClick={handleClick}>Click me</button>
-		</div>
-	);
+ return (
+  <div>
+   <p>You clicked {count} times</p>
+   <button onClick={handleClick}>Click me</button>
+  </div>
+ );
 }
 
 export default App;
@@ -43,8 +43,8 @@ let count = 0;
 
 // this is like the handleClick
 function addValue() {
-	count += 1;
-	countText.textContent = count;
+ count += 1;
+ countText.textContent = count;
 }
 
 button.addEventListener("click", addValue);
@@ -69,8 +69,9 @@ In general, types should already inferred by TypeScript when:
 
 When you are on the editor, hover the mouse to the array or object or any variables, there should be a popup window that says `const variable: type`
 
-<img src="https://user-images.githubusercontent.com/35031228/206090180-ac27305a-5cc7-4518-8ffa-fc510aeee0fb.png" alt="">
-<img src="https://user-images.githubusercontent.com/35031228/206090385-e1137ca8-cea1-493b-860e-7162330fa70d.png" alt="">
+![image](https://user-images.githubusercontent.com/35031228/206090180-ac27305a-5cc7-4518-8ffa-fc510aeee0fb.png)
+
+![image](https://user-images.githubusercontent.com/35031228/206090385-e1137ca8-cea1-493b-860e-7162330fa70d.png)
 
 If type is to be determined, you should let TS know what type of this variable will be in the future.
 
@@ -102,31 +103,31 @@ Let's say you want to have a button that adds 1 and another button that adds 3.
 
 ```js
 function App() {
-	const [count, setCount] = useState(0);
+ const [count, setCount] = useState(0);
 
-	function handleClick() {
-		setCount(count + 1);
-	}
+ function handleClick() {
+  setCount(count + 1);
+ }
 
-	// function handleClick() {
-	//   setCount((prev) => prev + 1);
-	// }
+ // function handleClick() {
+ //   setCount((prev) => prev + 1);
+ // }
 
-	return (
-		<div>
-			<p>You clicked {count} times</p>
-			<button onClick={handleClick}>add 1</button>
-			<button
-				onClick={() => {
-					handleClick();
-					handleClick();
-					handleClick();
-				}}
-			>
-				add 3
-			</button>
-		</div>
-	);
+ return (
+  <div>
+   <p>You clicked {count} times</p>
+   <button onClick={handleClick}>add 1</button>
+   <button
+    onClick={() => {
+     handleClick();
+     handleClick();
+     handleClick();
+    }}
+   >
+    add 3
+   </button>
+  </div>
+ );
 }
 ```
 
@@ -134,11 +135,11 @@ Let's see the actions below!
 
 Notice, it only adds 1 after clicked `add 3` with `setCount(count + 1)`.
 
-<img src="https://user-images.githubusercontent.com/35031228/206037427-f2d7bb11-36c0-4065-964d-792458259c4e.gif" alt="">
+![image](https://user-images.githubusercontent.com/35031228/206037427-f2d7bb11-36c0-4065-964d-792458259c4e.gif)
 
 Notice, it adds 3 after clicked `add 3` with `setCount(prev => prev + 1)`
 
-<img src="https://user-images.githubusercontent.com/35031228/206037764-ddb487d9-cace-4429-a00a-1c79be1c4049.gif" alt="">
+![image](https://user-images.githubusercontent.com/35031228/206037764-ddb487d9-cace-4429-a00a-1c79be1c4049.gif)
 
 > Note: I should name the parameter better, like prevCount.
 
@@ -154,24 +155,24 @@ The JS version:
 
 ```js
 const handleNext = (page) => {
-	const FIVE = displayPages.length;
-	const condition = page <= Math.floor(FIVE / 2);
-	if (condition) {
-		setCurrentPage(page + 1);
-		setStartPage(0);
-		setEndPage(5);
-	} else {
-		setCurrentPage(page >= totalPages ? totalPages : page + 1);
-		// notice the totalPages - 2?? weird, right?
-		setStartPage(page >= totalPages - 2 ? totalPages - 5 : startPage + 1);
-		setEndPage(page >= totalPages ? totalPages : endPage + 1);
-	}
+ const FIVE = displayPages.length;
+ const condition = page <= Math.floor(FIVE / 2);
+ if (condition) {
+  setCurrentPage(page + 1);
+  setStartPage(0);
+  setEndPage(5);
+ } else {
+  setCurrentPage(page >= totalPages ? totalPages : page + 1);
+  // notice the totalPages - 2?? weird, right?
+  setStartPage(page >= totalPages - 2 ? totalPages - 5 : startPage + 1);
+  setEndPage(page >= totalPages ? totalPages : endPage + 1);
+ }
 };
 ```
 
 If I have the `totalPage -5` instead of the magic number `2`, the GIF shows how it behaves.
 
-<img src="https://user-images.githubusercontent.com/35031228/206044718-0fdc274b-58ee-47b5-8a1c-5e4c681d6847.gif" alt="">
+![image](https://user-images.githubusercontent.com/35031228/206044718-0fdc274b-58ee-47b5-8a1c-5e4c681d6847.gif)
 
 Later, I decided to re-built the same app with TypeScript. While I was working on the app, I realized that I could have implement with the updater function. The math logic will sound right.
 
@@ -181,24 +182,24 @@ The TS version:
 
 ```ts
 const forward = () => {
-	const FIVE = displayPages.length;
-	const condition = currentPage <= Math.floor(FIVE / 2);
-	if (condition) {
-		setCurrentPage((prev) => prev + 1);
-		setStart(0);
-		setEnd(5);
-	} else {
-		setCurrentPage((prev) => (prev >= total ? total : prev + 1));
-		// with updater function, I can write total - 5 and this makes sense to me
-		setStart((prev) => (prev >= total - 5 ? total - 5 : start + 1));
-		setEnd((prev) => (prev >= total ? total : end + 1));
-	}
+ const FIVE = displayPages.length;
+ const condition = currentPage <= Math.floor(FIVE / 2);
+ if (condition) {
+  setCurrentPage((prev) => prev + 1);
+  setStart(0);
+  setEnd(5);
+ } else {
+  setCurrentPage((prev) => (prev >= total ? total : prev + 1));
+  // with updater function, I can write total - 5 and this makes sense to me
+  setStart((prev) => (prev >= total - 5 ? total - 5 : start + 1));
+  setEnd((prev) => (prev >= total ? total : end + 1));
+ }
 };
 ```
 
 This time, it works flawlessly!
 
-<img src="https://user-images.githubusercontent.com/35031228/206045208-d23b9ca2-d1a7-4ca2-93ba-0da574aeb180.gif" alt="">
+![image](https://user-images.githubusercontent.com/35031228/206045208-d23b9ca2-d1a7-4ca2-93ba-0da574aeb180.gif)
 
 **Keep the updater function in your mind. If a state **is behaving **strangely**, you** may need to write it!**
 
@@ -208,6 +209,6 @@ This time, it works flawlessly!
 - [React docs - Updating Arrays in state](https://beta.reactjs.org/learn/updating-arrays-in-state)
 - [React docs - Updating Objects in State](https://beta.reactjs.org/learn/updating-objects-in-state)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

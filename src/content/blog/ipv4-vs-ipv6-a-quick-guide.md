@@ -52,6 +52,6 @@ In conclusion, while IPv4 has served the internet well for decades, the future b
 
 [IPv4 vs. IPv6: which internet protocol is better? by Surfshark](https://surfshark.com/blog/ipv4-vs-ipv6)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

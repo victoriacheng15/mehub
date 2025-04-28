@@ -15,10 +15,10 @@ The **`bind()`** method creates a new function that, when called, has **`this`**
 
 ```js
 const obj = {
-	name: "Zephyr",
-	sayHello: function () {
-		console.log(`Hello, ${this.name}!`);
-	},
+ name: "Zephyr",
+ sayHello: function () {
+  console.log(`Hello, ${this.name}!`);
+ },
 };
 
 const hello = obj.sayHello.bind(obj);
@@ -29,7 +29,7 @@ It also can be used for function currying.
 
 ```js
 function multiply(a, b) {
-	return a * b;
+ return a * b;
 }
 
 const double = multiply.bind(null, 2);
@@ -47,11 +47,11 @@ Or using for event handling.
 const buttons = document.querySelectorAll("button");
 
 const handleClick = function () {
-	console.log(`Button "${this.textContent}" clicked!`);
+ console.log(`Button "${this.textContent}" clicked!`);
 };
 
 buttons.forEach((button) => {
-	button.addEventListener("click", handleClick.bind(button));
+ button.addEventListener("click", handleClick.bind(button));
 });
 
 // either Button "Click me" clicked
@@ -67,11 +67,11 @@ The **`call()`** method calls a function with a given **`this`** value and argum
 
 ```js
 const obj1 = {
-	name: "Zephyr",
+ name: "Zephyr",
 };
 
 function sayHello() {
-	console.log(`Hello, ${this.name}!`);
+ console.log(`Hello, ${this.name}!`);
 }
 
 sayHello.call(obj1); // Output: Hello, Zephyr!
@@ -81,7 +81,7 @@ It also can be used to borrow functions from another object.
 
 ```js
 const obj2 = {
-	name: "Victor",
+ name: "Victor",
 };
 
 sayHello.call(obj2); // Output: Hello, Victor!
@@ -91,18 +91,18 @@ Or function chaining…
 
 ```js
 const calculator = {
-	value: 0,
-	add: function (num) {
-		this.value += num;
-		return this;
-	},
-	multiply: function (num) {
-		this.value *= num;
-		return this;
-	},
-	getValue: function () {
-		return this.value;
-	},
+ value: 0,
+ add: function (num) {
+  this.value += num;
+  return this;
+ },
+ multiply: function (num) {
+  this.value *= num;
+  return this;
+ },
+ getValue: function () {
+  return this.value;
+ },
 };
 
 const result = calculator.add(5).multiply(3).getValue();
@@ -129,13 +129,13 @@ Or you need to pass dynamic arguments…
 
 ```js
 function sum(a, b, c) {
-	return a + b + c;
+ return a + b + c;
 }
 
 // or
 
 function sum(...args) {
-	return [...args].reduce((acc, curr) => acc + curr, 0);
+ return [...args].reduce((acc, curr) => acc + curr, 0);
 }
 
 const numbers = [1, 2, 3];
@@ -151,10 +151,10 @@ Additionally, `call()` and `apply()` are similar, but one difference is that `ca
 
 ## Resources
 
-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind" target="_blank" rel="noopener noreferrer">MDN docs - bind()</a>
-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/call" target="_blank" rel="noopener noreferrer">MDN docs - call()</a>
-- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/apply" target="_blank" rel="noopener noreferrer">MDN docs - apply()</a>
+- [MDN docs - bind()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
+- [MDN docs - call()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/call)
+- [MDN docs - apply()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/apply)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

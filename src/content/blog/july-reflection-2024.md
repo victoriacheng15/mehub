@@ -40,6 +40,6 @@ This month, I've been making time for reading and found two methods that work we
 - **The First 20 Hours: How to Learn Anything . . . Fast**
   - Explores rapid skill acquisition techniques to learn new skills efficiently. Key insights include breaking skills into manageable sub-skills, practicing in focused intervals, and emphasizing deliberate practice. The book demonstrates how dedicating just 20 hours can yield significant progress, challenging the myth that mastery requires extensive time. It emphasizes structured practice and persistence to achieve proficiency quickly.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

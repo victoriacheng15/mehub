@@ -7,11 +7,11 @@ tags: [sql]
 
 ## What is a Subquery?
 
-A subquery is simply **a query inside another query,** and also known as **nested queries**. It allows you to use the result of one query as part of another. 
+A subquery is simply **a query inside another query,** and also known as **nested queries**. It allows you to use the result of one query as part of another.
 
 Think of it like asking a question within a question:
 
-*"Find all customers who made purchases above the average order amount."*
+> "Find all customers who made purchases above the average order amount."
 
 To answer this, you’d first need to find the **average order amount** (inner query), then use that number to filter customers (outer query).
 
@@ -143,7 +143,7 @@ WHERE age > ALL (
 
 `> ALL` means "greater than the largest value".
 
-**Quick Comparison**
+#### Quick Comparison
 
 | **Operator** | **Use Case** | **Example** |
 | --- | --- | --- |
@@ -175,6 +175,6 @@ WHERE age > ALL (
 
 [PostgreSQL EXISTS Operator](https://neon.tech/postgresql/postgresql-tutorial/postgresql-exists)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

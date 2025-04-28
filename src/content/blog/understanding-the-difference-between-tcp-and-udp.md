@@ -16,23 +16,23 @@ On the other hand, **UDP** is a connectionless protocol that focuses on speed ra
 ## Differences Between TCP and UDP
 
 - **Connection Type**:
-    - **TCP**: Connection-oriented, requiring a handshake process to establish a connection before data transmission.
-    - **UDP**: Connectionless, sending data without establishing a connection.
+  - **TCP**: Connection-oriented, requiring a handshake process to establish a connection before data transmission.
+  - **UDP**: Connectionless, sending data without establishing a connection.
 - **Reliability**:
-    - **TCP**: Ensures reliable data transmission with error-checking, acknowledgments, and retransmissions of lost packets.
-    - **UDP**: Provides no guarantees of delivery, error-checking, or retransmission, making it less reliable but faster.
+  - **TCP**: Ensures reliable data transmission with error-checking, acknowledgments, and retransmissions of lost packets.
+  - **UDP**: Provides no guarantees of delivery, error-checking, or retransmission, making it less reliable but faster.
 - **Speed**:
-    - **TCP**: Generally slower due to the overhead involved in connection management, error correction, and flow control.
-    - **UDP**: Faster because it skips connection establishment and error-checking processes.
+  - **TCP**: Generally slower due to the overhead involved in connection management, error correction, and flow control.
+  - **UDP**: Faster because it skips connection establishment and error-checking processes.
 - **Data Ordering**:
-    - **TCP**: Maintains the order of data packets, ensuring that they arrive in the sequence in which they were sent.
-    - **UDP**: Does not guarantee the order of packets, which may arrive out of sequence.
+  - **TCP**: Maintains the order of data packets, ensuring that they arrive in the sequence in which they were sent.
+  - **UDP**: Does not guarantee the order of packets, which may arrive out of sequence.
 - **Use Cases**:
-    - **TCP**: Ideal for applications where data integrity and order are critical, such as file transfers, emails, and web browsing.
-    - **UDP**: Suited for real-time applications where speed is essential and occasional data loss is acceptable, like gaming, video conferencing, and live streaming.
+  - **TCP**: Ideal for applications where data integrity and order are critical, such as file transfers, emails, and web browsing.
+  - **UDP**: Suited for real-time applications where speed is essential and occasional data loss is acceptable, like gaming, video conferencing, and live streaming.
 - **Header Size**:
-    - **TCP**: Larger header size (20 bytes minimum) due to the additional information required for connection management.
-    - **UDP**: Smaller header size (8 bytes) as it includes only essential information, contributing to its efficiency.
+  - **TCP**: Larger header size (20 bytes minimum) due to the additional information required for connection management.
+  - **UDP**: Smaller header size (8 bytes) as it includes only essential information, contributing to its efficiency.
 
 By understanding these differences, you can better appreciate the specific roles TCP and UDP play in the functioning of the internet and choose the appropriate protocol for your network applications.
 
@@ -48,6 +48,6 @@ TCP and UDP are key network protocols. TCP ensures reliable, ordered data delive
 
 [TCP vs UDP: A comparison of the protocols and their differences](https://nordvpn.com/blog/tcp-or-udp-which-is-better/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

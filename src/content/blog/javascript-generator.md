@@ -11,10 +11,10 @@ A JavaScript generator is a special type of function that allows you to generate
 
 ```js
 function* myGeneratorFunction(num) {
-	// Generator logic with yield statements
-	for (let i = 0; i < num; i++) {
-		yield `value ${i} was generated`;
-	}
+ // Generator logic with yield statements
+ for (let i = 0; i < num; i++) {
+  yield `value ${i} was generated`;
+ }
 }
 
 const generator = myGeneratorFunction(5);
@@ -39,37 +39,37 @@ We also have an `async function`, `runGenerator(generator)`, that runs the gener
 
 ```js
 async function fetchApiData(url) {
-	const response = await fetch(url);
-	if (!response.ok) {
-		throw new Error("Network response was not ok");
-	}
-	return response.json();
+ const response = await fetch(url);
+ if (!response.ok) {
+  throw new Error("Network response was not ok");
+ }
+ return response.json();
 }
 
 function* dataGenerator(apiUrls) {
-	for (const url of apiUrls) {
-		yield fetchApiData(url);
-	}
+ for (const url of apiUrls) {
+  yield fetchApiData(url);
+ }
 }
 
 async function runGenerator(generator) {
-	const next = generator.next();
-	if (!next.done) {
-		try {
-			const result = await next.value;
-			console.log(result);
-			await runGenerator(generator);
-		} catch (error) {
-			console.error("Error:", error.message);
-		}
-	}
+ const next = generator.next();
+ if (!next.done) {
+  try {
+   const result = await next.value;
+   console.log(result);
+   await runGenerator(generator);
+  } catch (error) {
+   console.error("Error:", error.message);
+  }
+ }
 }
 
 const apiUrls = [
-	"https://jsonplaceholder.typicode.com/posts",
-	"https://jsonplaceholder.typicode.com/users",
-	"https://jsonplaceholder.typicode.com/comments",
-	"https://jsonplaceholder.typicode.com/todos",
+ "https://jsonplaceholder.typicode.com/posts",
+ "https://jsonplaceholder.typicode.com/users",
+ "https://jsonplaceholder.typicode.com/comments",
+ "https://jsonplaceholder.typicode.com/todos",
 ];
 
 const generator = dataGenerator(apiUrls);
@@ -92,6 +92,6 @@ I've also included a couple of links below that offer further insight into how g
 
 [Web Dev Simplified - Learn JavaScript Generators In 12 Minutes](https://www.youtube.com/watch?v=IJ6EgdiI_wU)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

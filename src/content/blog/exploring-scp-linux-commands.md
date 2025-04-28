@@ -129,6 +129,6 @@ The **SCP command** is an essential tool for securely transferring files in Li
 
 **Happy copying!** 🚀
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

@@ -60,8 +60,8 @@ CI/CD Resources:
 ## Books I’ve Read
 
 - The Mistborn Trilogy by Brandon Sanderson:
-    - In a bleak, ash-covered world ruled by an immortal tyrant, a young thief named Vin joins a rebellion led by the charismatic Kelsier. Discovering her rare magical abilities, she helps challenge the Lord Ruler’s oppressive regime. As secrets of the past and the true nature of their world unravel, Vin and her allies face betrayal, power struggles, and the rise of a dark, ancient force threatening all existence.
+  - In a bleak, ash-covered world ruled by an immortal tyrant, a young thief named Vin joins a rebellion led by the charismatic Kelsier. Discovering her rare magical abilities, she helps challenge the Lord Ruler’s oppressive regime. As secrets of the past and the true nature of their world unravel, Vin and her allies face betrayal, power struggles, and the rise of a dark, ancient force threatening all existence.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

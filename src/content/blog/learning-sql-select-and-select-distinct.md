@@ -73,6 +73,6 @@ The `SELECT` statement is fundamental to querying databases, while the `DISTINCT
 
 [PostgreSQL SELECT DISTINCT](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-select-distinct/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

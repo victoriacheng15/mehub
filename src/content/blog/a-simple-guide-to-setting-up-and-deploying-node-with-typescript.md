@@ -26,18 +26,18 @@ After running `npx tsc --init`, you should see `tsconfig.json` in the root folde
 
 ```json title="tsconfig.json"
 {
-	"compilerOptions": {
-		/* Visit https://aka.ms/tsconfig to read more about this file */
-		"target": "es2016",
-		"module": "commonjs",
-		"resolveJsonModule": true,
-		"outDir": "./build" /* could set dist instead if you prefer */,
-		"rootDir": "./src",
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"strict": true,
-		"skipLibCheck": true
-	}
+ "compilerOptions": {
+  /* Visit https://aka.ms/tsconfig to read more about this file */
+  "target": "es2016",
+  "module": "commonjs",
+  "resolveJsonModule": true,
+  "outDir": "./build" /* could set dist instead if you prefer */,
+  "rootDir": "./src",
+  "esModuleInterop": true,
+  "forceConsistentCasingInFileNames": true,
+  "strict": true,
+  "skipLibCheck": true
+ }
 }
 ```
 
@@ -57,11 +57,11 @@ const app: Express = express();
 const PORT = 3001;
 
 app.get("/", (req: Request, res: Response) => {
-	res.send("Hello from TS Node");
+ res.send("Hello from TS Node");
 });
 
 app.listen(PORT, () => {
-	console.log(`Server is running on port ${PORT}`);
+ console.log(`Server is running on port ${PORT}`);
 });
 ```
 
@@ -100,10 +100,10 @@ pnpm install -D nodemon ts-node
 
 ```json title="nodemon.json"
 {
-	"watch": ["src"],
-	"ext": ".ts,.js",
-	"ignore": [],
-	"exec": "npx ts-node src/index.ts"
+ "watch": ["src"],
+ "ext": ".ts,.js",
+ "ignore": [],
+ "exec": "npx ts-node src/index.ts"
 }
 ```
 
@@ -146,9 +146,9 @@ The image below is from [render](https://render.com/). In the setting tab, some 
 
 Let's focus on these commands, **build** and **start**!
 
-<img src="https://user-images.githubusercontent.com/35031228/223264104-7d5c8fd1-019a-47ef-813f-c76dda1555d4.png" alt="render deployment setting with build and start commands">
+![render deployment setting with build and start commands](https://user-images.githubusercontent.com/35031228/223264104-7d5c8fd1-019a-47ef-813f-c76dda1555d4.png)
 
-**Build command**
+### Build command
 
 This is to clear existing JS files inside of the build folder and then compile TS to JS file.
 
@@ -156,7 +156,7 @@ This is to clear existing JS files inside of the build folder and then compile T
 pnpm install --frozen-lockfile && pnpm build
 ```
 
-**Start command**
+### Start command
 
 This is to start the server.
 
@@ -173,6 +173,6 @@ pnpm server
 - [concurrently](https://www.npmjs.com/package/concurrently)
 - [ts-node-dev](https://www.npmjs.com/package/ts-node-dev)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

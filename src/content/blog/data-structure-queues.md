@@ -26,39 +26,39 @@ Similar to how people enter and exit a line, elements are added to the end of th
 
 ```js
 class Queue {
-	constructor() {
-		this.items = [];
-	}
+ constructor() {
+  this.items = [];
+ }
 
-	// Add a new element to the rear of the queue
-	enqueue(element) {
-		this.items.push(element);
-	}
+ // Add a new element to the rear of the queue
+ enqueue(element) {
+  this.items.push(element);
+ }
 
-	// Remove and return the front element from the queue
-	dequeue() {
-		return this.items.shift();
-	}
+ // Remove and return the front element from the queue
+ dequeue() {
+  return this.items.shift();
+ }
 
-	// Get the value of the front element
-	peek() {
-		return this.items[0];
-	}
+ // Get the value of the front element
+ peek() {
+  return this.items[0];
+ }
 
-	// Check if the queue is empty
-	isEmpty() {
-		return this.items.length === 0;
-	}
+ // Check if the queue is empty
+ isEmpty() {
+  return this.items.length === 0;
+ }
 
-	// Get the number of elements in the queue
-	size() {
-		return this.items.length;
-	}
+ // Get the number of elements in the queue
+ size() {
+  return this.items.length;
+ }
 
-	// Print all the elements in the queue
-	print() {
-		console.log(this.items);
-	}
+ // Print all the elements in the queue
+ print() {
+  console.log(this.items);
+ }
 }
 
 const queue = new Queue();
@@ -194,6 +194,6 @@ print("Size of queue:", queue.qsize())
 
 [queue by Python Docs](https://docs.python.org/3/library/queue.html)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

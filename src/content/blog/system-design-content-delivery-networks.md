@@ -30,6 +30,6 @@ Content Delivery Networks (CDNs) act as distributed mini-libraries, storing cont
 
 [What is a CDN (Content Delivery Network)?](https://aws.amazon.com/what-is/cdn/)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

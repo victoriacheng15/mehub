@@ -103,6 +103,6 @@ man awk
 
 [History of awk and gawk](https://www.gnu.org/software/gawk/manual/html_node/History.html)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

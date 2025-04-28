@@ -28,6 +28,6 @@ This book is an adaptation of Dale Carnegie's classic, "How to Win Friends and I
 
 The book looks at making strong online bonds, encouraging positive interactions, and effective communication. It focuses on various important parts, as mentioned earlier. Yet, among these key things, it's clear that the most important point is to keep up with changing digital trends. By staying informed and adjusting plans, people can do well in the digital age. This helps them succeed in this fast-changing online world.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

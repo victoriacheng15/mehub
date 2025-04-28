@@ -49,6 +49,6 @@ It's important to clarify that while a linked list typically ends with a node wh
 
 [List by ByteByteGO](https://youtu.be/ouipSd_5ivQ?t=23)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

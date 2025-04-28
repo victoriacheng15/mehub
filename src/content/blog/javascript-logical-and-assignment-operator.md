@@ -71,13 +71,13 @@ console.log("numbers: ", numbers); // Output: [200, 1, 2, 3]
 
 ```js
 let person = {
-	name: "John",
-	age: 30,
+ name: "John",
+ age: 30,
 };
 
 let additionalInfo = {
-	country: "USA",
-	job: "Engineer",
+ country: "USA",
+ job: "Engineer",
 };
 
 person &&= { ...person, ...additionalInfo };
@@ -103,6 +103,6 @@ You can make use of `Boolean(input)` to ascertain its truthiness. If the left op
 
 [What are logical assignment operators in JavaScript? - The &&= operator](https://www.educative.io/answers/what-are-logical-assignment-operators-in-javascript)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this.

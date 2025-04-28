@@ -83,6 +83,6 @@ By mastering `HAVING`, you can efficiently filter and analyze grouped data in S
 
 [PostgreSQL HAVING](https://neon.tech/postgresql/postgresql-tutorial/postgresql-having)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

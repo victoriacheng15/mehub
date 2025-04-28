@@ -32,6 +32,6 @@ Delving into the author’s insights on becoming indispensable is enlightening. 
 
 This book is not just beneficial for professional growth, it is also valuable for personal development. Whether you are seeking diverse perspectives on navigating your career or aiming to explore alternative and effective strategies for personal and professional advancement, this book is the book for you. Remember, the choice is yours!
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

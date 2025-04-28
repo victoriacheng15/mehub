@@ -61,7 +61,7 @@ ON e.department_id = d.department_id;
 
 Since RIGHT JOIN includes all rows from the right table, NULL values will appear for columns in the left table where there is no match. Handle NULL values carefully, especially in calculations or filters.
 
-Exmaple: 
+Exmaple:
 
 ```sql
 SELECT 
@@ -83,6 +83,6 @@ The `RIGHT JOIN` command is a powerful tool in SQL for preserving all data from 
 
 [PostgreSQL RIGHT JOIN](https://neon.tech/postgresql/postgresql-tutorial/postgresql-right-join)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

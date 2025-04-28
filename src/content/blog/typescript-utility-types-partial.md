@@ -11,7 +11,7 @@ The `Partial` is a built-in utility type that allows you to create a new type by
 
 ```ts
 type Partial<T> = {
-	[P in keyof T]?: T[P];
+ [P in keyof T]?: T[P];
 };
 ```
 
@@ -21,15 +21,15 @@ You can view this by hovering cursor on `Partial` and a pop-up will show up.
 
 ```ts
 interface Todo {
-	title: string;
-	description: string;
-	completed: boolean;
+ title: string;
+ description: string;
+ completed: boolean;
 }
 
 const original = {
-	title: "Organize desk",
-	description: "Clear clutter",
-	completed: false,
+ title: "Organize desk",
+ description: "Clear clutter",
+ completed: false,
 };
 ```
 
@@ -37,11 +37,11 @@ Let’s say you have a list of todos and you would declare `Todo` with title as 
 
 ```ts
 function updateTodo(todo: Todo, fieldsToUpdate: Todo) {
-	return { ...todo, ...fieldsToUpdate };
+ return { ...todo, ...fieldsToUpdate };
 }
 
 const updateStatus = updateTodo(original, {
-	completed: true,
+ completed: true,
 });
 ```
 
@@ -49,9 +49,9 @@ If you write `fieldToUpdate: Todo` in the function above and try to update the s
 
 ```ts
 interface Todo {
-	title?: string;
-	description?: string;
-	completed?: boolean;
+ title?: string;
+ description?: string;
+ completed?: boolean;
 }
 ```
 
@@ -61,11 +61,11 @@ This is where `Partial` comes in!
 
 ```ts
 function updateTodo(todo: Todo, fieldsToUpdate: Partial<Todo>) {
-	return { ...todo, ...fieldsToUpdate };
+ return { ...todo, ...fieldsToUpdate };
 }
 
 const updateStatus = updateTodo(original, {
-	completed: true,
+ completed: true,
 });
 
 console.log({ original, updateStatus });
@@ -77,23 +77,23 @@ You write `fieldsToUpdate: Partial<Todo>` and now you can update one of the prop
 
 ```ts
 interface Todo {
-	title: string;
-	description: string;
-	completed: boolean;
+ title: string;
+ description: string;
+ completed: boolean;
 }
 
 function updateTodo(todo: Todo, fieldsToUpdate: Partial<Todo>) {
-	return { ...todo, ...fieldsToUpdate };
+ return { ...todo, ...fieldsToUpdate };
 }
 
 const original = {
-	title: "Organize desk",
-	description: "Clear clutter",
-	completed: false,
+ title: "Organize desk",
+ description: "Clear clutter",
+ completed: false,
 };
 
 const updateStatus = updateTodo(original, {
-	completed: true,
+ completed: true,
 });
 
 console.log({ original, updateStatus });
@@ -103,9 +103,9 @@ console.log({ original, updateStatus });
 
 ```ts
 type Todo = {
-	title: string;
-	description: string;
-	completed: boolean;
+ title: string;
+ description: string;
+ completed: boolean;
 };
 
 type HoverPartial = Partial<Todo>;
@@ -119,6 +119,6 @@ The `Partial` utility provides flexibility and convenience in TypeScript by allo
 
 - [TS Handbook - Partial](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

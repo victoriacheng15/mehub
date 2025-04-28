@@ -11,9 +11,9 @@ It is a built-in function array method in JavaScript that allows you to transfor
 
 basic syntax:
 
-```
+```js
 array.reduce((accumulator, currentValue) => {
-	// do something
+ // do something
 }, initialValue);
 ```
 
@@ -35,19 +35,19 @@ const arr = [1, 2, 3, 4, 5, 6];
 let total = 0;
 
 for (let i = 0; i < arr.length; i++) {
-	console.log(`index: ${i}, currTotal: ${total}, num: ${arr[i]}`);
-	total += arr[i];
+ console.log(`index: ${i}, currTotal: ${total}, num: ${arr[i]}`);
+ total += arr[i];
 }
 
 // without console.log
 for (let i = 0; i < arr.length; i++) {
-	total += arr[i];
+ total += arr[i];
 }
 
 console.log(`total value: ${total}`);
 ```
 
-```
+```js
 index: 0, currTotal: 0, num: 1
 index: 1, currTotal: 1, num: 2
 index: 2, currTotal: 3, num: 3
@@ -65,13 +65,13 @@ const arr = [1, 2, 3, 4, 5, 6];
 const initialValue = 0;
 
 const res = arr.reduce((currTotal, num, index) => {
-	console.log(`index: ${index}, currTotal: ${currTotal}, num: ${num}`);
-	return currTotal + num;
+ console.log(`index: ${index}, currTotal: ${currTotal}, num: ${num}`);
+ return currTotal + num;
 }, initialValue);
 
 // without console.log
 const res = arr.reduce((currTotal, num) => {
-	return currTotal + num;
+ return currTotal + num;
 }, initialValue);
 
 // utilize arrow function
@@ -83,7 +83,7 @@ const res = arr.reduce((currTotal, num) => currTotal + num, 0);
 console.log(`total value: ${res}`);
 ```
 
-```
+```js
 index: 0, currTotal: 0, num: 1
 index: 1, currTotal: 1, num: 2
 index: 2, currTotal: 3, num: 3
@@ -113,12 +113,12 @@ Let's see how to reverse a string or words. Or you could use `reverse()` method 
 const str = "hello world";
 
 const reversed = str.split("").reduce((revStr, currChar) => {
-	return currChar + revStr;
+ return currChar + revStr;
 }, "");
 
 // Use spread operator
 const reversed = [...str].reduce((revStr, currChar) => {
-	return currChar + revStr;
+ return currChar + revStr;
 }, "");
 
 console.log(reversed);
@@ -131,13 +131,13 @@ Or you could use `flat()` function instead. You can read more on [MDN Docs](http
 
 ```js
 const arrays = [
-	[1, 2],
-	[3, 4],
-	[5, 6],
+ [1, 2],
+ [3, 4],
+ [5, 6],
 ];
 
 const flattened = arrays.reduce((res, currArr) => {
-	return res.concat(currArr);
+ return res.concat(currArr);
 }, []);
 console.log(flattened);
 // Output: [1, 2, 3, 4, 5, 6]
@@ -147,18 +147,18 @@ Keep this in mind, the method above only can flat these sub-arrays, but not thes
 
 ```js
 const arrays = [
-	[1, 2],
-	[3, [4]],
-	[5, [6]],
+ [1, 2],
+ [3, [4]],
+ [5, [6]],
 ];
 
 const flatten = (arr) => {
-	return arr.reduce((res, curr) => {
-		if (Array.isArray(curr)) {
-			return res.concat(flatten(curr));
-		}
-		return res.concat(curr);
-	}, []);
+ return arr.reduce((res, curr) => {
+  if (Array.isArray(curr)) {
+   return res.concat(flatten(curr));
+  }
+  return res.concat(curr);
+ }, []);
 };
 
 const flattened = flatten(arrays);
@@ -170,18 +170,18 @@ Let's group array elements by a property.
 
 ```js
 const people = [
-	{ name: "Alice", age: 25 },
-	{ name: "Bob", age: 23 },
-	{ name: "Charlie", age: 25 },
-	{ name: "Elijah", age: 32 },
-	{ name: "Ellen", age: 35 },
+ { name: "Alice", age: 25 },
+ { name: "Bob", age: 23 },
+ { name: "Charlie", age: 25 },
+ { name: "Elijah", age: 32 },
+ { name: "Ellen", age: 35 },
 ];
 
 const groupedByAge = people.reduce((acc, object) => {
-	const age = object.age;
-	acc[age] = acc[age] || [];
-	acc[age].push(object);
-	return acc;
+ const age = object.age;
+ acc[age] = acc[age] || [];
+ acc[age].push(object);
+ return acc;
 }, {});
 
 console.log(groupedByAge);
@@ -200,20 +200,20 @@ Let's count the frequency of array elements.
 const letters = ["a", "b", "c", "a", "b", "a"];
 
 const frequency = letters.reduce((res, currLetter) => {
-	// you could add console.log(res) here to see how it runs each step
-	res[currLetter] = res[currLetter] ? res[currLetter] + 1 : 1;
-	return res;
+ // you could add console.log(res) here to see how it runs each step
+ res[currLetter] = res[currLetter] ? res[currLetter] + 1 : 1;
+ return res;
 }, {});
 
 // without ternary operator
 const frequency = letters.reduce((res, currLetter) => {
-	if (res[currLetter]) {
-		res[currLetter] += 1;
-	} else {
-		res[currLetter] = 1;
-	}
+ if (res[currLetter]) {
+  res[currLetter] += 1;
+ } else {
+  res[currLetter] = 1;
+ }
 
-	return res;
+ return res;
 }, {});
 
 console.log(frequency);
@@ -227,7 +227,7 @@ The reduce method is a higher-order function in JavaScript that allows you to re
 
 ```js
 array.reduce((accumulator, currentValue, currentIndex, array) => {
-	// do something
+ // do something
 }, initialValue);
 ```
 
@@ -240,6 +240,6 @@ Overall, `reduce()` is a useful method that can save you time and effort, but it
 - [reduce() - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 - [flat() - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!
