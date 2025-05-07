@@ -52,12 +52,11 @@ This brings me to three big-picture observations:
 *Just my two cents* - I could be totally wrong about where this goes. Tech moves fast, and who knows what next year's tools will look like. But one thing feels certain: developers who can blend old-school skills with smart AI collaboration will ride this wave best.
 
 Here are some articles I found interesting and informative:
-
-[IBM - What is vibe coding?](https://www.ibm.com/think/topics/vibe-coding)
-[Vibe Coding is not an excuse for low-quality work](https://addyo.substack.com/p/vibe-coding-is-not-an-excuse-for)
-[Vibe coding is changing the way investors think about founders](https://www.businessinsider.com/vibe-coding-vc-technical-founders-skills-investors-2025-4)
-[I started ‘vibe coding’ my own apps with AI and I’m loving it](https://www.pcworld.com/article/2660539/i-started-vibe-coding-with-ai-and-im-loving-it.html)
-[The Problem with “Vibe Coding”](https://dylanbeattie.net/2025/04/11/the-problem-with-vibe-coding.html)
+- [IBM - What is vibe coding?](https://www.ibm.com/think/topics/vibe-coding)
+- [Vibe Coding is not an excuse for low-quality work](https://addyo.substack.com/p/vibe-coding-is-not-an-excuse-for)
+- [Vibe coding is changing the way investors think about founders](https://www.businessinsider.com/vibe-coding-vc-technical-founders-skills-investors-2025-4)
+- [I started ‘vibe coding’ my own apps with AI and I’m loving it](https://www.pcworld.com/article/2660539/i-started-vibe-coding-with-ai-and-im-loving-it.html)
+- [The Problem with “Vibe Coding”](https://dylanbeattie.net/2025/04/11/the-problem-with-vibe-coding.html)
 
 ## Books I’ve Read
 
