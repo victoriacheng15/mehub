@@ -108,7 +108,7 @@ I decided to have a bit of fun and experiment with the -C option to see how much
 - test.csv (~1GB, uncompressed)
 - test.zip (~0.5GB, already compressed)
 
-**Transfer Time Comparison**
+Transfer Time Comparison
 | File Name | Compression (`-C`) | Transfer Time (seconds) |
 | --------- | ------------------ | ----------------------- |
 | test.csv  | No                 |                    1:10 |
@@ -116,7 +116,7 @@ I decided to have a bit of fun and experiment with the -C option to see how much
 | test.zip  | No                 |                    1:11 |
 | test.zip  | Yes                |                    1:46 |
 
-**Summary**
+Summary
 From my test, enabling -C didn’t always make transfers faster:
 - Transferring the uncompressed CSV without -C was the fastest.
 - Using -C with the CSV actually slowed it down a lot, likely because of the extra work to compress a large file on the fly.
