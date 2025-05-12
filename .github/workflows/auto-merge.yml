@@ -16,5 +16,5 @@ jobs:
       - name: Enable auto-merge for Dependabot PR
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.DEPENDABOT_PAT }}
           pull-request-number: ${{ github.event.pull_request.number }}
