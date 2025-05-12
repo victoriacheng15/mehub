@@ -20,7 +20,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.5",
     "astro": "^5.7.10",
-    "tailwindcss": "^4.1.5"
+    "tailwindcss": "^4.1.6"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
