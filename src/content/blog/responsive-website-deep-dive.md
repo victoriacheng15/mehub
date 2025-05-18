@@ -13,7 +13,7 @@ But why?
 
 - **_User experience:_** users access your site from a range of mobile devices, we can't know what screen size the user has.
 
-- **_Better SEO rank:_** Google will give a higher score on your responsive site. See [here](https://www.synapseinteractive.com/does-google-give-seo-preference-to-responsive-mobile-websites/231)
+- **_Better SEO rank:_** Google will give a higher score on your responsive site. See [this blog](https://www.jezweb.com.au/why-does-google-prefer-mobile-optimised-websites/) for more details.
 
 ## How do make your site responsive?
 

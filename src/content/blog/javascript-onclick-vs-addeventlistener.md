@@ -7,8 +7,6 @@ tags: [javascript]
 
 ## onclick
 
-**Archived blogs from [here](https://victoriacheng15.hashnode.dev/onclick-vs-addeventlistener-in-javascript)**
-
 The onclick property is an event handler for processing click events on the specific element.
 
 The syntax looks this

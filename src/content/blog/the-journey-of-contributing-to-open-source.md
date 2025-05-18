@@ -7,8 +7,6 @@ tags: [misc]
 
 ## What is open source??
 
-**Archived blogs from [here](https://victoriacheng15.hashnode.dev/the-journey-of-contributing-to-open-source)**
-
 This has many definitions, but to me, it is a codebase that is open for the public to view or modify for improvement.
 
 > The term open source refers to something people can modify and share because its design is publicly accessible. [source](https://opensource.com/resources/what-open-source)
@@ -58,7 +56,7 @@ I started with Zero to Mastery for the pull request, but I didn't continue becau
 
 Opening pull request is not an only way to do this. You see typo on docs? Or you feel it can be improved? Go to the repo, and let the maintainers know by raise an issue to explain 3Ws (why, what, and how). Always be more specific on the issue and included as much as details you can.
 
-One of my favorite contributions, I raised an issue on powerToy's FancyZone to let the maintainers know that their doc is not clear. You can check it out [here](https://github.com/MicrosoftDocs/windows-uwp/issues/3822). The change had been made!
+One of my favorite contributions, I raised an issue on powerToy's FancyZone to let the maintainers know that their doc is not clear. You can check it out [the Microsoft Docs](https://github.com/MicrosoftDocs/windows-uwp/issues/3822). The change had been made!
 
 I keep my contribution log in [this collection on Polywork](https://www.polywork.com/victoriacheng15/collections/1072456).
 

@@ -65,7 +65,7 @@ app.listen(PORT, () => {
 });
 ```
 
-You could run a simple server with the code above. If you feel adventurous, I have written a simple timestamp app that converts today's date to `Unix` and `UTC` format with MVC. Feel free to copy the code from [here](https://github.com/victoriacheng15/ts-node-demo) or clone the repo.
+You could run a simple server with the code above. If you feel adventurous, I have written a simple timestamp app that converts today's date to `Unix` and `UTC` format with MVC. Feel free to copy the code from [this GitHub repo](https://github.com/victoriacheng15/ts-node-demo) or clone the repo.
 
 ## How to run locally?
 

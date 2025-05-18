@@ -7,8 +7,6 @@ tags: [misc]
 
 ## Who Am I?
 
-**Archived blogs from [here](https://victoriacheng15.hashnode.dev/my-journey-into-the-tech)**
-
 I have written a couple of blogs, without an intro myself blog. Suppose, it is never too late, as I always say!
 
 Hi, I am Victoria. I am also a person of disability, to be specific, I am profound deaf. As you may wonder, what does "profound deaf" mean? It means that I lost 100% of my hearing in both ears. I cannot hear anything beside the airplane engine. I have hearing aids that help me to hear most sounds around me. Can I lip-read? Yes, I can! However, it depends on whom I talk to. If the person is someone that I often talk daily, I have no problem to read their lips for conversation. Now, it is even more difficult to communicate with people who wear a mask during a pandemic. 😔
@@ -35,7 +33,7 @@ And now I look back, I realized why I didn't learn Python well because I was onl
 
 I found [w3school](https://www.w3schools.com/). I started learning HTML, CSS, and JavaScript from there. It somewhat helped me and I also repeated the same mistake I did with Python. This had to change. So, I went on a search spree again, but with YouTube this time, I found a couple of YouTubers who teach web development related. I decided to following them along and built a couple website. From there, I found [Frontend Mentor](https://www.frontendmentor.io/home), [Zero to Mastery](https://zerotomastery.io/), and communities. With these resources I have, I kept practising my frontend skills through Frontend Mentor.
 
-You can find past challenges I did with Frontend Mentor [here](https://github.com/victoriacheng15/frontend-mentor-challenges).
+You can find past challenges I did with [Frontend Mentor Repo](https://github.com/victoriacheng15/frontend-mentor-challenges).
 
 ### 100Devs
 

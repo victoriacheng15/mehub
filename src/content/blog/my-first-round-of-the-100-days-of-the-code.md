@@ -7,8 +7,6 @@ tags: [misc]
 
 ## The end of 100 days of code - Round 1
 
-**Archived blogs from [here](https://victoriacheng15.hashnode.dev/my-first-round-of-the-100-days-of-code)**
-
 My 100th day was ended on May 31st, 2022! The goal of this was learning JavaScript and maybe HTML/CSS as well, but with JavaScript as the main focus. As the title suggested, this was my first round. I was not sure If I can make it to the end. At least, I was trying to stay consistency and kept this up daily as much as I can. Later, I realized that this doesn't have to be consecutive 100 days. 😂
 
 Why did I start this? I saw a lot of people are doing this on Twitter. I figured out why not. Furthermore, I decided to start this for learning and keep myself accountability purpose.

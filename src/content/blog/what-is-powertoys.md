@@ -7,8 +7,6 @@ tags: [misc]
 
 ## What is PowerToys?
 
-**Archived blogs from [here](https://victoriacheng15.hashnode.dev/what-is-powertoys)**
-
 Some powerful toys?!? All right, it is a free tool from Microsoft and allows window users to improve their productivity while working on websites or apps. It is also a useful tool that I found.
 
 ## Always on Top

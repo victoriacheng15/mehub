@@ -7,8 +7,6 @@ tags: [css]
 
 ## What is Tailwind CSS?
 
-**Archived blogs from [here](https://victoriacheng15.hashnode.dev/tailwind-css-beginner-edition)**
-
 It is an awesome CSS framework that allows you styling your website or apps quickly without switching HTML (or JSX for react) and CSS files back and forth. You write Tailwind CSS like how you would write "inline" style for CSS, but you write the class names like below.
 
 ```html

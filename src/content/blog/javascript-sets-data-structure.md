@@ -7,8 +7,6 @@ tags: [javascript]
 
 ## 🤔 Set in JavaScript 🤔
 
-**Archived blogs from [here](https://victoriacheng15.hashnode.dev/set-in-javascript)**
-
 It is an object that allows you to store unique values of any type.
 
 Example:
