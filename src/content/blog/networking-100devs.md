@@ -29,7 +29,7 @@ For the conference, some of them are paid but there are ways to attend them for 
 - Be a volunteer! It is possible that you can't listen to the talk, BUT you can meet other volunteers who may share the same or similar interests as you!
 - Be honest! Tell them that you can't afford the conference and they may give you a free ticket.
 
-You also can find communities on discord or slack. [Here](https://github.com/thisdot/tech-community-slacks) is a repo that contains tech communities on slack. I am not sure if there is a list for discord, but if you know there is one, please leave a comment below.
+You also can find [communities](https://github.com/thisdot/tech-community-slacks) on discord or slack. is a repo that contains tech communities on slack. I am not sure if there is a list for discord, but if you know there is one, please leave a comment below.
 
 > Pro tip - always send a note to the people that you want to connect with on LinkedIn!
 

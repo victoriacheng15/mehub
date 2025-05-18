@@ -7,8 +7,6 @@ tags: [javascript]
 
 ## 😬 What is Regular Expression? 😬
 
-**Archived blogs from [here](https://victoriacheng15.hashnode.dev/regular-expressions-letter-edition)**
-
 What are regular expressions? They are patterns that are used to match characters in provided strings.
 
 When I first looked into this, it looks so scary! Since I do codewars daily, I encountered a lot of solutions that are solved with this. I almost pulled my hair out! However, each problem tends to focus on one type of regular expression.

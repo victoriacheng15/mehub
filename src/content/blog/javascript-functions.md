@@ -7,8 +7,6 @@ tags: [javascript]
 
 ## What is a function?
 
-**Archived blogs from [here](https://victoriacheng15.hashnode.dev/javascript-functions)**
-
 Functions are _building blocks_ of the program. They allow the code to be called many times without repetition!
 
 ```js
