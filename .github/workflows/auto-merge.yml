@@ -1,21 +1,26 @@
-# .github/workflows/auto-merge.yml
-name: Auto Merge Dependabot PRs
+name: Dependabot auto-merge
 
 on:
   pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
+
+permissions:
+  contents: read
+  pull-requests: write
+
+# https://docs.github.com/en/code-security/dependabot/working-with-dependabot/automating-dependabot-with-github-actions#enabling-automerge-on-a-pull-request
 
 jobs:
   automerge:
     runs-on: ubuntu-latest
     if: github.actor == 'dependabot[bot]'
     steps:
-      - name: Enable auto-merge for Dependabot PR
-        env:
-          GITHUB_TOKEN: ${{ secrets.DEPENDABOT_PAT }}
-        uses: peter-evans/enable-pull-request-automerge@v3
+      - name: Fetch Dependabot metadata
+        id: dependabot-metadata
+        uses: dependabot/fetch-metadata@v2
         with:
-          pull-request-number: ${{ github.event.pull_request.number }}
+          github-token: ${{ secrets.DEPENDABOT_PAT }}
+      - name: Enable auto-merge for Dependabot PRs
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.DEPENDABOT_PAT }}
