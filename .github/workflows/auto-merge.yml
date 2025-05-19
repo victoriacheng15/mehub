@@ -14,7 +14,8 @@ jobs:
     if: github.actor == 'dependabot[bot]'
     steps:
       - name: Enable auto-merge for Dependabot PR
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEPENDABOT_PAT }}
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
-          token: ${{ secrets.DEPENDABOT_PAT }}
           pull-request-number: ${{ github.event.pull_request.number }}
