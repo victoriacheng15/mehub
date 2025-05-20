@@ -3,7 +3,6 @@ title: "Learning SQL: Constraints – Ensuring Data Integrity"
 description: "Learn essential SQL constraints - NOT NULL, UNIQUE, CHECK, and DEFAULT - to enforce data integrity and maintain database accuracy with practical examples."
 date: 2025-05-20
 tags: [sql]
-draft: true
 ---
 
 ## What Are SQL Constraints?
