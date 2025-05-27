@@ -3,7 +3,6 @@ title: "May Reflection 2025"
 description: "Almost done with my first month at Shopify internship—learning to work with large codebases, adapt to AI tools, and improve problem-solving skills."
 date: 2025-05-27
 tags: [reflection]
-draft: true
 ---
 
 ## Monthly Reflection
