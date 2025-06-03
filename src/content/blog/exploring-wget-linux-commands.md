@@ -3,7 +3,6 @@ title: "Exploring wget - Linux Commands"
 description: "Linux wget command guide: download files, resume transfers, limit speed & automate tasks with practical examples for efficient downloading."
 date: 2025-06-03
 tags: [linux]
-draft: true
 ---
 
 ## What is the `wget` Command in Linux?
