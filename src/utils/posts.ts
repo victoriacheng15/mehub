@@ -54,9 +54,9 @@ export function filterPosts(posts: Blog[], filter: PostFilter = {}): Blog[] {
 }
 
 export function getPostsByTag(posts: Blog[], tag: string): Blog[] {
-    return filterPublishedPosts(posts).filter(
-        (post) => post.data.tags?.includes(tag),
-    );
+	return filterPublishedPosts(posts).filter((post) =>
+		post.data.tags?.includes(tag),
+	);
 }
 
 export function getAllTags(posts: Blog[]): string[] {
