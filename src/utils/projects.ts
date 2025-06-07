@@ -1,5 +1,5 @@
-const MAIN_URL = "https://github.com/victoriacheng15"
-const README_URL = "#readme"
+const MAIN_URL = "https://github.com/victoriacheng15";
+const README_URL = "#readme";
 
 export const PROJECTS = [
 	{
