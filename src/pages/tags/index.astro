@@ -1,8 +1,8 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout";
-import { getAllPost, getAllTags, getPostsByTag } from "@/utils";
+import { getAllPosts, getAllTags, getPostsByTag } from "@/utils";
 
-const posts = await getAllPost();
+const posts = await getAllPosts();
 const tags = getAllTags(posts);
 const tagCounts = tags
 	.map((tag) => ({
@@ -13,18 +13,20 @@ const tagCounts = tags
 ---
 
 <BaseLayout title="Tags" description="Explore a collection of posts categorized by topics.">
-  <h1 class="text-4xl font-bold my-8 text-secondary-300">Tags</h1>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    {tagCounts.map(({ name, count }) => (
-      <a
-        href={`/tags/${name}`}
-        class="rounded-md shadow-md shadow-orange-900 dark:bg-primary-900 border border-primary-100 dark:border-primary-700 p-4 hover:shadow-lg transition-transform hover:-translate-y-2 duration-300"
-      >
-        <div class="flex items-center justify-between">
-          <span class="text-lg font-medium">#{name}</span>
-          <span class="text-sm">{count} posts</span>
-        </div>
-      </a>
-    ))}
-  </div>
+	<h1 class="text-secondary-300 my-8 text-4xl font-bold">Tags</h1>
+	<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+		{
+			tagCounts.map(({ name, count }) => (
+				<a
+					href={`/tags/${name}`}
+					class="dark:bg-primary-900 border-primary-100 dark:border-primary-700 rounded-md border p-4 shadow-md shadow-orange-900 transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg"
+				>
+					<div class="flex items-center justify-between">
+						<span class="text-lg font-medium">#{name}</span>
+						<span class="text-sm">{count} posts</span>
+					</div>
+				</a>
+			))
+		}
+	</div>
 </BaseLayout>

@@ -1,6 +1,6 @@
 import { formatDate, currentYear } from "./date";
 import {
-	getAllPost,
+	getAllPosts,
 	filterPublishedPosts,
 	sortPostsByDate,
 	getPostsByTag,
@@ -16,7 +16,7 @@ import { SOCIALS, formatSocialName } from "./socialLinks";
 export {
 	formatDate,
 	currentYear,
-	getAllPost,
+	getAllPosts,
 	filterPublishedPosts,
 	sortPostsByDate,
 	getPostsByTag,

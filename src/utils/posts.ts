@@ -10,7 +10,7 @@ export interface PostFilter {
 
 type Blog = CollectionEntry<"blog">;
 
-export async function getAllPost() {
+export async function getAllPosts() {
 	return await getCollection("blog");
 }
 
@@ -54,11 +54,8 @@ export function filterPosts(posts: Blog[], filter: PostFilter = {}): Blog[] {
 }
 
 export function getPostsByTag(posts: Blog[], tag: string): Blog[] {
-	return posts.filter(
-		(post) =>
-			post.data.tags?.includes(tag) &&
-			!post.data.draft &&
-			isPublished(post.data.date),
+	return filterPublishedPosts(posts).filter((post) =>
+		post.data.tags?.includes(tag),
 	);
 }
 
@@ -70,12 +67,12 @@ export function getAllTags(posts: Blog[]): string[] {
 }
 
 export async function getAllSortedPosts() {
-	const posts = await getAllPost();
+	const posts = await getAllPosts();
 	const publishedPosts = filterPublishedPosts(posts);
 	return sortPostsByDate(publishedPosts);
 }
 
 export async function getAllTheTags() {
-	const posts = await getAllPost();
+	const posts = await getAllPosts();
 	return getAllTags(posts);
 }

@@ -1,11 +1,11 @@
 import rss from "@astrojs/rss";
 import { siteConfig } from "@/config";
-import { getAllPost, filterPublishedPosts } from "@/utils";
+import { getAllPosts, filterPublishedPosts } from "@/utils";
 
 export async function GET(context) {
 	const collection = "blog";
 	// id,body,collection,data,render
-	const blog = await getAllPost();
+	const blog = await getAllPosts();
 	const publishedBlog = filterPublishedPosts(blog);
 	return rss({
 		// `<title>` field in output xml
