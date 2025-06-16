@@ -1,0 +1,19 @@
+name: Sync Post
+on:
+  repository_dispatch:
+    types: [sync-post]
+  workflow_dispatch:
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Sync post
+        run: |
+          echo "Syncing post..."
+          echo "✅ Success! Received trigger from private repo."
+          echo "Event type: ${{ github.event.action }}"
+        
