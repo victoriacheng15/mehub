@@ -1,7 +1,7 @@
-name: Sync Post
+name: Sync Blog Post
 on:
   repository_dispatch:
-    types: [sync-post]
+    types: [sync-blog-post]
   workflow_dispatch:
 
 jobs:
