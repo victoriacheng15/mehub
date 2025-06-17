@@ -18,7 +18,9 @@ jobs:
       
       - name: Set Slug from title
         run: |
-          SLUG=$(echo "$TITLE" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+          echo "Original TITLE: $TITLE"
+          SLUG=$(echo "$TITLE" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g' | sed 's/--*/-/g' | sed 's/^-//;s/-$//')
+          echo "Generated SLUG: $SLUG"
           echo "SLUG=$SLUG" >> $GITHUB_ENV
 
       - name: Config git
@@ -41,18 +43,18 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             "${{ vars.API_LINK }}" | \
             jq '.[0].body' | \
-            sed -e 's/^"//' -e 's/"$//' -e 's/\\n/\n/g' -e 's/\\"/"/g' \
+            sed -e 's/^"//' -e 's/"$//' -e 's/\\n/\n/g' -e 's/\\"/"/g' | \
             > src/content/blog/$SLUG.md
 
             # create a new branch for the blog post
             git switch -c "blog/$SLUG"
             git add src/content/blog/$SLUG.md
-            git commit -m "chore: add blog - $TITLE (#$ID)"
+            git commit -m "chore: add blog - $TITLE"
             git push origin "blog/$SLUG"
 
             # create a pull request for the new blog post
             gh pr create \
-              --title "add blog - $TITLE (#$ID)" \
+              --title "add blog - $TITLE" \
               --body "This PR adds the `$TITLE` blog post" \
               --base main \
               --head "blog/$SLUG" \
