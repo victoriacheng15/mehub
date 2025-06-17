@@ -7,15 +7,55 @@ on:
 jobs:
   post:
     runs-on: ubuntu-latest
+    env:
+      ID: ${{ github.event.client_payload.issue_id }}
+      TITLE: ${{ github.event.client_payload.issue_title }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set Slug from title
+        run: |
+          SLUG=$(echo "$TITLE" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+          echo "SLUG=$SLUG" >> $GITHUB_ENV
+
+      - name: Config git
+        run: |
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --global user.name "${{ github.actor }}"
 
       - name: Sync post
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           echo "Syncing post..."
-          echo "Issue ID: ${{ github.event.client_payload.issue_id }}"
-          echo "Title: ${{ github.event.client_payload.issue_title }}"
-          echo
+          echo "Issue ID: $ID"
+          echo "Title: $TITLE"
+          echo "Slug: $SLUG"
+
+          # fetch the blog post content from the API
+          curl -s \
+            -H "Authorization: token ${{ secrets.SYNC_BLOG_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "${{ vars.API_LINK }}" | \
+            jq '.[0].body' | \
+            sed -e 's/^"//' -e 's/"$//' -e 's/\\n/\n/g' -e 's/\\"/"/g' \
+            > src/content/blog/$SLUG.md
+
+            # create a new branch for the blog post
+            git switch -c "blog/$SLUG"
+            git add src/content/blog/$SLUG.md
+            git commit -m "chore: add blog - $TITLE (#$ID)"
+            git push origin "blog/$SLUG"
+
+            # create a pull request for the new blog post
+            gh pr create \
+              --title "add blog - $TITLE (#$ID)" \
+              --body "This PR adds the `$TITLE` blog post" \
+              --base main \
+              --head "blog/$SLUG" \
+              --label "blog"
 
         
