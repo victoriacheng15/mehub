@@ -14,6 +14,8 @@ jobs:
       - name: Sync post
         run: |
           echo "Syncing post..."
-          echo "✅ Success! Received trigger from private repo."
-          echo "Event type: ${{ github.event.action }}"
+          echo "Issue ID: ${{ github.event.client_payload.issue_id }}"
+          echo "Title: ${{ github.event.client_payload.issue_title }}"
+          echo
+
         
