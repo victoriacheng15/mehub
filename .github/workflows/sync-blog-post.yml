@@ -43,8 +43,7 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             "${{ vars.API_LINK }}" | \
             jq '.[0].body' | \
-            sed -e 's/^"//' -e 's/"$//' -e 's/\\n/\n/g' -e 's/\\"/"/g' | \
-            > src/content/blog/$SLUG.md
+            sed -e 's/^"//' -e 's/"$//' -e 's/\\n/\n/g' -e 's/\\"/"/g' > src/content/blog/$SLUG.md
 
             # create a new branch for the blog post
             git switch -c "blog/$SLUG"
@@ -55,7 +54,7 @@ jobs:
             # create a pull request for the new blog post
             gh pr create \
               --title "add blog - $TITLE" \
-              --body "This PR adds the `$TITLE` blog post" \
+              --body "This PR adds the $TITLE blog post" \
               --base main \
               --head "blog/$SLUG" \
               --label "blog"
