@@ -49,14 +49,14 @@ jobs:
             git switch -c "blog/$SLUG"
             git add src/content/blog/$SLUG.md
             git commit -m "chore: add blog - $TITLE"
-            git push origin "blog/$SLUG"
+            git push --force-with-lease origin "blog/$SLUG"
 
             # create a pull request for the new blog post
             gh pr create \
-              --title "add blog - $TITLE" \
-              --body "This PR adds the $TITLE blog post" \
               --base main \
               --head "blog/$SLUG" \
+              --title "add blog - $TITLE" \
+              --body "This PR adds the \"$TITLE\" blog post" \
               --label "blog"
 
         
