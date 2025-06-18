@@ -43,7 +43,11 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             "${{ vars.API_LINK }}" | \
             jq '.[0].body' | \
-            sed -e 's/^"//' -e 's/"$//' -e 's/\\n/\n/g' -e 's/\\"/"/g' > src/content/blog/$SLUG.md
+            sed -e 's/^"//' | \
+            sed -e 's/"$//' | \
+            sed -e 's/\\n/\n/g' | \
+            sed -e 's/\\"/"/g' | \
+            sed -e 's/^date: "\(.*\)"/date: \1/' > src/content/blog/$SLUG.md
 
             # create a new branch for the blog post
             git switch -c "blog/$SLUG"
@@ -52,11 +56,12 @@ jobs:
             git push --force-with-lease origin "blog/$SLUG"
 
             # create a pull request for the new blog post
+            pr_body="This PR adds the $TITLE blog post"
             gh pr create \
               --base main \
               --head "blog/$SLUG" \
               --title "add blog - $TITLE" \
-              --body "This PR adds the \"$TITLE\" blog post" \
+              --body "$pr_body" \
               --label "blog"
 
         
