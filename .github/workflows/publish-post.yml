@@ -8,69 +8,14 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    env:
+      AUTHOR_EMAIL: "${{ github.actor }}@users.noreply.github.com"
+      AUTHOR_NAME: "${{ github.actor }}"
+      GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22.x
-
-      - name: Generate Unique Branch Name
-        id: branch-name
-        run: |
-          echo "branch_name=publish-post-$(date +%s)" >> "$GITHUB_OUTPUT"
-
-      - name: Create and switch to publish-post branch
-        run: git switch -c "${{ steps.branch-name.outputs.branch_name }}"
-
       - name: Run Publish Post Script
-        run: npm run publish
-
-      - name: Check for changes
-        id: changes
-        run: |
-          if git diff --exit-code; then
-            echo "changes_detected=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "changes_detected=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Exist if no changes
-        if: steps.changes.outputs.changes_detected == 'false'
-        run: exit 0
-
-      - name: Git Config
-        if: steps.changes.outputs.changes_detected == 'true'
-        run: |
-          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
-          git config --local user.name "${{ github.actor }}"
-
-      - name: Get Post Title
-        if: steps.changes.outputs.changes_detected == 'true'
-        id: post-title
-        run: |
-          # Get the first modified file
-          MODIFIED_FILE=$(git diff --name-only src/content/ | head -n 1)
-          # Extract the title from the front matter of the file
-          POST_TITLE=$(grep '^title:' "$MODIFIED_FILE" | sed 's/title: "\(.*\)"/\1/')
-          echo "post_title=$POST_TITLE" >> "$GITHUB_OUTPUT"
-
-      - name: Commit changes
-        if: steps.changes.outputs.changes_detected == 'true'
-        run: |
-          git add src/content/
-          git commit -m "chore: publish post - ${{ steps.post-title.outputs.post_title }}! 🎉"
-          git push origin HEAD:refs/heads/"${{ steps.branch-name.outputs.branch_name }}"
-
-      - name: Create PR
-        if: steps.changes.outputs.changes_detected == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh pr create \
-            --base main \
-            --head "${{ steps.branch-name.outputs.branch_name }}" \
-            --title "Publish Post: ${{ steps.post-title.outputs.post_title }}" \
-            --body "This pull request publishes a post - ${{ steps.post-title.outputs.post_title }} to the blog. 🎉"
+        run: ./scripts/publish-post.sh
