@@ -3,7 +3,7 @@
 YELLOW='\033[1;33m'
 NC='\033[0m' 
 
-debug_mode=true
+debug_mode=false
 
 debug_log() {
   if $debug_mode; then
@@ -74,7 +74,7 @@ debug_log "Post file: $post_file"
 debug_log "Post title: $post_title"
 
 run_if_not_debug "git commit -m \"chore: publish post $post_title ! 🎉\""
-run_if_not_debug "git push origin HEAD:refs/heads/$branch_name"
+run_if_not_debug "git push --force-with-lease origin $branch_name"
 
 run_if_not_debug "gh pr create \
   --base main \

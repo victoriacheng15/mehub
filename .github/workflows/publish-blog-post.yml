@@ -11,11 +11,11 @@ jobs:
     env:
       AUTHOR_EMAIL: "${{ github.actor }}@users.noreply.github.com"
       AUTHOR_NAME: "${{ github.actor }}"
-      GH_TOKEN: ${{ github.token }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Run Publish Post Script
-        run: ./scripts/publish-post.sh
+        run: ./scripts/publish_blog_post.sh
