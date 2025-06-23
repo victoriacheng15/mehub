@@ -20,7 +20,7 @@
     "@astrojs/rss": "^4.0.12",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.10",
-    "astro": "^5.9.3",
+    "astro": "^5.10.0",
     "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
