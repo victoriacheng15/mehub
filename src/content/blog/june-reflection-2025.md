@@ -3,7 +3,6 @@ title: "June Reflection 2025"
 description: "Impostor syndrome showed up more during my internship. I'm learning to face it one step at a time — figuring things out as I go."
 date: 2025-06-24
 tags: ["reflection"]
-draft: true
 ---
 
 ## Monthly Reflection
