@@ -3,7 +3,6 @@ title: "Python Orderability Dunder Methods Revealed"
 description: "Master Python comparison operators (<, >, <=, >=) with dunder methods. Learn how to make objects sortable using a CoffeeShop example with clear code."
 date: 2025-07-01
 tags: ["python"]
-draft: true
 ---
 
 ## Mastering Orderability Dunders
