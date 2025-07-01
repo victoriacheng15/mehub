@@ -96,22 +96,19 @@ if __name__ == "__main__":
     suburban = CoffeeShop("Suburban Sips", 200, 1500.75)
     mall = CoffeeShop("Mall Mugs", 200, 1400.00)
     
-    print("\
-=== Direct Comparisons ===")
+    print("\n=== Direct Comparisons ===")
     print("Downtown < Suburban:", downtown < suburban)  # Uses __lt__
     print("Mall <= Suburban:", mall <= suburban)       # Uses __le__
     print("Suburban > Mall:", suburban > mall)         # Uses __gt__
     print("Mall >= Downtown:", mall >= downtown)       # Uses __ge__
     
-    print("\
-=== Sorting Magic ===")
+    print("\n=== Sorting Magic ===")
     shops = [downtown, suburban, mall]
     print("Default Sort (uses __lt__):")
     for shop in sorted(shops):
         print("-", shop)
     
-    print("\
-Reverse Sort (still uses __lt__):")
+    print("\nReverse Sort (still uses __lt__):")
     for shop in sorted(shops, reverse=True):
         print("-", shop)
 ```
