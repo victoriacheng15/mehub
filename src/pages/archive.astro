@@ -1,34 +1,20 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout";
 import PostDate from "@/components/PostDate";
-import { currentYear, getAllSortedPosts } from "@/utils";
-
-const sortedPosts = await getAllSortedPosts();
-
-const postsByYear = sortedPosts.reduce(
-	(acc, post) => {
-		const year = post.data.date.getFullYear();
-		if (!acc[year]) {
-			acc[year] = [];
-		}
-		acc[year].push(post);
-		return acc;
-	},
-	{} as Record<number, typeof sortedPosts>,
-);
-
-const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
+import { currentYear, archivedPostsByYear, archivedYears } from "@/utils";
 ---
 
 <BaseLayout title="Archive" description="A collection of my archived posts.">
 	<h1 class="text-secondary-300 mb-8 text-4xl font-bold">Archive</h1>
 	{
-		years.map((year) =>
+		archivedYears.map((year) =>
 			Number(year) === currentYear ? (
 				<details open class="mb-4">
-					<summary class="text-secondary-300 mb-2 text-xl">{year}</summary>
+					<summary class="text-secondary-300 mb-2 text-xl">
+						{year} - {archivedPostsByYear[year].length} posts
+					</summary>
 					<ul class="space-y-4">
-						{postsByYear[year].map((post) => (
+						{archivedPostsByYear[year].map((post) => (
 							<li class="flex items-baseline gap-4">
 								<span class="whitespace-nowrap">
 									<PostDate date={post.data.date} />
@@ -45,9 +31,11 @@ const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
 				</details>
 			) : (
 				<details class="mb-4">
-					<summary class="text-secondary-300 mb-2 text-xl">{year}</summary>
+					<summary class="text-secondary-300 mb-2 text-xl">
+						{year} - {archivedPostsByYear[year].length} posts
+					</summary>
 					<ul class="space-y-4">
-						{postsByYear[year].map((post) => (
+						{archivedPostsByYear[year].map((post) => (
 							<li class="flex items-baseline gap-4">
 								<span class="whitespace-nowrap">
 									<PostDate date={post.data.date} />
