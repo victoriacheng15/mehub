@@ -12,7 +12,7 @@ import { SKILLS, formatSkillPath } from "./skills";
 import { navItems, navHeader } from "./navItem";
 import { PROJECTS } from "./projects";
 import { SOCIALS, formatSocialName } from "./socialLinks";
-import {archivedPostsByYear, archivedYears }	from "./archivedPosts";
+import { archivedPostsByYear, archivedYears } from "./archivedPosts";
 
 export {
 	formatDate,
@@ -32,5 +32,5 @@ export {
 	SOCIALS,
 	formatSocialName,
 	archivedPostsByYear,
-	archivedYears
+	archivedYears,
 };
