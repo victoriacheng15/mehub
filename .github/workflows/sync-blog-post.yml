@@ -9,59 +9,20 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ID: ${{ github.event.client_payload.issue_id }}
-      TITLE: ${{ github.event.client_payload.issue_title }}
+      BLOG_TITLE: ${{ github.event.client_payload.issue_title }}
+      AUTHOR_NAME: "${{ github.actor }}"
+      AUTHOR_EMAIL: "${{ github.actor }}@users.noreply.github.com"
+      SYNC_BLOG_TOKEN: ${{ secrets.SYNC_BLOG_TOKEN }}
+      API_LINK: ${{ vars.API_LINK }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       
-      - name: Set Slug from title
-        run: |
-          echo "Original TITLE: $TITLE"
-          SLUG=$(echo "$TITLE" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g' | sed 's/--*/-/g' | sed 's/^-//;s/-$//')
-          echo "Generated SLUG: $SLUG"
-          echo "SLUG=$SLUG" >> $GITHUB_ENV
-
-      - name: Config git
-        run: |
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git config --global user.name "${{ github.actor }}"
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
 
       - name: Sync post
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          echo "Syncing post..."
-          echo "Issue ID: $ID"
-          echo "Title: $TITLE"
-          echo "Slug: $SLUG"
-
-          # fetch the blog post content from the API
-          curl -s \
-            -H "Authorization: token ${{ secrets.SYNC_BLOG_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            "${{ vars.API_LINK }}" | \
-            jq '.[0].body' | \
-            sed -e 's/^"//' | \
-            sed -e 's/"$//' | \
-            sed -e 's/\\n/\n/g' | \
-            sed -e 's/\\"/"/g' | \
-            sed -e 's/^date: "\(.*\)"/date: \1/' > src/content/blog/$SLUG.md
-
-            # create a new branch for the blog post
-            git switch -c "blog/$SLUG"
-            git add src/content/blog/$SLUG.md
-            git commit -m "chore: add blog - $TITLE"
-            git push --force-with-lease origin "blog/$SLUG"
-
-            # create a pull request for the new blog post
-            pr_body="This PR adds the $TITLE blog post"
-            gh pr create \
-              --base main \
-              --head "blog/$SLUG" \
-              --title "add blog - $TITLE" \
-              --body "$pr_body" \
-              --label "blog"
-
-        
+        run: ./scripts/sync_blog_post.sh

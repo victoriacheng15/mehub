@@ -9,13 +9,14 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     env:
-      AUTHOR_EMAIL: "${{ github.actor }}@users.noreply.github.com"
       AUTHOR_NAME: "${{ github.actor }}"
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      AUTHOR_EMAIL: "${{ github.actor }}@users.noreply.github.com"
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Run Publish Post Script
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: ./scripts/publish_blog_post.sh
