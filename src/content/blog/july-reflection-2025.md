@@ -9,11 +9,12 @@ tags: ["reflection"]
 
 This month, I had a thoughtful chat with my manager at Shopify. I asked them a simple question:  
 
-> What’s the one thing you wish you knew before starting a new software project?
+> What's one thing you wish you knew earlier in your career?
 
-Their answer wasn’t about specific tools or languages — it was about understanding the **context**: the purpose of the system, the tradeoffs made along the way, and the people involved. That answer stayed with me. It made me reflect on how I approach learning and growth as a developer.
+Their answer wasn’t about specific tools or languages — it was about understanding the context: the purpose behind the system, the trade-offs made along the way, and the people involved. That answer stuck with me. It made me reflect deeply on how I approach learning and growth as a developer.
 
-I started thinking of everything I’ve learned — and unlearned — as part of a **technical backpack**. Over time, we pack this backpack with tools, concepts, habits, and assumptions. But eventually, it gets heavy. Growth isn’t just about adding more — it’s also about knowing when to reorganize, replace, or remove what no longer serves us.
+One truth stands out clearly: change is the only constant. Technology evolves, projects shift, teams reorganize, and even leadership changes. Because of this, the contents of our technical backpack—our skills, knowledge, and habits—must adapt too. Over time, we pack this backpack with tools, concepts, and assumptions. But eventually, it gets heavy. Growth isn’t just about adding more — it’s also about knowing when to reorganize, replace, or remove what no longer serves us.
+
 
 ## 🧠 Not Just Skills — Context and Judgment
 
