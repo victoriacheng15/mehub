@@ -23,4 +23,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh pr merge --auto --squash --delete-branch "${{ github.event.pull_request.html_url }}"
+          gh pr merge --auto --squash --delete-branch "${{ github.event.pull_request.number }}"
