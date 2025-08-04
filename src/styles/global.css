@@ -1,2 +1,9 @@
 @import "tailwindcss";
 @config "../../tailwind.config.mjs";
+
+svg {
+  margin: 0 auto;
+  background-color: #ffdcd1;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
