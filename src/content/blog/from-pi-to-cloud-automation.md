@@ -3,7 +3,6 @@ title: "From Pi to Cloud Automation"
 description: "Automate content gathering with a Python script and GitHub Actions. No servers, no Pi—just daily updates straight to your Google Sheet."
 date: 2025-08-05
 tags: ["journey", "python"]
-draft: true
 ---
 
 ## 🧠 What the Project Does
