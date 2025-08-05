@@ -17,10 +17,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh pr edit "${{ github.event.pull_request.number }}" --remove-label "merge"
+          gh pr edit "${{ github.event.pull_request.html_url }}" --remove-label "merge"
 
       - name: Enable auto-merge for labeled PRs
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh pr merge --auto --squash --delete-branch "${{ github.event.pull_request.number }}"
+          gh pr merge --auto --squash --delete-branch "${{ github.event.pull_request.html_url }}"
