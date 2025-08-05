@@ -7,7 +7,12 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
 	site: siteConfig.site,
-	integrations: [expressiveCode()],
+	integrations: [expressiveCode({
+		theme: ["catppuccin-mocha", "catppuccin-latte"],
+		defaultProps: {
+			wrap: true,
+		}
+	})],
 	markdown: {
 		rehypePlugins: [rehypeMermaid],
 	},
