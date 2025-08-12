@@ -3,7 +3,6 @@ title: "Understanding HTTP Methods and Status"
 description: "Learn the essentials of HTTP methods (GET, POST, PUT, PATCH, DELETE) and common status codes to build clear, effective APIs."
 date: 2025-08-12
 tags: ["networking"]
-draft: true
 ---
 
 ## 🔍 What Are HTTP Methods (and Why Should You Care)?
