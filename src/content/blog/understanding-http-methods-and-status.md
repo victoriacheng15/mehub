@@ -5,7 +5,7 @@ date: 2025-08-12
 tags: ["networking"]
 ---
 
-## 🔍 What Are HTTP Methods (and Why Should You Care)?
+## 🔍 What Are HTTP Methods?
 
 When building or using web APIs, understanding HTTP methods and the status codes that come with them is essential. Whether you’re writing a backend service or integrating with one, these two concepts go hand-in-hand — the method describes *what the client wants to do*, and the status code describes *what actually happened*.
 
