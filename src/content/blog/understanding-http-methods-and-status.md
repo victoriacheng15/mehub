@@ -38,7 +38,7 @@ GET /users/123
 
 - This asks the server to return the user with ID `123`.
 
-### Common Status Codes:
+Common Status Codes:
 
 | Code | Meaning |
 |------|---------|
@@ -66,7 +66,7 @@ Content-Type: application/json
 
 - This tells the server to create a new user with the given data.
 
-### Common Status Codes:
+Common Status Codes:
 
 | Code | Meaning |
 |------|---------|
@@ -93,7 +93,7 @@ Content-Type: application/json
 
 - This replaces the existing user `123` with the new data.
 
-### Common Status Codes:
+Common Status Codes:
 
 | Code | Meaning |
 |------|---------|
@@ -119,7 +119,7 @@ Content-Type: application/json
 
 - This only updates the `name` field for user `123`.
 
-### Common Status Codes:
+Common Status Codes:
 
 | Code | Meaning |
 |------|---------|
@@ -140,7 +140,7 @@ DELETE /users/123
 
 - This deletes the user with ID `123`.
 
-### Common Status Codes:
+Common Status Codes:
 
 | Code | Meaning |
 |------|---------|
