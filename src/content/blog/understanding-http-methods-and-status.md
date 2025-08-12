@@ -30,7 +30,7 @@ Let’s walk through each method and its most common status codes.
 
 `GET` is used to **retrieve data** from the server. It does not modify anything — just fetches.
 
-### Example:
+Example:
 
 ``` json
 GET /users/123
@@ -52,7 +52,7 @@ GET /users/123
 
 `POST` is used to **create a new resource** on the server. It usually goes with a JSON body in the request.
 
-### Example:
+Example:
 
 ```json
 POST /users
@@ -79,7 +79,7 @@ Content-Type: application/json
 
 `PUT` is used to **completely replace** a resource. Think of it as "update the whole thing."
 
-### Example:
+Example:
 
 ```json
 PUT /users/123
@@ -106,7 +106,7 @@ Content-Type: application/json
 
 `PATCH` is used to **partially update** a resource — unlike `PUT`, which replaces the whole thing.
 
-### Example:
+Example:
 
 ```json
 PATCH /users/123
@@ -132,7 +132,7 @@ Content-Type: application/json
 
 `DELETE` is used to **delete a resource** permanently from the server.
 
-### Example:
+Example:
 
 ```json
 DELETE /users/123
