@@ -3,10 +3,9 @@ title: "Understanding HTTP Methods and Status"
 description: "Learn the essentials of HTTP methods (GET, POST, PUT, PATCH, DELETE) and common status codes to build clear, effective APIs."
 date: 2025-08-12
 tags: ["networking"]
-draft: true
 ---
 
-## 🔍 What Are HTTP Methods (and Why Should You Care)?
+## 🔍 What Are HTTP Methods?
 
 When building or using web APIs, understanding HTTP methods and the status codes that come with them is essential. Whether you’re writing a backend service or integrating with one, these two concepts go hand-in-hand — the method describes *what the client wants to do*, and the status code describes *what actually happened*.
 
@@ -31,7 +30,7 @@ Let’s walk through each method and its most common status codes.
 
 `GET` is used to **retrieve data** from the server. It does not modify anything — just fetches.
 
-### Example:
+Example:
 
 ``` json
 GET /users/123
@@ -39,7 +38,7 @@ GET /users/123
 
 - This asks the server to return the user with ID `123`.
 
-### Common Status Codes:
+Common Status Codes:
 
 | Code | Meaning |
 |------|---------|
@@ -53,7 +52,7 @@ GET /users/123
 
 `POST` is used to **create a new resource** on the server. It usually goes with a JSON body in the request.
 
-### Example:
+Example:
 
 ```json
 POST /users
@@ -67,7 +66,7 @@ Content-Type: application/json
 
 - This tells the server to create a new user with the given data.
 
-### Common Status Codes:
+Common Status Codes:
 
 | Code | Meaning |
 |------|---------|
@@ -80,7 +79,7 @@ Content-Type: application/json
 
 `PUT` is used to **completely replace** a resource. Think of it as "update the whole thing."
 
-### Example:
+Example:
 
 ```json
 PUT /users/123
@@ -94,7 +93,7 @@ Content-Type: application/json
 
 - This replaces the existing user `123` with the new data.
 
-### Common Status Codes:
+Common Status Codes:
 
 | Code | Meaning |
 |------|---------|
@@ -107,7 +106,7 @@ Content-Type: application/json
 
 `PATCH` is used to **partially update** a resource — unlike `PUT`, which replaces the whole thing.
 
-### Example:
+Example:
 
 ```json
 PATCH /users/123
@@ -120,7 +119,7 @@ Content-Type: application/json
 
 - This only updates the `name` field for user `123`.
 
-### Common Status Codes:
+Common Status Codes:
 
 | Code | Meaning |
 |------|---------|
@@ -133,7 +132,7 @@ Content-Type: application/json
 
 `DELETE` is used to **delete a resource** permanently from the server.
 
-### Example:
+Example:
 
 ```json
 DELETE /users/123
@@ -141,7 +140,7 @@ DELETE /users/123
 
 - This deletes the user with ID `123`.
 
-### Common Status Codes:
+Common Status Codes:
 
 | Code | Meaning |
 |------|---------|
