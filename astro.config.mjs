@@ -14,7 +14,10 @@ export default defineConfig({
 		}
 	})],
 	markdown: {
-		rehypePlugins: [rehypeMermaid],
+		syntaxHighlight: {
+      excludeLangs: ["mermaid"]
+    },
+		rehypePlugins: [[rehypeMermaid, { strategy: "img-svg", dark: true, colorScheme: "forest" }]],
 	},
 	vite: {
 		plugins: [tailwindcss()],
