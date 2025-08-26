@@ -8,7 +8,6 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "vercel-build": "npx playwright install chromium && npm run build",
     "lint": "biome lint ./src",
     "lint:md": "npx markdownlint-cli --fix src/content/blog/*.md",
     "format": "biome format ./src --write && prettier -w ./src/**/*.astro",
