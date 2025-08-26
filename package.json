@@ -22,7 +22,7 @@
     "@tailwindcss/vite": "^4.1.11",
     "astro": "^5.13.3",
     "astro-expressive-code": "^0.41.3",
-    "playwright": "^1.54.2",
+    "playwright": "^1.55.0",
     "rehype-mermaid": "^3.0.0",
     "tailwindcss": "^4.1.11"
   },
