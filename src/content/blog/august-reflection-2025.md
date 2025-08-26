@@ -3,7 +3,6 @@ title: "August Reflection 2025"
 description: "Reflecting on my 4-month Shopify internship: embracing progress over perfection, lightening my technical backpack, and shipping with confidence."
 date: 2025-08-26
 tags: ["reflection"]
-draft: true
 ---
 
 ## Monthly Reflection: My 4-Month Internship at Shopify
