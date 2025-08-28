@@ -1,34 +1,30 @@
-name: Build & Deploy to Vercel (CLI)
-
+name: Vercel Production Deployment
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
   push:
-    branches: [ main ]
-
+    branches: [main]
 jobs:
-  build-and-deploy:
+  deploy-production:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - name: Install deps
-        run: npm ci
-
-      - name: Install Playwright OS deps (apt)
-        run: npx playwright install-deps
+      - name: Install Playwright
+        run: npm install -D @playwright/test@latest
 
       - name: Install Playwright browsers
-        run: npx playwright install chromium
+        run: npx playwright install --with-deps
 
-      - name: Build site
-        run: npm run build
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
 
-      - name: Deploy to Vercel (CLI)
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        run: npx vercel --prod --token $VERCEL_TOKEN --confirm
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
