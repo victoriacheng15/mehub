@@ -9,7 +9,7 @@ on:
 
 jobs:
   call-markdownlint:
-    uses: victoriacheng15hub/platform-actions/markdown-linter/markdownlint.yml@0.1.0
+    uses: victoriacheng15hub/platform-actions/markdown-linter@main
     with:
       md_paths: |
         src/content/blog/**/*.md
