@@ -11,9 +11,7 @@
     "lint": "biome lint ./src",
     "lint:md": "npx markdownlint-cli --fix src/content/blog/*.md",
     "format": "biome format ./src --write && prettier -w ./src/**/*.astro",
-    "post": "./scripts/new_post.sh",
     "publish": "./scripts/publish_post.sh",
-    "status": "./scripts/check_pr_status.sh",
     "tag": "./scripts/setup_blog_tag.sh"
   },
   "dependencies": {
