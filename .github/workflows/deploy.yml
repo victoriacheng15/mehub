@@ -5,6 +5,13 @@ env:
 on:
   push:
     branches: [main]
+    paths:
+      - 'src/**'
+      - 'astro.config.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tailwind.config.mjs'
+
 jobs:
   deploy-production:
     if: github.actor != 'dependabot[bot]'
@@ -24,7 +31,7 @@ jobs:
         run: npm install -D @playwright/test@latest
 
       - name: Install Playwright browsers
-        run: npx playwright install --with-deps
+        run: npx playwright install chromium
 
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
