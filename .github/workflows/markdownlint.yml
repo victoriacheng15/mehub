@@ -8,8 +8,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-markdownlint:
-    uses: victoriacheng15hub/platform-actions/markdown-linter@main
-    with:
-      md_paths: |
-        src/content/blog/**/*.md
+  markdownlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: victoriacheng15hub/platform-actions/markdown-linter@main
+        with:
+          md_paths: |
+            src/content/blog/**/*.md
