@@ -3,8 +3,9 @@ name: Markdown Linter
 on:
   pull_request:
     branches: [main]
-  push:
-    branches: [main]
+    paths:
+      - 'src/content/'
+      - 'README.md'
   workflow_dispatch:
 
 jobs:
@@ -15,4 +16,5 @@ jobs:
       - uses: victoriacheng15hub/platform-actions/markdown-linter@main
         with:
           md_paths: |
-            src/content/blog/**/*.md
+            src/content/blog/*.md
+            README.md
