@@ -3,46 +3,46 @@ import { PROJECTS } from "@/utils";
 ---
 
 <section class="grid gap-10">
-  {
-    PROJECTS.map(({ title, shortDescription, highlights, link, techs }) => (
-      <section class="shadow-secondary-900 dark:bg-primary-900 border-primary-100 dark:border-primary-700 space-y-2 rounded-md border p-6 shadow-md transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg">
-        <h2 class="text-xl font-bold">
-          <a
-            href={link}
-            class="text-secondary-600 dark:text-secondary-300 hover:text-secondary-500 dark:hover:text-secondary-100 transition-colors duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {title}
-          </a>
-        </h2>
-        
-        <!-- Short description -->
-        <p class="tracking-wide text-gray-700 dark:text-gray-300">{shortDescription}</p>
-        
-        <!-- Expandable highlights -->
-        {highlights && (
-          <details class="my-4">
-            <summary class="cursor-pointer text-secondary-600 dark:text-secondary-300 hover:text-secondary-500 dark:hover:text-secondary-100 transition-colors duration-200">
-              Show more
-            </summary>
-            <ul class="list-disc pl-5 mt-2 space-y-2 text-gray-600 dark:text-gray-300">
-              {highlights.map((point) => (
-                <li>{point}</li>
-              ))}
-            </ul>
-          </details>
-        )}
-        
-        <!-- Tech tags -->
-        <ul class="mt-4 flex flex-wrap gap-4">
-          {techs.map((tech) => (
-            <li class="bg-secondary-700 dark:bg-secondary-900 dark:text-secondary-100 rounded-full px-3 py-1 text-sm text-white">
-              {tech}
-            </li>
-          ))}
-        </ul>
-      </section>
-    ))
-  }
+	{
+		PROJECTS.map(({ title, shortDescription, highlights, link, techs }) => (
+			<section class="shadow-secondary-900 dark:bg-primary-900 border-primary-100 dark:border-primary-700 space-y-2 rounded-md border p-6 shadow-md transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg">
+				<h2 class="text-xl font-bold">
+					<a
+						href={link}
+						class="text-secondary-600 dark:text-secondary-300 hover:text-secondary-500 dark:hover:text-secondary-100 transition-colors duration-300"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						{title}
+					</a>
+				</h2>
+
+				{/* <!-- Short description --> */}
+				<p class="tracking-wide text-gray-700 dark:text-gray-300">{shortDescription}</p>
+
+				{/* <!-- Expandable highlights --> */}
+				{highlights && (
+					<details class="my-4">
+						<summary class="text-secondary-600 dark:text-secondary-300 hover:text-secondary-500 dark:hover:text-secondary-100 cursor-pointer transition-colors duration-200">
+							Show more
+						</summary>
+						<ul class="mt-2 list-disc space-y-2 pl-5 text-gray-600 dark:text-gray-300">
+							{highlights.map((point) => (
+								<li>{point}</li>
+							))}
+						</ul>
+					</details>
+				)}
+
+				{/* <!-- Tech tags --> */}
+				<ul class="mt-4 flex flex-wrap gap-4">
+					{techs.map((tech) => (
+						<li class="bg-secondary-700 dark:bg-secondary-900 dark:text-secondary-100 rounded-full px-3 py-1 text-sm text-white">
+							{tech}
+						</li>
+					))}
+				</ul>
+			</section>
+		))
+	}
 </section>
