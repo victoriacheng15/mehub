@@ -10,8 +10,8 @@ jobs:
     env:
       ID: ${{ github.event.client_payload.issue_id }}
       BLOG_TITLE: ${{ github.event.client_payload.issue_title }}
-      AUTHOR_NAME: "${{ github.actor }}"
-      AUTHOR_EMAIL: "${{ github.actor }}@users.noreply.github.com"
+      AUTHOR_NAME: '${{ github.actor }}'
+      AUTHOR_EMAIL: '${{ github.actor }}@users.noreply.github.com'
       SYNC_BLOG_TOKEN: ${{ secrets.SYNC_BLOG_TOKEN }}
       API_LINK: ${{ vars.API_LINK }}
     steps:

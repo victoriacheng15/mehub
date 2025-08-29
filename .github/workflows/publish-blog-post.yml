@@ -9,8 +9,8 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     env:
-      AUTHOR_NAME: "${{ github.actor }}"
-      AUTHOR_EMAIL: "${{ github.actor }}@users.noreply.github.com"
+      AUTHOR_NAME: '${{ github.actor }}'
+      AUTHOR_EMAIL: '${{ github.actor }}@users.noreply.github.com'
     steps:
       - uses: actions/checkout@v4
         with:
