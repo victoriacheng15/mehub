@@ -104,6 +104,6 @@ The `wget` command is an indispensable tool for downloading files from the com
 
 Happy downloading! 💾🚀
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

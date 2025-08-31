@@ -153,6 +153,6 @@ This ensures:
 
 [PostgreSQL DEFAULT Constraints](https://neon.tech/postgresql/postgresql-tutorial/postgresql-default-value)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

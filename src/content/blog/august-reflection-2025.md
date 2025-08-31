@@ -60,6 +60,7 @@ Think about it: when you go hiking, you don’t pack every item you own. You cho
 Yes, you might know five programming languages, ten frameworks, and countless tools—but do you need all of them *right now*? Probably not.
 
 Your “technical backpack” should be curated. It includes:
+
 - The languages and tools relevant to your current role  
 - The context you need to understand the codebase  
 - The knowledge that helps you move faster *today*
@@ -77,6 +78,7 @@ This mindset applies beyond code. It’s about **mental bandwidth**. The lighter
 This internship taught me that engineering isn’t just about writing code—it’s about thinking clearly, communicating effectively, and managing not just tasks, but also *context* and *confidence*.
 
 As I move forward, I’ll carry these lessons with me:
+
 - Be proactive, not passive  
 - Ask questions without hesitation  
 - Ship with confidence—even if it means fixing things later  
@@ -97,5 +99,6 @@ Shopify didn’t just give me a chance to build software—it gave me a chance t
 
 Here’s to the next trail, the next backpack, and the next version of me.
 
-## Thank you!
+## Thank you
+
 Big thanks for reading! You’re awesome, and I hope this post helped. Until next time!
