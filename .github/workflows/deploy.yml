@@ -8,8 +8,6 @@ on:
     paths:
       - 'src/**'
       - 'astro.config.mjs'
-      - 'package.json'
-      - 'package-lock.json'
       - 'tailwind.config.mjs'
 
 jobs:
@@ -30,7 +28,7 @@ jobs:
       - name: Install Playwright
         run: npm install -D @playwright/test@latest
 
-      - name: Install Playwright browsers
+      - name: Install Playwright browser
         run: npx playwright install chromium
 
       - name: Install Vercel CLI

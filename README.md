@@ -21,21 +21,22 @@ Welcome to my personal website! This site serves as a hub for my portfolio, blog
 
 ## 🚀 Tooling & DevOps Practices
 
-- **CI/CD**: Zero-config deployment powered by Vercel — automatically deploys on push to `main`
+Automated tools and scripts manage routine tasks for code quality, deployment, and content updates—making development faster, more reliable, and less manual.
+
 - **Code Quality**:
   - Enforced with [Biome](https://biomejs.dev/) for formatting and linting
   - Uses [markdownlint](https://github.com/DavidAnson/markdownlint) for consistent Markdown style
-- **Custom GitHub Actions**:
-  - Scheduled via cron to automate blog publishing workflow:
-    - Creates a new branch
-    - Runs `publish_post.sh` to prepare changes
-    - Commits updates (if any)
-    - Opens a pull request titled with the blog post title
+**GitHub Actions Workflows**:
+  - `preview.yml`: Deploys a preview build to Vercel for pull requests
+  - `deploy.yml`: Deploys the production site to Vercel on push to main
+  - `format.yml`: Enforces code formatting and linting using Biome
+  - `label-based-merge.yml`: Automatically merges pull requests when labeled
+  - `markdownlint.yml`: Checks Markdown files for style consistency
+  - `sync-blog-post.yml`: Adds draft blog posts from external sources to this repository
+  - `publish-blog-post.yml`: Publishes blog posts on schedule
 - **Bash Workflow Scripts**:
-  - `setup_new_post`: Scaffold a new blog post with frontmatter, filename, and folder based on title and date
-  - `publish_post`: Finds posts with `draft: true`, checks if the publish day matches the current UTC date, and removes the draft flag
-  - `setup_blog_tag`: Creates a Git tag based on the current date (`blog/yyyy-mm-dd`) and pushes it to the remote repository with a custom commit message
-  - `check_pr_status`: Checks the status of pull requests via GitHub CLI
+  - `sync_blog_post.sh`: Syncs blog posts between sources or branches
+  - `publish_blog_post.sh`: Finds posts with `draft: true`, checks if the publish day matches the current UTC date, and removes the draft flag
 
 ## How to Explore
 
