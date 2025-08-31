@@ -13,14 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.label.name == 'merge'
     steps:
-      - name: Remove the trigger label
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh pr edit "${{ github.event.pull_request.html_url }}" --remove-label "merge"
-
-      - name: Enable auto-merge for labeled PRs
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh pr merge --auto --squash --delete-branch "${{ github.event.pull_request.html_url }}"
+      - uses: victoriacheng15hub/platform-actions/merge-on-label@main
+        with:
+          pr_url: ${{ github.event.pull_request.html_url }}
+          label: merge
+          token: ${{ secrets.GITHUB_TOKEN }}
