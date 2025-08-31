@@ -10,6 +10,7 @@ tags: ["python"]
 Arithmetic is one of the first things we learn in Python — `x + y`, `x * y`, `x / y` — but under the hood, Python handles all of these using something more advanced: **dunder methods**. Let’s break it all down.
 
 Python's **arithmetic operators** are symbols used to perform mathematical operations:
+
 - `+` for addition  
 - `-` for subtraction  
 - `*` for multiplication  
@@ -24,7 +25,6 @@ These are called **binary operators** because they work between two values: `x +
 There are also **unary operators** like `+x` or `-x`, which act on just one value.
 
 But these operators are more than just symbols. In Python, they're backed by special methods called **"dunder methods"**, short for "double underscore". These let you override and define what the operators actually *do* for your objects.
-
 
 ## What are the Main Arithmetic Dunder Methods?
 
@@ -41,17 +41,18 @@ Python defines a pair of dunder methods for most arithmetic operators:
 | `x ** y`  | `__pow__`        | `__rpow__`        | Exponentiate        |
 | `x @ y`   | `__matmul__`     | `__rmatmul__`     | Matrix multiply     |
 
-If Python evaluates x + y and x.__add__(y) returns NotImplemented, it will then try y.__radd__(x). This fallback mechanism allows custom classes to handle operations even when the left-hand side doesn't know how which is especially useful when mixing user-defined objects with built-in types.
+If Python evaluates x + y and x.**add**(y) returns NotImplemented, it will then try y.**radd**(x). This fallback mechanism allows custom classes to handle operations even when the left-hand side doesn't know how which is especially useful when mixing user-defined objects with built-in types.
 
 ## NumberBox
 
 To see how arithmetic dunder methods work in practice, let’s look at a simple class called `NumberBox`. It wraps a number and overloads Python’s arithmetic operators so we can trace exactly which dunder method is called.
 
 This class lets us experiment with both:
+
 - Binary operators (e.g. x + y, x * y, x ** y)
 - Unary operators (e.g. -x, +x, abs(x))
 
-Each method prints its name when called, so you can clearly observe how Python handles different cases — including fallback to the right-hand method (like __radd__) when needed.
+Each method prints its name when called, so you can clearly observe how Python handles different cases — including fallback to the right-hand method (like **radd**) when needed.
 
 ```python
 class NumberBox:
@@ -203,6 +204,7 @@ print(abs(a))    # __abs__
 ```
 
 ## Recap
+
 - Python arithmetic operators (`+`, `-`, `*`, `/`, etc.) are powered by **dunder methods** like `__add__`, `__sub__`, and so on.
 - Each operator has two method forms: a **left-hand version** (e.g., `__add__`) and a **right-hand version** (e.g., `__radd__`).
 - If the left-hand method returns `NotImplemented`, Python tries the right-hand method.
@@ -210,5 +212,6 @@ print(abs(a))    # __abs__
 - Unary operators like `-x` or `abs(x)` also have corresponding dunder methods (`__neg__`, `__abs__`, etc.).
 - A class like `NumberBox` is a great way to practice and visualize how operator overloading works in Python.
 
-## Thank you!
+## Thank you
+
 Big thanks for reading! You’re awesome, and I hope this post helped. Until next time!

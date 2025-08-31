@@ -62,15 +62,14 @@ Here, `customer_id` in the `orders` table references `customer_id` in the�
 Let’s say we have two tables:
 
 1. **`customers` Table (Parent Table)**
-    
-    
+
     | **customer_id (PK)** | **customer_name** | **email** |
     | --- | --- | --- |
     | 1 | John Doe | [john@example.com](https://mailto:john@example.com/) |
     | 2 | Jane Smith | [jane@example.com](https://mailto:jane@example.com/) |
+
 2. **`orders` Table (Child Table)**
-    
-    
+
     | **order_id (PK)** | **customer_id (FK)** | **order_date** | **amount** |
     | --- | --- | --- | --- |
     | 101 | 1 | 2023-01-15 | 150.00 |
@@ -117,6 +116,6 @@ By understanding **PRIMARY and FOREIGN KEYS**, you can design efficient, well-s
 
 [PostgreSQL Foreign Key](https://neon.tech/postgresql/postgresql-tutorial/postgresql-foreign-key)
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

@@ -16,18 +16,21 @@ Good data modeling helps ensure your data is consistent, easy to understand, and
 There are three main levels of data modeling:
 
 ### 1. Conceptual Data Model
+
 - **Purpose:** Defines *what* the data is and the high-level relationships.  
 - **Focus:** Business concepts, entities, and how they relate.  
 - **Audience:** Business stakeholders and analysts.  
 - **Example:** “Customer places Order.” (No mention of tables or keys.)
 
 ### 2. Logical Data Model
+
 - **Purpose:** Describes the *structure* of the data without considering physical implementation.  
 - **Focus:** Entities, attributes, and relationships, often normalized.  
 - **Audience:** Data architects and database designers.  
 - **Example:** “Customer table has `CustomerID`, `Name`, `Email` and relates to Order table via `CustomerID`.”
 
 ### 3. Physical Data Model
+
 - **Purpose:** Specifies *how* the model is implemented in a specific database.  
 - **Focus:** Tables, columns, data types, indexes, constraints, and storage details.  
 - **Audience:** Database administrators and developers.  
@@ -135,5 +138,6 @@ erDiagram
 
 Data modeling might seem abstract at first, but it’s crucial for building reliable, scalable software. Investing time in good models early can save headaches later.
 
-## Thank you!
+## Thank you
+
 Big thanks for reading! You’re awesome, and I hope this post helped. Until next time!
