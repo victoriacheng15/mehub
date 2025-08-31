@@ -21,7 +21,8 @@ Welcome to my personal website! This site serves as a hub for my portfolio, blog
 
 ## 🚀 Tooling & DevOps Practices
 
-- **CI/CD**: Zero-config deployment powered by Vercel — automatically deploys on push to `main`
+Automated tools and scripts manage routine tasks for code quality, deployment, and content updates—making development faster, more reliable, and less manual.
+
 - **Code Quality**:
   - Enforced with [Biome](https://biomejs.dev/) for formatting and linting
   - Uses [markdownlint](https://github.com/DavidAnson/markdownlint) for consistent Markdown style
