@@ -11,6 +11,7 @@ draft: true
 The **curl** command in Linux is a versatile tool used to transfer data to or from a server, using a variety of protocols such as HTTP, HTTPS, FTP, and more. Unlike wget, which is mainly focused on downloading files, curl is designed to work with data transfers in both directions and is often used for testing APIs, uploading data, or interacting with web services.
 
 **Key features include:**
+
 - Supports multiple protocols (HTTP, HTTPS, FTP, SMTP, SCP, SFTP, and more)
 - Can send custom HTTP headers and data (useful for APIs)
 - Supports HTTP methods like GET, POST, PUT, DELETE
@@ -20,13 +21,13 @@ The **curl** command in Linux is a versatile tool used to transfer data to or fr
 - Shows detailed request/response headers for debugging
 - Works well in scripts and automation pipelines
 
-### Basic Syntax:
+### Basic Syntax
 
 ```bash
 curl [OPTIONS] URL
 ```
 
-### Example:
+### Example
 
 ```bash
 curl https://example.com
@@ -118,7 +119,6 @@ Happy curling! 🌐🚀
 
 ##
 
-## Thank you!
+## Thank you
+
 Big thanks for reading! You’re awesome, and I hope this post helped. Until next time!
-
-

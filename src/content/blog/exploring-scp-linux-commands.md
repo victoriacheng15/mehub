@@ -105,10 +105,12 @@ scp -C backup.tar.gz user@remote-server:/backups/
 ```
 
 I decided to have a bit of fun and experiment with the -C option to see how much it actually helps. I used two files:
+
 - test.csv (~1GB, uncompressed)
 - test.zip (~0.5GB, already compressed)
 
 Transfer Time Comparison
+
 | File Name | Compression (`-C`) | Transfer Time (seconds) |
 | --------- | ------------------ | ----------------------- |
 | test.csv  | No                 |                    1:10 |
@@ -118,12 +120,12 @@ Transfer Time Comparison
 
 Summary
 From my test, enabling -C didn’t always make transfers faster:
+
 - Transferring the uncompressed CSV without -C was the fastest.
 - Using -C with the CSV actually slowed it down a lot, likely because of the extra work to compress a large file on the fly.
 - For the already-compressed ZIP file, -C made a small improvement — but it was still slower than transferring either file without -C.
 
 Note: These results can vary depending on your system and internet connection. This was just a fun test to understand how the -C option behaves in real situations.
-
 
 ### 7. Using SSH Key Authentication
 

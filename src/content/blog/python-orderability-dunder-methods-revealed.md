@@ -152,6 +152,6 @@ Reverse Sort (still uses __lt__):
 - Downtown Beans (Customers: 150, Profit: $1200.5)
 ```
 
-## Thank you!
+## Thank you
 
 Big thanks for reading! You’re awesome, and I hope this post helped. Until next time!

@@ -24,6 +24,7 @@ The script works by:
 The goal isn’t full content scraping — just a convenient way to view and access fresh articles from all your favorite sources in one place.
 
 It uses:
+
 - `requests` for HTTP calls  
 - `BeautifulSoup` for HTML parsing  
 - `gspread` for Google Sheets API  
@@ -35,7 +36,7 @@ The first version ran on my laptop. Initially, I used it to test and validate ho
 
 But after a while, the process became **redundant and tedious** — opening a terminal and running the same script manually every day just to get updated links.
 
-So I started thinking: 
+So I started thinking:
 
 > How do I automate this locally?
 
@@ -50,10 +51,11 @@ To improve automation, I moved the project to a **Raspberry Pi 3**. I used `cron
 At first, it felt like a small win: a headless Linux box doing the work for me!
 
 But over time, I ran into multiple problems:
+
 - The Pi would **overheat** because I didn’t have a proper cooling system
 - The script would sometimes **fail silently**, and since the logs were stored locally on the Pi, I had to SSH into the device to check what went wrong — which added friction every time something broke
 
-These issues added up, and I started to ask myself: 
+These issues added up, and I started to ask myself:
 
 > How can I run this job reliably without having to worry about it?
 
@@ -67,7 +69,8 @@ But then I thought, why not use it for something else? Since it supports cron sc
 
 That simple idea led me to set up a cloud-based workflow where GitHub runs the job daily, so all my article links get updated and ready whenever I want to check them.
 
-### 🛠️ What I Learned:
+### 🛠️ What I Learned
+
 - **Secrets Management:** I securely stored environment variables and API keys using **GitHub Secrets** (`Settings → Secrets → Actions`). This approach keeps sensitive credentials out of the codebase while allowing the script to access them securely at runtime.  
 - **`workflow_dispatch`:** I added a `workflow_dispatch` trigger so I could manually run the script from the GitHub UI whenever needed — which is especially helpful for debugging or testing changes.  
 - **Logging with Artifacts:** Treating this as a learning opportunity, I explored how **`actions/upload-artifact`** works in GitHub Actions. Rather than SSH’ing into a server to check logs (something I could do but found cumbersome), I modified the script to write logs to a `.txt` file and configured the workflow to upload this log as an artifact. This makes it easy to download and inspect logs directly from the GitHub UI after each run.
@@ -91,6 +94,7 @@ I started this as a fun project — just a simple way to collect articles and sa
 Over time, it naturally grew into something more polished — something that fits into my daily routine and makes it easier.
 
 Along the way, I ended up learning a lot:
+
 - How to manage configuration with environment variables
 - How to use GitHub Actions beyond CI workflows
 - How to think about making small tools more reliable and easier to maintain
@@ -103,7 +107,6 @@ I don’t have a strict roadmap for what’s next — the project is already doi
 
 For now, I’m happy with the system as it is. I’ll likely continue improving it **organically**, based on real usage and small annoyances I run into over time.
 
-
 ## ✅ TL;DR
 
 - **Project**: `articles-extractor` scrapes basic article info and logs it to Google Sheets
@@ -111,5 +114,6 @@ For now, I’m happy with the system as it is. I’ll likely continue improving 
 - **Learnings**: Automating with GitHub Actions was a better long-term solution than relying on Raspberry Pi hardware
 - **Takeaway**: Start small, iterate often, and use each roadblock as a learning opportunity
 
-## Thank you!
+## Thank you
+
 Big thanks for reading! You’re awesome, and I hope this post helped. Until next time!

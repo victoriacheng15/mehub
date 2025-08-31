@@ -118,10 +118,11 @@ class DatabaseConnection:
 ## Recap
 
 Context managers are like responsible assistants - they set things up and clean up after you automatically. I'm still getting comfortable with them, but already see how they can:
+
 - ✔️ Make code cleaner
 - ✔️ Prevent resource leaks
 - ✔️ Handle errors gracefully
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

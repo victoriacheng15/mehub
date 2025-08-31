@@ -11,18 +11,19 @@ draft: true
 The **df** command in Linux is used to display information about disk space usage on file systems. It shows how much space is used, available, and where it's mounted. It's a quick and essential tool for monitoring storage on local drives, external disks, and mounted network volumes.
 
 **Key features include:**
+
 - Shows total, used, and available disk space
 - Lists mount points for all file systems
 - Supports human-readable format for easy reading
 - Can filter output by file system type or specific paths
 
-### Basic Syntax:
+### Basic Syntax
 
 ```bash
 df [OPTIONS] [FILESYSTEM or PATH]
 ```
 
-### Example:
+### Example
 
 ```bash
 df
@@ -94,7 +95,6 @@ The **df** command is a simple yet powerful way to monitor disk space on your Li
 
 Keep your storage in check! 🗂️💾
 
-## Thank you!
+## Thank you
+
 Big thanks for reading! You’re awesome, and I hope this post helped. Until next time!
-
-

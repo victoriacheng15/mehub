@@ -15,7 +15,6 @@ Their answer wasn’t about specific tools or languages — it was about underst
 
 One truth stands out clearly: change is the only constant. Technology evolves, projects shift, teams reorganize, and even leadership changes. Because of this, the contents of our technical backpack—our skills, knowledge, and habits—must adapt too. Over time, we pack this backpack with tools, concepts, and assumptions. But eventually, it gets heavy. Growth isn’t just about adding more — it’s also about knowing when to reorganize, replace, or remove what no longer serves us.
 
-
 ## 🧠 Not Just Skills — Context and Judgment
 
 That conversation reminded me that knowing *how* to write code is only one piece of the puzzle. Just as important is understanding *why* something was built a certain way, *who* it serves, and *what constraints* shaped it. These are the kinds of things you can’t learn from documentation alone.
@@ -63,5 +62,6 @@ I want to continue this process — not just learning new things, but reflecting
 
 Because in tech, you’ll never know everything — and that’s okay. What matters is **how you carry what you know**, and how that helps you continue to grow.
 
-## Thank you!
+## Thank you
+
 Big thanks for reading! You’re awesome, and I hope this post helped. Until next time!

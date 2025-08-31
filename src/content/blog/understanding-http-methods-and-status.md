@@ -20,6 +20,7 @@ HTTP methods are *verbs* that describe the kind of operation the client wants th
 When used correctly, they make APIs easier to understand, maintain, and use consistently across teams.
 
 Each method also pairs with different HTTP **status codes**, which are short responses from the server telling you what happened. For example:
+
 - `200 OK` means the request was successful
 - `404 Not Found` means the resource doesn’t exist
 - `201 Created` means a new resource was successfully added
@@ -153,5 +154,6 @@ Common Status Codes:
 
 You don’t need to memorize every HTTP status code — just understand the typical ones that go with each method. Think of methods as **intents** and status codes as **results**. When you design APIs with this mindset, your endpoints become much easier to work with, test, and document.
 
-## Thank you!
+## Thank you
+
 Big thanks for reading! You’re awesome, and I hope this post helped. Until next time!

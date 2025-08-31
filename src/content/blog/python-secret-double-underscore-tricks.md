@@ -157,6 +157,6 @@ We built a `Coffee` class step by step using special Python methods:
 
 These special methods (called "dunder" methods because of their double underscores) make your objects work naturally with Python's built-in functions. Each one adds useful behavior while keeping everything working together smoothly.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!

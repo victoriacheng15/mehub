@@ -34,6 +34,6 @@ Functional Python Programming - Second Edition
 
 - Shows how to use Python's functional programming features like map/filter, generators, and functools to write cleaner, more maintainable code. Focuses on practical FP techniques - immutability, pure functions, and declarative patterns - while acknowledging Python's hybrid nature. Less about theory, more about writing better Python.
 
-## Thank you!
+## Thank you
 
 Thank you for your time and for reading this!
