@@ -12,7 +12,7 @@ In today’s interconnected digital world, APIs (Application Programming Interfa
 
 In this post, we’ll explore what REST and GraphQL are, compare their key differences, and discuss the pros and cons of each to help you decide which might be the right choice for your next project.
 
-### What is REST?
+## What is REST?
 
 **REST (Representational State Transfer)** is an architectural style for designing networked applications. Introduced by Roy Fielding in 2000, REST relies on a stateless, client-server communication model, typically using HTTP protocols.
 
@@ -33,7 +33,7 @@ DELETE /api/users/123       → Deletes user 123
 
 REST APIs are widely adopted, well-documented, and supported by countless tools and frameworks.
 
-### What is GraphQL?
+## What is GraphQL?
 
 **GraphQL**, developed by Facebook in 2012 and publicly released in 2015, is a **query language** and runtime for APIs. Unlike REST, which exposes multiple endpoints, GraphQL provides a **single endpoint** through which clients can request exactly the data they need.
 
@@ -62,7 +62,7 @@ query {
 
 This single request can fetch nested data (e.g., user + posts + comments), reducing the number of round trips compared to REST.
 
-### Key Differences Between REST and GraphQL
+## Key Differences Between REST and GraphQL
 
 | Feature                     | REST                                  | GraphQL                                |
 |----------------------------|----------------------------------------|-----------------------------------------|
@@ -75,9 +75,9 @@ This single request can fetch nested data (e.g., user + posts + comments), reduc
 | **Learning Curve**         | Simpler, widely understood              | Steeper, especially for schema design   |
 | **Tooling & Ecosystem**    | Mature and extensive                    | Growing rapidly, strong developer tools |
 
-### Pros and Cons
+## Pros and Cons
 
-#### REST: The Tried-and-True Approach
+### REST: The Tried-and-True Approach
 
 **Pros:**
 
@@ -108,7 +108,7 @@ This single request can fetch nested data (e.g., user + posts + comments), reduc
 - ❌ **Learning curve** – Requires understanding of schemas, resolvers, and query structure.
 - ❌ **Not ideal for simple use cases** – Can be overkill for basic CRUD apps.
 
-### When to Use REST vs GraphQL?
+## When to Use REST vs GraphQL?
 
 **Choose REST if:**
 
@@ -124,13 +124,11 @@ This single request can fetch nested data (e.g., user + posts + comments), reduc
 - You want to empower frontend teams to fetch data independently.
 - You’re dealing with multiple client types (web, mobile, IoT) with varying data needs.
 
-### Final Thoughts
+## Final Thoughts
 
 REST and GraphQL aren’t mutually exclusive—they’re tools for different jobs. REST remains a solid, battle-tested choice for many applications, especially where simplicity and performance matter. GraphQL shines in dynamic environments where data requirements vary and efficiency is key.
 
 The best approach often depends on your project’s specific needs. Some organizations even use **both**—GraphQL for internal or client-heavy services, and REST for external integrations.
-
-Ultimately, understanding the strengths and trade-offs of each will empower you to make better architectural decisions and build more efficient, scalable APIs.
 
 ## Thank you
 
