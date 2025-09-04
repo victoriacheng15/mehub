@@ -9,6 +9,7 @@ on:
       - 'src/**'
       - 'astro.config.mjs'
       - 'tailwind.config.mjs'
+  workflow_dispatch:
 
 jobs:
   deploy-production:
