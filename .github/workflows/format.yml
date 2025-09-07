@@ -6,11 +6,6 @@ on:
     paths:
       - 'src/**/*.ts'
       - 'src/**/*.astro'
-  push:
-    branches: [main]
-    paths:
-      - 'src/**/*.ts'
-      - 'src/**/*.astro'
 
 jobs:
   format:
@@ -27,8 +22,15 @@ jobs:
         run: |
           npm ci
           npm run format
-      - name: commit change
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "style: files have formatted!"
-          branch: ${{ github.head_ref }}
+      - name: Commit and push formatting changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          else
+            git commit -m "ci: auto-format code with Ruff"
+            git push origin HEAD:${{ github.head_ref }}
+          fi
