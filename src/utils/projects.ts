@@ -7,10 +7,10 @@ export const PROJECTS = [
 		shortDescription:
 			"My personal platform tooling — reusable GitHub Actions for automation, testing, and deployment.",
 		highlights: [
-				"Developed a centralized repository of reusable workflows for CI/CD.",
-				"Implemented Markdown linting and label-based merge automation, already in use.",
-				"Improves maintainability by standardizing pipelines and removing duplicate YAML across repositories.",
-			],
+			"Developed a centralized repository of reusable workflows for CI/CD.",
+			"Implemented Markdown linting and label-based merge automation, already in use.",
+			"Improves maintainability by standardizing pipelines and removing duplicate YAML across repositories.",
+		],
 		link: `${MAIN_URL}hub/platform-actions${README_URL}`,
 		techs: ["GitHub Actions", "CI/CD", "Automation", "YAML"],
 	},
@@ -25,7 +25,15 @@ export const PROJECTS = [
 			"Designed bulk processing utilities (handle_bulk_process, build_bulk_response) to handle single/batch requests.",
 		],
 		link: `${MAIN_URL}/school-flask-api${README_URL}`,
-		techs: ["Python", "Flask", "SQLite", "PostgreSQL", "Docker", "GitHub Actions", "Pytest"],
+		techs: [
+			"Python",
+			"Flask",
+			"SQLite",
+			"PostgreSQL",
+			"Docker",
+			"GitHub Actions",
+			"Pytest",
+		],
 	},
 	{
 		title: "cprg303-expense-tracker",
@@ -89,7 +97,7 @@ export const PROJECTS = [
 			"Built a RESTful API with Node.js and Express following MVC architecture.",
 			"Designed MongoDB schemas for flexible storage of user-submitted combos and leaderboard rankings.",
 			"Implemented leaderboard logic to sort drinks by popularity based on submission volume.",
-			"Enabled Read (view combos/rankings) and Create (submit new combos) operations for core user interactions."
+			"Enabled Read (view combos/rankings) and Create (submit new combos) operations for core user interactions.",
 		],
 		link: `${MAIN_URL}/bubble-tea-api${README_URL}`,
 		techs: ["Node.js", "Express", "MongoDB"],
