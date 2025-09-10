@@ -8,16 +8,8 @@ export const SOCIALS = [
 		href: "https://www.linkedin.com/in/victoriacheng15",
 	},
 	{
-		name: "TikTok",
-		href: "https://www.tiktok.com/@victoriacheng15",
-	},
-	{
 		name: "YouTube",
 		href: "https://www.youtube.com/@victoriacheng15",
-	},
-	{
-		name: "Twitter",
-		href: "https://www.twitter.com/viktoriacheng15",
 	},
 	{
 		name: "Buy Me a Coffee",

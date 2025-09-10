@@ -1,27 +1,26 @@
 export const SKILLS = [
+	// Core languages
+	"Python",
+	"Go",
+	"Ruby",
 	"TypeScript",
 	"JavaScript",
-	"Python",
-	"React",
-	"Next.js",
-	"Redux",
-	"React Native",
-	"Tailwind CSS",
-	"SASS",
-	"HTML",
-	"CSS",
+	// Backend & frameworks
 	"Node.js",
 	"Express",
 	"Flask",
-	"MongoDB",
+	// Frontend & frameworks
+	"React",
+	"Next.js",
+	"Tailwind CSS",
+	// Databases
 	"PostgreSQL",
-	"Cypress",
-	"Jest",
-	"Testing Library",
-	"Github Actions",
+	"MongoDB",
+	// Platform
 	"Docker",
 	"Linux",
 	"Bash",
+	"GitHub Actions",
 	"Ansible",
 	"Azure",
 ];
