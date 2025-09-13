@@ -2,7 +2,7 @@
 title: "Understanding Data Modeling"
 description: "Overview of conceptual, logical, and physical data models with examples and diagrams to guide database design from abstract ideas to implementation."
 date: 2025-08-19
-tags: ["system-design"]
+tags: ["database"]
 ---
 
 ## 🔍 What Is Data Modeling?
