@@ -50,7 +50,7 @@ Without Playwright installed:
 
 ## The Solution: Bring Your Own Browser
 
-By default, Vercel’s build environment doesn’t include Playwright, so `rehype-mermaid` cannot render diagrams during static generation. 
+By default, Vercel’s build environment doesn’t include Playwright, so `rehype-mermaid` cannot render diagrams during static generation.
 
 To fix this, I moved the **build step** into GitHub Actions, where I control the environment. By installing Playwright and Chromium in the CI pipeline, the build has access to a real browser context. Now `rehype-mermaid` can render Mermaid diagrams safely, producing fully static HTML that works in production.
 
@@ -78,7 +78,7 @@ To pre-render Mermaid diagrams, I use a GitHub Actions workflow that installs Pl
 
 For a complete guide on setting up GitHub Actions with Vercel for preview and production deployments, check out [Vercel’s official guide](https://vercel.com/guides/how-can-i-use-github-actions-with-vercel).
 
-### Key Points:
+### Key Points
 
 - Caching Playwright browser speeds up builds.
 - Install Chromium to satisfy native requirements.
