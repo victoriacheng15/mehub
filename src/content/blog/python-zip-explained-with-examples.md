@@ -3,7 +3,6 @@ title: "Python zip Explained with Examples"
 description: "Learn how Python's zip() function pairs iterables into tuples. Simple examples show looping, unzipping, and creating dictionaries efficiently."
 date: 2025-09-16
 tags: ["python"]
-draft: true
 ---
 
 ## What is zip() in Python?
