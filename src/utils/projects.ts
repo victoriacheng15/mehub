@@ -17,7 +17,7 @@ export const PROJECTS = [
 	{
 		title: "school-flask-api",
 		shortDescription:
-			"Modular Flask REST API for school records with SQLite. Containerized with Docker and integrated CI/CD via GitHub Actions, with Pytest testing, CRUD, bulk ops, and clear error handling.",
+			"Modular Flask REST API for school records using Azure DB PostgreSQL. Dockerized, tested with Pytest, CI/CD integrated, featuring CRUD, bulk ops, and structured error handling.",
 		highlights: [
 			"Implemented modular MVC architecture for the backend and clean separation of routes, services, and models; no frontend UI — endpoints return JSON for viewing.",
 			"Automated CI/CD with GitHub Actions (Pytest runs, coverage reports, linting).",
@@ -28,8 +28,8 @@ export const PROJECTS = [
 		techs: [
 			"Python",
 			"Flask",
-			"SQLite",
 			"PostgreSQL",
+			"Azure",
 			"Docker",
 			"GitHub Actions",
 			"Pytest",
@@ -58,7 +58,7 @@ export const PROJECTS = [
 	{
 		title: "articles-extractor",
 		shortDescription:
-			"Python application automating web scraping of articles (titles, links, dates, authors) from websites. Deploy via manual runs, cron/Docker, or GitHub Actions. Organizes data into Google Sheets.",
+			"📄 Automates collecting article metadata (titles, links, dates) from websites and exports to Google Sheets via API. Built with Python; supports scheduled or manual runs.",
 		highlights: [
 			"Automated web scraping with Python BeautifulSoup.",
 			"Exported structured data directly into Google Sheets via API.",
