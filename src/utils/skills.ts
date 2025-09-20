@@ -16,7 +16,7 @@ export const SKILLS = [
 	// Databases
 	"PostgreSQL",
 	"MongoDB",
-	// Platform
+	// Platform & DevOps & cloud
 	"Docker",
 	"Linux",
 	"Bash",
