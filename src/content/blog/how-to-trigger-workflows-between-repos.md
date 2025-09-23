@@ -3,7 +3,6 @@ title: "How to Trigger Workflows Between Repos"
 description: "Learn how to trigger GitHub Actions workflows within the same repo and across repos to automate tasks like syncing blog posts."
 date: 2025-09-23
 tags: ["ci-cd"]
-draft: true
 ---
 
 ## How to Trigger Workflows
