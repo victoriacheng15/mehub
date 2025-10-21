@@ -1,7 +1,7 @@
 ---
 title: "🌩️ Cloud – Elasticity vs Scalability"
 description: "Learn the key differences between cloud scalability and elasticity, with clear examples and visual timelines showing how resources adjust over time."
-date: 2025-10-07
+date: 2025-10-21
 tags: ["cloud"]
 draft: true
 ---
@@ -69,6 +69,7 @@ timeline
 | Cloud relevance | Design-level | Runtime-level (auto-scaling) |
 
 **Quick takeaway:**  
+
 - **Scalability = system can grow**  
 - **Elasticity = system automatically grows and shrinks**
 
@@ -77,6 +78,7 @@ timeline
 ### Why It Matters
 
 Understanding the difference helps in designing systems that are **resilient, cost-efficient, and cloud-native**.  
+
 - Use **scalability** when planning long-term growth.  
 - Use **elasticity** when you want resources to adapt in real-time, saving cost while maintaining performance.  
 
@@ -85,7 +87,6 @@ Understanding the difference helps in designing systems that are **resilient, co
 ### Closing Thoughts
 
 For anyone building cloud applications today, **elasticity is the norm**, but it’s built on top of **scalable system design**. If your system isn’t scalable, you can’t make it elastic. So always start with a **solid scalable architecture** — then layer elasticity on top to make it cloud-ready.  
-
 
 ## Thank you
 
