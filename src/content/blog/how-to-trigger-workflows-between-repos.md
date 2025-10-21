@@ -13,7 +13,6 @@ Workflows in GitHub Actions can be triggered in multiple ways, such as on pushes
 
 GitHub Actions allows one workflow to trigger another in the same repository using the `workflow_run` event. This is useful when separating concerns, such as building and deploying, in different workflows.
 
-
 ```yml
 # workflow-a.yml
 name: Workflow A
@@ -96,7 +95,6 @@ In my personal workflow, I maintain a **draft blog repo** and a **public blog re
 
 This setup automates the content sync while keeping drafts private until ready for publication.
 
-
 ### From Private Repo
 
 ```yml
@@ -126,6 +124,7 @@ jobs:
             }' \\
             https://api.github.com/repos/username/repo/dispatches
 ```
+
 ### Public Repo
 
 ```yml
@@ -145,9 +144,7 @@ jobs:
       # do your thing
 ```
 
-> **Important Note:** The `event_type` in the private repo workflow must match the `types` in the public repo workflow. This ensures that the `repository_dispatch` event correctly triggers the workflow in the public repo.
-
-> For the full workflow implementation, [view it here](https://github.com/victoriacheng15/mehub/blob/main/.github/workflows/sync-blog-post.yml).
+> **Important Note:** The `event_type` in the private repo workflow must match the `types` in the public repo workflow. This ensures that the `repository_dispatch` event correctly triggers the workflow in the public repo. For the full workflow implementation, [view it here](https://github.com/victoriacheng15/mehub/blob/main/.github/workflows/sync-blog-post.yml).
 
 ### How it Works (Diagram)
 

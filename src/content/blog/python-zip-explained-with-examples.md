@@ -10,6 +10,7 @@ tags: ["python"]
 The `zip()` function is a built-in Python tool that combines two or more iterables—such as lists, tuples, or strings—into a single iterator of tuples. Each tuple contains elements from the input iterables that are at the same position. This makes `zip()` especially useful for looping over multiple sequences in parallel, pairing data together, or transforming lists into structured formats like dictionaries.
 
 **Syntax:**
+
 ```py
 zip(*iterables)
 ```
@@ -30,6 +31,7 @@ print(list(zipped))
 ```
 
 **Output:**
+
 ```py
 [('Alice', 25), ('Bob', 30), ('Charlie', 35)]
 ```
@@ -49,6 +51,7 @@ for fruit, price in zip(fruits, prices):
 ```
 
 **Output:**
+
 ```py
 apple: $1.2
 banana: $0.5
@@ -70,6 +73,7 @@ print(result)
 ```
 
 **Output:**
+
 ```py
 [(1, 'a'), (2, 'b')]
 ```
@@ -90,6 +94,7 @@ for name, score, grade in zip(names, scores, grades):
 ```
 
 **Output:**
+
 ```py
 Alice: 85 (B)
 Bob: 90 (A)
@@ -123,6 +128,7 @@ print(person)
 ```
 
 **Output:**
+
 ```py
 {'name': 'Alice', 'age': 28, 'city': 'New York'}
 ```
@@ -134,6 +140,7 @@ This pattern is widely used in data processing and configuration mapping.
 The `zip()` function is a concise and powerful feature in Python for working with multiple sequences. It simplifies pairing, looping, and transforming data across lists, tuples, and other iterables.
 
 **Key Takeaways:**
+
 - `zip()` pairs elements from multiple iterables.
 - It stops at the shortest iterable.
 - Use `*` to unzip a zipped sequence.
@@ -142,4 +149,5 @@ The `zip()` function is a concise and powerful feature in Python for working wit
 Use `zip()` whenever you need to work with parallel data—it’s efficient, readable, and deeply Pythonic.
 
 ## Thank you
+
 Big thanks for reading! You’re awesome, and I hope this post helped. Until next time!
