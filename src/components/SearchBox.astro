@@ -3,76 +3,74 @@
 ---
 
 <div class="mb-8">
-  <input
-    type="text"
-    id="blog-search"
-    placeholder="Search blog posts..."
-    class="w-full px-4 py-2 rounded border border-gray-300 bg-slate-100 text-slate-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-secondary-300"
-  />
+	<input
+		type="text"
+		id="blog-search"
+		placeholder="Search blog posts..."
+		class="focus:ring-secondary-300 w-full rounded border border-gray-300 bg-slate-100 px-4 py-2 text-slate-900 placeholder-gray-500 focus:ring-2 focus:outline-none"
+	/>
 </div>
 
 <script>
-  interface BlogPost {
-    title: string;
-    slug: string;
-    summary: string;
-    tags: string[];
-    date: string;
-  }
+	interface BlogPost {
+		title: string;
+		slug: string;
+		summary: string;
+		tags: string[];
+		date: string;
+	}
 
-  let allPosts: BlogPost[] = [];
+	let allPosts: BlogPost[] = [];
 
-  // Fetch search index on page load
-  async function loadSearchIndex() {
-    try {
-      const response = await fetch("/search-index.json");
-      allPosts = await response.json();
-    } catch (error) {
-      console.error("Failed to load search index:", error);
-    }
-  }
+	// Fetch search index on page load
+	async function loadSearchIndex() {
+		try {
+			const response = await fetch("/search-index.json");
+			allPosts = await response.json();
+		} catch (error) {
+			console.error("Failed to load search index:", error);
+		}
+	}
 
-  // Simple search function - matches keyword in title, summary, or tags
-  function filterPosts(keyword: string): BlogPost[] {
-    if (!keyword.trim()) {
-      return allPosts;
-    }
+	// Simple search function - matches keyword in title, summary, or tags
+	function filterPosts(keyword: string): BlogPost[] {
+		if (!keyword.trim()) {
+			return allPosts;
+		}
 
-    const query = keyword.toLowerCase();
-    return allPosts.filter((post) => {
-      const titleMatch = post.title.toLowerCase().includes(query);
-      const summaryMatch = post.summary.toLowerCase().includes(query);
-      const tagsMatch = post.tags.some((tag) =>
-        tag.toLowerCase().includes(query)
-      );
-      return titleMatch || summaryMatch || tagsMatch;
-    });
-  }
+		const query = keyword.toLowerCase();
+		return allPosts.filter((post) => {
+			const titleMatch = post.title.toLowerCase().includes(query);
+			const summaryMatch = post.summary.toLowerCase().includes(query);
+			const tagsMatch = post.tags.some((tag) => tag.toLowerCase().includes(query));
+			return titleMatch || summaryMatch || tagsMatch;
+		});
+	}
 
-  // Format date
-  function formatDate(dateStr: string): string {
-    return new Date(dateStr).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
-  }
+	// Format date
+	function formatDate(dateStr: string): string {
+		return new Date(dateStr).toLocaleDateString("en-US", {
+			year: "numeric",
+			month: "short",
+			day: "numeric",
+		});
+	}
 
-  // Update the displayed posts
-  function updateDisplay(results: BlogPost[]) {
-    const postsContainer = document.querySelector("section.grid");
-    if (!postsContainer) return;
+	// Update the displayed posts
+	function updateDisplay(results: BlogPost[]) {
+		const postsContainer = document.querySelector("section.grid");
+		if (!postsContainer) return;
 
-    if (results.length === 0) {
-      postsContainer.innerHTML =
-        '<p class="text-gray-500 py-8">No blog posts found. Try a different search term.</p>';
-      return;
-    }
+		if (results.length === 0) {
+			postsContainer.innerHTML =
+				'<p class="text-gray-500 py-8">No blog posts found. Try a different search term.</p>';
+			return;
+		}
 
-    // Re-render posts with styling matching BlogPreview
-    postsContainer.innerHTML = results
-      .map(
-        (post) => `
+		// Re-render posts with styling matching BlogPreview
+		postsContainer.innerHTML = results
+			.map(
+				(post) => `
       <article class="shadow-secondary-900 dark:bg-primary-900 border-primary-100 dark:border-primary-700 rounded-md border p-6 shadow-md transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg">
         <header class="flex flex-col gap-2">
           <p class="text-sm text-gray-600">${formatDate(post.date)}</p>
@@ -84,40 +82,40 @@
         </header>
         <p class="text-gray-700 dark:text-gray-300 mt-3 mb-4">${post.summary}</p>
         ${
-          post.tags.length > 0
-            ? `<div class="flex gap-2 flex-wrap">
+					post.tags.length > 0
+						? `<div class="flex gap-2 flex-wrap">
                 ${post.tags.map((tag) => `<span class="text-xs px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded text-slate-900 dark:text-slate-200">${tag}</span>`).join("")}
               </div>`
-            : ""
-        }
+						: ""
+				}
       </article>
-    `
-      )
-      .join("");
-  }
+    `,
+			)
+			.join("");
+	}
 
-  // Initialize
-  async function init() {
-    await loadSearchIndex();
+	// Initialize
+	async function init() {
+		await loadSearchIndex();
 
-    const searchInput = document.getElementById("blog-search") as HTMLInputElement;
-    if (!searchInput) return;
+		const searchInput = document.getElementById("blog-search") as HTMLInputElement;
+		if (!searchInput) return;
 
-    // Handle input changes
-    searchInput.addEventListener("input", (e) => {
-      const keyword = (e.target as HTMLInputElement).value;
-      const results = filterPosts(keyword);
-      updateDisplay(results);
-    });
+		// Handle input changes
+		searchInput.addEventListener("input", (e) => {
+			const keyword = (e.target as HTMLInputElement).value;
+			const results = filterPosts(keyword);
+			updateDisplay(results);
+		});
 
-    // Show all posts on initial load
-    updateDisplay(allPosts);
-  }
+		// Show all posts on initial load
+		updateDisplay(allPosts);
+	}
 
-  // Run when DOM is ready
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
-  }
+	// Run when DOM is ready
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", init);
+	} else {
+		init();
+	}
 </script>
