@@ -3,6 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout";
 import BlogPreview from "@/components/BlogPreview";
 import Pagination from "@/components/Pagination";
+import SearchBox from "@/components/SearchBox";
 import { getAllSortedPosts } from "@/utils";
 
 interface Props {
@@ -22,8 +23,9 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 ---
 
-<BaseLayout title="Blog" description="A collection of my learnings, insights, and experiences in software development, and books I’ve read.">
+<BaseLayout title="Blog" description="A collection of my learnings, insights, and experiences in software development, and books I've read.">
   <h1 class="text-4xl font-bold my-8 text-secondary-300">Blog Posts</h1>
+  <SearchBox />
   <section class="grid gap-10">
     {page.data.map((post) => <BlogPreview post={post} />)}
   </section>
