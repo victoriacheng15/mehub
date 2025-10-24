@@ -20,20 +20,20 @@
 		date: string;
 	}
 
-  let allPosts: BlogPost[] = [];
-  let searchInput: HTMLInputElement | null = null;
-  let postsContainer: Element | null = null;
+	let allPosts: BlogPost[] = [];
+	let searchInput: HTMLInputElement | null = null;
+	let postsContainer: Element | null = null;
 
-  // Fetch search index on page load
-  async function loadSearchIndex() {
-    try {
-      const response = await fetch("/search-index.json");
-      allPosts = await response.json();
-    } catch (error) {
-      console.error("Failed to load search index:", error);
-      allPosts = [];
-    }
-  }
+	// Fetch search index on page load
+	async function loadSearchIndex() {
+		try {
+			const response = await fetch("/search-index.json");
+			allPosts = await response.json();
+		} catch (error) {
+			console.error("Failed to load search index:", error);
+			allPosts = [];
+		}
+	}
 
 	// Simple search function - matches keyword in title, summary, or tags
 	function filterPosts(keyword: string): BlogPost[] {
@@ -59,9 +59,9 @@
 		});
 	}
 
-  // Update the displayed posts
-  function updateDisplay(results: BlogPost[]) {
-    if (!postsContainer) return;
+	// Update the displayed posts
+	function updateDisplay(results: BlogPost[]) {
+		if (!postsContainer) return;
 
 		if (results.length === 0) {
 			postsContainer.innerHTML =
@@ -96,17 +96,17 @@
 			.join("");
 	}
 
-  // Initialize search functionality
-  async function initSearch() {
-    searchInput = document.getElementById("blog-search") as HTMLInputElement;
-    postsContainer = document.querySelector("section.grid");
+	// Initialize search functionality
+	async function initSearch() {
+		searchInput = document.getElementById("blog-search") as HTMLInputElement;
+		postsContainer = document.querySelector("section.grid");
 
-    if (!searchInput || !postsContainer) return;
+		if (!searchInput || !postsContainer) return;
 
-    // Load posts if not already loaded
-    if (allPosts.length === 0) {
-      await loadSearchIndex();
-    }
+		// Load posts if not already loaded
+		if (allPosts.length === 0) {
+			await loadSearchIndex();
+		}
 
 		// Handle input changes
 		searchInput.addEventListener("input", (e) => {
@@ -115,18 +115,18 @@
 			updateDisplay(results);
 		});
 
-    // Clear search and show all posts on initial load
-    searchInput.value = "";
-    updateDisplay(allPosts);
-  }
+		// Clear search and show all posts on initial load
+		searchInput.value = "";
+		updateDisplay(allPosts);
+	}
 
-  // Run on page load and on navigation
-  document.addEventListener("astro:page-load", initSearch);
-  
-  // Also run immediately if DOM is ready (fallback for non-transition navigations)
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initSearch);
-  } else {
-    initSearch();
-  }
+	// Run on page load and on navigation
+	document.addEventListener("astro:page-load", initSearch);
+
+	// Also run immediately if DOM is ready (fallback for non-transition navigations)
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", initSearch);
+	} else {
+		initSearch();
+	}
 </script>
