@@ -23,6 +23,7 @@
 	let allPosts: BlogPost[] = [];
 	let searchInput: HTMLInputElement | null = null;
 	let postsContainer: Element | null = null;
+	let paginationElement: Element | null = null;
 
 	// Fetch search index on page load
 	async function loadSearchIndex() {
@@ -60,8 +61,13 @@
 	}
 
 	// Update the displayed posts
-	function updateDisplay(results: BlogPost[]) {
+	function updateDisplay(results: BlogPost[], isSearchActive: boolean) {
 		if (!postsContainer) return;
+
+		// Hide pagination when search is active
+		if (paginationElement) {
+			paginationElement.style.display = isSearchActive ? "none" : "block";
+		}
 
 		if (results.length === 0) {
 			postsContainer.innerHTML =
@@ -100,6 +106,7 @@
 	async function initSearch() {
 		searchInput = document.getElementById("blog-search") as HTMLInputElement;
 		postsContainer = document.querySelector("section.grid");
+		paginationElement = document.querySelector("nav[aria-label]");
 
 		if (!searchInput || !postsContainer) return;
 
@@ -111,13 +118,22 @@
 		// Handle input changes
 		searchInput.addEventListener("input", (e) => {
 			const keyword = (e.target as HTMLInputElement).value;
-			const results = filterPosts(keyword);
-			updateDisplay(results);
+			const isSearchActive = keyword.trim().length > 0;
+
+			if (isSearchActive) {
+				// Show search results when user types
+				const results = filterPosts(keyword);
+				updateDisplay(results, true);
+			} else {
+				// Show pagination when search is empty - don't modify DOM
+				if (paginationElement) {
+					paginationElement.style.display = "block";
+				}
+			}
 		});
 
-		// Clear search and show all posts on initial load
+		// Clear search on initial load (pagination stays visible)
 		searchInput.value = "";
-		updateDisplay(allPosts);
 	}
 
 	// Run on page load and on navigation
