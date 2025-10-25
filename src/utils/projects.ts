@@ -15,7 +15,7 @@ export const PROJECTS = [
 		techs: ["GitHub Actions", "CI/CD", "Automation", "YAML"],
 	},
 	{
-		title: "school-flask-api",
+		title: "school-management-api",
 		shortDescription:
 			"Modular Flask REST API for school records using Azure DB PostgreSQL. Dockerized, tested with Pytest, CI/CD integrated, featuring CRUD, bulk ops, and structured error handling.",
 		highlights: [
@@ -24,7 +24,7 @@ export const PROJECTS = [
 			"Dockerized for consistent local development",
 			"Designed bulk processing utilities (handle_bulk_process, build_bulk_response) to handle single/batch requests.",
 		],
-		link: `${MAIN_URL}/school-flask-api${README_URL}`,
+		link: `${MAIN_URL}/school-management-api${README_URL}`,
 		techs: [
 			"Python",
 			"Flask",
