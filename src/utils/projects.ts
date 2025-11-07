@@ -26,7 +26,13 @@ export const PROJECTS = [
 			"Integrated CI/CD pipelines with GitHub Actions for testing, build, and deployment automation.",
 		],
 		link: `${MAIN_URL}/cover-craft${README_URL}`,
-		techs: ["TypeScript", "Azure Function App", "Next.js", "Github Actions", "Vitest"],
+		techs: [
+			"TypeScript",
+			"Azure Function App",
+			"Next.js",
+			"Github Actions",
+			"Vitest",
+		],
 	},
 	{
 		title: "school-management-api",
