@@ -39,10 +39,11 @@ export const PROJECTS = [
 		shortDescription:
 			"Modular Flask REST API for school records using Azure DB PostgreSQL. Dockerized, tested with Pytest, CI/CD integrated, featuring CRUD, bulk ops, and structured error handling.",
 		highlights: [
-			"Implemented modular MVC architecture for the backend and clean separation of routes, services, and models; no frontend UI — endpoints return JSON for viewing.",
-			"Automated CI/CD with GitHub Actions (Pytest runs, coverage reports, linting).",
-			"Dockerized for consistent local development",
-			"Designed bulk processing utilities (handle_bulk_process, build_bulk_response) to handle single/batch requests.",
+			"Supports create, read, update, and archive (soft delete) operations.",
+			"Handles both individual and bulk record updates through unified API routes.",
+			"Dockerized for local development and deployed to Azure Web App with Azure Database for PostgreSQL for production.",
+			"Integrated CI/CD pipelines using GitHub Actions for linting, testing, and validation.",
+			"Includes automated testing with Pytest to ensure code quality and reliability.",
 		],
 		link: `${MAIN_URL}/school-management-api${README_URL}`,
 		techs: [
@@ -60,11 +61,11 @@ export const PROJECTS = [
 		shortDescription:
 			"📊 Expense Tracker App – Log in with a magic link, manage transactions, view spending trends with charts, and update your profile. Built with Supabase & React Native for an academic project.",
 		highlights: [
-			"Developed mobile-first UI with React Native and TypeScript.",
-			"Integrated Supabase Auth (passwordless magic link login).",
-			"Built PostgreSQL-backed transaction and profile management with Supabase.",
-			"Visualized spending patterns via chart components.",
-			"Set up GitHub Actions to run linter on pull requests.",
+			"Secure authentication with magic link login via Supabase Auth.",
+			"Visualize spending trends with interactive charts.",
+			"Implemented React Context and custom hooks for state management and component reusability.",
+			"Optimized performance using useMemo for filtering and chart rendering (e.g., by year or month).",
+			"PostgreSQL for reliable and consistent data storage.",
 		],
 		link: `${MAIN_URL}/cprg303-expense-tracker${README_URL}`,
 		techs: [
@@ -80,11 +81,10 @@ export const PROJECTS = [
 		shortDescription:
 			"Automates collection of article metadata (title, link, date) from multiple blogs and exports to Google Sheets. Supports scheduled runs via GitHub Actions or manual execution.",
 		highlights: [
-			"Automated web scraping with Python BeautifulSoup.",
-			"Exported structured data directly into Google Sheets via API.",
-			"Packaged into Docker container for portable deployments.",
-			"Provided flexible deployment options: run locally, schedule via cron (including Raspberry Pi), or automate with GitHub Actions.",
-			"Demonstrated DevOps-style pipelines for data ingestion and reporting.",
+			"Supports scraping articles from FreeCodeCamp, GitHub Engineering blog, Substack feeds, and Shopify Engineering blog.",
+			"Dockerized for local development; can run manually for debugging or on a Raspberry Pi via cron job.",
+			"Integrated CI/CD workflow with GitHub Actions to schedule automated scraping (e.g., daily at 06:00 UTC).",
+			"- Logs of scraped data and errors are uploaded as GitHub artifacts, ensuring visibility and reliability.",
 		],
 		link: `${MAIN_URL}/articles-extractor${README_URL}`,
 		techs: [
