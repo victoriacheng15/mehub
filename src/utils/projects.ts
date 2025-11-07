@@ -15,6 +15,20 @@ export const PROJECTS = [
 		techs: ["GitHub Actions", "CI/CD", "Automation", "YAML"],
 	},
 	{
+		title: "cover-craft",
+		shortDescription:
+			"Serverless cover image generator powered by Azure Function App and Node Canvas. Users can customize text, colors, and fonts, then export PNGs for posts or social media.",
+		highlights: [
+			"Generate custom cover images in post or square formats with editable text, colors, and fonts.",
+			"Utilizes Node Canvas for dynamic server-side image rendering and PNG generation.",
+			"Responsive and reusable frontend components built with Next.js.",
+			"Serverless backend powered by Azure Function App.",
+			"Integrated CI/CD pipelines with GitHub Actions for testing, build, and deployment automation.",
+		],
+		link: `${MAIN_URL}/cover-craft${README_URL}`,
+		techs: ["TypeScript", "Azure Function App", "Next.js", "Github Actions", "Vitest"],
+	},
+	{
 		title: "school-management-api",
 		shortDescription:
 			"Modular Flask REST API for school records using Azure DB PostgreSQL. Dockerized, tested with Pytest, CI/CD integrated, featuring CRUD, bulk ops, and structured error handling.",
@@ -58,7 +72,7 @@ export const PROJECTS = [
 	{
 		title: "articles-extractor",
 		shortDescription:
-			"📄 Automates collecting article metadata (titles, links, dates) from websites and exports to Google Sheets via API. Built with Python; supports scheduled or manual runs.",
+			"Automates collection of article metadata (title, link, date) from multiple blogs and exports to Google Sheets. Supports scheduled runs via GitHub Actions or manual execution.",
 		highlights: [
 			"Automated web scraping with Python BeautifulSoup.",
 			"Exported structured data directly into Google Sheets via API.",
@@ -75,19 +89,6 @@ export const PROJECTS = [
 			"Raspberry Pi",
 			"GitHub Actions",
 		],
-	},
-	{
-		title: "hacker-news-next",
-		shortDescription:
-			"Using React (Next.js), Redux Toolkit, Vitest: Fetch top 5 stories from REST API on the homepage. Modal links to external sources, comments, and job postings. Browse more on other pages.",
-		highlights: [
-			"Built a Next.js app to retrieve and render real-time Hacker News content using the official API.",
-			"Implemented state management with Redux Toolkit.",
-			"Designed modal-based navigation for seamless UX.",
-			"Tested components with Vitest and Testing Library.",
-		],
-		link: `${MAIN_URL}/hacker-news-next${README_URL}`,
-		techs: ["TypeScript", "React", "Next.js", "Redux", "Testing Library"],
 	},
 	{
 		title: "bubble-tea-api",
