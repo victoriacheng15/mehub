@@ -43,7 +43,7 @@ export const PROJECTS = [
 			"Handles both individual and bulk record updates through unified API routes.",
 			"Dockerized for local development and deployed to Azure Web App with Azure Database for PostgreSQL for production.",
 			"Integrated CI/CD pipelines using GitHub Actions for linting, testing, and validation.",
-			"Includes automated testing with Pytest to ensure code quality and reliability."
+			"Includes automated testing with Pytest to ensure code quality and reliability.",
 		],
 		link: `${MAIN_URL}/school-management-api${README_URL}`,
 		techs: [
