@@ -77,16 +77,16 @@ export const PROJECTS = [
 		],
 	},
 	{
-		title: "articles-extractor",
+		title: "article-extractor",
 		shortDescription:
-			"Automates collection of article metadata (title, link, date) from multiple blogs and exports to Google Sheets. Supports scheduled runs via GitHub Actions or manual execution.",
+			"Serverless ETL pipeline: extracts, transforms, and deduplicates article metadata from multiple sources, exporting results to Google Sheets via scheduled or manual runs.",
 		highlights: [
-			"Supports scraping articles from FreeCodeCamp, GitHub Engineering blog, Substack feeds, and Shopify Engineering blog.",
-			"Dockerized for local development; can run manually for debugging or on a Raspberry Pi via cron job.",
-			"Integrated CI/CD workflow with GitHub Actions to schedule automated scraping (e.g., daily at 06:00 UTC).",
-			"- Logs of scraped data and errors are uploaded as GitHub artifacts, ensuring visibility and reliability.",
+			"Orchestrates a serverless ETL pipeline to extract, transform, and deduplicate articles from FreeCodeCamp, GitHub Engineering, Substack, and Shopify Engineering.",
+			"Exports structured article metadata (title, link, date) to Google Sheets for centralized access and analysis.",
+			"Fully automated scheduling via GitHub Actions; also supports manual runs, Docker, and Raspberry Pi (cron).",
+			"Comprehensive logging and error handling; run logs and results are uploaded as GitHub artifacts for transparency and reliability.",
 		],
-		link: `${MAIN_URL}/articles-extractor${README_URL}`,
+		link: `${MAIN_URL}/article-extractor${README_URL}`,
 		techs: [
 			"Python",
 			"Google Sheets",
