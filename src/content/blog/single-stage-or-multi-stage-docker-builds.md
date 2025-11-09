@@ -43,6 +43,7 @@ ENTRYPOINT ["/app/entrypoint.sh"]
 - Final image may be larger and include unnecessary build artifacts
 
 **My Experience:**  
+
 - Measured build time: ~1.67s  
 - Image contained build tools and cached files, resulting in a larger final image  
 
@@ -104,7 +105,6 @@ For small projects like the School Management API, build speed and image size di
 - Optimizes CI/CD pipelines and deployment efficiency  
 - Encourages better project structure by separating build and runtime concerns  
   
-
 ---
 
 ## Key Learning
