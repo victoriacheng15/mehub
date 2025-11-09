@@ -17,13 +17,13 @@ export const PROJECTS = [
 	{
 		title: "cover-craft",
 		shortDescription:
-			"Serverless cover image generator powered by Azure Function App and Node Canvas. Users can customize text, colors, and fonts, then export PNGs for posts or social media.",
+			"Serverless cover image generator with Azure Functions and Node Canvas. Customize text, colors, fonts, export PNGs, and track user analytics in MongoDB.",
 		highlights: [
-			"Generate custom cover images in post or square formats with editable text, colors, and fonts.",
-			"Utilizes Node Canvas for dynamic server-side image rendering and PNG generation.",
-			"Responsive and reusable frontend components built with Next.js.",
+			"Node Canvas for dynamic server-side image rendering and PNG export.",
+			"Responsive, reusable frontend components with Next.js.",
 			"Serverless backend powered by Azure Function App.",
-			"Integrated CI/CD pipelines with GitHub Actions for testing, build, and deployment automation.",
+			"MongoDB-based user analytics tracking to visualize engagement.",
+			"CI/CD pipelines via GitHub Actions for testing, build, and deployment automation.",
 		],
 		link: `${MAIN_URL}/cover-craft${README_URL}`,
 		techs: [
@@ -32,6 +32,7 @@ export const PROJECTS = [
 			"Next.js",
 			"Github Actions",
 			"Vitest",
+			"MongoDB",
 		],
 	},
 	{
@@ -95,18 +96,5 @@ export const PROJECTS = [
 			"Raspberry Pi",
 			"GitHub Actions",
 		],
-	},
-	{
-		title: "bubble-tea-api",
-		shortDescription:
-			"Node.js, Express, and MongoDB drive an app where users submit favorite bubble tea combos. The leaderboard ranks popularity, catering to enthusiasts for fresh drink choices.",
-		highlights: [
-			"Built a RESTful API with Node.js and Express following MVC architecture.",
-			"Designed MongoDB schemas for flexible storage of user-submitted combos and leaderboard rankings.",
-			"Implemented leaderboard logic to sort drinks by popularity based on submission volume.",
-			"Enabled Read (view combos/rankings) and Create (submit new combos) operations for core user interactions.",
-		],
-		link: `${MAIN_URL}/bubble-tea-api${README_URL}`,
-		techs: ["Node.js", "Express", "MongoDB"],
 	},
 ];
