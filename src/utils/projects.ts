@@ -60,7 +60,7 @@ export const PROJECTS = [
 	{
 		title: "cprg303-expense-tracker",
 		shortDescription:
-			"📊 Expense Tracker App – Log in with a magic link, manage transactions, view spending trends with charts, and update your profile. Built with Supabase & React Native for an academic project.",
+			"Expense Tracker App – Log in with a magic link, manage transactions, view spending trends with charts, and update your profile. Built with Supabase & React Native for an academic project.",
 		highlights: [
 			"Secure authentication with magic link login via Supabase Auth.",
 			"Visualize spending trends with interactive charts.",
@@ -80,12 +80,12 @@ export const PROJECTS = [
 	{
 		title: "article-extractor",
 		shortDescription:
-			"Serverless ETL pipeline: extracts, transforms, and deduplicates article metadata from multiple sources, exporting results to Google Sheets via scheduled or manual runs.",
+			"Serverless ETL pipeline: extracts, transforms, and deduplicates article metadata from multiple sources, exporting to Google Sheets with GitHub Actions and Jenkins.",
 		highlights: [
 			"Orchestrates a serverless ETL pipeline to extract, transform, and deduplicate articles from FreeCodeCamp, GitHub Engineering, Substack, and Shopify Engineering.",
 			"Exports structured article metadata (title, link, date) to Google Sheets for centralized access and analysis.",
-			"Fully automated scheduling via GitHub Actions; also supports manual runs, Docker, and Raspberry Pi (cron).",
-			"Comprehensive logging and error handling; run logs and results are uploaded as GitHub artifacts for transparency and reliability.",
+			"Automated scheduling via GitHub Actions; supports manual runs, Docker, and Raspberry Pi (cron).",
+			"Comprehensive logging and error handling; run logs and results uploaded as GitHub artifacts for transparency and reliability.",
 		],
 		link: `${MAIN_URL}/article-extractor${README_URL}`,
 		techs: [
@@ -94,6 +94,7 @@ export const PROJECTS = [
 			"Docker",
 			"Bash Scripting",
 			"Raspberry Pi",
+			"Jenkins",
 			"GitHub Actions",
 		],
 	},
