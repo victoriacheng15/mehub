@@ -20,6 +20,7 @@ export const SKILLS = [
 	"Docker",
 	"Linux",
 	"Bash",
+	"Jenkins",
 	"GitHub Actions",
 	"Ansible",
 	"Azure",
