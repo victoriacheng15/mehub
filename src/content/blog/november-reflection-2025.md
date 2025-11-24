@@ -89,7 +89,7 @@ With the backend stable, I moved to the frontend. I even sketched the layout usi
 
 This upfront planning felt new to me and effective. Knowing the shape of the system early made the code easier to write, the CI/CD pipeline simpler to configure, and the whole project less chaotic. It turns out that a little design before development can go a long way.
 
-You can check out the [repo](https://github.com/victoriacheng15/cover-craft) on GitHub! 
+You can check out the [repo](https://github.com/victoriacheng15/cover-craft) on GitHub!
 
 ---
 
