@@ -3,7 +3,6 @@ title: "November Reflection 2025"
 description: "Built a cover image generator with Azure Functions to learn serverless—explored cold starts, CI/CD, and planning-first development."
 date: 2025-11-25
 tags: ["reflection"]
-draft: true
 ---
 
 ## Shipping Serverless
