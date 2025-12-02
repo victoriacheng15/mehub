@@ -3,7 +3,6 @@ title: "What I Learned About Python Decorators?"
 description: "A simple explanation of Python decorators and how they helped me remove repetitive error handling across multiple API routes in my project."
 date: 2025-12-02
 tags: ["python"]
-draft: true
 ---
 
 ## What Is a Decorator?
