@@ -28,13 +28,7 @@ export const PROJECTS = [
 		shortDescription:
 			"Fully automated reading tracker—zero infra, 100% GitHub. Go + Python pipeline with interactive analytics from Shopify, Stripe, and GitHub.",
 		link: `${MAIN_URL}/personal-reading-analytics-dashboard${README_URL}`,
-		techs: [
-			"go",
-			"Python",
-			"Google Sheets",
-			"Docker",
-			"GitHub Actions",
-		],
+		techs: ["go", "Python", "Google Sheets", "Docker", "GitHub Actions"],
 	},
 	{
 		title: "school-management-api",
