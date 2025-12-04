@@ -10,7 +10,7 @@
     "astro": "astro",
     "lint": "biome lint ./src",
     "lint:md": "npx markdownlint-cli --fix src/**/*.md *.md",
-    "format": "biome format ./src --write && prettier -w ./src/**/*.astro",
+    "format": "biome format ./src/**/*.ts --write && prettier -w ./src/**/*.astro",
     "publish": "./scripts/publish_post.sh"
   },
   "dependencies": {

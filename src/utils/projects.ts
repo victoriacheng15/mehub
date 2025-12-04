@@ -24,6 +24,13 @@ export const PROJECTS = [
 		],
 	},
 	{
+		title: "personal-reading-analytics-dashboard",
+		shortDescription:
+			"Fully automated reading tracker—zero infra, 100% GitHub. Go + Python pipeline with interactive analytics from Shopify, Stripe, and GitHub.",
+		link: `${MAIN_URL}/personal-reading-analytics-dashboard${README_URL}`,
+		techs: ["go", "Python", "Google Sheets", "Docker", "GitHub Actions"],
+	},
+	{
 		title: "school-management-api",
 		shortDescription:
 			"Modular Flask REST API for school records using Azure DB PostgreSQL. Dockerized, tested with Pytest, CI/CD integrated, featuring CRUD, bulk ops, and structured error handling.",
@@ -36,21 +43,6 @@ export const PROJECTS = [
 			"Docker",
 			"GitHub Actions",
 			"Pytest",
-		],
-	},
-	{
-		title: "article-extractor",
-		shortDescription:
-			"Serverless ETL pipeline: extracts, transforms, and deduplicates article metadata from multiple sources, exporting to Google Sheets with GitHub Actions and Jenkins.",
-		link: `${MAIN_URL}/article-extractor${README_URL}`,
-		techs: [
-			"Python",
-			"Google Sheets",
-			"Docker",
-			"Bash Scripting",
-			"Raspberry Pi",
-			"Jenkins",
-			"GitHub Actions",
 		],
 	},
 ];
