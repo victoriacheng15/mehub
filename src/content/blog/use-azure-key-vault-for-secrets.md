@@ -98,6 +98,7 @@ def get_secret_with_fallback(
             f"Could not retrieve secret '{secret_name}' from Key Vault or environment"
         )
 ```
+
 ---
 
 ## Final Thoughts
