@@ -1,6 +1,6 @@
 ---
 title: "Trying Azure Container Registry"
-description: ""
+description: "Learn how I used Azure Container Registry to securely store Docker images from a personal project, with GitHub Actions CI and zero hardcoded secrets."
 date: 2025-12-16
 tags: ["azure, cloud"]
 draft: true
@@ -12,7 +12,7 @@ Azure Container Registry (ACR) is a managed, private Docker registry service in 
 
 Think of it like a personal warehouse for your Docker images: only you (or your team) can access it, and it lives right inside your Azure environment.
 
-###  I First Encountered ACR in Class
+### I First Encountered ACR in Class
 
 I first encountered Azure Container Registry in a recent academic project. At the time, it was a requirement: “Use ACR to store your container images.” I followed the steps, got it working, and moved on.
 
@@ -82,11 +82,13 @@ Check out this [repo](https://github.com/Azure/login) on GitHub for how to get c
 ---
 
 ## A Side Discovery: GHCR
+
 While reading about container registries, I also stumbled upon GitHub Container Registry (GHCR). It’s neat—especially if you’re already using GitHub—but I didn’t switch. My goal wasn’t to find the “best” registry, but to understand ACR better on my own terms.
 
 ---
 
 ## Final Thoughts
+
 Using ACR in class felt like checking a box.
 Using it for my own project? That’s when it clicked.
 
