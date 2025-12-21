@@ -63,7 +63,7 @@ def read_csv_from_blob(blob_name: str, container_name: str = "datasets") -> pd.D
     return pd.read_csv(io.BytesIO(blob_data))
 ```
 
-It relies on the `AZURE_STORAGE_CONNECTION_STRING` environment variable—stored in `.env ` during development.
+It relies on the `AZURE_STORAGE_CONNECTION_STRING` environment variable—stored in `.env` during development.
 
 ---
 
