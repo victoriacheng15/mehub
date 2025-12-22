@@ -11,39 +11,46 @@ Welcome to my personal website! This site serves as a hub for my portfolio, blog
 
 ## Built With
 
-![Astro](https://img.shields.io/badge/Astro-BC52EE.svg?style=for-the-badge&logo=Astro&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000.svg?style=for-the-badge&logo=Vercel&logoColor=white) ![Bash Script](https://img.shields.io/badge/GNU%20Bash-4EAA25.svg?style=for-the-badge&logo=GNU-Bash&logoColor=white)
+![Astro](https://img.shields.io/badge/Astro-BC52EE.svg?style=for-the-badge&logo=Astro&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000.svg?style=for-the-badge&logo=Vercel&logoColor=white)
+![Bash Script](https://img.shields.io/badge/GNU%20Bash-4EAA25.svg?style=for-the-badge&logo=GNU-Bash&logoColor=white)
 
-## 🚀 Tooling & DevOps Practices
+## 🤖 Automation-First Publishing Workflow
 
-Automated tools and scripts manage routine tasks for code quality, deployment, and content updates—making development faster, more reliable, and less manual.
+This site is maintained through a **Git-native, mostly automated content pipeline** — designed for consistency, safety, and minimal manual work. All changes are validated and previewed, then merged with **human oversight** before going live.
 
-- **Code Quality**:
-  - Enforced with [Biome](https://biomejs.dev/) for formatting and linting
-  - Uses [markdownlint](https://github.com/DavidAnson/markdownlint) for consistent Markdown style
-**GitHub Actions Workflows**:
-  - `preview.yml`: Deploys a preview build to Vercel for pull requests
-  - `deploy.yml`: Deploys the production site to Vercel on push to main
-  - `format.yml`: Enforces code formatting and linting using Biome
-  - `label-based-merge.yml`: Automatically merges pull requests when labeled
-  - `markdownlint.yml`: Checks Markdown files for style consistency
-  - `sync-blog-post.yml`: Adds draft blog posts from external sources to this repository
-  - `publish-blog-post.yml`: Publishes blog posts on schedule
-- **Bash Workflow Scripts**:
-  - `sync_blog_post.sh`: Syncs blog posts between sources or branches
-  - `publish_blog_post.sh`: Finds posts with `draft: true`, checks if the publish day matches the current UTC date, and removes the draft flag
+### ✅ Code & Content Quality  
 
-## How to Explore
+- **Formatting & linting**: Enforced automatically via [Biome](https://biomejs.dev/) (TypeScript, JavaScript, CSS)  
+- **Markdown consistency**: Validated with [markdownlint](https://github.com/DavidAnson/markdownlint)
 
-Visit the live site: [https://victoriacheng15.vercel.app/](https://victoriacheng15.vercel.app/)
+### 🔄 GitHub Actions Workflows  
 
-## Development
+**Content Automation** (blog-specific):  
 
-To run this project locally:
+- `sync-blog-post.yml` → Pulls draft posts from private sources  
+- `publish-blog-post.yml` → Auto-publishes on scheduled UTC date  
 
-1. Clone the repository.
-2. Install dependencies using `npm install`.
-3. Run the development server with `npm run dev`.
-4. Open `http://localhost:3000` in your browser.
+**CI/CD & General Automation**:  
+
+- `preview.yml` → Vercel preview for every pull request  
+- `deploy.yml` → Production deploy on merge to `main`  
+- `format.yml` → Runs Biome formatting and linting  
+- [`markdownlint.yml`](https://github.com/victoriacheng15hub/platform-actions) → Checks Markdown files for style violations  
+- [`label-based-merge.yml`](https://github.com/victoriacheng15hub/platform-actions) → Auto-merges PRs when labeled (e.g., for Dependabot updates — reduces manual clicks while preserving control)
+
+### 🧠 Human-in-the-Loop  
+
+I **manually review all blog content** before merging — via GitHub UI, CLI, or label — to verify formatting, clarity, and intent. Only low-risk changes (like dependency updates) are auto-merged after passing all checks.
+
+### ⚙️ Supporting Bash Scripts  
+
+- `sync_blog_post.sh` → Syncs content across repositories or branches  
+- `publish_blog_post.sh` → Finds posts with `draft: true` and removes the flag **only if the current UTC date matches `publishDate`**
+
+> **Philosophy**: *Automate repetition. Preserve judgment.*
 
 ## Credits
 
