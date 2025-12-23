@@ -3,7 +3,6 @@ title: "Trying Azure Blob Storage"
 description: "How I loaded CSV data from Azure Blob Storage in a school project—with local fallback and no hardcoded secrets."
 date: 2025-12-23
 tags: ["azure, cloud"]
-draft: true
 ---
 
 ## What is Azure Blob Storage?
