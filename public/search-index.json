@@ -1,5 +1,99 @@
 [
   {
+    "title": "Trying Azure Blob Storage",
+    "slug": "trying-azure-blob-storage",
+    "summary": "How I loaded CSV data from Azure Blob Storage in a school project—with local fallback and no hardcoded secrets.",
+    "tags": [
+      "azure",
+      "cloud"
+    ],
+    "date": "2025-12-23",
+    "draft": false
+  },
+  {
+    "title": "Trying Azure Container Registry",
+    "slug": "trying-azure-container-registry",
+    "summary": "Learn how I used Azure Container Registry to securely store Docker images from a personal project, with GitHub Actions CI and zero hardcoded secrets.",
+    "tags": [
+      "azure",
+      "cloud"
+    ],
+    "date": "2025-12-16",
+    "draft": false
+  },
+  {
+    "title": "Use Azure Key Vault for Secrets",
+    "slug": "use-azure-key-vault-for-secrets",
+    "summary": "Securely manage app secrets in Azure using Key Vault—store credentials like GitHub OAuth IDs safely and handle local development with smart fallbacks.",
+    "tags": [
+      "azure",
+      "cloud"
+    ],
+    "date": "2025-12-09",
+    "draft": false
+  },
+  {
+    "title": "What I Learned About Python Decorators?",
+    "slug": "what-i-learned-about-python-decorators",
+    "summary": "A simple explanation of Python decorators and how they helped me remove repetitive error handling across multiple API routes in my project.",
+    "tags": [
+      "python"
+    ],
+    "date": "2025-12-02",
+    "draft": false
+  },
+  {
+    "title": "November Reflection 2025",
+    "slug": "november-reflection-2025",
+    "summary": "Built a cover image generator with Azure Functions to learn serverless—explored cold starts, CI/CD, and planning-first development.",
+    "tags": [
+      "reflection"
+    ],
+    "date": "2025-11-25",
+    "draft": false
+  },
+  {
+    "title": "Cloud - What Is Fault Tolerance?",
+    "slug": "cloud-what-is-fault-tolerance",
+    "summary": "Learn what fault tolerance means in cloud computing, how it works through redundancy and recovery, and why it’s key to keeping apps online even when systems fail.",
+    "tags": [
+      "cloud"
+    ],
+    "date": "2025-11-18",
+    "draft": false
+  },
+  {
+    "title": "Single-Stage or Multi-Stage Docker Builds",
+    "slug": "single-stage-or-multi-stage-docker-builds",
+    "summary": "Explore single-stage vs multi-stage Docker builds with a small Flask API, learning differences in image size, build speed, and container optimization.",
+    "tags": [
+      "docker"
+    ],
+    "date": "2025-11-11",
+    "draft": false
+  },
+  {
+    "title": "🌩️ Cloud: What Is High Availability",
+    "slug": "cloud-what-is-high-availability",
+    "summary": "Learn High Availability in the cloud: how redundancy, load balancing, and failover keep your applications online with minimal downtime.",
+    "tags": [
+      "cloud"
+    ],
+    "date": "2025-11-04",
+    "draft": false
+  },
+  {
+    "title": "October Reflection 2025",
+    "slug": "october-reflection-2025",
+    "summary": "Reflections on evolving a Flask API from SQLite MVP to PostgreSQL with Docker, Azure cloud deployment, feature flags, and DevOps workflows.",
+    "tags": [
+      "reflection",
+      "python"
+    ],
+    "date": "2025-10-28",
+    "draft": false
+  },
+  {
     "title": "🌩️ Cloud – Elasticity vs Scalability",
     "slug": "cloud-elasticity-vs-scalability",
     "summary": "Learn the key differences between cloud scalability and elasticity, with clear examples and visual timelines showing how resources adjust over time.",
