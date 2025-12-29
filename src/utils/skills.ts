@@ -2,12 +2,10 @@ export const SKILLS = [
 	// Core languages
 	"Python",
 	"Go",
-	"Ruby",
 	"TypeScript",
 	"JavaScript",
 	// Backend & frameworks
 	"Node.js",
-	"Express",
 	"Flask",
 	// Frontend & frameworks
 	"React",
@@ -17,12 +15,11 @@ export const SKILLS = [
 	"PostgreSQL",
 	"MongoDB",
 	// Platform & DevOps & cloud
+	"Grafana",
 	"Docker",
 	"Linux",
 	"Bash",
-	"Jenkins",
 	"GitHub Actions",
-	"Ansible",
 	"Azure",
 ];
 

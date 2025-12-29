@@ -1,8 +1,8 @@
 ---
-import BaseLayout from "./BaseLayout.astro";
+import type { CollectionEntry } from "astro:content";
 import PostDate from "@/components/PostDate";
 import PostTags from "@/components/PostTags";
-import type { CollectionEntry } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
 
 interface Props {
 	post: CollectionEntry<"blog">;

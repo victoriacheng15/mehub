@@ -1,6 +1,6 @@
 import rss from "@astrojs/rss";
 import { siteConfig } from "@/config";
-import { getAllPosts, filterPublishedPosts } from "@/utils";
+import { filterPublishedPosts, getAllPosts } from "@/utils";
 
 export async function GET(context) {
 	const collection = "blog";
