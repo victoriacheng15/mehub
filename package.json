@@ -10,7 +10,7 @@
     "astro": "astro",
     "lint": "biome lint ./src",
     "lint:md": "npx markdownlint-cli --fix src/**/*.md *.md",
-    "check": "biome check --write ./src",
+    "check": "biome check --write ./src/**/*.ts",
     "format": "biome format --write ./src/**/*.ts && prettier -w ./src/**/*.astro",
     "generate-search-index": "npx tsx scripts/generate-search-index.ts"
   },
