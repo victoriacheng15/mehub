@@ -3,11 +3,16 @@ const README_URL = "#readme";
 
 export const PROJECTS = [
 	{
-		title: "platform-actions",
+		title: "observability-platform",
 		shortDescription:
-			"My personal platform tooling — reusable GitHub Actions for automation, testing, and deployment.",
-		link: `${MAIN_URL}hub/platform-actions${README_URL}`,
-		techs: ["GitHub Actions", "CI/CD", "Automation", "YAML"],
+			"Self-hosted observability platform collecting system and application metrics into Postgres, visualized in Grafana with automated backups and cron-driven Go collectors.",
+		link: `${MAIN_URL}/observability-platform${README_URL}`,
+		techs: [
+			"Go",
+			"Grafana",
+			"PostgreSQL",
+			"Docker",
+		],
 	},
 	{
 		title: "cover-craft",
@@ -26,23 +31,8 @@ export const PROJECTS = [
 	{
 		title: "personal-reading-analytics-dashboard",
 		shortDescription:
-			"Fully automated reading tracker—zero infra, 100% GitHub. Go + Python pipeline with interactive analytics from Shopify, Stripe, and GitHub.",
+			"Fully automated reading tracker—zero infra, 100% GitHub. Go + Python pipeline with interactive analytics from Shopify, Stripe, and GitHub blogs.",
 		link: `${MAIN_URL}/personal-reading-analytics-dashboard${README_URL}`,
 		techs: ["go", "Python", "Google Sheets", "Docker", "GitHub Actions"],
-	},
-	{
-		title: "school-management-api",
-		shortDescription:
-			"Modular Flask REST API for school records using Azure DB PostgreSQL. Dockerized, tested with Pytest, CI/CD integrated, featuring CRUD, bulk ops, and structured error handling.",
-		link: `${MAIN_URL}/school-management-api${README_URL}`,
-		techs: [
-			"Python",
-			"Flask",
-			"PostgreSQL",
-			"Azure",
-			"Docker",
-			"GitHub Actions",
-			"Pytest",
-		],
 	},
 ];
