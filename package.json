@@ -11,7 +11,7 @@
     "lint": "biome lint ./src",
     "lint:md": "npx markdownlint-cli --fix src/**/*.md *.md",
     "check": "biome check --write ./src",
-    "format": "biome format --write ./src/**/*.ts --write && prettier -w ./src/**/*.astro",
+    "format": "biome format --write ./src/**/*.ts && prettier -w ./src/**/*.astro",
     "generate-search-index": "npx tsx scripts/generate-search-index.ts"
   },
   "dependencies": {

@@ -7,12 +7,7 @@ export const PROJECTS = [
 		shortDescription:
 			"Self-hosted observability platform collecting system and application metrics into Postgres, visualized in Grafana with automated backups and cron-driven Go collectors.",
 		link: `${MAIN_URL}/observability-platform${README_URL}`,
-		techs: [
-			"Go",
-			"Grafana",
-			"PostgreSQL",
-			"Docker",
-		],
+		techs: ["Go", "Grafana", "PostgreSQL", "Docker"],
 	},
 	{
 		title: "cover-craft",
