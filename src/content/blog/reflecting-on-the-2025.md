@@ -3,7 +3,6 @@ title: "Reflecting on the 2025"
 description: "How switching to a planning-first approach in 2025 helped me stop wandering in code and finally finish my side projects with purpose."
 date: 2025-12-30
 tags: ["reflection"]
-draft: true
 ---
 
 ## Planning First: How I Finally Finished What I Started in 2025
