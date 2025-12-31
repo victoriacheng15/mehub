@@ -3,10 +3,10 @@ const README_URL = "#readme";
 
 export const PROJECTS = [
 	{
-		title: "observability-platform",
+		title: "observability-hub",
 		shortDescription:
-			"Self-hosted observability platform collecting system and application metrics into Postgres, visualized in Grafana with automated backups and cron-driven Go collectors.",
-		link: `${MAIN_URL}/observability-platform${README_URL}`,
+			"Self-hosted observability hub collecting system and application metrics into Postgres, visualized in Grafana with automated backups and cron-driven Go collectors.",
+		link: `${MAIN_URL}/observability-hub${README_URL}`,
 		techs: ["Go", "Grafana", "PostgreSQL", "Docker"],
 	},
 	{
@@ -16,11 +16,11 @@ export const PROJECTS = [
 		link: `${MAIN_URL}/cover-craft${README_URL}`,
 		techs: [
 			"TypeScript",
-			"Azure Function App",
+			"Azure Functions",
 			"Next.js",
-			"Github Actions",
+			"GitHub Actions",
 			"Vitest",
-			"MongoDB",
+			"MongoDB Atlas",
 		],
 	},
 	{
@@ -28,6 +28,6 @@ export const PROJECTS = [
 		shortDescription:
 			"Fully automated reading tracker—zero infra, 100% GitHub. Go + Python pipeline with interactive analytics from Shopify, Stripe, and GitHub blogs.",
 		link: `${MAIN_URL}/personal-reading-analytics-dashboard${README_URL}`,
-		techs: ["go", "Python", "Google Sheets", "Docker", "GitHub Actions"],
+		techs: ["Go", "Python", "Google Sheets", "Docker", "GitHub Actions"],
 	},
 ];
