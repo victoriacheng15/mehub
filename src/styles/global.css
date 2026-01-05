@@ -1,6 +1,61 @@
 @import "tailwindcss";
 @config "../../tailwind.config.mjs";
 
+@layer base {
+	/* Typography Defaults - Brighter/Personal Theme */
+	h1 {
+		@apply text-4xl font-bold text-secondary-400 my-8;
+	}
+
+	h2 {
+		@apply text-2xl font-bold text-secondary-300;
+	}
+
+	h3 {
+		@apply text-xl font-semibold text-secondary-300 my-4;
+	}
+
+	p {
+		@apply text-lg leading-8 text-primary-100;
+	}
+
+	/* Highlighted text within paragraphs */
+	p span {
+		@apply text-secondary-200 font-semibold;
+	}
+
+	time {
+		@apply text-sm text-primary-100;
+	}
+
+	a {
+		@apply transition-colors duration-300;
+	}
+}
+
+@layer components {
+	/* Card Component - Single Source of Truth */
+	.card {
+		@apply shadow-secondary-900 dark:bg-primary-900 border-primary-100 dark:border-primary-700 
+		       rounded-md border p-6 shadow-md transition-transform duration-300 
+		       hover:-translate-y-2 hover:shadow-lg flex flex-col gap-2;
+	}
+
+	/* Card Title Links */
+	.card-link {
+		@apply text-secondary-600 dark:text-secondary-300 
+		       hover:text-secondary-500 dark:hover:text-secondary-100 
+		       transition-colors duration-300;
+	}
+
+	/* Unified Tag Style */
+	.tag {
+		@apply bg-secondary-900 hover:bg-secondary-800 
+		       rounded-full px-3 py-1 text-sm text-white 
+		       transition-colors duration-300;
+	}
+}
+
 svg {
 	margin: 0 auto;
 	background-color: #ffdcd1;

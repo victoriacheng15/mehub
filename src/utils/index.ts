@@ -1,6 +1,5 @@
 import { archivedPostsByYear, archivedYears } from "./archivedPosts";
-import { currentYear, formatDate } from "./date";
-import { navHeader, navItems } from "./navItem";
+import { formatDate } from "./date";
 import {
 	filterPublishedPosts,
 	getAllPosts,
@@ -10,13 +9,9 @@ import {
 	getPostsByTag,
 	sortPostsByDate,
 } from "./posts";
-import { PROJECTS } from "./projects";
-import { formatSkillPath, SKILLS } from "./skills";
-import { formatSocialName, SOCIALS } from "./socialLinks";
 
 export {
 	formatDate,
-	currentYear,
 	getAllPosts,
 	filterPublishedPosts,
 	sortPostsByDate,
@@ -24,13 +19,6 @@ export {
 	getAllTags,
 	getAllSortedPosts,
 	getAllTheTags,
-	SKILLS,
-	formatSkillPath,
-	navItems,
-	navHeader,
-	PROJECTS,
-	SOCIALS,
-	formatSocialName,
 	archivedPostsByYear,
 	archivedYears,
 };

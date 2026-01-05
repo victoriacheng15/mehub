@@ -1,0 +1,29 @@
+---
+import BaseLayout from "@/layouts/BaseLayout";
+import { Image } from "astro:assets";
+import { siteConfig } from "@/config";
+
+const title = "About";
+const description = "My journey from packaging engineering to software development.";
+const { about } = siteConfig;
+---
+
+<BaseLayout title={title} description={description}>
+	<section>
+		<h1>About Me</h1>
+
+		<div class="mb-8 flex justify-center">
+			<Image
+				src="/avatar.png"
+				alt="Victoria Cheng"
+				width={200}
+				height={200}
+				class="border-secondary-400 rounded-full border-4 object-cover shadow-lg"
+			/>
+		</div>
+
+		<div class="grid gap-6">
+			{about?.paragraphs.map((paragraph) => <p set:html={paragraph} />)}
+		</div>
+	</section>
+</BaseLayout>

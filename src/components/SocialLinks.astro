@@ -1,13 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import { formatSocialName, SOCIALS } from "@/utils";
+import { siteConfig, formatSocialName } from "@/config";
 
 const SIZE = 35;
 ---
 
 <div class="flex flex-wrap gap-6">
 	{
-		SOCIALS.map(({ name, href }) => (
+		siteConfig.socials.map(({ name, href }) => (
 			<a
 				href={href}
 				aria-label={name}

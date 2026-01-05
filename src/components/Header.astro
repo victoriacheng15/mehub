@@ -1,6 +1,5 @@
 ---
-import { siteConfig } from "@/config";
-import { navHeader } from "@/utils";
+import { siteConfig, getNavHeader } from "@/config";
 import SocialLinks from "./SocialLinks.astro";
 
 interface Props {
@@ -9,31 +8,40 @@ interface Props {
 
 const { title } = Astro.props;
 const { title: siteTitle, name, slogan, description } = siteConfig;
+const currentPath = Astro.url.pathname;
+const navItems = getNavHeader();
 ---
 
 <header class="py-6">
 	<nav class="py-6">
 		<ul class="flex flex-wrap items-center justify-center gap-4 md:gap-6 lg:gap-8">
 			{
-				navHeader.map(({ href, text }) => (
-					<li>
-						<a
-							href={href}
-							class="hover:bg-secondary-900 rounded-lg p-2 text-lg duration-300 ease-in-out"
-						>
-							{text}
-						</a>
-					</li>
-				))
+				navItems.map(({ href, text }) => {
+					const isActive = currentPath === href || (href !== "/" && currentPath.startsWith(href));
+					return (
+						<li>
+							<a
+								href={href}
+								class:list={[
+									"rounded-lg p-2 text-lg duration-300 ease-in-out",
+									isActive ? "bg-secondary-900 text-white" : "hover:bg-secondary-900",
+								]}
+								aria-current={isActive ? "page" : undefined}
+							>
+								{text}
+							</a>
+						</li>
+					);
+				})
 			}
 		</ul>
 	</nav>
 	{
 		title === siteTitle && (
 			<div class="grid gap-6 py-4">
-				<h1 class="text-secondary-400 text-3xl font-extrabold tracking-wide">{name}</h1>
-				<h2 class="text-secondary-200 text-xl">{slogan}</h2>
-				<p class="text-primary-100 text-lg leading-8">{description}</p>
+				<h1>{name}</h1>
+				<h2 class="text-secondary-200">{slogan}</h2>
+				<p>{description}</p>
 				<SocialLinks />
 			</div>
 		)
