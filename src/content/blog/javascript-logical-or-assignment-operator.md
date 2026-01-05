@@ -2,7 +2,7 @@
 title: "JavaScript - Logical OR Assignment Operator"
 description: "Explore the use of JavaScript’s logical OR assignment operator with various data types and understand its real-world applications."
 date: 2023-11-29
-tags: [javascript]
+tags: ["javascript"]
 ---
 
 ## What is Logical OR Assignment?

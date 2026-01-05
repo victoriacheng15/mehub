@@ -2,7 +2,7 @@
 title: "Python Secret Double Underscore Tricks"
 description: "Learn Python dunder methods by building a Coffee class step-by-step. Master init, str, repr, eq & len with clear examples. Perfect for beginners!"
 date: 2025-06-10
-tags: [python]
+tags: ["python"]
 ---
 
 ## **Dunder Methods Explained**

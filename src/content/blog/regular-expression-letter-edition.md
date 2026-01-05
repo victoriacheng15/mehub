@@ -2,7 +2,7 @@
 title: Regular Expression - Letter Edition
 description: "Regex matches string chars with slashes and flags like 'g' (global) and 'i' (ignore case). Blog shows finding capitals, vowels and letters."
 date: 2022-05-10
-tags: [javascript]
+tags: ["javascript"]
 ---
 
 ## 😬 What is Regular Expression? 😬

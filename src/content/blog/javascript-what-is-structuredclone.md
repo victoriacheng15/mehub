@@ -2,7 +2,7 @@
 title: JavsScript - What is StructuredClone?
 description: "Shallow vs. deep copy in objects: shallow copies reference, deep copies the object. Use reference for shallow, recursively duplicate for deep copy."
 date: 2023-02-01
-tags: [javascript]
+tags: ["javascript"]
 ---
 
 ## What is structuredClone()?

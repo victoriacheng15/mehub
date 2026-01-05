@@ -2,7 +2,7 @@
 title: "Learning SQL: DELETE"
 description: "Learn how to use the SQL DELETE clause to remove records from a table. Master its syntax, apply conditions, and handle constraints to manage data effectively."
 date: 2024-12-24
-tags: [sql]
+tags: ["backend"]
 ---
 
 ## What is the DELETE Clause?

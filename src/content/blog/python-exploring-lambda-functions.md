@@ -2,7 +2,7 @@
 title: "Python - Exploring Lambda Functions"
 description: "Discover Python lambda functions! Learn their syntax, benefits, and examples, including using lambdas without arguments, to enhance your coding skills."
 date: 2024-07-23
-tags: [python]
+tags: ["python"]
 ---
 
 ## Introduction to Lambda Functions in Python

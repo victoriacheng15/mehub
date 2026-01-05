@@ -2,7 +2,7 @@
 title: "TypeScript Utility Types - ReturnType"
 description: "Empower your TypeScript coding with ReturnType utility. Dive into examples for sharper function return type inference and fortified type safety."
 date: 2024-02-20
-tags: [typescript]
+tags: ["typescript"]
 ---
 
 ## What is ReturnType?

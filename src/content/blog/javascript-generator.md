@@ -2,7 +2,7 @@
 title: "JavaScript - Generator"
 description: "JavaScript generators: Craft pausable sequences with yield. Perfect for async tasks & data manipulation."
 date: 2023-08-16
-tags: [javascript]
+tags: ["javascript"]
 ---
 
 ## What is Generator?

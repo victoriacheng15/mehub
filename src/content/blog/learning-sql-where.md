@@ -2,7 +2,7 @@
 title: "Learning SQL: WHERE"
 description: "Learn how to filter data using the SQL WHERE clause with operators like IN, LIKE, and more. Master combining conditions with AND and OR for efficient queries."
 date: 2024-10-01
-tags: [sql]
+tags: ["backend"]
 ---
 
 ## What is the WHERE Clause?

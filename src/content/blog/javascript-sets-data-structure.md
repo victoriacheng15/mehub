@@ -2,7 +2,7 @@
 title: JavaScript - Sets Data Structure
 description: "JS Set stores unique values of any type, removes array duplicates. Check isograms using Set size. Ignore case by converting to lowercase first"
 date: 2022-05-17
-tags: [javascript]
+tags: ["javascript"]
 ---
 
 ## 🤔 Set in JavaScript 🤔

@@ -2,7 +2,7 @@
 title: "Empower Your Journey with the 7 Highly Effective Habits"
 description: "Optimize your life with 'The 7 Habits of Highly Effective People.' Transformative insights for personal and professional success. Empower your journey now!"
 date: 2024-02-03
-tags: [book]
+tags: ["growth"]
 ---
 
 ## What is the 7 Habits of Highly Effective People book?

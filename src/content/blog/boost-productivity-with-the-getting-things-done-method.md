@@ -2,7 +2,7 @@
 title: "Boost Productivity with the Getting Things Done Method"
 description: "Discover how to boost your productivity with the Getting Things Done method. Learn actionable strategies to organize your work and reduce stress."
 date: 2023-12-02
-tags: [book]
+tags: ["growth"]
 ---
 
 ## What is the Getting Things Done book?

@@ -2,7 +2,7 @@
 title: Exploring JavaScript Reduce Function
 description: "The reduce function is one of the built-in methods in JS that allow you to transform an array into a single value by iterating over each element in the array."
 date: 2023-02-15
-tags: [javascript]
+tags: ["javascript"]
 ---
 
 ## What is reduce()?

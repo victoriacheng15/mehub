@@ -2,7 +2,7 @@
 title: "Make Time - Conquer Busyness, End Distractions"
 description: "Discover effective strategies from the Make Time book by Jake Knapp and John Zeratsky to reduce distractions and stay focused on what matters."
 date: 2024-06-29
-tags: [book]
+tags: ["growth"]
 ---
 
 ## What is the Make Time Book?

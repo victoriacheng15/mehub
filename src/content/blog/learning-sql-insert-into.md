@@ -2,7 +2,7 @@
 title: "Learning SQL: INSERT INTO"
 description: "Learn the SQL INSERT INTO statement to add single or multiple rows to a table, insert into specific columns, and handle constraints for efficient data entry."
 date: 2024-11-19
-tags: [sql]
+tags: ["backend"]
 ---
 
 ## What is INSERT INTO Clause?

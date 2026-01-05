@@ -2,7 +2,7 @@
 title: "Exploring the Python OS Module"
 description: "earn how to use Python's os module for file handling, directory management, path manipulation, and environment variables. Explore practical examples and tips."
 date: 2024-09-03
-tags: [python]
+tags: ["python"]
 ---
 
 ## Intro to Python `os` Module

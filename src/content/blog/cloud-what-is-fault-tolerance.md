@@ -2,7 +2,7 @@
 title: "Cloud - What Is Fault Tolerance?"
 description: "Learn what fault tolerance means in cloud computing, how it works through redundancy and recovery, and why it’s key to keeping apps online even when systems fail."
 date: 2025-11-18
-tags: ["cloud"]
+tags: ["platform"]
 ---
 
 ## Cloud — What Is Fault Tolerance? ☁️  

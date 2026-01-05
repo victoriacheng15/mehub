@@ -2,7 +2,7 @@
 title: "Learning SQL: LIMIT and OFFSET"
 description: "Learn how to use SQL's LIMIT and OFFSET clauses together to control query results, paginate data, and improve performance when working with large datasets."
 date: 2024-11-12
-tags: [sql]
+tags: ["backend"]
 ---
 
 ## What is the LIMIT and OFFSET Clause?

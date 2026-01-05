@@ -2,7 +2,7 @@
 title: "Smart Brevity - Your Path to Effective Communication"
 description: "Unlock the power of Smart Brevity in communication with our expert tips. Learn to convey your message effectively and concisely to captivate your audience."
 date: 2024-02-17
-tags: [book]
+tags: ["growth"]
 ---
 
 ## What is the Smart Brevity book?

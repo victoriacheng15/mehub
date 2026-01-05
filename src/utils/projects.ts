@@ -7,7 +7,7 @@ export const PROJECTS = [
 		shortDescription:
 			"Self-hosted observability hub collecting system and application metrics into Postgres, visualized in Grafana with automated backups and cron-driven Go collectors.",
 		link: `${MAIN_URL}/observability-hub${README_URL}`,
-		techs: ["Go", "Grafana", "PostgreSQL", "Docker"],
+		techs: ["Go", "Grafana", "PostgreSQL (TimescaleDB)", "Docker"],
 	},
 	{
 		title: "cover-craft",
@@ -19,7 +19,6 @@ export const PROJECTS = [
 			"Azure Functions",
 			"Next.js",
 			"GitHub Actions",
-			"Vitest",
 			"MongoDB Atlas",
 		],
 	},
@@ -28,6 +27,6 @@ export const PROJECTS = [
 		shortDescription:
 			"Fully automated reading tracker—zero infra, 100% GitHub. Go + Python pipeline with interactive analytics from Shopify, Stripe, and GitHub blogs.",
 		link: `${MAIN_URL}/personal-reading-analytics-dashboard${README_URL}`,
-		techs: ["Go", "Python", "Google Sheets", "Docker", "GitHub Actions"],
+		techs: ["Go", "Python", "Google Sheets", "Docker", "GitHub Actions", "MongoDB Atlas"],
 	},
 ];

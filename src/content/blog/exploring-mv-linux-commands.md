@@ -2,7 +2,7 @@
 title: "Exploring mv - Linux Commands"
 description: "Learn about the powerful mv command in Linux: move, rename, and manage files efficiently with various options. Essential for file system organization."
 date: 2024-05-18
-tags: [linux]
+tags: ["platform"]
 ---
 
 ## What is the mv Command in Linux?

@@ -2,7 +2,7 @@
 title: "SSL and TLS Explained for Secure Communication"
 description: "Learn how SSL/TLS secures online communication, protects your data, and ensures privacy. Understand the handshake process and its importance in simple terms."
 date: 2025-04-01
-tags: [networking]
+tags: ["platform"]
 ---
 
 ## What is SSL or TLS?

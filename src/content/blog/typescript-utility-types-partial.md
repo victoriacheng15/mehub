@@ -2,7 +2,7 @@
 title: "TypeScript Utility Types - Partial"
 description: "Discover the power of TypeScript partial usage. Learn how to efficiently narrow down and limit object properties in just a few steps."
 date: 2023-07-19
-tags: [typescript]
+tags: ["typescript"]
 ---
 
 ## What is Partial?

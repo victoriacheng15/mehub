@@ -2,7 +2,7 @@
 title: "What is a Garbage Collection"
 description: "Learn about garbage collection: the process of reclaiming unused memory in programming, with a deep dive into JavaScript's automated memory management."
 date: 2024-12-10
-tags: [system-design]
+tags: ["system-design"]
 ---
 
 

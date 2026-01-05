@@ -2,7 +2,7 @@
 title: "Discover Python's Sets Data Structure"
 description: "Explore Python sets and their methods for efficient data manipulation. Learn to add, remove, and perform set operations with ease. Dive into sets in Python!"
 date: 2024-04-04
-tags: [python]
+tags: ["python"]
 ---
 
 ## What is a Python Set?

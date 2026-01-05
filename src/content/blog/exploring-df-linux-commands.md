@@ -2,7 +2,7 @@
 title: "Exploring df - Linux Commands"
 description: "Learn how to use the df command in Linux to check disk space usage, view file system types, and monitor mounted volumes with practical examples and flags."
 date: 2025-07-22
-tags: ["linux"]
+tags: ["platform"]
 draft: true
 ---
 

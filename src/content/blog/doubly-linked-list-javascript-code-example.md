@@ -2,7 +2,7 @@
 title: "Doubly Linked List - JavaScript Code Example"
 description: "Doubly linked lists facilitate bidirectional traversal, offering insertion, deletion, and search operations with nodes linking forward and backward."
 date: 2024-06-04
-tags: [dsa, javascript]
+tags: ["dsa"]
 ---
 
 ## What is a Doubly Linked List?

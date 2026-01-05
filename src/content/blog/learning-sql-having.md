@@ -2,7 +2,7 @@
 title: "Learning SQL: HAVING"
 description: "Master the SQL HAVING clause to filter grouped data. Understand how to apply conditions to aggregated results with practical examples and use cases."
 date: 2025-03-04
-tags: [sql]
+tags: ["backend"]
 ---
 
 ## What is the HAVING Clause?

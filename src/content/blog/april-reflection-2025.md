@@ -2,7 +2,7 @@
 title: "April Reflection 2025"
 description: "Observing vibe coding trends in software development - how AI tools impact both developers and non-coders, balancing efficiency with technical quality."
 date: 2025-04-29
-tags: [reflection]
+tags: ["growth"]
 ---
 
 ## Vibe Coding: A Trend I’m Watching

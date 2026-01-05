@@ -2,7 +2,7 @@
 title: "Python - sorted() vs sort() Usage"
 description: "Learn the differences between Python's sorted() and sort() functions, with examples for lists, tuples, and dictionaries. Understand their parameters and usage"
 date: 2024-07-04
-tags: [python]
+tags: ["python"]
 ---
 
 ## What Are sorted() and sort() Functions?

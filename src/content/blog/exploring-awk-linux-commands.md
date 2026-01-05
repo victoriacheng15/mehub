@@ -2,7 +2,7 @@
 title: "Exploring awk - Linux Commands"
 description: "Learn how to use the awk command in Linux for text processing, data extraction, and reporting with practical examples and common use cases."
 date: 2024-09-21
-tags: [linux]
+tags: ["platform"]
 ---
 
 ## What is the awk Command in Linux?

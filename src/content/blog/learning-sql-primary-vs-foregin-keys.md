@@ -2,7 +2,7 @@
 title: "Learning SQL: PRIMARY VS FOREGIN KEYS"
 description: "Understand the difference between PRIMARY KEY and FOREIGN KEY in SQL, how they enforce data integrity, and link database tables with practical examples."
 date: 2025-05-13
-tags: [sql]
+tags: ["backend"]
 ---
 
 ## What Are PRIMARY and FOREIGN Keys?

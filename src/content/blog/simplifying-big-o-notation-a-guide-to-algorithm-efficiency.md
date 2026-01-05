@@ -2,7 +2,7 @@
 title: "Simplifying Big O Notation - A Guide to Algorithm Efficiency"
 description: "Unlock efficient coding with our guide to Big O notation. Learn to optimize algorithms for superior performance in software engineering."
 date: 2024-01-16
-tags: [dsa]
+tags: ["dsa"]
 ---
 
 ## Understanding Big O Notation

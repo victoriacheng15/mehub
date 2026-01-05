@@ -2,7 +2,7 @@
 title: "🌩️ Cloud: What Is High Availability"
 description: "Learn High Availability in the cloud: how redundancy, load balancing, and failover keep your applications online with minimal downtime."
 date: 2025-11-04
-tags: ["cloud"]
+tags: ["platform"]
 ---
 
 ## 🧠 Understanding High Availability

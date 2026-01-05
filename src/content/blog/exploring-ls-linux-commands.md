@@ -2,7 +2,7 @@
 title: "Exploring ls - Linux Commands"
 description: "Discover the versatility of the ls command in Linux. Learn its options like -l, -a, and more to master file navigation effortlessly."
 date: 2024-04-20
-tags: [linux]
+tags: ["platform"]
 ---
 
 ## What is ls command in Linux?

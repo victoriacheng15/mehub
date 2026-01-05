@@ -2,7 +2,7 @@
 title: "Exploring alias - Linux Commands"
 description: "Discover the power of Linux commands with our guide on using 'alias.' Streamline your workflow and explore awesome tips for efficient terminal operations."
 date: 2024-01-18
-tags: [linux]
+tags: ["platform"]
 ---
 
 ## What is an alias command?

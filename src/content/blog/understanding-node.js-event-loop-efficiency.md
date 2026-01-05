@@ -2,7 +2,7 @@
 title: "Understanding Node.js Event Loop Efficiency"
 description: "Understand how Node.js's event loop and non-blocking I/O efficiently manage concurrent tasks in a single-threaded environment for high-performance apps."
 date: 2024-07-02
-tags: [node.js]
+tags: ["backend"]
 ---
 
 ## What is the Node.js Event Loop?

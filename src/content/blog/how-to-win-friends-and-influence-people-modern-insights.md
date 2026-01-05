@@ -2,7 +2,7 @@
 title: "How to Win Friends and Influence People - Modern Insights"
 description: "Unlock online influence: Learn to connect meaningfully, engage positively, and adapt to digital trends for success. 🌐💬"
 date: 2023-08-26
-tags: [book]
+tags: ["growth"]
 ---
 
 ## What is How to Win Friends and Influence People book?

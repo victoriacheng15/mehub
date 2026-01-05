@@ -2,7 +2,7 @@
 title: "Reflecting on 2023 - A Year in Review"
 description: "Reflecting on the highs, lows, and lessons of 2023. Here's to a wonderful 2024 ahead!"
 date: 2023-12-27
-tags: [reflection]
+tags: ["growth"]
 ---
 
 ## The 2023 Year in Review

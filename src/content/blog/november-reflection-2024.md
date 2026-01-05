@@ -2,7 +2,7 @@
 title: "November Reflection 2024"
 description: "Exploring a new journaling system with Google Docs tabs and insights from Fundamentals of Software Architecture on design, trade-offs, and adaptability."
 date: 2024-11-26
-tags: [reflection]
+tags: ["growth"]
 ---
 
 ## Monthly Reflection

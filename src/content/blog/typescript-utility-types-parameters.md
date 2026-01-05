@@ -2,7 +2,7 @@
 title: "TypeScript Utility Types - Parameters"
 description: "Parameters utility in TypeScript extracts expected function arguments, aiding developers in understanding and working with parameter types."
 date: 2024-01-02
-tags: [typescript]
+tags: ["typescript"]
 ---
 
 ## What is Parameters?

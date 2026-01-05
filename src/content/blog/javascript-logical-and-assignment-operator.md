@@ -2,7 +2,7 @@
 title: "JavaScript - Logical AND Assignment Operator"
 description: "Logical AND assignment (&&=) in programming: Efficiently update variables based on conditions."
 date: 2023-10-11
-tags: [javascript]
+tags: ["javascript"]
 ---
 
 ## What is the logical AND assignment operator?

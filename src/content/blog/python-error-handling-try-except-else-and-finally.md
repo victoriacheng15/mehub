@@ -2,7 +2,7 @@
 title: "Python Error Handling: try, except, else, and finally"
 description: "Learn how to handle errors in Python using try, except, else, and finally blocks. This guide covers common exceptions and best practices for robust code."
 date: 2024-08-13
-tags: [python]
+tags: ["python"]
 ---
 
 ## Intro to try, except, else, and finally in Python

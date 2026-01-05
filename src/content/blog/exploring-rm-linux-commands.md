@@ -2,7 +2,7 @@
 title: "Exploring rm - Linux Commands"
 description: "Learn about the rm command in Linux, including its basic syntax, options, and examples for deleting files and directories."
 date: 2024-06-13
-tags: [linux]
+tags: ["platform"]
 ---
 
 ## What isthe rm Command in Linux?

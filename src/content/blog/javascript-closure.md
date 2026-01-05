@@ -2,7 +2,7 @@
 title: "JavaScript - Closure"
 description: "JavaScript closure: Inner functions retain access to variables from their parent functions, even after the parent functions have finished executing."
 date: 2023-07-12
-tags: [javascript]
+tags: ["javascript"]
 ---
 
 ## What is Closure?

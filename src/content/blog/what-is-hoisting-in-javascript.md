@@ -2,7 +2,7 @@
 title: What is Hoisting in JavaScript?
 description: "JS hoisting permits access to vars/funcs before creation, but var confuses by enabling calls before def. Prefer let/const for error prevention."
 date: 2022-11-02
-tags: [javascript]
+tags: ["javascript"]
 ---
 
 ## What is hoisting?

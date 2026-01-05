@@ -2,7 +2,7 @@
 title: "Learning SQL: INNER JOIN"
 description: "Learn how to use the SQL JOIN command to combine data from multiple tables. Understand JOIN ON, JOIN USING, and NATURAL JOIN with examples and tips."
 date: 2025-01-07
-tags: [sql]
+tags: ["backend"]
 ---
 ## What is the INNER JOIN Clause?
 
