@@ -12,7 +12,7 @@
     "lint:md": "npx markdownlint-cli --fix src/**/*.md *.md",
     "check": "biome check --write ./src/**/*.ts",
     "format": "biome format --write ./src/**/*.ts && prettier -w ./src/**/*.astro",
-    "generate-search-index": "npx tsx scripts/generate-search-index.ts"
+    "generate-search-index": "tsx scripts/generate-search-index.ts"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.14",
@@ -28,6 +28,7 @@
     "@biomejs/biome": "2.3.11",
     "prettier": "^3.7.4",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.7.2"
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tsx": "^4.21.0"
   }
 }
