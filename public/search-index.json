@@ -202,6 +202,26 @@
     "draft": false
   },
   {
+    "title": "Exploring df - Linux Commands",
+    "slug": "exploring-df-linux-commands",
+    "summary": "Learn how to use the df command in Linux to check disk space usage, view file system types, and monitor mounted volumes with practical examples and flags.",
+    "tags": [
+      "platform"
+    ],
+    "date": "2025-07-22",
+    "draft": false
+  },
+  {
+    "title": "Exploring curl - Linux Commands",
+    "slug": "exploring-curl-linux-commands",
+    "summary": "Learn how to use the curl command in Linux to download files, interact with APIs, send POST data, handle redirects, and more with simple examples.",
+    "tags": [
+      "platform"
+    ],
+    "date": "2025-07-15",
+    "draft": false
+  },
+  {
     "title": "Python Dunder Methods: Arithmetic operators",
     "slug": "python-dunder-methods-arithmetic-operators",
     "summary": "Unlock the power of Python",

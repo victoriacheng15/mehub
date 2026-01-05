@@ -1,5 +1,8 @@
 ---
-import { currentYear, navItems } from "@/utils";
+import { siteConfig } from "@/config";
+
+const { navigation: navItems } = siteConfig;
+const currentYear = new Date().getFullYear();
 ---
 
 <footer class="grid gap-8 py-6 text-center">

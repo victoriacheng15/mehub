@@ -79,20 +79,20 @@
 		postsContainer.innerHTML = results
 			.map(
 				(post) => `
-      <article class="shadow-secondary-900 dark:bg-primary-900 border-primary-100 dark:border-primary-700 rounded-md border p-6 shadow-md transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg">
+      <article class="card">
         <header class="flex flex-col gap-2">
-          <p class="text-sm text-gray-600">${formatDate(post.date)}</p>
-          <h2 class="text-xl font-bold">
-            <a href="/blog/${post.slug}" class="text-secondary-600 dark:text-secondary-300 hover:text-secondary-500 dark:hover:text-secondary-100 transition-colors duration-300">
+          <time datetime="${new Date(post.date).toISOString()}">${formatDate(post.date)}</time>
+          <h2>
+            <a href="/blog/${post.slug}" class="card-link">
               ${post.title}
             </a>
           </h2>
         </header>
-        <p class="text-gray-700 dark:text-gray-300 mt-3 mb-4">${post.summary}</p>
+        <p class="mt-3 mb-4">${post.summary}</p>
         ${
 					post.tags.length > 0
 						? `<div class="flex gap-2 flex-wrap">
-                ${post.tags.map((tag) => `<span class="text-xs px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded text-slate-900 dark:text-slate-200">${tag}</span>`).join("")}
+                ${post.tags.map((tag) => `<a href="/tags/${tag}" class="tag">#${tag}</a>`).join("")}
               </div>`
 						: ""
 				}

@@ -1,7 +1,9 @@
 ---
 import PostDate from "@/components/PostDate";
 import BaseLayout from "@/layouts/BaseLayout";
-import { archivedPostsByYear, archivedYears, currentYear } from "@/utils";
+import { archivedPostsByYear, archivedYears } from "@/utils";
+
+const currentYear = new Date().getFullYear();
 ---
 
 <BaseLayout title="Archive" description="A collection of my archived posts.">
