@@ -1,0 +1,32 @@
+---
+import BaseLayout from "@/layouts/BaseLayout";
+import { siteConfig } from "@/config";
+
+const title = "Now";
+const description = "What I'm currently focused on, learning, and doing.";
+const { now } = siteConfig;
+---
+
+<BaseLayout title={title} description={description}>
+	<section class="py-6">
+		<h1>Now</h1>
+		<p class="mb-2">Last updated: {now?.lastUpdated}</p>
+		<p class="mb-8 text-sm opacity-80">
+			Inspired by <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer" class="underline hover:text-secondary-300">nownownow.com</a>
+		</p>
+
+		<div class="grid gap-8">
+			{
+				now?.categories.map((category) => (
+					<section class="card">
+						<h3>{category.title}</h3>
+						<ul class="list-disc pl-6 space-y-2">
+							{category.items.map((item) => (
+								<li set:html={item} />
+							))}
+						</ul>
+					</section>
+				))
+			}
+	</section>
+</BaseLayout>

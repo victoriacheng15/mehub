@@ -18,6 +18,11 @@ export interface Project {
 	techs: string[];
 }
 
+export interface NowCategory {
+	title: string;
+	items: string[];
+}
+
 export interface SiteConfig {
 	title: string;
 	name: string;
@@ -28,6 +33,10 @@ export interface SiteConfig {
 	homepage: PostFilter;
 	about?: {
 		paragraphs: string[];
+	};
+	now?: {
+		lastUpdated: string;
+		categories: NowCategory[];
 	};
 	navigation: NavItem[];
 	socials: Social[];
@@ -56,9 +65,38 @@ export const siteConfig: SiteConfig = {
 			"This site is where the rigid logic of systems meets the messy reality of learning. I'm here to document the why behind decisions, lessons from failures, and the curiosity that keeps me digging into the details."
 		]
 	},
+	now: {
+		lastUpdated: "January 2026",
+		categories: [
+			{
+				title: "Work & Projects",
+				items: [
+					"Finishing my final semester of Software Development at <span>SAIT</span>.",
+					"Searching for a <span>New Grad Software Engineer</span> role for <span>May 2026</span>.",
+					"Refining and maintaining <span>Cover Craft</span>, <span>Personal Reading Analytics Dashboard</span>, and <span>Observability Hub</span>."
+				]
+			},
+			{
+				title: "Books & Learning",
+				items: [
+					"Reading <span>Mindset: The New Psychology of Success</span> by Carol S. Dweck.",
+					"Building a backend service with <span>Go</span> and learning <span>C++</span>."
+				]
+			},
+			{
+				title: "Personal",
+				items: [
+					"Based in Calgary, Alberta.",
+					"Staying consistent with daily exercise.",
+					"Exploring hardware stuff for future projects."
+				]
+			}
+		]
+	},
 	navigation: [
 		{ href: "/", text: "Home", position: "top" },
 		{ href: "/about", text: "About", position: "top" },
+		{ href: "/now", text: "Now", position: "top" },
 		{ href: "/blog", text: "Blog", position: "top" },
 		{ href: "/tags", text: "Tags", position: "top" },
 		{ href: "/archive", text: "Archive", position: null },
@@ -72,21 +110,21 @@ export const siteConfig: SiteConfig = {
 	],
 	projects: [
 		{
-			title: "observability-hub",
+			title: "Observability Hub",
 			shortDescription:
 				"Self-hosted observability hub collecting system and application metrics into Postgres, visualized in Grafana with automated backups and cron-driven Go collectors.",
 			link: "https://github.com/victoriacheng15/observability-hub#readme",
 			techs: ["Go", "Grafana", "PostgreSQL (TimescaleDB)", "Docker"],
 		},
 		{
-			title: "cover-craft",
+			title: "Cover Craft",
 			shortDescription:
 				"Serverless cover image generator on Azure Functions (Node.js/Canvas). Users customize text, fonts & colors; exports PNGs + logs preferences to MongoDB for analytics.",
 			link: "https://github.com/victoriacheng15/cover-craft#readme",
 			techs: ["TypeScript", "Azure Functions", "Next.js", "GitHub Actions", "MongoDB Atlas"],
 		},
 		{
-			title: "personal-reading-analytics-dashboard",
+			title: "Personal Reading Analytics Dashboard",
 			shortDescription:
 				"Fully automated reading tracker—zero infra, 100% GitHub. Go + Python pipeline with interactive analytics from Shopify, Stripe, and GitHub blogs.",
 			link: "https://github.com/victoriacheng15/personal-reading-analytics-dashboard#readme",
