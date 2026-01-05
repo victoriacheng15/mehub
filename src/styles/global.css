@@ -20,7 +20,7 @@
 	}
 
 	/* Highlighted text within paragraphs */
-	p span {
+	span {
 		@apply text-secondary-200 font-semibold;
 	}
 
