@@ -2,7 +2,7 @@
 title: "Exploring diff - Linux Commands"
 description: "Compare files with the diff command in Linux. Find differences, ignore whitespace, and more. Learn how to use it effectively with our concise guide."
 date: 2024-09-07
-tags: [linux]
+tags: ["platform"]
 ---
 
 ## What is the diff Command in Linux?

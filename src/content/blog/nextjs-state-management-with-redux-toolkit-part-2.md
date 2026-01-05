@@ -2,7 +2,7 @@
 title: Nextjs State Management with Redux Toolkit - Part 2
 description: "Part 1 covered setting up Redux Toolkit and topSlice function and then how would I refactor the codebase to make it cleaner and more readable way"
 date: 2023-04-19
-tags: [react]
+tags: ["frontend"]
 ---
 
 ## Intro

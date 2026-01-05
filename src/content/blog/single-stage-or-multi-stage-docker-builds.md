@@ -2,7 +2,7 @@
 title: "Single-Stage or Multi-Stage Docker Builds"
 description: "Explore single-stage vs multi-stage Docker builds with a small Flask API, learning differences in image size, build speed, and container optimization."
 date: 2025-11-11
-tags: ["docker"]
+tags: ["platform"]
 ---
 
 ## Understanding Docker Builds

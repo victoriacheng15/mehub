@@ -2,7 +2,7 @@
 title: "Exploring head and tail - Linux Commands"
 description: "Discover the head and tail commands in Linux. Discover their syntax and options to view the start and end of files efficiently. Level up your Linux knowledge!"
 date: 2024-07-06
-tags: [linux]
+tags: ["platform"]
 ---
 
 ## What are the head and tail Commands in Linux?

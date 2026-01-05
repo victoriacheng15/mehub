@@ -2,7 +2,7 @@
 title: "Exploring cd - Linux Commands"
 description: "Unlock the efficiency of cd command in Linux: a quick shortcut for toggling between current and previous directories, streamlining command-line navigation."
 date: 2024-04-13
-tags: [linux]
+tags: ["platform"]
 ---
 
 ## What is **the 'cd' Command**?

@@ -2,7 +2,7 @@
 title: "Learning SQL: SELECT and SELECT DISTINCT"
 description: "Learn how to use SQL's SELECT statement to retrieve data and filter out duplicates with DISTINCT with examples."
 date: 2024-09-10
-tags: [sql]
+tags: ["backend"]
 ---
 
 ## What is the SELECT Command?

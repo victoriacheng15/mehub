@@ -2,7 +2,7 @@
 title: "Keep Going - Navigate Your Creative Journey"
 description: "Unlock creative resilience with 'Keep Going' by Austin Kleon. Wisdom, wit, and 10 actionable ways to persist on your creative journey."
 date: 2024-02-10
-tags: [book]
+tags: ["growth"]
 ---
 
 ## What is the Keep Going book?

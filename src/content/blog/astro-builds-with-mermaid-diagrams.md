@@ -2,7 +2,7 @@
 title: "Astro Builds with Mermaid Diagrams"
 description: "Learn how to render Mermaid diagrams in Astro using rehype-mermaid and Playwright, with GitHub Actions for preview and production deployments."
 date: 2025-09-09
-tags: ["journey"]
+tags: ["growth"]
 ---
 
 ## Why My Pages Went Blank

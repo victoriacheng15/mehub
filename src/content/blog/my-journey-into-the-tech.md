@@ -2,7 +2,7 @@
 title: My Journey into the Tech
 description: "Tech-lover turned self-taught developer through YouTube and Frontend Mentor. Follow my journey to becoming a full-time developer!"
 date: 2022-03-04
-tags: [misc]
+tags: ["growth"]
 ---
 
 ## Who Am I?

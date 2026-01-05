@@ -2,7 +2,7 @@
 title: "Obstacle Is the Way - Transforming Challenges into Success"
 description: "The Obstacle Is the Way by Ryan Holiday: Embrace obstacles, take action, and cultivate an unyielding will to thrive amidst challenges. 📚💪🚀"
 date: 2023-08-12
-tags: [book]
+tags: ["growth"]
 ---
 
 ## What is The Obstacle Is the Way?

@@ -1,26 +1,25 @@
 export const SKILLS = [
 	// Core languages
-	"Python",
 	"Go",
+	"Python",
 	"TypeScript",
 	"JavaScript",
-	// Backend & frameworks
-	"Node.js",
-	"Flask",
-	// Frontend & frameworks
-	"React",
-	"Next.js",
-	"Tailwind CSS",
-	// Databases
-	"PostgreSQL",
-	"MongoDB",
 	// Platform & DevOps & cloud
 	"Grafana",
 	"Docker",
 	"Linux",
-	"Bash",
 	"GitHub Actions",
 	"Azure",
+	// Backend & frameworks
+	"Flask",
+	"Node.js",
+	// Databases
+	"PostgreSQL",
+	"MongoDB",
+	// Frontend & frameworks
+	"React",
+	"Next.js",
+	"Tailwind CSS",
 ];
 
 export function formatSkillPath(skill: string) {

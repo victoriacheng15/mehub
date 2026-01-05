@@ -2,7 +2,7 @@
 title: "Ultralearning - Accelerated Learning Strategies"
 description: "Discover 'Ultralearning': Master hard skills, and accelerate career growth. Insights & techniques shared by Scott Young. Embrace the transformative journey."
 date: 2023-09-23
-tags: [book]
+tags: ["growth"]
 ---
 
 ## What is Ultralearning book?

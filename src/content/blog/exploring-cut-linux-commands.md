@@ -2,7 +2,7 @@
 title: "Exploring cut - Linux Commands"
 description: "Learn how to use the cut command in Linux to extract specific sections from text. Discover options for cutting bytes, characters, fields, and more."
 date: 2024-08-03
-tags: [linux]
+tags: ["platform"]
 ---
 
 ## What is the cut Command in Linux?

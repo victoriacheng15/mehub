@@ -2,7 +2,7 @@
 title: "Python - What is range() Function? 🤔"
 description: "Explore Python's range() function for efficient iteration and sequence generation. Perfect for looping numbers, accessing lists, and creating patterns."
 date: 2024-06-20
-tags: [python]
+tags: ["python"]
 ---
 
 ## What is the range() Function in Python?

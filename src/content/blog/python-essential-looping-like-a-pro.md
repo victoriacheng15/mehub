@@ -2,7 +2,7 @@
 title: "Python Essential - Looping Like a Pro"
 description: "Explore essential Python loop techniques in this comprehensive guide. Master iteration, control statements, and optimization strategies for efficient coding."
 date: 2024-04-11
-tags: [python]
+tags: ["python"]
 ---
 
 ## What is a Python Loop?

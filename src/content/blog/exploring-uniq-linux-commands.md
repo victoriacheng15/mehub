@@ -2,7 +2,7 @@
 title: "Exploring uniq - Linux Commands"
 description: "Learn how to use the uniq command in Linux to filter out duplicate lines, count occurrences, and print only unique or duplicate lines"
 date: 2024-08-24
-tags: [linux]
+tags: ["platform"]
 ---
 
 ## What is the uniq Command in Linux?

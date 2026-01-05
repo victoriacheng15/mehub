@@ -2,7 +2,7 @@
 title: "Can't Hurt Me - Embracing Struggle, Achieving the Impossible"
 description: "Unlock potential with David Goggins' strategies: face challenges, set audacious goals, embrace discomfort, and develop a resilient mindset."
 date: 2023-09-02
-tags: [book]
+tags: ["growth"]
 ---
 
 ## What is Can’t Hurt Me book?

@@ -2,7 +2,7 @@
 title: "Unveiling Alchemy: Power of Absurdity"
 description: "Discover how Rory Sutherland's Alchemy reveals the power of unconventional ideas and perception. Embrace the absurd for innovative breakthroughs and success."
 date: 2024-07-27
-tags: [book]
+tags: ["growth"]
 ---
 
 ## What is the Alchemy Book?

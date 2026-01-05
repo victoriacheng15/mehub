@@ -2,7 +2,7 @@
 title: JavaScript - Mutable Array Methods
 description: "Comparing mutable and immutable array methods in JS, covering pop(), shift(), push(), unshift(). Tips for avoiding altering original arrays included."
 date: 2022-06-18
-tags: [javascript]
+tags: ["javascript"]
 ---
 
 ## What are mutable array methods?

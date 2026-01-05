@@ -2,7 +2,7 @@
 title: "Exploring Python Tuples: Immutable Data Structures"
 description: "Explore Python tuples: immutable, ordered collections offering stability. Learn creation, methods, and differences from lists."
 date: 2024-04-02
-tags: [python]
+tags: ["python"]
 ---
 
 ## What is a Python Tuple?

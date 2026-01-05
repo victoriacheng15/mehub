@@ -2,7 +2,7 @@
 title: "Learning SQL: UPDATE"
 description: "Learn how to use the SQL UPDATE clause to modify existing data. Master its syntax, apply conditions, and ensure data integrity with constraints."
 date: 2024-12-17
-tags: [sql]
+tags: ["backend"]
 ---
 
 ## What is the UPDATE Clause?

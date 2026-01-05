@@ -2,7 +2,7 @@
 title: "The 4-Hour Workweek - To the Lifestyle You Want"
 description: "Embrace the ‘The 4-Hour Workweek’ principles that can transform your life to match your vision. Learn to focus on what truly matters to you.”"
 date: 2023-12-09
-tags: [book]
+tags: ["growth"]
 ---
 
 ## What is The 4-Hour Workweek?

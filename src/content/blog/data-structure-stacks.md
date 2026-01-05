@@ -2,7 +2,7 @@
 title: "Data Structure - Stacks"
 description: "Discover the power of stacks in data structures—efficiency and versatility in handling Last In, First Out (LIFO) operations."
 date: 2024-04-18
-tags: [dsa]
+tags: ["dsa"]
 ---
 
 ## What is a Stack?

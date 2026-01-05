@@ -2,7 +2,7 @@
 title: "TypeScript Utility Types - NonNullable"
 description: "Explore how TypeScript’s NonNullable utility type enhances type safety by excluding null and undefined from variables, object properties, and array elements."
 date: 2023-12-20
-tags: [typescript]
+tags: ["typescript"]
 ---
 
 ## What is NonNullable?

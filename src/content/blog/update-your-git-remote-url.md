@@ -2,7 +2,7 @@
 title: "Update Your Git Remote URL 🔄"
 description: "Learn how to change the remote URL in Git with simple steps. Update your repository's remote address effortlessly to keep your project in sync"
 date: 2024-06-06
-tags: [git]
+tags: ["platform"]
 ---
 
 ## What is Git Remote URL?

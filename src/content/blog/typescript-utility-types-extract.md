@@ -2,7 +2,7 @@
 title: "TypeScript Utility Types - Extract"
 description: "Explore the power of TypeScript’s Extract utility type. Learn how it enhances flexibility and maintainability by extracting specific members from union types."
 date: 2023-12-13
-tags: [typescript]
+tags: ["typescript"]
 ---
 
 ## What is Extract?

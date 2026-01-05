@@ -2,7 +2,7 @@
 title: "React Hooks - useRef"
 description: "React's useRef hook: Handles mutable values & DOM interaction, curbs re-renders, boosts performance."
 date: 2023-08-23
-tags: [react]
+tags: ["frontend"]
 ---
 
 ## What is useRef?

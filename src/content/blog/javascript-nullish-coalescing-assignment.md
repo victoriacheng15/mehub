@@ -2,7 +2,7 @@
 title: "JavaScript - Nullish Coalescing Assignment"
 description: "Discover JavaScript’s Nullish Coalescing Assignment (??=) operator. Learn its use in assigning default values and ensuring non-nullish variables."
 date: 2023-12-06
-tags: [javascript]
+tags: ["javascript"]
 ---
 
 ## What is Nullish Coalescing Assignment?

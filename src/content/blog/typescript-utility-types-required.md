@@ -2,7 +2,7 @@
 title: "TypeScript Utility Types - Required"
 description: "Required: TypeScript utility making all object properties mandatory. Enhance type safety."
 date: 2023-09-06
-tags: [typescript]
+tags: ["typescript"]
 ---
 
 ## What is Required?

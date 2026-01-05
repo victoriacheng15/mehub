@@ -2,7 +2,7 @@
 title: "Python List Comprehension - Simplify Your Code"
 description: "Unlock Python's potential with list comprehensions. Learn efficient coding techniques, including conditional statements and nested lists"
 date: 2024-04-23
-tags: [python]
+tags: ["python"]
 ---
 
 ## What is a Python List Comprehension?

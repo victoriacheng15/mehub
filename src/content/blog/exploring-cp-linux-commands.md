@@ -2,7 +2,7 @@
 title: "Exploring cp - Linux Commands"
 description: "Discover the essential Linux command 'cp' with its options explained. Learn how to copy files and directories efficiently in this comprehensive guide."
 date: 2024-04-27
-tags: [linux]
+tags: ["platform"]
 ---
 
 ## What is cp command in Linux?

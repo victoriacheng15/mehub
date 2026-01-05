@@ -2,7 +2,7 @@
 title: "Learning SQL: RIGHT JOIN"
 description: "Learn how to use the RIGHT JOIN clause in SQL to combine tables, retain all data from the right table, and handle NULL values effectively with examples."
 date: 2025-01-21
-tags: [sql]
+tags: ["backend"]
 ---
 
 ## What is the RIGHT JOIN Clause?

@@ -2,7 +2,7 @@
 title: "Learning SQL: ORDER BY"
 description: "Learn how to use the SQL ORDER BY clause to sort query results by one or multiple columns in ascending or descending order with clear examples."
 date: 2024-10-08
-tags: [sql]
+tags: ["backend"]
 ---
 
 ## What is the ORDER BY Clause?

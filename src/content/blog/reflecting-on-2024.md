@@ -2,7 +2,7 @@
 title: "Reflecting on 2024"
 description: "In 2025, I aim to expand my skills in cloud computing, DevOps, SQL, and cybersecurity, while continuing my growth in software development and organization."
 date: 2024-12-31
-tags: [reflection]
+tags: ["growth"]
 ---
 
 ## The 2024 Year in Review

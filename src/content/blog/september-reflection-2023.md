@@ -2,7 +2,7 @@
 title: "September Reflection 2023"
 description: "Reflected on what I learned from System Design Primer on databases, cache, and application layer. And the 2-minute rule on getting small tasks done ASAP."
 date: 2023-09-27
-tags: [reflection]
+tags: ["growth"]
 ---
 
 ## Monthly Reflection

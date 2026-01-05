@@ -2,7 +2,7 @@
 title: "Learning SQL: CASE"
 description: "Learn how to use the SQL CASE statement for conditional logic in queries. Master categorization, custom labels, and conditional calculations with examples!"
 date: 2025-03-11
-tags: [sql]
+tags: ["backend"]
 ---
 
 ## What is CASE Claus?

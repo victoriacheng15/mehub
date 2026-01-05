@@ -2,7 +2,7 @@
 title: "Managing Workflows with GitHub Actions: needs"
 description: "Efficiently manage workflows in GitHub Actions by leveraging the “needs” syntax for job control."
 date: 2024-02-06
-tags: [ci-cd]
+tags: ["platform"]
 ---
 
 ## What is the “needs” syntax?

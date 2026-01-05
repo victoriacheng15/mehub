@@ -2,7 +2,7 @@
 title: "Singly Linked List - JavaScript Code Example"
 description: "Explore Singly Linked Lists with concise code examples in JavaScript, mastering insertion, deletion, and search operations."
 date: 2024-05-14
-tags: [dsa, javascript]
+tags: ["dsa"]
 ---
 
 ## What is a Singly Linked List?

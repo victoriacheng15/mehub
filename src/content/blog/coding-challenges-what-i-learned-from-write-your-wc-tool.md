@@ -2,7 +2,7 @@
 title: "Coding Challenges: What I Learned From Write Your wc Tool?"
 description: "Dive into coding challenges with 'Write Your Own wc tool.' Explore TDD, classes in JavaScript, and utilities like spyOn and process.stdin."
 date: 2024-01-11
-tags: [coding-challenges, javascript]
+tags: ["dsa", "javascript"]
 ---
 
 ## Coding Challenges - Write Your Own wc tool

@@ -2,7 +2,7 @@
 title: "Unlocking the Power of Python Dictionary"
 description: "Explore Python dictionaries: versatile data structures for efficient data organization and retrieval, essential in Python programming."
 date: 2024-04-09
-tags: [python]
+tags: ["python"]
 ---
 
 ## What is a Python Dictionary?

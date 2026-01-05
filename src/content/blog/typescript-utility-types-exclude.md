@@ -2,7 +2,7 @@
 title: "TypeScript Utility Types - Exclude"
 description: "Enhance TypeScript code with Exclude utility type: tailor types for precision and flexibility."
 date: 2023-09-20
-tags: [typescript]
+tags: ["typescript"]
 ---
 
 ## What is Exclude?

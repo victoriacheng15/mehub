@@ -2,7 +2,7 @@
 title: "August Reflection 2023"
 description: "Reflected on what I learned from System Design Primer, a containerized app with docker, Threejs - lighting/effects, and the concept of doing the pilot week."
 date: 2023-08-30
-tags: [reflection]
+tags: ["growth"]
 ---
 
 ## Monthly Reflection

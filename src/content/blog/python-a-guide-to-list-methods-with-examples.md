@@ -2,7 +2,7 @@
 title: "Python - A Guide to List Methods With Examples"
 description: "Discover Python lists: powerful, flexible collections. Explore methods, creation, and manipulation for efficient programming."
 date: 2024-03-19
-tags: [python]
+tags: ["python"]
 ---
 
 ## What is a List in Python?

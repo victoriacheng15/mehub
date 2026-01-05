@@ -1,11 +1,20 @@
 [
   {
+    "title": "Reflecting on the 2025",
+    "slug": "reflecting-on-the-2025",
+    "summary": "How switching to a planning-first approach in 2025 helped me stop wandering in code and finally finish my side projects with purpose.",
+    "tags": [
+      "growth"
+    ],
+    "date": "2025-12-30",
+    "draft": false
+  },
+  {
     "title": "Trying Azure Blob Storage",
     "slug": "trying-azure-blob-storage",
     "summary": "How I loaded CSV data from Azure Blob Storage in a school project—with local fallback and no hardcoded secrets.",
     "tags": [
-      "azure",
-      "cloud"
+      "platform"
     ],
     "date": "2025-12-23",
     "draft": false
@@ -15,8 +24,7 @@
     "slug": "trying-azure-container-registry",
     "summary": "Learn how I used Azure Container Registry to securely store Docker images from a personal project, with GitHub Actions CI and zero hardcoded secrets.",
     "tags": [
-      "azure",
-      "cloud"
+      "platform"
     ],
     "date": "2025-12-16",
     "draft": false
@@ -26,8 +34,7 @@
     "slug": "use-azure-key-vault-for-secrets",
     "summary": "Securely manage app secrets in Azure using Key Vault—store credentials like GitHub OAuth IDs safely and handle local development with smart fallbacks.",
     "tags": [
-      "azure",
-      "cloud"
+      "platform"
     ],
     "date": "2025-12-09",
     "draft": false
@@ -47,7 +54,7 @@
     "slug": "november-reflection-2025",
     "summary": "Built a cover image generator with Azure Functions to learn serverless—explored cold starts, CI/CD, and planning-first development.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2025-11-25",
     "draft": false
@@ -57,7 +64,7 @@
     "slug": "cloud-what-is-fault-tolerance",
     "summary": "Learn what fault tolerance means in cloud computing, how it works through redundancy and recovery, and why it’s key to keeping apps online even when systems fail.",
     "tags": [
-      "cloud"
+      "platform"
     ],
     "date": "2025-11-18",
     "draft": false
@@ -67,7 +74,7 @@
     "slug": "single-stage-or-multi-stage-docker-builds",
     "summary": "Explore single-stage vs multi-stage Docker builds with a small Flask API, learning differences in image size, build speed, and container optimization.",
     "tags": [
-      "docker"
+      "platform"
     ],
     "date": "2025-11-11",
     "draft": false
@@ -77,7 +84,7 @@
     "slug": "cloud-what-is-high-availability",
     "summary": "Learn High Availability in the cloud: how redundancy, load balancing, and failover keep your applications online with minimal downtime.",
     "tags": [
-      "cloud"
+      "platform"
     ],
     "date": "2025-11-04",
     "draft": false
@@ -87,7 +94,7 @@
     "slug": "october-reflection-2025",
     "summary": "Reflections on evolving a Flask API from SQLite MVP to PostgreSQL with Docker, Azure cloud deployment, feature flags, and DevOps workflows.",
     "tags": [
-      "reflection",
+      "growth",
       "python"
     ],
     "date": "2025-10-28",
@@ -98,7 +105,7 @@
     "slug": "cloud-elasticity-vs-scalability",
     "summary": "Learn the key differences between cloud scalability and elasticity, with clear examples and visual timelines showing how resources adjust over time.",
     "tags": [
-      "cloud"
+      "platform"
     ],
     "date": "2025-10-21",
     "draft": false
@@ -108,7 +115,7 @@
     "slug": "how-to-trigger-workflows-between-repos",
     "summary": "Learn how to trigger GitHub Actions workflows within the same repo and across repos to automate tasks like syncing blog posts.",
     "tags": [
-      "ci-cd"
+      "platform"
     ],
     "date": "2025-09-23",
     "draft": false
@@ -128,7 +135,7 @@
     "slug": "astro-builds-with-mermaid-diagrams",
     "summary": "Learn how to render Mermaid diagrams in Astro using rehype-mermaid and Playwright, with GitHub Actions for preview and production deployments.",
     "tags": [
-      "journey"
+      "growth"
     ],
     "date": "2025-09-09",
     "draft": false
@@ -148,7 +155,7 @@
     "slug": "august-reflection-2025",
     "summary": "Reflecting on my 4-month Shopify internship: embracing progress over perfection, lightening my technical backpack, and shipping with confidence.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2025-08-26",
     "draft": false
@@ -158,7 +165,7 @@
     "slug": "understanding-data-modeling",
     "summary": "Overview of conceptual, logical, and physical data models with examples and diagrams to guide database design from abstract ideas to implementation.",
     "tags": [
-      "database"
+      "backend"
     ],
     "date": "2025-08-19",
     "draft": false
@@ -168,7 +175,7 @@
     "slug": "understanding-http-methods-and-status",
     "summary": "Learn the essentials of HTTP methods (GET, POST, PUT, PATCH, DELETE) and common status codes to build clear, effective APIs.",
     "tags": [
-      "networking"
+      "platform"
     ],
     "date": "2025-08-12",
     "draft": false
@@ -178,7 +185,7 @@
     "slug": "from-pi-to-cloud-automation",
     "summary": "Automate content gathering with a Python script and GitHub Actions. No servers, no Pi—just daily updates straight to your Google Sheet.",
     "tags": [
-      "journey",
+      "growth",
       "python"
     ],
     "date": "2025-08-05",
@@ -189,7 +196,7 @@
     "slug": "july-reflection-2025",
     "summary": "A reflection on learning through the lens of a technical backpack — what I’ve added, what I’ve let go, and how I’m making space for smarter growth.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2025-07-29",
     "draft": false
@@ -219,7 +226,7 @@
     "slug": "june-reflection-2025",
     "summary": "Impostor syndrome showed up more during my internship. I",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2025-06-24",
     "draft": false
@@ -249,7 +256,7 @@
     "slug": "exploring-wget-linux-commands",
     "summary": "Linux wget command guide: download files, resume transfers, limit speed & automate tasks with practical examples for efficient downloading.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2025-06-03",
     "draft": false
@@ -259,7 +266,7 @@
     "slug": "may-reflection-2025",
     "summary": "Almost done with my first month at Shopify internship—learning to work with large codebases, adapt to AI tools, and improve problem-solving skills.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2025-05-27",
     "draft": false
@@ -269,7 +276,7 @@
     "slug": "learning-sql-constraints-ensuring-data-integrity",
     "summary": "Learn essential SQL constraints - NOT NULL, UNIQUE, CHECK, and DEFAULT - to enforce data integrity and maintain database accuracy with practical examples.",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2025-05-20",
     "draft": false
@@ -279,7 +286,7 @@
     "slug": "learning-sql-primary-vs-foregin-keys",
     "summary": "Understand the difference between PRIMARY KEY and FOREIGN KEY in SQL, how they enforce data integrity, and link database tables with practical examples.",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2025-05-13",
     "draft": false
@@ -289,7 +296,7 @@
     "slug": "exploring-scp-linux-commands",
     "summary": "Learn how to use the SCP command in Linux for secure file transfers between local and remote systems. Master key options & practical examples! 🔐📁",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2025-05-06",
     "draft": false
@@ -299,7 +306,7 @@
     "slug": "april-reflection-2025",
     "summary": "Observing vibe coding trends in software development - how AI tools impact both developers and non-coders, balancing efficiency with technical quality.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2025-04-29",
     "draft": false
@@ -309,7 +316,7 @@
     "slug": "learning-sql-union-and-union-all",
     "summary": "Learn the difference between SQL UNION and UNION ALL—how to combine query results, remove duplicates, and optimize performance. Essential for data analysis! 🚀",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2025-04-22",
     "draft": false
@@ -319,7 +326,7 @@
     "slug": "exploring-ssh-linux-commands",
     "summary": "Learn how to use the SSH command in Linux for secure remote access, port forwarding & key authentication. Essential for sysadmins & developers! 🔐🖥️",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2025-04-15",
     "draft": false
@@ -329,7 +336,7 @@
     "slug": "learning-sql-subqueries",
     "summary": "Master SQL subqueries & operators (ANY, ALL, EXISTS) with clear examples. Learn nested queries for WHERE, FROM, SELECT clauses—boost your SQL skills today!",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2025-04-08",
     "draft": false
@@ -339,7 +346,7 @@
     "slug": "ssl-and-tls-explained-for-secure-communication",
     "summary": "Learn how SSL/TLS secures online communication, protects your data, and ensures privacy. Understand the handshake process and its importance in simple terms.",
     "tags": [
-      "networking"
+      "platform"
     ],
     "date": "2025-04-01",
     "draft": false
@@ -349,7 +356,7 @@
     "slug": "march-reflection-2025",
     "summary": "March reflections: Learning Go with Gopher Learning and exploring Ansible for server automation. Exciting progress in coding & DevOps!”",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2025-03-25",
     "draft": false
@@ -359,7 +366,7 @@
     "slug": "exploring-ping-linux-commands",
     "summary": "Learn how to use the Linux ping command to test network connectivity, troubleshoot issues, and measure response times in simple, easy steps.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2025-03-18",
     "draft": false
@@ -369,7 +376,7 @@
     "slug": "learning-sql-case",
     "summary": "Learn how to use the SQL CASE statement for conditional logic in queries. Master categorization, custom labels, and conditional calculations with examples!",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2025-03-11",
     "draft": false
@@ -379,7 +386,7 @@
     "slug": "learning-sql-having",
     "summary": "Master the SQL HAVING clause to filter grouped data. Understand how to apply conditions to aggregated results with practical examples and use cases.",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2025-03-04",
     "draft": false
@@ -389,7 +396,7 @@
     "slug": "february-reflection-2025",
     "summary": "Reflecting on building tools to improve efficiency, recreating projects in new languages, and exploring Ansible for automation. Simplifying workflows, one project at a time.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2025-02-25",
     "draft": false
@@ -399,7 +406,7 @@
     "slug": "learning-sql-group-by",
     "summary": "Learn how to use the SQL GROUP BY clause to group and summarize data. Perfect for aggregating and analyzing datasets with clear examples and explanations.",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2025-02-18",
     "draft": false
@@ -409,7 +416,7 @@
     "slug": "learning-sql-cross-join",
     "summary": "Learn SQL CROSS JOIN: Combine every row from two tables, create all possible combinations, and understand its use cases for data analysis.",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2025-02-11",
     "draft": false
@@ -419,7 +426,7 @@
     "slug": "learning-sql-full-outer-join",
     "summary": "Master SQL FULL OUTER JOIN: Combine data from two tables, retain all rows, handle NULL values, and optimize queries for better insights.",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2025-02-04",
     "draft": false
@@ -429,7 +436,7 @@
     "slug": "january-reflection-2025",
     "summary": "Excited to expand my knowledge in OOP3, mobile app dev, Azure, AAA testing, and CI/CD pipelines. Ready to grow skills and embrace new tech trends in 2025!",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2025-01-28",
     "draft": false
@@ -439,7 +446,7 @@
     "slug": "learning-sql-right-join",
     "summary": "Learn how to use the RIGHT JOIN clause in SQL to combine tables, retain all data from the right table, and handle NULL values effectively with examples.",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2025-01-21",
     "draft": false
@@ -449,7 +456,7 @@
     "slug": "learning-sql-left-join",
     "summary": "Learn about SQL LEFT JOIN: combine data from two tables, return all rows from the left table, and fill unmatched rows with NULL values. Clear examples included!",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2025-01-14",
     "draft": false
@@ -459,7 +466,7 @@
     "slug": "learning-sql-inner-join",
     "summary": "Learn how to use the SQL JOIN command to combine data from multiple tables. Understand JOIN ON, JOIN USING, and NATURAL JOIN with examples and tips.",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2025-01-07",
     "draft": false
@@ -469,7 +476,7 @@
     "slug": "reflecting-on-2024",
     "summary": "In 2025, I aim to expand my skills in cloud computing, DevOps, SQL, and cybersecurity, while continuing my growth in software development and organization.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2024-12-31",
     "draft": false
@@ -479,7 +486,7 @@
     "slug": "learning-sql-delete",
     "summary": "Learn how to use the SQL DELETE clause to remove records from a table. Master its syntax, apply conditions, and handle constraints to manage data effectively.",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2024-12-24",
     "draft": false
@@ -489,7 +496,7 @@
     "slug": "learning-sql-update",
     "summary": "Learn how to use the SQL UPDATE clause to modify existing data. Master its syntax, apply conditions, and ensure data integrity with constraints.",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2024-12-17",
     "draft": false
@@ -509,7 +516,7 @@
     "slug": "november-reflection-2024",
     "summary": "Exploring a new journaling system with Google Docs tabs and insights from Fundamentals of Software Architecture on design, trade-offs, and adaptability.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2024-11-26",
     "draft": false
@@ -519,7 +526,7 @@
     "slug": "learning-sql-insert-into",
     "summary": "Learn the SQL INSERT INTO statement to add single or multiple rows to a table, insert into specific columns, and handle constraints for efficient data entry.",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2024-11-19",
     "draft": false
@@ -529,7 +536,7 @@
     "slug": "learning-sql-limit-and-offset",
     "summary": "Learn how to use SQL",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2024-11-12",
     "draft": false
@@ -539,7 +546,7 @@
     "slug": "exploring-chmod-linux-commands",
     "summary": "Learn how to use the chmod command in Linux to manage file permissions effectively, ensuring proper access control for users and groups.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-11-09",
     "draft": false
@@ -549,7 +556,7 @@
     "slug": "understanding-the-tcp-three-way-handshake",
     "summary": "Explore the TCP 3-way handshake, a crucial step for reliable internet communication. Learn how it ensures accurate data transfer and stable connections.",
     "tags": [
-      "networking"
+      "platform"
     ],
     "date": "2024-11-05",
     "draft": false
@@ -559,7 +566,7 @@
     "slug": "exploring-chown-linux-commands",
     "summary": "Learn how to use the chown command in Linux to change file and directory ownership, with examples and common use cases.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-10-12",
     "draft": false
@@ -569,7 +576,7 @@
     "slug": "learning-sql-order-by",
     "summary": "Learn how to use the SQL ORDER BY clause to sort query results by one or multiple columns in ascending or descending order with clear examples.",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2024-10-08",
     "draft": false
@@ -579,7 +586,7 @@
     "slug": "exploring-chgrp-linux-commands",
     "summary": "Learn how to use the chgrp command in Linux to change group ownership of files and directories. Perfect for system admins!",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-10-05",
     "draft": false
@@ -589,7 +596,7 @@
     "slug": "learning-sql-where",
     "summary": "Learn how to filter data using the SQL WHERE clause with operators like IN, LIKE, and more. Master combining conditions with AND and OR for efficient queries.",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2024-10-01",
     "draft": false
@@ -599,7 +606,7 @@
     "slug": "exploring-find-linux-commands",
     "summary": "Discover how to use the find command in Linux to locate files and directories efficiently. Learn options, examples, and common use cases in this casual guide!",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-09-28",
     "draft": false
@@ -609,7 +616,7 @@
     "slug": "september-reflection-2024",
     "summary": "Reflect on insights from The Strangest Secret by Nightingale, focusing on the power of thoughts, goal-setting, and staying positive on your journey to success.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2024-09-24",
     "draft": false
@@ -619,7 +626,7 @@
     "slug": "exploring-awk-linux-commands",
     "summary": "Learn how to use the awk command in Linux for text processing, data extraction, and reporting with practical examples and common use cases.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-09-21",
     "draft": false
@@ -629,7 +636,7 @@
     "slug": "learning-sql-column-alias",
     "summary": "Learn how to use column aliases in SQL to simplify your query results, make calculations more readable, and improve clarity with easy-to-understand examples.",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2024-09-17",
     "draft": false
@@ -639,7 +646,7 @@
     "slug": "exploring-sed-linux-commands",
     "summary": "Learn how to use the sed command in Linux for text manipulation, including substitution, deletion, and insertion, with common use cases and helpful options.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-09-14",
     "draft": false
@@ -649,7 +656,7 @@
     "slug": "learning-sql-select-and-select-distinct",
     "summary": "Learn how to use SQL",
     "tags": [
-      "sql"
+      "backend"
     ],
     "date": "2024-09-10",
     "draft": false
@@ -659,7 +666,7 @@
     "slug": "exploring-diff-linux-commands",
     "summary": "Compare files with the diff command in Linux. Find differences, ignore whitespace, and more. Learn how to use it effectively with our concise guide.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-09-07",
     "draft": false
@@ -679,7 +686,7 @@
     "slug": "exploring-gzip-and-gunzip-linux-commands",
     "summary": "Learn how to use gzip and gunzip for file compression and decompression in Linux. Discover key options and commands for efficient file management.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-08-31",
     "draft": false
@@ -689,7 +696,7 @@
     "slug": "august-reflection-2024",
     "summary": "Balancing career goals with cultural fit is key. Discover how to assess company culture with Marion",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2024-08-27",
     "draft": false
@@ -699,7 +706,7 @@
     "slug": "exploring-uniq-linux-commands",
     "summary": "Learn how to use the uniq command in Linux to filter out duplicate lines, count occurrences, and print only unique or duplicate lines",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-08-24",
     "draft": false
@@ -709,7 +716,7 @@
     "slug": "ipv4-vs-ipv6-a-quick-guide",
     "summary": "Explore the key differences between IPv4 and IPv6, focusing on address size, security, and performance, and understand their impact on the internet.",
     "tags": [
-      "networking"
+      "platform"
     ],
     "date": "2024-08-20",
     "draft": false
@@ -719,7 +726,7 @@
     "slug": "exploring-sort-linux-commands",
     "summary": "Learn how to use the sort command in Linux to organize text files by sorting lines alphabetically, numerically, or in reverse order and explore its options.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-08-17",
     "draft": false
@@ -739,7 +746,7 @@
     "slug": "exploring-wc-linux-commands",
     "summary": "Learn how to use the wc command in Linux to count lines, words, bytes, and more in files. Explore options and get helpful tips for efficient file analysis.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-08-10",
     "draft": false
@@ -749,7 +756,7 @@
     "slug": "understanding-the-difference-between-tcp-and-udp",
     "summary": "Explore TCP vs UDP with a post office analogy. Learn when to choose reliable, ordered TCP or faster, less reliable UDP for different network applications.",
     "tags": [
-      "networking"
+      "platform"
     ],
     "date": "2024-08-06",
     "draft": false
@@ -759,7 +766,7 @@
     "slug": "exploring-cut-linux-commands",
     "summary": "Learn how to use the cut command in Linux to extract specific sections from text. Discover options for cutting bytes, characters, fields, and more.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-08-03",
     "draft": false
@@ -769,7 +776,7 @@
     "slug": "july-reflection-2024",
     "summary": "Exploring quitting’s strategic value, student perks with Microsoft Azure, and efficient skill learning. Plus, reflections on impactful books read this month.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2024-07-30",
     "draft": false
@@ -779,7 +786,7 @@
     "slug": "unveiling-alchemy-power-of-absurdity",
     "summary": "Discover how Rory Sutherland",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2024-07-27",
     "draft": false
@@ -799,7 +806,7 @@
     "slug": "exploring-less-and-more-linux-commands",
     "summary": "Learn about the more and less commands in Linux for paginating file content. Discover their basic syntax, options, and how to get additional help.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-07-20",
     "draft": false
@@ -819,7 +826,7 @@
     "slug": "exploring-grep-linux-commands",
     "summary": "Use the grep command in Linux to search for patterns in files. Explore options for case-insensitive search, and more to filter and find text efficiently.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-07-13",
     "draft": false
@@ -829,7 +836,7 @@
     "slug": "understanding-the-osi-reference-model",
     "summary": "Overview of the OSI Reference Model: Learn about the seven layers, their functions, and how they enable seamless network communication between diverse systems.",
     "tags": [
-      "networking"
+      "platform"
     ],
     "date": "2024-07-09",
     "draft": false
@@ -839,7 +846,7 @@
     "slug": "exploring-head-and-tail-linux-commands",
     "summary": "Discover the head and tail commands in Linux. Discover their syntax and options to view the start and end of files efficiently. Level up your Linux knowledge!",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-07-06",
     "draft": false
@@ -859,7 +866,7 @@
     "slug": "understanding-node.js-event-loop-efficiency",
     "summary": "Understand how Node.js",
     "tags": [
-      "node.js"
+      "backend"
     ],
     "date": "2024-07-02",
     "draft": false
@@ -869,7 +876,7 @@
     "slug": "make-time-conquer-busyness-end-distractions",
     "summary": "Discover effective strategies from the Make Time book by Jake Knapp and John Zeratsky to reduce distractions and stay focused on what matters.",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2024-06-29",
     "draft": false
@@ -879,7 +886,7 @@
     "slug": "june-reflection-2024",
     "summary": "Balancing software development studies at SAIT with personal time, using Google Calendar and Tasks to stay organized, avoid burnout, and foster growth.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2024-06-25",
     "draft": false
@@ -889,7 +896,7 @@
     "slug": "exploring-cat-linux-commands",
     "summary": "Learn the cat command in Linux: view, concatenate, and manipulate file contents efficiently with cat. Explore options and basic syntax here.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-06-22",
     "draft": false
@@ -919,7 +926,7 @@
     "slug": "exploring-rmdir-linux-commands",
     "summary": "Learn how to use the rmdir command in Linux to remove empty directories. Discover its syntax, options, and examples for efficient file management.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-06-15",
     "draft": false
@@ -929,7 +936,7 @@
     "slug": "exploring-rm-linux-commands",
     "summary": "Learn about the rm command in Linux, including its basic syntax, options, and examples for deleting files and directories.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-06-13",
     "draft": false
@@ -939,7 +946,7 @@
     "slug": "understanding-nosql-vs-sql-databases",
     "summary": "Discover the contrasts between NoSQL and SQL databases: NoSQL for flexibility and scalability, SQL for relational integrity and transaction reliability.",
     "tags": [
-      "database"
+      "backend"
     ],
     "date": "2024-06-11",
     "draft": false
@@ -949,7 +956,7 @@
     "slug": "boost-your-day-with-the-miracle-morning",
     "summary": "Discover SAVERS for productive days and SLUMBERS for restful nights. Learn to manage stress, read daily, and focus on what you control.",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2024-06-08",
     "draft": false
@@ -959,7 +966,7 @@
     "slug": "update-your-git-remote-url",
     "summary": "Learn how to change the remote URL in Git with simple steps. Update your repository",
     "tags": [
-      "git"
+      "platform"
     ],
     "date": "2024-06-06",
     "draft": false
@@ -969,8 +976,7 @@
     "slug": "doubly-linked-list-javascript-code-example",
     "summary": "Doubly linked lists facilitate bidirectional traversal, offering insertion, deletion, and search operations with nodes linking forward and backward.",
     "tags": [
-      "dsa",
-      "javascript"
+      "dsa"
     ],
     "date": "2024-06-04",
     "draft": false
@@ -980,7 +986,7 @@
     "slug": "exploring-mv-linux-commands",
     "summary": "Learn about the powerful mv command in Linux: move, rename, and manage files efficiently with various options. Essential for file system organization.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-05-18",
     "draft": false
@@ -990,8 +996,7 @@
     "slug": "singly-linked-list-javascript-code-example",
     "summary": "Explore Singly Linked Lists with concise code examples in JavaScript, mastering insertion, deletion, and search operations.",
     "tags": [
-      "dsa",
-      "javascript"
+      "dsa"
     ],
     "date": "2024-05-14",
     "draft": false
@@ -1011,7 +1016,7 @@
     "slug": "april-reflection-2024",
     "summary": "By reflecting on worry, how can we overcome it? Shifting our focus to positives can prevent exhausting ourselves by day",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2024-04-30",
     "draft": false
@@ -1021,7 +1026,7 @@
     "slug": "exploring-cp-linux-commands",
     "summary": "Discover the essential Linux command ",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-04-27",
     "draft": false
@@ -1051,7 +1056,7 @@
     "slug": "exploring-ls-linux-commands",
     "summary": "Discover the versatility of the ls command in Linux. Learn its options like -l, -a, and more to master file navigation effortlessly.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-04-20",
     "draft": false
@@ -1081,7 +1086,7 @@
     "slug": "exploring-cd-linux-commands",
     "summary": "Unlock the efficiency of cd command in Linux: a quick shortcut for toggling between current and previous directories, streamlining command-line navigation.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-04-13",
     "draft": false
@@ -1131,7 +1136,7 @@
     "slug": "march-reflection-2024",
     "summary": "Unlock decision-making with the Stacey Matrix: Insights for organizational and personal clarity. Inspired by Addy Osmani’s LinkedIn post.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2024-03-26",
     "draft": false
@@ -1141,7 +1146,7 @@
     "slug": "exploring-mkdir-linux-commands",
     "summary": "Unlock Linux directory management with mkdir command. Organize files seamlessly. Learn usage tips & examples. Dive into efficient directory creation!",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-03-21",
     "draft": false
@@ -1161,7 +1166,7 @@
     "slug": "automating-checkboxes-in-google-sheets-with-apps-script",
     "summary": "Discover the power of automation in Google Sheets with a guide on adding checkboxes using Apps Script. Simplify tasks and enhance productivity!”",
     "tags": [
-      "apps-script"
+      "automation"
     ],
     "date": "2024-03-16",
     "draft": false
@@ -1181,7 +1186,7 @@
     "slug": "start-with-why-unveil-your-why",
     "summary": "Explore ",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2024-03-09",
     "draft": false
@@ -1191,7 +1196,7 @@
     "slug": "exploring-touch-linux-commands",
     "summary": "Unlock the power of the Linux touch command for file management. Create files, update timestamps, and set custom dates with ease.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-03-07",
     "draft": false
@@ -1201,7 +1206,7 @@
     "slug": "exploring-stat-linux-commands",
     "summary": "Explore the Linux stat command for comprehensive insights: View detailed file information, sizes, permissions, and file system status effortlessly.",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-03-05",
     "draft": false
@@ -1211,7 +1216,7 @@
     "slug": "february-reflection-2024",
     "summary": "Automate tasks with Python in Monthly Reflection! Extract articles, redesign journal entries, and use Makefile for efficiency. Transform ideas effortlessly! 🚀",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2024-02-27",
     "draft": false
@@ -1231,7 +1236,7 @@
     "slug": "smart-brevity-your-path-to-effective-communication",
     "summary": "Unlock the power of Smart Brevity in communication with our expert tips. Learn to convey your message effectively and concisely to captivate your audience.",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2024-02-17",
     "draft": false
@@ -1251,7 +1256,7 @@
     "slug": "keep-going-navigate-your-creative-journey",
     "summary": "Unlock creative resilience with ",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2024-02-10",
     "draft": false
@@ -1261,8 +1266,7 @@
     "slug": "ssh-desktop-pi-connection-guide",
     "summary": "Unlock the full potential of your Raspberry Pi with our step-by-step guides for remote desktop, SSH, and file transfers. Elevate your Pi experience today!”",
     "tags": [
-      "linux",
-      "raspberry-pi"
+      "platform"
     ],
     "date": "2024-02-08",
     "draft": false
@@ -1272,7 +1276,7 @@
     "slug": "managing-workflows-with-github-actions-needs",
     "summary": "Efficiently manage workflows in GitHub Actions by leveraging the “needs” syntax for job control.",
     "tags": [
-      "ci-cd"
+      "platform"
     ],
     "date": "2024-02-06",
     "draft": false
@@ -1282,7 +1286,7 @@
     "slug": "empower-your-journey-with-the-highly-effective-habits",
     "summary": "Optimize your life with ",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2024-02-03",
     "draft": false
@@ -1292,7 +1296,7 @@
     "slug": "docker-compose-configuring-images-and-container-names",
     "summary": "Enhance Docker deployment with custom names for organized images and containers. Explore efficient file transfers using the ",
     "tags": [
-      "docker"
+      "platform"
     ],
     "date": "2024-02-01",
     "draft": false
@@ -1302,7 +1306,7 @@
     "slug": "january-reflection-2024",
     "summary": "Reflected on January, adjusting daily routine and recording a daily journal via Google form. Explored Docker, GitHub Actions (with ",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2024-01-30",
     "draft": false
@@ -1312,7 +1316,7 @@
     "slug": "exploring-alias-linux-commands",
     "summary": "Discover the power of Linux commands with our guide on using ",
     "tags": [
-      "linux"
+      "platform"
     ],
     "date": "2024-01-18",
     "draft": false
@@ -1332,7 +1336,7 @@
     "slug": "steal-like-an-artist-navigating-inspiration-and-innovation",
     "summary": "Revolutionize your approach to creativity with ",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2024-01-13",
     "draft": false
@@ -1342,7 +1346,7 @@
     "slug": "coding-challenges-what-i-learned-from-write-your-wc-tool",
     "summary": "Dive into coding challenges with ",
     "tags": [
-      "coding-challenges",
+      "dsa",
       "javascript"
     ],
     "date": "2024-01-11",
@@ -1363,7 +1367,7 @@
     "slug": "a-blueprint-for-digital-visibility-show-your-work",
     "summary": "Craft a compelling online presence with ",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2024-01-06",
     "draft": false
@@ -1383,7 +1387,7 @@
     "slug": "reflecting-on-2023-a-year-in-review",
     "summary": "Reflecting on the highs, lows, and lessons of 2023. Here",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2023-12-27",
     "draft": false
@@ -1393,7 +1397,7 @@
     "slug": "unignorable-mastery-so-good-they-cant-ignore-you",
     "summary": "Explore a fresh career path with ",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-12-23",
     "draft": false
@@ -1413,7 +1417,7 @@
     "slug": "exploring-the-aspects-of-modern-software-engineering",
     "summary": "Modern Software Engineering by David Farley: Explore the foundational aspects of software engineering and enhance your skills.",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-12-16",
     "draft": false
@@ -1433,7 +1437,7 @@
     "slug": "the-4-hour-workweek-to-the-lifestyle-you-want",
     "summary": "Embrace the ‘The 4-Hour Workweek’ principles that can transform your life to match your vision. Learn to focus on what truly matters to you.”",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-12-09",
     "draft": false
@@ -1453,7 +1457,7 @@
     "slug": "boost-productivity-with-the-getting-things-done-method",
     "summary": "Discover how to boost your productivity with the Getting Things Done method. Learn actionable strategies to organize your work and reduce stress.",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-12-02",
     "draft": false
@@ -1483,7 +1487,7 @@
     "slug": "jumpstart-your-day-with-eat-that-frog-wisdom",
     "summary": "Discover practical strategies for boosting productivity and time management while aligning with effective planning, akin to Atomic Habits and Deep Work.",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-10-07",
     "draft": false
@@ -1503,7 +1507,7 @@
     "slug": "the-unfair-advantage-harnessing-your-unique-abilities",
     "summary": "Discover how to elevate your skills and game with this valuable book, unlocking your true potential for success.",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-09-30",
     "draft": false
@@ -1513,7 +1517,7 @@
     "slug": "september-reflection-2023",
     "summary": "Reflected on what I learned from System Design Primer on databases, cache, and application layer. And the 2-minute rule on getting small tasks done ASAP.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2023-09-27",
     "draft": false
@@ -1523,7 +1527,7 @@
     "slug": "ultralearning-accelerated-learning-strategies",
     "summary": "Discover ",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-09-23",
     "draft": false
@@ -1543,7 +1547,7 @@
     "slug": "clean-architecture-building-robust-systems",
     "summary": "Clean architecture focuses on modular, maintainable software design. It emphasizes clear separation of concerns and business logic centrality.",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-09-16",
     "draft": false
@@ -1573,7 +1577,7 @@
     "slug": "cant-hurt-me-embracing-struggle-achieving-the-impossible",
     "summary": "Unlock potential with David Goggins",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-09-02",
     "draft": false
@@ -1583,7 +1587,7 @@
     "slug": "august-reflection-2023",
     "summary": "Reflected on what I learned from System Design Primer, a containerized app with docker, Threejs - lighting/effects, and the concept of doing the pilot week.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2023-08-30",
     "draft": false
@@ -1593,7 +1597,7 @@
     "slug": "how-to-win-friends-and-influence-people-modern-insights",
     "summary": "Unlock online influence: Learn to connect meaningfully, engage positively, and adapt to digital trends for success. 🌐💬",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-08-26",
     "draft": false
@@ -1603,7 +1607,7 @@
     "slug": "react-hooks-useref",
     "summary": "React",
     "tags": [
-      "react"
+      "frontend"
     ],
     "date": "2023-08-23",
     "draft": false
@@ -1613,7 +1617,7 @@
     "slug": "insights-from-software-engineering-at-google-book",
     "summary": "Learn from Google",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-08-19",
     "draft": false
@@ -1633,7 +1637,7 @@
     "slug": "obstacle-is-the-way-transforming-challenges-into-success",
     "summary": "The Obstacle Is the Way by Ryan Holiday: Embrace obstacles, take action, and cultivate an unyielding will to thrive amidst challenges. 📚💪🚀",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-08-12",
     "draft": false
@@ -1653,7 +1657,7 @@
     "slug": "unlocking-your-second-brain-enhanced-learning-innovation",
     "summary": "Building A Second Brain by Tiago Forte: A guide to effective personal knowledge management, combating info overload, and fostering creativity. 📚💡🚀",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-08-05",
     "draft": false
@@ -1673,7 +1677,7 @@
     "slug": "living-the-life-with-the-subtle-art-of-not-giving-a-fk",
     "summary": "Unconventional self-help. Embrace authenticity. The Subtle Art of Not Giving a F*ck challenges norms. Find fulfillment in Mark Manson",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-07-29",
     "draft": false
@@ -1683,7 +1687,7 @@
     "slug": "july-reflection-2023",
     "summary": "Celebrated a 300-day Duolingo streak, embracing a mindset of abundance. Explored blogs, books, AI, AWS, system design, Git, and Three.js. 🚀",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2023-07-26",
     "draft": false
@@ -1693,7 +1697,7 @@
     "slug": "unleashing-the-12week-plan-the-road-to-accomplishment",
     "summary": "Embark on a transformative journey of accomplishment with the powerful 12-Week Plan. Unleash your potential and achieve your goals like never before.",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-07-22",
     "draft": false
@@ -1713,7 +1717,7 @@
     "slug": "continuous-improvement-lessons-from-the-phoenix-project",
     "summary": "Discover valuable insights on driving continuous improvement in organizations through the compelling lessons learned from The Phoenix Project.",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-07-15",
     "draft": false
@@ -1733,7 +1737,7 @@
     "slug": "the-path-to-clean-code-insights-from-robert-martin",
     "summary": "Master the art of clean code: Improve readability, reduce duplication, apply SOLID principles, and embrace continuous refactoring.",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-07-08",
     "draft": false
@@ -1753,7 +1757,7 @@
     "slug": "from-busy-to-productive-embracing-the-deep-work-mindset",
     "summary": "Unlock your productivity potential with deep work. Embrace focus, eliminate distractions, and achieve remarkable results in a distracted world.",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-07-01",
     "draft": false
@@ -1763,7 +1767,7 @@
     "slug": "june-reflection-2023",
     "summary": "Reflecting on what I learned from Harvard CS50 from memory to HTML, rate limiting, and my thoughts on the tracking system for posts and books.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2023-06-28",
     "draft": false
@@ -1773,7 +1777,7 @@
     "slug": "atomic-habits-transforming-lives-with-lasting-habits",
     "summary": "Atomic Habits by Clear offers a practical guide to harnessing the power of small habits for remarkable personal transformation.",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-06-24",
     "draft": false
@@ -1793,7 +1797,7 @@
     "slug": "unleashing-your-limitless-potential-from-the-limitless-book",
     "summary": "Unlock your brain",
     "tags": [
-      "book"
+      "growth"
     ],
     "date": "2023-06-14",
     "draft": false
@@ -1823,7 +1827,7 @@
     "slug": "may-reflection-2023",
     "summary": "Reflected on what I have learned for the May, what is docker and its usage, Harvard CS50, Back of the Envelope Estimation from System Design.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2023-05-22",
     "draft": false
@@ -1853,7 +1857,7 @@
     "slug": "april-reflection-2023",
     "summary": "Reflected on my Next.js journey: app dir, API route files, Redux Toolkit for state mgmt, SQL queries through a game, and AWS Amplify deployment.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2023-04-26",
     "draft": false
@@ -1863,7 +1867,7 @@
     "slug": "nextjs-state-management-with-redux-toolkit-part-2",
     "summary": "Part 1 covered setting up Redux Toolkit and topSlice function and then how would I refactor the codebase to make it cleaner and more readable way",
     "tags": [
-      "react"
+      "frontend"
     ],
     "date": "2023-04-19",
     "draft": false
@@ -1873,7 +1877,7 @@
     "slug": "nextjs-state-management-with-redux-toolkit-part-1",
     "summary": "This guide provides a step-by-step process for setting up Redux Toolkit with Next.js, enabling you to easily manage state in your web applications",
     "tags": [
-      "react"
+      "frontend"
     ],
     "date": "2023-04-12",
     "draft": false
@@ -1883,7 +1887,7 @@
     "slug": "march-reflection-2023",
     "summary": "Reflected on what I learned about run TS node app, ch 1 of the System Design, LCP and CLS from Lighthouse, and run a tests array with one of Jest",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2023-03-28",
     "draft": false
@@ -1893,8 +1897,8 @@
     "slug": "a-simple-guide-to-setting-up-and-deploying-node-with-typescript",
     "summary": "Set up & deploy TypeScript Node.js app: Learn how to enable TypeScript, run locally 3 ways, & deploy the app with this guide.",
     "tags": [
-      "typescript",
-      "node.js"
+      "backend",
+      "typescript"
     ],
     "date": "2023-03-08",
     "draft": false
@@ -1904,7 +1908,7 @@
     "slug": "february-reflection-2023",
     "summary": "Reflected on Hacker News clone learnings, especially Redux Toolkit. Gained Cypress API familiarity by writing e2e tests.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2023-02-22",
     "draft": false
@@ -1944,7 +1948,7 @@
     "slug": "january-reflection-2023",
     "summary": "Reflecting on January, inspired by Atomic Habits, I",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2023-01-25",
     "draft": false
@@ -1954,7 +1958,7 @@
     "slug": "react-hooks-usecallback",
     "summary": "Boost React app performance with useCallback hook. Understand how it works, prevent re-renders & compare examples with/without useCallback.",
     "tags": [
-      "react"
+      "frontend"
     ],
     "date": "2023-01-18",
     "draft": false
@@ -1964,7 +1968,7 @@
     "slug": "react-hooks-useMemo",
     "summary": "Optimize React app performance with useMemo hook. Learn advantages disadvantages & see performance difference with before/after examples.",
     "tags": [
-      "react"
+      "frontend"
     ],
     "date": "2023-01-11",
     "draft": false
@@ -1974,7 +1978,7 @@
     "slug": "react-hooks-usecontext",
     "summary": "Access global state in functional components with useContext hook in React 16.8. Avoid prop drilling & consume context efficiently.",
     "tags": [
-      "react"
+      "frontend"
     ],
     "date": "2023-01-04",
     "draft": false
@@ -1984,7 +1988,7 @@
     "slug": "the-wrapped-journal-for-2022",
     "summary": "Reflect on 2022 with The Wrapped Journal. Build consistency, and overcome burnout & imposter syndrome. Track progress & achievements.",
     "tags": [
-      "reflection"
+      "growth"
     ],
     "date": "2022-12-28",
     "draft": false
@@ -1994,7 +1998,7 @@
     "slug": "react-hooks-usereducer",
     "summary": "Manage state changes & fetch API data with useReducer in React. More flexible than useState, takes reducer & initial state, returns state & dispatch function.",
     "tags": [
-      "react"
+      "frontend"
     ],
     "date": "2022-12-21",
     "draft": false
@@ -2004,7 +2008,7 @@
     "slug": "react-hooks-useeffect",
     "summary": "Learn to use useEffect in React for side effects such as fetching data, event listeners, etc. Control hook call with dependency array & use with diff values.",
     "tags": [
-      "react"
+      "frontend"
     ],
     "date": "2022-12-14",
     "draft": false
@@ -2014,7 +2018,7 @@
     "slug": "react-hooks-usestate",
     "summary": "Learn to use useState in React to handle data types, avoid mutability in arrays & update state values. Bonus: TypeScript & handling state logging behavior.",
     "tags": [
-      "react"
+      "frontend"
     ],
     "date": "2022-12-06",
     "draft": false
@@ -2024,7 +2028,7 @@
     "slug": "lets-automate-your-workflows-with-github-actions",
     "summary": "Automate CI/CD tasks and improve your workflow with GitHub Actions. Learn triggers, jobs, steps & setting up Jest testing with a practical example.",
     "tags": [
-      "ci-cd"
+      "platform"
     ],
     "date": "2022-11-15",
     "draft": false
@@ -2034,7 +2038,7 @@
     "slug": "react-pagination-vanilla-edition",
     "summary": "Create React pagination with 5 pages, navigation buttons, current page highlight, and centered navigation. No external packages needed. Demo & code provided.",
     "tags": [
-      "react"
+      "frontend"
     ],
     "date": "2022-11-06",
     "draft": false
@@ -2054,7 +2058,7 @@
     "slug": "what-have-i-learn-about-react-context-api",
     "summary": "Explore React",
     "tags": [
-      "react"
+      "frontend"
     ],
     "date": "2022-10-28",
     "draft": false
@@ -2074,7 +2078,7 @@
     "slug": "the-journey-of-contributing-to-open-source",
     "summary": "Guide to contributing to open source: Covers Git, GitHub, finding good first issues. Personal journey of writer",
     "tags": [
-      "misc"
+      "growth"
     ],
     "date": "2022-06-10",
     "draft": false
@@ -2084,7 +2088,7 @@
     "slug": "my-first-round-of-the-100-days-of-the-code",
     "summary": "My 100 Days of Code experience: Focused on JS, HTML/CSS. Lessons, strategies for consistency, tips for working with JS, importance of breaks, goals",
     "tags": [
-      "misc"
+      "growth"
     ],
     "date": "2022-06-03",
     "draft": false
@@ -2094,7 +2098,7 @@
     "slug": "tailwind-css-beginner-edition",
     "summary": "Tailwind CSS: utility-first framework speeds up styling with inline markup, wide class range like flex and pt-4. Customizable and no switching files.",
     "tags": [
-      "css"
+      "frontend"
     ],
     "date": "2022-05-30",
     "draft": false
@@ -2124,7 +2128,7 @@
     "slug": "my-journey-into-the-tech",
     "summary": "Tech-lover turned self-taught developer through YouTube and Frontend Mentor. Follow my journey to becoming a full-time developer!",
     "tags": [
-      "misc"
+      "growth"
     ],
     "date": "2022-03-04",
     "draft": false
@@ -2154,7 +2158,7 @@
     "slug": "what-is-powertoys",
     "summary": "PowerToys, a free Microsoft tool, enhances productivity via pinned apps, window arrangement, color picking, and image resizing, with customizable options.",
     "tags": [
-      "misc"
+      "growth"
     ],
     "date": "2022-02-18",
     "draft": false
@@ -2164,7 +2168,7 @@
     "slug": "responsive-website-deep-dive",
     "summary": "Responsive design builds adaptable websites using flexible grids, images & mobile-first design. Test on devices for the best user experience.",
     "tags": [
-      "css"
+      "frontend"
     ],
     "date": "2022-02-14",
     "draft": false
@@ -2174,7 +2178,7 @@
     "slug": "networking-100devs",
     "summary": "Networking is building professional relationships to achieve career goals. Land job offers by attending events, joining groups, and meeting new people.",
     "tags": [
-      "misc"
+      "growth"
     ],
     "date": "2022-02-08",
     "draft": false
@@ -2184,7 +2188,7 @@
     "slug": "what-is-100devs-cohort",
     "summary": "100Devs is a 30-week remote cohort by Leon Noel teaching MongoDB, Express, React, Node stack & Anki for studying.",
     "tags": [
-      "misc"
+      "growth"
     ],
     "date": "2022-02-06",
     "draft": false

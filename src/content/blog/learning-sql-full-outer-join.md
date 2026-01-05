@@ -2,7 +2,7 @@
 title: "Learning SQL: FULL OUTER JOIN"
 description: "Master SQL FULL OUTER JOIN: Combine data from two tables, retain all rows, handle NULL values, and optimize queries for better insights."
 date: 2025-02-04
-tags: [sql]
+tags: ["backend"]
 ---
 
 ## What is the FULL OUTER JOIN Clause?
