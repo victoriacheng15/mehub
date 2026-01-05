@@ -73,6 +73,13 @@ post_title=$(sed -n 's/^title:[[:space:]]*"\(.*\)"/\1/p' "$post_file")
 debug_log "Post file: $post_file"
 debug_log "Post title: $post_title"
 
+# Generate search index
+debug_log "\n🔍 Generating search index..."
+run_if_not_debug "npm run generate-search-index"
+run_if_not_debug "git add public/search-index.json"
+debug_log "Search index generated and staged."
+
+
 run_if_not_debug "git commit -m \"chore: publish post $post_title ! 🎉\""
 run_if_not_debug "git push --force-with-lease origin $branch_name"
 
