@@ -3,7 +3,6 @@ title: "[Engineering Log] Why Not Index Everything?"
 description: "An investigation into B-Trees, the library analogy, and why we don't index every column."
 date: 2026-01-13
 tags: ["retrospective", "backend"]
-draft: true
 ---
 
 ## 1. Context (The "Why")
