@@ -1,5 +1,16 @@
 [
   {
+    "title": "[Engineering Log] Why Not Index Everything?",
+    "slug": "engineering-log-why-not-index-everything",
+    "summary": "An investigation into B-Trees, the library analogy, and why we don",
+    "tags": [
+      "retrospective",
+      "backend"
+    ],
+    "date": "2026-01-13",
+    "draft": false
+  },
+  {
     "title": "From Links to Reading Insights",
     "slug": "from-links-to-reading-insights",
     "summary": "From article extractor to personal reading analytics dashboard—zero infrastructure, Go-powered metrics, and live visualizations on GitHub Pages.",
