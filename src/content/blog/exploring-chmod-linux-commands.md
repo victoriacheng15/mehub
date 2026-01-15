@@ -2,7 +2,7 @@
 title: "Exploring chmod - Linux Commands"
 description: "Learn how to use the chmod command in Linux to manage file permissions effectively, ensuring proper access control for users and groups."
 date: 2024-11-09
-tags: ["platform"]
+tags: ["linux"]
 ---
 
 ## What is the `chmod` Command in Linux?

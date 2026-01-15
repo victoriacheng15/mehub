@@ -2,7 +2,7 @@
 title: "February Reflection 2025"
 description: "Reflecting on building tools to improve efficiency, recreating projects in new languages, and exploring Ansible for automation. Simplifying workflows, one project at a time."
 date: 2025-02-25
-tags: ["growth"]
+tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection

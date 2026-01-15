@@ -2,7 +2,7 @@
 title: "July Reflection 2024"
 description: "Exploring quitting’s strategic value, student perks with Microsoft Azure, and efficient skill learning. Plus, reflections on impactful books read this month."
 date: 2024-07-30
-tags: ["growth"]
+tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection

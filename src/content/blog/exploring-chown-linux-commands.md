@@ -2,7 +2,7 @@
 title: "Exploring chown - Linux Commands"
 description: "Learn how to use the chown command in Linux to change file and directory ownership, with examples and common use cases."
 date: 2024-10-12
-tags: ["platform"]
+tags: ["linux"]
 ---
 
 ## What is the `chown` Command in Linux?

@@ -2,7 +2,7 @@
 title: "Exploring cat - Linux Commands"
 description: "Learn the cat command in Linux: view, concatenate, and manipulate file contents efficiently with cat. Explore options and basic syntax here."
 date: 2024-06-22
-tags: ["platform"]
+tags: ["linux"]
 ---
 
 ## What is the cat Command in Linux?

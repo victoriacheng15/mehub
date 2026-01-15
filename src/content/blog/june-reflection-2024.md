@@ -2,7 +2,7 @@
 title: "June Reflection 2024"
 description: "Balancing software development studies at SAIT with personal time, using Google Calendar and Tasks to stay organized, avoid burnout, and foster growth."
 date: 2024-06-25
-tags: ["growth"]
+tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection

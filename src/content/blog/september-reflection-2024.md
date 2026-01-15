@@ -2,7 +2,7 @@
 title: "September Reflection 2024"
 description: "Reflect on insights from The Strangest Secret by Nightingale, focusing on the power of thoughts, goal-setting, and staying positive on your journey to success."
 date: 2024-09-24
-tags: ["growth"]
+tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection

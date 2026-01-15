@@ -2,7 +2,7 @@
 title: "January Reflection 2024"
 description: "Reflected on January, adjusting daily routine and recording a daily journal via Google form. Explored Docker, GitHub Actions (with 'needs'), and Raspberry Pi."
 date: 2024-01-30
-tags: ["growth"]
+tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection

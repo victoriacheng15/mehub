@@ -2,7 +2,7 @@
 title: "Exploring touch - Linux Commands"
 description: "Unlock the power of the Linux touch command for file management. Create files, update timestamps, and set custom dates with ease."
 date: 2024-03-07
-tags: ["platform"]
+tags: ["linux"]
 ---
 
 ## What is a touch command?
