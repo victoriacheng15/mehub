@@ -2,7 +2,7 @@
 title: "March Reflection 2024"
 description: "Unlock decision-making with the Stacey Matrix: Insights for organizational and personal clarity. Inspired by Addy Osmani’s LinkedIn post."
 date: 2024-03-26
-tags: ["growth"]
+tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection

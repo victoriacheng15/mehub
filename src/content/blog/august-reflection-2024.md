@@ -2,7 +2,7 @@
 title: "August Reflection 2024"
 description: "Balancing career goals with cultural fit is key. Discover how to assess company culture with Marion's TED Talk on finding your ideal workplace."
 date: 2024-08-27
-tags: ["growth"]
+tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection

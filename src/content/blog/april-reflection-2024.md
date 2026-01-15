@@ -2,7 +2,7 @@
 title: "April Reflection 2024"
 description: "By reflecting on worry, how can we overcome it? Shifting our focus to positives can prevent exhausting ourselves by day's end."
 date: 2024-04-30
-tags: ["growth"]
+tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection

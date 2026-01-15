@@ -2,7 +2,7 @@
 title: "July Reflection 2025"
 description: "A reflection on learning through the lens of a technical backpack — what I’ve added, what I’ve let go, and how I’m making space for smarter growth."
 date: 2025-07-29
-tags: ["growth"]
+tags: ["monthly-log"]
 ---
 
 ## 🎒Technical Backpack

@@ -2,7 +2,7 @@
 title: "Exploring gzip and gunzip - Linux Commands"
 description: "Learn how to use gzip and gunzip for file compression and decompression in Linux. Discover key options and commands for efficient file management."
 date: 2024-08-31
-tags: ["platform"]
+tags: ["linux"]
 ---
 
 ## What are the gzip and gunzip Commands in Linux?

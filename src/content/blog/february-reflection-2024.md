@@ -2,7 +2,7 @@
 title: "February Reflection 2024"
 description: "Automate tasks with Python in Monthly Reflection! Extract articles, redesign journal entries, and use Makefile for efficiency. Transform ideas effortlessly! 🚀"
 date: 2024-02-27
-tags: ["growth"]
+tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection

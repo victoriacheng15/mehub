@@ -2,7 +2,7 @@
 title: "Exploring grep - Linux Commands"
 description: "Use the grep command in Linux to search for patterns in files. Explore options for case-insensitive search, and more to filter and find text efficiently."
 date: 2024-07-13
-tags: ["platform"]
+tags: ["linux"]
 ---
 
 ## What is the grep Command in Linux?

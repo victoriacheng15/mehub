@@ -2,7 +2,7 @@
 title: "Exploring find - Linux Commands"
 description: "Discover how to use the find command in Linux to locate files and directories efficiently. Learn options, examples, and common use cases in this casual guide!"
 date: 2024-09-28
-tags: ["platform"]
+tags: ["linux"]
 ---
 
 ## What is the `find` Command in Linux?

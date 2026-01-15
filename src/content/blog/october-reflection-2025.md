@@ -2,7 +2,7 @@
 title: "October Reflection 2025"
 description: "Reflections on evolving a Flask API from SQLite MVP to PostgreSQL with Docker, Azure cloud deployment, feature flags, and DevOps workflows."
 date: 2025-10-28
-tags: ["growth", "python"]
+tags: ["monthly-log", "python"]
 ---
 
 ## From SQLite to Azure: Practicing Production Thinking

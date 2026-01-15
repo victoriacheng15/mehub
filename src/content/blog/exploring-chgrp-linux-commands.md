@@ -2,7 +2,7 @@
 title: "Exploring chgrp - Linux Commands"
 description: "Learn how to use the chgrp command in Linux to change group ownership of files and directories. Perfect for system admins!"
 date: 2024-10-05
-tags: ["platform"]
+tags: ["linux"]
 ---
 
 ## What is the `chgrp` Command in Linux?
