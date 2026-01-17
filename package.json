@@ -1,8 +1,0 @@
-{
-  "name": "mehub-ssg",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "build": "make setup-go && make setup-tailwind && make build"
-  }
-}
