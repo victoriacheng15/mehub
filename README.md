@@ -1,6 +1,6 @@
 # 👋 My Personal Website & Custom Go SSG 🐧
 
-Welcome! This repository contains the source for my personal website, which is built and rendered by **`mehub-ssg`**, a custom Static Site Generator I wrote in Go.
+Welcome! This repository contains the source for my personal website, which is built and rendered by **`mehub`**, a custom Static Site Generator I wrote in Go.
 
 This project demonstrates a complete, end-to-end ownership of a personal platform, from the core rendering engine to the automated CI/CD pipeline that publishes it.
 

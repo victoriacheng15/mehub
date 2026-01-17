@@ -1,4 +1,4 @@
-module mehub-ssg
+module mehub
 
 go 1.23.4
 

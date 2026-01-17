@@ -1,4 +1,4 @@
-name: Go Check
+name: Go Check & Test
 
 on:
   pull_request:
@@ -8,16 +8,28 @@ on:
       - 'go.mod'
       - 'go.sum'
 
+env:
+  go-version: 'stable'
+
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-
-      - name: Setup Go
-        uses: actions/setup-go@v6.2.0
+      - uses: actions/setup-go@v6
         with:
-          go-version: 'stable'
+          go-version: {{ env.go-version }}
 
       - name: Run Format Check
         run: make check
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-go@v6
+        with:
+          go-version: {{ env.go-version }}
+
+      - name: Run Tests
+        run: make test
