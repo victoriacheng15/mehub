@@ -20,7 +20,7 @@ run_if_not_debug() {
 }
 
 ROOT_DIR=$(pwd)
-cd "src/content/blog" || exit
+cd "blog" || exit
 
 today=$(date -u +%Y-%m-%d)
 
@@ -65,20 +65,13 @@ run_if_not_debug "git switch -c \"$branch_name\""
 run_if_not_debug "git config --local user.email \"\$AUTHOR_EMAIL\""
 run_if_not_debug "git config --local user.name \"\$AUTHOR_NAME\""
 
-run_if_not_debug "git add src/content/blog"
+run_if_not_debug "git add blog"
 
-post_file=$(git diff --name-only HEAD~1 src/content/ | head -n 1)
+post_file=$(git diff --name-only HEAD~1 blog/ | head -n 1)
 post_title=$(sed -n 's/^title:[[:space:]]*"\(.*\)"/\1/p' "$post_file")
 
 debug_log "Post file: $post_file"
 debug_log "Post title: $post_title"
-
-# Generate search index
-debug_log "\n🔍 Generating search index..."
-run_if_not_debug "npm run generate-search-index"
-run_if_not_debug "git add public/search-index.json"
-debug_log "Search index generated and staged."
-
 
 run_if_not_debug "git commit -m \"chore: publish post $post_title ! 🎉\""
 run_if_not_debug "git push --force-with-lease origin $branch_name"

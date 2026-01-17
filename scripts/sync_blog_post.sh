@@ -26,11 +26,11 @@ curl -s \
   sed -e 's/"$//' | \
   sed -e 's/\\n/\n/g' | \
   sed -e 's/\\"/"/g' | \
-  sed -e 's/^date: "\(.*\)"/date: \1/' > src/content/blog/$SLUG.md
+  sed -e 's/^date: "\(.*\)"/date: \1/' > blog/$SLUG.md
 
 # ==== Branch, commit, and push ====
 git switch -C "blog/$SLUG"
-git add "src/content/blog/$SLUG.md"
+git add "blog/$SLUG.md"
 git commit -m "Sync blog post: $BLOG_TITLE"
 git push --force-with-lease origin "blog/$SLUG"
 

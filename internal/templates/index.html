@@ -1,0 +1,56 @@
+{{ define "content" }}
+<div class="flex flex-col gap-16">
+    <section class="flex flex-col gap-6">
+        <div class="flex flex-col gap-2">
+            <h1 class="text-4xl font-extrabold text-secondary-100">{{ .Config.Site.Name }}</h1>
+            <p class="text-xl text-secondary-400">{{ .Config.Site.Slogan }}</p>
+        </div>
+        <div class="text-secondary-200">
+            <p>{{ .Config.Site.Description }}</p>
+        </div>
+
+        <div class="flex gap-4">
+            {{ range .Config.Socials }}
+            <a href="{{ .Href }}" target="_blank" rel="noopener noreferrer" class="p-2 rounded-md bg-secondary-900/30 hover:bg-secondary-600 transition-colors" aria-label="{{ .Name }}">
+                <img src="{{ $.PathPrefix }}socials/{{ .Icon }}" alt="{{ .Name }}" class="w-8 h-8 invert">
+            </a>
+            {{ end }}
+        </div>
+    </section>
+
+    <section class="flex flex-col gap-6">
+        <h2 class="text-2xl font-bold text-secondary-500">Skills</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-px border border-secondary-900/30 overflow-hidden">
+            {{ range .Config.Skills }}
+            <div class="flex flex-col items-center justify-center gap-3 p-6 bg-secondary-100 hover:bg-secondary-200 transition-colors group">
+                <img src="{{ $.PathPrefix }}skills/{{ .Icon }}" alt="{{ .Name }}" class="w-8 h-8 group-hover:scale-110 transition-transform">
+                <span class="text-sm font-bold text-primary-800 text-center">{{ .Name }}</span>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <section class="flex flex-col gap-6">
+        <h2 class="text-2xl font-bold text-secondary-500">Projects</h2>
+        <div class="grid grid-cols-1 gap-px border border-secondary-900/30 overflow-hidden">
+            {{ range .Config.Projects }}
+            <a href="https://github.com/victoriacheng15/{{ .Link }}#readme" target="_blank" rel="noopener noreferrer" 
+               class="flex flex-col gap-4 p-6 bg-secondary-100 hover:bg-secondary-200 transition-colors group">
+                <div class="flex justify-between items-start">
+                    <h3 class="text-xl font-bold text-primary-900">
+                        {{ .Title }}
+                    </h3>
+                    <!-- GitHub link is now the entire card -->
+                </div>
+                <p class="text-primary-800 leading-relaxed">{{ .ShortDescription }}</p>
+                <div class="flex flex-wrap gap-2">
+                    {{ range (cleanYAMLList .Techs) }}
+                    <span class="p-2 bg-primary-800 text-primary-50 text-sm font-semibold rounded-md">{{ . }}</span>
+                    {{ end }}
+                </div>
+            </a>
+            {{ end }}
+        </div>
+    </section>
+</div>
+{{ end }}

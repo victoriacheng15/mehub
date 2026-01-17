@@ -1,0 +1,13 @@
+{{ define "content" }}
+<div class="flex flex-col gap-8">
+    <h1 class="text-3xl font-bold text-secondary-500">About</h1>
+    <div class="flex justify-center">
+        <img src="{{ .PathPrefix }}avatar.png" alt="Victoria Cheng" loading="lazy" decoding="async" fetchpriority="auto" width="200" height="200" class="border-secondary-400 rounded-full border-4 object-cover shadow-lg">
+    </div>
+    <div class="text-secondary-200 flex flex-col gap-4">
+        {{ range (cleanYAMLList .Config.Site.About.Paragraphs) }}
+        <p>{{ . | safeHTML }}</p>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

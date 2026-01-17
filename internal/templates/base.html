@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO -->
+    <title>{{ .Title }}</title>
+    <meta name="description" content="{{ if .Post }}{{ .Post.Description }}{{ else }}{{ .Config.Site.Description }}{{ end }}">
+    <link rel="canonical" href="{{ .Config.Site.URL }}{{ if .Post }}blog/{{ .Post.Slug }}.html{{ end }}">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="{{ if .Post }}article{{ else }}website{{ end }}">
+    <meta property="og:url" content="{{ .Config.Site.URL }}{{ if .Post }}blog/{{ .Post.Slug }}.html{{ end }}">
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:description" content="{{ if .Post }}{{ .Post.Description }}{{ else }}{{ .Config.Site.Description }}{{ end }}">
+    <meta property="og:image" content="{{ .Config.Site.URL }}avatar.png">
+
+    <!-- RSS Feed Discovery -->
+    <link rel="alternate" type="application/rss+xml" title="{{ .Config.Site.Title }} RSS Feed" href="{{ .PathPrefix }}rss.xml">
+
+    <link rel="icon" type="image/svg+xml" href="{{ .PathPrefix }}favicon.svg">
+    <link href="{{ .PathPrefix }}styles.css" rel="stylesheet">
+    
+    <!-- Performance: Defer heavy scripts -->
+    <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body class="bg-primary-950 text-secondary-200 font-sans antialiased min-h-screen flex flex-col items-center">
+    <div class="w-full max-w-[720px] flex flex-col min-h-screen gap-12 px-6 py-10">
+        {{ template "header" . }}
+        
+        <main class="w-full flex-grow">
+            {{ template "content" . }}
+        </main>
+
+        {{ template "footer" . }}
+    </div>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+</html>
+
+{{ define "header" }}
+<header class="w-full flex flex-col sm:flex-row justify-between items-center gap-4 pb-6 border-b border-primary-700">
+    <div class="flex flex-col items-center sm:items-start">
+        <a href="{{ .PathPrefix }}index.html" class="text-2xl font-bold text-secondary-400 hover:text-secondary-300 transition-colors">
+            {{ .Config.Site.Title }}
+        </a>
+    </div>
+    <nav aria-label="Main Navigation">
+        <ul class="flex gap-6 font-medium text-lg">
+            {{ range .Config.Navigation.Header }}
+                <li>
+                    <a href="{{ $.PathPrefix }}{{ .Href }}" class="text-secondary-300 hover:text-secondary-100 transition-colors">{{ .Text }}</a>
+                </li>
+            {{ end }}
+        </ul>
+    </nav>
+</header>
+{{ end }}
+
+{{ define "footer" }}
+<footer class="w-full flex flex-col items-center gap-6 pt-6 border-t border-primary-700 text-sm text-secondary-500">
+    <nav aria-label="Footer Navigation">
+        <ul class="flex gap-6 font-medium text-base">
+            {{ range .Config.Navigation.Footer }}
+                <li>
+                    <a href="{{ $.PathPrefix }}{{ .Href }}" class="text-secondary-400 hover:text-secondary-200 transition-colors">{{ .Text }}</a>
+                </li>
+            {{ end }}
+        </ul>
+    </nav>
+    <div class="flex gap-6">
+        {{ range .Config.Socials }}
+        {{ $isExternal := stringsHasPrefix .Href "http" }}
+        <a href="{{ if $isExternal }}{{ .Href }}{{ else }}{{ $.PathPrefix }}{{ stringsTrimPrefix .Href "/" }}{{ end }}" 
+           {{ if $isExternal }}target="_blank" rel="noopener noreferrer"{{ end }}
+           class="p-2 rounded-md hover:bg-primary-800/30 transition-colors" aria-label="{{ .Name }}">
+            <img src="{{ $.PathPrefix }}socials/{{ .Icon }}" alt="{{ .Name }}" class="w-5 h-5 invert opacity-70 hover:opacity-100 transition-opacity">
+        </a>
+        {{ end }}
+    </div>
+    <p>&copy; {{ .CurrentYear }} 🐧 {{ .Config.Site.Title }}. All rights reserved.</p>
+</footer>
+{{ end }}

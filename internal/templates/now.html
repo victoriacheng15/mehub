@@ -1,0 +1,21 @@
+{{ define "content" }}
+<div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-4">
+        <h1 class="text-3xl font-bold text-secondary-500">Now</h1>
+        <p class="text-sm text-secondary-500">Last updated: {{ .Config.Site.Now.LastUpdated }}</p>
+    </div>
+    
+    <div class="grid grid-cols-1 gap-px border border-secondary-900/30 overflow-hidden">
+        {{ range .Config.Site.Now.Categories }}
+        <section class="flex flex-col gap-4 p-6 bg-secondary-100 hover:bg-secondary-200 transition-colors group">
+            <h2 class="text-xl font-bold text-primary-900">{{ .Title }}</h2>
+            <ul class="list-disc list-inside text-primary-800 flex flex-col gap-2">
+                {{ range (cleanYAMLList .Items) }}
+                <li>{{ . | safeHTML }}</li>
+                {{ end }}
+            </ul>
+        </section>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

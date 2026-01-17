@@ -1,0 +1,28 @@
+projects:
+  - title: "Observability Hub"
+    shortDescription: "Self-hosted observability hub collecting system and application metrics into Postgres, visualized in Grafana with automated backups and cron-driven Go collectors."
+    link: "observability-hub"
+    techs: |
+      - Go
+      - Grafana
+      - PostgreSQL (TimescaleDB)
+      - Docker
+  - title: "Cover Craft"
+    shortDescription: "Serverless cover image generator on Azure Functions (Node.js/Canvas). Users customize text, fonts & colors; exports PNGs + logs preferences to MongoDB for analytics."
+    link: "cover-craft"
+    techs: |
+      - TypeScript
+      - Azure Functions
+      - Next.js
+      - GitHub Actions
+      - MongoDB Atlas
+  - title: "Personal Reading Analytics"
+    shortDescription: "Fully automated reading tracker—zero infra, 100% GitHub. Go + Python pipeline with interactive analytics from Shopify, Stripe, and GitHub blogs."
+    link: "personal-reading-analytics"
+    techs: |
+      - Go
+      - Python
+      - Google Sheets
+      - Docker
+      - GitHub Actions
+      - MongoDB Atlas
