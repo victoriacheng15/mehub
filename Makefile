@@ -1,4 +1,4 @@
-.PHONY: build help setup-tailwind format check setup-go vet
+.PHONY: build help setup-tailwind format check setup-go vet test cov-log
 
 BINARY_NAME=ssg.exe
 TAILWIND_BIN=./tailwindcss
@@ -13,6 +13,8 @@ help:
 	@echo "  make build           Build and run the generator (requires Go)"
 	@echo "  make format          Format Go code"
 	@echo "  make check           Check if Go code is formatted and vetted"
+	@echo "  make test            Run all tests"
+	@echo "  make cov-log         Run tests and show coverage report"
 	@echo "  make setup-tailwind  Download Tailwind CLI (Linux x64)"
 	@echo "  make setup-go        Download and setup Go $(GO_VERSION) locally"
 	@echo "  make nix-<target>    Run any target inside nix-shell (e.g., nix-build)"
@@ -44,6 +46,14 @@ check: vet
 		exit 1; \
 	fi
 	@echo "✅ Go code is formatted correctly and vetted."
+
+test:
+	@go test -v ./...
+
+cov-log:
+	@go test -coverprofile=coverage.out ./...
+	@go tool cover -func=coverage.out
+	@rm coverage.out
 
 setup-tailwind:
 	@curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-linux-x64
