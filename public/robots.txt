@@ -1,9 +1,6 @@
-
 User-agent: *
 Allow: /
-Allow: /blog/
-Allow: /tags/
-Allow: /archives/
+Disallow: /404.html
 
 # Sitemap
 Sitemap: https://victoriacheng15.vercel.app/sitemap.xml

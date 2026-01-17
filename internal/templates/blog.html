@@ -1,0 +1,126 @@
+{{ define "content" }}
+<div class="flex flex-col gap-10">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+        {{ if stringsHasPrefix .Title "#" }}
+        {{ $tag := index (split .Title " | ") 0 }}
+        <h1 class="text-3xl font-bold text-secondary-500">Tag: {{ $tag }}</h1>
+        {{ else }}
+        <h1 class="text-3xl font-bold text-secondary-500">Blog</h1>
+
+        <div class="relative w-full sm:max-w-xs">
+            <input type="text" id="search-input" placeholder="Search posts..." 
+                class="w-full px-4 py-2 bg-secondary-900/20 border border-secondary-900/30 rounded-md text-secondary-200 focus:outline-none focus:border-secondary-500 transition-colors">
+            <div id="search-results-count" class="absolute right-3 top-2.5 text-xs text-secondary-500 font-bold"></div>
+        </div>
+        {{ end }}
+    </div>
+    
+    <div id="default-list" class="grid grid-cols-1 gap-px border border-secondary-900/30 overflow-hidden">
+        {{ range .Posts }}
+        <a href="{{ $.PathPrefix }}blog/{{ .Slug }}.html" class="flex flex-col gap-2 p-4 bg-secondary-100 hover:bg-secondary-200 transition-colors group">
+            <time class="text-sm text-primary-700">{{ .Date.Format "January 02, 2006" }}</time>
+            <h2 class="text-2xl font-bold text-primary-900 transition-colors">
+                {{ .Title }}
+            </h2>
+            <p class="text-primary-800 leading-relaxed">{{ .Description }}</p>
+            <div class="flex gap-2">
+                {{ range .Tags }}
+                <span class="p-2 text-sm bg-primary-800 text-primary-50 font-semibold rounded-md">#{{ . }}</span>
+                {{ end }}
+            </div>
+        </a>
+        {{ end }}
+    </div>
+
+    {{ if not (stringsHasPrefix .Title "#") }}
+    <div id="search-results" class="grid grid-cols-1 gap-px border border-secondary-900/30 overflow-hidden hidden">
+        <!-- JS will populate this -->
+    </div>
+    {{ end }}
+
+    {{ if gt .TotalPages 1 }}
+    <nav id="pagination-nav" class="flex justify-between items-center pt-6">
+        {{ if gt .CurrentPage 1 }}
+            {{ if eq .CurrentPage 2 }}
+            <a href="{{ .PathPrefix }}blog.html" class="px-4 py-2 bg-secondary-100 text-primary-950 font-bold hover:bg-secondary-200 transition-colors border border-secondary-900/30">Previous</a>
+            {{ else }}
+            <a href="{{ .PathPrefix }}blog/{{ sub .CurrentPage 1 }}.html" class="px-4 py-2 bg-secondary-100 text-primary-950 font-bold hover:bg-secondary-200 transition-colors border border-secondary-900/30">Previous</a>
+            {{ end }}
+        {{ else }}
+        <span></span>
+        {{ end }}
+
+        <span class="text-secondary-500 font-medium">Page {{ .CurrentPage }} of {{ .TotalPages }}</span>
+
+        {{ if lt .CurrentPage .TotalPages }}
+        <a href="{{ .PathPrefix }}blog/{{ add .CurrentPage 1 }}.html" class="px-4 py-2 bg-secondary-100 text-primary-950 font-bold hover:bg-secondary-200 transition-colors border border-secondary-900/30">Next</a>
+        {{ else }}
+        <span></span>
+        {{ end }}
+    </nav>
+    {{ end }}
+</div>
+
+{{ if not (stringsHasPrefix .Title "#") }}
+<script>
+    let searchIndex = null;
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    const defaultList = document.getElementById('default-list');
+    const paginationNav = document.getElementById('pagination-nav');
+    const resultsCount = document.getElementById('search-results-count');
+    const pathPrefix = "{{ .PathPrefix }}";
+
+    async function loadIndex() {
+        if (searchIndex) return;
+        try {
+            const resp = await fetch(pathPrefix + 'search-index.json');
+            searchIndex = await resp.json();
+        } catch (e) {
+            console.error("Failed to load search index:", e);
+        }
+    }
+
+    searchInput.addEventListener('focus', loadIndex);
+    
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        
+        if (query === '') {
+            defaultList.classList.remove('hidden');
+            if (paginationNav) paginationNav.classList.remove('hidden');
+            searchResults.classList.add('hidden');
+            searchResults.innerHTML = '';
+            resultsCount.textContent = '';
+            return;
+        }
+
+        if (!searchIndex) return;
+
+        const filtered = searchIndex.filter(item => 
+            item.title.toLowerCase().includes(query) || 
+            item.description.toLowerCase().includes(query) ||
+            item.tags.some(t => t.toLowerCase().includes(query))
+        );
+
+        defaultList.classList.add('hidden');
+        if (paginationNav) paginationNav.classList.add('hidden');
+        searchResults.classList.remove('hidden');
+        resultsCount.textContent = filtered.length > 0 ? filtered.length + ' found' : 'No results';
+
+        searchResults.innerHTML = filtered.map(item => `
+            <a href="${pathPrefix}blog/${item.slug}.html" class="flex flex-col gap-2 p-4 bg-secondary-100 hover:bg-secondary-200 transition-colors group">
+                <time class="text-sm text-primary-700">${item.date}</time>
+                <h2 class="text-2xl font-bold text-primary-900 transition-colors">
+                    ${item.title}
+                </h2>
+                <p class="text-primary-800 leading-relaxed">${item.description}</p>
+                <div class="flex gap-2">
+                    ${item.tags.map(tag => `<span class="p-2 bg-primary-800 text-primary-50 text-sm font-semibold rounded-md">#${tag}</span>`).join('')}
+                </div>
+            </a>
+        `).join('');
+    });
+</script>
+{{ end }}
+{{ end }}

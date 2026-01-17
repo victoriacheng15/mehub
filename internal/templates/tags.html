@@ -1,0 +1,14 @@
+{{ define "content" }}
+<div class="flex flex-col gap-10">
+    <h1 class="text-3xl font-bold text-secondary-500">Tags</h1>
+    
+    <div class="grid grid-cols-2 gap-px border border-secondary-900/30 overflow-hidden">
+        {{ range .Tags }}
+        <a href="{{ $.PathPrefix }}tags/{{ . }}.html" class="flex items-center justify-center gap-2 p-6 bg-secondary-100 hover:bg-secondary-200">
+            <span class="text-lg font-bold text-primary-800">#{{ . }}</span>
+            <span class="text-sm text-primary-700 font-medium">({{ index $.TagCounts . }})</span>
+        </a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

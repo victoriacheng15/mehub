@@ -1,0 +1,30 @@
+site:
+  url: "https://victoriacheng15.vercel.app/"
+  title: "Victoria's Tech Hub"
+  name: "Victoria Cheng"
+  slogan: "Engineering resilient systems and documenting the architectural why."
+  description: |
+    Software Engineer focused on building observable, scalable platforms. Documenting the architectural trade-offs and "why" behind systems engineering, from zero-infrastructure ETL pipelines to cloud infrastructure.
+  about:
+    image: "avatar.png"
+    paragraphs: |
+      - I transitioned from Packaging Engineering, designing physical solutions for real-world chaos, to Software Engineering. I trade CAD drawings for CI/CD pipelines and physical constraints for cloud infrastructure.
+      - My time at Shopify reinforced a "measure twice, cut once" mindset. I focus on preventing regressions and ensuring systems remain resilient under the load of millions of concurrent users.
+      - This site is where architectural logic meets the reality of continuous learning. I document the "why" behind decisions, the trade-offs of every stack, and the curiosity that drives me deeper into the internals.
+  now:
+    lastUpdated: "January 2026"
+    categories:
+      - title: "Work & Projects"
+        items: |
+          - Finishing my final semester of Software Development at SAIT.
+          - Searching for a New Grad Software Engineer role for May 2026.
+          - Refining and maintaining Cover Craft, Personal Reading Analytics, and Observability Hub.
+      - title: "Books & Learning"
+        items: |
+          - Reading Mindset: The New Psychology of Success by Carol S. Dweck.
+          - Building a backend service with Go and learning C++.
+      - title: "Personal"
+        items: |
+          - Based in Calgary, Alberta.
+          - Staying consistent with daily exercise.
+          - Exploring hardware stuff for future projects.

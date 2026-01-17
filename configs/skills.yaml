@@ -1,0 +1,44 @@
+skills:
+  # Core languages
+  - name: "Go"
+    icon: "go.svg"
+  - name: "Python"
+    icon: "python.svg"
+  - name: "TypeScript"
+    icon: "typescript.svg"
+  - name: "JavaScript"
+    icon: "javascript.svg"
+  - name: "Ruby"
+    icon: "ruby.svg"
+
+  # Platform & DevOps & Cloud
+  - name: "Grafana"
+    icon: "grafana.svg"
+  - name: "Docker"
+    icon: "docker.svg"
+  - name: "Linux"
+    icon: "linux.svg"
+  - name: "GitHub Actions"
+    icon: "githubactions.svg"
+  - name: "Azure"
+    icon: "azure.svg"
+
+  # Backend & Frameworks
+  - name: "Flask"
+    icon: "flask.svg"
+  - name: "Node.js"
+    icon: "nodedotjs.svg"
+
+  # Databases
+  - name: "PostgreSQL"
+    icon: "postgresql.svg"
+  - name: "MongoDB"
+    icon: "mongodb.svg"
+
+  # Frontend & Frameworks
+  - name: "React"
+    icon: "react.svg"
+  - name: "Next.js"
+    icon: "nextdotjs.svg"
+  - name: "Tailwind CSS"
+    icon: "tailwindcss.svg"
