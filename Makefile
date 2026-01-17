@@ -1,4 +1,4 @@
-.PHONY: build help setup-tailwind format check setup-go
+.PHONY: build help setup-tailwind format check setup-go vet
 
 BINARY_NAME=ssg.exe
 TAILWIND_BIN=./tailwindcss
@@ -12,7 +12,7 @@ help:
 	@echo "Usage:"
 	@echo "  make build           Build and run the generator (requires Go)"
 	@echo "  make format          Format Go code"
-	@echo "  make check           Check if Go code is formatted"
+	@echo "  make check           Check if Go code is formatted and vetted"
 	@echo "  make setup-tailwind  Download Tailwind CLI (Linux x64)"
 	@echo "  make setup-go        Download and setup Go $(GO_VERSION) locally"
 	@echo "  make nix-<target>    Run any target inside nix-shell (e.g., nix-build)"
@@ -34,13 +34,16 @@ nix-%:
 format:
 	@go fmt ./...
 
-check:
+vet:
+	@go vet ./...
+
+check: vet
 	@if [ -n "$$(gofmt -l .)" ]; then \
 		echo "Go code is not formatted. Please run 'make format':"; \
 		gofmt -l .; \
 		exit 1; \
 	fi
-	@echo "✅ Go code is formatted correctly."
+	@echo "✅ Go code is formatted correctly and vetted."
 
 setup-tailwind:
 	@curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-linux-x64
