@@ -212,6 +212,34 @@ Content`,
 			},
 			wantErr: false,
 		},
+		{
+			name: "Filter Draft Posts",
+			files: map[string]string{
+				"published.md": `---
+title: "Published"
+date: 2023-01-01T00:00:00Z
+tags: ["a"]
+draft: false
+---
+Content`,
+				"draft.md": `---
+title: "Draft"
+date: 2023-01-02T00:00:00Z
+tags: ["b"]
+draft: true
+---
+Content`,
+			},
+			validate: func(t *testing.T, posts []Post) {
+				if len(posts) != 1 {
+					t.Errorf("Expected 1 post, got %d", len(posts))
+				}
+				if len(posts) > 0 && posts[0].Title != "Published" {
+					t.Errorf("Expected title 'Published', got '%s'", posts[0].Title)
+				}
+			},
+			wantErr: false,
+		},
 	}
 
 	for _, tt := range tests {

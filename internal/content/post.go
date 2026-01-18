@@ -21,6 +21,7 @@ type Frontmatter struct {
 	Description string    `yaml:"description"`
 	Date        time.Time `yaml:"date"`
 	Tags        []string  `yaml:"tags"`
+	Draft       bool      `yaml:"draft"`
 }
 
 type Post struct {
@@ -103,7 +104,7 @@ func GetPosts(contentDir string) ([]Post, error) {
 			if err != nil {
 				return nil, err
 			}
-			if post != nil {
+			if post != nil && !post.Draft {
 				posts = append(posts, *post)
 			}
 		}
