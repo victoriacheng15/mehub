@@ -16,6 +16,13 @@ projects:
       - Next.js
       - GitHub Actions
       - MongoDB Atlas
+  - title: "Platform Actions"
+    shortDescription: "Building a 'Paved Path' for automation. Reusable GitHub Actions for standardizing linting, security, and CI/CD workflows."
+    link: "platform-actions"
+    techs: |
+      - GitHub Actions
+      - YAML
+      - Markdown
   - title: "Personal Reading Analytics"
     shortDescription: "Fully automated reading tracker—zero infra, 100% GitHub. Go + Python pipeline with interactive analytics from Shopify, Stripe, and GitHub blogs."
     link: "personal-reading-analytics"
