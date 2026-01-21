@@ -1,6 +1,6 @@
 projects:
   - title: "Observability Hub"
-    shortDescription: "Self-hosted observability hub collecting system and application metrics into Postgres, visualized in Grafana with automated backups and cron-driven Go collectors."
+    shortDescription: "Self-hosted telemetry platform implementing high-fidelity observability, webhook-triggered GitOps reconciliation, and automated infrastructure self-healing."
     link: "observability-hub"
     techs: |
       - Go
@@ -24,7 +24,7 @@ projects:
       - YAML
       - Markdown
   - title: "Personal Reading Analytics"
-    shortDescription: "Fully automated reading tracker—zero infra, 100% GitHub. Go + Python pipeline with interactive analytics from Shopify, Stripe, and GitHub blogs."
+    shortDescription: "Zero-infrastructure reading analytics pipeline. Automated data pipeline via GitHub Actions with MongoDB event sourcing for observability and interactive visualizations."
     link: "personal-reading-analytics"
     techs: |
       - Go
