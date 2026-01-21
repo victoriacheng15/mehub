@@ -2,6 +2,7 @@ package generator
 
 import (
 	"encoding/json"
+	"encoding/xml"
 	"fmt"
 	"html/template"
 	"os"
@@ -225,12 +226,20 @@ func (g *SiteGenerator) GenerateRSS(distDir string, posts []content.Post) error 
 	}
 	defer f.Close()
 
+	escape := func(s string) string {
+		var b strings.Builder
+		if err := xml.EscapeText(&b, []byte(s)); err != nil {
+			return s
+		}
+		return b.String()
+	}
+
 	if _, err := fmt.Fprint(f, `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>`+g.Config.Site.Title+`</title>
+  <title>`+escape(g.Config.Site.Title)+`</title>
   <link>`+g.Config.Site.URL+`</link>
-  <description>`+g.Config.Site.Description+`</description>
+  <description>`+escape(g.Config.Site.Description)+`</description>
   <language>en-us</language>
 `); err != nil {
 		return err
@@ -245,7 +254,7 @@ func (g *SiteGenerator) GenerateRSS(distDir string, posts []content.Post) error 
     <pubDate>%s</pubDate>
     <guid>%s</guid>
   </item>
-`, post.Title, link, post.Description, post.Date.Format(time.RFC1123), link); err != nil {
+`, escape(post.Title), link, escape(post.Description), post.Date.Format(time.RFC1123), link); err != nil {
 			return err
 		}
 	}
