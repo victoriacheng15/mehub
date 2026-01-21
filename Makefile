@@ -1,4 +1,4 @@
-.PHONY: build help setup-tailwind format check setup-go vet test cov-log
+.PHONY: help build format update vet check test cov-log setup-tailwind setup-go
 
 BINARY_NAME=ssg.exe
 TAILWIND_BIN=./tailwindcss
@@ -12,6 +12,7 @@ help:
 	@echo "Usage:"
 	@echo "  make build           Build and run the generator (requires Go)"
 	@echo "  make format          Format Go code"
+	@echo "  make update          Update Go dependencies"
 	@echo "  make check           Check if Go code is formatted and vetted"
 	@echo "  make test            Run all tests"
 	@echo "  make cov-log         Run tests and show coverage report"
@@ -35,6 +36,10 @@ nix-%:
 
 format:
 	@go fmt ./...
+
+update:
+	@go get -u ./...
+	@go mod tidy
 
 vet:
 	@go vet ./...
@@ -67,3 +72,5 @@ setup-go:
 	@tar -xzf $(GO_TAR) -C $(GO_DIR)
 	@rm $(GO_TAR)
 	@echo "Go setup complete."
+
+
