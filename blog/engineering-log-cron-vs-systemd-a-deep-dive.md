@@ -148,4 +148,3 @@ WantedBy=timers.target
 ## Thank you
 
 Big thanks for reading! You’re awesome, and I hope this post helped. Until next time!
-
