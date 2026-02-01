@@ -3,11 +3,11 @@
     <header class="flex flex-col gap-4">
         <time class="text-primary-400 font-medium">{{ .Post.Date.Format "January 02, 2006" }}</time>
         <h1 class="text-4xl font-extrabold text-secondary-100 leading-tight">{{ .Post.Title }}</h1>
-        <div class="flex gap-3">
+        <ul class="flex gap-3 list-none m-0 p-0">
             {{ range .Post.Tags }}
-            <span class="px-2 py-1 bg-secondary-900/50 text-secondary-400 text-xs font-bold rounded">#{{ . }}</span>
+            <li class="px-2 py-1 bg-secondary-900/50 text-secondary-400 text-xs font-bold rounded">#{{ . }}</li>
             {{ end }}
-        </div>
+        </ul>
     </header>
 
     <div class="prose prose-invert max-w-none prose-primary prose-img:rounded-lg prose-headings:text-secondary-100 prose-a:text-secondary-400 hover:prose-a:text-secondary-300">
