@@ -15,7 +15,7 @@ jobs:
       SYNC_BLOG_TOKEN: ${{ secrets.SYNC_BLOG_TOKEN }}
       API_LINK: ${{ vars.API_LINK }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6.0.2
         with:
           fetch-depth: 0
       
