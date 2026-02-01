@@ -18,11 +18,11 @@ site:
         items: |
           - Finishing my final semester of Software Development at SAIT.
           - Searching for a New Grad Software Engineer role for May 2026.
-          - Refining and maintaining Cover Craft, Personal Reading Analytics, and Observability Hub.
+          - Refining and maintaining Personal Reading Analytics, Platform Actions, Cover Craft, and Observability Hub.
       - title: "Books & Learning"
         items: |
-          - Reading Mindset: The New Psychology of Success by Carol S. Dweck.
-          - Building a backend service with Go and learning C++.
+          - Reading The Nvidia Way: Jensen Huang and the Making of a Tech Giant.
+          - Building cloud-native services with Go and lightweight Kubernetes (K3s).
       - title: "Personal"
         items: |
           - Based in Calgary, Alberta.

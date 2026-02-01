@@ -14,16 +14,20 @@
                     </svg>
                 </span>
             </summary>
-            <div class="grid grid-cols-1 gap-px border border-secondary-900/30 overflow-hidden mt-4">
+            <ul class="grid grid-cols-1 gap-px border border-secondary-900/30 overflow-hidden mt-4 list-none m-0 p-0">
                 {{ range (index $.Archive $year) }}
-                <a href="blog/{{ .Slug }}.html" class="flex items-center gap-4 p-2 bg-secondary-100 hover:bg-secondary-200 transition-colors group">
-                    <time class="text-sm text-primary-700 font-medium whitespace-nowrap">{{ .Date.Format "Jan 02" }}</time>
-                    <h3 class="font-bold text-primary-900 group-hover:text-primary-600 transition-colors">
-                        {{ .Title }}
-                    </h3>
-                </a>
+                <li>
+                    <article>
+                        <a href="blog/{{ .Slug }}.html" class="flex items-center gap-4 p-2 bg-secondary-100 hover:bg-secondary-200 transition-colors group">
+                            <time class="text-sm text-primary-700 font-medium whitespace-nowrap">{{ .Date.Format "Jan 02" }}</time>
+                            <h3 class="font-bold text-primary-900 group-hover:text-primary-600 transition-colors">
+                                {{ .Title }}
+                            </h3>
+                        </a>
+                    </article>
+                </li>
                 {{ end }}
-            </div>
+            </ul>
         </details>
         {{ end }}
     </div>

@@ -61,11 +61,12 @@ type SiteMetadata struct {
 }
 
 type SiteConfig struct {
-	Site       SiteMetadata     `yaml:"site"`
-	Navigation NavigationConfig `yaml:"navigation"`
-	Socials    []Social         `yaml:"socials"`
-	Projects   []Project        `yaml:"projects"`
-	Skills     []Skill          `yaml:"skills"`
+	Site        SiteMetadata     `yaml:"site"`
+	Navigation  NavigationConfig `yaml:"navigation"`
+	Socials     []Social         `yaml:"socials"`
+	Projects    []Project        `yaml:"projects"`
+	Skills      []Skill          `yaml:"skills"`
+	Specialties []string         `yaml:"specialties"`
 }
 
 func LoadConfig(configDir string) (*SiteConfig, error) {

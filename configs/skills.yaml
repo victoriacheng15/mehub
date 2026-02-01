@@ -6,8 +6,6 @@ skills:
     icon: "python.svg"
   - name: "TypeScript"
     icon: "typescript.svg"
-  - name: "JavaScript"
-    icon: "javascript.svg"
   - name: "Ruby"
     icon: "ruby.svg"
 
@@ -28,6 +26,8 @@ skills:
     icon: "flask.svg"
   - name: "Node.js"
     icon: "nodedotjs.svg"
+  - name: "GraphQL"
+    icon: "graphql.svg"
 
   # Databases
   - name: "PostgreSQL"
@@ -38,7 +38,19 @@ skills:
   # Frontend & Frameworks
   - name: "React"
     icon: "react.svg"
-  - name: "Next.js"
-    icon: "nextdotjs.svg"
   - name: "Tailwind CSS"
     icon: "tailwindcss.svg"
+
+specialties:
+  - "Goroutines & Concurrency"
+  - "Python Asyncio"
+  - "REST APIs"
+  - "Systemd Services"
+  - "GitOps"
+  - "OpenBao (Vault)"
+  - "Loki Logging"
+  - "Postgres JSONB"
+  - "ADRs (Architecture Decision Records)"
+  - "Test Driven Development (TDD)"
+  - "CI/CD Pipelines"
+  - "Architecture Integrity"

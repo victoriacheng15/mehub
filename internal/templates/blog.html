@@ -15,27 +15,31 @@
         {{ end }}
     </div>
     
-    <div id="default-list" class="grid grid-cols-1 gap-px border border-secondary-900/30 overflow-hidden">
+    <ul id="default-list" class="grid grid-cols-1 gap-px border border-secondary-900/30 overflow-hidden list-none m-0 p-0">
         {{ range .Posts }}
-        <a href="{{ $.PathPrefix }}blog/{{ .Slug }}.html" class="flex flex-col gap-2 p-4 bg-secondary-100 hover:bg-secondary-200 transition-colors group">
-            <time class="text-sm text-primary-700">{{ .Date.Format "January 02, 2006" }}</time>
-            <h2 class="text-2xl font-bold text-primary-900 transition-colors">
-                {{ .Title }}
-            </h2>
-            <p class="text-primary-800 leading-relaxed">{{ .Description }}</p>
-            <div class="flex gap-2">
-                {{ range .Tags }}
-                <span class="p-2 text-sm bg-primary-800 text-primary-50 font-semibold rounded-md">#{{ . }}</span>
-                {{ end }}
-            </div>
-        </a>
+        <li>
+            <article>
+                <a href="{{ $.PathPrefix }}blog/{{ .Slug }}.html" class="flex flex-col gap-2 p-4 bg-secondary-100 hover:bg-secondary-200 transition-colors group">
+                    <time class="text-sm text-primary-700">{{ .Date.Format "January 02, 2006" }}</time>
+                    <h2 class="text-2xl font-bold text-primary-900 transition-colors">
+                        {{ .Title }}
+                    </h2>
+                    <p class="text-primary-800 leading-relaxed">{{ .Description }}</p>
+                    <ul class="flex gap-2 list-none m-0 p-0">
+                        {{ range .Tags }}
+                        <li class="p-2 text-sm bg-primary-800 text-primary-50 font-semibold rounded-md">#{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                </a>
+            </article>
+        </li>
         {{ end }}
-    </div>
+    </ul>
 
     {{ if not (stringsHasPrefix .Title "#") }}
-    <div id="search-results" class="grid grid-cols-1 gap-px border border-secondary-900/30 overflow-hidden hidden">
+    <ul id="search-results" class="grid grid-cols-1 gap-px border border-secondary-900/30 overflow-hidden hidden list-none m-0 p-0">
         <!-- JS will populate this -->
-    </div>
+    </ul>
     {{ end }}
 
     {{ if gt .TotalPages 1 }}
@@ -109,16 +113,20 @@
         resultsCount.textContent = filtered.length > 0 ? filtered.length + ' found' : 'No results';
 
         searchResults.innerHTML = filtered.map(item => `
-            <a href="${pathPrefix}blog/${item.slug}.html" class="flex flex-col gap-2 p-4 bg-secondary-100 hover:bg-secondary-200 transition-colors group">
-                <time class="text-sm text-primary-700">${item.date}</time>
-                <h2 class="text-2xl font-bold text-primary-900 transition-colors">
-                    ${item.title}
-                </h2>
-                <p class="text-primary-800 leading-relaxed">${item.description}</p>
-                <div class="flex gap-2">
-                    ${item.tags.map(tag => `<span class="p-2 bg-primary-800 text-primary-50 text-sm font-semibold rounded-md">#${tag}</span>`).join('')}
-                </div>
-            </a>
+            <li>
+                <article>
+                    <a href="${pathPrefix}blog/${item.slug}.html" class="flex flex-col gap-2 p-4 bg-secondary-100 hover:bg-secondary-200 transition-colors group">
+                        <time class="text-sm text-primary-700">${item.date}</time>
+                        <h2 class="text-2xl font-bold text-primary-900 transition-colors">
+                            ${item.title}
+                        </h2>
+                        <p class="text-primary-800 leading-relaxed">${item.description}</p>
+                        <ul class="flex gap-2 list-none m-0 p-0">
+                            ${item.tags.map(tag => `<li class="p-2 bg-primary-800 text-primary-50 text-sm font-semibold rounded-md">#${tag}</li>`).join('')}
+                        </ul>
+                    </a>
+                </article>
+            </li>
         `).join('');
     });
 </script>
