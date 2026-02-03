@@ -11,8 +11,8 @@
 
         <ul class="flex gap-4 list-none m-0 p-0">
             {{ range .Config.Socials }}
-            <li>
-                <a href="{{ .Href }}" target="_blank" rel="noopener noreferrer" class="p-2 rounded-md bg-secondary-900/30 hover:bg-secondary-600 transition-colors" aria-label="{{ .Name }}">
+            <li class="p-2 rounded-md bg-secondary-900/30 hover:bg-secondary-600 transition-colors">
+                <a href="{{ .Href }}" target="_blank" rel="noopener noreferrer" class="" aria-label="{{ .Name }}">
                     <img src="{{ $.PathPrefix }}socials/{{ .Icon }}" alt="{{ .Name }}" class="w-8 h-8 invert">
                 </a>
             </li>
@@ -22,7 +22,7 @@
 
     <section class="flex flex-col gap-6">
         <h2 class="text-2xl font-bold text-secondary-500">Skills</h2>
-        <ul class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-px border border-secondary-900/30 overflow-hidden list-none m-0 p-0">
+        <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px border border-secondary-900/30 overflow-hidden list-none m-0 p-0">
             {{ range .Config.Skills }}
             <li class="flex flex-col items-center justify-center gap-3 p-6 bg-secondary-100 hover:bg-secondary-200 transition-colors group">
                 <img src="{{ $.PathPrefix }}skills/{{ .Icon }}" alt="{{ .Name }}" class="w-8 h-8 group-hover:scale-110 transition-transform">
