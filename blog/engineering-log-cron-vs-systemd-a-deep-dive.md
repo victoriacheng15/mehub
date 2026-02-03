@@ -3,7 +3,6 @@ title: "[Engineering Log] Cron vs. Systemd: A Deep Dive"
 description: "A deep dive into Systemd vs Cron: Automating an observability hub with self-healing timers, centralized logging, and dependency management."
 date: 2026-02-03
 tags: ["retrospective", "linux", "automation"]
-draft: true
 ---
 
 ## 1. Context (The "Why")
