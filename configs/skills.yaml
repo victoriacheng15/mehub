@@ -1,27 +1,37 @@
 skills:
   # Core languages
-  - name: "Go"
+  - name: "Go (Goroutines)"
     icon: "go.svg"
-  - name: "Python"
+  - name: "Python (asyncio)"
     icon: "python.svg"
   - name: "TypeScript"
     icon: "typescript.svg"
-  - name: "Ruby"
-    icon: "ruby.svg"
+  - name: "C++ (In Progress)"
+    icon: "cpp.svg"
 
   # Platform & DevOps & Cloud
-  - name: "Grafana"
+  - name: "Grafana/Loki/Alloy"
     icon: "grafana.svg"
+  - name: "Kubernetes (k3s)"
+    icon: "kubernetes.svg"
+  - name: "Helm"
+    icon: "helm.svg"
   - name: "Docker"
     icon: "docker.svg"
-  - name: "Linux"
+  - name: "Linux (Systemd)"
     icon: "linux.svg"
   - name: "GitHub Actions"
     icon: "githubactions.svg"
-  - name: "Azure"
+  - name: "Azure Functions"
     icon: "azure.svg"
 
-  # Backend & Frameworks
+  # Databases
+  - name: "PostgreSQL (JSONB)"
+    icon: "postgresql.svg"
+  - name: "MongoDB"
+    icon: "mongodb.svg"
+
+  # Backend
   - name: "Flask"
     icon: "flask.svg"
   - name: "Node.js"
@@ -29,28 +39,16 @@ skills:
   - name: "GraphQL"
     icon: "graphql.svg"
 
-  # Databases
-  - name: "PostgreSQL"
-    icon: "postgresql.svg"
-  - name: "MongoDB"
-    icon: "mongodb.svg"
-
-  # Frontend & Frameworks
+  # Frontend
   - name: "React"
     icon: "react.svg"
   - name: "Tailwind CSS"
     icon: "tailwindcss.svg"
 
 specialties:
-  - "Goroutines & Concurrency"
-  - "Python Asyncio"
-  - "REST APIs"
-  - "Systemd Services"
-  - "GitOps"
   - "OpenBao (Vault)"
-  - "Loki Logging"
-  - "Postgres JSONB"
   - "ADRs (Architecture Decision Records)"
-  - "Test Driven Development (TDD)"
   - "CI/CD Pipelines"
-  - "Architecture Integrity"
+  - "GitOps"
+  - "REST APIs"
+  - "Test Driven Development (TDD)"

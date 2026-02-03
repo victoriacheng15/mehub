@@ -1,6 +1,6 @@
 .PHONY: help build format update vet check test cov-log setup-tailwind setup-go
 
-BINARY_NAME=ssg.exe
+BINARY_NAME=ssg
 TAILWIND_BIN=./tailwindcss
 GO_VERSION=1.23.4
 GO_TAR=go$(GO_VERSION).linux-amd64.tar.gz
