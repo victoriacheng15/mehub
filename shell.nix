@@ -4,8 +4,4 @@ pkgs.mkShell {
   buildInputs = with pkgs; [
     go
   ];
-
-  shellHook = ''
-    go version
-  '';
 }
