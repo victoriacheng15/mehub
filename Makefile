@@ -16,7 +16,7 @@ else
     NIX_RUN = bash -c
 endif
 
-.PHONY: help build format update vet check test cov-log setup-tailwind setup-go lint
+.PHONY: help build format update vet check test cov-log setup-tailwind setup-go lint vercel-build
 
 help:
 	@echo "Mehub SSG Build System"
@@ -39,6 +39,7 @@ help:
 	@echo "Setup:"
 	@echo "  setup-tailwind  Download Tailwind CLI (Linux x64)"
 	@echo "  setup-go        Download and setup Go $(GO_VERSION) locally"
+	@echo "  vercel-build    Setup Go and Tailwind, then build (for Vercel deployment)"
 	@echo ""
 	@echo "Utility:"
 	@echo "  help            Show this help message"
@@ -93,3 +94,13 @@ setup-go:
 	@tar -xzf $(GO_TAR) -C $(GO_DIR)
 	@rm $(GO_TAR)
 	@echo "Go setup complete."
+
+vercel-build: setup-go setup-tailwind
+	@export PATH=$(PWD)/$(GO_DIR)/go/bin:$$PATH; \
+	go build -o $(BINARY_NAME) ./cmd/ssg && \
+	./$(BINARY_NAME) && \
+	if [ -f $(TAILWIND_BIN) ]; then \
+		$(TAILWIND_BIN) -i internal/templates/input.css -o dist/styles.css --minify; \
+		rm $(TAILWIND_BIN); \
+	fi && \
+	rm $(BINARY_NAME)

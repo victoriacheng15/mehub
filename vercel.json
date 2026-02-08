@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "make setup-go && make build",
+  "buildCommand": "make vercel-build",
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false
