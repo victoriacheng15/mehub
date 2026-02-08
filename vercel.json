@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "make setup-go && make setup-tailwind && make build",
+  "buildCommand": "make setup-go && make build",
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false

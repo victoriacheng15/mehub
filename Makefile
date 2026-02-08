@@ -1,64 +1,85 @@
-.PHONY: help build format update vet check test cov-log setup-tailwind setup-go
-
+# === Variables ===
 BINARY_NAME=ssg
 TAILWIND_BIN=./tailwindcss
 GO_VERSION=1.23.4
 GO_TAR=go$(GO_VERSION).linux-amd64.tar.gz
 GO_DIR=./go-dist
+LINT_IMAGE = ghcr.io/igorshubovych/markdownlint-cli:v0.44.0
+
+# Nix wrapper logic: Use nix-shell if available and not already inside one
+# Also check if we are in a CI environment where we usually want to use system tools
+USE_NIX = $(shell if command -v nix-shell >/dev/null 2>&1 && [ -z "$$IN_NIX_SHELL" ] && [ "$$GITHUB_ACTIONS" != "true" ]; then echo "yes"; else echo "no"; fi)
+
+ifeq ($(USE_NIX),yes)
+    NIX_RUN = nix-shell --run
+else
+    NIX_RUN = bash -c
+endif
+
+.PHONY: help build format update vet check test cov-log setup-tailwind setup-go lint
 
 help:
 	@echo "Mehub SSG Build System"
 	@echo ""
-	@echo "Usage:"
-	@echo "  make build           Build and run the generator (requires Go)"
-	@echo "  make format          Format Go code"
-	@echo "  make update          Update Go dependencies"
-	@echo "  make check           Check if Go code is formatted and vetted"
-	@echo "  make test            Run all tests"
-	@echo "  make cov-log         Run tests and show coverage report"
-	@echo "  make setup-tailwind  Download Tailwind CLI (Linux x64)"
-	@echo "  make setup-go        Download and setup Go $(GO_VERSION) locally"
-	@echo "  make nix-<target>    Run any target inside nix-shell (e.g., nix-build)"
-	@echo "  make help            Show this help message"
+	@echo "Usage: make <target>"
+	@echo ""
+	@echo "Site Generation:"
+	@echo "  build           Build the SSG and generate the site"
+	@echo ""
+	@echo "Development:"
+	@echo "  format          Format Go code"
+	@echo "  update          Update Go dependencies"
+	@echo "  check           Check Go code formatting and static analysis (vet)"
+	@echo "  test            Run all tests"
+	@echo "  cov-log         Run tests and show coverage report"
+	@echo ""
+	@echo "Markdown:"
+	@echo "  lint            Lint Markdown files using Docker"
+	@echo ""
+	@echo "Setup:"
+	@echo "  setup-tailwind  Download Tailwind CLI (Linux x64)"
+	@echo "  setup-go        Download and setup Go $(GO_VERSION) locally"
+	@echo ""
+	@echo "Utility:"
+	@echo "  help            Show this help message"
 
-build:
-	@export PATH=$(PWD)/$(GO_DIR)/go/bin:$$PATH; \
-	go build -o $(BINARY_NAME) ./cmd/ssg
-	@./$(BINARY_NAME)
-	@if [ -f $(TAILWIND_BIN) ]; then \
+build: setup-tailwind
+	@$(NIX_RUN) "go build -o $(BINARY_NAME) ./cmd/ssg && \
+	./$(BINARY_NAME) && \
+	if [ -f $(TAILWIND_BIN) ]; then \
 		$(TAILWIND_BIN) -i internal/templates/input.css -o dist/styles.css --minify; \
 		rm $(TAILWIND_BIN); \
-	fi
-	@rm $(BINARY_NAME)
-
-nix-%:
-	@nix-shell --run "make $*"
+	fi && \
+	rm $(BINARY_NAME)"
 
 format:
-	@go fmt ./...
+	@$(NIX_RUN) "go fmt ./..."
 
 update:
-	@go get -u ./...
-	@go mod tidy
+	@$(NIX_RUN) "go get -u ./... && go mod tidy"
 
 vet:
-	@go vet ./...
+	@$(NIX_RUN) "go vet ./..."
 
 check: vet
-	@if [ -n "$$(gofmt -l .)" ]; then \
-		echo "Go code is not formatted. Please run 'make format':"; \
+	@$(NIX_RUN) "if [ -n \"\$$(gofmt -l .)\" ]; then \
+		echo \"Go code is not formatted. Please run 'make format':\"; \
 		gofmt -l .; \
 		exit 1; \
-	fi
-	@echo "✅ Go code is formatted correctly and vetted."
+	fi && \
+	echo \"✅ Go code is formatted correctly and vetted.\""
 
 test:
-	@go test -v ./...
+	@$(NIX_RUN) "go test -v ./..."
 
 cov-log:
-	@go test -coverprofile=coverage.out ./...
-	@go tool cover -func=coverage.out
-	@rm coverage.out
+	@$(NIX_RUN) "go test -coverprofile=coverage.out ./... && \
+	go tool cover -func=coverage.out && \
+	rm coverage.out"
+
+lint:
+	@echo "Linting Markdown files..."
+	@docker run --rm -v "$(PWD):/data" -w /data $(LINT_IMAGE) --fix "**/*.md"
 
 setup-tailwind:
 	@curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-linux-x64
@@ -72,5 +93,3 @@ setup-go:
 	@tar -xzf $(GO_TAR) -C $(GO_DIR)
 	@rm $(GO_TAR)
 	@echo "Go setup complete."
-
-
