@@ -12,7 +12,7 @@ site:
       - My time at Shopify reinforced a "measure twice, cut once" mindset. I focus on preventing regressions and ensuring systems remain resilient under the load of millions of concurrent users.
       - This site is where architectural logic meets the reality of continuous learning. I document the "why" behind decisions, the trade-offs of every stack, and the curiosity that drives me deeper into the internals.
   now:
-    lastUpdated: "January 2026"
+    lastUpdated: "Feb 2026"
     categories:
       - title: "Work & Projects"
         items: |

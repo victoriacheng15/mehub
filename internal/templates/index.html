@@ -26,7 +26,7 @@
             {{ range .Config.Skills }}
             <li class="flex flex-col items-center justify-center gap-3 p-6 bg-secondary-100 hover:bg-secondary-200 transition-colors group">
                 <img src="{{ $.PathPrefix }}skills/{{ .Icon }}" alt="{{ .Name }}" class="w-8 h-8 group-hover:scale-110 transition-transform">
-                <span class="text-sm font-bold text-primary-800 text-center">{{ .Name }}</span>
+                <span class="text-sm font-bold text-primary-800 text-center break-words max-w-full">{{ .Name }}</span>
             </li>
             {{ end }}
         </ul>

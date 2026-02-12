@@ -10,12 +10,16 @@ skills:
     icon: "cpp.svg"
 
   # Platform & DevOps & Cloud
-  - name: "Grafana/Loki/Alloy"
-    icon: "grafana.svg"
   - name: "Kubernetes (k3s)"
     icon: "kubernetes.svg"
   - name: "Helm"
     icon: "helm.svg"
+  - name: "Grafana / Loki / Alloy / Tempo"
+    icon: "grafana.svg"
+  - name: "Prometheus"
+    icon: "prometheus.svg"
+  - name: "OpenTelemetry"
+    icon: "opentelemetry.svg"
   - name: "Docker"
     icon: "docker.svg"
   - name: "Linux (Systemd)"
@@ -52,3 +56,4 @@ specialties:
   - "GitOps"
   - "REST APIs"
   - "Test Driven Development (TDD)"
+  - "Root Cause Analysis"
