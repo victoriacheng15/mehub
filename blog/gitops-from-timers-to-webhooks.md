@@ -3,7 +3,6 @@ title: "GitOps: From Timers to Webhooks"
 description: "From systemd timers to event-driven webhooks: How I leveraged a Go proxy to eliminate O(N) management toil and achieve instant GitOps syncs for multiple repositories."
 date: 2026-02-17
 tags: ["go", "automation"]
-draft: true
 ---
 
 ## The Systemd Approach
