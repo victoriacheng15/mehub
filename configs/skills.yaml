@@ -50,10 +50,10 @@ skills:
     icon: "tailwindcss.svg"
 
 specialties:
-  - "OpenBao (Vault)"
   - "ADRs (Architecture Decision Records)"
+  - "Root Cause Analysis"
   - "CI/CD Pipelines"
+  - "OpenBao (Vault)"
   - "GitOps"
   - "REST APIs"
   - "Test Driven Development (TDD)"
-  - "Root Cause Analysis"

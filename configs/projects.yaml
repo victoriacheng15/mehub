@@ -4,11 +4,14 @@ projects:
     link: "observability-hub"
     techs: |
       - Go
-      - Grafana
+      - Kubernetes (K3s)
+      - Helm
+      - OpenTelemetry Collector
+      - Prometheus
+      - Grafana / Loki / Alloy / Tempo
       - PostgreSQL (TimescaleDB)
-      - Docker
   - title: "Cover Craft"
-    shortDescription: "Serverless cover image generator on Azure Functions (Node.js/Canvas). Users customize text, fonts & colors; exports PNGs + logs preferences to MongoDB for analytics."
+    shortDescription: "Serverless image generation service architected on Azure Functions & Next.js. Enforces design consistency via shared full-stack validation, automated WCAG compliance, and privacy-first telemetry."
     link: "cover-craft"
     techs: |
       - TypeScript
