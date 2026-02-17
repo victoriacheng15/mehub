@@ -11,11 +11,15 @@ I have written a couple of blogs, without an intro myself blog. Suppose, it is n
 
 Hi, I am Victoria. I am also a person of disability, to be specific, I am profound deaf. As you may wonder, what does "profound deaf" mean? It means that I lost 100% of my hearing in both ears. I cannot hear anything beside the airplane engine. I have hearing aids that help me to hear most sounds around me. Can I lip-read? Yes, I can! However, it depends on whom I talk to. If the person is someone that I often talk daily, I have no problem to read their lips for conversation. Now, it is even more difficult to communicate with people who wear a mask during a pandemic. 😔
 
+---
+
 ## University
 
 Let's fast-forward here a bit. I went from "not sure what to do" to "I decided to get a degree in Packaging Science". I had an interested in web development during my last 2 years of the university and even took web development as minor. At the time, one of the web development classes were conflicted with my major classes. After thought about my choices for a while, I decided to drop the minor instead since the class won't be offered until a year after, and it would delay my graduation. The web development words got buried deep in the back of my mind that I completely forgot about it. This is also where my life took a detour, I decided to pursue my Master's in Packaging Science.
 
 You are probably wondering what is Packaging Science? It is a broad topic, but in short, the main goal is to design a package that will protect your products at the minimum cost from damaging during transportations. Imagine this, when you buy something from online or stores, you would want to receive undamaged products when you open the box.
+
+---
 
 ## Work Life to want to get in the tech
 
@@ -42,6 +46,8 @@ I came cross Leon's software engineer bootcamp from Zero to Mastery's discord. I
 I personally didn't want to get on social media, but with a little push from 100Devs, I decided...just do it, and I am glad that I got on Twitter, because I found more people who changed their careers to software engineer/developer in their 30's or later. It is pretty awesome and inspirational! I also use Twitter to hold myself accountable with 100 Days of Code. I made a post of what results I have with 100 Days of code on LinkedIn: learned how to manage time better, see huge improvement in productivity and so on. Overall, joining Twitter brings great impact on me. Lastly, there are tons of awesome people to follow and it brings in more positives to you!
 
 The [50th days of the 100 Days of Code](https://www.linkedin.com/feed/update/urn:li:activity:6919663033073950720/) post on Linkedin.
+
+---
 
 ## Thank you
 

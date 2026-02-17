@@ -56,6 +56,8 @@ In this query:
 - If an employee doesn’t belong to a department, the `department_name` column will show NULL.
 - If a department has no employees, the `employee_id` and `name` columns will show NULL.
 
+---
+
 ## Things to Keep in Mind
 
 ### Null Values in Results
@@ -84,12 +86,16 @@ In this example, the COALESCE function is used to replace NULL values in the
 
 Always test your `FULL OUTER JOIN` queries to make sure they’re working as expected. Use small sample data to check the results and confirm that NULL values are handled correctly.
 
+---
+
 ## Why is FULL OUTER JOIN Useful?
 
 `FULL OUTER JOIN` is helpful when you want to see all the data from two tables, even if some rows don’t match. For example:
 
 - You might want to see all employees and all departments, even if some employees aren’t assigned to a department or some departments have no employees.
 - You might want to compare two lists of data and see which items are missing from one list or the other.
+
+---
 
 ## Recap
 
@@ -102,9 +108,13 @@ Here’s what you need to remember about `FULL OUTER JOIN`:
 
 By understanding `FULL OUTER JOIN`, you’ll be able to work with more complex data and get better insights from your SQL queries. Keep practicing, and soon you’ll be a SQL pro!
 
+---
+
 ## Resources
 
 [PostgreSQL FULL OUTER JOIN](https://neon.tech/postgresql/postgresql-tutorial/postgresql-full-outer-join)
+
+---
 
 ## Thank you
 

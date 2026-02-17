@@ -9,6 +9,8 @@ tags: ["python"]
 
 In Python, orderability refers to an object's ability to be compared using operators like **`<`**, **`>`**, **`<=`**, and **`>=`**. These operators can be customized for your classes using special dunder methods, just like we did with **`__eq__`** for equality comparisons.
 
+---
+
 ## The 4 Methods That Enable Comparisons
 
 - **`<` Operator: `__lt__(self, other)`**
@@ -47,6 +49,8 @@ def __gt__(self, other):
 def __ge__(self, other):
     return self.price >= other.price
 ```
+
+---
 
 ## **Coffee Shop Example**
 
@@ -113,6 +117,8 @@ if __name__ == "__main__":
         print("-", shop)
 ```
 
+---
+
 ## Result
 
 ```python
@@ -151,6 +157,8 @@ Reverse Sort (still uses __lt__):
 - Mall Mugs (Customers: 200, Profit: $1400.0)
 - Downtown Beans (Customers: 150, Profit: $1200.5)
 ```
+
+---
 
 ## Thank you
 

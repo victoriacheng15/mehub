@@ -27,6 +27,8 @@ FROM table_name;
 
 While `AS` is optional, leaving it out can make the query harder to read. I prefer to use `AS` for better clarity.
 
+---
+
 ## Why Use Aliases?
 
 - Cleaner Results:
@@ -35,6 +37,8 @@ While `AS` is optional, leaving it out can make the query harder to read. I pref
   - When doing math or combining columns, aliases give a name to the result
 - Avoid Confusion:
   - If you are working with more than one table, and they have columns with same names, aliases help you tell them apart
+
+---
 
 ## Examples
 
@@ -66,15 +70,21 @@ SELECT first_name AS "First Name"
 FROM employees;
 ```
 
+---
+
 ## Recap
 
 Column aliases are a simple yet powerful feature in SQL that can improve the clarity of your query results. Whether you're renaming columns for readability, performing calculations, or resolving naming conflicts, aliases help ensure your data is presented more easily and meaningfully.
+
+---
 
 ## Resources
 
 [PostgreSQL Column Alias](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-column-alias/)
 
 [SQL Alias: Everything You Need to Know About AS in SQL](https://www.dbvis.com/thetable/sql-alias-everything-you-need-to-know-about-as-in-sql/)
+
+---
 
 ## Thank you
 

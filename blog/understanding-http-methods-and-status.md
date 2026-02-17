@@ -27,6 +27,8 @@ Each method also pairs with different HTTP **status codes**, which are short res
 
 Let’s walk through each method and its most common status codes.
 
+---
+
 ## 🟢 `GET` — Fetch Data
 
 `GET` is used to **retrieve data** from the server. It does not modify anything — just fetches.
@@ -48,6 +50,8 @@ Common Status Codes:
 | `404 Not Found` | Resource does not exist |
 | `401 Unauthorized` | User is not authenticated |
 | `403 Forbidden` | User doesn’t have access |
+
+---
 
 ## 🟡 `POST` — Create a Resource
 
@@ -76,6 +80,8 @@ Common Status Codes:
 | `409 Conflict` | Duplicate or conflicting data (e.g. email already exists) |
 | `422 Unprocessable Entity` | Validation failed (common in RESTful APIs) |
 
+---
+
 ## 🔵 `PUT` — Replace a Resource
 
 `PUT` is used to **completely replace** a resource. Think of it as "update the whole thing."
@@ -103,6 +109,8 @@ Common Status Codes:
 | `400 Bad Request` | Invalid input |
 | `404 Not Found` | Resource doesn’t exist to be updated |
 
+---
+
 ## 🟣 `PATCH` — Update a Resource Partially
 
 `PATCH` is used to **partially update** a resource — unlike `PUT`, which replaces the whole thing.
@@ -129,6 +137,8 @@ Common Status Codes:
 | `400 Bad Request` | Invalid or incomplete input |
 | `404 Not Found` | Target resource not found |
 
+---
+
 ## 🔴 `DELETE` — Remove a Resource
 
 `DELETE` is used to **delete a resource** permanently from the server.
@@ -150,9 +160,13 @@ Common Status Codes:
 | `404 Not Found` | Resource wasn’t found to delete |
 | `403 Forbidden` | User is not allowed to delete this resource |
 
+---
+
 ## 🎯 Final Thoughts
 
 You don’t need to memorize every HTTP status code — just understand the typical ones that go with each method. Think of methods as **intents** and status codes as **results**. When you design APIs with this mindset, your endpoints become much easier to work with, test, and document.
+
+---
 
 ## Thank you
 

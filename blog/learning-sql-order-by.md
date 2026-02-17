@@ -68,13 +68,19 @@ This query will:
 - First, sort customers by their `age` in descending order (from oldest to youngest).
 - Then, for customers with the same age, it will sort them by their `last_name` in ascending order (A-Z).
 
+---
+
 ## Recap
 
 The `ORDER BY` clause is an essential SQL feature for sorting query results. It allows you to present your data in a meaningful order, whether ascending or descending. You can also combine multiple columns to create more specific sorting criteria. Whether you're working with names, numbers, or dates, mastering the `ORDER BY` clause will help you organize your data effectively.
 
+---
+
 ## Resources
 
 [PostgreSQL ORDER BY](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-order-by/)
+
+---
 
 ## Thank you
 

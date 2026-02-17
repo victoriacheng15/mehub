@@ -11,6 +11,8 @@ A stack is a fundamental data structure that adheres to the _Last In, First Out_
 
 Think of a stack of plates in a cafeteria; you can only add a new plate to the top or remove the top plate. This straightforward analogy illustrates the essence of a stack in computer science.
 
+---
+
 ## How Does a Stack work
 
 The stack data structure supports two main operation:
@@ -136,6 +138,8 @@ if __name__ == "__main__":
     print("Size of stack:", stack.size())  # Output: 2
 
 ```
+
+---
 
 ## Thank you
 

@@ -18,6 +18,8 @@ wc[options][files];
 - `-w`: Display the number of words
 - `-m`: Display the number of characters
 
+---
+
 ## What I Learned from this Project
 
 ### Test-Driven Development (TDD) Approach
@@ -40,6 +42,8 @@ The **`spyOn`** utility in testing frameworks like Jest proved valuable for obse
 
 After this exploration, I've also provided handy links to further resources. You can delve deeper into the `spyOn` utility and understand more about `process.stdin`. Additionally, for those eager to tackle coding challenges or explore the codebase of my customized JavaScript version of `ccwc`, the links to the challenges, repository, and documentation are below for your convenience. Happy coding! 😎
 
+---
+
 ## Resources
 
 [Jest Docs - spyOn](https://jestjs.io/docs/jest-object#jestspyonobject-methodname)
@@ -49,6 +53,8 @@ After this exploration, I've also provided handy links to further resources. You
 [Coding Challenges](https://codingchallenges.fyi/)
 
 [cc-write-your-own-wc repo](https://github.com/victoriacheng15/cc-write-your-own-wc/tree/main#readme)
+
+---
 
 ## Thank you
 

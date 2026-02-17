@@ -14,6 +14,8 @@ SQL **constraints** are rules that enforce data integrity by controlling what 
 - `CHECK` – Validates data against specific conditions
 - `DEFAULT` – Provides a fallback value when none is specifie
 
+---
+
 ## How Do These Constraints Work?
 
 ### `NOT NULL` – Preventing Empty Values
@@ -106,6 +108,8 @@ Common Defaults:
 - `DEFAULT FALSE` for boolean flags
 - `DEFAULT CURRENT_TIMESTAMP` for audit logs
 
+---
+
 ## Recap: SQL Constraints at a Glance
 
 | **Constraint** | **Purpose** | **Example** |
@@ -121,6 +125,8 @@ Best Practices:
 2. Combine `UNIQUE` + `NOT NULL` for natural keys (like email)
 3. Apply `CHECK` constraints for business rules (e.g., positive prices)
 4. Set `DEFAULT` values for optional columns with common choices
+
+---
 
 ## Putting It All Together
 
@@ -143,6 +149,8 @@ This ensures:
 - ✅ Only valid account types
 - ✅ Automatic date tracking
 
+---
+
 ## Resources
 
 [PostgreSQL CHECK Constraints](https://neon.tech/postgresql/postgresql-tutorial/postgresql-check-constraint)
@@ -152,6 +160,8 @@ This ensures:
 [PostgreSQL NOT NULL Constraints](https://neon.tech/postgresql/postgresql-tutorial/postgresql-not-null-constraint)
 
 [PostgreSQL DEFAULT Constraints](https://neon.tech/postgresql/postgresql-tutorial/postgresql-default-value)
+
+---
 
 ## Thank you
 

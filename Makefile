@@ -16,7 +16,7 @@ else
     NIX_RUN = bash -c
 endif
 
-.PHONY: help build format update vet check test cov-log setup-tailwind setup-go lint vercel-build
+.PHONY: help build format update vet check test cov-log setup-tailwind setup-go lint vercel-build add-hr
 
 help:
 	@echo "Mehub SSG Build System"
@@ -35,6 +35,7 @@ help:
 	@echo ""
 	@echo "Markdown:"
 	@echo "  lint            Lint Markdown files using Docker"
+	@echo "  add-hr          Add '---' separators between H2 headings in blog posts"
 	@echo ""
 	@echo "Setup:"
 	@echo "  setup-tailwind  Download Tailwind CLI (Linux x64)"
@@ -81,6 +82,9 @@ cov-log:
 lint:
 	@echo "Linting Markdown files..."
 	@docker run --rm -v "$(PWD):/data" -w /data $(LINT_IMAGE) --fix "**/*.md"
+
+add-hr:
+	@$(NIX_RUN) "go run scripts/add-hr.go"
 
 setup-tailwind:
 	@curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-linux-x64

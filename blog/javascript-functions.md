@@ -75,6 +75,8 @@ function greeting(name) {
 }
 ```
 
+---
+
 ## There are 2 ways of declaring functions
 
 ```js
@@ -139,6 +141,8 @@ function sayHello() {
 sayHello(); // Hello! and Hello from anotherHello
 ```
 
+---
+
 ## What is Arrow Function
 
 There is another simple and concise syntax for creating functions! And it is called `arrow function`. It is one of the ES6 features.
@@ -185,6 +189,8 @@ const sayHello = () => {
 };
 ```
 
+---
+
 ## What is IIFE?
 
 It stands for `Immediately-Invoked Function Expression`. How does it work? It runs immediately as soon as the function is defined and can also be referred to as a `self-executing anonymous function`.
@@ -202,6 +208,8 @@ It stands for `Immediately-Invoked Function Expression`. How does it work? It ru
 ```
 
 Why do we write IIFE? It allows us to avoid polluting the global namespace.
+
+---
 
 ## Thank you
 

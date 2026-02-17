@@ -28,10 +28,14 @@ In the end, it’s all about what you want for your career and what’s most imp
 
 You can check out this Ted Talk at [this link](https://www.ted.com/talks/marion_campan_the_secret_to_finding_your_ideal_workplace?subtitle=en).
 
+---
+
 ## Books
 
 - **Fundamentals of Data Engineering Plan and Build Robust Data Systems**
   - Explores the essential practices for managing and processing data effectively. Key insights include designing data models, centralizing data in warehouses, and automating workflows through ETL and data pipelines. Emphasizes integrating and cleansing data, handling big data with advanced technologies, and implementing strong data governance and security measures. The field focuses on ensuring data quality, leveraging cloud technologies, and providing a foundation for informed decision-making and insights.
+
+---
 
 ## Thank you
 

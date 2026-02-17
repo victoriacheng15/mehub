@@ -22,6 +22,8 @@ Some of the subjects I’ve studied include Unified Modeling Language (UML), whi
 
 Overall, this year has been full of growth and adjustments. I’m excited to continue learning and improving in the coming year.
 
+---
+
 ## The upcoming year
 
 Looking back on 2024, I feel that I’ve only started to explore cloud computing. In 2025, I plan to expand my knowledge of cloud platforms and deployment techniques. Alongside cloud computing, I also aim to improve my skills in DevOps, SQL/database management, and cybersecurity.
@@ -31,6 +33,8 @@ For DevOps, I want to focus on automation and continuous integration/deployment 
 Cybersecurity is another key area I want to explore. With the growing number of security threats, I’m eager to learn more about how to protect systems and data from potential vulnerabilities.
 
 By working on these goals, I aim to build a strong, well-rounded skill set in cloud computing, DevOps, SQL, and cybersecurity throughout the coming year.
+
+---
 
 ## Thank you
 

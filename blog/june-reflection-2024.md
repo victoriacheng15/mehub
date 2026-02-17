@@ -19,6 +19,8 @@ For the past few weeks, I've been using Google Calendar and Tasks, finding them 
 
 Reflecting on my journey so far, I've realized the importance of flexibility and adaptability. Life can be unpredictable, and sometimes, plans need to be adjusted. Embracing this mindset has helped me stay resilient and focused on my goals. As I continue my studies, I aim to remain open to new learning opportunities and challenges.
 
+---
+
 ## Books
 
 I've started setting aside a specific time each day for reading. It's taking time, but I'm steadily making reading a part of my daily routine.
@@ -29,6 +31,8 @@ I've started setting aside a specific time each day for reading. It's taking tim
   - This book focuses on productivity and mindfulness. It gives you a framework to take back control of your time and attention, even with distractions. It highlights making daily routines that prioritize meaningful work and personal growth.
 - **Version Control with Git**:
   - This book is a practical guide to using Git, a widely used version control system. It covers key concepts such as repositories, branches, commits, and merging. It empowers developers to manage and collaborate on software projects effectively.
+
+---
 
 ## Thank you
 

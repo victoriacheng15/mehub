@@ -11,6 +11,8 @@ Data modeling is the process of designing how data is organized, stored, and rel
 
 Good data modeling helps ensure your data is consistent, easy to understand, and efficient to query. It’s a foundational skill for software engineers, database admins, and anyone working with data-driven applications.
 
+---
+
 ## 🏗️ Types of Data Models
 
 There are three main levels of data modeling:
@@ -36,6 +38,8 @@ There are three main levels of data modeling:
 - **Audience:** Database administrators and developers.  
 - **Example:** In PostgreSQL: `CustomerID` is `SERIAL PRIMARY KEY`, `Email` is `VARCHAR(255) UNIQUE`.
 
+---
+
 ## 🧩 Core Components of Data Modeling
 
 ### Entities
@@ -49,6 +53,8 @@ Attributes are properties or details about an entity, like a user’s `name`, `e
 ### Relationships
 
 How entities relate to each other. For example, a `User` can have many `Orders`.
+
+---
 
 ## 📚 Example: Simple E-Commerce Data Model
 
@@ -120,12 +126,16 @@ erDiagram
     orders ||--o{ products : contains
 ```
 
+---
+
 ## 🎯 Why Good Data Modeling Matters
 
 - **Data Consistency:** Avoid duplicate or conflicting data  
 - **Performance:** Efficient queries and indexing  
 - **Scalability:** Easier to extend or modify as requirements change  
 - **Communication:** Clear documentation for developers and stakeholders
+
+---
 
 ## 🔧 Tips for Effective Data Modeling
 
@@ -134,9 +144,13 @@ erDiagram
 - Use tools like ER diagrams (Entity-Relationship diagrams) for visualization  
 - Collaborate with domain experts to understand real-world data and rules
 
+---
+
 ## 🎯 Final Thoughts
 
 Data modeling might seem abstract at first, but it’s crucial for building reliable, scalable software. Investing time in good models early can save headaches later.
+
+---
 
 ## Thank you
 

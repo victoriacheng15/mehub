@@ -9,6 +9,8 @@ tags: ["growth"]
 
 This book written by Austin Kleon is a compelling and insightful book that challenges traditional notions of creativity. Published in 2012, this concise yet impactful guide offers a fresh perspective on the creative process, encouraging readers to embrace influence, remix ideas, and liberate their creativity. Kleon argues that nothing is truly original and that all artists build upon existing ideas to create something new.
 
+---
+
 ## Ideas
 
 1. Steal Like an Artist:
@@ -32,6 +34,8 @@ This book written by Austin Kleon is a compelling and insightful book that chall
 10. Creativity is subtraction:
     - Emphasizing the concept that creativity often involves knowing what to leave out, simplifying ideas, and focusing on the essential elements of your work. Subtraction can lead to more impactful and meaningful creations.
 
+---
+
 ## Recap
 
 Kleon's writing is straightforward and relatable—no fancy language, just genuine talk and relatable stories. He rejects the idea of needing a perfect plan, encouraging you to dive in, create, and let your style develop naturally. The book has ten short, impactful chapters, each offering practical advice. Kleon promotes hands-on creativity, from doodling to crafting, as a powerful tool to overcome creative hurdles.
@@ -40,9 +44,13 @@ A key idea is 'stealing,' not in a suspicious way, but recognizing that every ar
 
 This book is for those who want to play the creativity game, not stealing in a shady way, but for those eager to explore diverse ideas and inspirations. It's perfect if you're working on something and need a fresh perspective or a spark of creativity.
 
+---
+
 ## Resources
 
 [Show Your Work! by Austin Kleon](https://austinkleon.com/steal/)
+
+---
 
 ## Thank you
 

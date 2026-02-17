@@ -21,6 +21,8 @@ Remove an empty directory:
 rmdir directory-name
 ```
 
+---
+
 ## Options
 
 | Option                    | Description                                                                      |
@@ -28,6 +30,8 @@ rmdir directory-name
 | -p, —parents              | Remove the specificed directory and its parents directories if they become empty |
 | -v, —verbos               | Provides detailed feedback on the actions performed by rmdir                     |
 | —ignore-fail-on-non-empty | Ignore errors when attempting to remove non-empty directories                    |
+
+---
 
 ## Additional Help
 
@@ -38,6 +42,8 @@ rmdir --help
 # or
 man rmdir
 ```
+
+---
 
 ## Thank you
 

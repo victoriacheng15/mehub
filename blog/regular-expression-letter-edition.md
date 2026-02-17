@@ -26,6 +26,8 @@ e.g.
 
 When you only focus on one type at a time, it is not so overwhelming. So I am slowly learning about it little by little over time. In the end, it is not bad after all. And it can be really powerful and useful once you get it.
 
+---
+
 ## Codewars problems
 
 ### First problem
@@ -72,6 +74,8 @@ function getCount(str) {
 
 Example: `/aBc/i` would match `AbC`.
 
+---
+
 ## Resources
 
 [MDN - Regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
@@ -79,6 +83,8 @@ Example: `/aBc/i` would match `AbC`.
 [RegExr: Learn, Build, & Test RegEx](https://regexr.com/)
 
 [regex101: build, test, and debug regex](https://regex101.com/)
+
+---
 
 ## Thank you
 

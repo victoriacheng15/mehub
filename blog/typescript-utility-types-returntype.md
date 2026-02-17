@@ -14,6 +14,8 @@ type ReturnType<T extends (...args: any) => any> =>
   T extends (...args: any) => infer R ? R : any
 ```
 
+---
+
 ## How does ReturnType work?
 
 Example 1: return the type of a function returning a number
@@ -48,6 +50,8 @@ function getArray(): number[] {
 type ArrayReturnType = ReturnType<typeof getArray>;
 // ArrayReturnType = number[]
 ```
+
+---
 
 ## Recap
 
@@ -105,9 +109,13 @@ type UserReturnType = ReturnType<typeof fetchUsers>;
 // }[]>
 ```
 
+---
+
 ## Resources
 
 [TS Handbook - ReturnType](https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype)
+
+---
 
 ## Thank you
 

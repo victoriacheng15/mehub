@@ -14,6 +14,8 @@ type Parameters<T extends (...args: any) => any> =
  T extends (..args: infer P) => any ? P: never
 ```
 
+---
+
 ## How Does Parameters Work?
 
 ```ts
@@ -43,13 +45,19 @@ type LastParam = Parameters<typeof myFunc>[2];
 
 The syntax `Parameters<typeof myFunc>[2]` gets the third element (a boolean) from the array of parameter types.
 
+---
+
 ## Recap
 
 The Parameters utility type in TypeScript is a valuable tool, allowing developers to extract a function's parameter types and gain insights into the anticipated arguments that the function is designed to handle.
 
+---
+
 ## Resources
 
 [TS Handbook - Parameters](https://www.typescriptlang.org/docs/handbook/utility-types.html?#parameterstype)
+
+---
 
 ## Thank you
 

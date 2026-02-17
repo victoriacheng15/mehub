@@ -15,6 +15,8 @@ Inspired by this, I decided to utilize Notion and construct a system for managin
 
 I resonated with this quote by Lao Tzu. To gain knowledge, one should actively acquire new information and experiences each day. However, true wisdom is attained by letting go and removing unnecessary or burdensome things from one’s life. It emphasizes the importance of continuous learning and the art of letting go to achieve a deeper level of understanding and wisdom.
 
+---
+
 ## Blogs
 
 - [TypeScript Utility Types Awaited](https://victoriacheng15.vercel.app/posts/typescript-utility-types-awaited)
@@ -23,6 +25,8 @@ I resonated with this quote by Lao Tzu. To gain knowledge, one should actively a
 - [JavaScript - Promise, Promise All, and async/await](https://victoriacheng15.vercel.app/posts/javascript-promise-promise-all-and-async-await)
 - [Atomic Habits - Transforming Lives with Lasting Habits](https://victoriacheng15.vercel.app/posts/atomic-habits-transforming-lives-with-lasting-habits)
 
+---
+
 ## Books
 
 1. `Limitless` by Jim Kwik - provides techniques and insights to unlock your brain's potential, enhancing memory, learning, and unleashing your full cognitive power.
@@ -30,6 +34,8 @@ I resonated with this quote by Lao Tzu. To gain knowledge, one should actively a
 3. `The Phoenix Project` by Gene Kim - reveals a transformative journey in IT management, emphasizing the importance of collaboration and streamlining processes for business success
 4. `Grokking Algorithms` by Aditya Bhargava - simplifies complex algorithms through clear explanations and visual examples, making them accessible to all levels of programmers
 5. `The Subtle Art of Not Giving a Fk` by Mark Manson - challenges conventional wisdom, offering refreshing perspectives on embracing authenticity and prioritizing what truly matters in life
+
+---
 
 ## Harvard CS50
 
@@ -108,11 +114,15 @@ I resonated with this quote by Lao Tzu. To gain knowledge, one should actively a
   - HTTP uses GET and POST requests.
   - Response headers contain status codes.
 
+---
+
 ## System Design - Rate Limit
 
 Rate limiting is a distributed system pattern that controls access to resources. It prevents resource starvation, reduces costs, and avoids server overload. Examples include limiting tweets on Twitter and reading requests on Google Docs API. It finds applications in social media platforms, online ticketing, cloud storage APIs, and SaaS platforms. The core concepts are the limit, window, and identifier. Rate-limiting responses include blocking (denying access), throttling (slowing down requests), and shaping (lower priority for exceeding limits).
 
 - [Rate Limiting Fundamentals By Alex Xu](https://blog.bytebytego.com/p/rate-limiting-fundamentals)
+
+---
 
 ## Thank you
 

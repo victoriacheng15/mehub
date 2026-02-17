@@ -9,6 +9,8 @@ tags: ["backend"]
 
 The `HAVING` clause is used to filter groups of rows based on a condition. It is often used with aggregate functions like `SUM`, `COUNT`, `AVG`, etc., to apply conditions to grouped data. For example, you can use `HAVING` to find customers whose total order amount exceeds a specific threshold.
 
+---
+
 ## How Does HAVING Work?
 
 `HAVING` is applied after the `GROUP BY` clause and filters the grouped results. It allows you to specify conditions that involve aggregate functions, which cannot be done with the `WHERE` clause.
@@ -44,6 +46,8 @@ HAVING SUM(order_amount) > 1000;
 - The `SUM` function calculates the total `order_amount` for each customer.
 - The `HAVING` clause filters the groups to include only those where the total order amount is greater than $1,000.
 
+---
+
 ## Key Differences: WHERE vs HAVING
 
 - **WHERE**: Filters individual rows **before** grouping. Cannot be used with aggregate functions.
@@ -65,11 +69,15 @@ HAVING SUM(order_amount) > 500;
 - The `GROUP BY` clause groups the filtered rows by `customer_id`.
 - The `HAVING` clause filters the groups to include only those with a total order amount greater than $500.
 
+---
+
 ## Practical Use Cases
 
 - **Filtering Aggregated Data**: Find groups that meet specific criteria, such as total sales exceeding a threshold.
 - **Data Analysis**: Analyze trends or patterns in grouped data.
 - **Customer Segmentation**: Identify high-value customers based on their total purchases.
+
+---
 
 ## Recap
 
@@ -79,9 +87,13 @@ HAVING SUM(order_amount) > 500;
 
 By mastering `HAVING`, you can efficiently filter and analyze grouped data in SQL. Save this guide for quick reference whenever you need it!
 
+---
+
 ## Resources
 
 [PostgreSQL HAVING](https://neon.tech/postgresql/postgresql-tutorial/postgresql-having)
+
+---
 
 ## Thank you
 

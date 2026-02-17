@@ -17,6 +17,8 @@ x ??= y;
 
 JavaScript checks if the variable `x` is nullish or not. If `x` is nullish, then the value of `y` is assigned to `x`. On the other hand, if `x` is **NOT** nullish, no assignment is performed.
 
+---
+
 ## Examples
 
 - Number:
@@ -85,13 +87,19 @@ console.log(obj2); // output: { name: "User", type: "Human" }
 
 Keep in mind, that this operator only kicks into action if the current value of the variable is either **null** or **\*undefined**. If the variable’s current value is **false**, it won’t trigger an assignment. So, it’s all about whether the variable is nullish or not!
 
+---
+
 ## Recap
 
 The Nullish Coalescing Assignment (`??=`) operator in JavaScript is a convenient tool. It assigns a new value to a variable, but only if that variable’s current value is nullish, meaning it’s either **null** or **undefined**. This operator is a great way to set default values. It ensures that variables aren’t left with nullish values, making your code more robust and easier to manage.
 
+---
+
 ## Resources
 
 [MDN Docs - Nullish coalescing assignment (??=)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
+
+---
 
 ## Thank you
 

@@ -15,6 +15,8 @@ Basic syntax:
 grep [options] pattern file.txt
 ```
 
+---
+
 ## Options
 
 | Option                   | Description                                                                                               |
@@ -30,6 +32,8 @@ grep [options] pattern file.txt
 | -c, --count              | Counts the number of matches in each file and prints the total, without showing the actual matching lines |
 | -w, --word-regexp        | Searches for matches that are whole words, so partial matches within words are ignored                    |
 
+---
+
 ## Additional Help
 
 You can explore more by using the commands:
@@ -39,6 +43,8 @@ grep --help
 # or
 man grep
 ```
+
+---
 
 ## Thank you
 

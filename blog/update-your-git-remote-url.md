@@ -11,6 +11,8 @@ A git remote URL is an important component in version control. Essential, it act
 
 When you clone a repository, a remote named `origin` is automatically created, linking your local repository to the remote sources. This URL can be an HTTPS address or an SSH address. By using commands like `git push` , `git pull`, and `git fetch` , you can manage and exchange code between your local enviornment and the remote repository, ensuring that your team stays updated and in sync.
 
+---
+
 ## How to Update or Change Remote URL?
 
 Changing the remote URL in git is a straightfoward process. Here is how you can do it:
@@ -41,9 +43,13 @@ git remote -v
 
 This can be particularly helpful when you change the repository name or if the repository has been moved to a new location.
 
+---
+
 ## Resources
 
 [Managing remote repositories - GitHub Docs](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url)
+
+---
 
 ## Thank you
 

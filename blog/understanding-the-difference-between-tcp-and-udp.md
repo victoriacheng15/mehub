@@ -13,6 +13,8 @@ When it comes to data transmission over networks, two protocols play a critical 
 
 On the other hand, **UDP** is a connectionless protocol that focuses on speed rather than reliability. It sends data without establishing a connection and without checking whether the data was received successfully. This makes UDP faster and more efficient for applications where real-time performance is crucial, such as online gaming, video streaming, and voice-over IP (VoIP).
 
+---
+
 ## Differences Between TCP and UDP
 
 - **Connection Type**:
@@ -36,17 +38,23 @@ On the other hand, **UDP** is a connectionless protocol that focuses on speed ra
 
 By understanding these differences, you can better appreciate the specific roles TCP and UDP play in the functioning of the internet and choose the appropriate protocol for your network applications.
 
+---
+
 ## Recap
 
 TCP is like using **registered mail** at the post office—secure and tracked, ensuring delivery in order, great for important documents. UDP is like sending **a regular letter**—quick, without tracking, perfect for casual mail where speed matters more than guaranteed delivery.
 
 TCP and UDP are key network protocols. TCP ensures reliable, ordered data delivery with connection management, making it ideal for web browsing and email tasks. UDP is faster but less reliable and is suited for real-time applications like gaming and streaming where speed is critical.
 
+---
+
 ## Resources
 
 [TCP vs. UDP: Understanding 10 Key Differences](https://www.spiceworks.com/tech/networking/articles/tcp-vs-udp/)
 
 [TCP vs UDP: A comparison of the protocols and their differences](https://nordvpn.com/blog/tcp-or-udp-which-is-better/)
+
+---
 
 ## Thank you
 

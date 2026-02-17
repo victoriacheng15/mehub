@@ -26,6 +26,8 @@ console.log(generator.next());
 // { value: 'value 2 was generated', done: false }
 ```
 
+---
+
 ## Usages
 
 - **Data Generation:** When dealing with large datasets, generators can be used to lazily generate and process data on-the-fly, rather than creating all the data upfront. This approach helps save memory and improves performance. For example, generating and processing data from a CSV file line by line.
@@ -76,11 +78,15 @@ const generator = dataGenerator(apiUrls);
 runGenerator(generator);
 ```
 
+---
+
 ## Recap
 
 From this, I've learned that JavaScript generators employ the `yield` keyword to create sequences of values, uniquely capable of pausing and resuming execution. The code example illustrates generating messages using a generator. It also showcases how generators work with async functions, fetching data in sequence from different URLs.
 
 I've also included a couple of links below that offer further insight into how generators function and explore some practical use cases.
+
+---
 
 ## Resources
 
@@ -91,6 +97,8 @@ I've also included a couple of links below that offer further insight into how g
 [Use case: simpler asynchronous code](https://exploringjs.com/es6/ch_generators.html#_use-case-simpler-asynchronous-code)
 
 [Web Dev Simplified - Learn JavaScript Generators In 12 Minutes](https://www.youtube.com/watch?v=IJ6EgdiI_wU)
+
+---
 
 ## Thank you
 

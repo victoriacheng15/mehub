@@ -18,6 +18,8 @@ A bit background about myself, I have taught myself HTML and CSS prior to this c
 
 The cohort is going on for a little over a month. I am trying to summarize this as short as I can.
 
+---
+
 ## Week 1
 
 The Learning how to Learn is quite interesting since it is telling you how to utilize several different techniques such as diffuse and focus modes to help you to learn and retain information in as efficient ways as possible. I also learned about active recall, spaced repetition, and [Anki](https://apps.ankiweb.net/). In short, you write down questions and answers on Anki and then you review and recall the materials you have put down every specific amount of time (usually once per day). This allows your mind to retain information easily.
@@ -27,6 +29,8 @@ More information:
 - [Learning how to Learn](https://www.coursera.org/learn/learning-how-to-learn), by Barbara Oakley
 - [How to study for Exams](https://www.youtube.com/watch?v=ukLnPbIffxE), by Ali Abdaal
 - [Spaced Repetition](https://www.youtube.com/watch?v=Z-zNHHpXoMM), by Ali Abdaal
+
+---
 
 ## Week 2
 
@@ -86,6 +90,8 @@ What is specificity? There are 3 types of selector, Type, Class, and ID.
 
 ![CSS specificity chart](https://cdn.hashnode.com/res/hashnode/image/upload/v1644166544526/89ha8ahry.png)
 
+---
+
 ## Week 3
 
 We dived deeper into the Box model and FLOAT!
@@ -133,6 +139,8 @@ footer {
 }
 ```
 
+---
+
 ## Week 4 and Week 5
 
 The classes from both weeks are heavily focused on responsive CSS. It uses a media query to build a responsive layout that is suitable for mobile, tablet, and desktop screen sizes. We also covered the networking part but it will be on its own blog since the topic is very important and difficult to cover in one short and sweet summary.
@@ -142,6 +150,8 @@ The classes from both weeks are heavily focused on responsive CSS. It uses a med
  /* do something */
 }
 ```
+
+---
 
 ## Recap
 

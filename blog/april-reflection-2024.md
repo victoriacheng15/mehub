@@ -34,11 +34,15 @@ A couple of helpful guides:
 
 This is inspired by the LinkedIn post by Omar Halabieh, you can see the post at [this link](https://www.linkedin.com/posts/omarhalabieh_strength-over-worry-activity-7189607905132707840-hoKY?utm_source=share&utm_medium=member_desktop).
 
+---
+
 ## Books
 
 I've been a bit lax with my daily reading this month, taking it as a mini break. But I'm committed to getting back on track by starting with 10 pages a day. 😅 😬
 
 - On Writing Well by William Zinsser - A timeless guide to clear, concise, and engaging writing. With practical advice and insightful anecdotes
+
+---
 
 ## Blogs
 
@@ -53,6 +57,8 @@ I've been a bit lax with my daily reading this month, taking it as a mini break.
 - [Python List Comprehension: Simplify Your Code](https://victoriacheng15.vercel.app/posts/python-list-comprehension-simplify-your-code)
 - [Data Structure - Queues](https://victoriacheng15.vercel.app/posts/data-structure-queues)
 - [Exploring cp - Linux Commands](https://victoriacheng15.vercel.app/posts/exploring-cp-linux-commands)
+
+---
 
 ## Thank you
 

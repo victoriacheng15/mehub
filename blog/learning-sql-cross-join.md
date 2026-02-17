@@ -51,6 +51,8 @@ In this query:
 - Each color will be paired with every size.
 - If the `colors` table has 3 rows and the `sizes` table has 4 rows, the result will have 12 rows (3 x 4).
 
+---
+
 ## Things to Keep in Mind
 
 ### Large REsult Sets
@@ -82,6 +84,8 @@ CROSS JOIN is useful in specific situations, such as:
 - Generating test data for experiments.
 - Building matrices or grids in data analysis.
 
+---
+
 ## Why is CROSS JOIN Useful?
 
 `CROSS JOIN` is helpful when you need to create all possible combinations of rows from two tables. For example:
@@ -89,6 +93,8 @@ CROSS JOIN is useful in specific situations, such as:
 - You might want to generate a list of all possible color and size combinations for a clothing store.
 - You might need to create a grid of data for analysis or reporting.
 - You could use it to create test data for a database.
+
+---
 
 ## Recap
 
@@ -101,9 +107,13 @@ Here’s what you need to remember about `CROSS JOIN`:
 
 By understanding `CROSS JOIN`, you’ll be able to handle more advanced SQL scenarios and work with data in new ways. Keep practicing, and soon you’ll master this powerful tool!
 
+---
+
 ## Resources
 
 [PostgreSQL CROSS JOIN](https://neon.tech/postgresql/postgresql-tutorial/postgresql-cross-join)
+
+---
 
 ## Thank you
 

@@ -15,6 +15,8 @@ type Readonly<T> = {
 };
 ```
 
+---
+
 ## How does Readonly work?
 
 Consider a scenario where you have a crucial configuration object, and it is most important that one of its properties remains unchangeable.
@@ -51,6 +53,8 @@ config.apiKey = "def456"; // cannot change
 config.serverUrl = "https://api.example.com/v2"; // cannot change
 ```
 
+---
+
 ## Recap
 
 ```ts
@@ -70,9 +74,13 @@ interface Configuration {
 
 By employing `Readonly`, you transform the object into a read-only structure, safeguarding critical data from unintended alterations by other parts of the code. This immutability ensures that the important information within the object remains constant throughout its lifetime, enhancing code reliability and stability.
 
+---
+
 ## Resources
 
 [TS Handbook - Readonly](https://www.typescriptlang.org/docs/handbook/utility-types.html#readonlytype)
+
+---
 
 ## Thank you
 

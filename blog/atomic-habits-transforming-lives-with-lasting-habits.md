@@ -13,6 +13,8 @@ Clear introduces the concept of atomic habits, which are tiny, consistent action
 
 > Habits are a double-edged sword. They can work for you or against you, which is why understanding the details is essential. -- James Clear
 
+---
+
 ## The top 4 core ideas
 
 - **The Power of Atomic Habits**: the book emphasizes the transformative power of small and consistent actions. By focusing on making incremental improvements and adopting atomic habits, individuals can create a compounding effect that leads to significant long-term change.
@@ -27,6 +29,8 @@ Clear introduces the concept of atomic habits, which are tiny, consistent action
 - **Environment Design**: the book emphasizes the importance of shaping the environment to support desired habits. By creating an environment that makes positive behaviors more accessible and reducing the friction associated with negative habits, individuals can increase the likelihood of sticking to their desired changes.
   - This approach proved highly effective. During high school, I successfully learned both English and American Sign Language simultaneously, immersing myself in an English-rich environment and quickly acquiring proficiency in both languages. Don't sleep on this!
 
+---
+
 ## Recap
 
 This book provided insights into why I struggled to maintain my workout routine in the past. Upon reflection, I recognized that the workouts were overly challenging, and I couldn't keep up with the pace. Moreover, I had placed excessive emphasis on setting goals rather than creating a support system and process for achieving my desired outcome. The book also highlights the significance of periodic reflection and review to evaluate progress. Additionally, it offers suggestions such as environment design to reinforce habits effectively.
@@ -37,9 +41,13 @@ Have you ever wondered why your good habits seem to slip away easily while bad h
 
 > Forget about goals and focus on the systems instead. -- James Clear
 
+---
+
 ## Resources
 
 - [James Clear Site](https://jamesclear.com/)
+
+---
 
 ## Thank you
 

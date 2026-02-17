@@ -21,6 +21,8 @@ Replace a string in a file:
 sed 's/old_string/new_string/' file.txt
 ```
 
+---
+
 ## Options
 
 | Option | **Description**                                                       |
@@ -29,6 +31,8 @@ sed 's/old_string/new_string/' file.txt
 | -e     | Allows multiple commands to be executed                               |
 | -i     | Modifies the file in place (saves changes directly to the file)       |
 | -r     | Enables extended regular expressions in the script                    |
+
+---
 
 ## Common Use Cases
 
@@ -64,6 +68,8 @@ sed '3i\Inserted text' file.txt    # Inserts "Inserted text" before line 3
 sed '3a\Appended text' file.txt    # Appends "Appended text" after line 3
 ```
 
+---
+
 ## Additional Help
 
 You can explore more by using the commands:
@@ -74,11 +80,15 @@ sed --help
 man sed
 ```
 
+---
+
 ## Resources
 
 [Ten sed command examples](https://4sysops.com/archives/ten-sed-command-examples/)
 
 [15 Useful ‘sed’ Command Tips and Tricks for Linux SysAdmins](https://www.tecmint.com/linux-sed-command-tips-tricks/)
+
+---
 
 ## Thank you
 

@@ -21,6 +21,8 @@ Example:
 wc file-name
 ```
 
+---
+
 ## Options
 
 | Option      | Description                                                                        |
@@ -29,6 +31,8 @@ wc file-name
 | -m, --chars | Print the number of characters in each file (character count may vary by encoding) |
 | -l, --lines | Print the number of lines in each file                                             |
 | -w, --words | Print the number of words in each file                                             |
+
+---
 
 ## Additional Help
 
@@ -39,6 +43,8 @@ wc --help
 # or
 man wc
 ```
+
+---
 
 ## Thank you
 

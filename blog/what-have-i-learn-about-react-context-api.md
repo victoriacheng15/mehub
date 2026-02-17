@@ -11,6 +11,8 @@ I have a project "REST Countries API with color theme switcher" from Frontend Me
 
 Also, check out the [live site](https://fem-rest-countries-api-vc.vercel.app/) for what it does before moving on.
 
+---
+
 ## Let's start on the topic
 
 It is better to see the codebase in action and why the API is awesome! Without the API, props will have to pass down from component to component. There can be more layers of components. I often had to go and back forth between files while working on this project. I think this could be really difficult to debug the app when you have to figure out where the props originally came from. Let's think about this if the app is large with thousands of components and passing props down through the tree root alike structure.....? I think you get the idea.
@@ -222,6 +224,8 @@ Feel free to look around and see the differences between both versions with or w
 - Overall code
   - [fem-rest-countries-api](https://github.com/victoriacheng15/fem-rest-countries-api)
 
+---
+
 ## Recap
 
 The `Context API` allows you to define functions and hooks in the context file. You can organize functions and hooks based on their purpose. e.g `CountriesContext` for fetching country data, search and select functions or `PaginationContext` for all pagination related.
@@ -232,6 +236,8 @@ Advantages:
 - keep component files clean
 - components can take props from the Context API instead of passing down props
 
+---
+
 ## Resources
 
 - [React Docs - useContext](https://reactjs.org/docs/hooks-reference.html#usecontext)
@@ -239,6 +245,8 @@ Advantages:
 - [React JavaScript Framework for Beginners – Project-Based Course](https://www.youtube.com/watch?v=u6gSSpfsoOQ&t=6808s)
   - This is where I actually understand `Context API`, highly recommend following along and trying to implement it in your project(s)!
 - [Prop Drilling by Kent C. Dodds](https://kentcdodds.com/blog/prop-drilling)
+
+---
 
 ## Thank you
 

@@ -14,6 +14,8 @@ The `UNION` and `UNION ALL` operators in SQL are used to combine the results
 
 Think of them as tools for stacking datasets vertically—like appending one list to another.
 
+---
+
 ## How Do UNION and UNION ALL Work?
 
 Both operators require that the queries being combined have the **same number of columns** and **compatible data types**. The key difference is in how they handle duplicates:
@@ -34,6 +36,8 @@ SELECT column1, column2 FROM table1
 UNION ALL
 SELECT column1, column2 FROM table2;
 ```
+
+---
 
 ## Example: Combining Customer Data
 
@@ -64,6 +68,8 @@ SELECT customer_id, customer_name FROM customers_west;
 
 **What Happens?** If a customer exists in both tables, **both copies** appear in the result.
 
+---
+
 ## When to Use UNION vs. UNION ALL?
 
 | **Scenario** | **Use** | **Reason** |
@@ -71,6 +77,8 @@ SELECT customer_id, customer_name FROM customers_west;
 | Need unique records only | `UNION` | Removes duplicates |
 | Want all records (faster) | `UNION ALL` | No duplicate check, better performance |
 | Combining similar datasets | `UNION ALL` | If duplicates are acceptable or unlikely |
+
+---
 
 ## Key Points to Remember
 
@@ -87,6 +95,8 @@ SELECT customer_id, customer_name FROM customers_west;
 
 4. **Use in Complex Queries:** You can combine `UNION` with `WHERE`, `GROUP BY`, and other clauses.
 
+---
+
 ## Recap
 
 - **`UNION`** merges results and removes duplicates.
@@ -94,9 +104,13 @@ SELECT customer_id, customer_name FROM customers_west;
 - Both require matching columns and data types.
 - Use `UNION ALL` when duplicates don’t matter for better performance.
 
+---
+
 ## Resources
 
 [PostgreSQL UNION](https://neon.tech/postgresql/postgresql-tutorial/postgresql-union)
+
+---
 
 ## Thank you
 

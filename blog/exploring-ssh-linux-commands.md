@@ -42,6 +42,8 @@ This command connects to the Raspberry Pi at `192.168.1.100` as the user pi.
 | -N | No remote command (useful for port forwarding only). |
 | -T | Disable pseudo-terminal allocation (for automation). |
 
+---
+
 ## Common Use Cases
 
 ### 1. Basic Remote Login
@@ -132,6 +134,8 @@ If SSH fails, use `-v` (verbose mode) to troubleshoot:
 ssh -v user@remote-server
 ```
 
+---
+
 ## Additional Help
 
 To see all available SSH options, check the manual:
@@ -142,11 +146,15 @@ ssh --help
 man ssh
 ```
 
+---
+
 ## Recap
 
 The **SSH command** is the backbone of secure remote server management in Linux. Whether you're logging into a server, running commands remotely, forwarding ports, or debugging connections, SSH provides a reliable and encrypted way to work with remote systems. Mastering SSH is a must for any Linux user or administrator.
 
 **Happy remote computing!** 🖥️🔒
+
+---
 
 ## Thank you
 

@@ -23,6 +23,8 @@ chgrp developers project.txt
 
 This command changes the group ownership of `project.txt` to the `developers` group.
 
+---
+
 ## Options
 
 | Option | **Description**                                                                           |
@@ -31,6 +33,8 @@ This command changes the group ownership of `project.txt` to the `developers` gr
 | `--reference`   | Change the group of a file to match the group of another reference file |
 | `-v`   | Verbose output, showing files as their group is changed                                   |
 | `-c`   | Show output only for files that actually had their group changed                          |
+
+---
 
 ## Common Use Cases
 
@@ -94,6 +98,8 @@ chgrp -c users data.csv
 
 This will display a message only if `data.csv` needed its group ownership changed.
 
+---
+
 ## Additional Help
 
 For more details and advanced options, you can always refer to the manual by typing:
@@ -105,9 +111,13 @@ chgrp --help
 
 ```
 
+---
+
 ## Recap
 
 The `chgrp` command is a powerful tool for managing group ownership in Linux, especially in environments where different users collaborate on shared files and directories. Whether you’re changing the group ownership of a single file or an entire directory tree, `chgrp` makes the process easy and efficient. Mastering this command will help you manage file permissions more effectively in your Linux system.
+
+---
 
 ## Thank You
 

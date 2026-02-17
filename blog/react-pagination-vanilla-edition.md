@@ -13,6 +13,8 @@ For example, Amazon has thousands of products to show online. If you were to dis
 
 I decided to implement pagination. But I had no idea how to do it. I went to my best friend Google to search and find a way to create pagination without using a package like react-pagination. To my surprise, I found a YouTube that shows you how to create pagination without react-pagination or similar packages, I put the link in the resources section.
 
+---
+
 ## First Step
 
 At first, I created pagination with JavaScript first to see how the functions were implemented. But why JavaScript? To be honest, I am not sure why I did this first. Suppose I was curious to see how it works with JavaScript. Also, React works almost the same way as JavaScript, minus the hooks part.
@@ -29,6 +31,8 @@ The goals are:
   - stay at the middle once reach to the middle
   - stay at the middle as the page is navigating forward or backward
 - Until the last page, highlight page will move to the right side
+
+---
 
 ## Let's see how it is created with React
 
@@ -139,6 +143,8 @@ This is from the REST countries API project. As you can see, once the page reach
 
 You also can play around with it at [the live site](https://fem-rest-countries-api-vc.vercel.app/) and see [code here](https://github.com/victoriacheng15/fem-rest-countries-api/blob/main/src/context/PaginationContext.jsx)
 
+---
+
 ## Recap
 
 Creating pagination with JavaScript and React is pretty fun. I did this without using packages for, um....an adventurous reason. I went through many trial and error to figure out how to write. I also needed to make sure pages doesn't go over and below the page 1 and the total pages. As well as, make sure the highlighted page stay at the middle during forward or backward navigation.
@@ -147,9 +153,13 @@ Of course, I was frustrated on why it didn't work sometimes and tried different 
 
 > Pro tip: as always, if frustrated, go take a break and then come back later. You would somehow fix/solve it.
 
+---
+
 ## Resources
 
 - [React JS Pagination With API | React pagination](https://www.youtube.com/watch?v=FHBXhBtA1Dg)
+
+---
 
 ## Thank you
 

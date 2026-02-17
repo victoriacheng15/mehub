@@ -9,6 +9,8 @@ tags: ["linux"]
 
 At its core, _cp_ stands for _copy_. It is a command-line utility that allows users to make copies of files and directories. Wehther you are duplicating important documents, backing up crucial data, or simply organizing your files. Let's explore its functionality and various options.
 
+---
+
 ## Understanding the Basics
 
 Executing the `cp` command without any options simply copies a file or directory from one location to another.
@@ -16,6 +18,8 @@ Executing the `cp` command without any options simply copies a file or directory
 ```bash
 cp source_file destination_file
 ```
+
+---
 
 ## Options
 
@@ -93,6 +97,8 @@ man cp
 ```
 
 These commands provide comprehensive documentation and explanations for each option
+
+---
 
 ## Thank you
 

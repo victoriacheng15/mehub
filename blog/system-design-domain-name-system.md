@@ -9,6 +9,8 @@ tags: ["system-design"]
 
 The Domina Name System is a pivotal element of the broader system design, responsible for translating human-readable domain names into numerical IP addresses that computers use to identify each other on the internet. In simpler terms, DNS acts as the digital directory that facilitates the communication between your browser and the web servers hosting your favorite websites.
 
+---
+
 ## How does DNS work?
 
 Ever wondered about the magic that happens behind the scenes when you type a website address into your browser? This experience is powered by the Domain Name System (DNS), a vital component of the internet's architecture.
@@ -32,9 +34,13 @@ Let's take a journey through the steps involved in resolving a familiar domain l
 8. **Website Access:**
    - Your computer now knows where to find Google's servers. It establishes a connection, and voilà – you seamlessly access "[www.google.com](http://www.google.com/)."
 
+---
+
 ## TL;DR
 
 When you type "[www.google.com](http://www.google.com/)" in your browser, your computer goes through a process involving DNS queries to find the IP address. It checks local cache, consults root and top-level domain servers, reaches the authoritative DNS server for "google.com," gets the IP address, and finally, your computer can access Google's servers.
+
+---
 
 ## Resources
 
@@ -43,6 +49,8 @@ When you type "[www.google.com](http://www.google.com/)" in your browser, your c
 [What is DNS? | How DNS works](https://www.cloudflare.com/en-gb/learning/dns/what-is-dns/)
 
 [Domain Name System 101 Miniseries](https://www.youtube.com/watch?v=zEmUuNFBgN8&list=PLTk5ZYSbd9MhMmOiPhfRJNW7bhxHo4q-K)
+
+---
 
 ## Thank you
 

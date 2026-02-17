@@ -25,6 +25,8 @@ WHERE column_name OPERATOR (SELECT column_name FROM table_name WHERE condition);
 
 The inner query runs first, and its result is used by the outer query
 
+---
+
 ## Types of Subqueries
 
 Subqueries can be used in different ways:
@@ -74,6 +76,8 @@ FROM orders;
 ```
 
 Here, the subquery calculates the average once and compares each order against it.
+
+---
 
 ## Correlated Subqueries & Special Operators
 
@@ -151,6 +155,8 @@ WHERE age > ALL (
 | `ANY` | Flexible comparisons | "Is this value in the top 50%?" |
 | `ALL` | Strict comparisons | "Is this higher than ALL competitors?" |
 
+---
+
 ## Recap
 
 ✅ Subqueries help break complex problems into smaller steps.
@@ -163,6 +169,8 @@ WHERE age > ALL (
 
 **Final Tip:** If a subquery feels too complicated, try writing the inner query first, then build the outer query around it. With practice, you’ll use subqueries naturally in your SQL work!
 
+---
+
 ## Resources
 
 [PostgreSQL Subquery](https://neon.tech/postgresql/postgresql-tutorial/postgresql-subquery)
@@ -174,6 +182,8 @@ WHERE age > ALL (
 [PostgreSQL ALL Operator](https://neon.tech/postgresql/postgresql-tutorial/postgresql-all)
 
 [PostgreSQL EXISTS Operator](https://neon.tech/postgresql/postgresql-tutorial/postgresql-exists)
+
+---
 
 ## Thank you
 

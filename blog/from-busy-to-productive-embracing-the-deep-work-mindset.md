@@ -9,6 +9,8 @@ tags: ["growth"]
 
 It is a concept popularized by author and professor Cal Newport in this book titled “Deep Work Rule for Focused Success in a Distracted World.” The book refers to the ability to concentrate without distraction on cognitively demanding tasks, enabling individuals to produce high-quality work and achieve significant professional and personal results.
 
+---
+
 ## How to Deep Work in the digital era?
 
 The core principle of deep work revolves around the idea that in today’s hyper-connected world, many people are constantly bombarded with various distractions such as social media, email notifications, and other interruptions. These distractions hinder their ability to focus and engage in meaningful, concentrated work.
@@ -25,15 +27,21 @@ To facilitate deep work, the book proposes various strategies:
 - `Embracing deep work philosophies`: during the time block, isolate yourself and focus solely on the work
 - `Cultivating focus and attention`: train the mind to sustain deep focus over extended periods through techniques like meditation and minimizing multitasking
 
+---
+
 ## Recap
 
 In an era of rapid technological advancement, the ability to maintain focus has become more important than ever. There are many distractions from our digital devices and posing challenges to your ability to focus on tasks. In the midst of continuous interruptions, improving your focus has become an essential skill for success.
 
 This book provides two valuable insights that have resonated with me and are currently shaping my daily routine: the importance of creating a distraction-free environment and the practice of implementing dedicated time blocks. I am deeply impressed by these concepts and actively integrating them into my daily life.
 
+---
+
 ## Resources
 
 - [Author of Deep Work, Study Hacks Blog - Cal Newport](https://calnewport.com/)
+
+---
 
 ## Thank you
 

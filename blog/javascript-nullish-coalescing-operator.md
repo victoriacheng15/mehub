@@ -81,6 +81,8 @@ console.log(check); // 2nd value
 // try assign 0 or null or undefined to value, it will return 2nd value again
 ```
 
+---
+
 ## My experience with nullish coalescing operator
 
 APIs often return values that may contain null or undefined. This is particularly common when retrieving complex data structures with missing or incomplete information. For instance, some countries may not have a `capital` property in an API response. In such cases, there are two ways to display the capital name: either display the actual value if it exists or show `N/A` as a default value.
@@ -101,14 +103,20 @@ You can check out [what information the API returns for Canada and Antarctica](h
 
 The ternary operator is a useful tool for simplifying code, but if an API returns a value that is either null or undefined, it can be more efficient to use the nullish coalescing operator instead. This operator simplifies the code even further by providing a default value only when the variable is strictly null or undefined, without the need for an explicit comparison using the ternary operator.
 
+---
+
 ## Recap
 
 Choosing between the nullish coalescing operator and the logical OR operator can be confusing. However, a simple question can help to determine which one to use: `Will the value ONLY display null or undefined?` If the answer is `yes`, the nullish coalescing operator is the way to go. On the other hand, if the answer is `no` as the value will have falsy values like the empty string or number 0, the logical OR operator is the better choice.
+
+---
 
 ## Resources
 
 - [MDN Docs - Nullish coalescing operator (??)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [JavaScript Info - Nullish coalescing operator (??)](https://javascript.info/nullish-coalescing-operator)
+
+---
 
 ## Thank you
 

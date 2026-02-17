@@ -35,6 +35,8 @@ I used to wonder how websites were able to perform add, create, update, and dele
 
 As I reflect on my journey from the beginning of 2022 until now, I am proud of the skills and knowledge that I have acquired. These have helped me to make progress and improvements in my personal and professional development. I am grateful for the opportunity to continue learning and growing, and I am excited to see what the future holds as I continue to build on the foundation that I have established.
 
+---
+
 ## Roadblocks
 
 There will be obstacles or challenges that came up along the way. It is important to learn how to handle these roadblocks effectively and find ways to prevent them from happening more often in the future.
@@ -53,6 +55,8 @@ Remember that you are always improving and growing, and it's important to compar
 
 While you can't completely eliminate imposter syndrome, learning to live with it and use it as a motivation to keep learning and improving can be a valuable tool.
 
+---
+
 ## The Future
 
 A couple of things that I would like to do next year:
@@ -63,6 +67,8 @@ A couple of things that I would like to do next year:
 - Write a blog regularly
 
 I cannot promise that I will do them all, however, I am going to try to build a system/environment that will help me to plan and learn the technologies that I am interested in.
+
+---
 
 ## Thank you
 

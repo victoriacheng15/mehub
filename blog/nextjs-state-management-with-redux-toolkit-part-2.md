@@ -106,6 +106,8 @@ function top() {
 export default top;
 ```
 
+---
+
 ## First step - extract type declarations
 
 Extract type declarations to `features.d.ts` under the `types` folder.
@@ -126,6 +128,8 @@ interface StoryResponse {
 
 type Pagination = Pick<StoryResponse, "page" | "limit">;
 ```
+
+---
 
 ## Second Step - refactor API fetch function
 
@@ -178,6 +182,8 @@ export const initialState: StoryResponse = {
  limit: 10,
 };
 ```
+
+---
 
 ## Third Step - refactor fetchTopStories
 
@@ -249,6 +255,8 @@ export const selectTops = (state: AppState) => state.tops;
 export default topsSlice;
 ```
 
+---
+
 ## Fourth Step - story pages
 
 Once the API fetch function was refactored and `createSlice` functions for show and job categories were set up, every page is now prepared to exhibit stories according to their respective categories.
@@ -283,6 +291,8 @@ function top() {
 // change below
 export default top;
 ```
+
+---
 
 ## Fifth Step - custom hooks (optional)
 
@@ -433,6 +443,8 @@ function top() {
 export default top;
 ```
 
+---
+
 ## Recap
 
 Initially, code may appear unattractive when it is first written. Refactoring is beneficial in enhancing the codebase and making it more organized.
@@ -441,9 +453,13 @@ An important lesson I've learned is to avoid refactoring too early, and instead 
 
 To summarize: Write the code in its simplest form initially, and then improve it through refactoring when necessary.
 
+---
+
 ## Resources
 
 - [hacker-news-next repository](https://github.com/victoriacheng15/hacker-news-next)
+
+---
 
 ## Thank you
 

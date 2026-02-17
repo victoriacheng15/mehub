@@ -17,6 +17,8 @@ type Partial<T> = {
 
 You can view this by hovering cursor on `Partial` and a pop-up will show up.
 
+---
+
 ## How does Partial work?
 
 ```ts
@@ -73,6 +75,8 @@ console.log({ original, updateStatus });
 
 You write `fieldsToUpdate: Partial<Todo>` and now you can update one of the properties!
 
+---
+
 ## Full Code
 
 ```ts
@@ -99,6 +103,8 @@ const updateStatus = updateTodo(original, {
 console.log({ original, updateStatus });
 ```
 
+---
+
 ## Recap
 
 ```ts
@@ -115,9 +121,13 @@ If you try to hover the cursor over `Todo` and it will show all types without th
 
 The `Partial` utility provides flexibility and convenience in TypeScript by allowing you to work with objects or function arguments in a more relaxed manner. It promotes code reusability, readability, and adaptability, especially in scenarios where not all properties or arguments are required or known in advance.
 
+---
+
 ## Resources
 
 - [TS Handbook - Partial](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype)
+
+---
 
 ## Thank you
 

@@ -9,6 +9,8 @@ tags: ["backend"]
 
 In our digital age, databases are indispensable for many applications, from e-commerces to social networks. Two main types: **NoSQL** and **SQL**. NoSQL, or Not Only SQL, offers flexibility and scalability for handling large, unstructured data sets. On the other hand, SQL, or Structured Query Language, ensures data relationships and transaction reliability. Let’s explore each in detail below.
 
+---
+
 ## What is NoSQL?
 
 NoSQL, which stand for "Not only SQL," breaks away from SQL's rigid structure by storing data in diverse formats such as key-value pairs, documents, columns, and graphs. This flexibility enables NoSQL to handle large volumes of unstructured and semi-structured data efficiently. Popular examples include MongoDB, Amazon DynamoDB, and Apache Cassandra.
@@ -26,6 +28,8 @@ _Cons:_
 
 - **Limited Querying Capabilities:** NoSQL databases may not handle complex queries as efficiently as SQL databases, especially for on-the-fly queries or detailed reporting.
 - **Maturity and Tooling:** Some NoSQL databases are newer compared to SQL databases, which means there may be fewer mature tools, community support, and established best practices.
+
+---
 
 ## What is SQL?
 
@@ -46,6 +50,8 @@ _Cons:_
 - **Flexibility:** The rigid schema of SQL databases can be less flexible for handling unstructured or semi-structured data, requiring schema modifications for structure changes.
 - **Performance:** While SQL databases perform well with structured data and complex queries, they may not be as efficient for write-heavy workloads or distributed environments compared to some NoSQL solutions.
 
+---
+
 ## Recap
 
 Here is a comparative table suimmarizing the differences:
@@ -62,6 +68,8 @@ Here is a comparative table suimmarizing the differences:
 
 Choosing the right database depends on your specific data requirements. SQL databases are ideal for structured data and applications needing strong consistency and complex querying capabilities. On the other hand, NoSQL databases are suited for handling unstructured or semi-structured data with a focus on scalability and performance in distributed environments. The decision should align with your application's data structure, scalability needs, and the type of queries you'll be performing.
 
+---
+
 ## Resources
 
 [What is NoSQL by Amazon](https://aws.amazon.com/nosql/)
@@ -69,6 +77,8 @@ Choosing the right database depends on your specific data requirements. SQL data
 [What is SQL by Amazon](https://aws.amazon.com/what-is/sql/)
 
 [SQL vs NoSQL: 5 Critical Differences](https://www.integrate.io/blog/the-sql-vs-nosql-difference/)
+
+---
 
 ## Thank you
 

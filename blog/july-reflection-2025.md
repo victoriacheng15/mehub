@@ -15,11 +15,15 @@ Their answer wasn’t about specific tools or languages — it was about underst
 
 One truth stands out clearly: change is the only constant. Technology evolves, projects shift, teams reorganize, and even leadership changes. Because of this, the contents of our technical backpack—our skills, knowledge, and habits—must adapt too. Over time, we pack this backpack with tools, concepts, and assumptions. But eventually, it gets heavy. Growth isn’t just about adding more — it’s also about knowing when to reorganize, replace, or remove what no longer serves us.
 
+---
+
 ## 🧠 Not Just Skills — Context and Judgment
 
 That conversation reminded me that knowing *how* to write code is only one piece of the puzzle. Just as important is understanding *why* something was built a certain way, *who* it serves, and *what constraints* shaped it. These are the kinds of things you can’t learn from documentation alone.
 
 So this month, I’ve been asking myself: **What’s actually worth carrying in my backpack?**
+
+---
 
 ## 🧰 What I Packed This Month
 
@@ -32,6 +36,8 @@ Here are a few things I consciously added:
 
 These aren’t “new technologies,” but they’re just as important for writing maintainable, collaborative software.
 
+---
+
 ## 🗑️ What I Let Go Of
 
 Just as importantly, I made space by letting go of things that were no longer serving me:
@@ -41,6 +47,8 @@ Just as importantly, I made space by letting go of things that were no longer se
 - Old habits that added friction — like relying only on print statements instead of learning better observability tools.
 
 Some of these ideas originated from a beginner's mindset; others were holdovers from past projects. Either way, it felt good to lighten the load.
+
+---
 
 ## 🧭 What This Backpack Really Carries
 
@@ -52,6 +60,8 @@ The technical backpack isn’t just a storage space — it’s a reflection of h
 
 Carrying everything slows you down. The goal isn’t to have the heaviest backpack — it’s to **pack wisely for where you’re headed**.
 
+---
+
 ## 🔭 What’s Next
 
 I want to continue this process — not just learning new things, but reflecting on what’s worth keeping. That includes:
@@ -61,6 +71,8 @@ I want to continue this process — not just learning new things, but reflecting
 - Being more intentional about what I choose to learn and apply.
 
 Because in tech, you’ll never know everything — and that’s okay. What matters is **how you carry what you know**, and how that helps you continue to grow.
+
+---
 
 ## Thank you
 

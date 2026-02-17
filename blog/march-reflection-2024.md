@@ -30,6 +30,8 @@ Embracing the Stacey Matrix ethos involves breaking from tradition and embracing
 
 This reflection draws inspiration from Addy Osmani’s LinkedIn post titled [🚀 Facing tough decisions? Let's break it down with the Stacey Matrix! 🧠](https://www.linkedin.com/posts/addyosmani_motivation-productivity-leadership-activity-7174811708908077056-W3Lg/?utm_source=share&utm_medium=member_desktop)
 
+---
+
 ## Blogs
 
 - [Exploring stat - Linux Commands](https://victoriacheng15.vercel.app/posts/exploring-stat-linux-commands)
@@ -40,11 +42,15 @@ This reflection draws inspiration from Addy Osmani’s LinkedIn post titled [�
 - [Python - A Guide to List Methods With Examples](https://victoriacheng15.vercel.app/posts/python-a-guide-to-list-methods-with-examples)
 - [Exploring mkdir - Linux Commands](https://victoriacheng15.vercel.app/posts/exploring-mkdir-linux-commands)
 
+---
+
 ## Books
 
 - **Start With Your Why by Simon Sinek** - Explores how leaders can inspire cooperation and change by prioritizing their purpose, using the Golden Circle model to explain why some organizations are particularly successful and able to create loyal customers and employees.
 - **Find Your Why by Simon Sinek** - Offers a practical guide to discovering your personal purpose and how to live it out daily.
 - **Understanding Distributed Systems by Robert Vitillo** - Teaches core principles of building, scalable, fault-tolerant cloud applications, focuses on practical concepts like replication and resiliency.
+
+---
 
 ## Thank you
 

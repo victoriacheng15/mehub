@@ -21,6 +21,8 @@ Sort a file alphabetically:
 sort file-name
 ```
 
+---
+
 ## Options
 
 | Option                     | Description                                      |
@@ -31,6 +33,8 @@ sort file-name
 | -n, --numeric-sort         | Compare according to string numerical value      |
 | -r, --reverse              | reverse the result of comparisons                |
 
+---
+
 ## Additional Help
 
 You can explore more by using the commands:
@@ -40,6 +44,8 @@ sort --help
 # or
 man sort
 ```
+
+---
 
 ## Thank you
 

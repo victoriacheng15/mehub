@@ -33,11 +33,15 @@ Even though my setup is small, I can see how Ansible would help people managing 
 
 As I continue learning Ansible, I’m excited to try more advanced features, like managing inventory files, using roles for reusable setups, and connecting Ansible with other DevOps tools. For now, my two Ubuntu VMs are a great place to experiment and learn. Ansible has shown me how powerful automation can be, and I’m excited to see where this learning journey goes.
 
+---
+
 ## Books I’ve Read
 
 L**ife 3.0: Being Human in the Age of ARtifical Intelligence** by Max Tegmark:
 
 - Looks at how AI will affect humanity's future. It describes life in three stages: 1.0 (biological, like bacteria), 2.0 (cultural, like humans), and 3.0 (AI that can redesign itself). Tegmark talks about AI's possibilities, such as solving big problems like poverty and disease, but also its risks, like causing societal collapse. He stresses the importance of making sure AI matches human values and that people work together to create a good future. The book shows both positive and negative ways AI could evolve.
+
+---
 
 ## Thank you
 

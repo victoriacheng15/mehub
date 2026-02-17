@@ -9,6 +9,8 @@ tags: ["python"]
 
 The Python `os` module makes it easy to interact with the operating system. It provides functions to manage files, directories, environment variables, and file paths. By simplifying system-level tasks, it helps developers write code that works across different platforms, making it ideal for handling system operations.
 
+---
+
 ## File Handling
 
 The `os` module simplifies file operations such as checking if a file exists, renaming, and deleting files.
@@ -43,6 +45,8 @@ When a file is no longer needed, you can remove it using `os.remove()`:
 os.remove("example.txt")
 print("File deleted")
 ```
+
+---
 
 ## Working with Directories
 
@@ -85,6 +89,8 @@ os.removedirs("nested/folder/structure")  # Remove nested directories
 print("Directories removed")
 ```
 
+---
+
 ## Path manipulation
 
 File path manipulation is an essential part of dealing with files and directories. The `os.path` submodule provides tools for working with file paths cross-platform.
@@ -111,6 +117,8 @@ filename, ext = os.path.splitext("file.txt")
 print("File Extension:", ext)
 ```
 
+---
+
 ## Environment Variables
 
 Environment variables allow scripts to access configuration settings, such as system paths or API keys. The `os` module makes it easy to get, set, and remove these variables.
@@ -135,6 +143,8 @@ print("MY_VAR set to:", os.environ.get("MY_VAR"))
 os.environ.pop("MY_VAR", None)
 print("Environment variable MY_VAR removed")
 ```
+
+---
 
 ## Recap
 
@@ -167,9 +177,13 @@ Additionally, you can get a list of available functions, constants, and methods 
 
 This will provide descriptions, usage, and examples for each function or submodule in the `os` module.
 
+---
+
 ## Resources
 
 [os — Miscellaneous operating system interfaces by Python Docs](https://docs.python.org/3/library/os.html)
+
+---
 
 ## Thank you
 

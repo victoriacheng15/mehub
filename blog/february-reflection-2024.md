@@ -17,10 +17,14 @@ In the next phase of my little project, I went deep into setting up a script for
 
 And here's a bonus discovery, Makefile is awesome! It allows you to set up commands, like "make journal" for sending journal data after gathered inputs. I can see this approach making it easier for other ideas to come to life. Excited to see how these ideas shape up! 😎 😀
 
+---
+
 ## Books
 
 - Smart Brevity - A communication strategy designed to convey key messages clearly and concisely, aiming for effectiveness and impact through brevity.
 - Modern Frontend Development with Node.js - Discover effective frontend development strategies with Node.js, encompassing the latest trends, essential tools, and best practices for creating modern and efficient user interfaces.
+
+---
 
 ## Blogs
 
@@ -32,6 +36,8 @@ And here's a bonus discovery, Makefile is awesome! It allows you to set up comma
 - [JavaScript - Change Array by Copy Methods](https://victoriacheng15.vercel.app/posts/javascript-change-array-by-copy-methods)
 - [Smart Brevity - Your Path to Effective Communication](https://victoriacheng15.vercel.app/posts/smart-brevity-your-path-to-effective-communication)
 - [TypeScript Utility Types - ReturnType](https://victoriacheng15.vercel.app/posts/typescript-utility-types-returntype)
+
+---
 
 ## Thank you
 

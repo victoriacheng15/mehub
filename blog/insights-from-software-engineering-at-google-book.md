@@ -11,6 +11,8 @@ In "Software Engineering at Google: Lessons Learned from Programming Over Time,"
 
 Whether you're an experienced engineer or a budding developer, this comprehensive guide provides a unique opportunity to learn from one of the world's leading technology giants. Discover Google's pragmatic and data-driven approach to software engineering
 
+---
+
 ## Insights From the Book
 
 - **Code Reviews**: Google emphasizes rigorous code reviews to maintain code quality and encourage knowledge sharing among developers.
@@ -26,11 +28,15 @@ Whether you're an experienced engineer or a budding developer, this comprehensiv
 - **Design Principles**: The book outlines design principles that guide software development for consistency and maintainability.
 - **Failure as a Learning Opportunity**: Google views failures as opportunities for learning and improvement, encouraging a growth mindset.
 
+---
+
 ## Recap
 
 From this book, I gained insights into the distinction between programming and software engineering. While programming is the act of producing code, software engineering encompasses the essential policies, practices, and tools that make that code viable for as long as it's needed and facilitate team collaboration.
 
 Moreover, the book emphasizes an essential lesson: every choice requires making trade-offs. The crucial factor lies in identifying which trade-offs yield greater benefits in the long run. By asking the right questions and leveraging existing data, we can enhance our decision-making and optimize our software development processes for enduring success.
+
+---
 
 ## Thank you
 

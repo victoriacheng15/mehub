@@ -11,6 +11,8 @@ In Python, dictionaries stand as versatile and indispensable data structures. Th
 
 Dictionaries are comprised of key-value pairs, where each key is associated with a corresponding value. This association facilitates rapid lookup, making dictionaries ideal for tasks ranging from simple data storage to complex data modeling.
 
+---
+
 ## Examples
 
 ### Basic Dictionary
@@ -41,6 +43,8 @@ example2 = {
     }
 }
 ```
+
+---
 
 ## Methods
 
@@ -322,9 +326,13 @@ dict_values(
 """
 ```
 
+---
+
 ## Resources
 
 [Python Docs - 5.5 Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
+
+---
 
 ## Thank you
 

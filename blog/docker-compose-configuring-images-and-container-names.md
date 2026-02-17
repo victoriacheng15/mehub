@@ -22,6 +22,8 @@ services:
    # do stuff
 ```
 
+---
+
 ## Bonus
 
 To move a file or folder from the host machine to the container, utilize the `docker cp` command. If you intend to transfer a folder, substitute `file.txt` with the name of the folder.
@@ -34,9 +36,13 @@ docker cp file.txt container_id:path/file.txt
 docker cp folder container_id:path/folder
 ```
 
+---
+
 ## Resources
 
 [Docker Docs - Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/)
+
+---
 
 ## Thank you
 

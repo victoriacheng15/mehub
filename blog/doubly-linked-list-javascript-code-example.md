@@ -15,6 +15,8 @@ Doubly linked lists support the same core operations as singly linked lists:
 - **deletion** - remove an element at its index or value
 - **Search** - find an element given its value
 
+---
+
 ## Node Class
 
 The `node` class represents a single element in a doubly linked list. Each node contains three properties:
@@ -32,6 +34,8 @@ class Node {
  }
 }
 ```
+
+---
 
 ## Doubly Linked List Class
 
@@ -167,6 +171,8 @@ class DoublyLinkedList {
 
 ```
 
+---
+
 ## Full Code
 
 Here is the full code for this post.
@@ -263,9 +269,13 @@ class DoublyLinkedList {
 }
 ```
 
+---
+
 ## Resources
 
 [JavaScript Data Structures - 27 - Doubly Linked List](https://www.youtube.com/watch?v=MZhQB8R33xw&list=PLC3y8-rFHvwg6nsAOfC5Is18KB2DrVOJy&index=27)
+
+---
 
 ## Thank you
 

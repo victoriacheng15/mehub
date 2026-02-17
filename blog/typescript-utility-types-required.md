@@ -15,6 +15,8 @@ type Required<T> = {
 };
 ```
 
+---
+
 ## How does Required work?
 
 In the provided code snippet, we define an object of type `Form` with certain properties marked as optional using the `?` modifier. This means that when updating the `userData` object, it's possible to modify either one or both of these properties, offering flexibility in the update process
@@ -75,6 +77,8 @@ console.log(updatedAllUserData);
 // }
 ```
 
+---
+
 ## Recap
 
 At times, it's beneficial to begin with all properties marked as optional for flexibility. However, in specific situations, you may find the need to enforce that all properties become mandatory. In such cases, you can utilize the built-in 'Required' type
@@ -91,9 +95,13 @@ type Form = {
 type AllRequired = Required<Form>;
 ```
 
+---
+
 ## Resources
 
 - [TS Handbook - Required](https://www.typescriptlang.org/docs/handbook/utility-types.html#requiredtype)
+
+---
 
 ## Thank you
 

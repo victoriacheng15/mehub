@@ -9,6 +9,8 @@ tags: ["python"]
 
 Error handling is essential for writing reliable Python programs. Python offers several ways to manage runtime errors. One of the most powerful methods is using `try`, `except`, `else`, and `finally` blocks. In this post, we'll explore how each of these works with practical examples to help you understand their usage.
 
+---
+
 ## The `try` Block
 
 The `try` block contains the code that might cause an error. If everything runs smoothly, the `except` block is skipped. If an error happens, Python goes straight to the `except` block.
@@ -24,6 +26,8 @@ except ZeroDivisionError:
 ```
 
 In this example, attempting to divide by zero raises a `ZeroDivisionError`, which is caught by the `except` block.
+
+---
 
 ## The `except` Block
 
@@ -55,6 +59,8 @@ Here, if the user inputs a non-numeric value, a `ValueError` is raised, which is
 
 For a full list of exceptions, refer to the Built-in Exceptions section in the Python documentation. I've included a link in the Resources section.
 
+---
+
 ## The `else` Block
 
 The `else` block is optional and runs only if the `try` block succeeds without errors. It’s useful for code that should execute when no errors occur.
@@ -72,6 +78,8 @@ else:
 ```
 
 In this case, because the user entered a valid number, the `else` block is executed.
+
+---
 
 ## The `finally` Block
 
@@ -92,6 +100,8 @@ finally:
 ```
 
 In this scenario, even though the file was not found, the `finally` block ensures that any resources (if opened) are properly closed.
+
+---
 
 ## Combining `try`, `except`, `else`, and `finally`
 
@@ -124,15 +134,21 @@ In this example:
 - The `else` block runs only if no exceptions occur.
 - The `finally` block runs regardless of what happens.
 
+---
+
 ## Recap
 
 Using `try`, `except`, `else`, and `finally` blocks can make your Python code much more robust. By handling exceptions well, you can ensure your programs recover smoothly from errors, making them more reliable and user-friendly.
+
+---
 
 ## Resources
 
 [Error Handling in Python – try, except, else, & finally Explained with Code Examples by fCC](https://www.freecodecamp.org/news/error-handling-in-python-introduction/)
 
 [Built-in Exceptions by Python Docs](https://docs.python.org/3/library/exceptions.html)
+
+---
 
 ## Thank you
 

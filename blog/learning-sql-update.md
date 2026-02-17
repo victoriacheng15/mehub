@@ -65,6 +65,8 @@ SET department = 'HR', name = 'Chris Blue'
 WHERE employee_id = 105;
 ```
 
+---
+
 ## **Common Considerations When Using `UPDATE`**
 
 ### **1. Using the `WHERE` Clause**
@@ -80,13 +82,19 @@ Just like with the `INSERT INTO` statement, constraints apply when using `UPDATE
 - **Unique Constraints**: Avoid making updates that result in duplicate values in columns with unique constraints.
 - **Check Constraints**: Ensure that the new values meet any specific conditions defined for the column.
 
+---
+
 ## Recap
 
 The `UPDATE` statement is essential for modifying existing data in SQL tables. By mastering its syntax and understanding how to use it with conditions and multiple columns, you can efficiently manage your database. Always apply the `WHERE` clause carefully and ensure compliance with constraints to maintain data integrity.
 
+---
+
 ## Resources
 
 [PostgreSQL UPDATE](https://neon.tech/postgresql/postgresql-tutorial/postgresql-update)
+
+---
 
 ## Thank you
 

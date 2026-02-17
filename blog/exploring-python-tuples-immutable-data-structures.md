@@ -9,6 +9,8 @@ tags: ["python"]
 
 A Tuple Python is an ordered collection of elements, much like a list. However, what sets tuples apart is their immutability. Once created, the elements within a tuple cannot be modified, added or removed. This immutability lends tuples a sense of stability and reliability, making them useful in scenarios where data integrity is paramount.
 
+---
+
 ## How Python Tuples Works?
 
 To create a tuple in Python, one simply enclose the elements within parentheses, separated by a commas.
@@ -20,6 +22,8 @@ my_tuple = (1, 2, 3, "a", "b", "c")
 print(my_tuple[0])  # Output: 1
 print(my_tuple[3])  # Output: 'a'
 ```
+
+---
 
 ## Tuple Methods
 
@@ -42,6 +46,8 @@ print(my_tuple.index("a"))
 print(my_tuple.index("b"))
 # Output: 1 (index of first occurrence of "b")
 ```
+
+---
 
 ## Operations on Tuples
 
@@ -67,6 +73,8 @@ print(two) # Output: 2
 print(three) # Output: 3
 ```
 
+---
+
 ## Differences between Tuples and Lists
 
 ### Syntax
@@ -91,6 +99,8 @@ print(three) # Output: 3
 - **Tuples**: Preferred for situations where data integrity and immutability are crucial, such as representing _fixed collections of elements_ (e.g., coordinates, database records).
 - **Lists**: Favored for _dynamic data manipulation_, such as adding, removing, or modifying elements, as they support such operations efficiently.
 
+---
+
 ## Speed Comparison between List and Tuple
 
 ```python
@@ -113,6 +123,8 @@ print(tuple_time)
 ```
 
 This code will output the time taken to create lists and tuples, each repeated 1,000,000 times. By comparing these times, you can observe the difference in speed between creating lists and tuples.
+
+---
 
 ## Thank you
 

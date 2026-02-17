@@ -9,6 +9,8 @@ tags: ["growth"]
 
 Dive into the world of software architecture with "Clean Architecture" by Robert C. Martin. This book is a compass for developers navigating the complexities of building maintainable and scalable systems. Through a framework of principles like separation of concerns and prioritizing architectural integrity, Martin guides readers in crafting software that remains resilient to technological evolution. Discover how to construct systems that stand the test of time and adapt effortlessly to changing requirements.
 
+---
+
 ## Key Points
 
 - **Architecture Independence:** The book advocates for designing software architectures that are independent of frameworks, databases, user interfaces, and external details. This independence ensures that changes to these external components do not cause cascading changes throughout the system.
@@ -20,11 +22,15 @@ Dive into the world of software architecture with "Clean Architecture" by Robert
 - **Testability:** A clean architecture promotes testability by allowing individual components to be tested in isolation. This is achieved through dependency injection and interfaces, making it easier to write unit tests for different parts of the system.
 - **Flexibility and Maintainability:** By adhering to clean architecture principles, systems become more flexible and easier to maintain over time. Changes can be localized to specific components without causing widespread disruptions.
 
+---
+
 ## Recap
 
 Understanding complex architectural concepts is a challenge for me, but designing architecture has key parts. It's important to ensure good performance, think about costs, and plan for maintenance. Knowing what a business aims for helps make architecture that fits well. Also, when thinking about using outside tools, it's smart to realize they affect future upkeep. Picking and using these tools carefully is crucial for keeping the architecture working well over time.
 
 Without a doubt, this is a book that I plan to revisit down the road, once I've gained a deeper understanding of architectural design principles.
+
+---
 
 ## Thank you
 

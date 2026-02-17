@@ -9,6 +9,8 @@ tags: ["linux"]
 
 The `cd` command, an abbreviation for _change directory_, holds a distinguished position as one of the most fundamental and frequently employed commands in the Linux ecosystem. It serves as the primary means for traversing the intricate directory structure of the Linux file system.
 
+---
+
 ## How Does it Work?
 
 ```bash
@@ -62,6 +64,8 @@ cd dev
 ```bash
 cd -
 ```
+
+---
 
 ## Thank you
 

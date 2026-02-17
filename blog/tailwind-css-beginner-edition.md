@@ -19,6 +19,8 @@ I personally love Tailwind CSS for a couple of reasons. First, I don't have to s
 
 Note: I have not learned other frameworks like Bootstrap, Bulma, etc. So I can't really say which one is the best framework. However, there are ALWAYS pros and cons for each framework.
 
+---
+
 ## Prerequisites for learning Tailwind CSS
 
 - Basic HTML
@@ -36,6 +38,8 @@ There are few ways to get start:
   - Add Tailwind CSS in the search bar
 
 Anyway, let's see the differences between them!
+
+---
 
 ## Vanilla CSS vs Tailwind CSS
 
@@ -55,6 +59,8 @@ Tailwind CSS
 ```html
 <section class="w-11/12 bg-green-500">write something awesome here for your website</section>
 ```
+
+---
 
 ## Width
 
@@ -120,6 +126,8 @@ This number system is also applying to padding and margin.
 
 `p-4` is 1rem on all 4 sides. If you want a specific side, it will be `p{t|r|b|l}-{size}`. If you want top and bottom/left and right, it will be `p{x|y}-{size}`. Replace p with m for margin
 
+---
+
 ## Background
 
 The background system contains numbers range from 50 to 900 (light to dark). Tailwind CSS offers a colour system for you to pick, red, green, blue, orange, yellow, etc. This allows you to spend less time on deciding which colour you want for the site. 😃
@@ -151,6 +159,8 @@ The Tailwind way:
 
 Prefer different colour? You only need to replace `blue` with a colour you like from the system.
 
+---
+
 ## Font
 
 For the font, the class name usually start with `text-{something}`, however, there are some that doesn't start with `text`.
@@ -174,6 +184,8 @@ The Tailwind way:
  Hey, Tailwind CSS is awesome
 </h1>
 ```
+
+---
 
 ## Flex/grid
 
@@ -220,6 +232,8 @@ The Tailwind way:
 </section>
 ```
 
+---
+
 ## Media queries
 
 I love this, and it makes it so simple to implement media queries for your websites. Tailwind CSS offers default breakpoints
@@ -254,6 +268,8 @@ The Tailwind way:
 <h1 class="text-xl font-bold text-orange-600 sm:text-blue-600">Hey, Tailwind CSS is awesome</h1>
 ```
 
+---
+
 ## 3 Systems
 
 Tailwind CSS uses certain systems for several properties in general.
@@ -269,6 +285,8 @@ This tends to use for colour like background, box-shadow, and font colour
 - The 0 to 100 system
 
 This is based on the percentage and tends to use for opacity.
+
+---
 
 ## Extras
 
@@ -304,6 +322,8 @@ Another downside, it makes HTML more bloated with all class names. You probably 
 }
 ```
 
+---
+
 ## Resources
 
 As always, if not sure how to write certain properties, you can always look up on the Tailwind CSS docs.
@@ -311,6 +331,8 @@ As always, if not sure how to write certain properties, you can always look up o
 [Tailwind CSS official site](https://tailwindcss.com/)
 
 [Cheat sheet](https://nerdcave.com/tailwind-cheat-sheet)
+
+---
 
 ## Thank you
 

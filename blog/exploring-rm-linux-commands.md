@@ -27,6 +27,8 @@ Delete more than one file:
 rm file1.txt file2.txt
 ```
 
+---
+
 ## Options
 
 | Option            | Description                                                                              |
@@ -39,6 +41,8 @@ rm file1.txt file2.txt
 | --preserve-root   | Ensures that the root directory / is not accidentally removed.                           |
 | --one-file-system | Limits the removal to the current file system, avoiding crossing file system boundaries. |
 
+---
+
 ## Additional Help
 
 You can explore more by using the commands:
@@ -48,6 +52,8 @@ rm --help
 # or
 man rm
 ```
+
+---
 
 ## Thank you
 

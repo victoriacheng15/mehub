@@ -9,6 +9,8 @@ tags: ["backend"]
 
 The `CASE` statement in SQL is a powerful tool that allows you to add conditional logic to your queries. Think of it as a way to create "if-then-else" logic directly within your SQL statements. It’s incredibly useful when you want to categorize data, create custom labels, or perform calculations based on specific conditions. For example, you can use CASE to classify customers into different tiers based on their purchase amounts or to assign a status to orders depending on their delivery dates.
 
+---
+
 ## How Does CASE Work?
 
 The `CASE` statement works by evaluating a series of conditions and returning a value when a condition is met. It’s like a decision-making tool for your data. Once a condition is satisfied, the corresponding result is returned, and the rest of the conditions are skipped. If no conditions are met, you can optionally specify a default value using the ELSE clause.
@@ -53,6 +55,8 @@ FROM orders;
 - For all other amounts, it returns "Large."
 - The result will include a new column called `order_size` with the appropriate label for each order.
 
+---
+
 ## Key Points to Remember
 
 - **Order Matters**: The CASE statement evaluates conditions in the order they are written. Once a condition is met, it stops evaluating further.
@@ -76,6 +80,8 @@ FROM orders
 GROUP BY order_size;
 ```
 
+---
+
 ## Recap
 
 - The CASE statement adds conditional logic to your SQL queries.
@@ -84,9 +90,13 @@ GROUP BY order_size;
 
 By mastering the CASE statement, you can make your SQL queries more dynamic and insightful. Keep practicing, and soon you’ll be using CASE like a pro!
 
+---
+
 ## Resources
 
 [PostgreSQL CASE](https://neon.tech/postgresql/postgresql-tutorial/postgresql-case)
+
+---
 
 ## Thank you
 

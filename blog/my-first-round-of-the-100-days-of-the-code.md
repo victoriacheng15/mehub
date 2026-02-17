@@ -13,6 +13,8 @@ Why did I start this? I saw a lot of people are doing this on Twitter. I figured
 
 Anyway, let's see what I have gained from the round 1
 
+---
+
 ## What Have I learned?
 
 ### JavaScript
@@ -76,6 +78,8 @@ Note: be sure that they are something small that you can complete in 30 minute t
 
 As I mentioned at the beginning, I thought this needs to be consecutive 100 days. But it doesn't have to be! I didn't take any break after day 90. 😂 I could have taken some breaks in between. This is a lesson for me. Definitely to take breaks whenever you need it, otherwise your body will make you to take it.
 
+---
+
 ## Recap
 
 100 Days of Code is worth to do it. You are not only learning or improving the language you decide on. You can also learn how to do a few things.
@@ -87,6 +91,8 @@ As I mentioned at the beginning, I thought this needs to be consecutive 100 days
 - _insert something that you learned on your 100 days of code journey!_
 
 I kept [the so detailed or not so detailed log](https://github.com/victoriacheng15/100daysofcode/blob/main/r1-log.md) on GitHub with resources that I used to learn.
+
+---
 
 ## Thank you
 

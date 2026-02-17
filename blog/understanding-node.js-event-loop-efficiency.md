@@ -9,13 +9,19 @@ tags: ["backend"]
 
 The Node.js event loop is a concept in understanding how Node.js manages asynchronous operations and handles concurrency. Unlike traditional server-side environments that create multiple threads to handle concurrent operations, Node.js operates on a single-threaded event-driven architecture. This design enables Node.js to efficiently handle many concurrent operations without the overhead of creating and managing multiple threads.
 
+---
+
 ## Single-Threaded Event-Driven Architecture
 
 In Node.js, a single thread handles all incoming requests and performs non-blocking I/O operations. This means that instead of waiting for one task to complete before moving on to the next, Node.js initiates tasks and then moves on, allowing other operations to proceed while the initial task is completed in the background. This is particularly useful for I/O-bound tasks such as reading from a file, querying a database, or making HTTP requests.
 
+---
+
 ## Non-Blocking I/O Operations
 
 Non-blocking I/O operations are at the heart of Node.js’s efficiency. When an I/O operation is initiated, Node.js offloads this task to the system's kernel, which can handle multiple operations in parallel. Once the operation is completed, the kernel notifies Node.js, which processes the associated callback. This allows Node.js to handle other tasks while waiting for the I/O operation to finish.
+
+---
 
 ## Examples
 
@@ -58,9 +64,13 @@ A list of asynchronous operations:
 - **Reading from Streams**: Processing data from streams as it becomes available.
 - **Using Promises**: Handling asynchronous operations with Promises.
 
+---
+
 ## Recap
 
 The Node.js event loop, single-threaded architecture, and non-blocking I/O operations work together to handle numerous tasks concurrently. This allows Node.js to efficiently manage operations without the overhead of multiple threads, making it an excellent choice for building high-performance, scalable applications. Understanding these concepts is crucial for writing efficient Node.js code and leveraging its full potential.
+
+---
 
 ## Resources
 
@@ -69,6 +79,8 @@ The Node.js event loop, single-threaded architecture, and non-blocking I/O opera
 [A Complete Visual Guide to Understanding the Node.js Event Loop by builder.io](https://www.builder.io/blog/visual-guide-to-nodejs-event-loop)
 
 [A Guide to the Node.js Event Loop by freeCodeCamp](https://www.freecodecamp.org/news/a-guide-to-the-node-js-event-loop/)
+
+---
 
 ## Thank you
 

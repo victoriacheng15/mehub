@@ -127,15 +127,21 @@ for (const result of results) {
 // 4 4 - David + David
 ```
 
+---
+
 ## Recap
 
 The power of Big O notation lies in its ability to compare different algorithms. By assessing their time complexities, you can choose the most efficient one for your specific problem. This is crucial in optimizing your code for performance, especially when dealing with large datasets—a common challenge in software engineering.
+
+---
 
 ## Resources
 
 [Beginners Guide to Big O Notation](https://www.freecodecamp.org/news/my-first-foray-into-technology-c5b6e83fe8f1/)
 
 [Big-O Notation: A Simple Explanation with Examples](https://betterprogramming.pub/big-o-notation-a-simple-explanation-with-examples-a56347d1daca)
+
+---
 
 ## Thank you
 

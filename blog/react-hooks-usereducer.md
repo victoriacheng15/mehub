@@ -55,6 +55,8 @@ I think the easier way to think is
 
 Highly recommended checkout [switch from MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch) to get familiar with the statement!
 
+---
+
 ## Fetch Data from API
 
 Let's see how you fetch data with `useState` and `useReducer`
@@ -197,12 +199,16 @@ Remember the `updater` function from [React Hooks - useState](https://victoriach
 
 In the end, both `useReducer` and `useState` hooks have their pros and cons. Choose the ones that work well or the best for the app!
 
+---
+
 ## Resources
 
 - [React Docs - useReducer](https://beta.reactjs.org/apis/react/useReducer#usereducer)
 - [MDN docs - switch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
 - [MDN docs - spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - [3 Reasons to useReducer() over useState()](<https://dev.to/spukas/3-reasons-to-usereducer-over-usestate-43ad#:%7E:text=useReducer()%20is%20an%20alternative,understand%20for%20you%20and%20colleagues>)
+
+---
 
 ## Thank you
 

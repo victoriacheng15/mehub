@@ -13,6 +13,8 @@ The **`Pick`** utility type in TypeScript allows you to create a new type by sel
 type Pick<T, K extends keyof T> = { [P in K]: T[P] };
 ```
 
+---
+
 ## How does Pick work?
 
 Imagine you are building a React application, and you want to create a user card component that displays basic information, such as username and email, for users fetched from the **`https://jsonplaceholder.typicode.com/users`** API. Each user card should be clickable, leading to a more detailed page displaying additional information, such as the user's name and address.
@@ -42,6 +44,8 @@ type UserCard = Pick<User, "id" | "username" | "email">;
 
 This type will help us ensure the any data used for rendering the user card component contains these specific properties and display relevant information.
 
+---
+
 ## Recap
 
 Hovering the cursor to `UserCard` after copying and pasting the code below to the editor, you will see the `UserCard` will display the 3 properties, `id`, `username`, and `email`.
@@ -65,9 +69,13 @@ type UserCard = Pick<User, "id" | "username" | "email">;
 
 In general, the **`Pick`** utility type serves as a valuable tool, enabling you to select specific properties tailored to your component's requirements, without the need to repeatedly rewrite those properties. It streamlines the process of cherry-picking essential properties, ensuring code efficiency and avoiding redundant declarations.
 
+---
+
 ## Resources
 
 [TS Handbook - Pick](https://www.typescriptlang.org/docs/handbook/utility-types.html#picktype-keys)
+
+---
 
 ## Thank you
 

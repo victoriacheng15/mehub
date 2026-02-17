@@ -21,6 +21,8 @@ Example:
 uniq file-name
 ```
 
+---
+
 ## Options
 
 | Option | Description                                             |
@@ -30,6 +32,8 @@ uniq file-name
 | -u     | Only print unique lines                                 |
 | -i     | Ignore differences in case when comparing               |
 | -w N   | Compare no more than N characters in a line             |
+
+---
 
 ## Additional Help
 
@@ -41,9 +45,13 @@ uniq --help
 man uniq
 ```
 
+---
+
 ## Resources
 
 [7 Linux Uniq Command Examples to Remove Duplicate Lines from File](https://www.thegeekstuff.com/2013/05/uniq-command-examples/)
+
+---
 
 ## Thank you
 

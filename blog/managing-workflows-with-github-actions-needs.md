@@ -43,9 +43,13 @@ Example:
    # If job1and job2 are completed then do stuff
 ```
 
+---
+
 ## Resources
 
 [GitHub Docs - needs](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds)
+
+---
 
 ## Thank you
 

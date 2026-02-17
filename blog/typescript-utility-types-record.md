@@ -25,6 +25,8 @@ type MyRecord = Record<keys, value>;
 - `Keys`: Represents the keys in the resulting object, which should be string literal types or string union types.
 - `Value`: The type corresponding to values associated with each key.
 
+---
+
 ## How does Record work?
 
 Before we move onto examples, when you see `string | number`, it is a type union. A type union is used to specify that a value can have one of several possible types. In this case of `string | number`, it means that a variable can be either a string or a number.
@@ -70,6 +72,8 @@ const user: User = {
 };
 ```
 
+---
+
 ## Recap
 
 When you copy the provided code snippet below, and then hover your mouse to `User`, `User2`, and `User3` to see what it says on the pop-up window.
@@ -87,9 +91,13 @@ type Address = Record<"street" | "city", string>;
 type User3 = Record<"name" | "age" | "address", string | number | Address>;
 ```
 
+---
+
 ## Resources
 
 - [TS Handbook - Record](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)
+
+---
 
 ## Thank you
 

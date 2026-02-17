@@ -30,6 +30,8 @@ It uses:
 - `gspread` for Google Sheets API  
 - `python-dotenv` for managing credentials and API keys
 
+---
+
 ## 🧪 Version 1: Running Locally
 
 The first version ran on my laptop. Initially, I used it to test and validate how the script extracted article data from different sources. It helped me confirm that the extractor functions were working as expected.
@@ -43,6 +45,8 @@ So I started thinking:
 I managed to get it running as a scheduled task on my desktop using a cron-like tool. It worked — but only when my desktop was powered on at the right time.
 
 That limitation made it clear that local automation wasn’t reliable enough for this job. I needed something that didn’t depend on my computer being awake or online.
+
+---
 
 ## 🍓 Version 2: Raspberry Pi Automation
 
@@ -60,6 +64,8 @@ These issues added up, and I started to ask myself:
 > How can I run this job reliably without having to worry about it?
 
 I just wanted a solution that was dependable, accessible from anywhere, and easy to monitor. That’s what led me to explore GitHub Actions.
+
+---
 
 ## ☁️ Version 3: GitHub Actions
 
@@ -79,6 +85,8 @@ Now the whole system runs automatically in the cloud, fully self-contained withi
 
 It was a simple shift in mindset — from "CI/CD" to "scheduled automation" — but it opened up a whole new use case for GitHub Actions that fits solo projects perfectly.
 
+---
+
 ## 🔄 Infrastructure Evolution: A Timeline
 
 | Phase            | What It Looked Like                            | Pain Points Solved                        |
@@ -86,6 +94,8 @@ It was a simple shift in mindset — from "CI/CD" to "scheduled automation" — 
 | Local laptop     | Manual runs via terminal                        | No automation                              |
 | Raspberry Pi     | Daily cron job + script                         | Some automation, but unstable hardware     |
 | GitHub Actions   | Cloud scheduler + environment-managed secrets   | Fully automated, maintainable from anywhere|
+
+---
 
 ## 💡 Reflections
 
@@ -99,6 +109,8 @@ Along the way, I ended up learning a lot:
 - How to use GitHub Actions beyond CI workflows
 - How to think about making small tools more reliable and easier to maintain
 
+---
+
 ## 📈 What’s Next?
 
 I don’t have a strict roadmap for what’s next — the project is already doing what I need it to do. That said, a few ideas have crossed my mind:
@@ -107,12 +119,16 @@ I don’t have a strict roadmap for what’s next — the project is already doi
 
 For now, I’m happy with the system as it is. I’ll likely continue improving it **organically**, based on real usage and small annoyances I run into over time.
 
+---
+
 ## ✅ TL;DR
 
 - **Project**: `articles-extractor` scrapes basic article info and logs it to Google Sheets
 - **Tools**: Python, BeautifulSoup, gspread, GitHub Actions
 - **Learnings**: Automating with GitHub Actions was a better long-term solution than relying on Raspberry Pi hardware
 - **Takeaway**: Start small, iterate often, and use each roadblock as a learning opportunity
+
+---
 
 ## Thank you
 

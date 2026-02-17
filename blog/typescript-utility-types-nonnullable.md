@@ -13,6 +13,8 @@ The NonNullable is a utility type that creates a type by excluding `null` and `u
 type NonNullable<T> = T & {};
 ```
 
+---
+
 ## How Does NonNullable Work?
 
 ```ts
@@ -67,13 +69,19 @@ If you want to ensure that an array doesn't contain `null` values, you can apply
 type MyArray2 = Array<NonNullable<string | null>>; // string[]
 ```
 
+---
+
 ## Recap
 
 In TypeScript, the `NonNullable` is a utility type that excludes null and undefined from a given type. It’s used to ensure that a variable or property cannot be null or undefined. This applies to simple types, objects, and arrays. However, for objects and arrays, `NonNullable` operates on the type level, not on the property or element level. So, to make object properties or array elements non-nullable, you need to apply `NonNullable` directly to each property or element type.
 
+---
+
 ## Resources
 
 [TS Handbook - NonNullable](https://www.typescriptlang.org/docs/handbook/utility-types.html#nonnullabletype)
+
+---
 
 ## Thank you
 

@@ -9,6 +9,8 @@ tags: ["backend"]
 
 The `INSERT INTO` statement in SQL adds new records to a table. Whether you're updating a database with new information or populating an empty table with initial data, understanding how to use `INSERT INTO` effectively is essential for database management. This statement helps ensure that your data entry process is seamless and organized.
 
+---
+
 ## **Basics of the `INSERT INTO` Syntax**
 
 The `INSERT INTO` statement comes in two main forms: inserting data into all columns and inserting data into specific columns. Each form allows for flexible data entry to suit various requirements.
@@ -73,6 +75,8 @@ VALUES
 
 **Explanation**: This statement inserts three rows at once into the `employees` table, making the process faster and reducing the number of transactions needed.
 
+---
+
 ## Understanding and Handling Constraints
 
 Constraints are rules that are enforced by the database to maintain data integrity. Constraints can be applied to columns or tables, and they can prevent certain actions from being performed. Constraints can be set at the table level or column level.
@@ -84,13 +88,19 @@ Constraints are rules that are enforced by the database to maintain data integri
 - **Check Constraints**: Define specific conditions that each row must meet. If a row violates the condition, the insertion or update fails.
 - **Default Constraints**: Automatically assign a default value to a column when no value is provided during an insert operation.
 
+---
+
 ## Recap
 
 The `INSERT INTO` statement is fundamental for adding new data to your tables. Whether you are inserting a single row or multiple rows, specifying columns or not, mastering this statement helps you efficiently manage database records. Understanding the nuances of `INSERT INTO`, such as handling constraints, using default values, and inserting data from other tables, ensures that your data entry operations are effective and error-free.
 
+---
+
 ## Resources
 
 [PostgreSQL INSERT](https://neon.tech/postgresql/postgresql-tutorial/postgresql-insert)
+
+---
 
 ## Thank you
 

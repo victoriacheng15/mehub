@@ -15,6 +15,8 @@ Python provides two primary methods for sorting: `sored()` and `sort()`. While b
 
 `sort()`, on the other hand, is a method specific to lists. It sorts the _list_ in place, meaning the **original list is modified**, and no new list is created. This method c**annot be used with other iterable types**.
 
+---
+
 ## Examples
 
 Before we dive into the code, both `sorted()` and `sort()` in Python take similar parameters to control how the sorting is performed. Here’s a detailed look at the parameters for each:
@@ -180,9 +182,13 @@ print(dictionary)
 # AttributeError: 'dict' object has no attribute 'sort'
 ```
 
+---
+
 ## Resources
 
 [How to Use sorted() and .sort() in Python by Real Python](https://realpython.com/python-sort/#ordering-values-with-sort)
+
+---
 
 ## Thank you
 

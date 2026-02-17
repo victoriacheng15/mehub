@@ -21,6 +21,8 @@ Compare two files:
 diff file1.txt file2.txt
 ```
 
+---
+
 ## Options
 
 | Option | Description                                     |
@@ -32,6 +34,8 @@ diff file1.txt file2.txt
 | -w     | Ignores all white space differences             |
 | -y     | Outputs a side-by-side comparison               |
 
+---
+
 ## Additional Help
 
 You can explore more by using the commands:
@@ -41,6 +45,8 @@ diff --help
 # or
 man diff
 ```
+
+---
 
 ## Thank you
 

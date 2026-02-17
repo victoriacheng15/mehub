@@ -80,6 +80,8 @@ At this moment, Map is supported in all major browsers based on [caniuse.com](ht
 
 ![which browser can use the Map](https://user-images.githubusercontent.com/35031228/217653562-bd683908-a4dc-4119-9f62-4a5f3ae5f797.png)
 
+---
+
 ## Methods
 
 Let's say you have character data that you need to add to `Map` object.
@@ -196,6 +198,8 @@ console.log("The size of characters data: ", checkMapSize);
 // The size of characters data:  5
 ```
 
+---
+
 ## Iteration over Map
 
 There are 3 ways to iteration over Map: `keys()`, `values()`, and `entries()`
@@ -242,17 +246,23 @@ console.log("entries", entries);
 // }
 ```
 
+---
+
 ## Recap
 
 Map and object are very similar data structures since both of them store key-value pairs. However, one main difference is that the key value in Map can be any type while the key value in the object must be a string or symbol. The Map offers methods like `get()`, `has()` and more to perform create, read, update, and delete operations. Also, three methods such as `key()` to iterate over the Map object.
 
 If you are curious about the performance between Map and object, Zhenghao explains about this in their blog (3rd link in the resources). In short, **Map** is faster than the object, unless small integer and is more memory-efficient. Additionally, MDN docs also mentioned that Map is optimized for the frequent adding and removing of elements while the object is not optimized.
 
+---
+
 ## Resources
 
 - [Map -MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 - [Map -The Modern JavaScript Tutorial](https://javascript.info/map-set#map)
 - [Map vs Object - Zhenghao](https://www.zhenghao.io/posts/object-vs-map)
+
+---
 
 ## Thank you
 

@@ -18,6 +18,8 @@ Both of my blog posts discuss the process of setting up the Redux Toolkit with N
 
 In the context of software development, the foundation might include setting up the necessary infrastructure, such as creating a file structure, defining naming conventions, using any APIs, and more. Once this foundation is in place, it becomes easier to add more functionality and improve the existing codebase.
 
+---
+
 ## AWS Amplify
 
 I discovered AWS Amplify and it is a solution that you can deploy frontend web and mobile apps on the internet. To my surprise that Amplify allows you to deploy a full-stack web app. 😮 It also offers a range of capabilities, such as user authentications, the ability to create either REST or graphQL API, and a database to store the app information.
@@ -45,11 +47,15 @@ In the end, this cannot go wrong with having a good Googling skill, digging into
 - [LinkedIn Post](https://www.linkedin.com/posts/victoriacheng15_coding-softwareengineering-aws-activity-7049031462158831617--4Mb/?utm_source=share&utm_medium=member_desktop)
 - [LinkedIn Post](https://www.linkedin.com/posts/victoriacheng15_coding-softwareengineering-aws-activity-7049754407764201474-jzTn/?utm_source=share&utm_medium=member_desktop)
 
+---
+
 ## Nextjs 13 with app directory
 
 API routes provide a convenient way to interact with a database, by writing `GET/POST/DELETE/PUT` functions separately in a "route" file, each function performs its own operation with the database. This is easier than using if statements in a handler function to check the request method. Keep in mind that I have not worked with the older approach, but if there are many if statements, this could make the function hard to read. With Next.js file-based routing, working with API routes is enjoyable. It's essential to remember that each framework or library has its strengths and weaknesses, and you should choose the one that suits your requirements best.
 
 - [LinkedIn Post](https://www.linkedin.com/posts/victoriacheng15_coding-programming-softwareengineering-activity-7050520948839485440-NyBb/?utm_source=share&utm_medium=member_desktopp)
+
+---
 
 ## Rebuilt rest-countries-api with nextjs
 
@@ -64,6 +70,8 @@ Outline of the 3 apps:
 What did I learn from this after rebuilding the same app 3 times? Starting with the basics and gradually building the features For instance, I began with useContext for state management in the 1st version, then added more hooks using TypeScript in the 2nd version, and finally incorporated Nextjs and Redux Toolkit Query in the 3rd version. This approach allowed me to focus on learning one or a few React hooks at a time, which helped me to gain a better understanding of each one.
 
 - [LinkedIn Post](https://www.linkedin.com/posts/victoriacheng15_coding-programming-softwareengineering-activity-7051590391254446080-RMR1/?utm_source=share&utm_medium=member_desktop)
+
+---
 
 ## Redux Toolkit Query
 
@@ -97,12 +105,16 @@ export const { useGetAllCountriesQuery, useGetOneCountryQuery } = restCountriesA
 - [LinkedIn Post](https://www.linkedin.com/posts/victoriacheng15_coding-programming-softwareengineering-activity-7053762938716766208-x0nR/?utm_source=share&utm_medium=member_desktop)
 - [RTKQ used in rest-countries-api-next](https://github.com/victoriacheng15/rest-countries-api-next)
 
+---
+
 ## SQL Learning
 
 I discovered this site where you can learn or practice SQL query commands through a story about a lost submarine. Using SQL queries to search data tables and uncover what happened to the submarine and crew. If needed, there is a "learn" button to assist with queries.
 
 - [Lost at SQL: The SQL Learning game](https://lost-at-sql.therobinlord.com/)
 - [LinkedIn Post](https://www.linkedin.com/posts/victoriacheng15_coding-programming-softwareengineering-activity-7056270964468170753-_w6x/?utm_source=share&utm_medium=member_desktop)
+
+---
 
 ## Thank you
 

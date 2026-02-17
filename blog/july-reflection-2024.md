@@ -25,6 +25,8 @@ After reading this book, I believe quitting is not a bad thing. It can prevent y
 
 Since returning to school, I discovered some great student perks, including access to Microsoft Azure. I decided to explore what Azure has to offer, starting with the static web app service. I successfully deployed a Vue app to Azure's static web app, finding the setup process straightforward and quick. Microsoft Learn provides an excellent guide on deploying your site through either GitHub or Azure DevOps.
 
+---
+
 ## Books
 
 This month, I've been making time for reading and found two methods that work well for me: reading before sleep and after waking up. At night, reading helps me avoid phone screen time and its blue light. In the morning, it motivates me to get out of bed earlier and start my day with a good book.
@@ -39,6 +41,8 @@ This month, I've been making time for reading and found two methods that work we
   - Explores how unconventional thinking can lead to groundbreaking innovations. Key insights include embracing ideas that initially seem illogical or impractical, leveraging randomness and unpredictability as sources of creativity, and focusing on original, unconventional solutions to solve complex problems. The book emphasizes the value of thinking differently and challenging traditional norms to achieve remarkable success.
 - **The First 20 Hours: How to Learn Anything . . . Fast**
   - Explores rapid skill acquisition techniques to learn new skills efficiently. Key insights include breaking skills into manageable sub-skills, practicing in focused intervals, and emphasizing deliberate practice. The book demonstrates how dedicating just 20 hours can yield significant progress, challenging the myth that mastery requires extensive time. It emphasizes structured practice and persistence to achieve proficiency quickly.
+
+---
 
 ## Thank you
 

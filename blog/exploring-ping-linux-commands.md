@@ -35,6 +35,8 @@ This command sends packets to `google.com` and shows you the response time and
 | `-t` | Set a time-to-live (TTL) value for the packets. |
 | `-v` | Show verbose output for more details. |
 
+---
+
 ## Common Use Cases
 
 - Checking Connectivity to a Website
@@ -95,9 +97,13 @@ ping --help
 man ping
 ```
 
+---
+
 ## Recap
 
 The `ping` command is a handy tool for testing network connectivity and diagnosing issues. Whether you’re checking if a website is online, measuring response times, or troubleshooting your internet connection, `ping` is a must-know command for anyone working with Linux or managing networks. With its simple syntax and useful options, it’s easy to use and provides valuable information about your network’s performance. Happy pinging!
+
+---
 
 ## Thank you
 

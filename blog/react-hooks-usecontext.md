@@ -22,6 +22,8 @@ Disadvantages:
 - Can make it harder to understand the flow of data in a React application, as the context values are not passed down through props and are not visible in the component tree
 - If the context value is changed, all components that use the context will re-render, which could lead the performance issues in large applications
 
+---
+
 ## Props drilling
 
 ![diagram shows a tree of components](https://user-images.githubusercontent.com/35031228/210663654-ce79c986-a04c-4e34-964d-42053f8ec6be.png)
@@ -30,6 +32,8 @@ Props drilling is the process of passing data down through multiple levels of th
 
 While this pattern is manageable in small and simple applications, it can make it difficult to understand the flow of data in a larger application and can make the code harder to maintain. It can also make it harder to reuse components.
 
+---
+
 ## Re-render
 
 One disadvantage of using the useContext hook is that when the context value changes, all the components that use the same context will re-render. This can be a problem in large applications, as it may cause performance issues.
@@ -37,6 +41,8 @@ One disadvantage of using the useContext hook is that when the context value cha
 For example, if you have a large app like a Trello board that uses a single context file to handle user authentication, kanban boards, and more, and a value in the context is changed, ALL the components that use the context will re-render.
 
 To avoid this issue, it is a good idea to break the context down into smaller pieces, such as separate contexts for theme, user authentication, and user data. This way, you can limit the number of components that will re-render when a context value changes and improve the performance of your application.
+
+---
 
 ## Code
 
@@ -164,15 +170,21 @@ export function useTodoContext() {
 
 Additionally, if you don't have the `useTodoContext` defined in the `TodoContext.jsx`, you would need to write `const { data } = useContext(TodoContext)` in the code block above.
 
+---
+
 ## Recap
 
 The useContext hook is useful when you have data that needs to be accessed by multiple components at different levels of the component tree. It can help you avoid props drilling, a pattern where props are passed down through multiple levels of the component tree to reach a lower-level component that needs the data.
 
 By using useContext, you can make your code more concise and maintainable. However, it's important to keep in mind that all components that use the context will re-render when the context value changes. To minimize unnecessary re-renders and improve performance, it's a good idea to keep the context as small as possible. Overall, useContext is a great tool for managing global context in a React application.
 
+---
+
 ## Resources
 
 - [useContext - React Docs (beta)](https://beta.reactjs.org/reference/react/useContext)
+
+---
 
 ## Thank you
 

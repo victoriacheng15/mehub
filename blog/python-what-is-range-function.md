@@ -32,6 +32,8 @@ range(start, stop)
 range(start, stop, step)
 ```
 
+---
+
 ## Examples
 
 ### Using range(stop)
@@ -111,15 +113,21 @@ Index 3: date
 """
 ```
 
+---
+
 ## Recap
 
 The `range()` method in Python is a useful and important tool that makes it easy to iterate over a list of items or values. It is a fundamental component in loop and iteration control because it offers an adaptable method of generating sequences. Whether you need to loop through numbers, access list elements, or create specific numeric patterns, `range()` is your go-to function.
+
+---
 
 ## Resources
 
 [class range(stop) by Python Docs](https://docs.python.org/3/library/functions.html#func-range)
 
 [Python range() Function Example by freeCodeCamp](https://www.freecodecamp.org/news/python-range-function-example/)
+
+---
 
 ## Thank you
 

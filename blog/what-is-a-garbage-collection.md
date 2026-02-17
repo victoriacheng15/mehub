@@ -12,6 +12,8 @@ Managing memory is an essential part of software development. When you write cod
 
 In some programming languages like C and C++, developers must manually allocate and deallocate memory, which can be error-prone and cause issues like memory leaks. However, many modern languages, including JavaScript, automate this process, making it easier for developers to manage memory effectively.
 
+---
+
 ## Understanding Memory Management
 
 Memory management typically involves three steps:
@@ -21,6 +23,8 @@ Memory management typically involves three steps:
 - **Memory Deallocation:** Once the program no longer needs the data, the memory should be released for reuse.
 
 Failure to release memory that’s no longer needed can lead to *memory leaks*, causing your program to consume excessive resources over time.
+
+---
 
 ## Garbage Collection in JavaScript
 
@@ -52,6 +56,8 @@ Modern JavaScript engines optimize garbage collection by using **generational ga
 
 This optimization reduces the overhead of garbage collection by focusing more on memory areas with high turnover.
 
+---
+
 ## Common Memory Management Pitfalls
 
 Even with automated garbage collection, developers can still encounter memory-related issues. Here are some common pitfalls:
@@ -68,9 +74,13 @@ Even with automated garbage collection, developers can still encounter memory-re
 - Use tools like Chrome’s DevTools or Node.js’s `-inspect` flag to monitor memory usage.
 - Set references to `null` when an object is no longer needed.
 
+---
+
 ## Recap
 
 Garbage collection in JavaScript simplifies memory management, allowing developers to focus on writing code without worrying about allocating and freeing memory manually. However, understanding how it works and being mindful of potential pitfalls is essential to ensure your applications run efficiently.
+
+---
 
 ## Resources
 
@@ -81,6 +91,8 @@ Garbage collection in JavaScript simplifies memory management, allowing develope
 [Wiki - Tracing garbage collection (Mark and Sweep)](https://en.wikipedia.org/wiki/Tracing_garbage_collection)
 
 [JavaScript Info Garbage collection](https://javascript.info/garbage-collection)
+
+---
 
 ## Thank you
 

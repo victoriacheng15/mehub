@@ -15,6 +15,8 @@ I have done a couple of things:
 - Started a new project named "hacker-news-next," which is currently in progress. This project is built using Next.js, Chakra UI, and Redux Toolkit.
 - Begun learning Cypress and am excited to write tests with it in the future.
 
+---
+
 ## Hacker News Clone
 
 [View the short video of the project here](https://user-images.githubusercontent.com/35031228/214688643-0e9c531f-bb15-4e22-915a-f0e24dea189c.mp4)
@@ -45,9 +47,13 @@ I particularly like:
 - Built-in middleware for handling async actions using Redux Thunk
 - The ability to write "slice" files that define the state, actions, and reducers
 
+---
+
 ## Cypress
 
 Cypress is a JavaScript testing framework that aims to simplify end-to-end testing and increase its reliability. From what I have read in the documentation, Cypress can also be utilized for unit testing, which involves testing individual pieces of code to ensure they function as intended. One benefit of Cypress is that it has a built-in browser and executes tests in the same environment as the application, which I believe makes it easier to debug and maintain the tests. I am excited to further explore this testing framework with the Hacker News project.
+
+---
 
 ## Thank you
 

@@ -17,6 +17,8 @@ Achieved List for the month:
 - Learned about `Docker`
 - Harvard CS50 - the beginning to week 2
 
+---
+
 ## Blogs
 
 ### Nullish Coalescing Operator
@@ -46,6 +48,8 @@ I deeply dive into the topic of inheritance for object and function and learned 
 
 - [Blog post: Exploring JavaScript Prototype Inheritance](https://victoriacheng15.vercel.app/posts/exploring-javascript-prototype-inheritance)
 
+---
+
 ## What is a URL?
 
 The blog post by the creator of `curl` highlights a funny URL and explains how different systems handle it. However, it doesn't delve into the impact of varying system interpretations of URLs. A talk by Orange Tsai uncovers inconsistencies between different libraries and the resulting security risks. Understanding the parts of a URL, such as a scheme, username, password, host, port, path, query, and fragment, is essential but challenging due to differing interpretations.
@@ -53,6 +57,8 @@ The blog post by the creator of `curl` highlights a funny URL and explains how d
 Inconsistencies can lead to parsing errors, as exemplified by different behaviors in query/username and port/path parsing. Handling URLs securely, especially when dealing with user input, requires careful consideration and architectural safeguards.
 
 - [What Is a URL by Azeem Bande-Ali](https://azeemba.com/posts/what-is-a-url.html)
+
+---
 
 ## System Design
 
@@ -71,12 +77,16 @@ For example, estimating the storage size needed for daily user posts on a platfo
 
 - [LinkedIn Post - Back of the Envelope Estimation](https://www.linkedin.com/posts/victoriacheng15_coding-programming-softwareengineering-activity-7059558550699716608-NvqI?utm_source=share&utm_medium=member_desktop)
 
+---
+
 ## Docker
 
 What is container and container image? It is a lightweight, standalone, executable package of software that includes everything needed to run an application. This package contains underlying OS dependencies, runtime dependencies (e.g. Python runtime), libraries (e.g. SQL Alchemy) and application code.
 
 - [Docker Crash Course for Absolute Beginners [NEW] By TechWorld with Nana](https://www.youtube.com/watch?v=pg19Z8LL06wp)
 - [Complete Docker Course - From BEGINNER to PRO! (Learn Containers) By DevOps Directive](https://www.youtube.com/watch?v=RqTEHSBrYFw)
+
+---
 
 ## Harvard CS50
 
@@ -95,6 +105,8 @@ Links:
 - [Harvard CS50 – Full Computer Science University Course](https://www.youtube.com/watch?v=8mAITcNt710&t=22852s)
 - [Week 1 C note](https://cs50.harvard.edu/x/2023/notes/1/)
 - [Week 2 Arrays note](https://cs50.harvard.edu/x/2023/notes/2/)
+
+---
 
 ## Thank you
 

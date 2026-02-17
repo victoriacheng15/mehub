@@ -9,6 +9,8 @@ tags: ["linux"]
 
 The `mv` command stands for _move_. At its core, `mv` does what its name suggests: it relocats files or directories from one location to another. However, its utility extends far beyond mere relocation, it can do reorganizing, renaming and even merging data within the file system.
 
+---
+
 ## Basic syntax
 
 ```bash
@@ -54,6 +56,8 @@ mv --help
 # or
 man mv
 ```
+
+---
 
 ## Thank you
 

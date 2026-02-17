@@ -16,6 +16,8 @@ Both SSL and TLS encrypt data sent between two devices, like your browser and a 
 
 **In simple terms**, SSL/TLS acts like a secret language two parties use to communicate privately, even in a crowded room.
 
+---
+
 ## Steps of the SSL/TLS Handshake
 
 Before any secure data is exchanged, the client (e.g., your browser) and the server (e.g., a website) must establish a secure connection. This process is called the **SSL/TLS Handshake**. Here's how it works:
@@ -39,6 +41,8 @@ Before any secure data is exchanged, the client (e.g., your browser) and the ser
 - The client and server exchange final messages to confirm the handshake is complete.
 - From this point forward, all communication is encrypted and secure.
 
+---
+
 ## Why is SSL/TLS Important?
 
 Without SSL/TLS, communication on the internet would be vulnerable to:
@@ -53,6 +57,8 @@ Without SSL/TLS, communication on the internet would be vulnerable to:
 - Your personal information remains private, even on public Wi-Fi.
 - Websites gain your trust by providing a secure environment.
 
+---
+
 ## Analogy: Sending a Secret Letter
 
 Imagine you want to send a secret letter to a friend:
@@ -64,6 +70,8 @@ Imagine you want to send a secret letter to a friend:
 
 This process ensures privacy, trust, and security—just like SSL/TLS ensures when you browse the web.
 
+---
+
 ## Recap
 
 - **SSL and TLS** are protocols that secure online communication by encrypting data and verifying identities.
@@ -73,11 +81,15 @@ This process ensures privacy, trust, and security—just like SSL/TLS ensures wh
 
 By ensuring encryption, authentication, and data integrity, SSL/TLS enables a secure and trustworthy internet experience.
 
+---
+
 ## Resources
 
 [AWS -What’s the Difference Between SSL and TLS?](https://aws.amazon.com/compare/the-difference-between-ssl-and-tls/)
 
 [digicert - What is SSL, TLS & HTTPS?](https://www.digicert.com/what-is-ssl-tls-and-https)
+
+---
 
 ## Thank you
 

@@ -15,6 +15,8 @@ The basic syntax of the `alias` command:
 alias new_command="original_command"
 ```
 
+---
+
 ## Temporary alias
 
 A temporary alias is designed for short-term use within the current session. It serves as a quick, one-time shortcut for specific commands. However, please note that the alias is only available for the duration of the open terminal session and is lost when the terminal is closed.
@@ -26,6 +28,8 @@ alias night='echo "good night"'
 ```
 
 Now, you can run the `night` command directly in your terminal and this alias will be active only for the current session, providing a convenient shortcut for the duration of your terminal use.
+
+---
 
 ## Permanent alias
 
@@ -51,11 +55,15 @@ source ~/.zshrc
 
 Ensure that you adapt the file path according to your specific shell. These modifications will make your chosen alias available every time you launch a new terminal session.
 
+---
+
 ## Recap
 
 The Linux `alias` command transforms command-line tasks by simplifying complex or common instructions through efficient shortcuts. For instance, instead of typing the `clear` command to clear the terminal, you can create an alias like `c`. These aliases persist across sessions, ensuring lasting efficiency. Just add them to shell configuration files like `~/.bashrc` or `~/.zshrc`. In essence, `alias` streamlines and personalizes your Linux terminal experience.
 
 I've added a couple of links below that lead to fantastic and practical alias ideas for you to explore. 😎
+
+---
 
 ## Resources
 
@@ -64,6 +72,8 @@ I've added a couple of links below that lead to fantastic and practical alias id
 [Master The Command Line With Useful Bash Aliases In Linux And Unix](https://ostechnix.com/useful-bash-aliases/)
 
 [awesome-bash-alias](https://vikaskyadav.github.io/awesome-bash-alias/)
+
+---
 
 ## Thank you
 

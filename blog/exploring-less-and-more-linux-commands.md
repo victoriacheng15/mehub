@@ -25,6 +25,8 @@ less:
 less [option] [file]
 ```
 
+---
+
 ## Options
 
 - Options for `more`
@@ -45,6 +47,8 @@ less [option] [file]
 | -X     | Disable termcap init/deinit codes                        |
 | -F     | Automatically exit if the entire file fits on one screen |
 
+---
+
 ## Additional Help
 
 You can explore more by using the commands:
@@ -60,6 +64,8 @@ less --help
 # or
 man less
 ```
+
+---
 
 ## Thank you
 

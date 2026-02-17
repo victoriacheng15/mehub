@@ -43,6 +43,8 @@ DELETE FROM employees
 WHERE department = 'Marketing';
 ```
 
+---
+
 ## Common Considerations When Using `DELETE`
 
 ### **1. The Importance of the `WHERE` Clause**
@@ -83,13 +85,19 @@ WHERE department = 'HR';
 
 Once you're confident, you can use the same condition in your `DELETE` statement.
 
+---
+
 ## Recap
 
 The `DELETE` statement is a powerful tool for removing records from a table in SQL. Whether you're deleting all rows or targeting specific entries, using the `DELETE` clause effectively helps maintain a clean and organized database. Always apply the `WHERE` clause carefully, test your conditions, and be mindful of constraints to avoid unintended data loss.
 
+---
+
 ## Resources
 
 [PostgreSQL DELETE](https://neon.tech/postgresql/postgresql-tutorial/postgresql-delete)
+
+---
 
 ## Thank you
 
