@@ -9,6 +9,8 @@ tags: ["dsa"]
 
 A hash table, or a hash map, is a data structure that maps keys to values. It allows for fast data retrieval based on the key, making it an excellent choice for applications where quick lookups are essential. Unlike other data structures like arrays or linked lists, hash tables can perform operations such as insertion, deletion, and search in an average time complexity of O(1), meaning they can execute these operations in constant time regardless of the number of elements in the table.
 
+---
+
 ## How Do Hash Tables Work?
 
 The magic behind hash tables lies in the use of a hash function. Here's a step-by-step breakdown of how hash tables work:
@@ -19,6 +21,8 @@ The magic behind hash tables lies in the use of a hash function. Here's a step-b
    - **Chaining**: Stores collide items in a linked list at the index.
    - **Open Addressing**: Finds the next available slot using methods like linear or quadratic probing, or double hashing.
 4. **Insertion and Retrieval**: For insertion, the hash function finds the index to store the value. For retrieval, the same function finds the index for fast access.
+
+---
 
 ## Why Use Hash Tables?
 
@@ -35,9 +39,13 @@ Hash tables are versatile and can be used in various scenarios, including:
 - **Symbol Tables**: In compilers and interpreters for fast lookup of variable and function names.
 - **Sets**: To implement sets that require fast membership testing.
 
+---
+
 ## Recap
 
 A hash table maps keys to values, *allowing fast data retrieval with average operations in O(1) time*. It uses a hash function to convert keys into array indices. If collisions occur (two keys map to the same index), techniques like chaining (linked lists) or open addressing (finding another slot) are used. Hash tables are speedy, flexible, and efficient, making them ideal for databases, caches, symbol tables, and sets.
+
+---
 
 ## Resources
 
@@ -46,6 +54,8 @@ A hash table maps keys to values, *allowing fast data retrieval with average ope
 [HashMap Data Structure by The Odin Project](https://www.theodinproject.com/lessons/javascript-hashmap-data-structure)
 
 [Data Structure - Hash Tables by HackerEarth](https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/)
+
+---
 
 ## Thank you
 

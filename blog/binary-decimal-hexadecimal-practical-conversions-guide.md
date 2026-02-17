@@ -41,6 +41,8 @@ This table (Source: Educative) shows the equivalent values in decimal (our every
 | 14 | 1110 | E |
 | 15 | 1111 | F |
 
+---
+
 ## Numerical Conversion
 
 ### Decimal to Binary process
@@ -118,17 +120,23 @@ A step-by-step breakdown on converting **3F** to binary:
 > Bonus Tip: The table acts as a cheat sheet for binary, decimal, and hexadecimal conversion. No manual
 calculation is needed!
 
+---
+
 ## Alternative Way - Use Calculator
 
 Open your calculator app and look for a "programmer" mode. This mode usually lets you see numbers in different formats, like decimal, binary, and hexadecimal.
 
 [![Link to the video on How to convert numbers between bin, dec, and hex with calculator](https://img.youtube.com/vi/01CjNZavt2w/0.jpg)](https://youtube.com/shorts/01CjNZavt2w)
 
+---
+
 ## Recap
 
 Computers speak in numbers, but not the kind you're used to. They rely on three main systems: decimal (0-9, our everyday numbers), binary (0s and 1s!), and hexadecimal (a mix of 0-9 and A-F). Binary is crucial because electronics use on (1) and off (0) states. Hexadecimal helps us write long binary strings in a more human-readable way.
 
 By the way, if you're curious about how binary numbers work and how they represent decimals, there's a great website in the resources section (second link) that helped me understand it better. Check it out!
+
+---
 
 ## Resources
 
@@ -137,6 +145,8 @@ By the way, if you're curious about how binary numbers work and how they represe
 [Binary Number System](https://www.mathsisfun.com/binary-number-system.html)
 
 [How Do Numerical Conversions Work in Computer Systems? Explained With Examples](https://www.freecodecamp.org/news/how-do-numerical-conversions-work/)
+
+---
 
 ## Thank you
 

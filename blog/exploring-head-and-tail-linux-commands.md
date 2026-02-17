@@ -25,6 +25,8 @@ tail:
 tail [option] [file]
 ```
 
+---
+
 ## Options
 
 - Options for `head`
@@ -46,6 +48,8 @@ tail [option] [file]
 | -q, --quiet, --silent | Never print headers giving file names |
 | -v, --verbose | Always print headers giving file names |
 
+---
+
 ## Additional Help
 
 You can explore more by using the commands:
@@ -61,6 +65,8 @@ tail --help
 # or
 man tail
 ```
+
+---
 
 ## Thank you
 

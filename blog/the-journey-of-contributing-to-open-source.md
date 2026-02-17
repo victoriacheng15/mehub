@@ -28,6 +28,8 @@ There is a Chinese saying _三個臭皮匠,賽過諸葛亮_. In English, it is _
 
 It is possible that you think of something that you never thought before, like **your light bulb is on** moment.
 
+---
+
 ## What do you need to know before you start?
 
 It boils down to what area you are trying to contribute to. However, in general, you should at least know git for version control system and GitHub for fork, pull request, etc. Keep in mind, you don't need to be a pro of git and GitHub.
@@ -44,6 +46,8 @@ Resources to start:
 - _As usual, Google is your best friend, and you can find more with the search!_
 
 Note: EddieHub Link is in the video description.
+
+---
 
 ## My journey
 
@@ -72,6 +76,8 @@ By contributing to open source, you get to:
 - Work with git and GitHub more
 - Have fun!
 - _Something you would like to add?_
+
+---
 
 ## Thank you
 

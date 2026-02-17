@@ -9,6 +9,8 @@ tags: ["growth"]
 
 Clean Code: A Handbook of Agile Software Craftsmanship is a book written by Robert C. Martin that emphasizes the importance of writing clean, readable, and maintainable code. It serves as a guide for software engineers to improve their coding skills and create high-quality software.
 
+---
+
 ## How to write clean code…?
 
 1. Meaningful and Descriptive Names:
@@ -39,15 +41,21 @@ Clean Code: A Handbook of Agile Software Craftsmanship is a book written by Robe
    - Understanding code as an evolving entity that requires constant improvement.
    - Encouragement to continuously refactor code to improve its structure, readability, and maintainability.
 
+---
+
 ## Recap
 
 This book is a reminder on writing clean, readable, maintainable code. It emphasizes choosing meaningful names and keeping functions small for better understanding. Small functions improve modularity and reusability, making code easier to comprehend, modify, and maintain.
 
 Always keep in mind that the codebase you are working on will be read not only by you but also by other developers in the future. This includes potential maintainers or colleagues who may need to under or modify the code.
 
+---
+
 ## Resources
 
 - [Clean Code: A Handbook of Agile Software Craftsmanship](https://www.amazon.ca/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
+
+---
 
 ## Thank you
 

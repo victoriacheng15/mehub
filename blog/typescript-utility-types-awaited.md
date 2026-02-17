@@ -11,6 +11,8 @@ tags: ["typescript"]
 
 The term `Awaited` refers to one of the utility types in TypeScript. It is used to extract the type of value that a promise will eventually return, rather than the promise object itself. This utility type allows us to avoid using the `.then()` method repeatedly and instead await the promise directly.
 
+---
+
 ## Let's see how Awaited works
 
 Let's fetch the users data from the `JSONPlaceholder`.
@@ -64,6 +66,8 @@ This line defines the `Users` type by using the `Awaited` utility type directly 
 
 In both cases, the `Users` type represents an array of `User` objects. The `typeof` keyword works similarly to how you would retrieve the type of a variable in JavaScript. In this context, it returns the type of `getUsers`, which is `User[]`.
 
+---
+
 ## Extra
 
 A couple of examples that I was playing around with `Awaited`, `Promise`, and `ReturnType` to declare types for each.
@@ -78,6 +82,8 @@ type ShowBooleanAndNumber = Awaited<boolean | Promise<number>>;
 type ShowPromiseType = Awaited<ReturnType<() => Promise<number>>>;
 // type ShowPromiseType = number
 ```
+
+---
 
 ## Example Code
 
@@ -102,6 +108,8 @@ type Users = Awaited<ReturnType<typeof getUsers>>;
 })();
 ```
 
+---
+
 ## Recap
 
 ```ts
@@ -111,10 +119,14 @@ type MyAwaited = Awaited<MyPromise>;
 
 To keep this simple, `Promise` will return the promise object of whichever type you define, while `Awaited` will extract the type from the `Promise`. You can check this by hovering the mouse on `MyPromise` and `MyAwaited`. You would see the pop-up window saying `type MyPromise = Promise<number>` and `type MyAwaited = number` respectively.
 
+---
+
 ## Resources
 
 - [TS Handbook - Awaited Utility Type](https://www.typescriptlang.org/docs/handbook/utility-types.html#awaitedtype)
 - [TS Handbook - ReturnType Utility Type](https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype)
+
+---
 
 ## Thank you
 

@@ -16,6 +16,8 @@ JavaScript enthusiasts, rejoice! The latest iteration, ES2023, has recently grac
 
 ES2023 brings a noteworthy upgrade with the introduction of four array methods tailored to simplify your coding endeavors. These methods offer a straightforward approach to generating copies of arrays without altering the original! Before this enhancement, developers typically relied on the spread operator or `Array.from()` to duplicate an array before making modifications.
 
+---
+
 ## Array.prototype.toReversed()
 
 The `toReversed()` method performs a two-step operation on the original array. First, it creates a copy of the array, and then it reverses the order of the elements. The result is a new array that retains the reversed sequence, all without modifying the original array.
@@ -26,6 +28,8 @@ console.log({ arr, toReversed });
 // arr: [ 1, 2, 3, 4, 5 ]
 // toReversed: [ 5, 4, 3, 2, 1 ]
 ```
+
+---
 
 ## Array.prototype.toSorted()
 
@@ -38,6 +42,8 @@ console.log({ arr, toSorted });
 // toSorted: [ 5, 4, 3, 2, 1 ]
 ```
 
+---
+
 ## Array.prototype.toSpliced()
 
 With the `toSpliced()` method, you can create a new array by splicing out a specified range of elements from the original array. Here, elements at positions 1 and 2 are removed, resulting in a modified array, while the original array remains unchanged.
@@ -48,6 +54,8 @@ console.log({ arr, toSpliced });
 // arr: [ 1, 2, 3, 4, 5 ]
 // toSpliced: [ 1, 4, 5 ]
 ```
+
+---
 
 ## Array.prototype.with()
 
@@ -60,11 +68,15 @@ console.log({ arr, toWith });
 // toWith: [ 1, 2, 6, 4, 5 ]
 ```
 
+---
+
 ## Recap
 
 These methods offer similar functionality to existing methods like `reverse()`, `sort()`, and `splice()`, but with a key difference: they create a new copy of the original array and modify the copy instead of altering the original itself. This means you can safely sort, reverse, and manipulate the data without any unwanted side effects!
 
 At the time of posting, these methods should work with most browsers, if unsure, double-check at [Can I use](https://caniuse.com/) to be sure.
+
+---
 
 ## Resources
 
@@ -77,6 +89,8 @@ At the time of posting, these methods should work with most browsers, if unsure,
 [MDN Docs - toSpliced()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced)
 
 [MDN Docs - with()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with)
+
+---
 
 ## Thank you
 

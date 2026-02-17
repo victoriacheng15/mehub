@@ -11,6 +11,8 @@ tags: ["growth"]
 
 Overall, this book offers practical guidance on creating an effective personal knowledge management system, allowing individuals to leverage their digital tools to become more productive, creative, and better informed. It is a valuable resource for anyone seeking to optimize their approach to managing information in the digital age.
 
+---
+
 ## Main ideas
 
 1. **Information Overload**: The book addresses the problem of information overload in the digital age, where we are constantly bombarded with vast amounts of data and content. Managing this flood of information is crucial for personal productivity and creativity.
@@ -19,15 +21,21 @@ Overall, this book offers practical guidance on creating an effective personal k
 4. **Progressive Summarization**: Tiago Forte introduces the concept of "progressive summarization," a technique that involves layering information and gradually refining it to extract the most important insights. This helps in retaining critical knowledge in a more digestible format.
 5. **Information Consumption and Production**: The book encourages individuals to balance their information consumption with information production. Instead of being passive consumers, readers are encouraged to engage with the material they consume, interact with it, and produce their own insights and ideas.
 
+---
+
 ## Recap
 
 This book was the inspiration behind the creation of my Notion planner. It offers valuable insights and guidance on how to establish a system for storing and organizing knowledge, employing the progressive summarization technique. This approach not only aids me in my personal learning journey but also enables me to easily refer back to my notes whenever I need them.
 
 I particularly appreciate the concept of "progressive summarization" as it enables me to organize information effectively. I achieve this by highlighting entire paragraphs or sentences and then further breaking down the content into a few key insights by using bold or underlining for specific texts. This approach significantly enhances the information's digestibility for future use.
 
+---
+
 ## Resources
 
 [The Building a Second Brain Book](https://www.buildingasecondbrain.com/book)
+
+---
 
 ## Thank you
 

@@ -9,6 +9,8 @@ tags: ["growth"]
 
 "The Obstacle Is the Way" by Ryan Holiday draws on timeless Stoic wisdom, urging us to embrace obstacles (Perception), take decisive action (Action), and cultivate an unyielding will (Will). By perceiving challenges as opportunities for growth and learning, the book illuminates a transformative path towards resilience, unlocking our boundless potential, and empowering us to not only survive but thrive amidst life's trials and tribulations.
 
+---
+
 ## Main Ideas
 
 - Embrace the obstacle: Instead of avoiding challenges, Holiday encourages readers to confront them directly. He argues that the most successful individuals throughout history have used their adversities to fuel their accomplishments.
@@ -19,6 +21,8 @@ tags: ["growth"]
 - Persistence and resilience: Holiday emphasizes the value of persistence and perseverance in the face of challenges. He believes that setbacks are an essential part of any journey toward greatness.
 - The triad: The book breaks down the process of overcoming obstacles into three steps: Perception, Action, and Will. By applying these principles in unison, individuals can navigate through challenges effectively.
 
+---
+
 ## Recap
 
 This book strongly advocates seeing the bigger picture instead of fixating on narrow perspectives. Just because something is right in front of you doesn't mean it's the whole truth; there may be more to consider beyond the surface. Embrace a broader outlook to uncover hidden opportunities and challenges that lie beyond immediate appearances.
@@ -27,9 +31,13 @@ I appreciate how the author highlighted the concept of turning obstacles into op
 
 In essence, the key takeaway is to avoid fixating solely on what's immediately in front of you, but rather, take the time to explore what lies beneath the surface. Look beyond the obvious to gain deeper insights and understanding.
 
+---
+
 ## Rescores
 
 [Ryan Holiday Home page](https://ryanholiday.net/)
+
+---
 
 ## Thank you
 

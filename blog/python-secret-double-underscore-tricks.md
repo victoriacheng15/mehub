@@ -9,6 +9,8 @@ tags: ["python"]
 
 If you've used Python classes, you know `__init__` - the method that creates objects. But Python has many more *dunder* (double underscore) methods that control how objects behave. Let's explore the most useful ones.
 
+---
+
 ## Building the Class: Dunder by Dunder
 
 ### **`__init__`: The Foundation**
@@ -145,6 +147,8 @@ print(len(morning_coffee)) # 5
 print(len(med_coffee)) # 6
 ```
 
+---
+
 ## Recap
 
 We built a `Coffee` class step by step using special Python methods:
@@ -156,6 +160,8 @@ We built a `Coffee` class step by step using special Python methods:
 - `__len__` - Lets you check the object's size with len()
 
 These special methods (called "dunder" methods because of their double underscores) make your objects work naturally with Python's built-in functions. Each one adds useful behavior while keeping everything working together smoothly.
+
+---
 
 ## Thank you
 

@@ -26,6 +26,8 @@ Have you noticed that there is only one `2` in the array after `console.log`? Th
 
 Keep in mind, lower and upper case letters are NOT the same. `'A' === 'a'` will return false in browser console.
 
+---
+
 ## Codewars problem
 
 An isogram is a word that has _no repeating letters_, consecutive or non-consecutive.
@@ -94,6 +96,8 @@ Make sure to convert them to lower case first and then remove any duplications. 
 
 As you can see, both methods work. The first method writes more lines of code, while the second method is one-line!
 
+---
+
 ## Resources
 
 [MDN - Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
@@ -101,6 +105,8 @@ As you can see, both methods work. The first method writes more lines of code, w
 [MDN - Set() constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set)
 
 [MDN - Set.prototype.size](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/size)
+
+---
 
 ## Thank you
 

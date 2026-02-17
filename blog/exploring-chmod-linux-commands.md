@@ -23,6 +23,8 @@ chmod 755 script.sh
 
 This command sets the permissions of `script.sh` so that the owner can read, write, and execute the file, while the group and others can only read and execute it.
 
+---
+
 ## Options
 
 | Option      | **Description**                                                    |
@@ -31,6 +33,8 @@ This command sets the permissions of `script.sh` so that the owner can read, wri
 | -v          | Show a verbose output, listing each file as the permissions change |
 | -c          | Only change files that actually need to be changed and report them |
 | --reference | Change permissions to match another file                           |
+
+---
 
 ## Common Use Cases
 
@@ -84,9 +88,13 @@ chmod --help
 man chmod
 ```
 
+---
+
 ## Recap
 
 The `chmod` command is a crucial tool for managing file permissions in Linux. By using it wisely, you can control access to your files and ensure that only the right users have the appropriate permissions. Understanding how to use `chmod` is essential for anyone working with Linux systems!
+
+---
 
 ## Thank you
 

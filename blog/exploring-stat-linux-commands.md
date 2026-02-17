@@ -62,6 +62,8 @@ If you want to learn more about the `stat` command and its options directly in t
 man stat
 ```
 
+---
+
 ## Thank you
 
 Thank you for your time and for reading this!

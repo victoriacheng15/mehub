@@ -23,6 +23,8 @@ It’s also important to stay positive along the way. Sometimes things won’t g
 
 If you’re unsure or uncertain about what to do in the future, I think this book would be a great resource for you. Take some time to sit down and think about what you truly want to achieve. Clarifying your goals can help guide your path and give you the direction you need.
 
+---
+
 ## Books I’ve Read
 
 - **The Millionaire Fastlane**
@@ -31,6 +33,8 @@ If you’re unsure or uncertain about what to do in the future, I think this boo
   - David Epstein explores the advantages of being a generalist in a society that often values specialization. He argues that diverse experiences and interdisciplinary knowledge lead to greater creativity, problem-solving, and adaptability. Through various examples—from sports to business—Epstein shows how breadth of experience can lead to success in complex, unpredictable environments where specialists may struggle.
 - **The Strangest Secret: How to Live the Life You Desire**
   - Earl Nightingale's classic emphasizes the power of thought and goal-setting. His key message is that "we become what we think about," encouraging readers to define their goals clearly. Nightingale stresses that success is a journey, not a destination, and highlights the importance of self-discipline, gratitude, and maintaining a positive mindset. By focusing on goals and thinking positively, anyone can achieve the life they desire.
+
+---
 
 ## Thank you
 

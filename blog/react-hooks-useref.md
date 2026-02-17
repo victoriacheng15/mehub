@@ -19,6 +19,8 @@ const counts = useRef(0);
 const myValue = useRef(null);
 ```
 
+---
+
 ## The difference between with and without useRef
 
 <video src="https://github.com/victoriacheng15/victoriacheng15.vercel.app/assets/35031228/816a6e48-557f-45c8-bbc2-0f57ca007080" controls="controls" style="max-width: 730px;">
@@ -26,6 +28,8 @@ const myValue = useRef(null);
 
 - without useRef - when clicking the button, the console will show 2 messages, `You clicked x times!` and `re-rendering`
 - with useRef - - when clicking the button, the console will show 1 message, `You clicked x times!` only
+
+---
 
 ## Example code
 
@@ -59,14 +63,20 @@ export default function App() {
 }
 ```
 
+---
+
 ## Recap
 
 The `useRef` hook is a tool in React for managing mutable values and interacting with the DOM within functional components. It shares similarities with `useCallback` and `useMemo` in that it prevents unnecessary re-renders, contributing to better performance.
+
+---
 
 ## Resources
 
 - [useRef - React Docs](https://react.dev/reference/react/useRef)
 - [BUILD a React Timer with useRef | React Hooks useRef Tutorial by Dave Gray](https://www.youtube.com/watch?v=s6UAuFzL308)
+
+---
 
 ## Thank you
 

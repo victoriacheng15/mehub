@@ -50,6 +50,8 @@ function addValue() {
 button.addEventListener("click", addValue);
 ```
 
+---
+
 ## useState with different types
 
 You can use for all types
@@ -58,6 +60,8 @@ You can use for all types
 - Boolean: `const [mode, setMode] = useState(false)`
 - Array: `const [array, setArray] = useState([])`
 - Object: `const [object, setObject] = useState([{ name: "Victoria", number: 123  }])`
+
+---
 
 ## Bonus: TypeScript
 
@@ -74,6 +78,8 @@ When you are on the editor, hover the mouse to the array or object or any variab
 ![image](https://user-images.githubusercontent.com/35031228/206090385-e1137ca8-cea1-493b-860e-7162330fa70d.png)
 
 If type is to be determined, you should let TS know what type of this variable will be in the future.
+
+---
 
 ## Update or change states
 
@@ -94,6 +100,8 @@ const copied = { ...object };
 
 // update the object
 ```
+
+---
 
 ## Something strange...? Maybe?
 
@@ -146,6 +154,8 @@ Notice, it adds 3 after clicked `add 3` with `setCount(prev => prev + 1)`
 According to the docs, it is called `Updater` function (I didn't know the name for this). It takes the **previous count** 5 based on the GIF example and then return **next value**, which is 8.
 
 Do you need to always write updater function? Maybe? But, I would say depend on the case, if you need to write updater in setState, then go ahead. I do not know which one is the best/better practice. I personally don't see any harms to write `setState` with or without the updater function.
+
+---
 
 ## Personal story with updater function
 
@@ -203,11 +213,15 @@ This time, it works flawlessly!
 
 **Keep the updater function in your mind. If a state **is behaving **strangely**, you** may need to write it!**
 
+---
+
 ## Resources
 
 - [React docs - useState](https://beta.reactjs.org/apis/react/useState)
 - [React docs - Updating Arrays in state](https://beta.reactjs.org/learn/updating-arrays-in-state)
 - [React docs - Updating Objects in State](https://beta.reactjs.org/learn/updating-objects-in-state)
+
+---
 
 ## Thank you
 

@@ -9,6 +9,8 @@ tags: ["backend"]
 
 The `GROUP BY` clause groups rows that have the same values in specified columns into summary rows. It’s often used with aggregate functions like `COUNT`, `SUM`, `AVG`, `MIN`, and `MAX` to perform calculations on each group. For example, you can use `GROUP BY` to calculate the total sales for each product category or count the number of employees in each department.
 
+---
+
 ## How Does GROUP BY Work?
 
 `GROUP BY` works by combining rows with matching values in the specified columns. Once the rows are grouped, aggregate functions are applied to each group to produce a single result per group.
@@ -42,6 +44,8 @@ GROUP BY customer_id;
 - The `SUM` function calculates the total `order_amount` for each customer.
 - The result will show one row per customer, with their total order amount.
 
+---
+
 ## Key Points to Remember
 
 1. **Aggregate Functions**:
@@ -51,6 +55,8 @@ GROUP BY customer_id;
 3. **Order of Execution**:
     - `GROUP BY` is executed after the `WHERE` clause (if present) and before the `HAVING` clause.
 
+---
+
 ## Recap
 
 - **GROUP BY** groups rows with the same values in specified columns.
@@ -59,9 +65,13 @@ GROUP BY customer_id;
 
 By mastering `GROUP BY`, you can efficiently summarize and analyze data in SQL. Keep this guide handy for quick reference!
 
+---
+
 ## Resources
 
 [PostgreSQL GROUP BY](https://neon.tech/postgresql/postgresql-tutorial/postgresql-group-by)
+
+---
 
 ## Thank you
 

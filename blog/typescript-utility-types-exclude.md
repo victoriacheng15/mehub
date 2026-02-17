@@ -13,6 +13,8 @@ The `Exclude` utility type in TypeScript is designed to work with union types, m
 type Exclude<T, U> = T extends U ? never : T;
 ```
 
+---
+
 ## How Does Exclude Work?
 
 - Example 1:
@@ -51,13 +53,19 @@ type Fruit =
 type FruitsWithoutApple = Exclude<Fruit, { type: "apple" }>;
 ```
 
+---
+
 ## Recap
 
 The `Exclude` utility type empowers you to precisely customize your TypeScript types according to your specific requirements, thereby boosting both the safety and adaptability of your code. By excluding specific values or types from a union, you can craft type definitions that align perfectly with your intended use cases. This fine-tuning of types enhances the robustness of your TypeScript code while allowing for increased flexibility in handling different scenarios.
 
+---
+
 ## Resources
 
 [TS Handbook - Exclude](https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers)
+
+---
 
 ## Thank you
 

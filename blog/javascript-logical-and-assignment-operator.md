@@ -32,6 +32,8 @@ x = 0;
 
 If x is considered false, then the x value will stay 0, which is its original value.
 
+---
+
 ## Examples
 
 - Example 1:
@@ -93,15 +95,21 @@ console.log(person);
 */
 ```
 
+---
+
 ## Recap
 
 You can make use of `Boolean(input)` to ascertain its truthiness. If the left operand is deemed true, the variable will adopt the value of the right operand. It's worth noting that even empty arrays and objects are evaluated as true; this is why the variable will consistently incorporate the value from the right operands.
+
+---
 
 ## Resources
 
 [MDN Docs - Logical AND assignment (&&=)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
 
 [What are logical assignment operators in JavaScript? - The &&= operator](https://www.educative.io/answers/what-are-logical-assignment-operators-in-javascript)
+
+---
 
 ## Thank you
 

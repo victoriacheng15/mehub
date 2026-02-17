@@ -15,6 +15,8 @@ But why?
 
 - **_Better SEO rank:_** Google will give a higher score on your responsive site. See [this blog](https://www.jezweb.com.au/why-does-google-prefer-mobile-optimised-websites/) for more details.
 
+---
+
 ## How do make your site responsive?
 
 ### Use percentage for container width
@@ -114,6 +116,8 @@ e.g.
  }
 }
 ```
+
+---
 
 ## Recap
 

@@ -9,6 +9,8 @@ tags: ["linux"]
 
 At irs core, _ls_ stands for list. It is a command-line utility that reveals the contents of a directory. Whether you’re exploring the file system, managing files, or simpley curious abut what’s in a folder, `ls` is your go-to tool. Let’s delve deeper into its functionality and explore some of its options
 
+---
+
 ## Understanding the Basics
 
 When you execute the `ls` command without any options, it promptly displays a list of files and directories in the current working directory. This straightforward function makes it incredibly useful for everyday tasks on the command line.
@@ -16,6 +18,8 @@ When you execute the `ls` command without any options, it promptly displays a li
 ```bash
 ls
 ```
+
+---
 
 ## Options
 
@@ -86,6 +90,8 @@ man ls
 ```
 
 These commands provide comprehensive documentation and explanations for each option
+
+---
 
 ## Thank you
 

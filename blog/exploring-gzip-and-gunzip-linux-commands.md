@@ -23,6 +23,8 @@ gzip [option] [file]
 gunzip [option] [file]
 ```
 
+---
+
 ## Options
 
 - Options for `gzip`
@@ -43,6 +45,8 @@ gunzip [option] [file]
 | -l     | List the contents of the compressed file                                       |
 | -t     | Test the integrity of the compressed file                                      |
 
+---
+
 ## Additional Help
 
 You can explore more by using the commands:
@@ -58,6 +62,8 @@ gunzip --help
 # or
 man gunzip
 ```
+
+---
 
 ## Thank you
 

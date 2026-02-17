@@ -21,6 +21,8 @@ Example:
 cat file-name
 ```
 
+---
+
 ## Options
 
 | Option                 | Description                                                                                              |
@@ -33,6 +35,8 @@ cat file-name
 | -T, --show-tabs        | Display TAB characters as ^I                                                                             |
 | -v, --show-nonprinting | Use ^ and M- notation, except for LFD and TAB characters                                                 |
 
+---
+
 ## Additional Help
 
 You can explore more by using the commands:
@@ -42,6 +46,8 @@ cat --help
 # or
 man cat
 ```
+
+---
 
 ## Thank you
 

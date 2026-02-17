@@ -12,6 +12,8 @@ Networking is the class that everyone and I have been waiting for! But why it is
 - resumes were thrown out with other resumes = clicking apply with other applications
 - the resume drops on the recruiter's desk = build connections with individuals who are already in the industry
 
+---
+
 ## How to make friends and network?
 
 There is a [book](https://en.wikipedia.org/wiki/How_to_Win_Friends_and_Influence_People) that was recommended to the cohort on how to improve the people-skill. If you are not good with people like me, this is the book for you!
@@ -33,6 +35,8 @@ You also can find [communities](https://github.com/thisdot/tech-community-slacks
 
 > Pro tip - always send a note to the people that you want to connect with on LinkedIn!
 
+---
+
 ## Always keep tracking
 
 Use either Google sheet or notion to track the people that you have made a connection with.
@@ -46,6 +50,8 @@ Included their information:
 - where met at
 - add on social media yet? (Twitter, Linkedin, others)
 - anything that you want to add.
+
+---
 
 ## Recap
 

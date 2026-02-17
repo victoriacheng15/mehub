@@ -21,6 +21,8 @@ Example:
 awk '{print $1}' file.txt
 ```
 
+---
+
 ## Options
 
 | Option | Description                                                     |
@@ -28,6 +30,8 @@ awk '{print $1}' file.txt
 | -F     | Sets the field separator (default is space or tab)              |
 | -f     | Reads the `awk` program from a file instead of the command line |
 | -v     | Allows you to pass in external variables                        |
+
+---
 
 ## Common Use Cases
 
@@ -87,6 +91,8 @@ awk '{print NR, $0}' file.txt
 
 Here, `NR` is a built-in variable that represents the current line number, and `$0` refers to the entire line.
 
+---
+
 ## Additional Help
 
 You can explore more by using the commands:
@@ -95,6 +101,8 @@ You can explore more by using the commands:
 man awk
 ```
 
+---
+
 ## Resources
 
 [AWK - Basic Examples](https://www.tutorialspoint.com/awk/awk_basic_examples.htm)
@@ -102,6 +110,8 @@ man awk
 [Getting Started With AWK Command [Beginner's Guide]](https://linuxhandbook.com/awk-command-tutorial/)
 
 [History of awk and gawk](https://www.gnu.org/software/gawk/manual/html_node/History.html)
+
+---
 
 ## Thank you
 

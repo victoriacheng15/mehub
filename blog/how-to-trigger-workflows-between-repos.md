@@ -9,6 +9,8 @@ tags: ["platform"]
 
 Workflows in GitHub Actions can be triggered in multiple ways, such as on pushes, pull requests, or manually. Beyond these basic triggers, workflows can also trigger other workflows, either **within the same repository** or **across different repositories**. Understanding the differences helps you design automation that is both efficient and maintainable.
 
+---
+
 ## Trigger Workflows From the Same Repo
 
 GitHub Actions allows one workflow to trigger another in the same repository using the `workflow_run` event. This is useful when separating concerns, such as building and deploying, in different workflows.
@@ -45,6 +47,8 @@ jobs:
 ```
 
 With this setup, every time **Workflow A** completes on the `main` branch, **Workflow B** is automatically triggered.
+
+---
 
 ## Triggering Workflows Across Different Repositories
 
@@ -84,6 +88,8 @@ jobs:
 ```
 
 This minimal example shows the mechanics without extra complexity.
+
+---
 
 ## Blog Draft Sync Between Repositories
 
@@ -159,6 +165,8 @@ flowchart TD
     G -- Yes --> H[Do Nothing]
     G -- No --> I[Create Pull Request for New Blog Post]
 ```
+
+---
 
 ## Thank you
 

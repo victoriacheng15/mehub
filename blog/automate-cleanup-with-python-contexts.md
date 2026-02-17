@@ -9,6 +9,8 @@ tags: ["python"]
 
 Hey fellow learners! Today I'm exploring Python's context managers - those magical **`with`** statements that automatically handle setup and cleanup. I'll share what I'm discovering about **`__enter__`** and **`__exit__`** methods through my coffee shop example
 
+---
+
 ## First Impressions: What Are Context Managers?
 
 When I first saw code like:
@@ -22,6 +24,8 @@ I wondered - how does Python know to close the file automatically? The secret li
 
 1. **`__enter__`**: Runs when we enter the **`with`** block
 2. **`__exit__`**: Runs when we leave (even if there's an error)
+
+---
 
 ## Building My First Context Manager
 
@@ -84,11 +88,15 @@ with CoffeeShop("Python Beans") as shop:
 # 🚪 Closing Python Beans
 ```
 
+---
+
 ## Lessons Learned
 
 1. **Automatic Cleanup**: The **`__exit__`** method always runs, even during errors
 2. **Error Handling**: We get information about any exceptions that occurred
 3. **Resource Management**: Perfect for things that need cleanup (files, connections)
+
+---
 
 ## Use Cases
 
@@ -115,6 +123,8 @@ class DatabaseConnection:
         self.conn.close()
 ```
 
+---
+
 ## Recap
 
 Context managers are like responsible assistants - they set things up and clean up after you automatically. I'm still getting comfortable with them, but already see how they can:
@@ -122,6 +132,8 @@ Context managers are like responsible assistants - they set things up and clean 
 - ✔️ Make code cleaner
 - ✔️ Prevent resource leaks
 - ✔️ Handle errors gracefully
+
+---
 
 ## Thank you
 

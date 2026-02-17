@@ -9,6 +9,8 @@ tags: ["growth"]
 
 David Allen’s book provides a robust system to tackle your tasks in our fast-paced society. It introduces the Getting Things Done (GTD) method, a strategy for managing tasks and projects that allows you to focus on taking action rather than remembering tasks. The GTD method helps you move repetitive thoughts or negative feelings out of your mind and into your system, freeing up mental energy for your work. The book offers practical techniques such as creating lists and reminders to help you organize your work.
 
+---
+
 ## The 5 Core Steps
 
 1. **Capture**: This is the first step where you collect all tasks, ideas, and projects in a trusted system. This could be a physical inbox, a digital tool, or any other place where you can store this information securely.
@@ -17,15 +19,21 @@ David Allen’s book provides a robust system to tackle your tasks in our fast-p
 4. **Reflect**: This step involves regularly reviewing and updating your lists. This could be a quick daily check-in with your calendar and task lists or a deeper weekly review where you update your projects and goals.
 5. **Engage**: Finally, you use your system to take action. You choose your tasks based on context, time available, energy levels, and priority, and then you get to work.
 
+---
+
 ## Recap
 
 The Getting Things Done (GTD) method by David Allen involves recording tasks and ideas, processing them into actionable steps, organizing these items daily, reviewing the list periodically(weekly or monthly), and finally, working on the project guided by the organized to-do list. This method ensures a smooth workflow and helps maintain focus.
 
 Moreover, I picked up the 2-minute rule from this book. This rule suggests that if a task takes less than 2 minutes to complete, it should be done immediately. This approach helps to avoid procrastination and prevents small tasks from piling up.
 
+---
+
 ## Resources
 
 [Getting Things done](https://gettingthingsdone.com/)
+
+---
 
 ## Thank you
 

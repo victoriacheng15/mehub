@@ -23,6 +23,8 @@ chown alice:developers report.txt
 
 This command changes the owner of `report.txt` to `alice` and the group to `developers`.
 
+---
+
 ## Options
 
 | Option      | **Description**                                                                   |
@@ -31,6 +33,8 @@ This command changes the owner of `report.txt` to `alice` and the group to `deve
 | --reference | Change the ownership of a file to match the ownership of another file             |
 | --from      | Only change ownership if the current owner and group match the specified criteria |
 | -h          | Modify symbolic links instead of the target files                                 |
+
+---
 
 ## Common Use Cases
 
@@ -86,9 +90,13 @@ man chown
 
 This will display the manual for the `chown` command, where you can find more details and advanced examples.
 
+---
+
 ## Recap
 
 The `chown` command is a powerful tool for managing file and directory ownership in Linux. Whether you need to change the owner, the group, or both, `chown` makes it easy to keep your files organized and accessible to the right people. It’s a crucial command for system administrators and Linux users alike!
+
+---
 
 ## Thank you
 

@@ -15,6 +15,8 @@ What if I could understand my reading habits and not just collect them?
 
 That question sparked the next phase: building a personal reading analytics, powered entirely by open tools and zero infrastructure.
 
+---
+
 ## From Links to Insights
 
 The goal shifted from “Where are the new articles?” to questions that reveal real behavior and patterns:
@@ -25,6 +27,8 @@ The goal shifted from “Where are the new articles?” to questions that reveal
 - What’s the age of my oldest unread articles, and which sources contribute most to my unread pile?
 
 To answer these, I moved beyond raw data and built a metrics engine that computes reading progress, backlog aging, and source-level analytics. This engine powers a full analytics with seven interactive visualizations—tracking everything from monthly trends to unread article age distribution—without relying on servers, databases, or paid infrastructure.
+
+---
 
 ## The Pipeline: Simple, Batched, and Static
 
@@ -38,6 +42,8 @@ graph TD
     D -->|Render HTML| E["Static HTML Page"]
     E -->|Deploy| F["GitHub Pages"]
 ```
+
+---
 
 ## Go for Metrics, HTML for Portability
 
@@ -53,6 +59,8 @@ All results are written to a timestamped JSON file like `metrics/2025-12-29.json
 
 A second Go process uses `html/template` to generate a static `index.html` with seven interactive Chart.js visualizations. The entire site deploys to GitHub Pages via GitHub Actions, delivering a live, zero-cost reading analytics dashboard that updates daily.
 
+---
+
 ## Summary
 
 - Phase 1: Automate article collection with GitHub Actions  
@@ -60,6 +68,8 @@ A second Go process uses `html/template` to generate a static `index.html` with 
 - Result: A personal, zero infrastructure reading analytics dashboard  
 
 Sometimes, the best observability starts at home—with your own habits.
+
+---
 
 ## Thank You
 

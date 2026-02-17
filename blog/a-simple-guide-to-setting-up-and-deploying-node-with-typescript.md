@@ -67,6 +67,8 @@ app.listen(PORT, () => {
 
 You could run a simple server with the code above. If you feel adventurous, I have written a simple timestamp app that converts today's date to `Unix` and `UTC` format with MVC. Feel free to copy the code from [this GitHub repo](https://github.com/victoriacheng15/ts-node-demo) or clone the repo.
 
+---
+
 ## How to run locally?
 
 There are a couple of ways to run the app:
@@ -127,6 +129,8 @@ pnpm install -D ts-node-dev
 
 Overall, I prefer the `concurrently` method since it installs fewer packages and utilizes the `--watch` flag to run the local server.
 
+---
+
 ## Deployment
 
 With the `concurently` method, the script should look like the one below.
@@ -166,12 +170,16 @@ node build/index.js
 pnpm server
 ```
 
+---
+
 ## Resources
 
 - [Basic Express Server Setup with TypeScript - concurrently method](https://www.appliz.fr/blog/express-typescript)
 - [How to Setup a TypeScript + Node.js Project - nodemon method](https://khalilstemmler.com/blogs/typescript/node-starter-project/)
 - [concurrently](https://www.npmjs.com/package/concurrently)
 - [ts-node-dev](https://www.npmjs.com/package/ts-node-dev)
+
+---
 
 ## Thank you
 

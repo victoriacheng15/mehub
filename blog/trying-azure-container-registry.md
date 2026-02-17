@@ -20,6 +20,8 @@ But after the assignment ended, I kept wondering:
 
 So I decided to try it with a personal project—my `school-management-api`—just to see how the whole flow feels outside of a graded task.
 
+---
+
 ## Why ACR?
 
 I’ve used Docker locally for a while, but I’ve never pushed my images to a remote registry—I just rebuilt them each time I needed to run the container. That works fine for local testing… but I started wondering:
@@ -29,6 +31,8 @@ I’ve used Docker locally for a while, but I’ve never pushed my images to a r
 That curiosity led me to ACR. I wanted to see firsthand how a private registry in Azure works—and how an Azure service might authenticate and pull an image from it.
 
 ACR offers a secure, managed place to store images inside your Azure subscription—no public exposure, no manual cleanup. And even if I’m not deploying anything yet, understanding this flow feels like a key piece of the cloud puzzle.
+
+---
 
 ## My GitHub Actions Workflow
 

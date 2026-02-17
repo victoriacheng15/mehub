@@ -11,11 +11,15 @@ As I close the chapter on my 4-month internship at Shopify, I find myself pausin
 
 This internship was more than just a technical journey—it was a personal and professional evolution. From shipping my first feature to navigating cross-team collaboration, every week brought new challenges and lessons. But as I look back, a few key themes stand out, both in terms of growth and areas I want to continue developing.
 
+---
+
 ## What Went Well
 
 I had the opportunity to work on meaningful projects, contribute to a large-scale codebase, and collaborate with incredibly talented engineers. I learned to navigate complex systems, write cleaner code, and communicate more effectively in technical discussions.
 
 I’m proud of how I adapted to a fast-paced environment and took ownership of my tasks. Whether it was debugging a tricky edge case or proposing a better solution during a PR review, I pushed myself to think critically and act with intention.
+
+---
 
 ## Areas for Growth
 
@@ -47,6 +51,8 @@ Hesitating too long doesn’t eliminate risk. It just delays learning.
 
 So I’m working on being less hesitant, more decisive. Not reckless—but firm in the belief that *if an issue comes up, we’ll fix it*. That’s part of the process. That’s how we improve.
 
+---
+
 ## A Lesson I’ll Carry Forever: The Technical Backpack
 
 One of the most impactful pieces of advice I received came from my manager. He said:
@@ -73,6 +79,8 @@ For example, after wrapping up a feature deeply tied to a legacy service, I don�
 
 This mindset applies beyond code. It’s about **mental bandwidth**. The lighter your backpack, the more energy you have to learn, create, and grow.
 
+---
+
 ## Looking Ahead
 
 This internship taught me that engineering isn’t just about writing code—it’s about thinking clearly, communicating effectively, and managing not just tasks, but also *context* and *confidence*.
@@ -98,6 +106,8 @@ Because in the end, the best code isn’t the one that never breaks — it’s t
 Shopify didn’t just give me a chance to build software—it gave me a chance to build myself. And for that, I’m truly grateful.
 
 Here’s to the next trail, the next backpack, and the next version of me.
+
+---
 
 ## Thank you
 

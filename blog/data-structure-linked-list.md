@@ -11,6 +11,8 @@ A linked lists stand as a building block. Picture a series of interconnected nod
 
 At its core, a linked list is a dynamic data structure where elements, called nodes, are not stored in contiguous memory locations like arrays but rather scattered across memory, connected by pointers. This allows for efficient insertion and deletion operations, as no shifting of elements is required.
 
+---
+
 ## How Does Linked Lists Work?
 
 The linked list supports three main operations:
@@ -20,6 +22,8 @@ The linked list supports three main operations:
 - **Search** - find an element given its value
 
 Imagine you have a simple singly linked list, where each node contains some data and a pointer to the next node. To traverse the list, you start from the head node (the first node) and follow the pointers until you reach the end of the list, where the pointer is null. This traversal process gives you access to each element in the list, one by one.
+
+---
 
 ## Types of Linked lists
 
@@ -41,6 +45,8 @@ Each node contains two pointers; one point to the _next_ node and another to the
 
 It's important to clarify that while a linked list typically ends with a node whose next pointer is null, indicating the list's end, having a tail node at the end is optional. If included, this tail node acts as a reference for the end of the list, similar to how the head node marks the beginning.
 
+---
+
 ## Resources
 
 [Linked Lists](https://sbme-tutorials.github.io/2020/data-structure-FALL/notes/week03b.html)
@@ -48,6 +54,8 @@ It's important to clarify that while a linked list typically ends with a node wh
 [Types of Linked List in Data Structures by Simplilearn](https://www.simplilearn.com/tutorials/data-structure-tutorial/types-of-linked-list)
 
 [List by ByteByteGO](https://youtu.be/ouipSd_5ivQ?t=23)
+
+---
 
 ## Thank you
 

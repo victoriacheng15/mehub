@@ -24,6 +24,8 @@ Useful Links:
 - [Inside Shopify’s Modular Monolith](https://newsletter.techworld-with-milan.com/p/inside-shopifys-modular-monolith)
 - [Internal Memo on AI](https://x.com/tobi/status/1909231499448401946?lang=en)
 
+---
+
 ## Books I’ve Read
 
 The Psychology of Money
@@ -33,6 +35,8 @@ The Psychology of Money
 Functional Python Programming - Second Edition
 
 - Shows how to use Python's functional programming features like map/filter, generators, and functools to write cleaner, more maintainable code. Focuses on practical FP techniques - immutability, pure functions, and declarative patterns - while acknowledging Python's hybrid nature. Less about theory, more about writing better Python.
+
+---
 
 ## Thank you
 

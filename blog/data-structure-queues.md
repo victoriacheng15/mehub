@@ -11,6 +11,8 @@ A queue is a fundamental data structure that follows the _First In, First Out_ (
 
 Imagine waiting in line at a grocery store checkout. The first person to arrive at the checkout counter is the first to be served, and as more customers join the line, they do so at the end. This scenario embodies the behavior of a queue in computer science.
 
+---
+
 ## How Does a Queue Work?
 
 The queue data structure supports two primary operations:
@@ -190,9 +192,13 @@ print("Size of queue:", queue.qsize())
 # Size of queue: 2
 ```
 
+---
+
 ## Resources
 
 [queue by Python Docs](https://docs.python.org/3/library/queue.html)
+
+---
 
 ## Thank you
 

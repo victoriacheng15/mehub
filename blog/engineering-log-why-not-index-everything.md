@@ -11,9 +11,13 @@ I intuitively knew SQL indexes were fast, but I didn't understand the underlying
 
 > **The Analogy:** Imagine a library with 1,000,000 books arranged randomly. Finding one book requires a **Full Table Scan (O(N))**. An index is the card catalog that points you to the exact shelf **(O(log N))**.
 
+---
+
 ## 2. The Challenge / Question
 
 If indexes provide such a significant performance boost (O(log N) vs O(N)), the obvious question arises: **Why don't we just index every single column in every table?**
+
+---
 
 ## 3. Investigation & Trade-offs
 
@@ -33,6 +37,8 @@ I realized that databases don't just "list" keys. They maintain a complex, balan
   * It moves half the data from the old page to the new one.
   * It updates the **parent page** to point to both child pages.
 
+---
+
 ## 4. The Solution / Insight
 
 The "Magic" is actually a deliberate architectural trade-off. We are trading **Write Speed** and **Disk Space** for **Read Speed**.
@@ -45,6 +51,8 @@ CREATE INDEX idx_books_title ON books(title);
 INSERT INTO books (title, author) VALUES ('New Book', 'Author');
 -- Because the DB must now also update idx_books_title.
 ```
+
+---
 
 ## 5. Outcome & Learnings
 

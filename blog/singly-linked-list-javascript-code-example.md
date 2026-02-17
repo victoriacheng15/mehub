@@ -15,6 +15,8 @@ Here, we dive into the singly linked list and its three operations:
 - **deletion** - remove an element at its index or value
 - **Search** - find an element given its value
 
+---
+
 ## Node Class
 
 It represents a single node in the linked list with two properties: `value` to store the data and `next` to reference the next node in the list
@@ -27,6 +29,8 @@ class Node {
  }
 }
 ```
+
+---
 
 ## Linked List Class
 
@@ -196,6 +200,8 @@ reverse() {
 }
 ```
 
+---
+
 ## Full Code
 
 Here is the full code for this post.
@@ -315,6 +321,8 @@ class LinkedList {
 }
 ```
 
+---
+
 ## Resources
 
 I appreicate the way Codevolution, a Youtuber, explains the process of coding a JavaScript implementation for a Linked List, with clear visuals. The playlist covers more linked list methods than this post mentioned, so I highly recommend exploring the _JavaScript Data Structures_ playlist to deepen your knowledge on data structures.
@@ -330,6 +338,8 @@ I appreicate the way Codevolution, a Youtuber, explains the process of coding a 
 [JavaScript Data Structure 21 - Linked List Search](https://www.youtube.com/watch?v=ZRIJuAIGJ4M&list=PLC3y8-rFHvwg6nsAOfC5Is18KB2DrVOJy&index=20&t=259s&pp=iAQB)
 
 [JavaScript Data Structure 22 - Linked List Reverse](https://www.youtube.com/watch?v=S9kMVEUg-x4&list=PLC3y8-rFHvwg6nsAOfC5Is18KB2DrVOJy&index=21&pp=iAQB)
+
+---
 
 ## Thank you
 

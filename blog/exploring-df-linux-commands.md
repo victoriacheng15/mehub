@@ -30,6 +30,8 @@ df
 
 This will display disk usage for all mounted file systems.
 
+---
+
 ## Options
 
 | Option        | What It Does                                  | Example                                     |
@@ -39,6 +41,8 @@ This will display disk usage for all mounted file systems.
 | `-a`          | Include pseudo and hidden file systems        | `df -a`                                     |
 | `-t TYPE`     | Show only file systems of a certain type      | `df -t ext4`                                |
 | `-x TYPE`     | Exclude file systems of a certain type        | `df -x tmpfs`                               |
+
+---
 
 ## Common Use Cases
 
@@ -78,6 +82,8 @@ df -a
 df -t ext4
 ```
 
+---
+
 ## Additional Help
 
 To see all available options:
@@ -88,11 +94,15 @@ df --help
 man df
 ```
 
+---
+
 ## Recap
 
 The **df** command is a simple yet powerful way to monitor disk space on your Linux system. Whether you're tracking usage on internal drives or mounted volumes, `df` gives you the insight you need with just a few keystrokes.
 
 Keep your storage in check! 🗂️💾
+
+---
 
 ## Thank you
 

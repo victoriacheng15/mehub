@@ -14,6 +14,8 @@ In SQL, **PRIMARY KEY** and **FOREIGN KEY** are essential concepts for defin
 
 Think of PRIMARY KEY as a unique identifier (like a Social Security Number), while a FOREIGN KEY establishes a relationship (like a customer ID in an orders table that links back to the customers table).
 
+---
+
 ## How Do PRIMARY and FOREIGN Keys Work?
 
 ### PRIMARY KEY: Ensuring Uniqueness
@@ -80,6 +82,8 @@ Let’s say we have two tables:
 - The `customer_id` in `orders` must match an existing `customer_id` in the `customers` table.
 - If you try to insert an order with `customer_id = 3` (which doesn’t exist in `customers`), SQL will reject it to maintain **referential integrity**.
 
+---
+
 ## **Key Points to Remember**
 
 ✅ **PRIMARY KEY**
@@ -99,6 +103,8 @@ Let’s say we have two tables:
 - **One-to-Many Relationships**: One customer can have many orders.
 - **Many-to-Many Relationships**: Requires a **junction table** with FOREIGN KEYS.
 
+---
+
 ## Recap
 
 | **Feature** | **PRIMARY KEY** | **FOREIGN KEY** |
@@ -110,11 +116,15 @@ Let’s say we have two tables:
 
 By understanding **PRIMARY and FOREIGN KEYS**, you can design efficient, well-structured databases that maintain data integrity.
 
+---
+
 ## Resources
 
 [PostgreSQL Primary Key](https://neon.tech/postgresql/postgresql-tutorial/postgresql-primary-key)
 
 [PostgreSQL Foreign Key](https://neon.tech/postgresql/postgresql-tutorial/postgresql-foreign-key)
+
+---
 
 ## Thank you
 

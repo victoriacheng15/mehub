@@ -15,6 +15,8 @@ type Omit<T, K extends string | number | symbol> = {
 };
 ```
 
+---
+
 ## How Does Omit Work?
 
 Suppose you have a `Product` type that includes properties like `id`, `name`, `price`, and `category`. If you need to create a simplified product type that only requires `name` and `price`, you can utilize the `Omit` utility to exclude `id` and `category` from the `Product` type.
@@ -36,17 +38,23 @@ const simplifiedProduct: SimplifiedProduct = {
 };
 ```
 
+---
+
 ## Recap
 
 The `Omit` utility type is commonly used in situations where you want to create a more refined type definition without duplicating code or manually specifying every property.
 
 You might find this concept resembling one of the utility types called `Exclude`. While both `Exclude` and `Omit` serve the purpose of excluding or omitting specific elements from a set of types, they differ in their applications. `Exclude` is designed for working with type unions, whereas `Omit` is specifically used for omitting specific properties from a type.
 
+---
+
 ## Resources
 
 [TS Handbook - Omit](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys)
 
 [TypeScript Utility Types - Exclude](https://victoriacheng15.vercel.app/posts/typescript-utility-types-exclude)
+
+---
 
 ## Thank you
 

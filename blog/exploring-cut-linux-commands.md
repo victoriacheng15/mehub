@@ -21,6 +21,8 @@ Example:
 cut -d ',' -f 1,3 file-name
 ```
 
+---
+
 ## Options
 
 | Option                | Description                                                                |
@@ -32,6 +34,8 @@ cut -d ',' -f 1,3 file-name
 | -s, --only-delimited  | Suppress lines that do not contain the delimiter                           |
 | -z, --zero-terminated | Treat input lines as terminated by a null character (instead of a newline) |
 
+---
+
 ## Additional Help
 
 You can explore more by using the commands:
@@ -41,6 +45,8 @@ cut --help
 # or
 man cut
 ```
+
+---
 
 ## Thank you
 

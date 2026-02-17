@@ -11,6 +11,8 @@ The OSI (Open Systems Interconnection) Reference Model is a way to understand an
 
 This model is crucial because it allows different network devices and software to communicate effortlessly, creating a common language for network design. It ensures that products from various manufacturers can operate together smoothly. By breaking down network communication into seven distinct layers, the OSI model makes designing, troubleshooting, and understanding complex network systems much easier.
 
+---
+
 ## The 7 Layers
 
 ### 1. Physical Layer
@@ -83,11 +85,15 @@ The Application Layer is the topmost layer of the OSI model. It provides service
 
 This layer acts as the interface between the network and the end-user applications. It provides various network services such as **email**, **file transfer**, and **remote login**. The Application Layer enables software applications to interact with the network by offering protocols and services that allow applications to communicate. Examples include **HTTP**, **FTP**, **SMTP**, and **DNS**, along with **SSH (Secure Shell)** for secure remote login and command execution.
 
+---
+
 ## Recap
 
 Understanding the OSI reference model is essential for software engineers to comprehend how data moves from device A to device B. When network or data transfer issues arise, the OSI model helps break down the problem into manageable layers. For instance, you can check if the server or client is powered on or if packets are being lost during transmission. This approach makes it easier to identify and fix the root cause of issues.
 
 The layered design of the OSI model ensures that different devices and software can work together smoothly. It also helps in designing robust network systems and enhances security by allowing targeted measures at each layer. Mastering the OSI Model is key to optimizing network performance and ensuring efficient data communication across various systems.
+
+---
 
 ## Resources
 
@@ -96,6 +102,8 @@ The layered design of the OSI model ensures that different devices and software 
 [OSI Model by Wiki](https://en.wikipedia.org/wiki/OSI_model)
 
 [What Is The OSI Model? Definition, Layers, and Importance](https://www.spiceworks.com/tech/networking/articles/what-is-osi-model/)
+
+---
 
 ## Thank you
 

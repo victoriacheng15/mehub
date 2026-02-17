@@ -13,10 +13,14 @@ I’ve felt impostor syndrome before, but it’s definitely become more noticeab
 
 I’ve been trying to remind myself of that. The way I see it now, it’s like running a marathon. You might be walking or running, but either way, you’re still heading toward the finish line. Everyone moves at their own pace, and that’s okay. So whenever that impostor feeling creeps in, I try to take a breath and remind myself: you’re moving forward, and you’ll get there. Just keep going. Embrace it.
 
+---
+
 ## Books I’ve Read
 
 - 15 Secrets Successful People Know About Time Management
 - The Linux Command Line A Complete Introduction
+
+---
 
 ## Thank you
 

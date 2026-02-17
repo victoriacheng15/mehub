@@ -25,6 +25,8 @@ element.onclick = function makeChange() {
 };
 ```
 
+---
+
 ## addEventListener
 
 > The addEventListener() method of the EventTarget interface sets up a function that will be called whenever the specified event is delivered to the target. -- MDN
@@ -58,6 +60,8 @@ element.addEventListener("click", makeChange);
   4. _signal_: the listener will be removed when the signal is given.
 
 - **useCapture**: this is similar to the capture from options category.
+
+---
 
 ## What are the differences between `capture` and `useCapture`
 
@@ -94,6 +98,8 @@ divs.forEach((div) => {
 
 %[https://codepen.io/victoriacheng15/pen/eYejyjr]
 
+---
+
 ## Differences between addEventListener and onclick
 
 | type              | addEventListener              | onclick               |
@@ -101,6 +107,8 @@ divs.forEach((div) => {
 | number of event   | many events                   | single event          |
 | event propagation | can control with 3rd argument | cant control          |
 | compatibility     | Doesn't work on older IE      | works on all browsers |
+
+---
 
 ## browser support
 
@@ -121,9 +129,13 @@ sources:
 - [JavaScript Info - bubbling and capturing](https://javascript.info/bubbling-and-capturing#capturing)
 - [Difference between addEventListener and onclick in JavaScript](https://www.geeksforgeeks.org/difference-between-addeventlistener-and-onclick-in-javascript/)
 
+---
+
 ## Recap
 
 Both onclick and addEventlistener are supported on almost all browsers beside `Internet Explorer version 6 - 8`. But, which one to use? It boils down to what are you trying to achieve. Does it do one thing only, you may go with onclick for a short and simple way to write. However, addEventListener is recommended to use.
+
+---
 
 ## Thank you
 

@@ -105,6 +105,8 @@ const total = arr.reduce(sum, 0);
 console.log(total); // 21
 ```
 
+---
+
 ## More reduce() usages
 
 Let's see how to reverse a string or words. Or you could use `reverse()` method instead.
@@ -221,6 +223,8 @@ console.log(frequency);
 // { 'a': 3, 'b': 2, 'c': 1 }
 ```
 
+---
+
 ## Recap
 
 The reduce method is a higher-order function in JavaScript that allows you to reduce an array into a single value based on the defined operation. The reduce function takes 4 arguments, `accumulator`, `currentValue`, `currentIndex`(optional), and `array`(optional) with `initialValue`, and also can simplify the code.
@@ -235,10 +239,14 @@ The `reduce()` method is a powerful and flexible feature in JavaScript that lets
 
 Overall, `reduce()` is a useful method that can save you time and effort, but it's important to use it wisely and with a clear understanding of its strengths and weaknesses.
 
+---
+
 ## Resources
 
 - [reduce() - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 - [flat() - MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
+
+---
 
 ## Thank you
 

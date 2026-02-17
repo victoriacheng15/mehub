@@ -9,6 +9,8 @@ tags: ["growth"]
 
 In this book, Scott Young guides readers on a transformative journey to master hard skills, gain a competitive edge, and accelerate career growth. Drawing from personal experiences and research, Young presents an actionable approach for rapid skill acquisition. The book offers insights into efficient skill mastery and competitive advantage, catering to students, professionals, and those seeking personal growth. With innovative ideas, it empowers readers to adopt the ultralearning mindset, stand out, and excel in their careers.
 
+---
+
 ## Approaches on Ultralearning
 
 - **Metalearning Mastery**: Develop an understanding of how learning works, allowing you to strategically approach new skills and subjects.
@@ -28,6 +30,8 @@ In this book, Scott Young guides readers on a transformative journey to master h
 - **Failure and Iteration**: Embrace failure as an opportunity to learn and refine your approach, iterating on your strategies until you achieve mastery.
 - **Mindfulness and Metacognition**: Develop awareness of your own learning process, allowing you to adapt and optimize your methods as you go.
 
+---
+
 ## Recap
 
 These approaches closely resemble those in [Learning How to Learn by Barbara Oakley](https://barbaraoakley.com/books/learning-how-to-learn/) such as retrieval practice, interleaved learning, and spaced repetition. I particularly appreciate the author’s emphasis on 2 approaches, **Sprints and Projects** and **mindfulness and metacognition**. Breaking down learning goals into smaller tasks enhances concentration. When establishing the learning process initially, it may not always align perfectly, requiring regular reviews and adjustments for optimal results.
@@ -35,6 +39,8 @@ These approaches closely resemble those in [Learning How to Learn by Barbara Oak
 `Learning How to Learn` emphasizes a comprehensive understanding of the science of learning and provides insights into effective learning techniques applicable across various subjects. In contrast, `Ultralearning` is geared towards practical methods for acquiring specific skills intensively, with a focus on techniques such as retrieval practice, spaced repetition, directness, and immersion. While both books contribute to improving learning, `Learning How to Learn` offers a broader perspective on learning science, while `Ultralearning` presents a structured approach for targeted skill development within specific domains.
 
 If you're seeking ways to enhance the learning process, both `Learning How to Learn` and `Ultralearning` are undoubtedly must-reads.
+
+---
 
 ## Thank you
 

@@ -136,6 +136,8 @@ describe("isograms", () => {
 
 See more in this [section](https://jestjs.io/docs/api#testeachtablename-fn-timeout) of the Jest docs.
 
+---
+
 ## Thank you
 
 Thank you for your time and for reading this!

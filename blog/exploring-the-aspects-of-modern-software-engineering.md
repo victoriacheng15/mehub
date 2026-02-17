@@ -15,6 +15,8 @@ The book:
 - covers two core aspects of software engineering: learning and exploration and managing complexity
 - also offers practical advice on how to choose tools, organize work, evaluate progress, experiment, control complexity, learn from history, and distinguish good and bad ideas
 
+---
+
 ## Ideas from the book
 
 Software engineering is:
@@ -24,6 +26,8 @@ Software engineering is:
 - is a creative and empirical discipline that requires experimentation, feedback, and adaptation to deal with uncertainty and change
 - is not only about producing code, but also about designing systems, choosing tools, organizing work, evaluating progress, and improving quality
 - is a human activity that involves collaboration, communication, and personal fulfillment
+
+---
 
 ## Recap
 
@@ -39,6 +43,8 @@ Here are a couple of ways to improve your software quality, productivity, and sa
 - Keeping an open mind and being curious about new things and changes
 
 Based on my reading, it’s important to note that although these practices may be effective at Google, they may not work as well in other organizations or teams. This implies that while these books are valuable resources for software engineers, they have different focuses and scopes. I would recomm
+
+---
 
 ## Thank you
 

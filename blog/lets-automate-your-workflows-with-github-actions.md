@@ -13,6 +13,8 @@ tags: ["platform"]
 
 In short, you automate these "boring" and repeated tasks without having to run it manually.
 
+---
+
 ## How to write GitHub Actions?
 
 It is written in YAML. It stands for `Yet Another Markup Language` at first and then evolved into `YAML Ain't Markup Language`.
@@ -26,6 +28,8 @@ key: value
 YAML is pretty picky with indentation from my experience. I had a couple of times that action would not run due to incorrect indentation. 😑
 
 Enough talk with stuff, let's see the setup!
+
+---
 
 ## Workflows
 
@@ -157,6 +161,8 @@ jobs:
       - run: npm format:fix
 ```
 
+---
+
 ## Recap
 
 What I know about the workflows is a small tip of the iceberg. It can automate more things for you. I have seen a couple of workflows that can auto-assign labels for issues, run prettier, deploy, merge schedule and more things. I sometimes go to any organizations or anyone's repos and check out their workflows under `.github/workflows` to see what they are automating.
@@ -169,6 +175,8 @@ A tip for you, try to click all clickable links in `Actions` tab to see where ea
 
 I hope this blog will help you to start with workflows quickly and start to automate repeated tasks for you!
 
+---
+
 ## Resources
 
 - [5 Ways to DevOps-ify your App - GitHub Actions Tutorial by Fireship](https://www.youtube.com/watch?v=eB0nUzAI7M8&t=1s)
@@ -176,6 +184,8 @@ I hope this blog will help you to start with workflows quickly and start to auto
 - [YAML Tutorial: Everything You Need to Get Started in Minutes](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started)
 - [Learn GitHub Actions - Official Docs](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
 - [GitHub Actions Crash Course By Laith Academy](https://www.youtube.com/watch?v=1oJQRlz1v94)
+
+---
 
 ## Thank you
 

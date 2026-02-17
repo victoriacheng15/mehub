@@ -33,6 +33,8 @@ While books can provide a wealth of advice on self-improvement in various aspect
 
 > Life presents many choices, the choices we make determine our future. – Catherine Pulsifer
 
+---
+
 ## **The upcoming year**
 
 Reflecting on the accomplishments and lessons of 2023, I'm excited about the opportunities and growth that lie ahead. As I delve into the upcoming year, I recognize the need for continued self-improvement and focus.
@@ -51,6 +53,8 @@ By acknowledging these areas for improvement and setting specific learning goals
 
 I look forward to the opportunities and growth that the upcoming year holds. Wishing you all a wonderful 2024 filled with achievements and joy. Hope you have a fantastic year ahead!
 
+---
+
 ## Blogs
 
 I didn't publish the monthly reflections for October and November, so I'm including them here. The hiatus in these reflections was due to my vacation. As a result, all the blog posts created during this period, from the last update until November, are listed below.
@@ -67,6 +71,8 @@ I didn't publish the monthly reflections for October and November, so I'm includ
 - [Exploring the Aspects of Modern Software Engineering](https://victoriacheng15.vercel.app/posts/exploring-the-aspects-of-modern-software-engineering)
 - [TypeScript Utility Types - NonNullable](https://victoriacheng15.vercel.app/posts/typescript-utility-types-nonnullable)
 - [Unignorable Mastery - So Good They Can't Ignore You](https://victoriacheng15.vercel.app/posts/unignorable-mastery-so-good-they-cant-ignore-you)
+
+---
 
 ## Thank you
 

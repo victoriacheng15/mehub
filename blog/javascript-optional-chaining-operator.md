@@ -23,6 +23,8 @@ It is a useful feature in JavaScript for handling situations where you need to a
 - API responses and data manipulation
 - Error Handling
 
+---
+
 ## Examples
 
 - Access nested properties
@@ -138,6 +140,8 @@ console.log(city); // output: No City Found
 
 Remember, there is a pitfall in using nullish coalescing operator. If the value from the API or somewhere else is evaluated in the Boolean context, nullish coalescing operator would return left-hand operand. If you know in advanced that the value is either null or undefined, the nullish coalescing operator can be used, otherwise, use the logical OR operator instead
 
+---
+
 ## Extra
 
 Let’s say you have 2 functions inside of the user object, one of them is existed while another one doesn’t exist. The optional chaining is an operator, but also not an operator. It is a special syntax construct.
@@ -158,14 +162,20 @@ console.log(user.admin1()); // this raise TypeError
 console.log(user.admin1?.()); // this will return undefined
 ```
 
+---
+
 ## Recap
 
 The optional chaining operator is an awesome feature that simplifies code and reduces the need for ternary operators or if statements. It provides a concise way to handle situations where certain properties may not exist, especially when working with APIs. By using optional chaining, you can navigate through object properties and gracefully handle cases where properties are missing or undefined, making your code more readable and easier to maintain.
+
+---
 
 ## Resources
 
 - [MDN Docs - Optional Chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [JS Info - Optional Chaining](https://victoriacheng15.vercel.app/posts/nextjs-state-management-with-redux-toolkit-part-1)
+
+---
 
 ## Thank you
 

@@ -9,6 +9,8 @@ tags: ["javascript"]
 
 Prototype inheritance is a mechanism for object-oriented programming that allows objects to inherit properties and methods from other objects. In prototypal inheritance, each object has an internal link to another object called its prototype. When a property or method is accessed on an object, and it is not found on the object itself, the JavaScript engine automatically looks up the chain of prototypes until it finds the property or method or reaches the end of the chain.
 
+---
+
 ## Object Prototype Example
 
 ```js
@@ -73,6 +75,8 @@ If you want to prevent anyone from changing the cat's name, you can set the `wri
 
 Feel free to copy the code snippet above and play around with properties under either `name` or `sound` property descriptors to see what the console will show!
 
+---
+
 ## Function Prototype Example
 
 There are 2 ways to create instances of animals with names and sounds.
@@ -132,6 +136,8 @@ In the code snippet above, it is important to note that the `console.log(cat1)` 
 
 To customize the `cat1` object with its own `sound` property and `makeSound` method, we explicitly add them to the object using dot notation or bracket notation. After adding these properties and methods, the second `console.log(cat1)` displays the added properties.
 
+---
+
 ## Recap
 
 **Object:**
@@ -154,10 +160,14 @@ To customize the `cat1` object with its own `sound` property and `makeSound` met
 - `Object.create()`:
   - Creates instances that directly inherit properties and methods from the prototype object, requiring explicit addition of custom properties and methods to the created object.
 
+---
+
 ## Resources
 
 - [MDN - Inheritance and the prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 - [MDN - Object.create()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+
+---
 
 ## Thank you
 

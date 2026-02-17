@@ -143,17 +143,23 @@ const result = sum.apply(null, numbers);
 console.log(result); // Output: 6
 ```
 
+---
+
 ## Recap
 
 **`bind()`**, **`call()`**, and **`apply()`** are JavaScript methods that allow you to control the execution context of a function. They enable you to set the **`this`** value explicitly and pass arguments to the function. These methods provide flexibility in managing function invocation and context manipulation in JavaScript.
 
 Additionally, `call()` and `apply()` are similar, but one difference is that `call()` takes in a _comma-separated_ argument while `apply()` takes in an _array_ of arguments. An easy way to remember, “c” for call and comma-separated and “a” for apply and array.
 
+---
+
 ## Resources
 
 - [MDN docs - bind()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
 - [MDN docs - call()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/call)
 - [MDN docs - apply()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/apply)
+
+---
 
 ## Thank you
 

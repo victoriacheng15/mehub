@@ -17,6 +17,8 @@ You could check out the [deployed site](https://hacker-news-next.vercel.app/) he
 
 Let's go!
 
+---
+
 ## Setup
 
 First, add dependencies to the project
@@ -250,6 +252,8 @@ function top() {
 export default top;
 ```
 
+---
+
 ## full code
 
 Note: if you want to copy and paste the full code to play around, make sure the file paths are correct on your end!
@@ -351,6 +355,8 @@ function top() {
 export default top;
 ```
 
+---
+
 ## Recap
 
 Redux Toolkit is a set of tools that aims to make it easier to manage state in React apps. The toolkit provides a range of APIs that automate various tasks involved in creating reducers, actions, and middleware. Additionally, it comes with several performance optimizations that can help improve the speed of your application.
@@ -358,6 +364,8 @@ Redux Toolkit is a set of tools that aims to make it easier to manage state in R
 If you already have a good grasp on how to use the useContext and useReducer hooks from React, then learning how to use Redux Toolkit should be relatively straightforward. To help you get started quicker, I suggest that you check out the documentation and watch the Redux Toolkit series from Dave Gray. Both are listed below.
 
 For part 2, let's see the refactoring action and how I expand the fetching function to other types of stories! ✌
+
+---
 
 ## Resources
 
@@ -367,6 +375,8 @@ For part 2, let's see the refactoring action and how I expand the fetching funct
 - [Redux Toolkit - createAsyncThunk](https://redux-toolkit.js.org/api/createAsyncThunk)
 - [Redux Toolkit - createSlice](https://redux-toolkit.js.org/api/createSlice)
 - [hacker-news-api-types](https://www.npmjs.com/package/hacker-news-api-types)
+
+---
 
 ## Thank you
 

@@ -85,9 +85,13 @@ async function getData() {
 getData();
 ```
 
+---
+
 ## Recap
 
 Promises are the fundamental building blocks for handling asynchronous operations. Promise.all() is a utility function that helps manage multiple promises concurrently. async/await is a syntactic sugar that simplifies writing asynchronous code in a synchronous-like manner using promises.
+
+---
 
 ## Resources
 
@@ -95,6 +99,8 @@ Promises are the fundamental building blocks for handling asynchronous operation
 - [MDN Docs - Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
 - [MDN Docs - async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 - [fCC - Asynchronous Programming in JavaScript – Guide for Beginners](https://www.freecodecamp.org/news/asynchronous-programming-in-javascript/)
+
+---
 
 ## Thank you
 

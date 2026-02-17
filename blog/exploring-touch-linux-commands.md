@@ -56,9 +56,13 @@ If you want to learn more about the `touch` command and its options directly in 
 man touch
 ```
 
+---
+
 ## Resources
 
 [Linux Command - touch](https://linuxcommand.org/lc3_man_pages/touch1.html)
+
+---
 
 ## Thank you
 

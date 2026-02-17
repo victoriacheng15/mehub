@@ -29,11 +29,15 @@ Recently, I started learning about Ansible, and while I’m not an expert yet, I
 
 It’s fascinating to think about how tools like Ansible can simplify complex tasks, especially as I imagine scaling up in the future. For now, I’m excited to keep exploring and applying it to my current setup, even if it’s just for fun and learning. Who knows? Maybe one day, I’ll be using it for something much bigger!
 
+---
+
 ## Books I’ve Read
 
 Cybersecurity All-in-One For Dummies:
 
 - A comprehensive guide covering essential cybersecurity topics like threat prevention, network security, data protection, cloud/mobile security, incident response, and compliance. Practical, accessible, and actionable for all skill levels.
+
+---
 
 ## Thank you
 

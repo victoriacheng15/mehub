@@ -15,6 +15,8 @@ One crucial aspect I want to emphasize about failure is that it is an inherent p
 
 > I have not failed, I’ve just found 10,000 ways that won’t work - Thomas Edison
 
+---
+
 ## Blogs
 
 - [TypeScript Utility Types - Parameters](https://victoriacheng15.vercel.app/posts/typescript-utility-types-parameters)
@@ -25,10 +27,14 @@ One crucial aspect I want to emphasize about failure is that it is an inherent p
 - [Simplifying Big O Notation - A Guide to Algorithm Efficiency](https://victoriacheng15.vercel.app/posts/simplifying-big-o-notation-a-guide-to-algorithm-efficiency)
 - [Exploring alias - Linux Commands](https://victoriacheng15.vercel.app/posts/exploring-alias-linux-commands)
 
+---
+
 ## Books
 
 - The 7 Habits of Highly Effective People by Stephen Covey - Be proactive, begin with the end in mind, put first things first, think win-win, seek first to understand, then to be understood, synergize, and sharpen the saw
 - Keep Going by Austin Kleon - Embrace boredom, build a bliss station, forget the noun, make gifts, the ordinary + extra attention, Slay the art monsters, and you're allowed to change your mind.
+
+---
 
 ## Thank you
 

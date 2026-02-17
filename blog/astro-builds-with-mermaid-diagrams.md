@@ -105,6 +105,8 @@ Along the way, I discovered that Playwright only provides official support for U
 
 Looking back, I actually enjoyed the process: try something new, hit a wall, debug, and come out the other side having learned something new. Problems like this remind me that the “gotchas” are often where the best learning happens.
 
+---
+
 ## Thank you
 
 Big thanks for reading! You’re awesome, and I hope this post helped. Until next time!

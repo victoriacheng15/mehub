@@ -16,6 +16,8 @@ The authors Jake Knapp and John Zeratsky of Make Time introduce two key ideas th
 
 These ideas highlight the challenges people face in managing their time and attention. Knapp and Zeratsky's book offers strategies to help readers avoid these traps. Readers can have more time to focus on what truly matters to them.
 
+---
+
 ## Strategies
 
 - **Highlight:**
@@ -37,11 +39,15 @@ These ideas highlight the challenges people face in managing their time and atte
 - **Routine Tweaks:**
   - Make small changes to your daily routines to save time, such as prepping meals in advance or setting out your clothes the night before.
 
+---
+
 ## Recap
 
 Distractions are everywhere, making it hard to stay focused. To reduce distractions, I use the focus mode on my phone and keep my phone out of reach. Additionally, I find the group tab feature on Chrome very useful. It allows me to organize related tabs into groups, which I can hide whenever I need to, without losing them.
 
 Staying organized can be tough. Do your best, but if you find it overwhelming, don't panic! Take a moment to think and reflect on what you did and how you can improve.
+
+---
 
 ## Thank you
 

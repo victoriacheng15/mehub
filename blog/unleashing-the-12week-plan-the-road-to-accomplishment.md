@@ -11,6 +11,8 @@ In Brian P. Moran's book, he presents a fresh approach to goal setting and produ
 
 Have you ever questioned why your year-long resolutions often fall short? This aligns with one of the four concepts outlined below. The issue lies in the duration of long-term goals—they are often too long. Halfway through the year, unforeseen circumstances or situations can cause us to lose focus. If we could condense yearly planning into 12-week cycles, how might it benefit you?
 
+---
+
 ## The Concepts That I Resonated With
 
 - The Flaws of Annual Planning:
@@ -32,6 +34,8 @@ Have you ever questioned why your year-long resolutions often fall short? This a
   - Success in one area should not come at the expense of other aspects of life.
   - Setting goals in multiple areas (health, relationships, personal growth) ensures a balanced and fulfilling life.
 
+---
+
 ## Recap
 
 This book provides valuable insights into why New Year's resolutions often go unaccomplished. While long-term goals are important, challenges like procrastination and unforeseen situations can hinder progress. Breaking down long-term goals into smaller, manageable ones enhances focus and increases the likelihood of completion. Setting and accomplishing weekly tasks ensures progress toward long-term goals. You can also use this as an opportunity to celebrate your small wins! Additionally, periodic reviews (weekly or monthly) help track progress and allow adjustments to tasks as needed to ensure continued success.
@@ -40,9 +44,13 @@ If you're someone who values timely task completion, struggles with long-term go
 
 Or if you are just curious, you definitely should read the book since it may offer you different insights and you could use one or more concepts from the book to improve yourself.
 
+---
+
 ## Resources
 
 - [12 Week Year](https://12weekyear.com/)
+
+---
 
 ## Thank you
 

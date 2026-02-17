@@ -9,6 +9,8 @@ tags: ["backend"]
 
 The `LEFT JOIN` statement in SQL is used to combine rows from two or more tables. It returns all rows from the left table (table1) and the matching rows from the right table (table2). If no match is found, NULL values are returned for columns from the right table. LEFT JOIN is essential when you want to retain all data from the left table, regardless of whether there's a corresponding match in the right table.
 
+---
+
 ## Basics of the LEFT JOIN Syntax
 
 The `LEFT JOIN` command helps you create relationships between tables while retaining unmatched rows from the left table. You can specify the matching condition using the ON clause to determine how rows are paired.
@@ -59,6 +61,8 @@ ON e.department_id = d.department_id;
 
 This query achieves the same result as the previous example but uses shorter, more concise table aliases.
 
+---
+
 ## Common Considerations When Using LEFT JOIN
 
 ### NULL Values in Results
@@ -89,13 +93,19 @@ LEFT JOIN departments d
 ON e.department_id = d.department_id;  
 ```
 
+---
+
 ## Recap
 
 The `LEFT JOIN` command is a valuable tool in SQL for preserving all data from the left table while adding related data from the right table. Understanding its syntax, handling NULL values, and testing your queries can ensure accurate and efficient results.
 
+---
+
 ## Resources
 
 [PostgreSQL LEFT JOIN](https://neon.tech/postgresql/postgresql-tutorial/postgresql-left-join)
+
+---
 
 ## Thank you
 

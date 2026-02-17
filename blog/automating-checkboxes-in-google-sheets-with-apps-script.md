@@ -9,6 +9,8 @@ tags: ["automation"]
 
 Google Apps Script, a JavaScript-based language, automates and enhances tasks across Google Workspace apps like Sheets, Docs, and Gmail. Users create custom scripts, triggers, and workflows in a web-based IDE, empowering them to manipulate data within Google services. The tool's accessibility to users with basic programming knowledge, combined with seamless integration with Google services, positions Google Apps Script as a potent tool for productivity enhancement.
 
+---
+
 ## Automating Checkboxes in the Sheets
 
 ![Google Sheets - table for id, first name, last name and email ](https://github.com/victoriacheng15/victoriacheng15.vercel.app/assets/35031228/e44d5884-8279-445d-aaef-66755fefaa2a)
@@ -80,6 +82,8 @@ Google Apps Script, a JavaScript-based language, automates and enhances tasks ac
    - Review the permissions required by the script
    - Click the "Allow" button to grant the necessary permissions
 
+---
+
 ## Resources
 
 [mockaroo](https://www.mockaroo.com/)
@@ -89,6 +93,8 @@ Google Apps Script, a JavaScript-based language, automates and enhances tasks ac
 [Google Apps Script Guide with the Sheets](https://developers.google.com/apps-script/guides/sheets)
 
 [Apps Script Reference for the Sheets](https://developers.google.com/apps-script/reference/spreadsheet)
+
+---
 
 ## Thank you
 

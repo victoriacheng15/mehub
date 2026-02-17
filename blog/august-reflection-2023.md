@@ -11,6 +11,8 @@ Since May, I've been utilizing Notion for organizing my tasks. Initially, I allo
 
 Scott Young, the author of the Ultralearning book, brings up an insightful concept that strongly resonates with me. He recommends the idea of starting with a pilot week for your schedule before fully committing to it. This strategy grants you direct exposure to the challenges you might face and enables you to make any required modifications. This idea reminds me of my past experience in my former career. At my previous workplace, which revolved around manufacturing cosmetics, we operated a designated production area for assembling products. Each time we introduced a new product, we conducted a trial run to identify any necessary adjustments, such as temperature or belt speed, before finalizing the setup. This preliminary testing helped us avoid potential issues and ensure smoother operations.
 
+---
+
 ## Blogs
 
 - [Living the Life with The Subtle Art of Not Giving a Fk](https://victoriacheng15.vercel.app/posts/living-the-life-with-the-subtle-art-of-not-giving-a-fk)
@@ -23,11 +25,15 @@ Scott Young, the author of the Ultralearning book, brings up an insightful conce
 - [React Hooks - useRef](https://victoriacheng15.vercel.app/posts/react-hooks-useref)
 - [How to Win Friends and Influence People - Modern Insights](https://victoriacheng15.vercel.app/posts/how-to-win-friends-and-influence-people-modern-insights)
 
+---
+
 ## Books
 
 - `Can’t Hurt Me` by David Goggins - a raw and inspiring journey from adversity to triumph. As a Navy SEAL and ultra-endurance athlete, he shares actionable insights to push past limits, embrace discomfort, and achieve greatness. This book empowers readers with relentless determination and the ability to unlock their fullest potential.
 - `Clean Architecture A Craftsmans Guide to Software Structure and Design-Pearson Education` by Robert Martin - a transformative approach to designing software systems. Learn to enhance maintainability, foster scalability, and craft robust solutions. Delve into architectural principles that stand the test of time and elevate your software development skills
 - `Ultralearning Master Hard Skills, Outsmart the Competition, and Accelerate Your Career` by Scott Young - offer actionable insights into not only mastering hard skills efficiently but also gaining a distinct advantage in a competitive world.
+
+---
 
 ## System Design Primer
 
@@ -88,6 +94,8 @@ Scott Young, the author of the Ultralearning book, brings up an insightful conce
 
 [The System Design Primer](https://github.com/donnemartin/system-design-primer#readme)
 
+---
+
 ## Docker
 
 I learned that there are 2 ways to run node with docker with the ability to reload the page when one of the files is changed.
@@ -98,6 +106,8 @@ I learned that there are 2 ways to run node with docker with the ability to relo
 [LinkedIn post - how to run node with docker](https://www.linkedin.com/posts/victoriacheng15_coding-programming-softwareengineering-activity-7095410750940172289-iqdQ?utm_source=share&utm_medium=member_desktop)
 
 [node-docker-sandbox repo](https://github.com/victoriacheng15/node-docker-sandbox)
+
+---
 
 ## Threejs
 
@@ -110,6 +120,8 @@ This collection of links provides information and demonstrations on various type
 - **Spot Light:** Emitting light from a single point within a cone, with the cone's angle widening further from the light source. [Demo](https://victoriacheng15.github.io/three-js-demo/4-directional-light/)
 - **Shadows:** Three types of lights supporting shadow generation: directional, spot, and point lights. [Demo](https://victoriacheng15.github.io/three-js-demo/9-shadows/) | [DirectionalLightShadow Docs](https://threejs.org/docs/index.html?q=shadow#api/en/lights/shadows/DirectionalLightShadow) | [SpotLightShadow Docs](https://threejs.org/docs/index.html?q=shadow#api/en/lights/shadows/SpotLightShadow) | [PointLightShadow Docs](https://threejs.org/docs/index.html?q=shadow#api/en/lights/shadows/PointLightShadow)
 - **Particles:** Creating particle effects using **`BufferGeometry`** to achieve a galaxy-like appearance. [Demo](https://victoriacheng15.github.io/three-js-demo/10-particles/) | [BufferGeometry Docs](https://threejs.org/docs/index.html?q=point#api/en/core/BufferGeometry) | [PointsMaterial Docs](https://threejs.org/docs/index.html?q=point#api/en/materials/PointsMaterial)
+
+---
 
 ## Thank you
 

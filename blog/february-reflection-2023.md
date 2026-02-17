@@ -45,6 +45,8 @@ To familiarize myself with the Cypress API, I wrote several end-to-end (e2e) tes
 
 [cypress-qa-tests repo](https://github.com/victoriacheng15/cypress-qa-tests#readme)
 
+---
+
 ## Thank you
 
 Thank you for your time and for reading this!

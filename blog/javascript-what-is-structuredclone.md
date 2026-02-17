@@ -11,6 +11,8 @@ It is a method that creates a deep copy of a given value using the structured cl
 
 Before we go on structuredClone, let's learn about the differences between shallow copy and deep copy!
 
+---
+
 ## Shallow Copy vs Deep Copy
 
 There are 2 types of clone methods, shallow copy and deep copy. Let's see what are the differences between them.
@@ -245,11 +247,15 @@ cloned {
 }
 ```
 
+---
+
 ## Recap
 
 A shallow copy of an object means that the copy has the same references to the properties of the original object. As a result, if one of the properties at two levels deep is modified, both the original and the copy will have the same new value. On the other hand, in a deep copy, the copy does not share references with the original object. This means that if a deeply nested property is changed, only that particular object will be affected and not the other.
 
 It is advisable to use the `structuredClone()` method for creating a deep copy of an object, as it makes sure that the data types are preserved during the copying process. In contrast, using `JSON.parse(JSON.stringify(obj))` results in data type changes. If you prefer using Lodash, keep in mind that additional steps are required.
+
+---
 
 ## Resources
 
@@ -258,6 +264,8 @@ It is advisable to use the `structuredClone()` method for creating a deep copy o
 - [MDN Docs - Shallow copy](https://developer.mozilla.org/en-US/docs/Glossary/Shallow_copy)
 - [MDN Docs - Deep copy](https://developer.mozilla.org/en-US/docs/Glossary/Deep_copy)
 - [Lodash - clone() and cloneDeep()](https://lodash.com/docs/4.17.15#clone)
+
+---
 
 ## Thank you
 

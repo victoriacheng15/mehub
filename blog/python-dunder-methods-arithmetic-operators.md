@@ -26,6 +26,8 @@ There are also **unary operators** like `+x` or `-x`, which act on just one valu
 
 But these operators are more than just symbols. In Python, they're backed by special methods called **"dunder methods"**, short for "double underscore". These let you override and define what the operators actually *do* for your objects.
 
+---
+
 ## What are the Main Arithmetic Dunder Methods?
 
 Python defines a pair of dunder methods for most arithmetic operators:
@@ -42,6 +44,8 @@ Python defines a pair of dunder methods for most arithmetic operators:
 | `x @ y`   | `__matmul__`     | `__rmatmul__`     | Matrix multiply     |
 
 If Python evaluates x + y and x.**add**(y) returns NotImplemented, it will then try y.**radd**(x). This fallback mechanism allows custom classes to handle operations even when the left-hand side doesn't know how which is especially useful when mixing user-defined objects with built-in types.
+
+---
 
 ## NumberBox
 
@@ -203,6 +207,8 @@ print(+a)        # __pos__
 print(abs(a))    # __abs__
 ```
 
+---
+
 ## Recap
 
 - Python arithmetic operators (`+`, `-`, `*`, `/`, etc.) are powered by **dunder methods** like `__add__`, `__sub__`, and so on.
@@ -211,6 +217,8 @@ print(abs(a))    # __abs__
 - You can **overload** these methods in your own classes to define custom behavior.
 - Unary operators like `-x` or `abs(x)` also have corresponding dunder methods (`__neg__`, `__abs__`, etc.).
 - A class like `NumberBox` is a great way to practice and visualize how operator overloading works in Python.
+
+---
 
 ## Thank you
 

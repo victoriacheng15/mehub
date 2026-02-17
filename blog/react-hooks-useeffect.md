@@ -60,6 +60,8 @@ useEffect(() => {
 }, []);
 ```
 
+---
+
 ## What is the dependency array?
 
 ```js
@@ -181,6 +183,8 @@ export default App;
 
 </details>
 
+---
+
 ## Build your hook
 
 You can also define your hooks in separate files. These files should be in the `hooks` folder. The file name usually starts with `use` with a description. e.g. `useFetchApi` or `useFetchData` or a similar naming convention.
@@ -238,10 +242,14 @@ function Something() {
 export default Something;
 ```
 
+---
+
 ## Resources
 
 - [React docs - useEffect](https://beta.reactjs.org/apis/react/useEffect)
 - [How the useEffect Hook Works (with Examples)](https://daveceddia.com/useeffect-hook-examples/)
+
+---
 
 ## Thank you
 

@@ -17,6 +17,8 @@ function lexical() {
 
 In simpler terms, a closure allows a function to access variables from its outer function.
 
+---
+
 ## Example
 
 ```js
@@ -87,16 +89,22 @@ Each nested functions form a closure. When a closure is created, it maintains a 
 
 Closures allow the inner functions to access the variables they need from the outer scopes, even when those variables are not directly passed as arguments. This can be a powerful mechanism in JavaScript for encapsulating data and creating private variables or functions.
 
+---
+
 ## Recap
 
 Initially, understanding the concept of closure might seem challenging. However, once you observe the pattern, it becomes quite straightforward. An important characteristic of closure is that an outer function cannot access its own inner function(s), while an inner function can access its own outer function(s). For instance, the **`test3`** function access variables `a` and `b` from its outer functions, which are the `test` and `test2` functions. On the other hand, the `test` function cannot access variables `b` and `c` from its inner functions, which are the `test2` and `test3` functions.
 
 I hope the provided example helps to illustrate this concept effectively!
 
+---
+
 ## Resources
 
 - [MDN docs - Closure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 - [JS Info - Closure](https://javascript.info/closure)
+
+---
 
 ## Thank you
 

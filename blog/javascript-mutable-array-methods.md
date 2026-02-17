@@ -19,6 +19,8 @@ This is an interesting read, [If immutable objects are good, why do people keep 
 
 Anyway, let's see how each method works!
 
+---
+
 ## pop()
 
 _Poor mango milk tea, it will be alone after removing from the array._
@@ -37,6 +39,8 @@ console.log(removed); // 'mango milk tea'
 console.log(teas); // [ 'milk tea', 'green milk tea', 'coffee milk tea' ]
 ```
 
+---
+
 ## shfit()
 
 It looks like the milk tea will be in the same shoes as mango milk tea
@@ -54,6 +58,8 @@ console.log(shift); // milk tea
 console.log(teas); // [ 'green milk tea', 'coffee milk tea', 'mango milk tea' ]
 ```
 
+---
+
 ## push()
 
 _Gross, taro milk tea will be joined the line soon._
@@ -70,6 +76,8 @@ console.log(teas);
 // ['milk tea', 'green milk tea', 'coffee milk tea', 'mango milk tea', 'taro milk tea', 10, 20]
 ```
 
+---
+
 ## unshfit()
 
 _Wait, brown sugar milk tea, why are you cutting the line??_
@@ -85,6 +93,8 @@ teas.unshift("brown sugar milk tea");
 console.log(teas);
 // [ 'brown sugar milk tea', 'milk tea', 'green milk tea', 'coffee milk tea', 'mango milk tea']
 ```
+
+---
 
 ## reverse()
 
@@ -104,6 +114,8 @@ console.log("new", reversed);
 console.log("original", teas);
 // original [ 'mango milk tea', 'coffee milk tea', 'green milk tea', 'milk tea' ]
 ```
+
+---
 
 ## fill()
 
@@ -133,6 +145,8 @@ console.log("new", filled2);
 console.log("original", teas);
 // original [ 'milk tea', 'gone', 'gone', 'mango milk tea' ]
 ```
+
+---
 
 ## sort()
 
@@ -176,6 +190,8 @@ const descending = nums.sort((a, b) => {
 console.log("descending", descending); // descending [ 70, 10, 8, 5, 4, 2 ]
 ```
 
+---
+
 ## splice()
 
 _Oh no, green milk tea is gone! Where is mango milk tea?? Oh, there are 2 more new teas joined!_
@@ -210,11 +226,15 @@ console.log("2 more teas show up", teas);
 // ['milk tea', 'coffee milk tea', 'strawberry milk tea', 'taro milk tea', 'brown sugar milk tea']
 ```
 
+---
+
 ## Recap
 
 Keep in mind, these methods will mutate your array. If you need to keep the original array, make sure to copy the array with [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or [Array.from()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from) or [slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) before.
 
 I love bubble teas, which is why I used bubble teas as an example. 😆
+
+---
 
 ## Thank you
 

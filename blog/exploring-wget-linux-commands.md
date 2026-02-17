@@ -27,6 +27,8 @@ Example:
 wget https://example.com/file.zip
 ```
 
+---
+
 ## Options
 
 | Option | What It Does | Example |
@@ -41,6 +43,8 @@ wget https://example.com/file.zip
 | **`-i FILE`** | Download URLs from file | **`wget -i urls.txt`** |
 | **`-t N`** | Retry attempts (default=20) | **`wget -t 3 [URL]`** |
 | **`-T SEC`** | Timeout in seconds | **`wget -T 30 [URL]`** |
+
+---
 
 ## Common Use Case
 
@@ -98,11 +102,15 @@ wget --help
 man wget
 ```
 
+---
+
 ## Recap
 
 The `wget` command is an indispensable tool for downloading files from the command line. Whether you need to download single files, mirror entire websites, or automate downloads in scripts, `wget` provides a robust solution with many configuration options.
 
 Happy downloading! 💾🚀
+
+---
 
 ## Thank you
 

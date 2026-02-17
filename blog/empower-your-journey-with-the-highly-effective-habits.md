@@ -11,6 +11,8 @@ Published in 1989, Stephen Covey's "The 7 Habits of Highly Effective People" is 
 
 Covey's approach goes beyond techniques, urging readers to cultivate character and principles. Through examples and wisdom, the book offers a comprehensive guide for personal development, empowering individuals to navigate challenges and lead purposeful lives. It's not just a book but a transformative journey unlocking the full potential for a balanced existence. "The 7 Habits" remains a self-help cornerstone, providing a roadmap for lasting fulfillment and success.
 
+---
+
 ## The 7 Habits
 
 - **Be Proactive:**:
@@ -28,11 +30,15 @@ Covey's approach goes beyond techniques, urging readers to cultivate character a
 - **Sharpen the Saw:**
   - Renew and rejuvenate yourself regularly. Balance and improve your physical, mental, social/emotional, and spiritual well-being.
 
+---
+
 ## Recap
 
 The book is captivating, presenting the habits as practical tools for enhancing personal effectiveness. It highlights the importance of being proactive, emphasizing the avoidance of waiting for others and the prompt initiation of tasks. Notably, the "think win-win" habit promotes the search for mutually beneficial solutions, fostering collaboration. The stress on empathetic listening and understanding before expressing opinions adds a vital interpersonal aspect.
 
 Irrespective of your role, the author employs real-life examples to illustrate how these habits can elevate your leadership or teamwork skills. I highly recommend picking up this book for valuable insights and practical guidance.
+
+---
 
 ## Thank you
 

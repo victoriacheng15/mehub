@@ -34,6 +34,8 @@ print(add(3, 5))
 # Output: 8
 ```
 
+---
+
 ## Benefits of Using Lambda Functions
 
 Lambda functions offer several benefits that make them valuable in specific scenarios:
@@ -72,6 +74,8 @@ Lambda functions offer several benefits that make them valuable in specific scen
 
 5. **Readability in Specific Contexts**: In contexts where the logic is straightforward and the function's purpose is immediately clear, lambda functions can enhance readability by reducing the amount of boilerplate code.
 
+---
+
 ## When to Avoid Lambda Functions
 
 Despite their benefits, lambda functions are not always the best choice. It's important to use them judiciously. Here are a few scenarios where you might want to avoid lambda functions:
@@ -80,13 +84,19 @@ Despite their benefits, lambda functions are not always the best choice. It's im
 - **Readability Concerns**: Overusing lambda functions can lead to code that's harder to read and understand, especially for those unfamiliar with the concept.
 - **Multiple Expressions**: Lambda functions are limited to a single expression. For more complex operations requiring multiple statements, a standard function is necessary.
 
+---
+
 ## Recap
 
 Lambda functions in Python provide a concise and efficient way to create small, anonymous functions for temporary use. They are useful for functional programming techniques and for simplifying code where a simple function is needed. By understanding their syntax and benefits, you can leverage lambda functions to write more concise and readable code.
 
+---
+
 ## Resources
 
 [Lambda Functions in Python](https://www.freecodecamp.org/news/lambda-functions-in-python/)
+
+---
 
 ## Thank you
 

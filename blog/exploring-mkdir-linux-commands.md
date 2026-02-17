@@ -9,6 +9,8 @@ tags: ["linux"]
 
 `mkdir` stands for "make directory". It is a command-line utility in Unix and Unix-like operating systems used to create directories (folders) within the file system.
 
+---
+
 ## How to use `mkdir` with examples
 
 - Creating one directory:
@@ -50,6 +52,8 @@ Additionally, you can use the `man` command to view detailed information about `
 ```bash
 man mkdir
 ```
+
+---
 
 ## Thank you
 

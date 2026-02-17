@@ -103,9 +103,13 @@ FROM customers
 WHERE city = 'New York' OR city = 'Los Angeles';
 ```
 
+---
+
 ## Recap
 
 The `WHERE` clause allows you to filter records and retrieve only the data that meets specific criteria. By using different operators like `=`, `IN`, `LIKE`, and combining conditions with `AND` and `OR`, you can create powerful and precise queries that improve the efficiency of your data retrieval process.
+
+---
 
 ## Resources
 
@@ -120,6 +124,8 @@ The `WHERE` clause allows you to filter records and retrieve only the data that 
 [PostgreSQL IN](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-in/)
 
 [PostgreSQL LIKE](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-like/)
+
+---
 
 ## Thank you
 

@@ -57,10 +57,14 @@ CI/CD Resources:
 - [What is CI/CD? - GitLab](https://about.gitlab.com/topics/ci-cd/)
 - [What Is CI/CD? Definition, Process, Benefits, and Best Practices for 2022](https://www.spiceworks.com/tech/devops/articles/what-is-ci-cd/)
 
+---
+
 ## Books I’ve Read
 
 - The Mistborn Trilogy by Brandon Sanderson:
   - In a bleak, ash-covered world ruled by an immortal tyrant, a young thief named Vin joins a rebellion led by the charismatic Kelsier. Discovering her rare magical abilities, she helps challenge the Lord Ruler’s oppressive regime. As secrets of the past and the true nature of their world unravel, Vin and her allies face betrayal, power struggles, and the rise of a dark, ancient force threatening all existence.
+
+---
 
 ## Thank you
 

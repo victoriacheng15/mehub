@@ -63,15 +63,21 @@ SELECT DISTINCT customer_id, product_id
 FROM orders;
 ```
 
+---
+
 ## Recap
 
 The `SELECT` statement is fundamental to querying databases, while the `DISTINCT` keyword helps filter the results by removing duplicate values. Whether you're pulling large datasets or working with unique customer information, understanding when and how to use `SELECT` and `SELECT DISTINCT` will make your queries more efficient and your data cleaner.
+
+---
 
 ## Resources
 
 [PostgreSQL SELECT](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-select/)
 
 [PostgreSQL SELECT DISTINCT](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-select-distinct/)
+
+---
 
 ## Thank you
 

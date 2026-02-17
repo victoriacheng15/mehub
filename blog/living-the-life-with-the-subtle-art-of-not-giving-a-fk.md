@@ -9,6 +9,8 @@ tags: ["growth"]
 
 `The Subtle Art of Not Giving a Fk` by Mark Manson is a refreshingly blunt and practical guide to living an authentic and fulfilling life. With an irreverent tone, Manson challenges societal norms and offers unconventional wisdom on happiness and success. Through candid anecdotes and thought-provoking insights, he provides actionable advice on prioritizing what truly matters and letting go of the rest.
 
+---
+
 ## The Tips That I resonated with
 
 - Clarify your values:
@@ -28,6 +30,8 @@ tags: ["growth"]
 - Focus on the present moment:
   - Shift your attention to the present instead of dwelling on the past or worrying excessively about the future. Practice mindfulness and engage fully in what you are doing right now.
 
+---
+
 ## Recap
 
 I think this book is quite interesting from the author’s perspective. And I personally read this book just because the title is quite interesting. Based on the book, you decide the path that you want to continue walking based on your core values. As you walk on the path, there will be many doors (struggles) for you to decide on which door to open and you won't know what is it on the other side. If you failed, that is all right, and learn from it. There will be many failures either way.
@@ -36,9 +40,13 @@ From this book, two lessons I grasped are the significance of `let go of externa
 
 That being says, if you crave something distinct and a refreshing outlook on personal growth and happiness, while also being open to questioning societal norms and cultural expectations, then this book is for you.
 
+---
+
 ## Resources
 
 [The Subtle Art of Not Giving a F\*ck by Mark Manson](https://markmanson.net/books/subtle-art)
+
+---
 
 ## Thank you
 

@@ -14,6 +14,8 @@ Also, TWO things are hoisted
 - function declarations
 - variable declarations
 
+---
+
 ## Function declarations
 
 This was the question that came up in my Anki review. The question was `Explain the different between the 2 functions below`
@@ -72,6 +74,8 @@ let greeting = function () {
 };
 ```
 
+---
+
 ## Variable declarations
 
 Let's run the code below. We know this will log the `a` value for sure.
@@ -97,17 +101,23 @@ console.log(a);
 let a = 10;
 ```
 
+---
+
 ## Recap
 
 Hoisting is a tricky concept to understand and can be confused if `var` was used instead of `let` and `const`.
 
 Let's think this way, books have sequels. e.g. Harry Potter books have 1 to 7 sequels. So if you are trying to read the 2nd book instead of the first book, it would not make sense, and you are skipping details and events that were written in the first book. To understand the story, you would need to read these books in the order. It is similar to How JavaScript reads your code from top to bottom. Variables or functions need to be declared before you can call them. And it would make sense. Of course, JavaScript is weird in its own way, like you can call the function declarations before the functions are defined and `var` was used.
 
+---
+
 ## Resources
 
 - [Wes Bos's JavaScript - Hoisting](https://wesbos.com/javascript/03-the-tricky-bits/hoisting)
 - [JavaScript Info - The old "var"](https://javascript.info/var)
 - [Web Dev Simplified - Learn JavaScript Hoisting In 5 Minutes](https://www.youtube.com/watch?v=EvfRXyKa_GI)
+
+---
 
 ## Thank you
 

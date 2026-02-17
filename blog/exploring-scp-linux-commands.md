@@ -34,6 +34,8 @@ This command copies `myfile.txt` from your local machine to the `/home/user/`
 | `-i` | Use a specific SSH private key for authentication. |
 | `-l` | Limit bandwidth usage (in Kbit/s). |
 
+---
+
 ## Common Use Cases
 
 ### 1. Copying a File from Local to Remote
@@ -135,6 +137,8 @@ If you authenticate via SSH keys, specify the private key with `-i`:
 scp -i ~/.ssh/id_rsa file.txt user@remote-server:/home/user/
 ```
 
+---
+
 ## Additional Help
 
 To see all available SCP options, check the manual:
@@ -145,11 +149,15 @@ scp --help
 man scp
 ```
 
+---
+
 ## Recap
 
 The **SCP command** is an essential tool for securely transferring files in Linux. Whether you're moving data between local and remote machines or automating backups, SCP provides a fast, encrypted, and reliable method for file transfers. With its straightforward syntax and powerful options, mastering SCP will make managing remote files much easier.
 
 **Happy copying!** 🚀
+
+---
 
 ## Thank you
 

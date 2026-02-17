@@ -13,6 +13,8 @@ One important process in TCP is the **3-way handshake**. This is a way to create
 
 For more context on TCP and how it compares to UDP, check out the post [Understanding the Difference Between TCP and UDP](https://victoriacheng15.vercel.app/posts/understanding-the-difference-between-tcp-and-udp).
 
+---
+
 ## Steps of the TCP Three-Way Handshake
 
 The three-way handshake consists of three key steps: **SYN**, **SYN-ACK**, and **ACK**. Each step plays a crucial role in building a reliable connection between two devices.
@@ -37,6 +39,8 @@ Example => Client sends: `ACK (Ack=301)`
 
 After these three steps, the connection is officially open, and data can begin flowing in both directions. If any part of this process fails, the handshake will be retried, ensuring a reliable connection is only established when both sides are ready.
 
+---
+
 ## Why is the TCP Three-Way Handshake Important?
 
 The three-way handshake serves as the foundation for reliable communication over the Internet. Here’s why it’s so important:
@@ -45,6 +49,8 @@ The three-way handshake serves as the foundation for reliable communication over
 - **Connection Integrity**: It verifies that both sides are ready and able to communicate before any actual data is sent, preventing wasted resources on failed transmissions.
 
 By understanding these key points, we can appreciate how the TCP 3-way handshake creates a stable and reliable foundation for internet communications.
+
+---
 
 ## Recap
 
@@ -59,11 +65,15 @@ Imagine it like two people agreeing to meet for coffee:
 
 Similarly, the TCP 3-way handshake ensures both devices are aligned and ready to exchange data. Like in the coffee meetup, this process ensures everything is agreed upon before communication starts, making the internet reliable and orderly.
 
+---
+
 ## Resources
 
 [What Is a Three-Way Handshake? by Coursera](https://www.coursera.org/articles/three-way-handshake)
 
 [What is a TCP 3-Way Handshake? by Think Cloudly](https://thinkcloudly.com/blogs/cyber-security/tcp-3-way-handshake/)
+
+---
 
 ## Thank you
 

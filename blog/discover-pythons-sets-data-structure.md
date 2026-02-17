@@ -19,9 +19,13 @@ my_set = {1, 2, 3, 4, 5}
 another_set = set([1, 2, 3, 4, 5])
 ```
 
+---
+
 ## How do Sets Work?
 
 Internally, Python sets are implemented using a data structure called a hash table, which allows for fast lookups, insertions, and deletions. When you add an element to a set, Python calculates the hash value of the element and stores it in a way that allows for quick retrieval. This makes operations like checking membership or performing set operations (such as union, intersection, and difference) very efficient, even for large sets.
+
+---
 
 ## Set Methods
 
@@ -242,6 +246,8 @@ set2 = {3, 4, 5}
 set1.update(set2)
 print(set1)  # Output: {1, 2, 3, 4, 5}
 ```
+
+---
 
 ## Thank you
 

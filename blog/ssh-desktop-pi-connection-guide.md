@@ -19,6 +19,8 @@ This will display the PI’s IP address.
 
 Note: this guide is tailored for Linux desktop users, with a focus on Ubuntu. Whether you're a seasoned Linux user or just starting, follow along to discover how to enhance your Raspberry Pi experience with remote desktop and SSH connections!
 
+---
+
 ## Setting Up Remote Desktop Access for Pi
 
 - Install `xrdp` on the Raspberry PI by typing `sudo apt install xrdp`
@@ -30,6 +32,8 @@ Note: this guide is tailored for Linux desktop users, with a focus on Ubuntu. Wh
 - Click save and connect
 
 For a visual walkthrough, you can consult this guide on [RDP connection using Remmina](https://remmina.org/remmina-rdp/).
+
+---
 
 ## SSH for Terminal Access to Pi
 
@@ -46,9 +50,13 @@ Additionally, I discovered the ability to transfer files from the host computer 
 scp path/file.txt pi_username@ip_address:path/file.txt
 ```
 
+---
+
 ## Resources
 
 [Remmina](https://remmina.org/)
+
+---
 
 ## Thank you
 

@@ -20,6 +20,8 @@ This is your **first time** at the grocery store. You are not familiar with the 
 
 However, the next time you go to the store, you already know where things are and you can just quickly grab what you need and then check out. This is similar to the component re-renders, and it **remembers** and **reuse** the values that were calculated before. The expensive calculation was skipped here!
 
+---
+
 ## Advantages and Disadvantages
 
 Advantages:
@@ -33,6 +35,8 @@ Disadvantages:
 - Make your code more complex by requiring you to be mindful of the inputs and memoized computation
 - Can lead to stale data in the cache if not used carefully
 - Not a good fit for small or cheap computations
+
+---
 
 ## Example
 
@@ -112,6 +116,8 @@ const expensiveCalculation = (num) => {
 };
 ```
 
+---
+
 ## Recap
 
 The useMemo hook is to remember the calculated value between renders. It is a way to optimize the performance of the React apps by caching the result of the expensive calculation and reusing the unchanged calculated value.
@@ -120,11 +126,15 @@ If you have a difficult time understanding this hook, remember the "grocery stor
 
 Check the resources below if you would like to see more examples.
 
+---
+
 ## Resources
 
 - [useMemo - React Docs (beta)](https://beta.reactjs.org/reference/react/useMemo)
 - [Understanding useMemo and useCallback by Josh Comeau](https://www.joshwcomeau.com/react/usememo-and-usecallback/)
 - [useMemo Explained | React Hooks by Dave Gray](https://www.youtube.com/watch?v=oR8gUi1LfWY&list=PL0Zuz27SZ-6PSdiQpSxO9zxvB0ns6m3ta&index=2)
+
+---
 
 ## Thank you
 

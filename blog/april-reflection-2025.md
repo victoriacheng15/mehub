@@ -59,6 +59,8 @@ Here are some articles I found interesting and informative:
 - [I started ‘vibe coding’ my own apps with AI and I’m loving it](https://www.pcworld.com/article/2660539/i-started-vibe-coding-with-ai-and-im-loving-it.html)
 - [The Problem with “Vibe Coding”](https://dylanbeattie.net/2025/04/11/the-problem-with-vibe-coding.html)
 
+---
+
 ## Books I’ve Read
 
 Sleep: The Myth of 8 hours
@@ -76,6 +78,8 @@ I will Teach you how to be rich
 The One Thing
 
 - Challenges multitasking and diluted focus by advocating extreme prioritization of your single most impactful task. Details how "focusing question" (What's the ONE Thing I can do to make everything else easier?) drives extraordinary results in work and life. Offers practical strategies to eliminate distractions, build productivity habits, and achieve mastery through sequential focus.
+
+---
 
 ## Thank you
 

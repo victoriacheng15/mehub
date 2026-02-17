@@ -23,6 +23,8 @@ Output:
 """
 ```
 
+---
+
 ## The for Loop
 
 The `for` loop is used to iterate over a sequence of elements such as lists, tuples, sets, or dictionaries. It executes a block of code for each item in the sequence.
@@ -122,6 +124,8 @@ Fruit Values: red
 """
 ```
 
+---
+
 ## The while Loop
 
 The `while` loop in Python repeats a block of code as long as a specified condition remains true. It's particularly useful when the number of iterations is unknown beforehand.
@@ -170,6 +174,8 @@ index: 1, key: banana
 index: 2, key: cherry
 """
 ```
+
+---
 
 ## Loop Control Statements
 
@@ -226,11 +232,15 @@ Watermelon is not found.
 """
 ```
 
+---
+
 ## Resources
 
 [Python Docs - Ranges](https://docs.python.org/3/library/stdtypes.html#range)
 
 [Python Docs - 5.6 Loop Techniques](https://docs.python.org/3/tutorial/datastructures.html#looping-techniques)
+
+---
 
 ## Thank you
 

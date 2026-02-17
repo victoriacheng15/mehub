@@ -8,6 +8,8 @@ tags: ["backend"]
 
 The `INNER JOIN` or `JOIN` statement in SQL is used to combine rows from two or more tables based on a related column. It is essential for retrieving data spread across multiple tables in a relational database.
 
+---
+
 ## Basics of the `JOIN` Syntax
 
 The `JOIN` command helps you create meaningful relationships between tables. You can specify the matching condition using the `ON` or `USING` clause, or rely on a `NATURAL JOIN` to match columns with the same name automatically.
@@ -92,6 +94,8 @@ NATURAL JOIN departments;
 
 In this example, the `NATURAL JOIN` automatically matches the `department_id` column in both tables and retrieves the relevant data.
 
+---
+
 ## Common Considerations When Using `JOIN`
 
 ### Be Specific with Column Names
@@ -123,13 +127,19 @@ ON employees.department_id = departments.department_id
 LIMIT 5;
 ```
 
+---
+
 ## Recap
 
 The `JOIN` command is a powerful way to combine data from multiple tables in SQL. Whether you use `JOIN ON`, `JOIN USING`, or `NATURAL JOIN`, understanding the syntax and common considerations ensures accurate and efficient queries. Always test your queries and choose the appropriate `JOIN` type for your data relationships.
 
+---
+
 ## Resources
 
 [PostgreSQL INNER JOIN](https://neon.tech/postgresql/postgresql-tutorial/postgresql-inner-join)
+
+---
 
 ## Thank you
 

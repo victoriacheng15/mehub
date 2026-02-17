@@ -14,6 +14,8 @@ Here’s how it works:
 - If the original value of the target variable is **truthy** (i.e., it’s not `false`, `0`, `null`, `undefined`, `NaN`, or an empty string `""`), then nothing happens. The target variable keeps its original value.
 - If the original value of the target variable is **falsy** (i.e., it is one of the following: `false`, `0`, `null`, `undefined`, `NaN`, or an empty string `""`), then the target variable is assigned the value of the source value.
 
+---
+
 ## Examples
 
 - Example with a number:
@@ -52,6 +54,8 @@ arr ||= [1, 2, 3];
 console.log(arr); // Output: [1, 2, 3]
 ```
 
+---
+
 ## Recap
 
 The logical OR assignment is a handy tool that assigns a new value to a variable if its original value is falsy. For instance, if a string is empty or a number is zero, the operator will assign a new value to them/ However, if these variables already hold truthy values, their values will remain unchanged.
@@ -60,9 +64,13 @@ In JavaScript, empty arrays (`[]`) and empty objects (`{}`) are seen as “truth
 
 In essence, if the original value of a variable is either `null`, `undefined`, `false`, `0`, or an empty string (`""`), then the variable will be assigned a new value.
 
+---
+
 ## Resources
 
 [MDN Docs - Logical OR assignment (||=)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
+
+---
 
 ## Thank you
 

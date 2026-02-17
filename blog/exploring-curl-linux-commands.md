@@ -34,6 +34,8 @@ curl https://example.com
 
 This will fetch the content of the webpage and output it to the terminal.
 
+---
+
 ## Options
 
 | Option         | What It Does                                  | Example                                      |
@@ -47,6 +49,8 @@ This will fetch the content of the webpage and output it to the terminal.
 | `-u USER:PASS` | Use basic auth                                | `curl -u user:pass [URL]`                    |
 | `-s`           | Silent mode (no output except result)         | `curl -s [URL]`                              |
 | `-I`           | Show only headers                             | `curl -I [URL]`                              |
+
+---
 
 ## Common Use Cases
 
@@ -98,6 +102,8 @@ curl -s -O https://example.com/largefile.iso
 curl -I https://example.com
 ```
 
+---
+
 ## Additional Help
 
 To see all available options:
@@ -108,6 +114,8 @@ curl --help
 man curl
 ```
 
+---
+
 ## Recap
 
 The **curl** command is a powerful, flexible tool for transferring data over a variety of protocols. Whether you need to download files, interact with APIs, upload data, or troubleshoot HTTP requests, curl provides the control and options to handle these tasks efficiently.
@@ -117,6 +125,8 @@ By mastering curl, you’ll improve your ability to automate web interactions an
 Happy curling! 🌐🚀
 
 ##
+
+---
 
 ## Thank you
 

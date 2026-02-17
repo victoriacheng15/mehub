@@ -22,6 +22,8 @@ Here's a breakdown of each part:
 - **iterable**: This is the collection of items you want to iterate over, such as a _list_, _tuple_, or _range_.
 - **if condition (optional)**: This part allows you to filter the items based on a condition. Only items for which the condition evaluates to True will be included in the new list
 
+---
+
 ## For Loop vs List Comprehension
 
 We'll compare the traditional for loop with the shorter list comprehension method. Using examples, we'll show how each one makes a list of numbers from 0 to 4.
@@ -46,6 +48,8 @@ numbers = [num for num in range(5)]
 print(numbers)
 # Output: [0, 1, 2, 3, 4]
 ```
+
+---
 
 ## Conditonals in List Comprehension
 
@@ -75,6 +79,8 @@ To summarize:
 
 - When using only an **if condition**, it comes **after** the for loop expression because it serves as a filter to determine which items from the iterable should be included in the new list.
 - When using **if-else**, it comes **before** the for loop expression because it involves transforming each item based on a condition.
+
+---
 
 ## Nested List
 
@@ -118,6 +124,8 @@ In this code:
 - The outer loop iterates over the starting numbers of each sublist (1, 4, and 7).
 - Inside the list comprehension, another loop generates each sublist by iterating over the next 3 numbers starting from the current start value.
 
+---
+
 ## Flatten List
 
 ```python
@@ -131,11 +139,15 @@ print(flattened_list)
 
 In this example, the list comprehension iterates over each sublist in the nested list (`for sublist in nested_list`) and then iterates over each element in the sublist (`for num in sublist`). This results in a flattened list containing all elements from the nested list.
 
+---
+
 ## Resources
 
 [10 Python Comprehensions You SHOULD Be Using by Tech with Tim](https://www.youtube.com/watch?v=twxE0dEp3qQ)
 
 [How to use list comprehension in Python by 2MinutesPy](https://www.youtube.com/watch?v=a3eE5kslhek)
+
+---
 
 ## Thank you
 

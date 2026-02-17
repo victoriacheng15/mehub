@@ -16,6 +16,8 @@ The hook takes 2 parameters: `function`, and `dependencies`.
 
 Imagine you have a toolbox containing a hammer, a screwdriver, and a wrench that are all in brand-new condition. The toolbox represents the `useCallback` hook, which keeps track of the condition of these tools. Every time you use a tool, its condition slowly degrades, but you don't have to replace the tool right away. For example, you used the hammer many times and it is wearing out faster than the other 2 tools. One day, you replaced the old and worn-out hammer with a brand-new hammer. This is when the toolbox will "re-render" because the hammer dependency is changed. This is similar to how a component will only re-render if one of its dependencies has changed, as determined by the `useCallback` hook.
 
+---
+
 ## Why React re-render?
 
 React re-renders whenever its state or value changes. Remember how JavaScrip evaluates equals for string, number, array, object, and function? As long as, the state or value reminds the same, re-render should not happen, however, that is not the case for arrays, objects, and functions.
@@ -38,6 +40,8 @@ function ff2() {
 
 console.log("Function comparion", ff1 === ff2); // false
 ```
+
+---
 
 ## The difference between with and without useCallback
 
@@ -85,15 +89,21 @@ function App() {
 }
 ```
 
+---
+
 ## Recap
 
 The `useCallback` hook and the `useMemo` hook have similar functionality in preventing unnecessary re-renders and improving the performance of React apps. However, it's not necessary to wrap all functions with useCallback and it depends on the app structure and the specific use case. A good practice is to use React DevTools to inspect which components are causing performance issues, and then determine if `useCallback` or `useMemo` would be an appropriate solution in those cases.
+
+---
 
 ## Resources
 
 - [useCallback - React Docs (beta)](https://beta.reactjs.org/reference/react/useCallback)
 - [Understanding useMemo and useCallback by Josh Comeau](https://www.joshwcomeau.com/react/usememo-and-usecallback/)
 - [useCallback Explained | React Hooks by Dave Gray](https://www.youtube.com/watch?v=FB_kOSHk1DM&list=PL0Zuz27SZ-6PSdiQpSxO9zxvB0ns6m3ta&index=1&t=2s)
+
+---
 
 ## Thank you
 

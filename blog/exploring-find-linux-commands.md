@@ -23,6 +23,8 @@ find /home/user -name "*.txt"
 
 This command searches for all `.txt` files in the `/home/user` directory.
 
+---
+
 ## Options
 
 | Option  | **Description**                                                                 |
@@ -32,6 +34,8 @@ This command searches for all `.txt` files in the `/home/user` directory.
 | -type   | Specify the type of file: `f` for files, `d` for directories                    |
 | -size   | Search for files of a specific size (e.g., `+100k` for files larger than 100KB) |
 | -mtime  | Search for files modified within a certain number of days                       |
+
+---
 
 ## Common Use Cases
 
@@ -103,9 +107,13 @@ man find
 
 This will pull up the manual for the `find` command, packed with details and examples.
 
+---
+
 ## Recap
 
 The `find` command is a powerful ally in your Linux toolkit, perfect for searching for files and directories based on a variety of criteria. Whether you're a seasoned pro or just getting started with Linux, mastering `find` will save you time and effort in navigating your filesystem. So next time you need to hunt down a file, just remember: `find` is your friend!
+
+---
 
 ## Thank you
 

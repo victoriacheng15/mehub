@@ -18,6 +18,8 @@ zip(*iterables)
 - `*iterables`: One or more iterable objects.
 - Returns a `zip` object—an iterator of tuples.
 
+---
+
 ## Basic Example
 
 Here’s a simple example that pairs names with ages:
@@ -37,6 +39,8 @@ print(list(zipped))
 ```
 
 Each person’s name is matched with their corresponding age, creating a list of tuples.
+
+---
 
 ## Using zip() in a Loop
 
@@ -60,6 +64,8 @@ cherry: $2.0
 
 This avoids manual index management and keeps the code clean and readable.
 
+---
+
 ## Handling Iterables of Different Lengths
 
 When the input sequences have different lengths, `zip()` stops when the shortest one ends:
@@ -79,6 +85,8 @@ print(result)
 ```
 
 The extra items in `numbers` are ignored. To include all elements, consider using `itertools.zip_longest()`.
+
+---
 
 ## Zipping More Than Two Iterables
 
@@ -101,6 +109,8 @@ Bob: 90 (A)
 Charlie: 78 (C)
 ```
 
+---
+
 ## Unzipping with zip()
 
 You can reverse the `zip()` operation using the unpacking operator (`*`):
@@ -114,6 +124,8 @@ print(numbers)  # (1, 2, 3)
 ```
 
 This is helpful when you need to extract original sequences from zipped data.
+
+---
 
 ## Practical Use Case: Creating Dictionaries
 
@@ -135,6 +147,8 @@ print(person)
 
 This pattern is widely used in data processing and configuration mapping.
 
+---
+
 ## Conclusion
 
 The `zip()` function is a concise and powerful feature in Python for working with multiple sequences. It simplifies pairing, looping, and transforming data across lists, tuples, and other iterables.
@@ -147,6 +161,8 @@ The `zip()` function is a concise and powerful feature in Python for working wit
 - Great for loops, dictionaries, and data alignment.
 
 Use `zip()` whenever you need to work with parallel data—it’s efficient, readable, and deeply Pythonic.
+
+---
 
 ## Thank you
 

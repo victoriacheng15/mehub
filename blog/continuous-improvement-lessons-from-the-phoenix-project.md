@@ -9,6 +9,8 @@ tags: ["growth"]
 
 This book is a compelling business novel that follows the journey of IT manager Bill Palmer as he takes on the daunting task of saving a failing company's troubled IT department. With the company on the verge of collapse due to constant system outages and dissatisfied customers, Bill embraces the principles of DevOps and embarks on a transformative mission to improve operations. Through the power of collaboration, automation, and a culture of continuous improvement, Bill strives to resurrect the company from the ashes and bring about a profound shift in how IT can drive business success.
 
+---
+
 ## The Top 4 Concepts
 
 **The Three Ways:** The book introduces the concept of the Three Ways, which are foundational principles of DevOps thinking. They include understanding the entire value stream, creating fast feedback loops, and fostering a culture of continuous experimentation and learning.
@@ -27,6 +29,8 @@ This book is a compelling business novel that follows the journey of IT manager 
 
 - Manual processes are prone to mistakes, which can result in time wastage and system slowdown if even a single input is done differently. Automating manual and repetitive tasks is generally advisable, but it is important to initially run the process manually to observe its overall functionality. This allows for assessing the process and ensuring its effectiveness before implementing automation.
 
+---
+
 ## Recap
 
 After reading this book, it is crazy to see how each team had its disjointed processes and operated independently, which resulted in a sluggish and ineffective system. However, everything changed when Bill introduced the teaching from Erik. This prompted a deeper examination of how to improve and standardize processes throughout the company.
@@ -37,10 +41,14 @@ This book aligns well with my knowledge of Lean Six Sigma methodologies, incorpo
 
 If you're looking for an engaging read that highlights the remarkable outcomes of process standardization and automation of mundane tasks, then this book is a must-read. It offers valuable insights into the transformative power of streamlining operations and eliminating repetitive work, providing a glimpse into the exciting possibilities that emerge from such improvements.
 
+---
+
 ## Resources
 
 - [The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win on goodreads](https://www.goodreads.com/en/book/show/17255186)
 - [The Phoenix Project: 10 Minute Summary](https://www.runn.io/blog/the-phoenix-project-summary)
+
+---
 
 ## Thank you
 

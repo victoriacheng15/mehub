@@ -28,6 +28,8 @@ print(my_list2[0])  # Output: 1
 print(my_list2[-1]) # Output: 5
 ```
 
+---
+
 ## Python List Methods
 
 - append(): Adds an item to the end of the list
@@ -146,6 +148,8 @@ print(fruits)
 # Output: ["apple", "banana", "orange"]
 ```
 
+---
+
 ## Extras
 
 - Differences between `append()` and `extend()` when adding a list as an item:
@@ -183,9 +187,13 @@ print(nums)
 # Output: [1, 4, 9, 16, 25]
 ```
 
+---
+
 ## Resources
 
 [5.1. More on Lists - Python docs](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
+
+---
 
 ## Thank you
 
