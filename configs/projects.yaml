@@ -8,7 +8,7 @@ projects:
       - Helm
       - OpenTelemetry Collector
       - Prometheus
-      - Grafana / Loki / Alloy / Tempo
+      - Grafana / Loki / Tempo
       - PostgreSQL (TimescaleDB)
   - title: "Cover Craft"
     shortDescription: "Serverless image generation service architected on Azure Functions & Next.js. Enforces design consistency via shared full-stack validation, automated WCAG compliance, and privacy-first telemetry."

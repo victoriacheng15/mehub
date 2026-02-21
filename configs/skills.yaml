@@ -6,15 +6,13 @@ skills:
     icon: "python.svg"
   - name: "TypeScript"
     icon: "typescript.svg"
-  - name: "C++ (In Progress)"
-    icon: "cpp.svg"
 
   # Platform & DevOps & Cloud
   - name: "Kubernetes (k3s)"
     icon: "kubernetes.svg"
   - name: "Helm"
     icon: "helm.svg"
-  - name: "Grafana / Loki / Alloy / Tempo"
+  - name: "Grafana / Loki / Tempo"
     icon: "grafana.svg"
   - name: "Prometheus"
     icon: "prometheus.svg"
