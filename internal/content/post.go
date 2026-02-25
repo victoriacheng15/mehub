@@ -24,10 +24,16 @@ type Frontmatter struct {
 	Draft       bool      `yaml:"draft"`
 }
 
+type RelatedPost struct {
+	Title string
+	Slug  string
+}
+
 type Post struct {
 	Frontmatter
-	Slug    string
-	Content string
+	Slug         string
+	Content      string
+	RelatedPosts []RelatedPost
 }
 
 type ContentData struct {
@@ -128,20 +134,67 @@ func ProcessPosts(posts []Post) *ContentData {
 	tagMap := make(map[string]bool)
 	var archiveYears []int
 
-	for _, post := range posts {
+	for i := range posts {
 		// Tags grouping
-		for _, tag := range post.Tags {
+		for _, tag := range posts[i].Tags {
 			tagMap[tag] = true
-			data.PostsByTag[tag] = append(data.PostsByTag[tag], post)
+			data.PostsByTag[tag] = append(data.PostsByTag[tag], posts[i])
 			data.TagCounts[tag]++
 		}
 
 		// Year grouping
-		year := post.Date.Year()
+		year := posts[i].Date.Year()
 		if len(data.PostsByYear[year]) == 0 {
 			archiveYears = append(archiveYears, year)
 		}
-		data.PostsByYear[year] = append(data.PostsByYear[year], post)
+		data.PostsByYear[year] = append(data.PostsByYear[year], posts[i])
+	}
+
+	// Calculate related posts via tag intersection
+	for i := range data.Posts {
+		tagSet := make(map[string]bool)
+		for _, tag := range data.Posts[i].Tags {
+			tagSet[tag] = true
+		}
+
+		type scoring struct {
+			idx   int
+			score int
+		}
+		var scores []scoring
+
+		for j := range data.Posts {
+			if i == j {
+				continue // Skip self
+			}
+			score := 0
+			for _, tag := range data.Posts[j].Tags {
+				if tagSet[tag] {
+					score++
+				}
+			}
+			if score > 0 {
+				scores = append(scores, scoring{idx: j, score: score})
+			}
+		}
+
+		// Sort related matches descending by shared tags. Tie-breaker is date (which inherently sorts by array index since GetPosts sorts date desc)
+		sort.SliceStable(scores, func(a, b int) bool {
+			return scores[a].score > scores[b].score
+		})
+
+		// Take top 3 max
+		maxRelated := 3
+		if len(scores) < maxRelated {
+			maxRelated = len(scores)
+		}
+
+		for _, s := range scores[:maxRelated] {
+			data.Posts[i].RelatedPosts = append(data.Posts[i].RelatedPosts, RelatedPost{
+				Title: data.Posts[s.idx].Title,
+				Slug:  data.Posts[s.idx].Slug,
+			})
+		}
 	}
 
 	for tag := range tagMap {
