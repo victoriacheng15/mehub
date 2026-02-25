@@ -7,6 +7,8 @@ tags: ["monthly-log"]
 
 ## The 2024 Year in Review
 
+---
+
 ## What is Reflecting on 2024?
 
 In this post, we will explore **Reflecting on 2024**. - Published blog posts - 90

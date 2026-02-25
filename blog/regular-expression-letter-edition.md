@@ -7,6 +7,8 @@ tags: ["javascript"]
 
 ## 😬 What is Regular Expression? 😬
 
+---
+
 ## What is Letter Edition?
 
 In this post, we will explore **Letter Edition**. What are regular expressions? They are patterns that are used to match characters in provided strings.

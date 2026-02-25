@@ -7,6 +7,8 @@ tags: ["growth"]
 
 ## Who Am I?
 
+---
+
 ## What is My Journey into the Tech?
 
 In this post, we will explore **My Journey into the Tech**. I have written a couple of blogs, without an intro myself blog. Suppose, it is never too late, as I always say!

@@ -7,6 +7,8 @@ tags: ["platform"]
 
 ## 🧠 Understanding High Availability
 
+---
+
 ## What is What Is High Availability?
 
 In this post, we will explore **What Is High Availability**. **High Availability (HA)** means designing systems to stay online and accessible **as much as possible**, even when parts of the system fail.  

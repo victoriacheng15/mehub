@@ -7,6 +7,8 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection
 
+---
+
 ## What is November Reflection 2024?
 
 In this post, we will explore **November Reflection 2024**. It’s the last month of the year, and 2024 is quickly coming to a close! It’s not quite time to look back on everything just yet, but it’s a clear reminder that 2025 is right around the corner. December brings that unmistakable sense of nearing the finish line, a gentle nudge to wrap up the year strong and prepare for what’s to come in just a few short weeks.”

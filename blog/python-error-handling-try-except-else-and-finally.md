@@ -7,6 +7,8 @@ tags: ["python"]
 
 ## Intro to try, except, else, and finally in Python
 
+---
+
 ## What is try, except, else, and finally?
 
 In this post, we will explore **try, except, else, and finally**. Error handling is essential for writing reliable Python programs. Python offers several ways to manage runtime errors. One of the most powerful methods is using `try`, `except`, `else`, and `finally` blocks. In this post, we'll explore how each of these works with practical examples to help you understand their usage.

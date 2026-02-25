@@ -9,6 +9,8 @@ tags: ["monthly-log"]
 
 ### What Should I Build?
 
+---
+
 ## What is February Reflection 2025?
 
 In this post, we will explore **February Reflection 2025**. This question often comes to my mind: *What should I build?* It feels like a small voice in my head, encouraging me to create something useful. Instead of overthinking, I’ve realized a better approach is to ask myself: *What can I design or build to make my daily life easier or more efficient?* It’s about focusing on small, repetitive tasks that take up too much time or feel boring.

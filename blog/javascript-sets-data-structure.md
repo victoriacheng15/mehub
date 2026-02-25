@@ -7,6 +7,8 @@ tags: ["javascript"]
 
 ## 🤔 Set in JavaScript 🤔
 
+---
+
 ## What is Sets Data Structure?
 
 In this post, we will explore **Sets Data Structure**. It is an object that allows you to store unique values of any type.

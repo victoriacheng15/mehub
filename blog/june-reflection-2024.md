@@ -7,6 +7,8 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection
 
+---
+
 ## What is June Reflection 2024?
 
 In this post, we will explore **June Reflection 2024**. June is here, marking the halfway point of the year and highlighting how time flies. 🕊️

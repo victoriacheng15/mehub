@@ -7,6 +7,8 @@ tags: ["monthly-log", "python"]
 
 ## From SQLite to Azure: Practicing Production Thinking
 
+---
+
 ## What is October Reflection 2025?
 
 In this post, we will explore **October Reflection 2025**. I started this school management Flask API project with a simple goal: to learn how to build a REST API using SQLite as the MVP. It manages entities like students, instructors, and classes — making it a practical way to explore database relationships and the MVC architecture while testing each route.

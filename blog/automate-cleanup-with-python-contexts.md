@@ -7,6 +7,8 @@ tags: ["python"]
 
 ## Understanding Python Context Managers
 
+---
+
 ## What is Automate Cleanup With Python Contexts?
 
 In this post, we will explore **Automate Cleanup With Python Contexts**. Hey fellow learners! Today I'm exploring Python's context managers - those magical **`with`** statements that automatically handle setup and cleanup. I'll share what I'm discovering about **`__enter__`** and **`__exit__`** methods through my coffee shop example

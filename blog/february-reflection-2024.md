@@ -7,6 +7,8 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection
 
+---
+
 ## What is February Reflection 2024?
 
 In this post, we will explore **February Reflection 2024**. In mid-February, I cooked up this little app called "Articles Extractor." It smoothly grabs articles from freeCodeCamp and Substack, then neatly drops them into a Google Sheets spot for easy consolidation. Currently, the app resides on the Raspberry Pi and runs on a daily basis with cron schedule!

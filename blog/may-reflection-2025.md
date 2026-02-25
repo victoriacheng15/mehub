@@ -7,6 +7,8 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection
 
+---
+
 ## What is May Reflection 2025?
 
 In this post, we will explore **May Reflection 2025**. I’m almost wrapping up my first month at the Shopify internship. It has been a great experience so far. Like always, I faced some challenges. One of the biggest challenges was working with a very large codebase. Before this, I mostly worked with personal or small projects. Those were much easier to understand and move around in.

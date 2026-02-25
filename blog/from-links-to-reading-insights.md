@@ -9,6 +9,8 @@ tags: ["growth", "go"]
 
 In this post, we will explore **From Links to Reading Insights**. *This is Part 2 of my journey building a Personal Reading Analytics. Catch up on [Part 1 - From PIi to Cloud Automation](https://victoriacheng15.vercel.app/blog/from-pi-to-cloud-automation)*
 
+---
+
 ## Article Extractor → Analytics
 
 In Part 1, I shared how a simple Python script—born from the desire to collect links from my favorite blogs—evolved from manual runs on my laptop to a scheduled GitHub Actions workflow. But once articles were reliably flowing into Google Sheets, a new question emerged:

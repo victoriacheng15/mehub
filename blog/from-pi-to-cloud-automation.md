@@ -7,6 +7,8 @@ tags: ["growth", "python"]
 
 ## 🧠 What the Project Does
 
+---
+
 ## What is From Pi to Cloud Automation?
 
 In this post, we will explore **From Pi to Cloud Automation**. Like many developers, some of my favorite learning projects come from scratching a personal itch. In this case, I wanted a simple system to collect articles I was reading — from sources like freeCodeCamp, Substack, GitHub, and Shopify — so I could see all the links in one place without having to visit each site individually.

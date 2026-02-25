@@ -7,6 +7,8 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection
 
+---
+
 ## What is January Reflection 2024?
 
 In this post, we will explore **January Reflection 2024**. This month, my routine deviated from the usual, and I am still in the process of returning to the familiar pattern I had before my trip abroad. Additionally, urgent matters last week disrupted my daily routine. While it might signal the need for something new, it doesn't have to be entirely different. Life involves consistent adjustments—events occur, and the old route may no longer seem as appealing. It's a good time to incorporate a slightly new but not entirely different route to keep moving forward. 💪
