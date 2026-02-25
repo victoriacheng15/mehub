@@ -8,7 +8,7 @@ tags: ["growth"]
 
 ## What is 100Devs Cohort?
 
-In this post, we will explore **What is 100Devs Cohort**. What is 100Devs? It is a cohort hosted by Leon and you can find more information [on this site](https://leonnoel.com/100devs/). In short, it is a free and remote 30 weeks cohort and focuses on the MERN (MongoDB, Express, React, and Node) stack.
+What is 100Devs? It is a cohort hosted by Leon and you can find more information [on this site](https://leonnoel.com/100devs/). In short, it is a free and remote 30 weeks cohort and focuses on the MERN (MongoDB, Express, React, and Node) stack.
 
 > I want to help you become a software engineer for free. - Leon Noel
 

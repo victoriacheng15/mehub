@@ -7,13 +7,7 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection
 
-### What Should I Build?
-
----
-
-## What is February Reflection 2025?
-
-In this post, we will explore **February Reflection 2025**. This question often comes to my mind: *What should I build?* It feels like a small voice in my head, encouraging me to create something useful. Instead of overthinking, I’ve realized a better approach is to ask myself: *What can I design or build to make my daily life easier or more efficient?* It’s about focusing on small, repetitive tasks that take up too much time or feel boring.
+This question often comes to my mind: *What should I build?* It feels like a small voice in my head, encouraging me to create something useful. Instead of overthinking, I’ve realized a better approach is to ask myself: *What can I design or build to make my daily life easier or more efficient?* It’s about focusing on small, repetitive tasks that take up too much time or feel boring.
 
 For example, I noticed I spend a lot of time visiting multiple websites to read articles. Wouldn’t it be great to have a tool that gathers all those articles in one place? That’s why I built a project called *Articles Extractor*. It’s a web scraper written in Python that extracts article information and sends it to a Google Sheet. Now, I can open one file and read everything in one place. I even added a feature to track which articles I’ve already read. The best part? I automated it using GitHub Actions, so the script runs on a schedule while I’m sleeping. When I wake up, the articles are ready for me. I no longer waste time visiting multiple websites—it’s all done for me!
 

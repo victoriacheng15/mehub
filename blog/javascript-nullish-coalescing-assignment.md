@@ -7,7 +7,7 @@ tags: ["javascript"]
 
 ## What is Nullish Coalescing Assignment?
 
-In this post, we will explore **Nullish Coalescing Assignment**. It is an operator in JavaScript that is used to assign a value to variable if the current value of the variable is bullish, like `null` or `undefined`. It is also known as the logical bullish assignment operator.
+It is an operator in JavaScript that is used to assign a value to variable if the current value of the variable is bullish, like `null` or `undefined`. It is also known as the logical bullish assignment operator.
 
 Syntax:
 

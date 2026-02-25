@@ -7,7 +7,7 @@ tags: ["growth"]
 
 ## What is the Make Time Book?
 
-In this post, we will explore **Conquer Busyness, End Distractions**. The authors Jake Knapp and John Zeratsky of Make Time introduce two key ideas that hinder the focus. And the two key concepts are the Busyness Bandwagon and Infinity Pools.
+The authors Jake Knapp and John Zeratsky of Make Time introduce two key ideas that hinder the focus. And the two key concepts are the Busyness Bandwagon and Infinity Pools.
 
 - **The Busyness Bandwagon:**
   - This concept is about how society values being busy. People often pack their schedules full with everything like appointments. This makes them to feel important and productive. However, this nonstop hustle leaves little room for important work or personal priorities. In the end, this often leads to burnout.

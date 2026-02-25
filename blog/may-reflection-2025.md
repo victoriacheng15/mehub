@@ -7,11 +7,7 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection
 
----
-
-## What is May Reflection 2025?
-
-In this post, we will explore **May Reflection 2025**. I’m almost wrapping up my first month at the Shopify internship. It has been a great experience so far. Like always, I faced some challenges. One of the biggest challenges was working with a very large codebase. Before this, I mostly worked with personal or small projects. Those were much easier to understand and move around in.
+I’m almost wrapping up my first month at the Shopify internship. It has been a great experience so far. Like always, I faced some challenges. One of the biggest challenges was working with a very large codebase. Before this, I mostly worked with personal or small projects. Those were much easier to understand and move around in.
 
 I know that many companies have big and complex codebases. This is something new and uncomfortable for me. But I understand that I need to step out of my comfort zone and learn how to work with these larger codebases. One thing that helps is understanding the overall architecture, especially the folder structure. This makes it easier to read, follow, and understand the code.
 

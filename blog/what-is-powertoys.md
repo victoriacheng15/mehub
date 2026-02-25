@@ -7,7 +7,7 @@ tags: ["growth"]
 
 ## What is PowerToys?
 
-In this post, we will explore **What is PowerToys?**. Some powerful toys?!? All right, it is a free tool from Microsoft and allows window users to improve their productivity while working on websites or apps. It is also a useful tool that I found.
+Some powerful toys?!? All right, it is a free tool from Microsoft and allows window users to improve their productivity while working on websites or apps. It is also a useful tool that I found.
 
 ---
 

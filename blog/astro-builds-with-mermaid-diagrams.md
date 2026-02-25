@@ -7,7 +7,7 @@ tags: ["growth"]
 
 ## Why My Pages Went Blank
 
-In this post, we will explore **Astro Builds with Mermaid Diagrams**. I usually draft my blog posts in GitHub Issues because it’s easier to manage ideas there, and I can leverage GitHub Actions to automate my publishing workflow. For example, I have a custom Action that sends finished drafts to my mehub repo. Another bonus is that GitHub natively supports Mermaid.js, so diagrams “just work” while I’m drafting.
+I usually draft my blog posts in GitHub Issues because it’s easier to manage ideas there, and I can leverage GitHub Actions to automate my publishing workflow. For example, I have a custom Action that sends finished drafts to my mehub repo. Another bonus is that GitHub natively supports Mermaid.js, so diagrams “just work” while I’m drafting.
 
 When I moved the drafts into my Astro blog, the diagrams didn’t render locally—which I expected. I had added `rehype-mermaid`, and honestly, I thought “just installing the package should make it work magically” 😅.
 

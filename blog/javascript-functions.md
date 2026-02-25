@@ -7,7 +7,7 @@ tags: ["javascript"]
 
 ## What is a function?
 
-In this post, we will explore **JavaScript Functions**. Functions are _building blocks_ of the program. They allow the code to be called many times without repetition!
+Functions are _building blocks_ of the program. They allow the code to be called many times without repetition!
 
 ```js
 function greeting() {

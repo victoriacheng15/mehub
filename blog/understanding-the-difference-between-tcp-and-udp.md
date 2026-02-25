@@ -5,13 +5,9 @@ date: 2024-08-06
 tags: ["platform"]
 ---
 
-## Introduction to TCP and UDP
-
----
-
 ## What is Understanding the Difference Between TCP and UDP?
 
-In this post, we will explore **Understanding the Difference Between TCP and UDP**. When it comes to data transmission over networks, two protocols play a critical role in how information is sent and received: **Transmission Control Protocol (TCP)** and **User Datagram Protocol (UDP)**. These protocols are part of the **Transport** Layer in the OSI model and are used to manage how data packets are transmitted over the internet.
+When it comes to data transmission over networks, two protocols play a critical role in how information is sent and received: **Transmission Control Protocol (TCP)** and **User Datagram Protocol (UDP)**. These protocols are part of the **Transport** Layer in the OSI model and are used to manage how data packets are transmitted over the internet.
 
 **TCP** is a connection-oriented protocol that ensures the reliable delivery of data. It establishes a connection between the sender and the receiver, manages the data flow, and retransmits lost packets. TCP is widely used for applications where accuracy and data integrity are paramount, such as web browsing, email, and file transfers.
 

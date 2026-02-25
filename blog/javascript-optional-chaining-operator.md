@@ -7,7 +7,7 @@ tags: ["javascript"]
 
 ## What is Optional Chaining Operator (?.)?
 
-In this post, we will explore **Optional Chaining Operator**. It was introduced in ES2022 and is an operator that accesses an object’s property or calls a function. If the object or the function was accessed with this operator, the expression short circuits and evaluates to undefined instead of throwing an error.
+It was introduced in ES2022 and is an operator that accesses an object’s property or calls a function. If the object or the function was accessed with this operator, the expression short circuits and evaluates to undefined instead of throwing an error.
 
 ```js
 obj.val?.prop;

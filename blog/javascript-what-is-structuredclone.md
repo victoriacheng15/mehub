@@ -7,7 +7,7 @@ tags: ["javascript"]
 
 ## What is structuredClone()?
 
-In this post, we will explore **What is StructuredClone?**. It is a method that creates a deep copy of a given value using the structured clone algorithm and without using a 3rd-party library like Lodash. This makes it much easier for developers to transfer data between different applications without having to worry about compatibility issues.
+It is a method that creates a deep copy of a given value using the structured clone algorithm and without using a 3rd-party library like Lodash. This makes it much easier for developers to transfer data between different applications without having to worry about compatibility issues.
 
 Before we go on structuredClone, let's learn about the differences between shallow copy and deep copy!
 

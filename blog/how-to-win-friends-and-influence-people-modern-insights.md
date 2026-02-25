@@ -7,7 +7,7 @@ tags: ["growth"]
 
 ## What is How to Win Friends and Influence People book?
 
-In this post, we will explore **Modern Insights**. This book is an adaptation of Dale Carnegie's classic, "How to Win Friends and Influence People in the Digital Age." Explore the art of forging meaningful online connections, positive engagement, and impactful communication. Navigate the digital landscape, leaving a lasting impact on others through genuine interactions. Discover the essence of influence.
+This book is an adaptation of Dale Carnegie's classic, "How to Win Friends and Influence People in the Digital Age." Explore the art of forging meaningful online connections, positive engagement, and impactful communication. Navigate the digital landscape, leaving a lasting impact on others through genuine interactions. Discover the essence of influence.
 
 ---
 

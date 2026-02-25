@@ -7,7 +7,7 @@ tags: ["growth"]
 
 ## What is the Alchemy Book?
 
-In this post, we will explore **Power of Absurdity**. In "Alchemy: The Surprising Power of Ideas That Don't Make Sense," author Rory Sutherland delves into how unconventional thinking and ideas that initially seem absurd can lead to remarkable breakthroughs and innovations. Sutherland challenges conventional wisdom by showing how embracing the irrational and illogical can lead to powerful and transformative results.
+In "Alchemy: The Surprising Power of Ideas That Don't Make Sense," author Rory Sutherland delves into how unconventional thinking and ideas that initially seem absurd can lead to remarkable breakthroughs and innovations. Sutherland challenges conventional wisdom by showing how embracing the irrational and illogical can lead to powerful and transformative results.
 
 ---
 

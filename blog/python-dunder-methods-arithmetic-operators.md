@@ -7,7 +7,7 @@ tags: ["python"]
 
 ## What are Arithmetic Operators in Python?
 
-In this post, we will explore **Arithmetic operators**. Arithmetic is one of the first things we learn in Python — `x + y`, `x * y`, `x / y` — but under the hood, Python handles all of these using something more advanced: **dunder methods**. Let’s break it all down.
+Arithmetic is one of the first things we learn in Python — `x + y`, `x * y`, `x / y` — but under the hood, Python handles all of these using something more advanced: **dunder methods**. Let’s break it all down.
 
 Python's **arithmetic operators** are symbols used to perform mathematical operations:
 

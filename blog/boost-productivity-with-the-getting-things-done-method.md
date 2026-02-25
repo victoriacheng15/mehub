@@ -7,7 +7,7 @@ tags: ["growth"]
 
 ## What is the Getting Things Done book?
 
-In this post, we will explore **Boost Productivity with the Getting Things Done Method**. David Allen’s book provides a robust system to tackle your tasks in our fast-paced society. It introduces the Getting Things Done (GTD) method, a strategy for managing tasks and projects that allows you to focus on taking action rather than remembering tasks. The GTD method helps you move repetitive thoughts or negative feelings out of your mind and into your system, freeing up mental energy for your work. The book offers practical techniques such as creating lists and reminders to help you organize your work.
+David Allen’s book provides a robust system to tackle your tasks in our fast-paced society. It introduces the Getting Things Done (GTD) method, a strategy for managing tasks and projects that allows you to focus on taking action rather than remembering tasks. The GTD method helps you move repetitive thoughts or negative feelings out of your mind and into your system, freeing up mental energy for your work. The book offers practical techniques such as creating lists and reminders to help you organize your work.
 
 ---
 

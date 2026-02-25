@@ -7,8 +7,6 @@ tags: ["growth"]
 
 ## What is the Modern Software Engineering book?
 
-In this post, we will explore **Exploring the Aspects of Modern Software Engineering**. Modern Software Engineering is a book by David Farley.
-
 The book:
 
 - aims to help software professionals improve their creativity, effectiveness, and code quality by applying durable principles and practices of software engineering

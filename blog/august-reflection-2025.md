@@ -7,7 +7,7 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection: My 4-Month Internship at Shopify
 
-In this post, we will explore **August Reflection 2025**. As I close the chapter on my 4-month internship at Shopify, I find myself pausing—not just to celebrate the experience, but to reflect deeply on what I’ve learned, how I’ve grown, and where I still have room to improve.
+As I close the chapter on my 4-month internship at Shopify, I find myself pausing—not just to celebrate the experience, but to reflect deeply on what I’ve learned, how I’ve grown, and where I still have room to improve.
 
 This internship was more than just a technical journey—it was a personal and professional evolution. From shipping my first feature to navigating cross-team collaboration, every week brought new challenges and lessons. But as I look back, a few key themes stand out, both in terms of growth and areas I want to continue developing.
 

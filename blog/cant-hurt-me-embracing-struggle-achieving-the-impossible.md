@@ -7,7 +7,7 @@ tags: ["growth"]
 
 ## What is Can’t Hurt Me book?
 
-In this post, we will explore **Embracing Struggle, Achieving the Impossible**. In `Can't Hurt Me`, David Goggins shares his extraordinary journey from a troubled past to becoming a Navy SEAL, ultra-endurance athlete, and motivational force. Embracing discomfort and confronting fears, he empowers readers to push beyond limits, achieve greatness, and unlock untapped potential. Raw vulnerability and actionable insights make this book a powerful tool for transforming lives and finding strength in the face of adversity. Goggins' story serves as a testament to the unyielding determination and the human spirit's capacity to triumph over challenges.
+In `Can't Hurt Me`, David Goggins shares his extraordinary journey from a troubled past to becoming a Navy SEAL, ultra-endurance athlete, and motivational force. Embracing discomfort and confronting fears, he empowers readers to push beyond limits, achieve greatness, and unlock untapped potential. Raw vulnerability and actionable insights make this book a powerful tool for transforming lives and finding strength in the face of adversity. Goggins' story serves as a testament to the unyielding determination and the human spirit's capacity to triumph over challenges.
 
 ---
 

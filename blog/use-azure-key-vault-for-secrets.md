@@ -2,12 +2,12 @@
 title: "Use Azure Key Vault for Secrets"
 description: "Securely manage app secrets in Azure using Key Vault—store credentials like GitHub OAuth IDs safely and handle local development with smart fallbacks. Read more to learn."
 date: 2025-12-09
-tags: ["platform"]
+tags: ["platform", "cloud"]
 ---
 
 ## What is Key Vault in Azure?
 
-In this post, we will explore **Use Azure Key Vault for Secrets**. Azure Key Vault is a cloud service that lets you store sensitive stuff—like API keys, passwords, or OAuth credentials—outside of your actual code.
+Azure Key Vault is a cloud service that lets you store sensitive stuff—like API keys, passwords, or OAuth credentials—outside of your actual code.
 
 Before learning about Key Vault, I (like many others) used `.env` files with `os.getenv("VARIABLE")` to avoid hardcoding secrets. That works okay locally… but it’s easy to accidentally commit `.env` to Git if you forget to add it to `.gitignore`. One `git add .` and—oops—your secrets are public 😅.
 

@@ -7,7 +7,7 @@ tags: ["growth", "go"]
 
 ## What is From Metrics to Milestones?
 
-In this post, we will explore **From Metrics to Milestones**. *This is Part 3 of my journey building a Personal Reading Analytics Dashboard. Catch up on [Part 1 - From PIi to Cloud Automation](https://victoriacheng15.vercel.app/blog/from-pi-to-cloud-automation) and [Part 2 - From Links to Reading Insights](link-to-part-2).*
+*This is Part 3 of my journey building a Personal Reading Analytics Dashboard. Catch up on [Part 1 - From PIi to Cloud Automation](https://victoriacheng15.vercel.app/blog/from-pi-to-cloud-automation) and [Part 2 - From Links to Reading Insights](link-to-part-2).*
 
 ---
 

@@ -7,7 +7,7 @@ tags: ["monthly-log"]
 
 ## Shipping Serverless
 
-In this post, we will explore **November Reflection 2025**. This November, I finished **Cover Craft**, a lightweight cover image generator I built to get hands-on experience with **Azure Functions**. I wanted to understand serverless architecture by using it myself from writing a function to deploying it in the cloud. I also plan to use it to generate cover images for my LinkedIn posts, so it serves a real purpose for me.
+This November, I finished **Cover Craft**, a lightweight cover image generator I built to get hands-on experience with **Azure Functions**. I wanted to understand serverless architecture by using it myself from writing a function to deploying it in the cloud. I also plan to use it to generate cover images for my LinkedIn posts, so it serves a real purpose for me.
 
 The core task is simple: accept text, colors, and dimensions; return a PNG. But how it is built and especially how it is deployed taught me far more than the feature ever could.
 

@@ -7,7 +7,7 @@ tags: ["python"]
 
 ## What Are sorted() and sort() Functions?
 
-In this post, we will explore **sorted() vs sort() Usage**. Python provides two primary methods for sorting: `sored()` and `sort()`. While both are used to arrange elements in a particular order, they function in distinct ways and have different applications./. Understanding these differences and knowing when to use each can significantly enhance your efficiency in writing Python code.
+Python provides two primary methods for sorting: `sored()` and `sort()`. While both are used to arrange elements in a particular order, they function in distinct ways and have different applications./. Understanding these differences and knowing when to use each can significantly enhance your efficiency in writing Python code.
 
 ### Differences Between sorted() and sort()
 

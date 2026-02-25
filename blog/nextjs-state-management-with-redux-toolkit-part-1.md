@@ -7,11 +7,7 @@ tags: ["frontend"]
 
 ## Intro
 
-I developed an application named Hacker News utilizing Next.js (non-app
-directory) with TypeScript and Redux Toolkit. During the development process, I
-took the opportunity to explore Next.js and Redux Toolkit. In this
-blog post, I will provide a detailed guide on how I configured Redux Toolkit to
-manage the application's state.
+I developed an application named Hacker News utilizing Next.js (non-app directory) with TypeScript and Redux Toolkit. During the development process, I took the opportunity to explore Next.js and Redux Toolkit. I will provide a detailed guide on how I configured Redux Toolkit to manage the application's state.
 
 You could check out the [deployed site](https://hacker-news-next.vercel.app/) here.
 

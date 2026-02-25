@@ -7,7 +7,7 @@ tags: ["backend"]
 
 ## What is the SELECT Command?
 
-In this post, we will explore **SELECT and SELECT DISTINCT**. The `SELECT` statement is one of the key tools in SQL for getting data from a database. Whether you're working with big datasets or just doing simple queries, knowing how to use `SELECT` properly makes interacting with databases much easier.
+The `SELECT` statement is one of the key tools in SQL for getting data from a database. Whether you're working with big datasets or just doing simple queries, knowing how to use `SELECT` properly makes interacting with databases much easier.
 
 ### Basic of the SELECT command
 

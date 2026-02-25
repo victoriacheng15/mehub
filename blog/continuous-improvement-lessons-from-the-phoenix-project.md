@@ -7,7 +7,7 @@ tags: ["growth"]
 
 ## What is the Phoenix Project?
 
-In this post, we will explore **Lessons from The Phoenix Project**. This book is a compelling business novel that follows the journey of IT manager Bill Palmer as he takes on the daunting task of saving a failing company's troubled IT department. With the company on the verge of collapse due to constant system outages and dissatisfied customers, Bill embraces the principles of DevOps and embarks on a transformative mission to improve operations. Through the power of collaboration, automation, and a culture of continuous improvement, Bill strives to resurrect the company from the ashes and bring about a profound shift in how IT can drive business success.
+This book is a compelling business novel that follows the journey of IT manager Bill Palmer as he takes on the daunting task of saving a failing company's troubled IT department. With the company on the verge of collapse due to constant system outages and dissatisfied customers, Bill embraces the principles of DevOps and embarks on a transformative mission to improve operations. Through the power of collaboration, automation, and a culture of continuous improvement, Bill strives to resurrect the company from the ashes and bring about a profound shift in how IT can drive business success.
 
 ---
 

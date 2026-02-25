@@ -7,7 +7,7 @@ tags: ["python"]
 
 ## What is a Python Tuple?
 
-In this post, we will explore **Immutable Data Structures**. A Tuple Python is an ordered collection of elements, much like a list. However, what sets tuples apart is their immutability. Once created, the elements within a tuple cannot be modified, added or removed. This immutability lends tuples a sense of stability and reliability, making them useful in scenarios where data integrity is paramount.
+A Tuple Python is an ordered collection of elements, much like a list. However, what sets tuples apart is their immutability. Once created, the elements within a tuple cannot be modified, added or removed. This immutability lends tuples a sense of stability and reliability, making them useful in scenarios where data integrity is paramount.
 
 ---
 

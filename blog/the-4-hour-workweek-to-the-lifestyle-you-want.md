@@ -7,7 +7,7 @@ tags: ["growth"]
 
 ## What is The 4-Hour Workweek?
 
-In this post, we will explore **To the Lifestyle You Want**. It is a book written by Time Ferriss. It is a guide that challenges traditional work norms and offers a blueprint for a new way of living. The book is based on the 80/20 principle, suggesting that most productivity comes from a fraction of the time. It introduces the DEAL process - Definition, Elimination, Automation, and Liberation, to help readers escape the 9-5 grind, automate income, and live the lifestyle of the “New Rich”. The “New Rich” are those who have abandoned the deferred life plan and created a luxury lifestyle in the present.
+It is a book written by Time Ferriss. It is a guide that challenges traditional work norms and offers a blueprint for a new way of living. The book is based on the 80/20 principle, suggesting that most productivity comes from a fraction of the time. It introduces the DEAL process - Definition, Elimination, Automation, and Liberation, to help readers escape the 9-5 grind, automate income, and live the lifestyle of the “New Rich”. The “New Rich” are those who have abandoned the deferred life plan and created a luxury lifestyle in the present.
 
 ---
 

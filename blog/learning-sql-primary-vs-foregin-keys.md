@@ -7,7 +7,7 @@ tags: ["backend"]
 
 ## What Are PRIMARY and FOREIGN Keys?
 
-In this post, we will explore **PRIMARY VS FOREGIN KEYS**. In SQL, **PRIMARY KEY** and **FOREIGN KEY** are essential concepts for defining relationships between tables and ensuring data integrity.
+In SQL, **PRIMARY KEY** and **FOREIGN KEY** are essential concepts for defining relationships between tables and ensuring data integrity.
 
 - A **PRIMARY KEY** is a column (or set of columns) that uniquely identifies each row in a table.
 - A **FOREIGN KEY** is a column that creates a link between two tables by referencing the PRIMARY KEY of another table.

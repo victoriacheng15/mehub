@@ -7,7 +7,8 @@ tags: ["monthly-log"]
 
 ## Planning First: How I Finally Finished What I Started in 2025
 
-In this post, we will explore **Reflecting on the 2025**. For a long time, my default workflow for personal projects went like this:  
+For a long time, my default workflow for personal projects went like this:  
+
 Get an idea → Open my editor → Start coding.
 
 No outline. No spec. Just… go.

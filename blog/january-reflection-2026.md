@@ -7,11 +7,7 @@ tags: ["growth"]
 
 ## The Shift: From "Chatting" to "Refining"
 
----
-
-## What is January Reflection 2026?
-
-In this post, we will explore **January Reflection 2026**. This month, I solidified a major shift in how I interact with AI agents like Gemini. Initially, I treated them like search engines—ask a question, get an answer. But as I tackled more complex tasks (like my Observability Hub), I realized that vague prompts produce "average" boilerplate.
+This month, I solidified a major shift in how I interact with AI agents like Gemini. Initially, I treated them like search engines—ask a question, get an answer. But as I tackled more complex tasks (like my Observability Hub), I realized that vague prompts produce "average" boilerplate.
 
 To get useful output, I realized I needed to provide better input. I shifted my focus to refining the "context file"—treating my instructions as code that needs to be debugged and optimized.
 

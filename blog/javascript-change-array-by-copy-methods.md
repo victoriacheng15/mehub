@@ -7,7 +7,7 @@ tags: ["javascript"]
 
 ## What is Change Array by Copy?
 
-In this post, we will explore **Change Array by Copy Methods**. JavaScript enthusiasts, rejoice! The latest iteration, ES2023, has recently graced us with its presence, bringing along a slew of new features, including some noteworthy additions to Array methods. In this post, we'll delve into four methods:
+JavaScript enthusiasts, rejoice! The latest iteration, ES2023, has recently graced us with its presence, bringing along a slew of new features, including some noteworthy additions to Array methods. In this post, we'll delve into four methods:
 
 - Array.prototype.toReversed()
 - Array.prototype.toSorted()
