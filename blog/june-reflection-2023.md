@@ -7,6 +7,8 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection
 
+---
+
 ## What is June Reflection 2023?
 
 In this post, we will explore **June Reflection 2023**. This month has been thought-provoking. I discovered the book "Limitless," expanding my thoughts and revealing possibilities for better reading. I also found a remarkable YouTuber who shares useful notion planning techniques and recommends helpful books for enhancing life and organization. This experience emphasizes the importance of taking responsibility for organizing my life and pursuing goals.

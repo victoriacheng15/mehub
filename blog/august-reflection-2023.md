@@ -7,6 +7,8 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection
 
+---
+
 ## What is August Reflection 2023?
 
 In this post, we will explore **August Reflection 2023**. Since May, I've been utilizing Notion for organizing my tasks. Initially, I allocated 5 tasks for each day, including Saturdays. However, after a couple of weeks, I recognized that this was overly ambitious. 😅 As a result, I scaled it back to 2 or 3 tasks per day. If I happen to have surplus time, I may even begin tackling tasks scheduled for the next day or engage in some book reading. Additionally, I intentionally leave Saturdays and Sundays empty beside publish posts, as I consider these days to be for recharging or being lazy.

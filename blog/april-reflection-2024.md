@@ -7,6 +7,8 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection
 
+---
+
 ## What is April Reflection 2024?
 
 In this post, we will explore **April Reflection 2024**.

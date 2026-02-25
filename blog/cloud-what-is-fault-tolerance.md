@@ -7,6 +7,8 @@ tags: ["platform"]
 
 ## Cloud — What Is Fault Tolerance? ☁️  
 
+---
+
 ## What is What Is Fault Tolerance??
 
 In this post, we will explore **What Is Fault Tolerance?**. Fault tolerance is the **ability of a system to keep running even when part of it fails**. It’s what keeps apps and websites online even when servers crash or networks go down.  

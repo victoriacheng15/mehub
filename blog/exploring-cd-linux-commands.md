@@ -28,6 +28,8 @@ Directory represents the destination directory you want to navigate to. You can 
 cd ~/Documents
 ```
 
+---
+
 ## Common Use Cases & Shortcuts
 
 | Shortcut | Description | Example Target |

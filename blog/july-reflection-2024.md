@@ -9,6 +9,8 @@ tags: ["monthly-log"]
 
 ### Quitting…
 
+---
+
 ## What is July Reflection 2024?
 
 In this post, we will explore **July Reflection 2024**. I recently finished reading "Quit: The Power of Knowing When to Walk Away," and found it to be quite intriguing. Common advice often tells us to never stop and to always keep pushing forward. However, this book challenges that notion and offers a fresh perspective. It suggests that sometimes it’s beneficial to stop what you’re doing for several reasons. The book outlines a few key points on when it’s wise to quit:

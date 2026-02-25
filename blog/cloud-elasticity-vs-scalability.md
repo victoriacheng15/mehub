@@ -7,6 +7,8 @@ tags: ["platform"]
 
 ## Understanding Elasticity vs Scalability
 
+---
+
 ## What is 🌩️ Cloud – Elasticity vs Scalability?
 
 In this post, we will explore **🌩️ Cloud – Elasticity vs Scalability**. When I first started working with cloud infrastructure, I often heard the terms **elasticity** and **scalability** used almost interchangeably. After some hands-on experience and research, I realized that while they are related, they are **not the same**. Understanding the difference is crucial, especially if you want to design **cost-efficient and resilient systems**.  

@@ -7,6 +7,8 @@ tags: ["platform"]
 
 ## Intro
 
+---
+
 ## What is Pi Connection Guide?
 
 In this post, we will explore **Pi Connection Guide**. I've had a Raspberry Pi for a while and decided to explore more ways to use it for fun and experiments this year. Initially, I had it connected to another monitor, keyboard, and mouse, which cluttered my desk. 😅 While I knew about remote desktops and SSH, I hadn't delved into them until last week when I decided to simplify my setup.

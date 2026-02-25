@@ -7,6 +7,8 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection
 
+---
+
 ## What is June Reflection 2025?
 
 In this post, we will explore **June Reflection 2025**. This month, the main thing on my mind has been impostor syndrome. Ever since I started my internship at Shopify, it’s been popping up more often — usually triggered by how big everything feels. Sometimes I’ll just be deep in thought and suddenly wonder, “Am I really cut out for this?”

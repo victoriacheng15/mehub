@@ -7,6 +7,8 @@ tags: ["python"]
 
 ## **Dunder Methods Explained**
 
+---
+
 ## What is Python Secret Double Underscore Tricks?
 
 In this post, we will explore **Python Secret Double Underscore Tricks**. If you've used Python classes, you know `__init__` - the method that creates objects. But Python has many more *dunder* (double underscore) methods that control how objects behave. Let's explore the most useful ones.

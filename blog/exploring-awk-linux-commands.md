@@ -47,6 +47,8 @@ This command prints the second column from each line of the file. You can combin
 awk '{print $1, $3}' file.txt
 ```
 
+---
+
 ## Filtering Data with awk Patterns
 
 You can filter data based on specific conditions, like printing lines that contain a certain word:
@@ -61,6 +63,8 @@ For example, to print lines that contain the word "error":
 awk '/error/ {print}' log.txt
 ```
 
+---
+
 ## Changing the Field Separator in awk
 
 Sometimes your data might be separated by something other than spaces or tabs (like commas in CSV files). You can tell `awk` to use a different delimiter with the `-F` option:
@@ -68,6 +72,8 @@ Sometimes your data might be separated by something other than spaces or tabs (l
 ```bash
 awk -F, '{print $1, $2}' data.csv
 ```
+
+---
 
 ## Simple Calculations and Summarization with awk
 
@@ -78,6 +84,8 @@ awk '{sum += $3} END {print sum}' file.txt
 ```
 
 This command sums all values in the third column of `file.txt`.
+
+---
 
 ## Printing Line Numbers in awk
 

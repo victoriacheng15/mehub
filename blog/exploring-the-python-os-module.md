@@ -7,6 +7,8 @@ tags: ["python"]
 
 ## Intro to Python `os` Module
 
+---
+
 ## What is Exploring the Python OS Module?
 
 In this post, we will explore **Exploring the Python OS Module**. The Python `os` module makes it easy to interact with the operating system. It provides functions to manage files, directories, environment variables, and file paths. By simplifying system-level tasks, it helps developers write code that works across different platforms, making it ideal for handling system operations.

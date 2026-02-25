@@ -7,6 +7,8 @@ tags: ["platform"]
 
 ## Understanding Docker Builds
 
+---
+
 ## What is Single-Stage or Multi-Stage Docker Builds?
 
 In this post, we will explore **Single-Stage or Multi-Stage Docker Builds**. While containerizing **the School Management Flask API**, I explored **single-stage and multi-stage Docker builds** to understand their impact on performance, image size, and deployment efficiency. This exploration taught me practical lessons about optimizing images, improving CI/CD pipelines, and separating build-time dependencies from runtime environments.

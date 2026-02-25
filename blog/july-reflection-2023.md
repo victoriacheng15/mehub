@@ -7,6 +7,8 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection
 
+---
+
 ## What is July Reflection 2023?
 
 In this post, we will explore **July Reflection 2023**. A couple of things to mention:

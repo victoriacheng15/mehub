@@ -7,6 +7,8 @@ tags: ["growth"]
 
 ## The 2022
 
+---
+
 ## What is The Wrapped Journal for 2022?
 
 In this post, we will explore **The Wrapped Journal for 2022**. Let's start with 2021! I embarked on a journey to learn code while also working full-time. I devoted a lot of time to studying and rarely took breaks, which ultimately resulted in burnout. After taking some time off from coding, I made a decision to make a change for the following year. I committed to spending 1-2 hours daily on code learning, with breaks in between and a goal of making at least one commit each day. This more balanced approach helped me avoid burnout and continue to progress in my learning.

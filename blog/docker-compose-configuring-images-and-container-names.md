@@ -7,6 +7,8 @@ tags: ["platform"]
 
 ## Configuring names for an image and container
 
+---
+
 ## What is Configuring Images and Container Names?
 
 In this post, we will explore **Configuring Images and Container Names**. Before establishing names for both the Docker image and container, my lists of Docker images and containers were disorderly and challenging to comprehend due to their extended, unclear names. Recognizing the need for organization, I consulted GPT to inquire about potential solutions. GPT confirmed that it is possible to configure names. Additionally, I cross-referenced the information provided by GPT with the Docker Documentation to ensure that the guidance was up-to-date.
