@@ -307,3 +307,39 @@ func (g *SiteGenerator) GenerateSitemap(distDir string, posts []content.Post) er
 	}
 	return nil
 }
+
+func (g *SiteGenerator) GenerateRegistryEndpoint(distDir string, data *content.ContentData) error {
+	apiDir := filepath.Join(distDir, "api")
+	if err := os.MkdirAll(apiDir, 0755); err != nil {
+		return fmt.Errorf("failed to create api dir: %w", err)
+	}
+
+	type RegistryItem struct {
+		Title       string   `json:"title"`
+		Description string   `json:"description"`
+		URL         string   `json:"url"`
+		Date        string   `json:"date_published"`
+		Tags        []string `json:"skills"`
+	}
+
+	var items []RegistryItem
+	for _, post := range data.Posts {
+		items = append(items, RegistryItem{
+			Title:       post.Title,
+			Description: post.Description,
+			URL:         g.Config.Site.URL + "blog/" + post.Slug + ".html",
+			Date:        post.Date.Format(time.RFC3339),
+			Tags:        post.Tags,
+		})
+	}
+
+	jsonData, err := json.MarshalIndent(items, "", "  ")
+	if err != nil {
+		return fmt.Errorf("failed to marshal registry: %w", err)
+	}
+
+	if err := os.WriteFile(filepath.Join(apiDir, "skills-registry.json"), jsonData, 0644); err != nil {
+		return fmt.Errorf("failed to write skills-registry.json: %w", err)
+	}
+	return nil
+}
