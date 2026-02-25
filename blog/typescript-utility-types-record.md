@@ -1,6 +1,6 @@
 ---
 title: "TypeScript Utility Types - Record"
-description: "Record in TypeScript: Defines fixed-key objects with specific value types."
+description: "Record in TypeScript: Defines fixed-key objects with specific value types. Dive into this detailed tutorial to master the overall core concepts and improve your skills."
 date: 2023-09-13
 tags: ["typescript"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Exploring chown - Linux Commands"
-description: "Learn how to use the chown command in Linux to change file and directory ownership, with examples and common use cases."
+description: "Learn how to use the chown command in Linux to change file and directory ownership, with examples and common use cases. Read this comprehensive guide to learn much more."
 date: 2024-10-12
 tags: ["linux"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: Nextjs State Management with Redux Toolkit - Part 1
-description: "This guide provides a step-by-step process for setting up Redux Toolkit with Next.js, enabling you to easily manage state in your web applications"
+description: "This guide provides a step-by-step process for setting up Redux Toolkit with Next.js, enabling you to easily manage state in your web applications. Dive into the full post."
 date: 2023-04-12
 tags: ["frontend"]
 ---

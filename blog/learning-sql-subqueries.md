@@ -1,13 +1,13 @@
 ---
 title: "Learning SQL: Subqueries"
-description: "Master SQL subqueries & operators (ANY, ALL, EXISTS) with clear examples. Learn nested queries for WHERE, FROM, SELECT clauses—boost your SQL skills today!"
+description: "Master SQL subqueries & operators (ANY, ALL, EXISTS) with clear examples. Learn nested queries for WHERE, FROM, SELECT clauses—boost your SQL skills today! Read more to learn."
 date: 2025-04-08
 tags: ["backend"]
 ---
 
 ## What is a Subquery?
 
-A subquery is simply **a query inside another query,** and also known as **nested queries**. It allows you to use the result of one query as part of another.
+In this post, we will explore **Subqueries**. A subquery is simply **a query inside another query,** and also known as **nested queries**. It allows you to use the result of one query as part of another.
 
 Think of it like asking a question within a question:
 

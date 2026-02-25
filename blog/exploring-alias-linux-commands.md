@@ -1,6 +1,6 @@
 ---
 title: "Exploring alias - Linux Commands"
-description: "Discover the power of Linux commands with our guide on using 'alias.' Streamline your workflow and explore awesome tips for efficient terminal operations."
+description: "Discover the power of Linux commands with our guide on using 'alias.' Streamline your workflow and explore awesome tips for efficient terminal operations. Read more to learn."
 date: 2024-01-18
 tags: ["linux"]
 ---
@@ -15,9 +15,21 @@ The basic syntax of the `alias` command:
 alias new_command="original_command"
 ```
 
+```mermaid
+graph TD
+    A[Create Alias] --> B{Where is it defined?}
+    B -->|Command Line| C[Temporary Alias]
+    C --> D[Lost on Terminal Close]
+    B -->|Configuration File| E[Permanent Alias]
+    E -->|e.g., ~/.bashrc or ~/.zshrc| F[Loads on New Session]
+    F --> G[Persists Across Sessions]
+```
+
 ---
 
-## Temporary alias
+## Common Use Cases
+
+### Temporary alias
 
 A temporary alias is designed for short-term use within the current session. It serves as a quick, one-time shortcut for specific commands. However, please note that the alias is only available for the duration of the open terminal session and is lost when the terminal is closed.
 
@@ -31,7 +43,7 @@ Now, you can run the `night` command directly in your terminal and this alias wi
 
 ---
 
-## Permanent alias
+### Permanent alias
 
 A permanent alias serves as a convenient shortcut for long-term use, persisting across various sessions in your terminal. To establish a permanent alias, you need to integrate the alias command into the configuration file linked to your terminal. It's essential to select the appropriate configuration file based on your current shell.
 

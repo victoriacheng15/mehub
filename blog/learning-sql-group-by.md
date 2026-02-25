@@ -1,6 +1,6 @@
 ---
 title: "Learning SQL: GROUP BY"
-description: "Learn how to use the SQL GROUP BY clause to group and summarize data. Perfect for aggregating and analyzing datasets with clear examples and explanations."
+description: "Learn how to use the SQL GROUP BY clause to group and summarize data. Perfect for aggregating and analyzing datasets with clear examples and explanations. Read more to learn."
 date: 2025-02-18
 tags: ["backend"]
 ---

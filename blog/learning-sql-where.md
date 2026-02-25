@@ -1,6 +1,6 @@
 ---
 title: "Learning SQL: WHERE"
-description: "Learn how to filter data using the SQL WHERE clause with operators like IN, LIKE, and more. Master combining conditions with AND and OR for efficient queries."
+description: "Learn how to filter data using the SQL WHERE clause with operators like IN, LIKE, and more. Master combining conditions with AND and OR for efficient queries. Read on."
 date: 2024-10-01
 tags: ["backend"]
 ---

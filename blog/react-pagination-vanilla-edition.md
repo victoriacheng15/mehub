@@ -1,6 +1,6 @@
 ---
 title: React Pagination - Vanilla Edition
-description: "Create React pagination with 5 pages, navigation buttons, current page highlight, and centered navigation. No external packages needed. Demo & code provided."
+description: "Create React pagination with 5 pages, navigation buttons, current page highlight, and centered navigation. No external packages needed. Demo & code provided. Read on."
 date: 2022-11-06
 tags: ["frontend"]
 ---

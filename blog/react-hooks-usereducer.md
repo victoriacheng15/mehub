@@ -1,6 +1,6 @@
 ---
 title: React Hooks - useReducer
-description: "Manage state changes & fetch API data with useReducer in React. More flexible than useState, takes reducer & initial state, returns state & dispatch function."
+description: "Manage state changes & fetch API data with useReducer in React. More flexible than useState, takes reducer & initial state, returns state & dispatch function. Read on."
 date: 2022-12-21
 tags: ["frontend"]
 ---

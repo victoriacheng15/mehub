@@ -1,6 +1,6 @@
 ---
 title: "React Hooks - useRef"
-description: "React's useRef hook: Handles mutable values & DOM interaction, curbs re-renders, boosts performance."
+description: "React's useRef hook: Handles mutable values & DOM interaction, curbs re-renders, boosts performance. Explore practical examples and step-by-step insights to learn more."
 date: 2023-08-23
 tags: ["frontend"]
 ---

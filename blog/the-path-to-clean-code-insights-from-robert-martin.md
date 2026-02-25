@@ -1,13 +1,13 @@
 ---
 title: "The Path to Clean Code - Insights from Robert Martin"
-description: "Master the art of clean code: Improve readability, reduce duplication, apply SOLID principles, and embrace continuous refactoring."
+description: "Master the art of clean code: Improve readability, reduce duplication, apply SOLID principles, and embrace continuous refactoring. Dive into this step-by-step tutorial."
 date: 2023-07-08
 tags: ["growth"]
 ---
 
 ## What is Clean Code
 
-Clean Code: A Handbook of Agile Software Craftsmanship is a book written by Robert C. Martin that emphasizes the importance of writing clean, readable, and maintainable code. It serves as a guide for software engineers to improve their coding skills and create high-quality software.
+In this post, we will explore **Insights from Robert Martin**. Clean Code: A Handbook of Agile Software Craftsmanship is a book written by Robert C. Martin that emphasizes the importance of writing clean, readable, and maintainable code. It serves as a guide for software engineers to improve their coding skills and create high-quality software.
 
 ---
 

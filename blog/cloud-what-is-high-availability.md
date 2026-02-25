@@ -1,13 +1,15 @@
 ---
 title: "🌩️ Cloud: What Is High Availability"
-description: "Learn High Availability in the cloud: how redundancy, load balancing, and failover keep your applications online with minimal downtime."
+description: "Learn High Availability in the cloud: how redundancy, load balancing, and failover keep your applications online with minimal downtime. Explore this comprehensive guide."
 date: 2025-11-04
 tags: ["platform"]
 ---
 
 ## 🧠 Understanding High Availability
 
-**High Availability (HA)** means designing systems to stay online and accessible **as much as possible**, even when parts of the system fail.  
+## What is What Is High Availability?
+
+In this post, we will explore **What Is High Availability**. **High Availability (HA)** means designing systems to stay online and accessible **as much as possible**, even when parts of the system fail.  
 
 No system can achieve 100% uptime — hardware, network, or software failures are inevitable.  
 High availability aims to **minimize downtime** by using redundancy and smart design to keep services running when something breaks.

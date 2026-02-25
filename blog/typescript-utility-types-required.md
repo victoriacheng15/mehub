@@ -1,6 +1,6 @@
 ---
 title: "TypeScript Utility Types - Required"
-description: "Required: TypeScript utility making all object properties mandatory. Enhance type safety."
+description: "Required: TypeScript utility making all object properties mandatory. Enhance type safety. Discover essential tips, full code examples, and practical insights in this guide."
 date: 2023-09-06
 tags: ["typescript"]
 ---

@@ -1,13 +1,13 @@
 ---
 title: "Trying Azure Container Registry"
-description: "Learn how I used Azure Container Registry to securely store Docker images from a personal project, with GitHub Actions CI and zero hardcoded secrets."
+description: "Learn how I used Azure Container Registry to securely store Docker images from a personal project, with GitHub Actions CI and zero hardcoded secrets. Read more to learn."
 date: 2025-12-16
 tags: ["platform"]
 ---
 
 ## What is Azure Container Registry?
 
-Azure Container Registry (ACR) is a managed, private Docker registry service in Azure. It lets you store, build, and manage container images and artifacts—securely and at scale—without relying on public registries like Docker Hub.
+In this post, we will explore **Trying Azure Container Registry**. Azure Container Registry (ACR) is a managed, private Docker registry service in Azure. It lets you store, build, and manage container images and artifacts—securely and at scale—without relying on public registries like Docker Hub.
 
 Think of it like a personal warehouse for your Docker images: only you (or your team) can access it, and it lives right inside your Azure environment.
 

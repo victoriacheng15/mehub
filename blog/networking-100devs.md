@@ -1,13 +1,13 @@
 ---
 title: Networking 100Devs
-description: "Networking is building professional relationships to achieve career goals. Land job offers by attending events, joining groups, and meeting new people."
+description: "Networking is building professional relationships to achieve career goals. Land job offers by attending events, joining groups, and meeting new people. Read more to learn."
 date: 2022-02-08
 tags: ["growth"]
 ---
 
 ## Introduction
 
-Networking is the class that everyone and I have been waiting for! But why it is important? Let's say, you click _APPLY_ on the job board vs building connections with individuals who are already in the industry. Leon describes this with an eagle flying by and picking up the ONE resume that was thrown out with other resumes and then the eagle drops the resume at the recruiter's desk. The recruiter SEES your information on the resume.
+In this post, we will explore **Networking 100Devs**. Networking is the class that everyone and I have been waiting for! But why it is important? Let's say, you click _APPLY_ on the job board vs building connections with individuals who are already in the industry. Leon describes this with an eagle flying by and picking up the ONE resume that was thrown out with other resumes and then the eagle drops the resume at the recruiter's desk. The recruiter SEES your information on the resume.
 
 - resumes were thrown out with other resumes = clicking apply with other applications
 - the resume drops on the recruiter's desk = build connections with individuals who are already in the industry

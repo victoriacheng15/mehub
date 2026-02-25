@@ -1,13 +1,15 @@
 ---
 title: March Reflection 2023
-description: "Reflected on what I learned about run TS node app, ch 1 of the System Design, LCP and CLS from Lighthouse, and run a tests array with one of Jest's features."
+description: "Reflected on what I learned about run TS node app, ch 1 of the System Design, LCP and CLS from Lighthouse, and run a tests array with one of Jest's features. Read on."
 date: 2023-03-28
 tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection
 
-I think this month is pretty productive. I have done a couple of things:
+## What is March Reflection 2023?
+
+In this post, we will explore **March Reflection 2023**. I think this month is pretty productive. I have done a couple of things:
 
 - Published a blog about how to set up and deploy a TS node app
 - Read chapter 1 of the System Design Interview

@@ -1,6 +1,6 @@
 ---
 title: "Singly Linked List - JavaScript Code Example"
-description: "Explore Singly Linked Lists with concise code examples in JavaScript, mastering insertion, deletion, and search operations."
+description: "Explore Singly Linked Lists with concise code examples in JavaScript, mastering insertion, deletion, and search operations. Discover essential tips and practical guides."
 date: 2024-05-14
 tags: ["dsa"]
 ---

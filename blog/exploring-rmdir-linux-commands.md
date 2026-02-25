@@ -1,6 +1,6 @@
 ---
 title: "Exploring rmdir - Linux Commands"
-description: "Learn how to use the rmdir command in Linux to remove empty directories. Discover its syntax, options, and examples for efficient file management."
+description: "Learn how to use the rmdir command in Linux to remove empty directories. Discover its syntax, options, and examples for efficient file management. Dive into the full post."
 date: 2024-06-15
 tags: ["linux"]
 ---

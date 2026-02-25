@@ -1,13 +1,15 @@
 ---
 title: "Docker Compose - Configuring Images and Container Names"
-description: "Enhance Docker deployment with custom names for organized images and containers. Explore efficient file transfers using the 'docker cp' command."
+description: "Enhance Docker deployment with custom names for organized images and containers. Explore efficient file transfers using the 'docker cp' command. Dive into the full post."
 date: 2024-02-01
 tags: ["platform"]
 ---
 
 ## Configuring names for an image and container
 
-Before establishing names for both the Docker image and container, my lists of Docker images and containers were disorderly and challenging to comprehend due to their extended, unclear names. Recognizing the need for organization, I consulted GPT to inquire about potential solutions. GPT confirmed that it is possible to configure names. Additionally, I cross-referenced the information provided by GPT with the Docker Documentation to ensure that the guidance was up-to-date.
+## What is Configuring Images and Container Names?
+
+In this post, we will explore **Configuring Images and Container Names**. Before establishing names for both the Docker image and container, my lists of Docker images and containers were disorderly and challenging to comprehend due to their extended, unclear names. Recognizing the need for organization, I consulted GPT to inquire about potential solutions. GPT confirmed that it is possible to configure names. Additionally, I cross-referenced the information provided by GPT with the Docker Documentation to ensure that the guidance was up-to-date.
 
 Example:
 

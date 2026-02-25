@@ -1,13 +1,13 @@
 ---
 title: The Journey of Contributing to Open Source
-description: "Guide to contributing to open source: Covers Git, GitHub, finding good first issues. Personal journey of writer's first pull request, tips to start."
+description: "Guide to contributing to open source: Covers Git, GitHub, finding good first issues. Personal journey of writer's first pull request, tips to start. Read more to learn."
 date: 2022-06-10
 tags: ["growth"]
 ---
 
 ## What is open source??
 
-This has many definitions, but to me, it is a codebase that is open for the public to view or modify for improvement.
+In this post, we will explore **The Journey of Contributing to Open Source**. This has many definitions, but to me, it is a codebase that is open for the public to view or modify for improvement.
 
 > The term open source refers to something people can modify and share because its design is publicly accessible. [source](https://opensource.com/resources/what-open-source)
 

@@ -1,13 +1,13 @@
 ---
 title: JavaScript - onClick vs addEventListener
-description: "JS onclick: all browsers. addEventListener: multiple events but not in older IE"
+description: "JS onclick: all browsers. addEventListener: multiple events but not in older IE. Dive into this detailed tutorial to master the overall core concepts and improve your skills."
 date: 2022-02-25
 tags: ["javascript"]
 ---
 
 ## onclick
 
-The onclick property is an event handler for processing click events on the specific element.
+In this post, we will explore **onClick vs addEventListener**. The onclick property is an event handler for processing click events on the specific element.
 
 The syntax looks this
 

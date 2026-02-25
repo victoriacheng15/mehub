@@ -1,6 +1,6 @@
 ---
 title: "Exploring cd - Linux Commands"
-description: "Unlock the efficiency of cd command in Linux: a quick shortcut for toggling between current and previous directories, streamlining command-line navigation."
+description: "Unlock the efficiency of cd command in Linux: a quick shortcut for toggling between current and previous directories, streamlining command-line navigation. Read more to learn."
 date: 2024-04-13
 tags: ["linux"]
 ---
@@ -28,42 +28,14 @@ Directory represents the destination directory you want to navigate to. You can 
 cd ~/Documents
 ```
 
-### Navigating Up One **Directory Level**
+## Common Use Cases & Shortcuts
 
-```bash
-cd ..
-```
-
-### Navigating to the Root **Directory**
-
-```bash
-cd /
-```
-
-### Returning to the Previous **Directory**
-
-Let's illustrate this with an example:
-
-- Suppose you start in your home directory (/home/user).
-- You navigate to the _Documents_ directory:
-
-```bash
-cd Documents
-# Now you're in /home/user/Documents
-```
-
-- Then, you decide to move to another directory, let's say _dev_:
-
-```bash
-cd dev
-# Now you're in /home/user/Documents/dev
-```
-
-- If you want to return to the _previous_ directory which is the _Documents_ directory in this case, you can use the `cd -` command:
-
-```bash
-cd -
-```
+| Shortcut | Description | Example Target |
+| :--- | :--- | :--- |
+| `~` | Home directory | Navigates to `/home/user/` |
+| `..` | Parent directory | Moves up one level |
+| `-` | Previous directory | Toggles back to last location |
+| `/` | Root directory | Navigates to base `/` file system |
 
 ---
 

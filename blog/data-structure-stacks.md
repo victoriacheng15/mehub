@@ -1,6 +1,6 @@
 ---
 title: "Data Structure - Stacks"
-description: "Discover the power of stacks in data structures—efficiency and versatility in handling Last In, First Out (LIFO) operations."
+description: "Discover the power of stacks in data structures—efficiency and versatility in handling Last In, First Out (LIFO) operations. Discover essential tips and practical guides."
 date: 2024-04-18
 tags: ["dsa"]
 ---

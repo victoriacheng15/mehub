@@ -1,6 +1,6 @@
 ---
 title: JavaScript - Nullish Coalescing Operator
-description: "Let's learn about what is nullish coalescing operator and how it is different from a logical OR operator!"
+description: "Let's learn about what is nullish coalescing operator and how it is different from a logical OR operator! Dive into this detailed tutorial to master the core concepts."
 date: 2023-05-09
 tags: ["javascript"]
 ---

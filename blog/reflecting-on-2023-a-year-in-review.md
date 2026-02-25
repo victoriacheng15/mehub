@@ -1,13 +1,16 @@
 ---
 title: "Reflecting on 2023 - A Year in Review"
-description: "Reflecting on the highs, lows, and lessons of 2023. Here's to a wonderful 2024 ahead!"
+description: "Reflecting on the highs, lows, and lessons of 2023. Here's to a wonderful 2024 ahead! Discover essential tips, full code examples, and practical insights in this guide."
 date: 2023-12-27
 tags: ["monthly-log"]
 ---
 
 ## The 2023 Year in Review
 
-- Published blog posts - 58
+## What is A Year in Review?
+
+In this post, we will explore **A Year in Review**. - Published blog posts - 58
+
 - Wrote monthly reflections - 9
 - Read books - 26
 

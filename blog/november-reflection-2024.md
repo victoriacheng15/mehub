@@ -1,13 +1,15 @@
 ---
 title: "November Reflection 2024"
-description: "Exploring a new journaling system with Google Docs tabs and insights from Fundamentals of Software Architecture on design, trade-offs, and adaptability."
+description: "Exploring a new journaling system with Google Docs tabs and insights from Fundamentals of Software Architecture on design, trade-offs, and adaptability. Read more to learn."
 date: 2024-11-26
 tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection
 
-It’s the last month of the year, and 2024 is quickly coming to a close! It’s not quite time to look back on everything just yet, but it’s a clear reminder that 2025 is right around the corner. December brings that unmistakable sense of nearing the finish line, a gentle nudge to wrap up the year strong and prepare for what’s to come in just a few short weeks.”
+## What is November Reflection 2024?
+
+In this post, we will explore **November Reflection 2024**. It’s the last month of the year, and 2024 is quickly coming to a close! It’s not quite time to look back on everything just yet, but it’s a clear reminder that 2025 is right around the corner. December brings that unmistakable sense of nearing the finish line, a gentle nudge to wrap up the year strong and prepare for what’s to come in just a few short weeks.”
 
 I recently discovered that Google made an amazing update to Docs. They introduced document tabs, so you can now have one file with multiple tabs. I thought this was a fantastic change because it lets me organize my journals or files by title and categorize content within tabs. This idea seemed perfect for journals, so I decided to try it out and have been using it since the middle of October.
 

@@ -1,6 +1,6 @@
 ---
 title: "Learning SQL: CASE"
-description: "Learn how to use the SQL CASE statement for conditional logic in queries. Master categorization, custom labels, and conditional calculations with examples!"
+description: "Learn how to use the SQL CASE statement for conditional logic in queries. Master categorization, custom labels, and conditional calculations with examples! Read more to learn."
 date: 2025-03-11
 tags: ["backend"]
 ---

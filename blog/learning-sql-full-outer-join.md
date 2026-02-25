@@ -1,6 +1,6 @@
 ---
 title: "Learning SQL: FULL OUTER JOIN"
-description: "Master SQL FULL OUTER JOIN: Combine data from two tables, retain all rows, handle NULL values, and optimize queries for better insights."
+description: "Master SQL FULL OUTER JOIN: Combine data from two tables, retain all rows, handle NULL values, and optimize queries for better insights. Explore this comprehensive guide."
 date: 2025-02-04
 tags: ["backend"]
 ---

@@ -1,13 +1,15 @@
 ---
 title: "From Pi to Cloud Automation"
-description: "Automate content gathering with a Python script and GitHub Actions. No servers, no Pi—just daily updates straight to your Google Sheet."
+description: "Automate content gathering with a Python script and GitHub Actions. No servers, no Pi—just daily updates straight to your Google Sheet. Explore this comprehensive guide."
 date: 2025-08-05
 tags: ["growth", "python"]
 ---
 
 ## 🧠 What the Project Does
 
-Like many developers, some of my favorite learning projects come from scratching a personal itch. In this case, I wanted a simple system to collect articles I was reading — from sources like freeCodeCamp, Substack, GitHub, and Shopify — so I could see all the links in one place without having to visit each site individually.
+## What is From Pi to Cloud Automation?
+
+In this post, we will explore **From Pi to Cloud Automation**. Like many developers, some of my favorite learning projects come from scratching a personal itch. In this case, I wanted a simple system to collect articles I was reading — from sources like freeCodeCamp, Substack, GitHub, and Shopify — so I could see all the links in one place without having to visit each site individually.
 
 That personal itch turned into `articles-extractor`, a Python project that started small and ran locally on my machine. Later, I moved it to a Raspberry Pi to automate scheduled runs. Eventually, I deployed it using GitHub Actions to run reliably in the cloud — enabling the workflow to run anywhere, anytime without depending on my own hardware.
 

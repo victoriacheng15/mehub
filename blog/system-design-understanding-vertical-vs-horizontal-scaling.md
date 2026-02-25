@@ -1,6 +1,6 @@
 ---
 title: "System Design - Understanding Vertical vs Horizontal Scaling"
-description: "Explore vertical and horizontal scaling in system design with a water cup analogy. Learn when to grow capacity up or out for optimal performance."
+description: "Explore vertical and horizontal scaling in system design with a water cup analogy. Learn when to grow capacity up or out for optimal performance. Dive into the full post."
 date: 2024-01-09
 tags: ["system-design"]
 ---

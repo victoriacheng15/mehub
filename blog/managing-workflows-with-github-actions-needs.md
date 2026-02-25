@@ -1,6 +1,6 @@
 ---
 title: "Managing Workflows with GitHub Actions: needs"
-description: "Efficiently manage workflows in GitHub Actions by leveraging the “needs” syntax for job control."
+description: "Efficiently manage workflows in GitHub Actions by leveraging the “needs” syntax for job control. Explore practical examples and step-by-step insights to learn more."
 date: 2024-02-06
 tags: ["platform"]
 ---

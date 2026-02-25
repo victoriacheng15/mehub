@@ -1,13 +1,15 @@
 ---
 title: February Reflection 2023
-description: "Reflected on Hacker News clone learnings, especially Redux Toolkit. Gained Cypress API familiarity by writing e2e tests."
+description: "Reflected on Hacker News clone learnings, especially Redux Toolkit. Gained Cypress API familiarity by writing e2e tests. Read this comprehensive guide to learn much more."
 date: 2023-02-22
 tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection
 
-During the month, I have published blogs:
+## What is February Reflection 2023?
+
+In this post, we will explore **February Reflection 2023**. During the month, I have published blogs:
 
 - What is structuredClone in JavaScript
 - Let's Discover the JavaScript Map Keyed Collection

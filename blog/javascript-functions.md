@@ -1,13 +1,13 @@
 ---
 title: JavaScript Functions
-description: "JavaScript function: reusable block of code with arguments and defaults. Declare via declaration/ expression; arrow functions are shorter."
+description: "JavaScript function: reusable block of code with arguments and defaults. Declare via declaration/ expression; arrow functions are shorter. Read the full guide to learn."
 date: 2022-03-01
 tags: ["javascript"]
 ---
 
 ## What is a function?
 
-Functions are _building blocks_ of the program. They allow the code to be called many times without repetition!
+In this post, we will explore **JavaScript Functions**. Functions are _building blocks_ of the program. They allow the code to be called many times without repetition!
 
 ```js
 function greeting() {

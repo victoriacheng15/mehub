@@ -1,6 +1,6 @@
 ---
 title: "Exploring scp - Linux Commands"
-description: "Learn how to use the SCP command in Linux for secure file transfers between local and remote systems. Master key options & practical examples! 🔐📁"
+description: "Learn how to use the SCP command in Linux for secure file transfers between local and remote systems. Master key options & practical examples! 🔐📁. Dive into the full post."
 date: 2025-05-06
 tags: ["linux"]
 ---

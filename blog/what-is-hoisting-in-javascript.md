@@ -1,13 +1,13 @@
 ---
 title: What is Hoisting in JavaScript?
-description: "JS hoisting permits access to vars/funcs before creation, but var confuses by enabling calls before def. Prefer let/const for error prevention."
+description: "JS hoisting permits access to vars/funcs before creation, but var confuses by enabling calls before def. Prefer let/const for error prevention. Dive into the full post."
 date: 2022-11-02
 tags: ["javascript"]
 ---
 
 ## What is hoisting?
 
-It is a tricky question that comes with a tricky answer. However, **hoisting in JavaScript allows you to access functions and variables before they have been created** according to [Wes Bos's JavaScript - Hoisting](https://wesbos.com/javascript/03-the-tricky-bits/hoisting).
+In this post, we will explore **What is Hoisting in JavaScript?**. It is a tricky question that comes with a tricky answer. However, **hoisting in JavaScript allows you to access functions and variables before they have been created** according to [Wes Bos's JavaScript - Hoisting](https://wesbos.com/javascript/03-the-tricky-bits/hoisting).
 
 Also, TWO things are hoisted
 

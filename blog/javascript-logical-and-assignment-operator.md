@@ -1,6 +1,6 @@
 ---
 title: "JavaScript - Logical AND Assignment Operator"
-description: "Logical AND assignment (&&=) in programming: Efficiently update variables based on conditions."
+description: "Logical AND assignment (&&=) in programming: Efficiently update variables based on conditions. Discover essential tips, full code examples, and practical insights in this guide."
 date: 2023-10-11
 tags: ["javascript"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "TypeScript Utility Types - Omit"
-description: "Explore TypeScript's Omit utility type for precise property exclusions and enhanced type control."
+description: "Explore TypeScript's Omit utility type for precise property exclusions and enhanced type control. Explore practical examples and step-by-step insights to learn more."
 date: 2023-10-04
 tags: ["typescript"]
 ---

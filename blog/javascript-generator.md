@@ -1,6 +1,6 @@
 ---
 title: "JavaScript - Generator"
-description: "JavaScript generators: Craft pausable sequences with yield. Perfect for async tasks & data manipulation."
+description: "JavaScript generators: Craft pausable sequences with yield. Perfect for async tasks & data manipulation. Explore practical examples and step-by-step insights to learn more."
 date: 2023-08-16
 tags: ["javascript"]
 ---

@@ -1,13 +1,15 @@
 ---
 title: April Reflection 2023
-description: "Reflected on my Next.js journey: app dir, API route files, Redux Toolkit for state mgmt, SQL queries through a game, and AWS Amplify deployment."
+description: "Reflected on my Next.js journey: app dir, API route files, Redux Toolkit for state mgmt, SQL queries through a game, and AWS Amplify deployment. Dive into the full post."
 date: 2023-04-26
 tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection
 
-This month, I wrote 2 blogs which are one more than the "usual". Why the "usual"? 😂 It depends on the month and my motivation. 😅 At least, let me celebrate this small win.
+## What is April Reflection 2023?
+
+In this post, we will explore **April Reflection 2023**. This month, I wrote 2 blogs which are one more than the "usual". Why the "usual"? 😂 It depends on the month and my motivation. 😅 At least, let me celebrate this small win.
 
 The blogs:
 

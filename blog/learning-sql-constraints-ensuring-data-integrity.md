@@ -1,13 +1,13 @@
 ---
 title: "Learning SQL: Constraints – Ensuring Data Integrity"
-description: "Learn essential SQL constraints - NOT NULL, UNIQUE, CHECK, and DEFAULT - to enforce data integrity and maintain database accuracy with practical examples."
+description: "Learn essential SQL constraints - NOT NULL, UNIQUE, CHECK, and DEFAULT - to enforce data integrity and maintain database accuracy with practical examples. Read more to learn."
 date: 2025-05-20
 tags: ["backend"]
 ---
 
 ## What Are SQL Constraints?
 
-SQL **constraints** are rules that enforce data integrity by controlling what values can be stored in database columns. They help prevent invalid, inconsistent, or duplicate data. This post covers four fundamental constraints:
+In this post, we will explore **Constraints – Ensuring Data Integrity**. SQL **constraints** are rules that enforce data integrity by controlling what values can be stored in database columns. They help prevent invalid, inconsistent, or duplicate data. This post covers four fundamental constraints:
 
 - `NOT NULL` – Requires a column to always have a value
 - `UNIQUE` – Ensures all values in a column are different

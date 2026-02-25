@@ -1,6 +1,6 @@
 ---
 title: "Exploring ping - Linux Commands"
-description: "Learn how to use the Linux ping command to test network connectivity, troubleshoot issues, and measure response times in simple, easy steps."
+description: "Learn how to use the Linux ping command to test network connectivity, troubleshoot issues, and measure response times in simple, easy steps. Read the full guide to learn."
 date: 2025-03-18
 tags: ["linux"]
 ---

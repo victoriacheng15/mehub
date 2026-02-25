@@ -1,6 +1,6 @@
 ---
 title: "Exploring wc - Linux Commands"
-description: "Learn how to use the wc command in Linux to count lines, words, bytes, and more in files. Explore options and get helpful tips for efficient file analysis."
+description: "Learn how to use the wc command in Linux to count lines, words, bytes, and more in files. Explore options and get helpful tips for efficient file analysis. Read more to learn."
 date: 2024-08-10
 tags: ["linux"]
 ---

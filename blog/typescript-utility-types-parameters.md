@@ -1,13 +1,13 @@
 ---
 title: "TypeScript Utility Types - Parameters"
-description: "Parameters utility in TypeScript extracts expected function arguments, aiding developers in understanding and working with parameter types."
+description: "Parameters utility in TypeScript extracts expected function arguments, aiding developers in understanding and working with parameter types. Read the full guide to learn."
 date: 2024-01-02
 tags: ["typescript"]
 ---
 
 ## What is Parameters?
 
-It is a built-in utility type that extracts the parameter types of a function. It accepts a function type as input and gives back a tuple type that lists the parameter types of the function.
+The `Parameters` utility type is a built-in utility type that extracts the parameter types of a function. It accepts a function type as input and gives back a tuple type that lists the parameter types of the function.
 
 ```ts
 type Parameters<T extends (...args: any) => any> =

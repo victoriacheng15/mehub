@@ -1,6 +1,6 @@
 ---
 title: "Learning SQL: CROSS JOIN"
-description: "Learn SQL CROSS JOIN: Combine every row from two tables, create all possible combinations, and understand its use cases for data analysis."
+description: "Learn SQL CROSS JOIN: Combine every row from two tables, create all possible combinations, and understand its use cases for data analysis. Read the full guide to learn."
 date: 2025-02-11
 tags: ["backend"]
 ---

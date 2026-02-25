@@ -1,13 +1,13 @@
 ---
 title: "Keep Going - Navigate Your Creative Journey"
-description: "Unlock creative resilience with 'Keep Going' by Austin Kleon. Wisdom, wit, and 10 actionable ways to persist on your creative journey."
+description: "Unlock creative resilience with 'Keep Going' by Austin Kleon. Wisdom, wit, and 10 actionable ways to persist on your creative journey. Explore this comprehensive guide."
 date: 2024-02-10
 tags: ["growth"]
 ---
 
 ## What is the Keep Going book?
 
-"Keep Going" by Austin Kleon is a motivational compass that navigates readers through the twists and turns of life's creative journey. With a blend of wisdom and wit, Kleon encourages individuals to persist in their creative pursuits, offering practical insights on embracing the process and finding inspiration in the everyday. Illustrated with Kleon's distinctive drawings, the book serves as a visually engaging guide, providing readers with a roadmap for sustaining creativity and resilience. Whether you're an artist, writer, or anyone seeking motivation, "Keep Going" is a refreshing resource that emphasizes the enduring power to persist and thrive in the face of challenges.
+In this post, we will explore **Navigate Your Creative Journey**. "Keep Going" by Austin Kleon is a motivational compass that navigates readers through the twists and turns of life's creative journey. With a blend of wisdom and wit, Kleon encourages individuals to persist in their creative pursuits, offering practical insights on embracing the process and finding inspiration in the everyday. Illustrated with Kleon's distinctive drawings, the book serves as a visually engaging guide, providing readers with a roadmap for sustaining creativity and resilience. Whether you're an artist, writer, or anyone seeking motivation, "Keep Going" is a refreshing resource that emphasizes the enduring power to persist and thrive in the face of challenges.
 
 ---
 

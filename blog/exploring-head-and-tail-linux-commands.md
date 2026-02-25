@@ -1,6 +1,6 @@
 ---
 title: "Exploring head and tail - Linux Commands"
-description: "Discover the head and tail commands in Linux. Discover their syntax and options to view the start and end of files efficiently. Level up your Linux knowledge!"
+description: "Discover the head and tail commands in Linux. Discover their syntax and options to view the start and end of files efficiently. Level up your Linux knowledge! Read on."
 date: 2024-07-06
 tags: ["linux"]
 ---

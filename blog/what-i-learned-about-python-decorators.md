@@ -1,13 +1,13 @@
 ---
 title: "What I Learned About Python Decorators?"
-description: "A simple explanation of Python decorators and how they helped me remove repetitive error handling across multiple API routes in my project."
+description: "A simple explanation of Python decorators and how they helped me remove repetitive error handling across multiple API routes in my project. Read the full guide to learn."
 date: 2025-12-02
 tags: ["python"]
 ---
 
 ## What Is a Decorator?
 
-Python decorators used to feel a bit confusing to me, but once I started using them in real projects, I realized how powerful they are—especially for reducing repetitive code like error handling. As I dug deeper, I learned that decorators are simply functions that wrap other functions to add extra behavior without modifying the original function’s code.
+In this post, we will explore **What I Learned About Python Decorators?**. Python decorators used to feel a bit confusing to me, but once I started using them in real projects, I realized how powerful they are—especially for reducing repetitive code like error handling. As I dug deeper, I learned that decorators are simply functions that wrap other functions to add extra behavior without modifying the original function’s code.
 
 The idea clicked for me when I tried a small example.
 

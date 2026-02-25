@@ -1,13 +1,13 @@
 ---
 title: JavaScript - Promise, Promise All, and async/await
-description: "Discover the concepts of Promises, Promise.all(), and async/await in JS, along with example code for each. Learn to handle asynchronous operations effectively."
+description: "Discover the concepts of Promises, Promise.all(), and async/await in JS, along with example code for each. Learn to handle asynchronous operations effectively. Read on."
 date: 2023-06-21
 tags: ["javascript"]
 ---
 
 ## What is Asynchronous Programming?
 
-Asynchronous programming is a technique that allows your program to start a long-running task and still be able to be responsive to other events while the task runs, rather than having to wait until the task is completed. Once the task is done, the program is presented with the result. We will explore the 3 methods that we use often to fetch APIs or any tasks!
+In this post, we will explore **Promise, Promise All, and async/await**. Asynchronous programming is a technique that allows your program to start a long-running task and still be able to be responsive to other events while the task runs, rather than having to wait until the task is completed. Once the task is done, the program is presented with the result. We will explore the 3 methods that we use often to fetch APIs or any tasks!
 
 ### Promise
 

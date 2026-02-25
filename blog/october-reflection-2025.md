@@ -1,13 +1,15 @@
 ---
 title: "October Reflection 2025"
-description: "Reflections on evolving a Flask API from SQLite MVP to PostgreSQL with Docker, Azure cloud deployment, feature flags, and DevOps workflows."
+description: "Reflections on evolving a Flask API from SQLite MVP to PostgreSQL with Docker, Azure cloud deployment, feature flags, and DevOps workflows. Read the full guide to learn."
 date: 2025-10-28
 tags: ["monthly-log", "python"]
 ---
 
 ## From SQLite to Azure: Practicing Production Thinking
 
-I started this school management Flask API project with a simple goal: to learn how to build a REST API using SQLite as the MVP. It manages entities like students, instructors, and classes — making it a practical way to explore database relationships and the MVC architecture while testing each route.
+## What is October Reflection 2025?
+
+In this post, we will explore **October Reflection 2025**. I started this school management Flask API project with a simple goal: to learn how to build a REST API using SQLite as the MVP. It manages entities like students, instructors, and classes — making it a practical way to explore database relationships and the MVC architecture while testing each route.
 
 As the project evolved, I realized it lacked a production-grade environment, which inspired me to expand it further:
 

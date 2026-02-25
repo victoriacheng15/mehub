@@ -1,13 +1,15 @@
 ---
 title: "Understanding HTTP Methods and Status"
-description: "Learn the essentials of HTTP methods (GET, POST, PUT, PATCH, DELETE) and common status codes to build clear, effective APIs."
+description: "Learn the essentials of HTTP methods (GET, POST, PUT, PATCH, DELETE) and common status codes to build clear, effective APIs. Discover essential tips and practical guides."
 date: 2025-08-12
 tags: ["platform"]
 ---
 
 ## 🔍 What Are HTTP Methods?
 
-When building or using web APIs, understanding HTTP methods and the status codes that come with them is essential. Whether you’re writing a backend service or integrating with one, these two concepts go hand-in-hand — the method describes *what the client wants to do*, and the status code describes *what actually happened*.
+## What is Understanding HTTP Methods and Status?
+
+In this post, we will explore **Understanding HTTP Methods and Status**. When building or using web APIs, understanding HTTP methods and the status codes that come with them is essential. Whether you’re writing a backend service or integrating with one, these two concepts go hand-in-hand — the method describes *what the client wants to do*, and the status code describes *what actually happened*.
 
 HTTP methods are *verbs* that describe the kind of operation the client wants the server to perform on a resource. For example:
 

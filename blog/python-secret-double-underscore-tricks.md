@@ -1,13 +1,15 @@
 ---
 title: "Python Secret Double Underscore Tricks"
-description: "Learn Python dunder methods by building a Coffee class step-by-step. Master init, str, repr, eq & len with clear examples. Perfect for beginners!"
+description: "Learn Python dunder methods by building a Coffee class step-by-step. Master init, str, repr, eq & len with clear examples. Perfect for beginners! Dive into the full post."
 date: 2025-06-10
 tags: ["python"]
 ---
 
 ## **Dunder Methods Explained**
 
-If you've used Python classes, you know `__init__` - the method that creates objects. But Python has many more *dunder* (double underscore) methods that control how objects behave. Let's explore the most useful ones.
+## What is Python Secret Double Underscore Tricks?
+
+In this post, we will explore **Python Secret Double Underscore Tricks**. If you've used Python classes, you know `__init__` - the method that creates objects. But Python has many more *dunder* (double underscore) methods that control how objects behave. Let's explore the most useful ones.
 
 ---
 
