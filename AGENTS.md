@@ -4,59 +4,64 @@ This document provides context and instructions for AI agents working on the **M
 
 ## 1. Project Overview
 
-**Mehub** is a personal website and blog platform built with a custom Go-based SSG. It was migrated from Astro to achieve zero external dependencies (aside from Go modules) and faster build times.
+**Mehub** is a personal website and blog platform built with a custom Go-based SSG. It emphasizes performance, zero external runtime dependencies, and AI-first discoverability.
 
-- **Core Tech**: Go (Golang) 1.23+
-- **Styling**: Tailwind CSS (processed via standalone CLI)
-- **Content**: Markdown files (parsed with `goldmark`)
-- **Goal**: Single-binary simplicity, high performance, and full ownership of the rendering pipeline.
+- **Core Tech**: Go (Golang) 1.23.4
+- **Styling**: Tailwind CSS (standalone CLI)
+- **Content**: Markdown with YAML frontmatter
+- **Architecture**: Single-binary generator that renders templates into a `dist/` directory.
 
-## 2. Build and Test Commands
+## 2. Project Architecture
 
-The project relies on **Nix** for a reproducible environment. **Always use the `make nix-<target>` variants** (e.g., `make nix-test`, `make nix-update`) for all Go-related tasks to ensure the toolchain is correctly loaded.
+| Component | Path | Description |
+| :--- | :--- | :--- |
+| **Entry Point** | `cmd/ssg/main.go` | Orchestrates the build process and clean/setup tasks. |
+| **Generator** | `internal/generator/` | Core logic for rendering HTML, RSS, Sitemaps, and API registries. |
+| **Content** | `internal/content/` | Markdown parsing (goldmark), tag processing, and post data structures. |
+| **Config** | `internal/config/` | YAML configuration loading for site metadata, projects, and skills. |
+| **Templates** | `internal/templates/` | Go HTML templates and Tailwind input CSS. |
+
+## 3. Build and Development
+
+The project uses a `Makefile` that automatically wraps commands in `nix-shell` if available.
 
 | Command | Description |
 | :--- | :--- |
-| `make nix-build` | **Primary Build Command**. Builds the `ssg.exe` binary and generates the site in `dist/` inside `nix-shell`. Requires `make setup-tailwind` first. |
-| `make nix-test` | Runs all Go unit tests inside `nix-shell`. |
-| `make nix-check` | Verifies code formatting and runs static analysis inside `nix-shell`. |
-| `make nix-format` | Automatically formats all Go code inside `nix-shell`. |
-| `make nix-update` | Updates Go dependencies and runs `go mod tidy` inside `nix-shell`. |
-| `make setup-tailwind` | Downloads the standalone Tailwind CSS CLI. Required before building. |
+| `make build` | **Primary Command**. Downloads Tailwind, builds the SSG, and generates the full site in `dist/`. |
+| `make test` | Runs all Go unit tests. |
+| `make check` | Verifies code formatting (`gofmt`) and static analysis (`go vet`). |
+| `make format` | Automatically formats all Go code. |
+| `make lint` | Lints all Markdown files using `markdownlint`. |
+| `make add-hr` | Helper script to insert horizontal rules (`---`) between H2 headings in blog posts. |
+| `make update` | Updates Go dependencies and tidies `go.mod`. |
 
-**Important:** To build the full static site with styles, you must run:
+## 4. AI Discoverability & API Registries
 
-```bash
-make setup-tailwind && make nix-build
-```
+Mehub is designed to be easily consumed by AI agents and recruitment systems via machine-readable endpoints generated in `dist/api/`.
 
-## 3. Code Style Guidelines
+### API Registry Map
+- **Catalog**: `/api/catalog-registry.json` — Entry point for discovery.
+- **Profile**: `/api/profile-registry.json` — Site owner metadata.
+- **Skills**: `/api/skills-registry.json` — Structured skills and specialties.
+- **Projects**: `/api/projects-registry.json` — Project portoflio with tech stacks.
+- **Blog**: `/api/blog-registry.json` — Metadata for all blog posts for NLP processing.
+
+### Discoverability Assets
+- **robots.txt**: Explicitly allows `/api/` for all crawlers.
+- **sitemap.xml**: Includes both HTML pages and the API registry JSON files to ensure thorough indexing.
+
+## 5. Guidelines
 
 ### Go
-
-- **Strict Adherence**: Code **must** pass `go fmt` and `go vet`.
-- **Idiomatic Go**: Prefer standard library solutions where possible. Keep functions small and focused.
-- **Error Handling**: Handle errors explicitly. Do not ignore returned errors.
-- **Imports**: Group standard library imports separately from third-party imports.
+- Use idiomatic Go and prefer the standard library.
+- Code **must** pass `make check` before completion.
+- Handle all errors explicitly.
 
 ### Markdown
+- Maintain valid YAML frontmatter in `blog/*.md`.
+- Ensure all posts have a `title`, `date` (YYYY-MM-DD), and `tags`.
+- Avoid em dashes; use commas or parentheses for clarity.
 
-- **Linting**: All markdown files (blog posts, documentation) must comply with `markdownlint` rules defined in `.markdownlint.json`.
-- **Frontmatter**: Blog posts require valid YAML frontmatter (title, date, tags, etc.).
-
-### HTML/CSS
-
-- **Tailwind**: Use utility classes for styling. Avoid inline styles or custom CSS files unless absolutely necessary.
-- **Templates**: HTML templates are located in `internal/templates/`. Maintain clean, semantic HTML structure.
-
-## 4. Testing Instructions
-
-- **Unit Tests**: Run `make nix-test` to execute the standard Go test suite.
-- **Coverage**: Run `make nix-cov-log` to see a coverage report in the terminal.
-- **New Features**: Any new logic in the SSG (e.g., new markdown parsing features, template functions) **must** include accompanying unit tests.
-
-## 5. Security & Automation
-
-- **CI/CD**: GitHub Actions handle linting, testing, and deployment.
-- **File System**: The SSG reads from the local file system (`blog/`, `public/`) and writes to `dist/`. Ensure file path joins are safe to prevent directory traversal.
-- **External Inputs**: The site is static, but build-time inputs (markdown files) should be treated as untrusted content to prevent build failures or injection issues.
+### Style
+- Use Tailwind utility classes in templates.
+- Avoid inline styles or custom CSS blocks outside of `internal/templates/input.css`.
