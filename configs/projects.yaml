@@ -1,6 +1,6 @@
 projects:
   - title: "Observability Hub"
-    shortDescription: "Self-hosted telemetry platform implementing high-fidelity observability, webhook-triggered GitOps reconciliation, and automated infrastructure self-healing."
+    shortDescription: "High-fidelity K3s observability platform. Implements modular library-first Go architecture, OpenTelemetry tracing, OpenBao secrets, and GitOps automation."
     link: "observability-hub"
     techs: |
       - Go
@@ -8,15 +8,16 @@ projects:
       - Helm
       - OpenTelemetry Collector
       - Prometheus
+      - OpenTofu (Terraform)
       - Grafana / Loki / Tempo
       - PostgreSQL (TimescaleDB)
   - title: "Cover Craft"
     shortDescription: "Serverless image generation service architected on Azure Functions & Next.js. Enforces design consistency via shared full-stack validation, automated WCAG compliance, and privacy-first telemetry."
     link: "cover-craft"
     techs: |
-      - TypeScript
       - Azure Functions
       - Next.js
+      - TypeScript
       - GitHub Actions
       - MongoDB Atlas
   - title: "Platform Actions"
@@ -36,3 +37,4 @@ projects:
       - Docker
       - GitHub Actions
       - MongoDB Atlas
+      - Google Gemini
