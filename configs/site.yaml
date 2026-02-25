@@ -4,7 +4,7 @@ site:
   name: "Victoria Cheng"
   slogan: "Engineering resilient systems and documenting the architectural why."
   description: |
-    Software Engineer focused on building observable, scalable platforms. Documenting the architectural trade-offs and "why" behind systems engineering, from zero-infrastructure ETL pipelines to cloud infrastructure.
+    Software Engineer focused on building observable, scalable platforms. Documenting the architectural trade-offs and "why" behind systems engineering, from zero-infrastructure data ingestion pipelines to cloud infrastructure.
   about:
     image: "avatar.png"
     paragraphs: |

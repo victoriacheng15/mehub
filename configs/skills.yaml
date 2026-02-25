@@ -1,5 +1,5 @@
 skills:
-  # Core languages
+# 📝 Programming Languages
   - name: "Go (Goroutines)"
     icon: "go.svg"
   - name: "Python (asyncio)"
@@ -7,41 +7,41 @@ skills:
   - name: "TypeScript"
     icon: "typescript.svg"
 
-  # Platform & DevOps & Cloud
+# ☁️ Cloud Native & Observability
   - name: "Kubernetes (k3s)"
     icon: "kubernetes.svg"
   - name: "Helm"
     icon: "helm.svg"
-  - name: "Grafana / Loki / Tempo"
-    icon: "grafana.svg"
   - name: "Prometheus"
     icon: "prometheus.svg"
   - name: "OpenTelemetry"
     icon: "opentelemetry.svg"
+  - name: "Grafana / Loki / Tempo"
+    icon: "grafana.svg"
+
+# ⚙️ Infrastructure & Security
+  - name: "OpenTofu (Terraform)"
+    icon: "opentofu.svg"
+  - name: "Azure (Functions)"
+    icon: "azure.svg"
   - name: "Docker"
     icon: "docker.svg"
-  - name: "Linux (Systemd)"
-    icon: "linux.svg"
   - name: "GitHub Actions"
     icon: "githubactions.svg"
-  - name: "Azure Functions"
-    icon: "azure.svg"
+  - name: "Linux (Systemd)"
+    icon: "linux.svg"
 
-  # Databases
+# 🛠 Backend & Frontend
   - name: "PostgreSQL (JSONB)"
     icon: "postgresql.svg"
   - name: "MongoDB"
     icon: "mongodb.svg"
-
-  # Backend
-  - name: "Flask"
-    icon: "flask.svg"
   - name: "Node.js"
     icon: "nodedotjs.svg"
+  - name: "Flask"
+    icon: "flask.svg"
   - name: "GraphQL"
     icon: "graphql.svg"
-
-  # Frontend
   - name: "React"
     icon: "react.svg"
   - name: "Tailwind CSS"
@@ -51,7 +51,8 @@ specialties:
   - "ADRs (Architecture Decision Records)"
   - "Root Cause Analysis"
   - "CI/CD Pipelines"
-  - "OpenBao (Vault)"
   - "GitOps"
+  - "OpenBao (Vault)"
+  - "Tailscale"
   - "REST APIs"
   - "Test Driven Development (TDD)"
