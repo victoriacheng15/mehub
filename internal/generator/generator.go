@@ -302,13 +302,31 @@ func (g *SiteGenerator) GenerateSitemap(distDir string, posts []content.Post) er
 		}
 	}
 
+	// API Registries
+	apiFiles := []string{
+		"api/catalog-registry.json",
+		"api/profile-registry.json",
+		"api/skills-registry.json",
+		"api/projects-registry.json",
+		"api/blog-registry.json",
+	}
+	for _, apiFile := range apiFiles {
+		if _, err := fmt.Fprintf(f, `  <url>
+    <loc>%s%s</loc>
+    <lastmod>%s</lastmod>
+  </url>
+`, g.Config.Site.URL, apiFile, time.Now().Format("2006-01-02")); err != nil {
+			return err
+		}
+	}
+
 	if _, err := fmt.Fprint(f, `</urlset>`); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (g *SiteGenerator) GenerateRegistryEndpoint(distDir string, data *content.ContentData) error {
+func (g *SiteGenerator) GenerateBlogRegistry(distDir string, data *content.ContentData) error {
 	apiDir := filepath.Join(distDir, "api")
 	if err := os.MkdirAll(apiDir, 0755); err != nil {
 		return fmt.Errorf("failed to create api dir: %w", err)
@@ -335,11 +353,131 @@ func (g *SiteGenerator) GenerateRegistryEndpoint(distDir string, data *content.C
 
 	jsonData, err := json.MarshalIndent(items, "", "  ")
 	if err != nil {
-		return fmt.Errorf("failed to marshal registry: %w", err)
+		return fmt.Errorf("failed to marshal blog registry: %w", err)
+	}
+
+	if err := os.WriteFile(filepath.Join(apiDir, "blog-registry.json"), jsonData, 0644); err != nil {
+		return fmt.Errorf("failed to write blog-registry.json: %w", err)
+	}
+	return nil
+}
+
+func (g *SiteGenerator) GenerateProjectsRegistry(distDir string) error {
+	apiDir := filepath.Join(distDir, "api")
+	if err := os.MkdirAll(apiDir, 0755); err != nil {
+		return fmt.Errorf("failed to create api dir: %w", err)
+	}
+
+	type ProjectItem struct {
+		Title            string   `json:"title"`
+		ShortDescription string   `json:"short_description"`
+		Link             string   `json:"link"`
+		Techs            []string `json:"tech_stack"`
+	}
+
+	var items []ProjectItem
+	for _, p := range g.Config.Projects {
+		// Clean the techs string (it's often a markdown list in YAML)
+		techs := g.FuncMap["cleanYAMLList"].(func(interface{}) []string)(p.Techs)
+
+		items = append(items, ProjectItem{
+			Title:            p.Title,
+			ShortDescription: p.ShortDescription,
+			Link:             p.Link,
+			Techs:            techs,
+		})
+	}
+
+	jsonData, err := json.MarshalIndent(items, "", "  ")
+	if err != nil {
+		return fmt.Errorf("failed to marshal projects registry: %w", err)
+	}
+
+	if err := os.WriteFile(filepath.Join(apiDir, "projects-registry.json"), jsonData, 0644); err != nil {
+		return fmt.Errorf("failed to write projects-registry.json: %w", err)
+	}
+	return nil
+}
+
+func (g *SiteGenerator) GenerateSkillsRegistry(distDir string) error {
+	apiDir := filepath.Join(distDir, "api")
+	if err := os.MkdirAll(apiDir, 0755); err != nil {
+		return fmt.Errorf("failed to create api dir: %w", err)
+	}
+
+	type SkillItem struct {
+		Name string `json:"name"`
+		Icon string `json:"icon"`
+	}
+
+	var items []SkillItem
+	for _, s := range g.Config.Skills {
+		items = append(items, SkillItem{
+			Name: s.Name,
+			Icon: s.Icon,
+		})
+	}
+
+	// Also include specialties as a separate array or group if needed
+	type RegistryOutput struct {
+		CoreSkills  []SkillItem `json:"core_skills"`
+		Specialties []string    `json:"specialties"`
+	}
+
+	output := RegistryOutput{
+		CoreSkills:  items,
+		Specialties: g.Config.Specialties,
+	}
+
+	jsonData, err := json.MarshalIndent(output, "", "  ")
+	if err != nil {
+		return fmt.Errorf("failed to marshal skills registry: %w", err)
 	}
 
 	if err := os.WriteFile(filepath.Join(apiDir, "skills-registry.json"), jsonData, 0644); err != nil {
 		return fmt.Errorf("failed to write skills-registry.json: %w", err)
+	}
+	return nil
+}
+
+func (g *SiteGenerator) GenerateProfileRegistry(distDir string) error {
+	apiDir := filepath.Join(distDir, "api")
+	if err := os.MkdirAll(apiDir, 0755); err != nil {
+		return fmt.Errorf("failed to create api dir: %w", err)
+	}
+
+	jsonData, err := json.MarshalIndent(g.Config.Site, "", "  ")
+	if err != nil {
+		return fmt.Errorf("failed to marshal profile registry: %w", err)
+	}
+
+	if err := os.WriteFile(filepath.Join(apiDir, "profile-registry.json"), jsonData, 0644); err != nil {
+		return fmt.Errorf("failed to write profile-registry.json: %w", err)
+	}
+	return nil
+}
+
+func (g *SiteGenerator) GenerateCatalogRegistry(distDir string) error {
+	apiDir := filepath.Join(distDir, "api")
+	if err := os.MkdirAll(apiDir, 0755); err != nil {
+		return fmt.Errorf("failed to create api dir: %w", err)
+	}
+
+	catalog := map[string]string{
+		"catalog":  g.Config.Site.URL + "api/catalog-registry.json",
+		"profile":  g.Config.Site.URL + "api/profile-registry.json",
+		"skills":   g.Config.Site.URL + "api/skills-registry.json",
+		"projects": g.Config.Site.URL + "api/projects-registry.json",
+		"blog":     g.Config.Site.URL + "api/blog-registry.json",
+	}
+
+	jsonData, err := json.MarshalIndent(catalog, "", "  ")
+	if err != nil {
+		return fmt.Errorf("failed to marshal catalog registry: %w", err)
+	}
+
+	if err := os.WriteFile(filepath.Join(apiDir, "catalog-registry.json"), jsonData, 0644); err != nil {
+		return fmt.Errorf("failed to write catalog-registry.json: %w", err)
 	}
 	return nil
 }
