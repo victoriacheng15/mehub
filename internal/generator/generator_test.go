@@ -14,9 +14,22 @@ import (
 func createConfig() *config.SiteConfig {
 	return &config.SiteConfig{
 		Site: config.SiteMetadata{
-			Title: "Test Site",
-			URL:   "http://example.com/",
+			Title:       "Test Site",
+			URL:         "http://example.com/",
+			Description: "Test Description",
 		},
+		Projects: []config.Project{
+			{
+				Title:            "Test Project",
+				ShortDescription: "Desc",
+				Link:             "http://link",
+				Techs:            "- Go\n- Test",
+			},
+		},
+		Skills: []config.Skill{
+			{Name: "Go", Icon: "go.svg"},
+		},
+		Specialties: []string{"Testing"},
 	}
 }
 
@@ -322,6 +335,51 @@ func TestGenerators(t *testing.T) {
 			},
 			check:   nil,
 			wantErr: true,
+		},
+		{
+			name: "Blog Registry",
+			fn:   func() error { return gen.GenerateBlogRegistry(distDir, data) },
+			check: func() error {
+				_, err := os.Stat(filepath.Join(distDir, "api", "blog-registry.json"))
+				return err
+			},
+			wantErr: false,
+		},
+		{
+			name: "Projects Registry",
+			fn:   func() error { return gen.GenerateProjectsRegistry(distDir) },
+			check: func() error {
+				_, err := os.Stat(filepath.Join(distDir, "api", "projects-registry.json"))
+				return err
+			},
+			wantErr: false,
+		},
+		{
+			name: "Skills Registry",
+			fn:   func() error { return gen.GenerateSkillsRegistry(distDir) },
+			check: func() error {
+				_, err := os.Stat(filepath.Join(distDir, "api", "skills-registry.json"))
+				return err
+			},
+			wantErr: false,
+		},
+		{
+			name: "Profile Registry",
+			fn:   func() error { return gen.GenerateProfileRegistry(distDir) },
+			check: func() error {
+				_, err := os.Stat(filepath.Join(distDir, "api", "profile-registry.json"))
+				return err
+			},
+			wantErr: false,
+		},
+		{
+			name: "Catalog Registry",
+			fn:   func() error { return gen.GenerateCatalogRegistry(distDir) },
+			check: func() error {
+				_, err := os.Stat(filepath.Join(distDir, "api", "catalog-registry.json"))
+				return err
+			},
+			wantErr: false,
 		},
 	}
 
