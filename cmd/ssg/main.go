@@ -65,6 +65,9 @@ func run(distDir, configDir, blogDir, publicDir string) error {
 	if err := gen.GenerateSearchIndex(distDir, data); err != nil {
 		return fmt.Errorf("failed to generate search index: %w", err)
 	}
+	if err := gen.GenerateRegistryEndpoint(distDir, data); err != nil {
+		return fmt.Errorf("failed to generate skills registry: %w", err)
+	}
 	if err := gen.GenerateRSS(distDir, data.Posts); err != nil {
 		return fmt.Errorf("failed to generate RSS: %w", err)
 	}
