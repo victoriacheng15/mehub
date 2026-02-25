@@ -7,11 +7,7 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection
 
----
-
-## What is June Reflection 2023?
-
-In this post, we will explore **June Reflection 2023**. This month has been thought-provoking. I discovered the book "Limitless," expanding my thoughts and revealing possibilities for better reading. I also found a remarkable YouTuber who shares useful notion planning techniques and recommends helpful books for enhancing life and organization. This experience emphasizes the importance of taking responsibility for organizing my life and pursuing goals.
+This month has been thought-provoking. I discovered the book "Limitless," expanding my thoughts and revealing possibilities for better reading. I also found a remarkable YouTuber who shares useful notion planning techniques and recommends helpful books for enhancing life and organization. This experience emphasizes the importance of taking responsibility for organizing my life and pursuing goals.
 
 Inspired by this, I decided to utilize Notion and construct a system for managing my blog posts (ideas and drafts), book, task, and learning lists. This enables me to plan effectively and have a clear view of my current progress. I have been using and refining this system, and the outcome has been truly amazing. I can now plan my blog posts ahead of time with ease. The purpose of this system is to offload the task of remembering things from my brain.
 

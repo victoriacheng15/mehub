@@ -9,7 +9,7 @@ tags: ["system-design"]
 
 In today’s interconnected digital world, APIs (Application Programming Interfaces) are the backbone of modern software development. They enable different systems—like mobile apps, web services, and third-party tools—to communicate and share data seamlessly. Among the most popular approaches to building APIs are **REST** and **GraphQL**. While both serve the same fundamental purpose, they differ significantly in design, flexibility, and use cases.
 
-In this post, we’ll explore what REST and GraphQL are, compare their key differences, and discuss the pros and cons of each to help you decide which might be the right choice for your next project.
+Let's explore what REST and GraphQL are, compare their key differences, and discuss the pros and cons of each to help you decide which might be the right choice for your next project.
 
 ---
 

@@ -7,7 +7,7 @@ tags: ["growth"]
 
 ## What is The Subtle Art of Not Giving a Fk?
 
-In this post, we will explore **Living the Life with The Subtle Art of Not Giving a Fk**. `The Subtle Art of Not Giving a Fk` by Mark Manson is a refreshingly blunt and practical guide to living an authentic and fulfilling life. With an irreverent tone, Manson challenges societal norms and offers unconventional wisdom on happiness and success. Through candid anecdotes and thought-provoking insights, he provides actionable advice on prioritizing what truly matters and letting go of the rest.
+`The Subtle Art of Not Giving a Fk` by Mark Manson is a refreshingly blunt and practical guide to living an authentic and fulfilling life. With an irreverent tone, Manson challenges societal norms and offers unconventional wisdom on happiness and success. Through candid anecdotes and thought-provoking insights, he provides actionable advice on prioritizing what truly matters and letting go of the rest.
 
 ---
 

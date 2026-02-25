@@ -7,7 +7,7 @@ tags: ["python"]
 
 ## What Is a Decorator?
 
-In this post, we will explore **What I Learned About Python Decorators?**. Python decorators used to feel a bit confusing to me, but once I started using them in real projects, I realized how powerful they are—especially for reducing repetitive code like error handling. As I dug deeper, I learned that decorators are simply functions that wrap other functions to add extra behavior without modifying the original function’s code.
+Python decorators used to feel a bit confusing to me, but once I started using them in real projects, I realized how powerful they are—especially for reducing repetitive code like error handling. As I dug deeper, I learned that decorators are simply functions that wrap other functions to add extra behavior without modifying the original function’s code.
 
 The idea clicked for me when I tried a small example.
 

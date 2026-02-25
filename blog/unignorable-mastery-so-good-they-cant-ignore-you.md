@@ -7,7 +7,7 @@ tags: ["growth"]
 
 ## What is the So Good They Can’t Ignore You book?
 
-In this post, we will explore **So Good They Can't Ignore You**. It is a book by Cal Newport that challenges the conventional career advice of following your passion. Instead, it advocates developing rare and valuable skills, building career capital, and creating work that you love through deliberate practice. The book argues that the true path to work you love lies in becoming a craftsman of the work you already have, collecting rare skills, and taking control of your hours in the process. It also suggests that fulfilling careers are built by analyzing what matters.
+It is a book by Cal Newport that challenges the conventional career advice of following your passion. Instead, it advocates developing rare and valuable skills, building career capital, and creating work that you love through deliberate practice. The book argues that the true path to work you love lies in becoming a craftsman of the work you already have, collecting rare skills, and taking control of your hours in the process. It also suggests that fulfilling careers are built by analyzing what matters.
 
 ---
 

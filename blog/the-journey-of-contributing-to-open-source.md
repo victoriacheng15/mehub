@@ -7,7 +7,7 @@ tags: ["growth"]
 
 ## What is open source??
 
-In this post, we will explore **The Journey of Contributing to Open Source**. This has many definitions, but to me, it is a codebase that is open for the public to view or modify for improvement.
+This has many definitions, but to me, it is a codebase that is open for the public to view or modify for improvement.
 
 > The term open source refers to something people can modify and share because its design is publicly accessible. [source](https://opensource.com/resources/what-open-source)
 

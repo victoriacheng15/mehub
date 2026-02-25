@@ -5,14 +5,9 @@ date: 2024-12-31
 tags: ["monthly-log"]
 ---
 
-## The 2024 Year in Review
-
----
-
 ## What is Reflecting on 2024?
 
-In this post, we will explore **Reflecting on 2024**. - Published blog posts - 90
-
+- Published blog posts - 90
 - Read books - 23
 
 Time is flying by this year. Since I set up my daily routine a year ago, I've reached a point where I need to adjust it to fit my schedule and goals better. I’ve started using new tools to stay more organized and track everything more effectively. One tool I’ve found particularly helpful is Google Docs, which now has a feature that lets you add document tabs. This has made organizing my daily journal much easier.

@@ -7,12 +7,6 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection
 
----
-
-## What is April Reflection 2024?
-
-In this post, we will explore **April Reflection 2024**.
-
 > Worry does not empty tomorrow of its sorrow. It emptyies today of its strength. By Corrie Ten Boom
 
 At certain points in our lives, we often find ourselves consumed by worry and gripped by anxiety, whether for valid reasons or seemingly trivial ones. This is an inevitable aspect of the human experience. To think more on this, it begs the question: why we invest our precious time and energy in matters over which we have no control? This places a heavy burden on our mental and emotional reserves, leaving us depleted by day’s end. Let’s shift our attention towards the positivity that illuminate our path and focus on what we can conrol.

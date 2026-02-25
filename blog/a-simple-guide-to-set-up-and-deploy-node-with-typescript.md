@@ -5,9 +5,9 @@ date: 2023-03-08
 tags: ["backend", "typescript"]
 ---
 
-In this post, we will explore **A Simple Guide to Set up and Deploy Node with TypeScript**. TypeScript is a language developed by Microsoft that includes all JavaScript features with added type syntax checks. It can catch errors before runtime, improving code quality and scalability, making it great for large applications.
+## TypeScript for Node.js Development
 
-Let's learn how to set up and deploy the TS node app!
+TypeScript introduces static typing and syntax checks to Node.js, catching errors before runtime to improve code quality and scalability. The following process outlines the configuration and deployment of a TypeScript-powered Node.js application.
 
 ## Setup
 

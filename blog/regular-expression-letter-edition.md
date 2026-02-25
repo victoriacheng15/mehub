@@ -5,13 +5,9 @@ date: 2022-05-10
 tags: ["javascript"]
 ---
 
-## 😬 What is Regular Expression? 😬
+## What is Regular Expression?
 
----
-
-## What is Letter Edition?
-
-In this post, we will explore **Letter Edition**. What are regular expressions? They are patterns that are used to match characters in provided strings.
+What are regular expressions? They are patterns that are used to match characters in provided strings.
 
 When I first looked into this, it looks so scary! Since I do codewars daily, I encountered a lot of solutions that are solved with this. I almost pulled my hair out! However, each problem tends to focus on one type of regular expression.
 

@@ -7,7 +7,7 @@ tags: ["javascript"]
 
 ## What is hoisting?
 
-In this post, we will explore **What is Hoisting in JavaScript?**. It is a tricky question that comes with a tricky answer. However, **hoisting in JavaScript allows you to access functions and variables before they have been created** according to [Wes Bos's JavaScript - Hoisting](https://wesbos.com/javascript/03-the-tricky-bits/hoisting).
+It is a tricky question that comes with a tricky answer. However, **hoisting in JavaScript allows you to access functions and variables before they have been created** according to [Wes Bos's JavaScript - Hoisting](https://wesbos.com/javascript/03-the-tricky-bits/hoisting).
 
 Also, TWO things are hoisted
 

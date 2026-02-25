@@ -7,7 +7,7 @@ tags: ["backend"]
 
 ## What Are SQL Constraints?
 
-In this post, we will explore **Constraints – Ensuring Data Integrity**. SQL **constraints** are rules that enforce data integrity by controlling what values can be stored in database columns. They help prevent invalid, inconsistent, or duplicate data. This post covers four fundamental constraints:
+SQL **constraints** are rules that enforce data integrity by controlling what values can be stored in database columns. They help prevent invalid, inconsistent, or duplicate data. This post covers four fundamental constraints:
 
 - `NOT NULL` – Requires a column to always have a value
 - `UNIQUE` – Ensures all values in a column are different

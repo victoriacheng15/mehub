@@ -7,7 +7,7 @@ tags: ["dsa", "javascript"]
 
 ## Coding Challenges - Write Your Own wc tool
 
-In this post, we will explore **What I Learned From Write Your wc Tool?**. It is a challenge created by John Crickett and the purpose of this challenge is to build your own version of the Unix command line tool `wc`. The wc is a command-line tool that can analyze and display information about the number of bytes, lines, words, and characters from a text file or input through the terminal.
+It is a challenge created by John Crickett and the purpose of this challenge is to build your own version of the Unix command line tool `wc`. The wc is a command-line tool that can analyze and display information about the number of bytes, lines, words, and characters from a text file or input through the terminal.
 
 ```js
 wc[options][files];

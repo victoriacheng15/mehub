@@ -7,11 +7,7 @@ tags: ["monthly-log"]
 
 ## 🎒Technical Backpack
 
----
-
-## What is July Reflection 2025?
-
-In this post, we will explore **July Reflection 2025**. This month, I had a thoughtful chat with my manager at Shopify. I asked them a simple question:  
+This month, I had a thoughtful chat with my manager at Shopify. I asked them a simple question:  
 
 > What's one thing you wish you knew earlier in your career?
 

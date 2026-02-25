@@ -7,7 +7,7 @@ tags: ["platform"]
 
 ## How to Trigger Workflows
 
-In this post, we will explore **How to Trigger Workflows Between Repos**. Workflows in GitHub Actions can be triggered in multiple ways, such as on pushes, pull requests, or manually. Beyond these basic triggers, workflows can also trigger other workflows, either **within the same repository** or **across different repositories**. Understanding the differences helps you design automation that is both efficient and maintainable.
+Workflows in GitHub Actions can be triggered in multiple ways, such as on pushes, pull requests, or manually. Beyond these basic triggers, workflows can also trigger other workflows, either **within the same repository** or **across different repositories**. Understanding the differences helps you design automation that is both efficient and maintainable.
 
 ---
 

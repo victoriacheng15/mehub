@@ -7,7 +7,7 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection
 
-In this post, we will explore **May Reflection 2023**. This month was a bit slow for me, but I managed to brainstorm at least 5+ blog post ideas. I suppose this is not a bad thing. As always, celebrate this win!
+This month was a bit slow for me, but I managed to brainstorm at least 5+ blog post ideas. I suppose this is not a bad thing. As always, celebrate this win!
 
 Achieved List for the month:
 

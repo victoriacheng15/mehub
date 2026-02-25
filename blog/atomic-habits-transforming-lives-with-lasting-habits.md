@@ -7,7 +7,7 @@ tags: ["growth"]
 
 ## What is Atomic Habits?
 
-In this post, we will explore **Transforming Lives with Lasting Habits**. It is a self-help book that focuses on the power of small habits and how they can lead to significant personal and professional transformation. The book explores the idea that making small, incremental changes in our daily routes can have a compounding effect over time, leading to remarkable results.
+It is a self-help book that focuses on the power of small habits and how they can lead to significant personal and professional transformation. The book explores the idea that making small, incremental changes in our daily routes can have a compounding effect over time, leading to remarkable results.
 
 Clear introduces the concept of atomic habits, which are tiny, consistent actions that we repeat daily. He explains that these habits shape our identity and determine the outcomes we achieve in various areas of our life.
 

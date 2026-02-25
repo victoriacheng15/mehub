@@ -7,11 +7,7 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection
 
----
-
-## What is March Reflection 2023?
-
-In this post, we will explore **March Reflection 2023**. I think this month is pretty productive. I have done a couple of things:
+I think this month is pretty productive. I have done a couple of things:
 
 - Published a blog about how to set up and deploy a TS node app
 - Read chapter 1 of the System Design Interview

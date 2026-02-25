@@ -7,7 +7,7 @@ tags: ["python"]
 
 ## What is a List in Python?
 
-In this post, we will explore **A Guide to List Methods With Examples**. Python lists offer a flexible way to store and manipulate collections of items. In this guide, we'll delve into Python lists, exploring their methods, and providing examples of how they can be used with arrays. At its core, a Python list is an ordered collection of items. These items can be any of data types - integers, strings, floats, even other lists. Lists are mutable, meaning you can modify them after creation, which make them versatile for various programming tasks.
+Python lists offer a flexible way to store and manipulate collections of items. In this guide, we'll delve into Python lists, exploring their methods, and providing examples of how they can be used with arrays. At its core, a Python list is an ordered collection of items. These items can be any of data types - integers, strings, floats, even other lists. Lists are mutable, meaning you can modify them after creation, which make them versatile for various programming tasks.
 
 ### Creating Lists
 

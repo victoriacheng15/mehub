@@ -7,7 +7,7 @@ tags: ["growth"]
 
 ## What is Clean Architecture?
 
-In this post, we will explore **Building Robust Systems**. Dive into the world of software architecture with "Clean Architecture" by Robert C. Martin. This book is a compass for developers navigating the complexities of building maintainable and scalable systems. Through a framework of principles like separation of concerns and prioritizing architectural integrity, Martin guides readers in crafting software that remains resilient to technological evolution. Discover how to construct systems that stand the test of time and adapt effortlessly to changing requirements.
+Dive into the world of software architecture with "Clean Architecture" by Robert C. Martin. This book is a compass for developers navigating the complexities of building maintainable and scalable systems. Through a framework of principles like separation of concerns and prioritizing architectural integrity, Martin guides readers in crafting software that remains resilient to technological evolution. Discover how to construct systems that stand the test of time and adapt effortlessly to changing requirements.
 
 ---
 

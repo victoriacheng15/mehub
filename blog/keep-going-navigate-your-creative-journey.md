@@ -7,7 +7,7 @@ tags: ["growth"]
 
 ## What is the Keep Going book?
 
-In this post, we will explore **Navigate Your Creative Journey**. "Keep Going" by Austin Kleon is a motivational compass that navigates readers through the twists and turns of life's creative journey. With a blend of wisdom and wit, Kleon encourages individuals to persist in their creative pursuits, offering practical insights on embracing the process and finding inspiration in the everyday. Illustrated with Kleon's distinctive drawings, the book serves as a visually engaging guide, providing readers with a roadmap for sustaining creativity and resilience. Whether you're an artist, writer, or anyone seeking motivation, "Keep Going" is a refreshing resource that emphasizes the enduring power to persist and thrive in the face of challenges.
+"Keep Going" by Austin Kleon is a motivational compass that navigates readers through the twists and turns of life's creative journey. With a blend of wisdom and wit, Kleon encourages individuals to persist in their creative pursuits, offering practical insights on embracing the process and finding inspiration in the everyday. Illustrated with Kleon's distinctive drawings, the book serves as a visually engaging guide, providing readers with a roadmap for sustaining creativity and resilience. Whether you're an artist, writer, or anyone seeking motivation, "Keep Going" is a refreshing resource that emphasizes the enduring power to persist and thrive in the face of challenges.
 
 ---
 

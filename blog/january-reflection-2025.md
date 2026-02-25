@@ -7,11 +7,7 @@ tags: ["monthly-log"]
 
 ## Monthly Reflection
 
----
-
-## What is January Reflection 2025?
-
-In this post, we will explore **January Reflection 2025**. Time is passing quickly, and we have already reached the end of January, meaning the first month of 2025 is over. The new semester has begun, and I am excited to learn a couple of  cool and interesting subjects
+Time is passing quickly, and we have already reached the end of January, meaning the first month of 2025 is over. The new semester has begun, and I am excited to learn a couple of  cool and interesting subjects
 
 In OOP3, I’ll focus on data structures and algorithms, learning to design and implement tools like Stacks, Queues, Trees, and Hash Tables for efficient data management. The course covers key algorithms for searching, sorting, and traversing data, along with complexity analysis using Big-O notation, helping me solve real-world problems effectively.
 

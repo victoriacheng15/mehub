@@ -7,7 +7,7 @@ tags: ["python"]
 
 ## What is a Python Loop?
 
-In this post, we will explore **Looping Like a Pro**. In Python, loops are essential constructs that allow you to execute a block of code repeatedly. There are different types of loops available, each with its own purpose and usage. Let's explore how loops work in Python and provide examples of using them with lists, tuples, sets, and dictionaries.
+In Python, loops are essential constructs that allow you to execute a block of code repeatedly. There are different types of loops available, each with its own purpose and usage. Let's explore how loops work in Python and provide examples of using them with lists, tuples, sets, and dictionaries.
 
 ```python
 for i in range(5):

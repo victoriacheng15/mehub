@@ -7,7 +7,7 @@ tags: ["growth"]
 
 ## What is Deep Work?
 
-In this post, we will explore **Embracing the Deep Work Mindset**. It is a concept popularized by author and professor Cal Newport in this book titled “Deep Work Rule for Focused Success in a Distracted World.” The book refers to the ability to concentrate without distraction on cognitively demanding tasks, enabling individuals to produce high-quality work and achieve significant professional and personal results.
+It is a concept popularized by author and professor Cal Newport in this book titled “Deep Work Rule for Focused Success in a Distracted World.” The book refers to the ability to concentrate without distraction on cognitively demanding tasks, enabling individuals to produce high-quality work and achieve significant professional and personal results.
 
 ---
 

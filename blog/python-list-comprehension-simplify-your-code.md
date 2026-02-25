@@ -7,7 +7,7 @@ tags: ["python"]
 
 ## What is a Python List Comprehension?
 
-In this post, we will explore **Simplify Your Code**. In Python, there is a technique known as list comprehension. It offers a concise way to create a new list based on the values of an existing list.
+In Python, there is a technique known as list comprehension. It offers a concise way to create a new list based on the values of an existing list.
 
 The basic syntax of a list comprehension:
 

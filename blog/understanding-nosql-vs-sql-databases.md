@@ -7,7 +7,7 @@ tags: ["backend"]
 
 ## NoSQL vs SQL
 
-In this post, we will explore **Understanding NoSQL vs SQL Databases**. In our digital age, databases are indispensable for many applications, from e-commerces to social networks. Two main types: **NoSQL** and **SQL**. NoSQL, or Not Only SQL, offers flexibility and scalability for handling large, unstructured data sets. On the other hand, SQL, or Structured Query Language, ensures data relationships and transaction reliability. Let’s explore each in detail below.
+In our digital age, databases are indispensable for many applications, from e-commerces to social networks. Two main types: **NoSQL** and **SQL**. NoSQL, or Not Only SQL, offers flexibility and scalability for handling large, unstructured data sets. On the other hand, SQL, or Structured Query Language, ensures data relationships and transaction reliability. Let’s explore each in detail below.
 
 ---
 

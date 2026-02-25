@@ -7,7 +7,7 @@ tags: ["backend"]
 
 ## What are UNION and UNION ALL?
 
-In this post, we will explore **UNION and UNION ALL**. The `UNION` and `UNION ALL` operators in SQL are used to combine the results of two or more `SELECT` queries into a single result set. They allow you to merge data from different tables or queries, making them essential for reporting and data analysis.
+The `UNION` and `UNION ALL` operators in SQL are used to combine the results of two or more `SELECT` queries into a single result set. They allow you to merge data from different tables or queries, making them essential for reporting and data analysis.
 
 - **`UNION`** combines results and removes duplicate rows.
 - **`UNION ALL`** combines results but keeps all rows, including duplicates.

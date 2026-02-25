@@ -7,7 +7,7 @@ tags: ["growth"]
 
 ## What is the Steal Like An Artist book?
 
-In this post, we will explore **Navigating Inspiration and Innovation**. This book written by Austin Kleon is a compelling and insightful book that challenges traditional notions of creativity. Published in 2012, this concise yet impactful guide offers a fresh perspective on the creative process, encouraging readers to embrace influence, remix ideas, and liberate their creativity. Kleon argues that nothing is truly original and that all artists build upon existing ideas to create something new.
+This book written by Austin Kleon is a compelling and insightful book that challenges traditional notions of creativity. Published in 2012, this concise yet impactful guide offers a fresh perspective on the creative process, encouraging readers to embrace influence, remix ideas, and liberate their creativity. Kleon argues that nothing is truly original and that all artists build upon existing ideas to create something new.
 
 ---
 

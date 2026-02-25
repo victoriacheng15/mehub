@@ -7,7 +7,7 @@ tags: ["javascript"]
 
 ## onclick
 
-In this post, we will explore **onClick vs addEventListener**. The onclick property is an event handler for processing click events on the specific element.
+The onclick property is an event handler for processing click events on the specific element.
 
 The syntax looks this
 

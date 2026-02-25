@@ -7,7 +7,7 @@ tags: ["platform"]
 
 ## Understanding the Internet Protocol (IP)
 
-In this post, we will explore **A Quick Guide**. The Internet as we know it today is built on a foundation of protocols allowing devices to communicate. At the heart of this communication is the Internet Protocol (IP), which assigns a unique address to every device connected to the network. These addresses are essential for routing data across the vast web of interconnected devices. The two most common versions of IP in use today are IPv4 and IPv6.
+    The Internet as we know it today is built on a foundation of protocols allowing devices to communicate. At the heart of this communication is the Internet Protocol (IP), which assigns a unique address to every device connected to the network. These addresses are essential for routing data across the vast web of interconnected devices. The two most common versions of IP in use today are IPv4 and IPv6.
 
 ---
 

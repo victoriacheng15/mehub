@@ -7,7 +7,7 @@ tags: ["backend"]
 
 ## What is the Node.js Event Loop?
 
-In this post, we will explore **Understanding Node.js Event Loop Efficiency**. The Node.js event loop is a concept in understanding how Node.js manages asynchronous operations and handles concurrency. Unlike traditional server-side environments that create multiple threads to handle concurrent operations, Node.js operates on a single-threaded event-driven architecture. This design enables Node.js to efficiently handle many concurrent operations without the overhead of creating and managing multiple threads.
+The Node.js event loop is a concept in understanding how Node.js manages asynchronous operations and handles concurrency. Unlike traditional server-side environments that create multiple threads to handle concurrent operations, Node.js operates on a single-threaded event-driven architecture. This design enables Node.js to efficiently handle many concurrent operations without the overhead of creating and managing multiple threads.
 
 ---
 
