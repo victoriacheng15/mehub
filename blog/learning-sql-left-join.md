@@ -1,6 +1,6 @@
 ---
 title: "Learning SQL: LEFT JOIN"
-description: "Learn about SQL LEFT JOIN: combine data from two tables, return all rows from the left table, and fill unmatched rows with NULL values. Clear examples included!"
+description: "Learn about SQL LEFT JOIN: combine data from two tables, return all rows from the left table, and fill unmatched rows with NULL values. Clear examples included! Read on."
 date: 2025-01-14
 tags: ["backend"]
 ---

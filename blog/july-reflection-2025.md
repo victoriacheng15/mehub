@@ -1,13 +1,15 @@
 ---
 title: "July Reflection 2025"
-description: "A reflection on learning through the lens of a technical backpack — what I’ve added, what I’ve let go, and how I’m making space for smarter growth."
+description: "A reflection on learning through the lens of a technical backpack — what I’ve added, what I’ve let go, and how I’m making space for smarter growth. Dive into the full post."
 date: 2025-07-29
 tags: ["monthly-log"]
 ---
 
 ## 🎒Technical Backpack
 
-This month, I had a thoughtful chat with my manager at Shopify. I asked them a simple question:  
+## What is July Reflection 2025?
+
+In this post, we will explore **July Reflection 2025**. This month, I had a thoughtful chat with my manager at Shopify. I asked them a simple question:  
 
 > What's one thing you wish you knew earlier in your career?
 

@@ -1,13 +1,13 @@
 ---
 title: "Understanding the TCP Three-Way Handshake"
-description: "Explore the TCP 3-way handshake, a crucial step for reliable internet communication. Learn how it ensures accurate data transfer and stable connections."
+description: "Explore the TCP 3-way handshake, a crucial step for reliable internet communication. Learn how it ensures accurate data transfer and stable connections. Read more to learn."
 date: 2024-11-05
 tags: ["platform"]
 ---
 
 ## What is a TCP Three-Way Handshake?
 
-The **Transmission Control Protocol (TCP)** is an important part of how computers communicate over the Internet. It helps ensure that data is sent and received correctly. TCP takes large pieces of information and breaks them into smaller packets. It then sends these packets over the network and ensures they arrive in the right order and without mistakes. This reliability is important for many internet activities, like browsing websites or sending emails.
+In this post, we will explore **Understanding the TCP Three-Way Handshake**. The **Transmission Control Protocol (TCP)** is an important part of how computers communicate over the Internet. It helps ensure that data is sent and received correctly. TCP takes large pieces of information and breaks them into smaller packets. It then sends these packets over the network and ensures they arrive in the right order and without mistakes. This reliability is important for many internet activities, like browsing websites or sending emails.
 
 One important process in TCP is the **3-way handshake**. This is a way to create a connection between a client and a server before they start sharing data. If you have ever wondered how your computer knows it is sending and receiving information correctly, the 3-way handshake is a big part of the answer.
 

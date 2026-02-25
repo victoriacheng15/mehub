@@ -1,6 +1,6 @@
 ---
 title: "TypeScript Utility Types - ReturnType"
-description: "Empower your TypeScript coding with ReturnType utility. Dive into examples for sharper function return type inference and fortified type safety."
+description: "Empower your TypeScript coding with ReturnType utility. Dive into examples for sharper function return type inference and fortified type safety. Dive into the full post."
 date: 2024-02-20
 tags: ["typescript"]
 ---

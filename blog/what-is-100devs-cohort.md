@@ -2,13 +2,13 @@
 slug: what-is-100-devs-cohort
 title: What is 100Devs Cohort
 date: 2022-02-06
-description: "100Devs is a 30-week remote cohort by Leon Noel teaching MongoDB, Express, React, Node stack & Anki for studying."
+description: "100Devs is a 30-week remote cohort by Leon Noel teaching MongoDB, Express, React, Node stack & Anki for studying. Dive into this detailed tutorial to master the core concepts."
 tags: ["growth"]
 ---
 
 ## What is 100Devs Cohort?
 
-What is 100Devs? It is a cohort hosted by Leon and you can find more information [on this site](https://leonnoel.com/100devs/). In short, it is a free and remote 30 weeks cohort and focuses on the MERN (MongoDB, Express, React, and Node) stack.
+In this post, we will explore **What is 100Devs Cohort**. What is 100Devs? It is a cohort hosted by Leon and you can find more information [on this site](https://leonnoel.com/100devs/). In short, it is a free and remote 30 weeks cohort and focuses on the MERN (MongoDB, Express, React, and Node) stack.
 
 > I want to help you become a software engineer for free. - Leon Noel
 

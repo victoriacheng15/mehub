@@ -1,6 +1,6 @@
 ---
 title: "Exploring stat - Linux Commands"
-description: "Explore the Linux stat command for comprehensive insights: View detailed file information, sizes, permissions, and file system status effortlessly."
+description: "Explore the Linux stat command for comprehensive insights: View detailed file information, sizes, permissions, and file system status effortlessly. Dive into the full post."
 date: 2024-03-05
 tags: ["linux"]
 ---

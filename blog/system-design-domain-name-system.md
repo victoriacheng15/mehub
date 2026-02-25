@@ -1,6 +1,6 @@
 ---
 title: "System Design - Domain Name System"
-description: "Explore the vital role of DNS in transforming domain names into IP addresses. Learn the process from typing to accessing websites on the internet"
+description: "Explore the vital role of DNS in transforming domain names into IP addresses. Learn the process from typing to accessing websites on the internet. Dive into the full post."
 date: 2024-03-12
 tags: ["system-design"]
 ---

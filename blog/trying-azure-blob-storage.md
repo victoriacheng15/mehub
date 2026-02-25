@@ -1,13 +1,13 @@
 ---
 title: "Trying Azure Blob Storage"
-description: "How I loaded CSV data from Azure Blob Storage in a school project—with local fallback and no hardcoded secrets."
+description: "How I loaded CSV data from Azure Blob Storage in a school project—with local fallback and no hardcoded secrets. Dive into this detailed tutorial to master the core concepts."
 date: 2025-12-23
 tags: ["platform"]
 ---
 
 ## What is Azure Blob Storage?
 
-Azure Blob Storage is a cloud service for storing unstructured data—like images, logs, backups, or **CSV files**. Think of it as a scalable, secure “cloud hard drive” with an API, access control, and built-in redundancy.
+In this post, we will explore **Trying Azure Blob Storage**. Azure Blob Storage is a cloud service for storing unstructured data—like images, logs, backups, or **CSV files**. Think of it as a scalable, secure “cloud hard drive” with an API, access control, and built-in redundancy.
 
 Unlike local files, blobs can be accessed by any authorized app—whether it’s running on your laptop, in Azure, or on a server across the world.
 

@@ -1,13 +1,13 @@
 ---
 title: "November Reflection 2025"
-description: "Built a cover image generator with Azure Functions to learn serverless—explored cold starts, CI/CD, and planning-first development."
+description: "Built a cover image generator with Azure Functions to learn serverless—explored cold starts, CI/CD, and planning-first development. Dive into this step-by-step tutorial."
 date: 2025-11-25
 tags: ["monthly-log"]
 ---
 
 ## Shipping Serverless
 
-This November, I finished **Cover Craft**, a lightweight cover image generator I built to get hands-on experience with **Azure Functions**. I wanted to understand serverless architecture by using it myself from writing a function to deploying it in the cloud. I also plan to use it to generate cover images for my LinkedIn posts, so it serves a real purpose for me.
+In this post, we will explore **November Reflection 2025**. This November, I finished **Cover Craft**, a lightweight cover image generator I built to get hands-on experience with **Azure Functions**. I wanted to understand serverless architecture by using it myself from writing a function to deploying it in the cloud. I also plan to use it to generate cover images for my LinkedIn posts, so it serves a real purpose for me.
 
 The core task is simple: accept text, colors, and dimensions; return a PNG. But how it is built and especially how it is deployed taught me far more than the feature ever could.
 

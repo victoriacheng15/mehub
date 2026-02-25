@@ -1,13 +1,15 @@
 ---
 title: "January Reflection 2024"
-description: "Reflected on January, adjusting daily routine and recording a daily journal via Google form. Explored Docker, GitHub Actions (with 'needs'), and Raspberry Pi."
+description: "Reflected on January, adjusting daily routine and recording a daily journal via Google form. Explored Docker, GitHub Actions (with 'needs'), and Raspberry Pi. Read on."
 date: 2024-01-30
 tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection
 
-This month, my routine deviated from the usual, and I am still in the process of returning to the familiar pattern I had before my trip abroad. Additionally, urgent matters last week disrupted my daily routine. While it might signal the need for something new, it doesn't have to be entirely different. Life involves consistent adjustments—events occur, and the old route may no longer seem as appealing. It's a good time to incorporate a slightly new but not entirely different route to keep moving forward. 💪
+## What is January Reflection 2024?
+
+In this post, we will explore **January Reflection 2024**. This month, my routine deviated from the usual, and I am still in the process of returning to the familiar pattern I had before my trip abroad. Additionally, urgent matters last week disrupted my daily routine. While it might signal the need for something new, it doesn't have to be entirely different. Life involves consistent adjustments—events occur, and the old route may no longer seem as appealing. It's a good time to incorporate a slightly new but not entirely different route to keep moving forward. 💪
 
 I introduced a Google Form to document my daily journal entries, capturing insights from software development, books, articles, and more. The form automatically sends my submissions to an Excel sheet, where I organize and categorize the data. While this approach allows me to centralize all information in one place, I have noticed a couple of issues. There were instances where I didn't articulate my entries clearly, and upon later review, I struggled to recognize what I had done or learned. 😅 This is an area I need to focus on and improve in the coming month.
 

@@ -1,6 +1,6 @@
 ---
 title: "Exploring mv - Linux Commands"
-description: "Learn about the powerful mv command in Linux: move, rename, and manage files efficiently with various options. Essential for file system organization."
+description: "Learn about the powerful mv command in Linux: move, rename, and manage files efficiently with various options. Essential for file system organization. Read more to learn."
 date: 2024-05-18
 tags: ["linux"]
 ---

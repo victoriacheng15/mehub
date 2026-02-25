@@ -1,6 +1,6 @@
 ---
 title: "TypeScript Utility Types - Exclude"
-description: "Enhance TypeScript code with Exclude utility type: tailor types for precision and flexibility."
+description: "Enhance TypeScript code with Exclude utility type: tailor types for precision and flexibility. Discover essential tips, full code examples, and practical insights in this guide."
 date: 2023-09-20
 tags: ["typescript"]
 ---

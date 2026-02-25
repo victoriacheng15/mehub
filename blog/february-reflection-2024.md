@@ -1,13 +1,15 @@
 ---
 title: "February Reflection 2024"
-description: "Automate tasks with Python in Monthly Reflection! Extract articles, redesign journal entries, and use Makefile for efficiency. Transform ideas effortlessly! 🚀"
+description: "Automate tasks with Python in Monthly Reflection! Extract articles, redesign journal entries, and use Makefile for efficiency. Transform ideas effortlessly! 🚀. Read on."
 date: 2024-02-27
 tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection
 
-In mid-February, I cooked up this little app called "Articles Extractor." It smoothly grabs articles from freeCodeCamp and Substack, then neatly drops them into a Google Sheets spot for easy consolidation. Currently, the app resides on the Raspberry Pi and runs on a daily basis with cron schedule!
+## What is February Reflection 2024?
+
+In this post, we will explore **February Reflection 2024**. In mid-February, I cooked up this little app called "Articles Extractor." It smoothly grabs articles from freeCodeCamp and Substack, then neatly drops them into a Google Sheets spot for easy consolidation. Currently, the app resides on the Raspberry Pi and runs on a daily basis with cron schedule!
 
 This got me pondering about using Python for my daily journal entries in Google Sheets. Initially, I started with a Google Form, and the setup made sorting data a real headache 😱. On the hunt for a fix, I dabbled with Google Sheets' `arrayFormula` to split the data. It did the trick by processing a whole column ,whether the row is empty or not, splitting cell data into lines with a specific word. However, it threw in some readability issues with all those empty spaces across rows.
 

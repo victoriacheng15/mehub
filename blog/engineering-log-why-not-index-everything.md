@@ -1,13 +1,15 @@
 ---
 title: "[Engineering Log] Why Not Index Everything?"
-description: "An investigation into B-Trees, the library analogy, and why we don't index every column."
+description: "An investigation into B-Trees, the library analogy, and why we don't index every column. Discover essential tips, full code examples, and practical insights in this guide."
 date: 2026-01-13
 tags: ["retrospective", "backend"]
 ---
 
 ## 1. Context (The "Why")
 
-I intuitively knew SQL indexes were fast, but I didn't understand the underlying mechanics. I treated them like magic: add an index, query gets faster. I wanted to look under the hood to understand the *cost* of that speed.
+## What is [Engineering Log] Why Not Index Everything??
+
+In this post, we will explore **[Engineering Log] Why Not Index Everything?**. I intuitively knew SQL indexes were fast, but I didn't understand the underlying mechanics. I treated them like magic: add an index, query gets faster. I wanted to look under the hood to understand the *cost* of that speed.
 
 > **The Analogy:** Imagine a library with 1,000,000 books arranged randomly. Finding one book requires a **Full Table Scan (O(N))**. An index is the card catalog that points you to the exact shelf **(O(log N))**.
 

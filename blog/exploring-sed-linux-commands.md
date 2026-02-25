@@ -1,6 +1,6 @@
 ---
 title: "Exploring sed - Linux Commands"
-description: "Learn how to use the sed command in Linux for text manipulation, including substitution, deletion, and insertion, with common use cases and helpful options."
+description: "Learn how to use the sed command in Linux for text manipulation, including substitution, deletion, and insertion, with common use cases and helpful options. Read on."
 date: 2024-09-14
 tags: ["linux"]
 ---

@@ -1,13 +1,13 @@
 ---
 title: JavsScript - What is StructuredClone?
-description: "Shallow vs. deep copy in objects: shallow copies reference, deep copies the object. Use reference for shallow, recursively duplicate for deep copy."
+description: "Shallow vs. deep copy in objects: shallow copies reference, deep copies the object. Use reference for shallow, recursively duplicate for deep copy. Dive into the full post."
 date: 2023-02-01
 tags: ["javascript"]
 ---
 
 ## What is structuredClone()?
 
-It is a method that creates a deep copy of a given value using the structured clone algorithm and without using a 3rd-party library like Lodash. This makes it much easier for developers to transfer data between different applications without having to worry about compatibility issues.
+In this post, we will explore **What is StructuredClone?**. It is a method that creates a deep copy of a given value using the structured clone algorithm and without using a 3rd-party library like Lodash. This makes it much easier for developers to transfer data between different applications without having to worry about compatibility issues.
 
 Before we go on structuredClone, let's learn about the differences between shallow copy and deep copy!
 

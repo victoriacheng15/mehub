@@ -1,6 +1,6 @@
 ---
 title: "Learning SQL: RIGHT JOIN"
-description: "Learn how to use the RIGHT JOIN clause in SQL to combine tables, retain all data from the right table, and handle NULL values effectively with examples."
+description: "Learn how to use the RIGHT JOIN clause in SQL to combine tables, retain all data from the right table, and handle NULL values effectively with examples. Read more to learn."
 date: 2025-01-21
 tags: ["backend"]
 ---

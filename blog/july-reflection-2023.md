@@ -1,13 +1,15 @@
 ---
 title: "July Reflection 2023"
-description: "Celebrated a 300-day Duolingo streak, embracing a mindset of abundance. Explored blogs, books, AI, AWS, system design, Git, and Three.js. 🚀"
+description: "Celebrated a 300-day Duolingo streak, embracing a mindset of abundance. Explored blogs, books, AI, AWS, system design, Git, and Three.js. 🚀. Read the full guide to learn."
 date: 2023-07-26
 tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection
 
-A couple of things to mention:
+## What is July Reflection 2023?
+
+In this post, we will explore **July Reflection 2023**. A couple of things to mention:
 
 - I reached 300 days streak on Duolingo on the 21st! It is a small win and I am on the road to 365 days streak!
 - In the book `Building a Second Brain`, I found the concept of adopting a **mindset of abundance** compelling. It involves releasing beliefs about necessities for survival that no longer serve us. In today's information overloaded era, we have an abundance of data, but being selective about what we consume can lead to personal growth and a better understanding of what we want to learn or know. To put it simply, it is about letting go of low-value information that seems important, but that doesn’t make us better people.

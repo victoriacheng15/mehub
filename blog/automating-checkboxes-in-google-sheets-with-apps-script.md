@@ -1,6 +1,6 @@
 ---
 title: "Automating Checkboxes in Google Sheets with Apps Script"
-description: "Discover the power of automation in Google Sheets with a guide on adding checkboxes using Apps Script. Simplify tasks and enhance productivity!”"
+description: "Discover the power of automation in Google Sheets with a guide on adding checkboxes using Apps Script. Simplify tasks and enhance productivity!”. Dive into the full post."
 date: 2024-03-16
 tags: ["automation"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Exploring less and more - Linux Commands"
-description: "Learn about the more and less commands in Linux for paginating file content. Discover their basic syntax, options, and how to get additional help."
+description: "Learn about the more and less commands in Linux for paginating file content. Discover their basic syntax, options, and how to get additional help. Dive into the full post."
 date: 2024-07-20
 tags: ["linux"]
 ---

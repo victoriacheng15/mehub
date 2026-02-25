@@ -1,13 +1,15 @@
 ---
 title: My Journey into the Tech
-description: "Tech-lover turned self-taught developer through YouTube and Frontend Mentor. Follow my journey to becoming a full-time developer!"
+description: "Tech-lover turned self-taught developer through YouTube and Frontend Mentor. Follow my journey to becoming a full-time developer! Dive into this step-by-step tutorial."
 date: 2022-03-04
 tags: ["growth"]
 ---
 
 ## Who Am I?
 
-I have written a couple of blogs, without an intro myself blog. Suppose, it is never too late, as I always say!
+## What is My Journey into the Tech?
+
+In this post, we will explore **My Journey into the Tech**. I have written a couple of blogs, without an intro myself blog. Suppose, it is never too late, as I always say!
 
 Hi, I am Victoria. I am also a person of disability, to be specific, I am profound deaf. As you may wonder, what does "profound deaf" mean? It means that I lost 100% of my hearing in both ears. I cannot hear anything beside the airplane engine. I have hearing aids that help me to hear most sounds around me. Can I lip-read? Yes, I can! However, it depends on whom I talk to. If the person is someone that I often talk daily, I have no problem to read their lips for conversation. Now, it is even more difficult to communicate with people who wear a mask during a pandemic. 😔
 

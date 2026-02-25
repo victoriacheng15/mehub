@@ -1,6 +1,6 @@
 ---
 title: "System Design - Content Delivery Networks"
-description: "Unveiling Content Delivery Networks (CDNs): Simplifying internet speed with mini-library-like networks. Faster, safer, smoother browsing."
+description: "Unveiling Content Delivery Networks (CDNs): Simplifying internet speed with mini-library-like networks. Faster, safer, smoother browsing. Explore this comprehensive guide."
 date: 2024-04-16
 tags: ["system-design"]
 ---

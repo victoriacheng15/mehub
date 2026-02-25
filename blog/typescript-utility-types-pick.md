@@ -1,6 +1,6 @@
 ---
 title: "TypeScript Utility Types - Pick"
-description: "Pick is a TypeScript utility type that allows selecting specific properties from an object type, simplifying type declarations."
+description: "Pick is a TypeScript utility type that allows selecting specific properties from an object type, simplifying type declarations. Discover essential tips and practical guides."
 date: 2023-08-02
 tags: ["typescript"]
 ---

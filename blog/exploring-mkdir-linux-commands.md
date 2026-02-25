@@ -1,6 +1,6 @@
 ---
 title: "Exploring mkdir - Linux Commands"
-description: "Unlock Linux directory management with mkdir command. Organize files seamlessly. Learn usage tips & examples. Dive into efficient directory creation!"
+description: "Unlock Linux directory management with mkdir command. Organize files seamlessly. Learn usage tips & examples. Dive into efficient directory creation! Read more to learn."
 date: 2024-03-21
 tags: ["linux"]
 ---

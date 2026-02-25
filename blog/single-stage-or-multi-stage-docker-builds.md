@@ -1,13 +1,15 @@
 ---
 title: "Single-Stage or Multi-Stage Docker Builds"
-description: "Explore single-stage vs multi-stage Docker builds with a small Flask API, learning differences in image size, build speed, and container optimization."
+description: "Explore single-stage vs multi-stage Docker builds with a small Flask API, learning differences in image size, build speed, and container optimization. Read more to learn."
 date: 2025-11-11
 tags: ["platform"]
 ---
 
 ## Understanding Docker Builds
 
-While containerizing **the School Management Flask API**, I explored **single-stage and multi-stage Docker builds** to understand their impact on performance, image size, and deployment efficiency. This exploration taught me practical lessons about optimizing images, improving CI/CD pipelines, and separating build-time dependencies from runtime environments.
+## What is Single-Stage or Multi-Stage Docker Builds?
+
+In this post, we will explore **Single-Stage or Multi-Stage Docker Builds**. While containerizing **the School Management Flask API**, I explored **single-stage and multi-stage Docker builds** to understand their impact on performance, image size, and deployment efficiency. This exploration taught me practical lessons about optimizing images, improving CI/CD pipelines, and separating build-time dependencies from runtime environments.
 
 ---
 

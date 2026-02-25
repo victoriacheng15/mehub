@@ -1,6 +1,6 @@
 ---
 title: "Binary, Decimal, Hexadecimal - Practical Conversions Guide"
-description: "Learn how computers understand numbers! Dive into decimal, binary, and hexadecimal. Unlock the secrets of coding!"
+description: "Learn how computers understand numbers! Dive into decimal, binary, and hexadecimal. Unlock the secrets of coding! Dive into this detailed tutorial to master the core concepts."
 date: 2024-06-18
 tags: ["dsa"]
 ---

@@ -1,13 +1,15 @@
 ---
 title: "SSH & Desktop - Pi Connection Guide"
-description: "Unlock the full potential of your Raspberry Pi with our step-by-step guides for remote desktop, SSH, and file transfers. Elevate your Pi experience today!”"
+description: "Unlock the full potential of your Raspberry Pi with our step-by-step guides for remote desktop, SSH, and file transfers. Elevate your Pi experience today!”. Read on."
 date: 2024-02-08
 tags: ["platform"]
 ---
 
 ## Intro
 
-I've had a Raspberry Pi for a while and decided to explore more ways to use it for fun and experiments this year. Initially, I had it connected to another monitor, keyboard, and mouse, which cluttered my desk. 😅 While I knew about remote desktops and SSH, I hadn't delved into them until last week when I decided to simplify my setup.
+## What is Pi Connection Guide?
+
+In this post, we will explore **Pi Connection Guide**. I've had a Raspberry Pi for a while and decided to explore more ways to use it for fun and experiments this year. Initially, I had it connected to another monitor, keyboard, and mouse, which cluttered my desk. 😅 While I knew about remote desktops and SSH, I hadn't delved into them until last week when I decided to simplify my setup.
 
 First things first, you need to find out the IP address of your Raspberry Pi. This will be crucial for establishing both remote desktop and SSH connections.
 

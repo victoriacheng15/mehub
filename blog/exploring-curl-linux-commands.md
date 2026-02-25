@@ -1,6 +1,6 @@
 ---
 title: "Exploring curl - Linux Commands"
-description: "Learn how to use the curl command in Linux to download files, interact with APIs, send POST data, handle redirects, and more with simple examples."
+description: "Learn how to use the curl command in Linux to download files, interact with APIs, send POST data, handle redirects, and more with simple examples. Dive into the full post."
 date: 2025-07-15
 tags: ["linux"]
 ---

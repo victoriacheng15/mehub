@@ -1,13 +1,13 @@
 ---
 title: "Clean Architecture - Building Robust Systems"
-description: "Clean architecture focuses on modular, maintainable software design. It emphasizes clear separation of concerns and business logic centrality."
+description: "Clean architecture focuses on modular, maintainable software design. It emphasizes clear separation of concerns and business logic centrality. Read the full guide to learn."
 date: 2023-09-16
 tags: ["growth"]
 ---
 
 ## What is Clean Architecture?
 
-Dive into the world of software architecture with "Clean Architecture" by Robert C. Martin. This book is a compass for developers navigating the complexities of building maintainable and scalable systems. Through a framework of principles like separation of concerns and prioritizing architectural integrity, Martin guides readers in crafting software that remains resilient to technological evolution. Discover how to construct systems that stand the test of time and adapt effortlessly to changing requirements.
+In this post, we will explore **Building Robust Systems**. Dive into the world of software architecture with "Clean Architecture" by Robert C. Martin. This book is a compass for developers navigating the complexities of building maintainable and scalable systems. Through a framework of principles like separation of concerns and prioritizing architectural integrity, Martin guides readers in crafting software that remains resilient to technological evolution. Discover how to construct systems that stand the test of time and adapt effortlessly to changing requirements.
 
 ---
 

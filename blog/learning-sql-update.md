@@ -1,6 +1,6 @@
 ---
 title: "Learning SQL: UPDATE"
-description: "Learn how to use the SQL UPDATE clause to modify existing data. Master its syntax, apply conditions, and ensure data integrity with constraints."
+description: "Learn how to use the SQL UPDATE clause to modify existing data. Master its syntax, apply conditions, and ensure data integrity with constraints. Dive into the full post."
 date: 2024-12-17
 tags: ["backend"]
 ---

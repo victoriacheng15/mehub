@@ -1,13 +1,15 @@
 ---
 title: "Python Orderability Dunder Methods Revealed"
-description: "Master Python comparison operators (<, >, <=, >=) with dunder methods. Learn how to make objects sortable using a CoffeeShop example with clear code."
+description: "Master Python comparison operators (<, >, <=, >=) with dunder methods. Learn how to make objects sortable using a CoffeeShop example with clear code. Read more to learn."
 date: 2025-07-01
 tags: ["python"]
 ---
 
 ## Mastering Orderability Dunders
 
-In Python, orderability refers to an object's ability to be compared using operators like **`<`**, **`>`**, **`<=`**, and **`>=`**. These operators can be customized for your classes using special dunder methods, just like we did with **`__eq__`** for equality comparisons.
+## What is Python Orderability Dunder Methods Revealed?
+
+In this post, we will explore **Python Orderability Dunder Methods Revealed**. In Python, orderability refers to an object's ability to be compared using operators like **`<`**, **`>`**, **`<=`**, and **`>=`**. These operators can be customized for your classes using special dunder methods, just like we did with **`__eq__`** for equality comparisons.
 
 ---
 

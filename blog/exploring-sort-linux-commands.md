@@ -1,6 +1,6 @@
 ---
 title: "Exploring sort - Linux Commands"
-description: "Learn how to use the sort command in Linux to organize text files by sorting lines alphabetically, numerically, or in reverse order and explore its options."
+description: "Learn how to use the sort command in Linux to organize text files by sorting lines alphabetically, numerically, or in reverse order and explore its options. Read on."
 date: 2024-08-17
 tags: ["linux"]
 ---

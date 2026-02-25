@@ -1,6 +1,6 @@
 ---
 title: "Learning SQL: ORDER BY"
-description: "Learn how to use the SQL ORDER BY clause to sort query results by one or multiple columns in ascending or descending order with clear examples."
+description: "Learn how to use the SQL ORDER BY clause to sort query results by one or multiple columns in ascending or descending order with clear examples. Dive into the full post."
 date: 2024-10-08
 tags: ["backend"]
 ---

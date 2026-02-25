@@ -1,13 +1,13 @@
 ---
 title: "Learning SQL: SELECT and SELECT DISTINCT"
-description: "Learn how to use SQL's SELECT statement to retrieve data and filter out duplicates with DISTINCT with examples."
+description: "Learn how to use SQL's SELECT statement to retrieve data and filter out duplicates with DISTINCT with examples. Dive into this detailed tutorial to master the core concepts."
 date: 2024-09-10
 tags: ["backend"]
 ---
 
 ## What is the SELECT Command?
 
-The `SELECT` statement is one of the key tools in SQL for getting data from a database. Whether you're working with big datasets or just doing simple queries, knowing how to use `SELECT` properly makes interacting with databases much easier.
+In this post, we will explore **SELECT and SELECT DISTINCT**. The `SELECT` statement is one of the key tools in SQL for getting data from a database. Whether you're working with big datasets or just doing simple queries, knowing how to use `SELECT` properly makes interacting with databases much easier.
 
 ### Basic of the SELECT command
 

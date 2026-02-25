@@ -1,13 +1,13 @@
 ---
 title: "JavaScript - Logical OR Assignment Operator"
-description: "Explore the use of JavaScript’s logical OR assignment operator with various data types and understand its real-world applications."
+description: "Explore the use of JavaScript’s logical OR assignment operator with various data types and understand its real-world applications. Dive into this step-by-step tutorial."
 date: 2023-11-29
 tags: ["javascript"]
 ---
 
 ## What is Logical OR Assignment?
 
-The logical OR assignment (||=) is a logical operation that takes two values: a target variable and a source value.
+In this post, we will explore **Logical OR Assignment Operator**. The logical OR assignment (||=) is a logical operation that takes two values: a target variable and a source value.
 
 Here’s how it works:
 

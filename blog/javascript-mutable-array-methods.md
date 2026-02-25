@@ -1,13 +1,13 @@
 ---
 title: JavaScript - Mutable Array Methods
-description: "Comparing mutable and immutable array methods in JS, covering pop(), shift(), push(), unshift(). Tips for avoiding altering original arrays included."
+description: "Comparing mutable and immutable array methods in JS, covering pop(), shift(), push(), unshift(). Tips for avoiding altering original arrays included. Read more to learn."
 date: 2022-06-18
 tags: ["javascript"]
 ---
 
 ## What are mutable array methods?
 
-In JavaScript, there are many array methods. They can be divided into two categories - mutable and immutable methods. What is the difference between them? As the name suggested, a mutable method will change the array, while an immutable method will not change.
+In this post, we will explore **Mutable Array Methods**. In JavaScript, there are many array methods. They can be divided into two categories - mutable and immutable methods. What is the difference between them? As the name suggested, a mutable method will change the array, while an immutable method will not change.
 
 > In some cases, it can be neat to have immutable object as it often leads to a much simpler application development. Often times you need root cause analysis to figure out what went wrong in your program, having mutable objects passed as parameters between functions/methods can be a real pain in the ass when you are debugging your program. [source](https://poanchen.github.io/blog/2017/06/13/mutable-vs-Immutable-object-in-JavaScript)
 

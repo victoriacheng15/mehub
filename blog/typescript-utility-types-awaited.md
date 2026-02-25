@@ -1,15 +1,15 @@
 ---
 title: TypeScript Utility Types - Awaited
-description: "Let's deep dive into how Awaited works and what are the differences between Awaited and Promise"
+description: "Let's deep dive into how Awaited works and what are the differences between Awaited and Promise. Explore practical examples and step-by-step insights to learn more."
 date: 2023-05-31
 tags: ["typescript"]
 ---
 
 ## What is Awaited?
 
-> Note: I would like to remind you that I am writing a series on TypeScript utility types to enhance my understanding of TypeScript and its utility types. If you come across any incorrect information, please don't hesitate to let me know!
+The `Awaited` utility type in TypeScript is used to extract the type of value that a promise will eventually return, rather than the promise object itself. This utility type allows us to avoid using the `.then()` method repeatedly and instead await the promise directly.
 
-The term `Awaited` refers to one of the utility types in TypeScript. It is used to extract the type of value that a promise will eventually return, rather than the promise object itself. This utility type allows us to avoid using the `.then()` method repeatedly and instead await the promise directly.
+> Note: I would like to remind you that I am writing a series on TypeScript utility types to enhance my understanding of TypeScript and its utility types. If you come across any incorrect information, please don't hesitate to let me know!
 
 ---
 

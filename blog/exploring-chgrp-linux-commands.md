@@ -1,6 +1,6 @@
 ---
 title: "Exploring chgrp - Linux Commands"
-description: "Learn how to use the chgrp command in Linux to change group ownership of files and directories. Perfect for system admins!"
+description: "Learn how to use the chgrp command in Linux to change group ownership of files and directories. Perfect for system admins! Discover essential tips and practical guides."
 date: 2024-10-05
 tags: ["linux"]
 ---
@@ -22,6 +22,15 @@ chgrp developers project.txt
 ```
 
 This command changes the group ownership of `project.txt` to the `developers` group.
+
+```mermaid
+graph LR
+    A[File/Directory] --> B(User/Owner)
+    A --> C(Group)
+    A --> D(Others)
+    C -->|Permissions Match| E[Group Members]
+    C -.->|Admin Modified via| F[chgrp Command]
+```
 
 ---
 

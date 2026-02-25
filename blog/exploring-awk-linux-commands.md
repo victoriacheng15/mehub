@@ -1,6 +1,6 @@
 ---
 title: "Exploring awk - Linux Commands"
-description: "Learn how to use the awk command in Linux for text processing, data extraction, and reporting with practical examples and common use cases."
+description: "Learn how to use the awk command in Linux for text processing, data extraction, and reporting with practical examples and common use cases. Read the full guide to learn."
 date: 2024-09-21
 tags: ["linux"]
 ---
@@ -33,9 +33,7 @@ awk '{print $1}' file.txt
 
 ---
 
-## Common Use Cases
-
-### Printing Specific Columns
+## Extracting Columns with awk
 
 One of the most popular `awk` use cases is extracting columns from a file:
 
@@ -49,7 +47,7 @@ This command prints the second column from each line of the file. You can combin
 awk '{print $1, $3}' file.txt
 ```
 
-### Filtering Data with Patterns
+## Filtering Data with awk Patterns
 
 You can filter data based on specific conditions, like printing lines that contain a certain word:
 
@@ -63,7 +61,7 @@ For example, to print lines that contain the word "error":
 awk '/error/ {print}' log.txt
 ```
 
-### Field Separator
+## Changing the Field Separator in awk
 
 Sometimes your data might be separated by something other than spaces or tabs (like commas in CSV files). You can tell `awk` to use a different delimiter with the `-F` option:
 
@@ -71,7 +69,7 @@ Sometimes your data might be separated by something other than spaces or tabs (l
 awk -F, '{print $1, $2}' data.csv
 ```
 
-### Calculations and Summarization
+## Simple Calculations and Summarization with awk
 
 `awk` is also useful for simple calculations, such as summing values in a column:
 
@@ -81,7 +79,7 @@ awk '{sum += $3} END {print sum}' file.txt
 
 This command sums all values in the third column of `file.txt`.
 
-### Print Line Numbers
+## Printing Line Numbers in awk
 
 If you want to print lines along with their line numbers, `awk` can handle that too:
 

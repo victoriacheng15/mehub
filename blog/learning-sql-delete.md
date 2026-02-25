@@ -1,6 +1,6 @@
 ---
 title: "Learning SQL: DELETE"
-description: "Learn how to use the SQL DELETE clause to remove records from a table. Master its syntax, apply conditions, and handle constraints to manage data effectively."
+description: "Learn how to use the SQL DELETE clause to remove records from a table. Master its syntax, apply conditions, and handle constraints to manage data effectively. Read on."
 date: 2024-12-24
 tags: ["backend"]
 ---

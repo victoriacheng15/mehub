@@ -1,11 +1,13 @@
 ---
 title: "From Links to Reading Insights"
-description: "From article extractor to personal reading analytics dashboard—zero infrastructure, Go-powered metrics, and live visualizations on GitHub Pages."
+description: "From article extractor to personal reading analytics dashboard—zero infrastructure, Go-powered metrics, and live visualizations on GitHub Pages. Dive into the full post."
 date: 2026-01-06
 tags: ["growth", "go"]
 ---
 
-*This is Part 2 of my journey building a Personal Reading Analytics. Catch up on [Part 1 - From PIi to Cloud Automation](https://victoriacheng15.vercel.app/blog/from-pi-to-cloud-automation)*
+## What is From Links to Reading Insights?
+
+In this post, we will explore **From Links to Reading Insights**. *This is Part 2 of my journey building a Personal Reading Analytics. Catch up on [Part 1 - From PIi to Cloud Automation](https://victoriacheng15.vercel.app/blog/from-pi-to-cloud-automation)*
 
 ## Article Extractor → Analytics
 

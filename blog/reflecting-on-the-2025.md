@@ -1,13 +1,13 @@
 ---
 title: "Reflecting on the 2025"
-description: "How switching to a planning-first approach in 2025 helped me stop wandering in code and finally finish my side projects with purpose."
+description: "How switching to a planning-first approach in 2025 helped me stop wandering in code and finally finish my side projects with purpose. Dive into this step-by-step tutorial."
 date: 2025-12-30
 tags: ["monthly-log"]
 ---
 
 ## Planning First: How I Finally Finished What I Started in 2025
 
-For a long time, my default workflow for personal projects went like this:  
+In this post, we will explore **Reflecting on the 2025**. For a long time, my default workflow for personal projects went like this:  
 Get an idea → Open my editor → Start coding.
 
 No outline. No spec. Just… go.

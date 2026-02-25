@@ -1,11 +1,13 @@
 ---
 title: "From Metrics to Milestones"
-description: "Visualizing a project’s journey: a product-first landing page and a timeline generated from a structured YAML history of milestones."
+description: "Visualizing a project’s journey: a product-first landing page and a timeline generated from a structured YAML history of milestones. Dive into this step-by-step tutorial."
 date: 2026-01-20
 tags: ["growth", "go"]
 ---
 
-*This is Part 3 of my journey building a Personal Reading Analytics Dashboard. Catch up on [Part 1 - From PIi to Cloud Automation](https://victoriacheng15.vercel.app/blog/from-pi-to-cloud-automation) and [Part 2 - From Links to Reading Insights](link-to-part-2).*
+## What is From Metrics to Milestones?
+
+In this post, we will explore **From Metrics to Milestones**. *This is Part 3 of my journey building a Personal Reading Analytics Dashboard. Catch up on [Part 1 - From PIi to Cloud Automation](https://victoriacheng15.vercel.app/blog/from-pi-to-cloud-automation) and [Part 2 - From Links to Reading Insights](link-to-part-2).*
 
 ---
 

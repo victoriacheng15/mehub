@@ -1,6 +1,6 @@
 ---
 title: "Learning SQL: INNER JOIN"
-description: "Learn how to use the SQL JOIN command to combine data from multiple tables. Understand JOIN ON, JOIN USING, and NATURAL JOIN with examples and tips."
+description: "Learn how to use the SQL JOIN command to combine data from multiple tables. Understand JOIN ON, JOIN USING, and NATURAL JOIN with examples and tips. Read more to learn."
 date: 2025-01-07
 tags: ["backend"]
 ---

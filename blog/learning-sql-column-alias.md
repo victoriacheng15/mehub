@@ -1,6 +1,6 @@
 ---
 title: "Learning SQL: Column Alias"
-description: "Learn how to use column aliases in SQL to simplify your query results, make calculations more readable, and improve clarity with easy-to-understand examples."
+description: "Learn how to use column aliases in SQL to simplify your query results, make calculations more readable, and improve clarity with easy-to-understand examples. Read on."
 date: 2024-09-17
 tags: ["backend"]
 ---

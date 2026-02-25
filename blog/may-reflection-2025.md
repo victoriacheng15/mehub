@@ -1,13 +1,15 @@
 ---
 title: "May Reflection 2025"
-description: "Almost done with my first month at Shopify internship—learning to work with large codebases, adapt to AI tools, and improve problem-solving skills."
+description: "Almost done with my first month at Shopify internship—learning to work with large codebases, adapt to AI tools, and improve problem-solving skills. Dive into the full post."
 date: 2025-05-27
 tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection
 
-I’m almost wrapping up my first month at the Shopify internship. It has been a great experience so far. Like always, I faced some challenges. One of the biggest challenges was working with a very large codebase. Before this, I mostly worked with personal or small projects. Those were much easier to understand and move around in.
+## What is May Reflection 2025?
+
+In this post, we will explore **May Reflection 2025**. I’m almost wrapping up my first month at the Shopify internship. It has been a great experience so far. Like always, I faced some challenges. One of the biggest challenges was working with a very large codebase. Before this, I mostly worked with personal or small projects. Those were much easier to understand and move around in.
 
 I know that many companies have big and complex codebases. This is something new and uncomfortable for me. But I understand that I need to step out of my comfort zone and learn how to work with these larger codebases. One thing that helps is understanding the overall architecture, especially the folder structure. This makes it easier to read, follow, and understand the code.
 

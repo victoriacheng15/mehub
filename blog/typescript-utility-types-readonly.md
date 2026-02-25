@@ -1,6 +1,6 @@
 ---
 title: "TypeScript Utility Types - Readonly"
-description: "Readonly utility type in TypeScript ensures immutability for specific properties, preventing accidental modifications."
+description: "Readonly utility type in TypeScript ensures immutability for specific properties, preventing accidental modifications. Read this comprehensive guide to learn much more."
 date: 2023-08-09
 tags: ["typescript"]
 ---

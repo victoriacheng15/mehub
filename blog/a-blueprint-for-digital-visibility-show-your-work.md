@@ -1,6 +1,6 @@
 ---
 title: "A Blueprint for Digital Visibility - Show Your Work"
-description: "Craft a compelling online presence with 'Show Your Work 10 Ways.' Learn strategies for showcasing your creativity and connecting with your audience."
+description: "Craft a compelling online presence with 'Show Your Work 10 Ways.' Learn strategies for showcasing your creativity and connecting with your audience. Read more to learn."
 date: 2024-01-06
 tags: ["growth"]
 ---

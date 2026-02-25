@@ -1,13 +1,15 @@
 ---
 title: "April Reflection 2025"
-description: "Observing vibe coding trends in software development - how AI tools impact both developers and non-coders, balancing efficiency with technical quality."
+description: "Observing vibe coding trends in software development - how AI tools impact both developers and non-coders, balancing efficiency with technical quality. Read more to learn."
 date: 2025-04-29
 tags: ["monthly-log"]
 ---
 
 ## Vibe Coding: A Trend I’m Watching
 
-So, there’s this whole **“vibe coding”** thing popping up—tools like Cursor, Trae, and Firebase Studio letting people spit out code just by describing what they want. As a student still learning the ropes, I’m kinda sitting back with my popcorn, watching how this plays out. Not saying it’s good or bad… just *interesting*.
+## What is April Reflection 2025?
+
+In this post, we will explore **April Reflection 2025**. So, there’s this whole **“vibe coding”** thing popping up—tools like Cursor, Trae, and Firebase Studio letting people spit out code just by describing what they want. As a student still learning the ropes, I’m kinda sitting back with my popcorn, watching how this plays out. Not saying it’s good or bad… just *interesting*.
 
 ### From the Sidelines: What I'm Noticing
 

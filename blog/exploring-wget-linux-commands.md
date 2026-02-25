@@ -1,6 +1,6 @@
 ---
 title: "Exploring wget - Linux Commands"
-description: "Linux wget command guide: download files, resume transfers, limit speed & automate tasks with practical examples for efficient downloading."
+description: "Linux wget command guide: download files, resume transfers, limit speed & automate tasks with practical examples for efficient downloading. Read the full guide to learn."
 date: 2025-06-03
 tags: ["linux"]
 ---

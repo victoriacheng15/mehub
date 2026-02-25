@@ -1,6 +1,6 @@
 ---
 title: "Learning SQL: INSERT INTO"
-description: "Learn the SQL INSERT INTO statement to add single or multiple rows to a table, insert into specific columns, and handle constraints for efficient data entry."
+description: "Learn the SQL INSERT INTO statement to add single or multiple rows to a table, insert into specific columns, and handle constraints for efficient data entry. Read on."
 date: 2024-11-19
 tags: ["backend"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Data Structure - Hash Tables"
-description: "Discover hash tables, a fast data structure for quick retrieval. Learn how they work, handle collisions, and their applications in databases, caches, and more."
+description: "Discover hash tables, a fast data structure for quick retrieval. Learn how they work, handle collisions, and their applications in databases, caches, and more. Read on."
 date: 2024-07-16
 tags: ["dsa"]
 ---

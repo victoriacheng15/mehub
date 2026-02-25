@@ -1,13 +1,15 @@
 ---
 title: January Reflection 2023
-description: "Reflecting on January, inspired by Atomic Habits, I'm learning Next.js, Chakra UI, and Redux Toolkit for the Hacker News project. Next up: Cypress."
+description: "Reflecting on January, inspired by Atomic Habits, I'm learning Next.js, Chakra UI, and Redux Toolkit for the Hacker News project. Next up: Cypress. Dive into the full post."
 date: 2023-01-25
 tags: ["monthly-log"]
 ---
 
 ## Monthly Reflection
 
-I recently read the book Atomic Habits by James Clear (just before the end of 2022), which emphasizes the importance of raising awareness of our current actions to make our habits more automatic. Based on this insight, I have decided to write a monthly reflection on what I have learned and accomplished during the month.
+## What is January Reflection 2023?
+
+In this post, we will explore **January Reflection 2023**. I recently read the book Atomic Habits by James Clear (just before the end of 2022), which emphasizes the importance of raising awareness of our current actions to make our habits more automatic. Based on this insight, I have decided to write a monthly reflection on what I have learned and accomplished during the month.
 
 I have done a couple of things:
 

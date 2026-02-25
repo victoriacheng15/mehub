@@ -1,6 +1,6 @@
 ---
 title: "Scaling with Systemd Template Units"
-description: "Learn to scale Linux automation using Systemd Template Units. Discover how the '@' symbol and gitops-sync timers simplify service management."
+description: "Learn to scale Linux automation using Systemd Template Units. Discover how the '@' symbol and gitops-sync timers simplify service management. Read the full guide to learn."
 date: 2026-02-10
 tags: ["retrospective", "linux"]
 ---

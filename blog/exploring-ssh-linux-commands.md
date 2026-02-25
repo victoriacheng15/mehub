@@ -1,6 +1,6 @@
 ---
 title: "Exploring ssh - Linux Commands"
-description: "Learn how to use the SSH command in Linux for secure remote access, port forwarding & key authentication. Essential for sysadmins & developers! 🔐🖥️"
+description: "Learn how to use the SSH command in Linux for secure remote access, port forwarding & key authentication. Essential for sysadmins & developers! 🔐🖥️. Read more to learn."
 date: 2025-04-15
 tags: ["linux"]
 ---

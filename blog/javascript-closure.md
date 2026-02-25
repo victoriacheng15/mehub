@@ -1,6 +1,6 @@
 ---
 title: "JavaScript - Closure"
-description: "JavaScript closure: Inner functions retain access to variables from their parent functions, even after the parent functions have finished executing."
+description: "JavaScript closure: Inner functions retain access to variables from their parent functions, even after the parent functions have finished executing. Read more to learn."
 date: 2023-07-12
 tags: ["javascript"]
 ---

@@ -1,13 +1,13 @@
 ---
 title: "Coding Challenges: What I Learned From Write Your wc Tool?"
-description: "Dive into coding challenges with 'Write Your Own wc tool.' Explore TDD, classes in JavaScript, and utilities like spyOn and process.stdin."
+description: "Dive into coding challenges with 'Write Your Own wc tool.' Explore TDD, classes in JavaScript, and utilities like spyOn and process.stdin. Read the full guide to learn."
 date: 2024-01-11
 tags: ["dsa", "javascript"]
 ---
 
 ## Coding Challenges - Write Your Own wc tool
 
-It is a challenge created by John Crickett and the purpose of this challenge is to build your own version of the Unix command line tool `wc`. The wc is a command-line tool that can analyze and display information about the number of bytes, lines, words, and characters from a text file or input through the terminal.
+In this post, we will explore **What I Learned From Write Your wc Tool?**. It is a challenge created by John Crickett and the purpose of this challenge is to build your own version of the Unix command line tool `wc`. The wc is a command-line tool that can analyze and display information about the number of bytes, lines, words, and characters from a text file or input through the terminal.
 
 ```js
 wc[options][files];

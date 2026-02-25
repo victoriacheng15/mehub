@@ -1,13 +1,13 @@
 ---
 title: Let's Discover the JavaScript Map Keyed Collection
-description: "Learn about JavaScript Map: its keyed collection, differences from objects & how to perform CRUD operations using Map methods."
+description: "Learn about JavaScript Map: its keyed collection, differences from objects & how to perform CRUD operations using Map methods. Discover essential tips and practical guides."
 date: 2023-02-08
 tags: ["javascript"]
 ---
 
 ## What is Map?
 
-It is an object that holds key-value pairs and remembers the original insertion order of the keys. It is similar to `Object` with the main difference being that `Map` allows keys of any type.
+In this post, we will explore **Let's Discover the JavaScript Map Keyed Collection**. It is an object that holds key-value pairs and remembers the original insertion order of the keys. It is similar to `Object` with the main difference being that `Map` allows keys of any type.
 
 ### Map vs Object - key type
 

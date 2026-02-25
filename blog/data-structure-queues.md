@@ -1,6 +1,6 @@
 ---
 title: "Data Structure - Queues"
-description: "Explore the essence of queues: understand FIFO principle, real-life analogies, and implement in JavaScript and Python. Elevate your data structure skills!"
+description: "Explore the essence of queues: understand FIFO principle, real-life analogies, and implement in JavaScript and Python. Elevate your data structure skills! Read more to learn."
 date: 2024-04-24
 tags: ["dsa"]
 ---

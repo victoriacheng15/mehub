@@ -1,13 +1,13 @@
 ---
 title: "Astro Builds with Mermaid Diagrams"
-description: "Learn how to render Mermaid diagrams in Astro using rehype-mermaid and Playwright, with GitHub Actions for preview and production deployments."
+description: "Learn how to render Mermaid diagrams in Astro using rehype-mermaid and Playwright, with GitHub Actions for preview and production deployments. Read the full guide to learn."
 date: 2025-09-09
 tags: ["growth"]
 ---
 
 ## Why My Pages Went Blank
 
-I usually draft my blog posts in GitHub Issues because it’s easier to manage ideas there, and I can leverage GitHub Actions to automate my publishing workflow. For example, I have a custom Action that sends finished drafts to my mehub repo. Another bonus is that GitHub natively supports Mermaid.js, so diagrams “just work” while I’m drafting.
+In this post, we will explore **Astro Builds with Mermaid Diagrams**. I usually draft my blog posts in GitHub Issues because it’s easier to manage ideas there, and I can leverage GitHub Actions to automate my publishing workflow. For example, I have a custom Action that sends finished drafts to my mehub repo. Another bonus is that GitHub natively supports Mermaid.js, so diagrams “just work” while I’m drafting.
 
 When I moved the drafts into my Astro blog, the diagrams didn’t render locally—which I expected. I had added `rehype-mermaid`, and honestly, I thought “just installing the package should make it work magically” 😅.
 
