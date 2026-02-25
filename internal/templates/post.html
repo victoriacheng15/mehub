@@ -10,8 +10,25 @@
         </ul>
     </header>
 
-    <div class="prose prose-invert max-w-none prose-primary prose-img:rounded-lg prose-headings:text-secondary-100 prose-a:text-secondary-400 hover:prose-a:text-secondary-300">
+    <div
+        class="prose prose-invert max-w-none prose-primary prose-img:rounded-lg prose-headings:text-secondary-100 prose-a:text-secondary-400 hover:prose-a:text-secondary-300">
         {{ .Post.Content | safeHTML }}
     </div>
+
+    {{ if .Post.RelatedPosts }}
+    <section class="mt-8 pt-6 border-t border-primary-800">
+        <h2 class="text-xl font-bold text-secondary-200 mb-4">Related but not so Related Concepts</h2>
+        <ul class="flex flex-col gap-2 list-none p-0 m-0">
+            {{ range .Post.RelatedPosts }}
+            <li>
+                <a href="{{ .Slug }}.html"
+                    class="text-lg text-secondary-400 hover:text-secondary-300 transition-colors underline decoration-primary-700 underline-offset-4">
+                    {{ .Title }}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </section>
+    {{ end }}
 </article>
 {{ end }}
