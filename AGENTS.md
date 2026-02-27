@@ -40,6 +40,7 @@ The project uses a `Makefile` that automatically wraps commands in `nix-shell` i
 Mehub is designed to be easily consumed by AI agents and recruitment systems via machine-readable endpoints generated in `dist/api/`.
 
 ### API Registry Map
+
 - **Catalog**: `/api/catalog-registry.json` — Entry point for discovery.
 - **Profile**: `/api/profile-registry.json` — Site owner metadata.
 - **Skills**: `/api/skills-registry.json` — Structured skills and specialties.
@@ -47,21 +48,25 @@ Mehub is designed to be easily consumed by AI agents and recruitment systems via
 - **Blog**: `/api/blog-registry.json` — Metadata for all blog posts for NLP processing.
 
 ### Discoverability Assets
+
 - **robots.txt**: Explicitly allows `/api/` for all crawlers.
 - **sitemap.xml**: Includes both HTML pages and the API registry JSON files to ensure thorough indexing.
 
 ## 5. Guidelines
 
 ### Go
+
 - Use idiomatic Go and prefer the standard library.
 - Code **must** pass `make check` before completion.
 - Handle all errors explicitly.
 
 ### Markdown
+
 - Maintain valid YAML frontmatter in `blog/*.md`.
 - Ensure all posts have a `title`, `date` (YYYY-MM-DD), and `tags`.
 - Avoid em dashes; use commas or parentheses for clarity.
 
 ### Style
+
 - Use Tailwind utility classes in templates.
 - Avoid inline styles or custom CSS blocks outside of `internal/templates/input.css`.
