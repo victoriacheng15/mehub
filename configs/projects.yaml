@@ -1,4 +1,10 @@
 projects:
+  - title: "Echo (MCP server)"
+    shortDescription: "A persistent long-term memory engine for AI agents. Bridges stateless LLMs with local SQLite persistence via MCP to automate cross-session architectural context and project preferences."
+    link: "echo"
+    techs: |
+      - Go
+      - Sqlite
   - title: "Observability Hub"
     shortDescription: "High-fidelity K3s observability platform. Implements modular library-first Go architecture, OpenTelemetry tracing, OpenBao secrets, and GitOps automation."
     link: "observability-hub"
@@ -12,7 +18,7 @@ projects:
       - Grafana / Loki / Tempo
       - PostgreSQL (TimescaleDB)
   - title: "Cover Craft"
-    shortDescription: "Serverless image generation service architected on Azure Functions & Next.js. Enforces design consistency via shared full-stack validation, automated WCAG compliance, and privacy-first telemetry."
+    shortDescription: "React and Azure Functions bulk generation platform. Implements event-driven asynchronous architecture with TypeScript, Azure Queues, WCAG compliance, and privacy-first telemetry."
     link: "cover-craft"
     techs: |
       - Azure Functions
