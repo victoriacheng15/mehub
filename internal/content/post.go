@@ -200,7 +200,12 @@ func ProcessPosts(posts []Post) *ContentData {
 	for tag := range tagMap {
 		data.Tags = append(data.Tags, tag)
 	}
-	sort.Strings(data.Tags)
+	sort.Slice(data.Tags, func(i, j int) bool {
+		if data.TagCounts[data.Tags[i]] != data.TagCounts[data.Tags[j]] {
+			return data.TagCounts[data.Tags[i]] > data.TagCounts[data.Tags[j]]
+		}
+		return data.Tags[i] < data.Tags[j]
+	})
 	sort.Sort(sort.Reverse(sort.IntSlice(archiveYears)))
 	data.ArchiveYears = archiveYears
 

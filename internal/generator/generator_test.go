@@ -381,6 +381,15 @@ func TestGenerators(t *testing.T) {
 			},
 			wantErr: false,
 		},
+		{
+			name: "LLMs Txt",
+			fn:   func() error { return gen.GenerateLLMsTxt(distDir) },
+			check: func() error {
+				_, err := os.Stat(filepath.Join(distDir, "api", "llms.txt"))
+				return err
+			},
+			wantErr: false,
+		},
 	}
 
 	for _, tt := range tests {

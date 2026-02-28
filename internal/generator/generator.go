@@ -469,6 +469,7 @@ func (g *SiteGenerator) GenerateCatalogRegistry(distDir string) error {
 		"skills":   g.Config.Site.URL + "api/skills-registry.json",
 		"projects": g.Config.Site.URL + "api/projects-registry.json",
 		"blog":     g.Config.Site.URL + "api/blog-registry.json",
+		"llms":     g.Config.Site.URL + "api/llms.txt",
 	}
 
 	jsonData, err := json.MarshalIndent(catalog, "", "  ")
@@ -478,6 +479,41 @@ func (g *SiteGenerator) GenerateCatalogRegistry(distDir string) error {
 
 	if err := os.WriteFile(filepath.Join(apiDir, "catalog-registry.json"), jsonData, 0644); err != nil {
 		return fmt.Errorf("failed to write catalog-registry.json: %w", err)
+	}
+	return nil
+}
+
+func (g *SiteGenerator) GenerateLLMsTxt(distDir string) error {
+	apiDir := filepath.Join(distDir, "api")
+	if err := os.MkdirAll(apiDir, 0755); err != nil {
+		return fmt.Errorf("failed to create api dir: %w", err)
+	}
+
+	var sb strings.Builder
+	sb.WriteString("# " + g.Config.Site.Title + "\n\n")
+	sb.WriteString("> " + g.Config.Site.Description + "\n\n")
+
+	var allSkills []string
+	for _, s := range g.Config.Skills {
+		allSkills = append(allSkills, s.Name)
+	}
+	allSkills = append(allSkills, g.Config.Specialties...)
+
+	if len(allSkills) > 0 {
+		sb.WriteString("## Skills & Specialties\n\n")
+		sb.WriteString(strings.Join(allSkills, ", ") + "\n\n")
+	}
+
+	sb.WriteString("## API Discovery\n\n")
+	sb.WriteString("The following endpoints provide structured JSON data for AI discovery:\n\n")
+	sb.WriteString("- [Profile](" + g.Config.Site.URL + "api/profile-registry.json): Identity metadata and site-wide configuration.\n")
+	sb.WriteString("- [Skills](" + g.Config.Site.URL + "api/skills-registry.json): Full technical stack and granular skill list.\n")
+	sb.WriteString("- [Projects](" + g.Config.Site.URL + "api/projects-registry.json): Portfolio of work with tech stacks and links.\n")
+	sb.WriteString("- [Blog](" + g.Config.Site.URL + "api/blog-registry.json): Feed of all blog posts, slugs, and tags.\n")
+	sb.WriteString("- [Catalog](" + g.Config.Site.URL + "api/catalog-registry.json): The master index of all registries.\n")
+
+	if err := os.WriteFile(filepath.Join(apiDir, "llms.txt"), []byte(sb.String()), 0644); err != nil {
+		return fmt.Errorf("failed to write llms.txt: %w", err)
 	}
 	return nil
 }

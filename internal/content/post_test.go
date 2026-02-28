@@ -127,7 +127,7 @@ func TestProcessPosts(t *testing.T) {
 			name: "Group by Tags and Year",
 			posts: []Post{
 				{
-					Frontmatter: Frontmatter{Title: "Post 1", Date: date1, Tags: []string{"go", "web"}},
+					Frontmatter: Frontmatter{Title: "Post 1", Date: date1, Tags: []string{"go"}},
 					Slug:        "post-1",
 				},
 				{
@@ -135,7 +135,7 @@ func TestProcessPosts(t *testing.T) {
 					Slug:        "post-2",
 				},
 				{
-					Frontmatter: Frontmatter{Title: "Post 3", Date: date3, Tags: []string{"go"}},
+					Frontmatter: Frontmatter{Title: "Post 3", Date: date3, Tags: []string{"web"}},
 					Slug:        "post-3",
 				},
 			},
@@ -144,13 +144,14 @@ func TestProcessPosts(t *testing.T) {
 				if len(data.Tags) != 2 {
 					t.Errorf("Expected 2 unique tags, got %d", len(data.Tags))
 				}
-				if data.Tags[0] != "go" || data.Tags[1] != "web" {
+				// "web" has 2 posts, "go" has 1 post. Should be ["web", "go"]
+				if data.Tags[0] != "web" || data.Tags[1] != "go" {
 					t.Errorf("Tags not sorted correctly: %v", data.Tags)
 				}
 
 				// Check Tag Counts
-				if data.TagCounts["go"] != 2 {
-					t.Errorf("Expected 2 posts for 'go', got %d", data.TagCounts["go"])
+				if data.TagCounts["go"] != 1 {
+					t.Errorf("Expected 1 posts for 'go', got %d", data.TagCounts["go"])
 				}
 				if data.TagCounts["web"] != 2 {
 					t.Errorf("Expected 2 posts for 'web', got %d", data.TagCounts["web"])
