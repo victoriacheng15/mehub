@@ -1,3 +1,53 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* Primary Color Palette */
+  --color-primary-50: #eaf1ff;
+  --color-primary-100: #d6e3ff;
+  --color-primary-200: #adc8ff;
+  --color-primary-300: #7aaaff;
+  --color-primary-400: #478cff;
+  --color-primary-500: #1f6fff;
+  --color-primary-600: #004fd6;
+  --color-primary-700: #003cb3;
+  --color-primary-800: #002c8a;
+  --color-primary-900: #001a66;
+  --color-primary-950: #000d33;
+
+  /* Secondary Color Palette */
+  --color-secondary-50: #fff2ed;
+  --color-secondary-100: #ffdcd1;
+  --color-secondary-200: #ffb4a3;
+  --color-secondary-300: #ff8166;
+  --color-secondary-400: #ff5733;
+  --color-secondary-500: #e6461f;
+  --color-secondary-600: #c73714;
+  --color-secondary-700: #a82b10;
+  --color-secondary-800: #88220d;
+  --color-secondary-900: #5c1608;
+  --color-secondary-950: #310800;
+
+  /* Typography Colors (Prose Overrides) */
+  --tw-prose-body: rgb(229, 231, 235);
+  --tw-prose-headings: #a8cbff;
+  --tw-prose-links: rgb(96, 165, 250);
+  --tw-prose-links-hover: rgb(147, 197, 253);
+  --tw-prose-code: rgb(243, 244, 246);
+  --tw-prose-bold: #ffaa71;
+  --tw-prose-th: #ffaa71;
+  --tw-prose-bullets: #ffaa71;
+  --tw-prose-counters: #ffaa71;
+  --tw-prose-quotes: rgb(229, 231, 235);
+  --tw-prose-quote-borders: rgb(75, 85, 99);
+}
+
+@layer base {
+  .prose code {
+    background-color: rgb(31, 41, 55);
+  }
+  
+  .prose a:hover {
+    color: var(--tw-prose-links-hover);
+  }
+}

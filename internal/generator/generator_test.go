@@ -373,19 +373,10 @@ func TestGenerators(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "Catalog Registry",
-			fn:   func() error { return gen.GenerateCatalogRegistry(distDir) },
-			check: func() error {
-				_, err := os.Stat(filepath.Join(distDir, "api", "catalog-registry.json"))
-				return err
-			},
-			wantErr: false,
-		},
-		{
 			name: "LLMs Txt",
 			fn:   func() error { return gen.GenerateLLMsTxt(distDir) },
 			check: func() error {
-				_, err := os.Stat(filepath.Join(distDir, "api", "llms.txt"))
+				_, err := os.Stat(filepath.Join(distDir, "llms.txt"))
 				return err
 			},
 			wantErr: false,

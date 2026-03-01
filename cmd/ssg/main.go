@@ -77,9 +77,6 @@ func run(distDir, configDir, blogDir, publicDir string) error {
 	if err := gen.GenerateProfileRegistry(distDir); err != nil {
 		return fmt.Errorf("failed to generate profile registry: %w", err)
 	}
-	if err := gen.GenerateCatalogRegistry(distDir); err != nil {
-		return fmt.Errorf("failed to generate catalog registry: %w", err)
-	}
 	if err := gen.GenerateLLMsTxt(distDir); err != nil {
 		return fmt.Errorf("failed to generate llms.txt: %w", err)
 	}
