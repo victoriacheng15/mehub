@@ -304,7 +304,6 @@ func (g *SiteGenerator) GenerateSitemap(distDir string, posts []content.Post) er
 
 	// API Registries
 	apiFiles := []string{
-		"api/catalog-registry.json",
 		"api/profile-registry.json",
 		"api/skills-registry.json",
 		"api/projects-registry.json",
@@ -457,63 +456,60 @@ func (g *SiteGenerator) GenerateProfileRegistry(distDir string) error {
 	return nil
 }
 
-func (g *SiteGenerator) GenerateCatalogRegistry(distDir string) error {
-	apiDir := filepath.Join(distDir, "api")
-	if err := os.MkdirAll(apiDir, 0755); err != nil {
-		return fmt.Errorf("failed to create api dir: %w", err)
-	}
-
-	catalog := map[string]string{
-		"catalog":  g.Config.Site.URL + "api/catalog-registry.json",
-		"profile":  g.Config.Site.URL + "api/profile-registry.json",
-		"skills":   g.Config.Site.URL + "api/skills-registry.json",
-		"projects": g.Config.Site.URL + "api/projects-registry.json",
-		"blog":     g.Config.Site.URL + "api/blog-registry.json",
-		"llms":     g.Config.Site.URL + "api/llms.txt",
-	}
-
-	jsonData, err := json.MarshalIndent(catalog, "", "  ")
-	if err != nil {
-		return fmt.Errorf("failed to marshal catalog registry: %w", err)
-	}
-
-	if err := os.WriteFile(filepath.Join(apiDir, "catalog-registry.json"), jsonData, 0644); err != nil {
-		return fmt.Errorf("failed to write catalog-registry.json: %w", err)
-	}
-	return nil
-}
-
 func (g *SiteGenerator) GenerateLLMsTxt(distDir string) error {
-	apiDir := filepath.Join(distDir, "api")
-	if err := os.MkdirAll(apiDir, 0755); err != nil {
-		return fmt.Errorf("failed to create api dir: %w", err)
-	}
-
 	var sb strings.Builder
-	sb.WriteString("# " + g.Config.Site.Title + "\n\n")
-	sb.WriteString("> " + g.Config.Site.Description + "\n\n")
 
+	// Role & Identity
+	sb.WriteString("# " + g.Config.Site.Name + " - Technical Portfolio\n\n")
+	sb.WriteString("## Role & Identity\n\n")
+	sb.WriteString(g.Config.Site.Description + "\n\n")
+
+	// Recruiting Signals
+	sb.WriteString("## Recruiting Signals\n\n")
+	if g.Config.Site.Status != "" {
+		sb.WriteString("- **Status**: " + g.Config.Site.Status + "\n")
+	}
+	sb.WriteString("- **Experience**: " + g.Config.Site.Experience + "\n")
+	sb.WriteString("- **Focus Areas**: " + strings.Join(g.Config.Site.FocusAreas, ", ") + "\n\n")
+
+	// Technical Skills
+	sb.WriteString("## Technical Skills\n\n")
 	var allSkills []string
 	for _, s := range g.Config.Skills {
 		allSkills = append(allSkills, s.Name)
 	}
 	allSkills = append(allSkills, g.Config.Specialties...)
+	sb.WriteString(strings.Join(allSkills, ", ") + "\n\n")
 
-	if len(allSkills) > 0 {
-		sb.WriteString("## Skills & Specialties\n\n")
-		sb.WriteString(strings.Join(allSkills, ", ") + "\n\n")
+	// Project Index
+	sb.WriteString("## Project Index (Discovery)\n\n")
+	for _, p := range g.Config.Projects {
+		sb.WriteString("- **" + p.Title + "**: " + p.ShortDescription + "\n")
 	}
+	sb.WriteString("\n")
 
-	sb.WriteString("## API Discovery\n\n")
+	// Discovery Registry
+	sb.WriteString("## Discovery Registry\n\n")
 	sb.WriteString("The following endpoints provide structured JSON data for AI discovery:\n\n")
-	sb.WriteString("- [Profile](" + g.Config.Site.URL + "api/profile-registry.json): Identity metadata and site-wide configuration.\n")
-	sb.WriteString("- [Skills](" + g.Config.Site.URL + "api/skills-registry.json): Full technical stack and granular skill list.\n")
-	sb.WriteString("- [Projects](" + g.Config.Site.URL + "api/projects-registry.json): Portfolio of work with tech stacks and links.\n")
-	sb.WriteString("- [Blog](" + g.Config.Site.URL + "api/blog-registry.json): Feed of all blog posts, slugs, and tags.\n")
-	sb.WriteString("- [Catalog](" + g.Config.Site.URL + "api/catalog-registry.json): The master index of all registries.\n")
+	sb.WriteString("- **Profile**: /api/profile-registry.json\n")
+	sb.WriteString("- **Projects**: /api/projects-registry.json\n")
+	sb.WriteString("- **Skills**: /api/skills-registry.json\n")
+	sb.WriteString("- **Blog**: /api/blog-registry.json\n\n")
 
-	if err := os.WriteFile(filepath.Join(apiDir, "llms.txt"), []byte(sb.String()), 0644); err != nil {
-		return fmt.Errorf("failed to write llms.txt: %w", err)
+	// Contact
+	sb.WriteString("## Contact\n\n")
+	for _, s := range g.Config.Socials {
+		if strings.EqualFold(s.Name, "GitHub") || strings.EqualFold(s.Name, "LinkedIn") {
+			sb.WriteString("- **" + s.Name + "**: " + s.Href + "\n")
+		}
 	}
+
+	content := []byte(sb.String())
+
+	// Write to root for LLM discovery
+	if err := os.WriteFile(filepath.Join(distDir, "llms.txt"), content, 0644); err != nil {
+		return fmt.Errorf("failed to write root llms.txt: %w", err)
+	}
+
 	return nil
 }

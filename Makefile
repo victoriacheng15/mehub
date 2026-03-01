@@ -31,7 +31,7 @@ help:
 	@echo "  update          Update Go dependencies"
 	@echo "  check           Check Go code formatting and static analysis (vet)"
 	@echo "  test            Run all tests"
-	@echo "  cov-log         Run tests and show coverage report"
+	@echo "  test-cov        Run tests and show coverage report"
 	@echo ""
 	@echo "Markdown:"
 	@echo "  lint            Lint Markdown files using Docker"
@@ -46,7 +46,8 @@ help:
 	@echo "  help            Show this help message"
 
 build: setup-tailwind
-	@$(NIX_RUN) "go build -o $(BINARY_NAME) ./cmd/ssg && \
+	@$(NIX_RUN) "rm -rf dist && \
+	go build -o $(BINARY_NAME) ./cmd/ssg && \
 	./$(BINARY_NAME) && \
 	if [ -f $(TAILWIND_BIN) ]; then \
 		$(TAILWIND_BIN) -i internal/templates/input.css -o dist/styles.css --minify; \
@@ -74,7 +75,7 @@ check: vet
 test:
 	@$(NIX_RUN) "go test -v ./..."
 
-cov-log:
+test-cov:
 	@$(NIX_RUN) "go test -coverprofile=coverage.out ./... && \
 	go tool cover -func=coverage.out && \
 	rm coverage.out"
@@ -87,8 +88,8 @@ add-hr:
 	@$(NIX_RUN) "go run scripts/add-hr.go"
 
 setup-tailwind:
-	@curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-linux-x64
-	@mv tailwindcss-linux-x64 $(TAILWIND_BIN)
+	@echo "Downloading tailwind css cli..."
+	@curl -sL https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64 -o $(TAILWIND_BIN)
 	@chmod +x $(TAILWIND_BIN)
 
 setup-go:
