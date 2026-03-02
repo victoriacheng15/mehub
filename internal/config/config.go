@@ -24,10 +24,10 @@ type Social struct {
 }
 
 type Project struct {
-	Title            string `yaml:"title"`
-	ShortDescription string `yaml:"shortDescription"`
-	Link             string `yaml:"link"`
-	Techs            string `yaml:"techs"`
+	Title            string   `yaml:"title"`
+	ShortDescription string   `yaml:"shortDescription"`
+	Link             string   `yaml:"link"`
+	Techs            []string `yaml:"techs"`
 }
 
 type Skill struct {
@@ -36,13 +36,13 @@ type Skill struct {
 }
 
 type NowCategory struct {
-	Title string `yaml:"title"`
-	Items string `yaml:"items"`
+	Title string   `yaml:"title"`
+	Items []string `yaml:"items"`
 }
 
 type AboutConfig struct {
-	Image      string `yaml:"image"`
-	Paragraphs string `yaml:"paragraphs"`
+	Image      string   `yaml:"image"`
+	Paragraphs []string `yaml:"paragraphs"`
 }
 
 type NowConfig struct {

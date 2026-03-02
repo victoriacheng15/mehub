@@ -2,45 +2,45 @@ projects:
   - title: "Echo (MCP server)"
     shortDescription: "A persistent long-term memory engine for AI agents. Bridges stateless LLMs with local SQLite persistence via MCP to automate cross-session architectural context and project preferences."
     link: "echo"
-    techs: |
-      - Go
-      - Sqlite
+    techs:
+      - "Go"
+      - "Sqlite"
   - title: "Observability Hub"
     shortDescription: "High-fidelity K3s observability platform. Implements modular library-first Go architecture, OpenTelemetry tracing, OpenBao secrets, and GitOps automation."
     link: "observability-hub"
-    techs: |
-      - Go
-      - Kubernetes (K3s)
-      - Helm
-      - OpenTelemetry Collector
-      - Prometheus
-      - OpenTofu (Terraform)
-      - Grafana / Loki / Tempo
-      - PostgreSQL (TimescaleDB)
+    techs:
+      - "Go"
+      - "Kubernetes (K3s)"
+      - "Helm"
+      - "OpenTelemetry Collector"
+      - "Prometheus"
+      - "OpenTofu (Terraform)"
+      - "Grafana / Loki / Tempo"
+      - "PostgreSQL (TimescaleDB)"
   - title: "Cover Craft"
     shortDescription: "React and Azure Functions bulk generation platform. Implements event-driven asynchronous architecture with TypeScript, Azure Queues, WCAG compliance, and privacy-first telemetry."
     link: "cover-craft"
-    techs: |
-      - Azure Functions
-      - Next.js
-      - TypeScript
-      - GitHub Actions
-      - MongoDB Atlas
+    techs:
+      - "Azure Functions"
+      - "Next.js"
+      - "TypeScript"
+      - "GitHub Actions"
+      - "MongoDB Atlas"
   - title: "Platform Actions"
     shortDescription: "Building a 'Paved Path' for automation. Reusable GitHub Actions for standardizing linting, security, and CI/CD workflows."
     link: "platform-actions"
-    techs: |
-      - GitHub Actions
-      - YAML
-      - Markdown
+    techs:
+      - "GitHub Actions"
+      - "YAML"
+      - "Markdown"
   - title: "Personal Reading Analytics"
     shortDescription: "Zero-infrastructure reading analytics pipeline. Automated data pipeline via GitHub Actions with MongoDB event sourcing for observability and interactive visualizations."
     link: "personal-reading-analytics"
-    techs: |
-      - Go
-      - Python
-      - Google Sheets
-      - Docker
-      - GitHub Actions
-      - MongoDB Atlas
-      - Google Gemini
+    techs:
+      - "Go"
+      - "Python"
+      - "Google Sheets"
+      - "Docker"
+      - "GitHub Actions"
+      - "MongoDB Atlas"
+      - "Google Gemini"

@@ -28,7 +28,7 @@
       "description": "{{ .Post.Description }}",
       "author": {
         "@type": "Person",
-        "name": "{{ .Config.Site.Title }}"
+        "name": "{{ .Config.Site.Name }}"
       },
       "datePublished": "{{ .Post.Date.Format `2006-01-02T15:04:05Z07:00` }}",
       "url": "{{ .Config.Site.URL }}blog/{{ .Post.Slug }}.html"

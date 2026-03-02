@@ -21,7 +21,7 @@ site:
   title: "My Site"
   description: "A cool site"
   about:
-    paragraphs: |
+    paragraphs:
       - Hello world
 `,
 				"navigation.yaml": `

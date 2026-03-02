@@ -491,10 +491,10 @@ func (g *SiteGenerator) GenerateLLMsTxt(distDir string) error {
 	// Discovery Registry
 	sb.WriteString("## Discovery Registry\n\n")
 	sb.WriteString("The following endpoints provide structured JSON data for AI discovery:\n\n")
-	sb.WriteString("- **Profile**: /api/profile-registry.json\n")
-	sb.WriteString("- **Projects**: /api/projects-registry.json\n")
-	sb.WriteString("- **Skills**: /api/skills-registry.json\n")
-	sb.WriteString("- **Blog**: /api/blog-registry.json\n\n")
+	sb.WriteString("- **Profile**: " + g.Config.Site.URL + "api/profile-registry.json\n")
+	sb.WriteString("- **Projects**: " + g.Config.Site.URL + "api/projects-registry.json\n")
+	sb.WriteString("- **Skills**: " + g.Config.Site.URL + "api/skills-registry.json\n")
+	sb.WriteString("- **Blog**: " + g.Config.Site.URL + "api/blog-registry.json\n\n")
 
 	// Contact
 	sb.WriteString("## Contact\n\n")
