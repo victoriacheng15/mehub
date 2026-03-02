@@ -1,8 +1,10 @@
 package generator
 
 import (
+	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
 	"time"
 
@@ -23,7 +25,7 @@ func createConfig() *config.SiteConfig {
 				Title:            "Test Project",
 				ShortDescription: "Desc",
 				Link:             "http://link",
-				Techs:            "- Go\n- Test",
+				Techs:            []string{"Go", "Test"},
 			},
 		},
 		Skills: []config.Skill{
@@ -376,8 +378,15 @@ func TestGenerators(t *testing.T) {
 			name: "LLMs Txt",
 			fn:   func() error { return gen.GenerateLLMsTxt(distDir) },
 			check: func() error {
-				_, err := os.Stat(filepath.Join(distDir, "llms.txt"))
-				return err
+				content, err := os.ReadFile(filepath.Join(distDir, "llms.txt"))
+				if err != nil {
+					return err
+				}
+				expectedURL := "http://example.com/api/profile-registry.json"
+				if !strings.Contains(string(content), expectedURL) {
+					return fmt.Errorf("llms.txt content does not contain %s", expectedURL)
+				}
+				return nil
 			},
 			wantErr: false,
 		},
