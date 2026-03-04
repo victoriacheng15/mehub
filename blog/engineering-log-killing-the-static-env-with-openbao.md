@@ -1,6 +1,6 @@
 ---
 title: "[Engineering Log] Killing the Static .env with OpenBao"
-description: "Eliminating static .env files by centralizing secrets in OpenBao via a reusable pkg/secrets module, decoupling credentials to streamline the Kubernetes migration phase."
+description: "Eliminating static .env files by centralizing secrets in OpenBao via a reusable internal/secrets module, decoupling credentials to streamline the Kubernetes migration phase."
 date: 2026-03-03
 tags: ["retrospective", "platform"]
 ---
@@ -33,7 +33,7 @@ While static `.env` files worked perfectly for my local setup, they limited my e
 
 ## 4. The Solution / Insight
 
-The breakthrough wasn't just installing OpenBao; it was the creation of a centralized `pkg/secrets` module. By standardizing secret retrieval into a reusable internal package, I ensured that any new service (Go-based) could instantly tap into the secure store without reinventing the connection logic.
+The breakthrough wasn't just installing OpenBao; it was the creation of a centralized `internal/secrets` module. By standardizing secret retrieval into a reusable internal package, I ensured that any new service (Go-based) could instantly tap into the secure store without reinventing the connection logic.
 
 ```go
 // The centralized interface in pkg/secrets that standardized our 'Paved Road'
