@@ -1,8 +1,8 @@
 skills:
 # 📝 Programming Languages
-  - name: "Go (Goroutines)"
+  - name: "Go"
     icon: "go.svg"
-  - name: "Python (asyncio)"
+  - name: "Python"
     icon: "python.svg"
   - name: "TypeScript"
     icon: "typescript.svg"
@@ -32,7 +32,7 @@ skills:
     icon: "linux.svg"
 
 # 🛠 Backend & Frontend
-  - name: "PostgreSQL (JSONB)"
+  - name: "PostgreSQL"
     icon: "postgresql.svg"
   - name: "MongoDB"
     icon: "mongodb.svg"
