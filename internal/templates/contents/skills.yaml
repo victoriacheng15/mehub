@@ -8,7 +8,7 @@ skills:
     icon: "typescript.svg"
 
 # ☁️ Cloud Native & Observability
-  - name: "Kubernetes (k3s)"
+  - name: "Kubernetes (K3s)"
     icon: "kubernetes.svg"
   - name: "Helm"
     icon: "helm.svg"
@@ -28,20 +28,18 @@ skills:
     icon: "docker.svg"
   - name: "GitHub Actions"
     icon: "githubactions.svg"
-  - name: "Linux (Systemd)"
+  - name: "Linux"
     icon: "linux.svg"
+
+# 🤖AI 
+  - name: "Model Context Protocol (MCP)"
+    icon: "modelcontextprotocol.svg"
 
 # 🛠 Backend & Frontend
   - name: "PostgreSQL"
     icon: "postgresql.svg"
   - name: "MongoDB"
     icon: "mongodb.svg"
-  - name: "Node.js"
-    icon: "nodedotjs.svg"
-  - name: "Flask"
-    icon: "flask.svg"
-  - name: "GraphQL"
-    icon: "graphql.svg"
   - name: "React"
     icon: "react.svg"
   - name: "Tailwind CSS"

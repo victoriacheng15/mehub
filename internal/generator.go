@@ -1,4 +1,4 @@
-package generator
+package internal
 
 import (
 	"encoding/json"
@@ -10,31 +10,88 @@ import (
 	"strings"
 	"time"
 
-	"mehub/internal/config"
-	"mehub/internal/content"
+	"mehub/internal/contents"
+	"mehub/internal/post"
 )
 
 type PageData struct {
-	Config       *config.SiteConfig
+	Config       *contents.SiteConfig
 	CurrentYear  int
 	Title        string
-	Posts        []content.Post
-	Post         *content.Post
+	Posts        []post.Post
+	Post         *post.Post
 	Tags         []string
 	TagCounts    map[string]int
-	Archive      map[int][]content.Post
+	Archive      map[int][]post.Post
 	ArchiveYears []int
 	CurrentPage  int
 	TotalPages   int
 	PathPrefix   string
 }
 
+type SearchItem struct {
+	Title       string   `json:"title"`
+	Slug        string   `json:"slug"`
+	Description string   `json:"description"`
+	Date        string   `json:"date"`
+	Tags        []string `json:"tags"`
+}
+
+type BlogItem struct {
+	Title       string   `json:"title"`
+	Description string   `json:"description"`
+	URL         string   `json:"url"`
+	Date        string   `json:"date_published"`
+	Tags        []string `json:"skills"`
+}
+
+type ProjectItem struct {
+	Title            string   `json:"title"`
+	ShortDescription string   `json:"short_description"`
+	Link             string   `json:"link"`
+	Techs            []string `json:"tech_stack"`
+}
+
+type BlogRegistry struct {
+	TotalPosts int        `json:"total_posts"`
+	Posts      []BlogItem `json:"posts"`
+}
+
+type ProfileAbout struct {
+	Paragraphs []string `json:"paragraphs"`
+}
+
+type ProfileRegistry struct {
+	URL         string             `json:"url"`
+	Title       string             `json:"title"`
+	Name        string             `json:"name"`
+	Slogan      string             `json:"slogan"`
+	Description string             `json:"description"`
+	Experience  string             `json:"experience"`
+	Status      string             `json:"status"`
+	FocusAreas  []string           `json:"focusAreas"`
+	About       ProfileAbout       `json:"about"`
+	Now         contents.NowConfig `json:"now"`
+}
+
+type Manifest struct {
+	MCPVersion  string          `json:"mcp_version"`
+	Name        string          `json:"name"`
+	Description string          `json:"description"`
+	URL         string          `json:"url"`
+	UpdatedAt   string          `json:"updated_at"`
+	Profile     ProfileRegistry `json:"profile"`
+	Skills      []string        `json:"skills"`
+	Projects    []ProjectItem   `json:"projects"`
+	Blog        BlogRegistry    `json:"blog"`
+}
+
 type SiteGenerator struct {
-	Config  *config.SiteConfig
+	Config  *contents.SiteConfig
 	FuncMap template.FuncMap
 }
 
-func New(cfg *config.SiteConfig) *SiteGenerator {
+func New(cfg *contents.SiteConfig) *SiteGenerator {
 	return &SiteGenerator{
 		Config: cfg,
 		FuncMap: template.FuncMap{
@@ -104,7 +161,7 @@ func (g *SiteGenerator) RenderPage(dir, filename, tmplPath string, titlePrefix s
 	return nil
 }
 
-func (g *SiteGenerator) GenerateStaticPages(distDir string, data *content.ContentData) error {
+func (g *SiteGenerator) GenerateStaticPages(distDir string, data *post.ContentData) error {
 	pages := []struct {
 		filename    string
 		tmplPath    string
@@ -127,7 +184,7 @@ func (g *SiteGenerator) GenerateStaticPages(distDir string, data *content.Conten
 	return nil
 }
 
-func (g *SiteGenerator) GenerateBlogPagination(distDir string, data *content.ContentData, pageSize int) error {
+func (g *SiteGenerator) GenerateBlogPagination(distDir string, data *post.ContentData, pageSize int) error {
 	totalPages := (len(data.Posts) + pageSize - 1) / pageSize
 	for i := 0; i < totalPages; i++ {
 		startIdx := i * pageSize
@@ -161,7 +218,7 @@ func (g *SiteGenerator) GenerateBlogPagination(distDir string, data *content.Con
 	return nil
 }
 
-func (g *SiteGenerator) GenerateTagPages(distDir string, data *content.ContentData) error {
+func (g *SiteGenerator) GenerateTagPages(distDir string, data *post.ContentData) error {
 	tagsDistDir := filepath.Join(distDir, "tags")
 	for tag, tagPosts := range data.PostsByTag {
 		if err := g.RenderPage(tagsDistDir, tag+".html", "internal/templates/blog.html", "#"+tag, PageData{
@@ -174,7 +231,7 @@ func (g *SiteGenerator) GenerateTagPages(distDir string, data *content.ContentDa
 	return nil
 }
 
-func (g *SiteGenerator) GeneratePostPages(distDir string, data *content.ContentData) error {
+func (g *SiteGenerator) GeneratePostPages(distDir string, data *post.ContentData) error {
 	blogDistDir := filepath.Join(distDir, "blog")
 	for _, post := range data.Posts {
 		p := post
@@ -188,15 +245,7 @@ func (g *SiteGenerator) GeneratePostPages(distDir string, data *content.ContentD
 	return nil
 }
 
-func (g *SiteGenerator) GenerateSearchIndex(distDir string, data *content.ContentData) error {
-	type SearchItem struct {
-		Title       string   `json:"title"`
-		Slug        string   `json:"slug"`
-		Description string   `json:"description"`
-		Date        string   `json:"date"`
-		Tags        []string `json:"tags"`
-	}
-
+func (g *SiteGenerator) GenerateSearchIndex(distDir string, data *post.ContentData) error {
 	var items []SearchItem
 	for _, post := range data.Posts {
 		items = append(items, SearchItem{
@@ -219,7 +268,7 @@ func (g *SiteGenerator) GenerateSearchIndex(distDir string, data *content.Conten
 	return nil
 }
 
-func (g *SiteGenerator) GenerateRSS(distDir string, posts []content.Post) error {
+func (g *SiteGenerator) GenerateRSS(distDir string, posts []post.Post) error {
 	f, err := os.Create(filepath.Join(distDir, "rss.xml"))
 	if err != nil {
 		return fmt.Errorf("failed to create rss.xml: %w", err)
@@ -266,7 +315,7 @@ func (g *SiteGenerator) GenerateRSS(distDir string, posts []content.Post) error 
 	return nil
 }
 
-func (g *SiteGenerator) GenerateSitemap(distDir string, posts []content.Post) error {
+func (g *SiteGenerator) GenerateSitemap(distDir string, posts []post.Post) error {
 	f, err := os.Create(filepath.Join(distDir, "sitemap.xml"))
 	if err != nil {
 		return fmt.Errorf("failed to create sitemap.xml: %w", err)
@@ -302,21 +351,13 @@ func (g *SiteGenerator) GenerateSitemap(distDir string, posts []content.Post) er
 		}
 	}
 
-	// API Registries
-	apiFiles := []string{
-		"api/profile-registry.json",
-		"api/skills-registry.json",
-		"api/projects-registry.json",
-		"api/blog-registry.json",
-	}
-	for _, apiFile := range apiFiles {
-		if _, err := fmt.Fprintf(f, `  <url>
-    <loc>%s%s</loc>
+	// API Manifest
+	if _, err := fmt.Fprintf(f, `  <url>
+    <loc>%sapi/manifest.json</loc>
     <lastmod>%s</lastmod>
   </url>
-`, g.Config.Site.URL, apiFile, time.Now().Format("2006-01-02")); err != nil {
-			return err
-		}
+`, g.Config.Site.URL, time.Now().Format("2006-01-02")); err != nil {
+		return err
 	}
 
 	if _, err := fmt.Fprint(f, `</urlset>`); err != nil {
@@ -325,23 +366,16 @@ func (g *SiteGenerator) GenerateSitemap(distDir string, posts []content.Post) er
 	return nil
 }
 
-func (g *SiteGenerator) GenerateBlogRegistry(distDir string, data *content.ContentData) error {
+func (g *SiteGenerator) GenerateRegistries(distDir string, data *post.ContentData) error {
 	apiDir := filepath.Join(distDir, "api")
 	if err := os.MkdirAll(apiDir, 0755); err != nil {
 		return fmt.Errorf("failed to create api dir: %w", err)
 	}
 
-	type RegistryItem struct {
-		Title       string   `json:"title"`
-		Description string   `json:"description"`
-		URL         string   `json:"url"`
-		Date        string   `json:"date_published"`
-		Tags        []string `json:"skills"`
-	}
-
-	var items []RegistryItem
+	// Blog Items
+	var blogItems []BlogItem
 	for _, post := range data.Posts {
-		items = append(items, RegistryItem{
+		blogItems = append(blogItems, BlogItem{
 			Title:       post.Title,
 			Description: post.Description,
 			URL:         g.Config.Site.URL + "blog/" + post.Slug + ".html",
@@ -350,36 +384,11 @@ func (g *SiteGenerator) GenerateBlogRegistry(distDir string, data *content.Conte
 		})
 	}
 
-	jsonData, err := json.MarshalIndent(items, "", "  ")
-	if err != nil {
-		return fmt.Errorf("failed to marshal blog registry: %w", err)
-	}
-
-	if err := os.WriteFile(filepath.Join(apiDir, "blog-registry.json"), jsonData, 0644); err != nil {
-		return fmt.Errorf("failed to write blog-registry.json: %w", err)
-	}
-	return nil
-}
-
-func (g *SiteGenerator) GenerateProjectsRegistry(distDir string) error {
-	apiDir := filepath.Join(distDir, "api")
-	if err := os.MkdirAll(apiDir, 0755); err != nil {
-		return fmt.Errorf("failed to create api dir: %w", err)
-	}
-
-	type ProjectItem struct {
-		Title            string   `json:"title"`
-		ShortDescription string   `json:"short_description"`
-		Link             string   `json:"link"`
-		Techs            []string `json:"tech_stack"`
-	}
-
-	var items []ProjectItem
+	// Projects
+	var projectItems []ProjectItem
 	for _, p := range g.Config.Projects {
-		// Clean the techs string (it's often a markdown list in YAML)
 		techs := g.FuncMap["cleanYAMLList"].(func(interface{}) []string)(p.Techs)
-
-		items = append(items, ProjectItem{
+		projectItems = append(projectItems, ProjectItem{
 			Title:            p.Title,
 			ShortDescription: p.ShortDescription,
 			Link:             p.Link,
@@ -387,71 +396,51 @@ func (g *SiteGenerator) GenerateProjectsRegistry(distDir string) error {
 		})
 	}
 
-	jsonData, err := json.MarshalIndent(items, "", "  ")
-	if err != nil {
-		return fmt.Errorf("failed to marshal projects registry: %w", err)
-	}
-
-	if err := os.WriteFile(filepath.Join(apiDir, "projects-registry.json"), jsonData, 0644); err != nil {
-		return fmt.Errorf("failed to write projects-registry.json: %w", err)
-	}
-	return nil
-}
-
-func (g *SiteGenerator) GenerateSkillsRegistry(distDir string) error {
-	apiDir := filepath.Join(distDir, "api")
-	if err := os.MkdirAll(apiDir, 0755); err != nil {
-		return fmt.Errorf("failed to create api dir: %w", err)
-	}
-
-	type SkillItem struct {
-		Name string `json:"name"`
-		Icon string `json:"icon"`
-	}
-
-	var items []SkillItem
+	// Skills (Combine core names and specialties)
+	var allSkills []string
 	for _, s := range g.Config.Skills {
-		items = append(items, SkillItem{
-			Name: s.Name,
-			Icon: s.Icon,
-		})
+		allSkills = append(allSkills, s.Name)
 	}
+	allSkills = append(allSkills, g.Config.Specialties...)
 
-	// Also include specialties as a separate array or group if needed
-	type RegistryOutput struct {
-		CoreSkills  []SkillItem `json:"core_skills"`
-		Specialties []string    `json:"specialties"`
+	// Unified MCP Manifest
+	manifest := Manifest{
+		MCPVersion:  "1.0",
+		Name:        g.Config.Site.Title,
+		Description: g.Config.Site.Description,
+		URL:         g.Config.Site.URL,
+		UpdatedAt:   time.Now().Format(time.RFC3339),
+		Profile: ProfileRegistry{
+			URL:         g.Config.Site.URL,
+			Title:       g.Config.Site.Title,
+			Name:        g.Config.Site.Name,
+			Slogan:      g.Config.Site.Slogan,
+			Description: g.Config.Site.Description,
+			Experience:  g.Config.Site.Experience,
+			Status:      g.Config.Site.Status,
+			FocusAreas:  g.Config.Site.FocusAreas,
+			About: ProfileAbout{
+				Paragraphs: g.Config.Site.About.Paragraphs,
+			},
+			Now: g.Config.Site.Now,
+		},
+		Skills:   allSkills,
+		Projects: projectItems,
+		Blog: BlogRegistry{
+			TotalPosts: len(data.Posts),
+			Posts:      blogItems,
+		},
 	}
-
-	output := RegistryOutput{
-		CoreSkills:  items,
-		Specialties: g.Config.Specialties,
-	}
-
-	jsonData, err := json.MarshalIndent(output, "", "  ")
-	if err != nil {
-		return fmt.Errorf("failed to marshal skills registry: %w", err)
-	}
-
-	if err := os.WriteFile(filepath.Join(apiDir, "skills-registry.json"), jsonData, 0644); err != nil {
-		return fmt.Errorf("failed to write skills-registry.json: %w", err)
-	}
-	return nil
+	return g.writeJSON(filepath.Join(apiDir, "manifest.json"), manifest)
 }
 
-func (g *SiteGenerator) GenerateProfileRegistry(distDir string) error {
-	apiDir := filepath.Join(distDir, "api")
-	if err := os.MkdirAll(apiDir, 0755); err != nil {
-		return fmt.Errorf("failed to create api dir: %w", err)
-	}
-
-	jsonData, err := json.MarshalIndent(g.Config.Site, "", "  ")
+func (g *SiteGenerator) writeJSON(path string, data interface{}) error {
+	jsonData, err := json.Marshal(data)
 	if err != nil {
-		return fmt.Errorf("failed to marshal profile registry: %w", err)
+		return fmt.Errorf("failed to marshal JSON for %s: %w", path, err)
 	}
-
-	if err := os.WriteFile(filepath.Join(apiDir, "profile-registry.json"), jsonData, 0644); err != nil {
-		return fmt.Errorf("failed to write profile-registry.json: %w", err)
+	if err := os.WriteFile(path, jsonData, 0644); err != nil {
+		return fmt.Errorf("failed to write JSON to %s: %w", path, err)
 	}
 	return nil
 }
@@ -490,11 +479,8 @@ func (g *SiteGenerator) GenerateLLMsTxt(distDir string) error {
 
 	// Discovery Registry
 	sb.WriteString("## Discovery Registry\n\n")
-	sb.WriteString("The following endpoints provide structured JSON data for AI discovery:\n\n")
-	sb.WriteString("- **Profile**: " + g.Config.Site.URL + "api/profile-registry.json\n")
-	sb.WriteString("- **Projects**: " + g.Config.Site.URL + "api/projects-registry.json\n")
-	sb.WriteString("- **Skills**: " + g.Config.Site.URL + "api/skills-registry.json\n")
-	sb.WriteString("- **Blog**: " + g.Config.Site.URL + "api/blog-registry.json\n\n")
+	sb.WriteString("The following endpoint provides unified technical context for AI agents (Model Context Protocol):\n\n")
+	sb.WriteString("- **Unified Manifest**: " + g.Config.Site.URL + "api/manifest.json\n\n")
 
 	// Contact
 	sb.WriteString("## Contact\n\n")

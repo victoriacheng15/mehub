@@ -1,4 +1,4 @@
-package generator
+package internal
 
 import (
 	"fmt"
@@ -8,19 +8,19 @@ import (
 	"testing"
 	"time"
 
-	"mehub/internal/config"
-	"mehub/internal/content"
+	"mehub/internal/contents"
+	"mehub/internal/post"
 )
 
 // Helper to create a dummy config
-func createConfig() *config.SiteConfig {
-	return &config.SiteConfig{
-		Site: config.SiteMetadata{
+func createConfig() *contents.SiteConfig {
+	return &contents.SiteConfig{
+		Site: contents.SiteMetadata{
 			Title:       "Test Site",
 			URL:         "http://example.com/",
 			Description: "Test Description",
 		},
-		Projects: []config.Project{
+		Projects: []contents.Project{
 			{
 				Title:            "Test Project",
 				ShortDescription: "Desc",
@@ -28,7 +28,7 @@ func createConfig() *config.SiteConfig {
 				Techs:            []string{"Go", "Test"},
 			},
 		},
-		Skills: []config.Skill{
+		Skills: []contents.Skill{
 			{Name: "Go", Icon: "go.svg"},
 		},
 		Specialties: []string{"Testing"},
@@ -192,18 +192,18 @@ func TestGenerators(t *testing.T) {
 	gen := New(createConfig())
 	distDir := filepath.Join(tmpDir, "dist")
 
-	posts := []content.Post{
+	posts := []post.Post{
 		{
-			Frontmatter: content.Frontmatter{
+			Frontmatter: post.Frontmatter{
 				Title: "Test Post",
 				Date:  time.Now(),
 			},
 			Slug: "test-post",
 		},
 	}
-	data := &content.ContentData{
+	data := &post.ContentData{
 		Posts: posts,
-		PostsByTag: map[string][]content.Post{
+		PostsByTag: map[string][]post.Post{
 			"go": posts,
 		},
 	}
@@ -327,7 +327,7 @@ func TestGenerators(t *testing.T) {
 			wantErr: true,
 		},
 		{
-			name: "Failure - Post Pages (Missing Template)",
+			name: "Post Pages (Missing Template)",
 			fn: func() error {
 				createTemplates(t, tmpDir)
 				if err := os.Remove(filepath.Join(tmpDir, "internal", "templates", "post.html")); err != nil {
@@ -339,37 +339,10 @@ func TestGenerators(t *testing.T) {
 			wantErr: true,
 		},
 		{
-			name: "Blog Registry",
-			fn:   func() error { return gen.GenerateBlogRegistry(distDir, data) },
+			name: "Unified Registries",
+			fn:   func() error { return gen.GenerateRegistries(distDir, data) },
 			check: func() error {
-				_, err := os.Stat(filepath.Join(distDir, "api", "blog-registry.json"))
-				return err
-			},
-			wantErr: false,
-		},
-		{
-			name: "Projects Registry",
-			fn:   func() error { return gen.GenerateProjectsRegistry(distDir) },
-			check: func() error {
-				_, err := os.Stat(filepath.Join(distDir, "api", "projects-registry.json"))
-				return err
-			},
-			wantErr: false,
-		},
-		{
-			name: "Skills Registry",
-			fn:   func() error { return gen.GenerateSkillsRegistry(distDir) },
-			check: func() error {
-				_, err := os.Stat(filepath.Join(distDir, "api", "skills-registry.json"))
-				return err
-			},
-			wantErr: false,
-		},
-		{
-			name: "Profile Registry",
-			fn:   func() error { return gen.GenerateProfileRegistry(distDir) },
-			check: func() error {
-				_, err := os.Stat(filepath.Join(distDir, "api", "profile-registry.json"))
+				_, err := os.Stat(filepath.Join(distDir, "api", "manifest.json"))
 				return err
 			},
 			wantErr: false,
@@ -382,7 +355,7 @@ func TestGenerators(t *testing.T) {
 				if err != nil {
 					return err
 				}
-				expectedURL := "http://example.com/api/profile-registry.json"
+				expectedURL := "http://example.com/api/manifest.json"
 				if !strings.Contains(string(content), expectedURL) {
 					return fmt.Errorf("llms.txt content does not contain %s", expectedURL)
 				}

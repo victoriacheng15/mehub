@@ -6,14 +6,14 @@ import (
 	"os"
 	"time"
 
-	"mehub/internal/config"
-	"mehub/internal/content"
-	"mehub/internal/generator"
+	"mehub/internal"
+	"mehub/internal/contents"
+	"mehub/internal/post"
 	"mehub/internal/utils"
 )
 
 func main() {
-	if err := run("dist", "configs", "blog", "public"); err != nil {
+	if err := run("dist", "internal/templates/contents", "blog", "internal/templates/static"); err != nil {
 		log.Fatalf("Build failed: %v", err)
 	}
 }
@@ -25,12 +25,12 @@ func run(distDir, configDir, blogDir, publicDir string) error {
 		return fmt.Errorf("failed to clean dist dir: %w", err)
 	}
 
-	cfg, err := config.LoadConfig(configDir)
+	cfg, err := contents.LoadConfig(configDir)
 	if err != nil {
 		return fmt.Errorf("failed to load config: %w", err)
 	}
 
-	gen := generator.New(cfg)
+	gen := internal.New(cfg)
 
 	if err := os.MkdirAll(distDir, 0755); err != nil {
 		return fmt.Errorf("failed to create dist dir: %w", err)
@@ -42,12 +42,12 @@ func run(distDir, configDir, blogDir, publicDir string) error {
 		}
 	}
 
-	rawPosts, err := content.GetPosts(blogDir)
+	rawPosts, err := post.GetPosts(blogDir)
 	if err != nil {
 		return fmt.Errorf("failed to load posts: %w", err)
 	}
 
-	data := content.ProcessPosts(rawPosts)
+	data := post.ProcessPosts(rawPosts)
 
 	// Site Generation
 	if err := gen.GenerateStaticPages(distDir, data); err != nil {
@@ -65,17 +65,8 @@ func run(distDir, configDir, blogDir, publicDir string) error {
 	if err := gen.GenerateSearchIndex(distDir, data); err != nil {
 		return fmt.Errorf("failed to generate search index: %w", err)
 	}
-	if err := gen.GenerateBlogRegistry(distDir, data); err != nil {
-		return fmt.Errorf("failed to generate blog registry: %w", err)
-	}
-	if err := gen.GenerateProjectsRegistry(distDir); err != nil {
-		return fmt.Errorf("failed to generate projects registry: %w", err)
-	}
-	if err := gen.GenerateSkillsRegistry(distDir); err != nil {
-		return fmt.Errorf("failed to generate skills registry: %w", err)
-	}
-	if err := gen.GenerateProfileRegistry(distDir); err != nil {
-		return fmt.Errorf("failed to generate profile registry: %w", err)
+	if err := gen.GenerateRegistries(distDir, data); err != nil {
+		return fmt.Errorf("failed to generate registries: %w", err)
 	}
 	if err := gen.GenerateLLMsTxt(distDir); err != nil {
 		return fmt.Errorf("failed to generate llms.txt: %w", err)
