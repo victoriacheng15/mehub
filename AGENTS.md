@@ -16,10 +16,10 @@ This document provides context and instructions for AI agents working on the **M
 | Component | Path | Description |
 | :--- | :--- | :--- |
 | **Entry Point** | `cmd/ssg/main.go` | Orchestrates the build process and clean/setup tasks. |
-| **Generator** | `internal/generator/` | Core logic for rendering HTML, RSS, Sitemaps, and API registries. |
-| **Content** | `internal/content/` | Markdown parsing (goldmark), tag processing, and post data structures. |
-| **Config** | `internal/config/` | YAML configuration loading for site metadata, projects, and skills. |
-| **Templates** | `internal/templates/` | Go HTML templates and Tailwind input CSS. |
+| **Generator** | `internal/generator.go` | Core logic for rendering HTML, RSS, Sitemaps, and API registries. |
+| **Content** | `internal/post/` | Markdown parsing (goldmark), tag processing, and post data structures. |
+| **Config & Metadata** | `internal/templates/contents/` | YAML configuration for site metadata, projects, and skills. |
+| **Templates & Assets** | `internal/templates/` | Go HTML templates, Tailwind CSS, and static assets (icons, images). |
 
 ## 3. Build and Development
 
@@ -41,11 +41,7 @@ Mehub is designed to be easily consumed by AI agents and recruitment systems via
 
 ### API Registry Map
 
-- **Catalog**: `/api/catalog-registry.json` — Entry point for discovery.
-- **Profile**: `/api/profile-registry.json` — Site owner metadata.
-- **Skills**: `/api/skills-registry.json` — Structured skills and specialties.
-- **Projects**: `/api/projects-registry.json` — Project portoflio with tech stacks.
-- **Blog**: `/api/blog-registry.json` — Metadata for all blog posts for NLP processing.
+- **Unified Context**: `/api/manifest.json` — Unified Context Hub for AI agents (Model Context Protocol). It consolidates profile, skills, projects, and blog metadata into a single queryable resource.
 
 ### Discoverability Assets
 
