@@ -30,8 +30,10 @@ skills:
     icon: "githubactions.svg"
   - name: "Linux"
     icon: "linux.svg"
+  - name: "Tailscale"
+    icon: "tailscale.svg"
 
-# 🤖AI 
+# 🤖 AI & MCP
   - name: "Model Context Protocol (MCP)"
     icon: "modelcontextprotocol.svg"
 
