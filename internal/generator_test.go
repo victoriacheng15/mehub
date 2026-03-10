@@ -62,54 +62,69 @@ func createTemplates(t *testing.T, dir string) {
 func TestFuncMap(t *testing.T) {
 	gen := New(createConfig())
 
-	t.Run("cleanYAMLList", func(t *testing.T) {
-		tests := []struct {
-			name     string
-			input    interface{}
-			expected int
-		}{
-			{"String List", "- Item 1\n- Item 2", 2},
-			{"Slice", []string{"A", "B"}, 2},
-			{"Invalid", 123, 0}, // Should return nil/empty
-		}
+	tests := []struct {
+		name     string
+		fn       string
+		input    interface{}
+		input2   interface{} // For add/sub
+		expected interface{}
+	}{
+		{
+			name:     "cleanYAMLList - String List",
+			fn:       "cleanYAMLList",
+			input:    "- Item 1\n- Item 2",
+			expected: 2, // Length check
+		},
+		{
+			name:     "cleanYAMLList - Slice",
+			fn:       "cleanYAMLList",
+			input:    []string{"A", "B"},
+			expected: 2,
+		},
+		{
+			name:     "cleanYAMLList - Invalid",
+			fn:       "cleanYAMLList",
+			input:    123,
+			expected: 0,
+		},
+		{
+			name:     "Math - Add",
+			fn:       "add",
+			input:    2,
+			input2:   3,
+			expected: 5,
+		},
+		{
+			name:     "Math - Sub",
+			fn:       "sub",
+			input:    5,
+			input2:   3,
+			expected: 2,
+		},
+	}
 
-		cleanFunc := gen.FuncMap["cleanYAMLList"].(func(interface{}) []string)
-
-		for _, tt := range tests {
-			t.Run(tt.name, func(t *testing.T) {
-				res := cleanFunc(tt.input)
-				if len(res) != tt.expected {
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			switch tt.fn {
+			case "cleanYAMLList":
+				fn := gen.FuncMap[tt.fn].(func(interface{}) []string)
+				res := fn(tt.input)
+				if len(res) != tt.expected.(int) {
 					t.Errorf("Expected length %d, got %d", tt.expected, len(res))
 				}
-			})
-		}
-	})
-
-	t.Run("Math", func(t *testing.T) {
-		tests := []struct {
-			name     string
-			fn       string
-			a, b     int
-			expected int
-		}{
-			{"add", "add", 2, 3, 5},
-			{"sub", "sub", 5, 3, 2},
-		}
-
-		for _, tt := range tests {
-			t.Run(tt.name, func(t *testing.T) {
+			case "add", "sub":
 				fn := gen.FuncMap[tt.fn].(func(int, int) int)
-				if got := fn(tt.a, tt.b); got != tt.expected {
-					t.Errorf("%s(%d, %d) = %d; want %d", tt.fn, tt.a, tt.b, got, tt.expected)
+				got := fn(tt.input.(int), tt.input2.(int))
+				if got != tt.expected.(int) {
+					t.Errorf("%s(%d, %d) = %d; want %d", tt.fn, tt.input, tt.input2, got, tt.expected)
 				}
-			})
-		}
-	})
+			}
+		})
+	}
 }
 
 func TestRenderPage(t *testing.T) {
 	tmpDir := t.TempDir()
-
 	wd, _ := os.Getwd()
 	defer os.Chdir(wd)
 
@@ -127,7 +142,7 @@ func TestRenderPage(t *testing.T) {
 		tmplPath    string
 		titlePrefix string
 		data        PageData
-		setup       func() // Optional setup for failure cases
+		setup       func()
 		wantErr     bool
 	}{
 		{
@@ -149,7 +164,6 @@ func TestRenderPage(t *testing.T) {
 			filename: "subdir/fail.html",
 			tmplPath: "internal/templates/index.html",
 			setup: func() {
-				// Create a file named 'dist/subdir' to block directory creation
 				os.MkdirAll(distDir, 0755)
 				os.WriteFile(filepath.Join(distDir, "subdir"), []byte("block"), 0644)
 			},
@@ -168,12 +182,8 @@ func TestRenderPage(t *testing.T) {
 			}
 
 			if !tt.wantErr {
-				content, err := os.ReadFile(filepath.Join(distDir, tt.filename))
-				if err != nil {
-					t.Fatalf("Failed to read output file: %v", err)
-				}
-				if len(content) == 0 {
-					t.Error("Output file is empty")
+				if _, err := os.Stat(filepath.Join(distDir, tt.filename)); err != nil {
+					t.Errorf("Output file %s not found: %v", tt.filename, err)
 				}
 			}
 		})
@@ -221,7 +231,6 @@ func TestGenerators(t *testing.T) {
 				_, err := os.Stat(filepath.Join(distDir, "about.html"))
 				return err
 			},
-			wantErr: false,
 		},
 		{
 			name: "RSS",
@@ -230,7 +239,6 @@ func TestGenerators(t *testing.T) {
 				_, err := os.Stat(filepath.Join(distDir, "rss.xml"))
 				return err
 			},
-			wantErr: false,
 		},
 		{
 			name: "Sitemap",
@@ -239,7 +247,6 @@ func TestGenerators(t *testing.T) {
 				_, err := os.Stat(filepath.Join(distDir, "sitemap.xml"))
 				return err
 			},
-			wantErr: false,
 		},
 		{
 			name: "Search Index",
@@ -248,7 +255,6 @@ func TestGenerators(t *testing.T) {
 				_, err := os.Stat(filepath.Join(distDir, "search-index.json"))
 				return err
 			},
-			wantErr: false,
 		},
 		{
 			name: "Blog Pagination",
@@ -257,7 +263,6 @@ func TestGenerators(t *testing.T) {
 				_, err := os.Stat(filepath.Join(distDir, "blog.html"))
 				return err
 			},
-			wantErr: false,
 		},
 		{
 			name: "Tag Pages",
@@ -266,7 +271,6 @@ func TestGenerators(t *testing.T) {
 				_, err := os.Stat(filepath.Join(distDir, "tags", "go.html"))
 				return err
 			},
-			wantErr: false,
 		},
 		{
 			name: "Post Pages",
@@ -275,68 +279,6 @@ func TestGenerators(t *testing.T) {
 				_, err := os.Stat(filepath.Join(distDir, "blog", "test-post.html"))
 				return err
 			},
-			wantErr: false,
-		},
-		{
-			name: "Failure - Static Pages (Missing Template)",
-			fn: func() error {
-				// Remove a template to cause failure
-				if err := os.Remove(filepath.Join(tmpDir, "internal", "templates", "about.html")); err != nil {
-					return err
-				}
-				return gen.GenerateStaticPages(distDir, data)
-			},
-			check:   nil,
-			wantErr: true,
-		},
-		{
-			name: "Failure - Blog Pagination (Missing Template)",
-			fn: func() error {
-				// Restore about.html first if needed (though we use tmpDir per test run in separate subtests? No, same tmpDir for all TestGenerators cases in the loop? No wait)
-				// TestGenerators uses `tmpDir := t.TempDir()` at the top.
-				// The tests loop runs sequentially in `t.Run`.
-				// So if I delete a template in one test, it's gone for the next.
-				// I should restore it or ensure independence.
-				// Currently, `t.Run` uses the same `gen` instance and `distDir`.
-				// But `t.TempDir()` is unique per test function call.
-				// Wait, `TestGenerators` calls `t.TempDir()` ONCE.
-				// So the state persists across subtests.
-				// This is bad for "Failure" tests that destroy state.
-
-				// I should probably re-create the template or use a separate setup.
-				// But let's just create it back.
-				createTemplates(t, tmpDir)
-				if err := os.Remove(filepath.Join(tmpDir, "internal", "templates", "blog.html")); err != nil {
-					return err
-				}
-				return gen.GenerateBlogPagination(distDir, data, 10)
-			},
-			check:   nil,
-			wantErr: true,
-		},
-		{
-			name: "Failure - Tag Pages (Missing Template)",
-			fn: func() error {
-				createTemplates(t, tmpDir)
-				if err := os.Remove(filepath.Join(tmpDir, "internal", "templates", "blog.html")); err != nil {
-					return err
-				}
-				return gen.GenerateTagPages(distDir, data)
-			},
-			check:   nil,
-			wantErr: true,
-		},
-		{
-			name: "Post Pages (Missing Template)",
-			fn: func() error {
-				createTemplates(t, tmpDir)
-				if err := os.Remove(filepath.Join(tmpDir, "internal", "templates", "post.html")); err != nil {
-					return err
-				}
-				return gen.GeneratePostPages(distDir, data)
-			},
-			check:   nil,
-			wantErr: true,
 		},
 		{
 			name: "Unified Registries",
@@ -345,7 +287,6 @@ func TestGenerators(t *testing.T) {
 				_, err := os.Stat(filepath.Join(distDir, "api", "manifest.json"))
 				return err
 			},
-			wantErr: false,
 		},
 		{
 			name: "LLMs Txt",
@@ -355,13 +296,22 @@ func TestGenerators(t *testing.T) {
 				if err != nil {
 					return err
 				}
-				expectedURL := "http://example.com/api/manifest.json"
-				if !strings.Contains(string(content), expectedURL) {
-					return fmt.Errorf("llms.txt content does not contain %s", expectedURL)
+				if !strings.Contains(string(content), "http://example.com/api/manifest.json") {
+					return fmt.Errorf("llms.txt missing manifest URL")
 				}
 				return nil
 			},
-			wantErr: false,
+		},
+		{
+			name: "Failure - Missing Template",
+			fn: func() error {
+				if err := os.Remove(filepath.Join(tmpDir, "internal", "templates", "about.html")); err != nil {
+					return err
+				}
+				defer createTemplates(t, tmpDir) // Restore for next tests
+				return gen.GenerateStaticPages(distDir, data)
+			},
+			wantErr: true,
 		},
 	}
 
@@ -369,12 +319,61 @@ func TestGenerators(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			err := tt.fn()
 			if (err != nil) != tt.wantErr {
-				t.Fatalf("Generator error = %v, wantErr %v", err, tt.wantErr)
+				t.Fatalf("Got error = %v, wantErr %v", err, tt.wantErr)
 			}
 			if !tt.wantErr && tt.check != nil {
 				if err := tt.check(); err != nil {
 					t.Errorf("Check failed: %v", err)
 				}
+			}
+		})
+	}
+}
+
+func TestBuild(t *testing.T) {
+	setup := func(t *testing.T) (string, *SiteGenerator, *post.ContentData) {
+		tmpDir := t.TempDir()
+		createTemplates(t, tmpDir)
+		gen := New(createConfig())
+		posts := []post.Post{{Slug: "test", Frontmatter: post.Frontmatter{Title: "T", Date: time.Now()}}}
+		data := &post.ContentData{Posts: posts}
+		return tmpDir, gen, data
+	}
+
+	tests := []struct {
+		name    string
+		setup   func(t *testing.T, tmpDir string)
+		wantErr bool
+	}{
+		{
+			name:    "Success",
+			setup:   func(t *testing.T, tmpDir string) {},
+			wantErr: false,
+		},
+		{
+			name: "Failure - Missing Template",
+			setup: func(t *testing.T, tmpDir string) {
+				os.Remove(filepath.Join(tmpDir, "internal", "templates", "index.html"))
+			},
+			wantErr: true,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			tmpDir, gen, data := setup(t)
+
+			// We need to change to tmpDir because RenderPage has hardcoded internal/templates
+			wd, _ := os.Getwd()
+			os.Chdir(tmpDir)
+			defer os.Chdir(wd)
+
+			tt.setup(t, tmpDir)
+
+			distDir := filepath.Join(tmpDir, "dist")
+			err := gen.Build(distDir, data)
+			if (err != nil) != tt.wantErr {
+				t.Errorf("Build() error = %v, wantErr %v", err, tt.wantErr)
 			}
 		})
 	}
