@@ -3,7 +3,6 @@ title: "[Engineering Log] The Migration Strangler: Promtail to Alloy"
 description: "Migrating from EOL Promtail to Grafana Alloy via a Strangler Fig pattern, bridging Kubernetes and Docker logs to ensure zero visibility loss during the platform transition."
 date: 2026-03-10
 tags: ["retrospective", "platform", "kubernetes"]
-draft: true
 ---
 
 ## Context
