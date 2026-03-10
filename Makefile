@@ -1,7 +1,7 @@
 # === Variables ===
 BINARY_NAME=ssg
 TAILWIND_BIN=./tailwindcss
-GO_VERSION=1.23.4
+GO_VERSION=1.25.0
 GO_TAR=go$(GO_VERSION).linux-amd64.tar.gz
 GO_DIR=./go-dist
 LINT_IMAGE = ghcr.io/igorshubovych/markdownlint-cli:v0.44.0
