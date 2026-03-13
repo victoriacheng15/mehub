@@ -53,7 +53,7 @@ Mehub is designed to be easily consumed by AI agents and recruitment systems via
 ### Go
 
 - Use idiomatic Go and prefer the standard library.
-- Code **must** pass `make check` before completion.
+- Code **must** pass `make vet` before completion.
 - Handle all errors explicitly.
 
 ### Markdown

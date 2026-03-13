@@ -21,7 +21,7 @@ jobs:
           go-version: ${{ env.go-version }}
 
       - name: Run Format Check
-        run: make check
+        run: make vet
 
   test:
     runs-on: ubuntu-latest

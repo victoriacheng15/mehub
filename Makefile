@@ -1,22 +1,9 @@
 # === Variables ===
-BINARY_NAME=ssg
 TAILWIND_BIN=./tailwindcss
-GO_VERSION=1.25.0
-GO_TAR=go$(GO_VERSION).linux-amd64.tar.gz
-GO_DIR=./go-dist
 LINT_IMAGE = ghcr.io/igorshubovych/markdownlint-cli:v0.44.0
+docker ?= podman
 
-# Nix wrapper logic: Use nix-shell if available and not already inside one
-# Also check if we are in a CI environment where we usually want to use system tools
-USE_NIX = $(shell if command -v nix-shell >/dev/null 2>&1 && [ -z "$$IN_NIX_SHELL" ] && [ "$$GITHUB_ACTIONS" != "true" ]; then echo "yes"; else echo "no"; fi)
-
-ifeq ($(USE_NIX),yes)
-    NIX_RUN = nix-shell --run
-else
-    NIX_RUN = bash -c
-endif
-
-.PHONY: help build format update vet check test cov-log setup-tailwind setup-go lint vercel-build add-hr
+.PHONY: help build format update vet test cov-log setup-tailwind setup-go lint vercel-build add-hr
 
 help:
 	@echo "Mehub SSG Build System"
@@ -29,13 +16,12 @@ help:
 	@echo "Development:"
 	@echo "  format          Format Go code"
 	@echo "  update          Update Go dependencies"
-	@echo "  check           Check Go code formatting and static analysis (vet)"
+	@echo "  vet             Run Go vet and check formatting"
 	@echo "  test            Run all tests"
 	@echo "  test-cov        Run tests and show coverage report"
 	@echo ""
 	@echo "Markdown:"
 	@echo "  lint            Lint Markdown files using Docker"
-	@echo "  add-hr          Add '---' separators between H2 headings in blog posts"
 	@echo ""
 	@echo "Setup:"
 	@echo "  setup-tailwind  Download Tailwind CLI (Linux x64)"
@@ -45,52 +31,43 @@ help:
 	@echo "Utility:"
 	@echo "  help            Show this help message"
 
-build: setup-tailwind
-	@$(NIX_RUN) "rm -rf dist && \
-	go build -o $(BINARY_NAME) ./cmd/ssg && \
-	./$(BINARY_NAME) && \
-	if [ -f $(TAILWIND_BIN) ]; then \
-		$(TAILWIND_BIN) -i internal/templates/input.css -o dist/styles.css --minify; \
-		rm $(TAILWIND_BIN); \
-	fi && \
-	rm $(BINARY_NAME)"
-
 format:
-	@$(NIX_RUN) "go fmt ./..."
+	go fmt ./...
 
 update:
-	@$(NIX_RUN) "go get -u ./... && go mod tidy"
+	go get -u ./... && go mod tidy
 
 vet:
-	@$(NIX_RUN) "go vet ./..."
-
-check: vet
-	@$(NIX_RUN) "if [ -n \"\$$(gofmt -l .)\" ]; then \
-		echo \"Go code is not formatted. Please run 'make format':\"; \
+	@go vet ./...
+	@if [ -n "$$(gofmt -l .)" ]; then \
+		echo "Go code is not formatted. Please run 'make format':"; \
 		gofmt -l .; \
 		exit 1; \
-	fi && \
-	echo \"✅ Go code is formatted correctly and vetted.\""
+	fi
+	@echo "✅ Go code is formatted correctly and vetted."
 
 test:
-	@$(NIX_RUN) "go test -v ./..."
+	go test -v ./...
 
 test-cov:
-	@$(NIX_RUN) "go test -coverprofile=coverage.out ./... && \
+	go test -coverprofile=coverage.out ./... && \
 	go tool cover -func=coverage.out && \
-	rm coverage.out"
+	rm coverage.out
 
 lint:
 	@echo "Linting Markdown files..."
-	@docker run --rm -v "$(PWD):/data" -w /data $(LINT_IMAGE) --fix "**/*.md"
-
-add-hr:
-	@$(NIX_RUN) "go run scripts/add-hr.go"
+	@$(docker) run --rm -v "$(PWD):/data:Z" -w /data $(LINT_IMAGE) --fix "**/*.md"
 
 setup-tailwind:
 	@echo "Downloading tailwind css cli..."
 	@curl -sL https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64 -o $(TAILWIND_BIN)
 	@chmod +x $(TAILWIND_BIN)
+
+build: setup-tailwind
+	rm -rf dist && \
+	go run ./cmd/ssg && \
+	$(TAILWIND_BIN) -i internal/templates/input.css -o dist/styles.css --minify; \
+	rm $(TAILWIND_BIN);
 
 setup-go:
 	@echo "Setting up Go $(GO_VERSION)..."
@@ -100,12 +77,14 @@ setup-go:
 	@rm $(GO_TAR)
 	@echo "Go setup complete."
 
+GO_VERSION=1.25.0
+GO_TAR=go$(GO_VERSION).linux-amd64.tar.gz
+GO_DIR=./go-dist
+
 vercel-build: setup-go setup-tailwind
 	@export PATH=$(PWD)/$(GO_DIR)/go/bin:$$PATH; \
-	go build -o $(BINARY_NAME) ./cmd/ssg && \
-	./$(BINARY_NAME) && \
+	go run ./cmd/ssg && \
 	if [ -f $(TAILWIND_BIN) ]; then \
 		$(TAILWIND_BIN) -i internal/templates/input.css -o dist/styles.css --minify; \
 		rm $(TAILWIND_BIN); \
-	fi && \
-	rm $(BINARY_NAME)
+	fi
