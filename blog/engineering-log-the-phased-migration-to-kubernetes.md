@@ -3,7 +3,6 @@ title: "[Engineering Log] The Phased Migration to Kubernetes"
 description: "Executing a risk-based, four-stage migration of the observability stack from Docker to Kubernetes to ensure data integrity and system stability."
 date: 2026-03-17
 tags: ["retrospective", "platform", "kubernetes"]
-draft: true
 ---
 
 ## Context
