@@ -22,6 +22,8 @@ skills:
 # ⚙️ Infrastructure & Security
   - name: "OpenTofu (Terraform)"
     icon: "opentofu.svg"
+  - name: "ArgoCD"
+    icon: "argo.svg"
   - name: "Azure (Functions)"
     icon: "azure.svg"
   - name: "Docker"
@@ -51,8 +53,6 @@ specialties:
   - "ADRs (Architecture Decision Records)"
   - "Root Cause Analysis"
   - "CI/CD Pipelines"
-  - "GitOps"
-  - "OpenBao (Vault)"
-  - "Tailscale"
   - "REST APIs"
+  - "OpenBao (Vault)"
   - "Test Driven Development (TDD)"

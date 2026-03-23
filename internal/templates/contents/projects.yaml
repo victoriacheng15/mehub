@@ -8,7 +8,7 @@ projects:
       - "Sqlite"
       - "DuckDB"
   - title: "Observability Hub"
-    shortDescription: "Kubernetes/systemd bridge (Go/OTel) via MCP for AI agents. Features LGTM stack, HMAC GitOps webhooks, and PII masking for secure, agentic incident triage and observability insights."
+    shortDescription: "Architected via Terraform and ArgoCD on Kubernetes with MCP. Features OpenTelemetry, Prometheus, hardware simulation, and chaos engineering for eBPF-based telemetry environments."
     link: "observability-hub"
     techs:
       - "Go"
@@ -17,6 +17,7 @@ projects:
       - "OpenTelemetry Collector"
       - "Prometheus"
       - "MCP"
+      - "ArgoCD"
       - "OpenTofu (Terraform)"
       - "Grafana / Loki / Tempo"
       - "PostgreSQL"
