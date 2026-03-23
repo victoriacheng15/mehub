@@ -65,4 +65,3 @@ This ensures that the visualizations and alerts are reliable under load and that
 After completing this setup, I don't quite know how to understand or interpret traces just yet. However, this step gives me the opportunity to explore distributed tracing down the road.
 
 I want to see how I can use these signals to understand my system behavior better and uncover hidden patterns. It is another frontier to explore in my local lab.
-
