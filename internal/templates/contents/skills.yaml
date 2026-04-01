@@ -18,6 +18,8 @@ skills:
     icon: "opentelemetry.svg"
   - name: "Grafana / Loki / Tempo"
     icon: "grafana.svg"
+  - name: "Cillium (eBPF)"
+    icon: "cilium.svg"
 
 # ⚙️ Infrastructure & Security
   - name: "OpenTofu (Terraform)"
