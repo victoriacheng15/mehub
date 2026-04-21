@@ -60,4 +60,3 @@ The rewrite also made the publishing boundary more visible. Input data, template
 - **Build Simplicity:** The deployment artifact became static HTML and CSS, with no client-side JavaScript required for the page.
 - **Learning Outcome:** The rewrite made Go templates, file generation, and static publishing easier to understand through a real project.
 - **Lesson Learned:** Tooling fit changes over time, especially when a project moves from learning experiment to maintained utility.
-
