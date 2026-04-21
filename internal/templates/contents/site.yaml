@@ -2,11 +2,11 @@ site:
   url: "https://victoriacheng15.vercel.app/"
   title: "Victoria's Tech Hub"
   name: "Victoria Cheng"
-  slogan: "Engineering resilient systems and documenting the 'why' behind architecture."
+  slogan: "Engineering resilient systems and documenting the 'why'."
   description: |
-    Software Engineer focused on building observable, scalable platforms. Documenting architectural trade-offs and the “why” behind systems engineering—from zero-infrastructure data pipelines to cloud infrastructure.
-  status: "SAIT '26; Searching for a New Grad Software Engineer role for May 2026."
-  experience: "4 years of engineering experience · Shopify · Former Packaging Engineer"
+    Software Engineer focused on building observable, scalable platforms. Documenting architectural trade-offs and systems engineering decisions, from data pipelines to cloud infrastructure.
+  status: "SAIT '26"
+  experience: "Shopify · 4 years of engineering experience · Former Packaging Engineer"
   focusAreas:
     - "Backend Development"
     - "Platform Engineering"
