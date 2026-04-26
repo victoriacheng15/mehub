@@ -4,7 +4,7 @@ site:
   name: "Victoria Cheng"
   slogan: "Engineering resilient systems and documenting the 'why'."
   description: |
-    Software Engineer focused on building observable, scalable platforms. Documenting architectural trade-offs and systems engineering decisions, from data pipelines to cloud infrastructure.
+    Software Developer focused on building observable, scalable platforms. Documenting architectural trade-offs and systems engineering decisions, from data pipelines to cloud infrastructure.
   status: "SAIT '26"
   experience: "Shopify · 4 years of engineering experience · Former Packaging Engineer"
   focusAreas:
