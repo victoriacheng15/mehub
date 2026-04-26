@@ -9,39 +9,37 @@ skills:
   - name: "Rust"
     icon: "rust.svg"
 
-# ☁️ Cloud Native & Observability
+# ☁️ Cloud & Infrastructure
   - name: "Kubernetes (K3s)"
     icon: "kubernetes.svg"
-  - name: "Helm"
-    icon: "helm.svg"
-  - name: "Cilium (eBPF)"
-    icon: "cilium.svg"
-  - name: "OpenTelemetry"
-    icon: "opentelemetry.svg"
-  - name: "Prometheus"
-    icon: "prometheus.svg"
-  - name: "Grafana / Loki / Tempo"
-    icon: "grafana.svg"
-  - name: "Azure"
-    icon: "azure.svg"
-
-# ⚙️ Infrastructure & Security
-  - name: "OpenTofu (Terraform)"
-    icon: "opentofu.svg"
+  - name: "Terraform"
+    icon: "terraform.svg"
   - name: "ArgoCD"
     icon: "argo.svg"
   - name: "Docker"
     icon: "docker.svg"
+  - name: "Microsoft Azure"
+    icon: "azure.svg"
+  - name: "AWS"
+    icon: "aws.svg"
+
+# ⚙️ Observability
+  - name: "OpenTelemetry"
+    icon: "opentelemetry.svg"
+  - name: "Prometheus"
+    icon: "prometheus.svg"
+  - name: "Grafana"
+    icon: "grafana.svg"
+
+  # Systems & Security
+  - name: "Cilium (eBPF)"
+    icon: "cilium.svg"
   - name: "GitHub Actions"
     icon: "githubactions.svg"
   - name: "Linux"
     icon: "linux.svg"
   - name: "Tailscale"
     icon: "tailscale.svg"
-
-# 🤖 AI & MCP
-  - name: "Model Context Protocol (MCP)"
-    icon: "modelcontextprotocol.svg"
 
 # 🛠 Backend & Frontend
   - name: "PostgreSQL"
@@ -53,10 +51,11 @@ skills:
   - name: "Tailwind CSS"
     icon: "tailwindcss.svg"
 
+# 🤖 AI & MCP
+  - name: "Model Context Protocol (MCP)"
+    icon: "modelcontextprotocol.svg"
+
 specialties:
   - "ADRs (Architecture Decision Records)"
   - "Root Cause Analysis"
-  - "CI/CD Pipelines"
-  - "REST APIs"
-  - "OpenBao (Vault)"
   - "Test Driven Development (TDD)"
