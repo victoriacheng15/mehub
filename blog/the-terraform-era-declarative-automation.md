@@ -3,7 +3,6 @@ title: "The Terraform Era: Declarative Automation"
 description: "Transitioning from imperative Makefile scripting to a declarative OpenTofu orchestration layer for managing a growing Kubernetes observability stack through Infrastructure as Code."
 date: 2026-04-28
 tags: ["platform", "kubernetes", "terraform"]
-draft: true
 ---
 
 ## The Shift: From Scripting to Orchestration
