@@ -1,26 +1,26 @@
 {{ define "content" }}
 <div class="flex flex-col gap-12">
-    <h1 class="text-3xl font-bold text-secondary-500">Archive</h1>
+    <h1 class="text-3xl font-bold text-violet-400">Archive</h1>
     
-    <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-10">
         {{ range .ArchiveYears }}
         {{ $year := . }}
-        <details class="flex flex-col gap-4 group" {{ if eq $year $.CurrentYear }}open{{ end }}>
-            <summary class="flex items-center justify-between cursor-pointer list-none">
-                <h2 class="text-2xl font-bold text-secondary-400">{{ $year }}</h2>
-                <span class="text-secondary-400 transform group-open:rotate-180 transition-transform duration-200">
+        <details class="flex flex-col gap-6" {{ if eq $year $.CurrentYear }}open{{ end }}>
+            <summary class="flex items-center justify-between cursor-pointer list-none group/year">
+                <h2 class="text-2xl font-bold text-slate-100 group-hover/year:text-violet-400 transition-colors">{{ $year }}</h2>
+                <span class="text-slate-500 transform group-open:rotate-180 transition-transform duration-200">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 </span>
             </summary>
-            <ul class="grid grid-cols-1 gap-4 border border-secondary-900/30 overflow-hidden mt-4 list-none">
+            <ul class="flex flex-col gap-4 mt-6 list-none m-0 p-0">
                 {{ range (index $.Archive $year) }}
                 <li>
                     <article>
-                        <a href="blog/{{ .Slug }}.html" class="flex items-center gap-4 p-2 bg-secondary-100 hover:bg-secondary-200 transition-colors group rounded-md">
-                            <time class="text-sm text-primary-700 font-medium whitespace-nowrap">{{ .Date.Format "Jan 02" }}</time>
-                            <h3 class="font-bold text-primary-900 group-hover:text-primary-600 transition-colors">
+                        <a href="blog/{{ .Slug }}.html" class="flex items-center gap-6 p-4 bg-slate-900 border border-slate-800 rounded-xl hover:border-violet-500/30 transition-all group/post">
+                            <time class="text-sm text-slate-500 font-bold uppercase tracking-wider whitespace-nowrap">{{ .Date.Format "Jan 02" }}</time>
+                            <h3 class="font-bold text-slate-200 group-hover/post:text-violet-400 transition-colors">
                                 {{ .Title }}
                             </h3>
                         </a>
