@@ -10,7 +10,7 @@ skills:
     icon: rust.svg
 
 # ☁️ Cloud & Infrastructure
-  - name: Kubernetes (K3s)
+  - name: Kubernetes
     icon: kubernetes.svg
   - name: Terraform
     icon: terraform.svg
@@ -18,7 +18,7 @@ skills:
     icon: argo.svg
   - name: Docker
     icon: docker.svg
-  - name: Microsoft Azure
+  - name: Azure
     icon: azure.svg
   - name: AWS
     icon: aws.svg
