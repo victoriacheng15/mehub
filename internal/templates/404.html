@@ -1,20 +1,20 @@
 {{ define "content" }}
-<div class="flex flex-col items-center justify-center gap-8 py-20 text-center">
+<div class="flex flex-col items-center justify-center gap-12 py-20 text-center">
     <div class="flex flex-col gap-4">
-        <h1 class="text-6xl font-extrabold text-secondary-500">404</h1>
-        <h2 class="text-2xl font-bold text-primary-100">Page Not Found</h2>
+        <h1 class="text-8xl font-extrabold text-violet-400">404</h1>
+        <h2 class="text-2xl font-bold text-slate-100 uppercase tracking-widest">Page Not Found</h2>
     </div>
     
-    <p class="text-lg text-secondary-200 max-w-md">
-        Oops! It seems the page you're looking for doesn't exist or has been moved.
+    <p class="text-lg text-slate-400 max-w-md leading-relaxed">
+        It seems the page you're looking for doesn't exist or has been moved to a different location.
     </p>
 
-    <div class="grid grid-cols-1 gap-px border border-secondary-900/30 overflow-hidden w-full max-w-sm mt-4">
-        <a href="{{ .PathPrefix }}index.html" class="flex items-center justify-center p-6 bg-secondary-100 hover:bg-secondary-200">
-            <span class="text-lg font-bold text-primary-800">Return Home</span>
+    <div class="flex flex-col sm:flex-row gap-4 w-full max-w-md mt-6">
+        <a href="{{ .PathPrefix }}index.html" class="flex-1 flex items-center justify-center p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-violet-500/30 transition-all group">
+            <span class="text-lg font-bold text-slate-200 group-hover:text-violet-400 transition-colors">Return Home</span>
         </a>
-        <a href="{{ .PathPrefix }}blog.html" class="flex items-center justify-center p-6 bg-secondary-100 hover:bg-secondary-200">
-            <span class="text-lg font-bold text-primary-800">Read My Blog</span>
+        <a href="{{ .PathPrefix }}blog.html" class="flex-1 flex items-center justify-center p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-violet-500/30 transition-all group">
+            <span class="text-lg font-bold text-slate-200 group-hover:text-violet-400 transition-colors">Read Blog</span>
         </a>
     </div>
 </div>

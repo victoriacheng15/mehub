@@ -3,31 +3,31 @@
     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
         {{ if stringsHasPrefix .Title "#" }}
         {{ $tag := index (split .Title " | ") 0 }}
-        <h1 class="text-3xl font-bold text-secondary-500">Tag: {{ $tag }}</h1>
+        <h1 class="text-3xl font-bold text-violet-400">Tag: {{ $tag }}</h1>
         {{ else }}
-        <h1 class="text-3xl font-bold text-secondary-500">Blog</h1>
+        <h1 class="text-3xl font-bold text-violet-400">Blog</h1>
 
         <div class="relative w-full sm:max-w-xs">
             <input type="text" id="search-input" placeholder="Search posts..." 
-                class="w-full px-4 py-2 bg-secondary-900/20 border border-secondary-900/30 rounded-md text-secondary-200 focus:outline-none focus:border-secondary-500 transition-colors">
-            <div id="search-results-count" class="absolute right-3 top-2.5 text-xs text-secondary-500 font-bold"></div>
+                class="w-full px-4 py-2 bg-slate-900 border border-slate-800 rounded-md text-slate-200 focus:outline-none focus:border-violet-500/40 transition-colors">
+            <div id="search-results-count" class="absolute right-3 top-2.5 text-xs text-slate-500 font-bold"></div>
         </div>
         {{ end }}
     </div>
     
-    <ul id="default-list" class="grid grid-cols-1 gap-4 border border-secondary-900/30 overflow-hidden list-none">
+    <ul id="default-list" class="flex flex-col gap-6 list-none m-0 p-0">
         {{ range .Posts }}
         <li>
-            <article class="">
-                <a href="{{ $.PathPrefix }}blog/{{ .Slug }}.html" class="flex flex-col gap-2 p-4 bg-secondary-100 hover:bg-secondary-200 transition-colors group rounded-md">
-                    <time class="text-sm text-primary-700">{{ .Date.Format "January 02, 2006" }}</time>
-                    <h2 class="text-2xl font-bold text-primary-900 transition-colors">
+            <article>
+                <a href="{{ $.PathPrefix }}blog/{{ .Slug }}.html" class="flex flex-col gap-3 p-6 bg-slate-900 border border-slate-800 hover:border-violet-500/30 transition-all group rounded-xl">
+                    <time class="text-sm text-slate-500 uppercase tracking-wider font-bold">{{ .Date.Format "January 02, 2006" }}</time>
+                    <h2 class="text-2xl font-bold text-slate-200 group-hover:text-violet-400 transition-colors">
                         {{ .Title }}
                     </h2>
-                    <p class="text-primary-800 leading-relaxed text-sm">{{ .Description }}</p>
+                    <p class="text-slate-400 leading-relaxed text-sm">{{ .Description }}</p>
                     <ul class="flex gap-2 list-none m-0 p-0">
                         {{ range .Tags }}
-                        <li class="p-2 text-sm bg-primary-800 text-primary-50 font-semibold rounded-md">#{{ . }}</li>
+                        <li class="px-2 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded border border-slate-700">#{{ . }}</li>
                         {{ end }}
                     </ul>
                 </a>
@@ -37,27 +37,27 @@
     </ul>
 
     {{ if not (stringsHasPrefix .Title "#") }}
-    <ul id="search-results" class="grid grid-cols-1 gap-px border border-secondary-900/30 overflow-hidden hidden list-none m-0 p-0">
+    <ul id="search-results" class="hidden flex-col gap-6 list-none m-0 p-0">
         <!-- JS will populate this -->
     </ul>
     {{ end }}
 
     {{ if gt .TotalPages 1 }}
-    <nav id="pagination-nav" class="flex justify-between items-center pt-6">
+    <nav id="pagination-nav" class="flex justify-between items-center pt-6 border-t border-slate-800">
         {{ if gt .CurrentPage 1 }}
             {{ if eq .CurrentPage 2 }}
-            <a href="{{ .PathPrefix }}blog.html" class="px-4 py-2 bg-secondary-100 text-primary-950 font-bold hover:bg-secondary-200 transition-colors border border-secondary-900/30">Previous</a>
+            <a href="{{ .PathPrefix }}blog.html" class="px-4 py-2 bg-slate-900 border border-slate-800 text-slate-300 font-bold hover:text-violet-400 hover:border-violet-500/30 transition-all rounded-lg">Previous</a>
             {{ else }}
-            <a href="{{ .PathPrefix }}blog/{{ sub .CurrentPage 1 }}.html" class="px-4 py-2 bg-secondary-100 text-primary-950 font-bold hover:bg-secondary-200 transition-colors border border-secondary-900/30">Previous</a>
+            <a href="{{ .PathPrefix }}blog/{{ sub .CurrentPage 1 }}.html" class="px-4 py-2 bg-slate-900 border border-slate-800 text-slate-300 font-bold hover:text-violet-400 hover:border-violet-500/30 transition-all rounded-lg">Previous</a>
             {{ end }}
         {{ else }}
         <span></span>
         {{ end }}
 
-        <span class="text-secondary-500 font-medium">Page {{ .CurrentPage }} of {{ .TotalPages }}</span>
+        <span class="text-slate-500 font-medium">Page {{ .CurrentPage }} of {{ .TotalPages }}</span>
 
         {{ if lt .CurrentPage .TotalPages }}
-        <a href="{{ .PathPrefix }}blog/{{ add .CurrentPage 1 }}.html" class="px-4 py-2 bg-secondary-100 text-primary-950 font-bold hover:bg-secondary-200 transition-colors border border-secondary-900/30">Next</a>
+        <a href="{{ .PathPrefix }}blog/{{ add .CurrentPage 1 }}.html" class="px-4 py-2 bg-slate-900 border border-slate-800 text-slate-300 font-bold hover:text-violet-400 hover:border-violet-500/30 transition-all rounded-lg">Next</a>
         {{ else }}
         <span></span>
         {{ end }}
@@ -92,8 +92,10 @@
         
         if (query === '') {
             defaultList.classList.remove('hidden');
+            defaultList.classList.add('flex');
             if (paginationNav) paginationNav.classList.remove('hidden');
             searchResults.classList.add('hidden');
+            searchResults.classList.remove('flex');
             searchResults.innerHTML = '';
             resultsCount.textContent = '';
             return;
@@ -108,21 +110,23 @@
         );
 
         defaultList.classList.add('hidden');
+        defaultList.classList.remove('flex');
         if (paginationNav) paginationNav.classList.add('hidden');
         searchResults.classList.remove('hidden');
+        searchResults.classList.add('flex');
         resultsCount.textContent = filtered.length > 0 ? filtered.length + ' found' : 'No results';
 
         searchResults.innerHTML = filtered.map(item => `
             <li>
                 <article>
-                    <a href="${pathPrefix}blog/${item.slug}.html" class="flex flex-col gap-2 p-4 bg-secondary-100 hover:bg-secondary-200 transition-colors group">
-                        <time class="text-sm text-primary-700">${item.date}</time>
-                        <h2 class="text-2xl font-bold text-primary-900 transition-colors">
+                    <a href="${pathPrefix}blog/${item.slug}.html" class="flex flex-col gap-3 p-6 bg-slate-900 border border-slate-800 hover:border-violet-500/30 transition-all group rounded-xl">
+                        <time class="text-sm text-slate-500 uppercase tracking-wider font-bold">${item.date}</time>
+                        <h2 class="text-2xl font-bold text-slate-200 group-hover:text-violet-400 transition-colors">
                             ${item.title}
                         </h2>
-                        <p class="text-primary-800 leading-relaxed">${item.description}</p>
+                        <p class="text-slate-400 leading-relaxed text-sm">${item.description}</p>
                         <ul class="flex gap-2 list-none m-0 p-0">
-                            ${item.tags.map(tag => `<li class="p-2 bg-primary-800 text-primary-50 text-sm font-semibold rounded-md">#${tag}</li>`).join('')}
+                            ${item.tags.map(tag => `<li class="px-2 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded border border-slate-700">#${tag}</li>`).join('')}
                         </ul>
                     </a>
                 </article>

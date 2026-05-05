@@ -1,15 +1,15 @@
 {{ define "content" }}
-<div class="flex flex-col gap-8">
+<div class="flex flex-col gap-10">
     <div class="flex flex-col gap-4">
-        <h1 class="text-3xl font-bold text-secondary-500">Now</h1>
-        <p class="text-sm text-secondary-500">Last updated: {{ .Config.Site.Now.LastUpdated }}</p>
+        <h1 class="text-3xl font-bold text-violet-400">Now</h1>
+        <p class="text-sm text-slate-500 font-bold uppercase tracking-wider">Last updated: {{ .Config.Site.Now.LastUpdated }}</p>
     </div>
     
-    <div class="grid grid-cols-1 gap-4 border border-secondary-900/30 overflow-hidden">
+    <div class="flex flex-col gap-6">
         {{ range .Config.Site.Now.Categories }}
-        <section class="flex flex-col gap-4 p-6 bg-secondary-100 hover:bg-secondary-200 transition-colors group rounded-md">
-            <h2 class="text-xl font-bold text-primary-900">{{ .Title }}</h2>
-            <ul class="list-disc list-inside text-primary-800 flex flex-col gap-2">
+        <section class="flex flex-col gap-4 p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-violet-500/30 transition-all">
+            <h2 class="text-xl font-bold text-slate-200">{{ .Title }}</h2>
+            <ul class="list-disc list-inside text-slate-400 flex flex-col gap-2 leading-relaxed">
                 {{ range (cleanYAMLList .Items) }}
                 <li>{{ . | safeHTML }}</li>
                 {{ end }}

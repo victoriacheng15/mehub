@@ -1,13 +1,14 @@
 {{ define "content" }}
 <div class="flex flex-col gap-10">
-    <h1 class="text-3xl font-bold text-secondary-500">Tags</h1>
+    <h1 class="text-3xl font-bold text-violet-400">Tags</h1>
     
-    <ul class="grid grid-cols-2 gap-4 border border-secondary-900/30 overflow-hidden list-none">
+    <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4 list-none m-0 p-0">
         {{ range .Tags }}
         <li>
-            <a href="{{ $.PathPrefix }}tags/{{ . }}.html" class="flex items-center justify-center gap-2 p-2 bg-secondary-100 hover:bg-secondary-200 rounded-md">
-                <span class="text-lg font-bold text-primary-800">#{{ . }}</span>
-                <span class="text-sm text-primary-700 font-medium">({{ index $.TagCounts . }})</span>
+            <a href="{{ $.PathPrefix }}tags/{{ . }}.html" 
+               class="flex flex-col items-center justify-center gap-2 p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-violet-500/30 transition-all group">
+                <span class="text-xl font-bold text-slate-200 group-hover:text-violet-400 transition-colors">#{{ . }}</span>
+                <span class="text-sm text-slate-500 font-bold uppercase tracking-wider">{{ index $.TagCounts . }} posts</span>
             </a>
         </li>
         {{ end }}
