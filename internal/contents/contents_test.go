@@ -16,7 +16,7 @@ func TestLoadConfig(t *testing.T) {
 		{
 			name: "Happy Path - All files valid",
 			files: map[string]string{
-				"site.yaml": `
+				"profile.yaml": `
 site:
   title: "My Site"
   description: "A cool site"
@@ -60,7 +60,7 @@ skills:
 		{
 			name: "Missing File",
 			files: map[string]string{
-				"site.yaml": `site: { title: "Test" }`,
+				"profile.yaml": `site: { title: "Test" }`,
 			},
 			validate: nil,
 			wantErr:  true,
@@ -68,7 +68,7 @@ skills:
 		{
 			name: "Invalid YAML",
 			files: map[string]string{
-				"site.yaml": `
+				"profile.yaml": `
 site:
 	title: "Invalid Tab"
 `,

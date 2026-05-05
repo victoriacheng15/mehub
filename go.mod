@@ -1,6 +1,6 @@
 module mehub
 
-go 1.25.7
+go 1.26
 
 require (
 	github.com/yuin/goldmark v1.8.2
@@ -9,6 +9,6 @@ require (
 )
 
 require (
-	github.com/alecthomas/chroma/v2 v2.23.1 // indirect
-	github.com/dlclark/regexp2 v1.11.5 // indirect
+	github.com/alecthomas/chroma/v2 v2.24.1 // indirect
+	github.com/dlclark/regexp2 v1.12.0 // indirect
 )

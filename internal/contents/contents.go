@@ -64,19 +64,18 @@ type SiteMetadata struct {
 }
 
 type SiteConfig struct {
-	Site        SiteMetadata     `yaml:"site"`
-	Navigation  NavigationConfig `yaml:"navigation"`
-	Socials     []Social         `yaml:"socials"`
-	Projects    []Project        `yaml:"projects"`
-	Skills      []Skill          `yaml:"skills"`
-	Specialties []string         `yaml:"specialties"`
+	Site       SiteMetadata     `yaml:"site"`
+	Navigation NavigationConfig `yaml:"navigation"`
+	Socials    []Social         `yaml:"socials"`
+	Projects   []Project        `yaml:"projects"`
+	Skills     []Skill          `yaml:"skills"`
 }
 
 func LoadConfig(configDir string) (*SiteConfig, error) {
 	var config SiteConfig
 
 	files := []string{
-		"site.yaml",
+		"profile.yaml",
 		"navigation.yaml",
 		"socials.yaml",
 		"projects.yaml",
