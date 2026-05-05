@@ -2,7 +2,7 @@
 <div class="flex flex-col gap-10">
     <h1 class="text-3xl font-bold text-violet-400">Tags</h1>
     
-    <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4 list-none m-0 p-0">
+    <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4 list-none">
         {{ range .Tags }}
         <li>
             <a href="{{ $.PathPrefix }}tags/{{ . }}.html" 

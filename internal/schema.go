@@ -53,26 +53,24 @@ type ProfileAbout struct {
 }
 
 type ProfileRegistry struct {
-	URL         string             `json:"url"`
-	Title       string             `json:"title"`
-	Name        string             `json:"name"`
-	Slogan      string             `json:"slogan"`
-	Description string             `json:"description"`
-	Experience  string             `json:"experience"`
-	Status      string             `json:"status"`
-	FocusAreas  []string           `json:"focusAreas"`
-	About       ProfileAbout       `json:"about"`
-	Now         contents.NowConfig `json:"now"`
+	URL        string             `json:"url"`
+	Title      string             `json:"title"`
+	Name       string             `json:"name"`
+	Slogan     string             `json:"slogan"`
+	Experience string             `json:"experience"`
+	Status     string             `json:"status"`
+	FocusAreas []string           `json:"focusAreas"`
+	About      ProfileAbout       `json:"about"`
+	Now        contents.NowConfig `json:"now"`
 }
 
 type Manifest struct {
-	MCPVersion  string          `json:"mcp_version"`
-	Name        string          `json:"name"`
-	Description string          `json:"description"`
-	URL         string          `json:"url"`
-	UpdatedAt   string          `json:"updated_at"`
-	Profile     ProfileRegistry `json:"profile"`
-	Skills      []string        `json:"skills"`
-	Projects    []ProjectItem   `json:"projects"`
-	Blog        BlogRegistry    `json:"blog"`
+	MCPVersion string          `json:"mcp_version"`
+	Name       string          `json:"name"`
+	URL        string          `json:"url"`
+	UpdatedAt  string          `json:"updated_at"`
+	Profile    ProfileRegistry `json:"profile"`
+	Skills     []string        `json:"skills"`
+	Projects   []ProjectItem   `json:"projects"`
+	Blog       BlogRegistry    `json:"blog"`
 }

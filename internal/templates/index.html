@@ -2,14 +2,23 @@
 <div class="flex flex-col gap-16">
     <section class="flex flex-col gap-6">
         <div class="flex flex-col gap-2">
-            <h1 class="text-4xl font-extrabold text-slate-100">{{ .Config.Site.Name }}</h1>
+            <pre class="text-violet-500 text-xs md:text-sm lg:text-base leading-tight font-mono">
+█   █ ███  ███  █████  ███  ████  ███  ███  
+█   █  █  █       █   █   █ █   █  █  █   █ 
+█   █  █  █       █   █   █ ████   █  █████ 
+ █ █   █  █       █   █   █ █  █   █  █   █ 
+  █   ███  ███    █    ███  █   █ ███ █   █ 
+
+ ███  █   █ █████ █   █  ███  
+█     █   █ █     ██  █ █     
+█     █████ ████  █ █ █ █  ██ 
+█     █   █ █     █  ██ █   █ 
+ ███  █   █ █████ █   █  ███  
+            </pre>
             <p class="text-xl text-slate-400">{{ .Config.Site.Slogan }}</p>
         </div>
-        <div class="text-slate-200">
-            <p>{{ .Config.Site.Description }}</p>
-        </div>
 
-        <ul class="flex gap-4 list-none m-0 p-0">
+        <ul class="flex gap-4 list-none">
             {{ range .Config.Socials }}
             <li class="p-2 rounded-md bg-slate-900 border border-slate-800 hover:border-violet-500/30 transition-colors">
                 <a href="{{ .Href }}" target="_blank" rel="noopener noreferrer" class="" aria-label="{{ .Name }}">
@@ -22,7 +31,7 @@
 
     <section class="flex flex-col gap-6">
         <h2 class="text-sm font-bold text-violet-400 tracking-wider uppercase">Tech Stack</h2>
-        <ul class="flex flex-wrap gap-3 list-none m-0 p-0">
+        <ul class="flex flex-wrap gap-3 list-none ">
             {{ range .Config.Skills }}
             <li class="flex items-center gap-3 px-4 py-2 bg-slate-900 border border-slate-800 rounded-lg hover:border-violet-500/30 transition-colors group">
                 <div class="w-5 h-5 bg-violet-400 group-hover:scale-110 transition-transform" 
@@ -33,15 +42,15 @@
         </ul>
     </section>
 
-    <section class="flex flex-col gap-8">
+    <section class="flex flex-col gap-6">
         <h2 class="text-sm font-bold text-violet-400 tracking-wider uppercase">Featured Projects</h2>
-        <ul class="flex flex-col gap-6 list-none m-0 p-0">
+        <ul class="flex flex-col gap-6 list-none ">
             {{ range .Config.Projects }}
             <li>
                 <article class="flex gap-6 p-6 bg-slate-900 border border-slate-800 rounded-xl">
-                    <div class="shrink-0 flex items-center justify-center w-16 h-16 bg-slate-800/50 rounded-lg text-4xl">
+                    <span role="img" aria-label="{{ .Title }} icon" class="shrink-0 flex items-center justify-center w-16 h-16 bg-slate-800/50 rounded-lg text-4xl">
                         {{ .Emoji }}
-                    </div>
+                    </span>
                     <div class="flex flex-col gap-4">
                         <div class="flex justify-between items-start">
                             <h3 class="text-xl font-bold text-slate-100">
@@ -49,7 +58,7 @@
                             </h3>
                         </div>
                         <p class="text-slate-400 leading-relaxed text-sm">{{ .ShortDescription }}</p>
-                        <ul class="flex flex-wrap gap-2 list-none m-0 p-0">
+                        <ul class="flex flex-wrap gap-2 list-none ">
                             {{ range (cleanYAMLList .Techs) }}
                             <li class="px-2 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded border border-slate-700">{{ . }}</li>
                             {{ end }}

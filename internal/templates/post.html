@@ -3,7 +3,7 @@
     <header class="flex flex-col gap-6">
         <time class="text-sm text-slate-500 uppercase tracking-wider font-bold">{{ .Post.Date.Format "January 02, 2006" }}</time>
         <h1 class="text-4xl font-extrabold text-slate-100 leading-tight">{{ .Post.Title }}</h1>
-        <ul class="flex gap-3 list-none m-0 p-0">
+        <ul class="flex gap-3 list-none">
             {{ range .Post.Tags }}
             <li class="px-2 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded border border-slate-700">#{{ . }}</li>
             {{ end }}
@@ -16,9 +16,9 @@
     </div>
 
     {{ if .Post.RelatedPosts }}
-    <section class="mt-12 pt-8 border-t border-slate-800">
+    <section class="pt-8 border-t border-slate-800">
         <h2 class="text-sm font-bold text-violet-400 tracking-wider uppercase mb-6">Related Concepts</h2>
-        <ul class="flex flex-col gap-4 list-none p-0 m-0">
+        <ul class="flex flex-col gap-4 list-none">
             {{ range .Post.RelatedPosts }}
             <li>
                 <a href="{{ .Slug }}.html"

@@ -216,7 +216,7 @@ func (g *SiteGenerator) GenerateRSS(distDir string, posts []post.Post) error {
 <channel>
   <title>`+escape(g.Config.Site.Title)+`</title>
   <link>`+g.Config.Site.URL+`</link>
-  <description>`+escape(g.Config.Site.Description)+`</description>
+  <description>`+escape(g.Config.Site.Slogan)+`</description>
   <language>en-us</language>
 `); err != nil {
 		return err
@@ -332,20 +332,18 @@ func (g *SiteGenerator) GenerateRegistries(distDir string, data *post.ContentDat
 
 	// Unified MCP Manifest
 	manifest := Manifest{
-		MCPVersion:  "1.0",
-		Name:        g.Config.Site.Title,
-		Description: g.Config.Site.Description,
-		URL:         g.Config.Site.URL,
-		UpdatedAt:   time.Now().Format(time.RFC3339),
+		MCPVersion: "1.0",
+		Name:       g.Config.Site.Title,
+		URL:        g.Config.Site.URL,
+		UpdatedAt:  time.Now().Format(time.RFC3339),
 		Profile: ProfileRegistry{
-			URL:         g.Config.Site.URL,
-			Title:       g.Config.Site.Title,
-			Name:        g.Config.Site.Name,
-			Slogan:      g.Config.Site.Slogan,
-			Description: g.Config.Site.Description,
-			Experience:  g.Config.Site.Experience,
-			Status:      g.Config.Site.Status,
-			FocusAreas:  g.Config.Site.FocusAreas,
+			URL:        g.Config.Site.URL,
+			Title:      g.Config.Site.Title,
+			Name:       g.Config.Site.Name,
+			Slogan:     g.Config.Site.Slogan,
+			Experience: g.Config.Site.Experience,
+			Status:     g.Config.Site.Status,
+			FocusAreas: g.Config.Site.FocusAreas,
 			About: ProfileAbout{
 				Paragraphs: g.Config.Site.About.Paragraphs,
 			},
@@ -402,7 +400,7 @@ func (g *SiteGenerator) GenerateLLMsTxt(distDir string) error {
 	// Role & Identity
 	sb.WriteString("# " + g.Config.Site.Name + " - Technical Portfolio\n\n")
 	sb.WriteString("## Role & Identity\n\n")
-	sb.WriteString(g.Config.Site.Description + "\n\n")
+	sb.WriteString(g.Config.Site.Slogan + "\n\n")
 
 	// Recruiting Signals
 	sb.WriteString("## Recruiting Signals\n\n")

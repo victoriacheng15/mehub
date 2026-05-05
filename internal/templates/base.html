@@ -8,7 +8,7 @@
     <!-- SEO -->
     <title>{{ .Title }}</title>
     <meta name="description"
-        content="{{ if .Post }}{{ .Post.Description }}{{ else }}{{ .Config.Site.Description }}{{ end }}">
+        content="{{ if .Post }}{{ .Post.Description }}{{ else }}{{ .Config.Site.Slogan }}{{ end }}">
     <link rel="canonical" href="{{ .Config.Site.URL }}{{ if .Post }}blog/{{ .Post.Slug }}.html{{ end }}">
 
     <!-- Open Graph / Social -->
@@ -16,7 +16,7 @@
     <meta property="og:url" content="{{ .Config.Site.URL }}{{ if .Post }}blog/{{ .Post.Slug }}.html{{ end }}">
     <meta property="og:title" content="{{ .Title }}">
     <meta property="og:description"
-        content="{{ if .Post }}{{ .Post.Description }}{{ else }}{{ .Config.Site.Description }}{{ end }}">
+        content="{{ if .Post }}{{ .Post.Description }}{{ else }}{{ .Config.Site.Slogan }}{{ end }}">
     <meta property="og:image" content="{{ .Config.Site.URL }}avatar.png">
     <!-- JSON-LD Structured Data Schema -->
     {{ if .Post }}
@@ -48,10 +48,10 @@
 </head>
 
 <body class="bg-slate-950 text-slate-200 font-sans antialiased min-h-screen flex flex-col items-center">
-    <div class="w-full max-w-[720px] flex flex-col min-h-screen gap-12 px-6 py-10">
+    <div class="w-full max-w-3xl flex flex-col min-h-screen gap-12 px- py-10">
         {{ template "header" . }}
 
-        <main class="w-full flex-grow">
+        <main class="w-full grow">
             {{ template "content" . }}
         </main>
 
@@ -65,7 +65,7 @@
 </html>
 
 {{ define "header" }}
-<header class="w-full flex flex-col sm:flex-row justify-between items-center gap-4 pb-6 border-b border-slate-800">
+<header class="w-full flex flex-col sm:flex-row justify-between items-center gap-4 pb-6 border-b border-violet-500/20">
     <div class="flex flex-col items-center sm:items-start">
         <a href="{{ .PathPrefix }}index.html"
             class="text-2xl font-bold text-violet-400 hover:text-violet-300 transition-colors">
@@ -86,28 +86,38 @@
 {{ end }}
 
 {{ define "footer" }}
-<footer class="w-full flex flex-col items-center gap-6 pt-6 border-t border-slate-800 text-sm text-slate-500">
-    <nav aria-label="Footer Navigation">
-        <ul class="flex gap-6 font-medium text-base">
-            {{ range .Config.Navigation.Footer }}
-            <li>
-                <a href="{{ $.PathPrefix }}{{ .Href }}"
-                    class="text-slate-400 hover:text-violet-400 transition-colors uppercase tracking-wider text-xs font-bold">{{ .Text }}</a>
-            </li>
-            {{ end }}
-        </ul>
-    </nav>
-    <div class="flex gap-6">
-        {{ range .Config.Socials }}
-        {{ $isExternal := stringsHasPrefix .Href "http" }}
-        <a href="{{ if $isExternal }}{{ .Href }}{{ else }}{{ $.PathPrefix }}{{ stringsTrimPrefix .Href " /" }}{{ end }}"
-            {{ if $isExternal }}target="_blank" rel="noopener noreferrer" {{ end }}
-            class="p-2 rounded-md hover:bg-slate-800/50 transition-colors" aria-label="{{ .Name }}">
-            <img src="{{ $.PathPrefix }}socials/{{ .Icon }}" alt="{{ .Name }}"
-                class="w-5 h-5 brightness-0 invert opacity-90 hover:opacity-100 transition-opacity">
-        </a>
-        {{ end }}
+<footer class="w-full pt-12 border-t border-violet-500/20 flex flex-col sm:flex-row justify-between items-center sm:items-start gap-10">
+    <div class="flex flex-col gap-6">
+        <nav aria-label="Footer Navigation">
+            <ul class="flex gap-6 font-medium">
+                {{ range .Config.Navigation.Footer }}
+                <li>
+                    <a href="{{ $.PathPrefix }}{{ .Href }}"
+                        class="text-slate-400 hover:text-violet-400 transition-colors uppercase tracking-wider text-xs font-bold">{{ .Text }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+        <div class="flex flex-col gap-2 text-[10px] font-mono uppercase tracking-widest text-slate-400">
+            <p>&copy; {{ .CurrentYear }} 🐧 {{ .Config.Site.Title }}. All rights reserved.</p>
+        </div>
     </div>
-    <p>&copy; {{ .CurrentYear }} 🐧 {{ .Config.Site.Title }}. All rights reserved.</p>
+
+    <div class="flex flex-col items-center sm:items-end gap-6">
+        <div class="flex gap-4">
+            {{ range .Config.Socials }}
+            {{ $isExternal := stringsHasPrefix .Href "http" }}
+            <a href="{{ if $isExternal }}{{ .Href }}{{ else }}{{ $.PathPrefix }}{{ stringsTrimPrefix .Href " /" }}{{ end }}"
+                {{ if $isExternal }}target="_blank" rel="noopener noreferrer" {{ end }}
+                class="p-2 rounded-md bg-slate-900 border border-slate-800 hover:border-violet-500/30 transition-all" aria-label="{{ .Name }}">
+                <img src="{{ $.PathPrefix }}socials/{{ .Icon }}" alt="{{ .Name }}"
+                    class="w-4 h-4 brightness-0 invert opacity-70 hover:opacity-100 transition-opacity">
+            </a>
+            {{ end }}
+        </div>
+        <p class="text-[10px] font-mono uppercase tracking-widest text-slate-400">
+            Built with <span class="text-violet-400">Go</span> & <span class="text-violet-400">Tailwind</span>
+        </p>
+    </div>
 </footer>
 {{ end }}
