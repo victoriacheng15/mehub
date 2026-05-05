@@ -15,7 +15,7 @@
         {{ end }}
     </div>
     
-    <ul id="default-list" class="flex flex-col gap-6 list-none m-0 p-0">
+    <ul id="default-list" class="flex flex-col gap-6 list-none ">
         {{ range .Posts }}
         <li>
             <article>
@@ -25,7 +25,7 @@
                         {{ .Title }}
                     </h2>
                     <p class="text-slate-400 leading-relaxed text-sm">{{ .Description }}</p>
-                    <ul class="flex gap-2 list-none m-0 p-0">
+                    <ul class="flex gap-2 list-none ">
                         {{ range .Tags }}
                         <li class="px-2 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded border border-slate-700">#{{ . }}</li>
                         {{ end }}
@@ -37,7 +37,7 @@
     </ul>
 
     {{ if not (stringsHasPrefix .Title "#") }}
-    <ul id="search-results" class="hidden flex-col gap-6 list-none m-0 p-0">
+    <ul id="search-results" class="hidden flex-col gap-6 list-none ">
         <!-- JS will populate this -->
     </ul>
     {{ end }}
@@ -125,7 +125,7 @@
                             ${item.title}
                         </h2>
                         <p class="text-slate-400 leading-relaxed text-sm">${item.description}</p>
-                        <ul class="flex gap-2 list-none m-0 p-0">
+                        <ul class="flex gap-2 list-none ">
                             ${item.tags.map(tag => `<li class="px-2 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded border border-slate-700">#${tag}</li>`).join('')}
                         </ul>
                     </a>

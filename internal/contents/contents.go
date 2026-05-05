@@ -52,16 +52,15 @@ type NowConfig struct {
 }
 
 type SiteMetadata struct {
-	URL         string      `yaml:"url"`
-	Title       string      `yaml:"title"`
-	Name        string      `yaml:"name"`
-	Slogan      string      `yaml:"slogan"`
-	Description string      `yaml:"description"`
-	Experience  string      `yaml:"experience"`
-	Status      string      `yaml:"status"`
-	FocusAreas  []string    `yaml:"focusAreas"`
-	About       AboutConfig `yaml:"about"`
-	Now         NowConfig   `yaml:"now"`
+	URL        string      `yaml:"url"`
+	Title      string      `yaml:"title"`
+	Name       string      `yaml:"name"`
+	Slogan     string      `yaml:"slogan"`
+	Experience string      `yaml:"experience"`
+	Status     string      `yaml:"status"`
+	FocusAreas []string    `yaml:"focusAreas"`
+	About      AboutConfig `yaml:"about"`
+	Now        NowConfig   `yaml:"now"`
 }
 
 type SiteConfig struct {

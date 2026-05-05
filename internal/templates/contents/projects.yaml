@@ -4,21 +4,19 @@ projects:
     shortDescription: End-to-end Kubernetes observability system using Terraform and GitOps, with OpenTelemetry, eBPF networking, MCP diagnostics, HA data services, and incident workflows including ADRs and RCAs.
     link: observability-hub
     techs:
-      - Kubernetes (K3s)
-      - Prometheus
-      - Grafana
+      - Kubernetes
+      - Observability
       - OpenTelemetry
       - ArgoCD
       - PostgreSQL
+      - eBPF
   - title: Uptime Monitor
     emoji: 🛡️
     shortDescription: Serverless Go project on AWS that monitors multiple websites hourly with Lambda and EventBridge, stores status history in S3, and deploys infrastructure with Terraform and GitHub Actions.
     link: uptime-monitor
     techs:
       - Go
-      - AWS Lambda
-      - AWS S3
-      - AWS EventBridge
+      - AWS
       - Terraform
       - GitHub Actions
   - title: Cover Craft
@@ -28,8 +26,7 @@ projects:
     techs:
       - TypeScript
       - React (Next.js)
-      - Azure Functions
-      - Azure Web Apps
+      - Azure
       - GitHub Actions
       - MongoDB Atlas
   - title: Echo (MCP server)
@@ -40,7 +37,7 @@ projects:
       - Go
       - SQLite
       - DuckDB
-      - MCP
+      - MCP Server
   - title: CarbonOps
     emoji: 🌿
     shortDescription: Experimental Rust CLI for Kubernetes infrastructure observability, collecting workload metrics, node usage, and Prometheus/Kepler energy signals across local and cloud Kubernetes clusters.
@@ -48,8 +45,8 @@ projects:
     techs:
       - Rust
       - Kubernetes
-      - Prometheus
-      - Kepler
+      - Observability
+      - Energy Metrics
   - title: 30 Days of Terraform
     emoji: ☁️
     shortDescription: Cloud-agnostic Terraform infrastructure curriculum with Azure depth and AWS validation, covering networking, AKS, RBAC, security patterns, and multi-cloud design.

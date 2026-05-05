@@ -16,9 +16,8 @@ import (
 func createConfig() *contents.SiteConfig {
 	return &contents.SiteConfig{
 		Site: contents.SiteMetadata{
-			Title:       "Test Site",
-			URL:         "http://example.com/",
-			Description: "Test Description",
+			Title: "Test Site",
+			URL:   "http://example.com/",
 		},
 		Projects: []contents.Project{
 			{
