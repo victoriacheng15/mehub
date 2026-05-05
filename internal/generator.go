@@ -324,12 +324,11 @@ func (g *SiteGenerator) GenerateRegistries(distDir string, data *post.ContentDat
 		})
 	}
 
-	// Skills (Combine core names and specialties)
+	// Skills
 	var allSkills []string
 	for _, s := range g.Config.Skills {
 		allSkills = append(allSkills, s.Name)
 	}
-	allSkills = append(allSkills, g.Config.Specialties...)
 
 	// Unified MCP Manifest
 	manifest := Manifest{
@@ -419,7 +418,6 @@ func (g *SiteGenerator) GenerateLLMsTxt(distDir string) error {
 	for _, s := range g.Config.Skills {
 		allSkills = append(allSkills, s.Name)
 	}
-	allSkills = append(allSkills, g.Config.Specialties...)
 	sb.WriteString(strings.Join(allSkills, ", ") + "\n\n")
 
 	// Project Index

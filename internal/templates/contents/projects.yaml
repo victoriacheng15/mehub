@@ -1,48 +1,58 @@
 projects:
-  - title: "Observability Hub"
-    shortDescription: "End-to-end Kubernetes observability system using Terraform and GitOps, with OpenTelemetry, eBPF networking, MCP diagnostics, HA data services, and incident workflows including ADRs and RCAs."
-    link: "observability-hub"
+  - title: Observability Hub
+    shortDescription: End-to-end Kubernetes observability system using Terraform and GitOps, with OpenTelemetry, eBPF networking, MCP diagnostics, HA data services, and incident workflows including ADRs and RCAs.
+    link: observability-hub
     techs:
-      - "Go"
-      - "Kubernetes (K3s)"
-      - "Terraform"
-      - "ArgoCD"
-      - "OpenTelemetry"
-      - "Prometheus"
-      - "Grafana"
-      - "PostgreSQL"
-      - "MCP"
-  - title: "Cover Craft"
-    shortDescription: "TypeScript/React cover image generator with Azure Web Apps and Functions, automated deployment via GitHub Actions CI/CD, queue-based async processing, WCAG validation, telemetry, and analytics."
-    link: "cover-craft"
+      - Go
+      - Kubernetes (K3s)
+      - Terraform
+      - ArgoCD
+      - OpenTelemetry
+      - Prometheus
+      - Grafana
+      - PostgreSQL
+      - MCP
+  - title: Uptime Monitor
+    shortDescription: Serverless Go project on AWS that monitors multiple websites hourly with Lambda and EventBridge, stores status history in S3, and deploys infrastructure with Terraform and GitHub Actions.
+    link: uptime-monitor
     techs:
-      - "Azure Functions"
-      - "Azure Web Apps"
-      - "React (Next.js)"
-      - "TypeScript"
-      - "Terraform"
-      - "GitHub Actions"
-      - "MongoDB Atlas"
-  - title: "Echo (MCP server)"
-    shortDescription: "Engineered an MCP server to solve the LLM statelessness gap. Tracks Unit Economics and carbon impact via DuckDB while ensuring sub-10ms query via FTS5, WAL and knowledge refinement."
-    link: "echo"
+      - Go
+      - AWS Lambda
+      - AWS S3
+      - AWS EventBridge
+      - Terraform
+      - GitHub Actions
+  - title: Cover Craft
+    shortDescription: TypeScript/React cover image generator with Azure Web Apps and Functions, automated deployment via GitHub Actions CI/CD, queue-based async processing, WCAG validation, telemetry, and analytics.
+    link: cover-craft
     techs:
-      - "Go"
-      - "SQLite"
-      - "DuckDB"
-      - "MCP"
-  - title: "CarbonOps"
-    shortDescription: "Experimental Rust CLI for Kubernetes infrastructure observability, collecting workload metrics, node usage, and Prometheus/Kepler energy signals across local and cloud Kubernetes clusters."
-    link: "carbonops"
+      - Azure Functions
+      - Azure Web Apps
+      - React (Next.js)
+      - TypeScript
+      - Terraform
+      - GitHub Actions
+      - MongoDB Atlas
+  - title: Echo (MCP server)
+    shortDescription: Engineered an MCP server to solve the LLM statelessness gap. Tracks Unit Economics and carbon impact via DuckDB while ensuring sub-10ms query via FTS5, WAL and knowledge refinement.
+    link: echo
     techs:
-      - "Rust"
-      - "Kubernetes"
-      - "Prometheus"
-      - "Kepler"
-  - title: "30 Days of Terraform"
-    shortDescription: "Cloud-agnostic Terraform infrastructure curriculum with Azure depth and AWS validation, covering networking, AKS, RBAC, security patterns, and multi-cloud design."
-    link: "30-days-of-terraform"
+      - Go
+      - SQLite
+      - DuckDB
+      - MCP
+  - title: CarbonOps
+    shortDescription: Experimental Rust CLI for Kubernetes infrastructure observability, collecting workload metrics, node usage, and Prometheus/Kepler energy signals across local and cloud Kubernetes clusters.
+    link: carbonops
     techs:
-      - "Terraform"
-      - "Azure"
-      - "AWS"
+      - Rust
+      - Kubernetes
+      - Prometheus
+      - Kepler
+  - title: 30 Days of Terraform
+    shortDescription: Cloud-agnostic Terraform infrastructure curriculum with Azure depth and AWS validation, covering networking, AKS, RBAC, security patterns, and multi-cloud design.
+    link: 30-days-of-terraform
+    techs:
+      - Terraform
+      - Azure
+      - AWS

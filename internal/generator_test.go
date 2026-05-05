@@ -31,7 +31,6 @@ func createConfig() *contents.SiteConfig {
 		Skills: []contents.Skill{
 			{Name: "Go", Icon: "go.svg"},
 		},
-		Specialties: []string{"Testing"},
 	}
 }
 
