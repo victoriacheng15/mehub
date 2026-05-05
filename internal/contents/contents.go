@@ -28,6 +28,7 @@ type Project struct {
 	ShortDescription string   `yaml:"shortDescription"`
 	Link             string   `yaml:"link"`
 	Techs            []string `yaml:"techs"`
+	Emoji            string   `yaml:"emoji"`
 }
 
 type Skill struct {
