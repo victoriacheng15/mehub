@@ -3,7 +3,6 @@ title: "Building a GitOps Homelab Platform Pipeline"
 description: "Manual pod updates became a GitOps platform pipeline where CI builds images, Kustomize separates dev and prod, ArgoCD reconciles drift, and short-SHA tags trace rollbacks."
 date: 2026-05-12
 tags: ["kubernetes", "platform"]
-draft: true
 ---
 ## From Sideloading to a Platform Pipeline
 
