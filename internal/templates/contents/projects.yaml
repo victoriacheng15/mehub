@@ -29,6 +29,14 @@ projects:
       - Azure
       - GitHub Actions
       - MongoDB Atlas
+  - title: Dev Toolchain
+    emoji: 🛠️
+    shortDescription: A portable library of reusable AI agent skills and helper scripts, structured under the SKILL.md open standard to orchestrate consistent developer workflows across compatible LLM clients. 
+    link: dev-toolchain
+    techs:
+      - Automation
+      - Bash
+      - Agentic Enablement
   - title: Echo (MCP server)
     emoji: 🗣️
     shortDescription: Engineered an MCP server to solve the LLM statelessness gap. Tracks Unit Economics and carbon impact via DuckDB while ensuring sub-10ms query via FTS5, WAL and knowledge refinement.
@@ -38,18 +46,9 @@ projects:
       - SQLite
       - DuckDB
       - MCP Server
-  - title: CarbonOps
-    emoji: 🌿
-    shortDescription: Experimental Rust CLI for Kubernetes infrastructure observability, collecting workload metrics, node usage, and Prometheus/Kepler energy signals across local and cloud Kubernetes clusters.
-    link: carbonops
-    techs:
-      - Rust
-      - Kubernetes
-      - Observability
-      - Energy Metrics
   - title: 30 Days of Terraform
     emoji: ☁️
-    shortDescription: Cloud-agnostic Terraform infrastructure curriculum with Azure depth and AWS validation, covering networking, AKS, RBAC, security patterns, and multi-cloud design.
+    shortDescription: A 30-day self-directed coding challenge repository built with Terraform, implementing progressively complex cloud infrastructure on Azure and AWS, spanning networking, AKS, and RBAC.
     link: 30-days-of-terraform
     techs:
       - Infrastructure as Code
