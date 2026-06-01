@@ -17,13 +17,13 @@ site:
       - My time at Shopify reinforced a 'measure twice, cut once' mindset. Working on systems supporting millions of users shaped how I approach engineering, focusing on preventing regressions, designing for correctness early, and ensuring systems remain resilient under high concurrency and real-world production load.
       - This site is where architectural logic meets the reality of continuous learning. I document the 'why' behind decisions, the trade-offs of every stack, and the reasoning behind system design choices, driven by curiosity and a desire to understand how things work beneath the surface.
   now:
-    lastUpdated: May 2026
+    lastUpdated: June 2026
     categories:
       - title: Work & Projects
         items:
-          - Completed Software Development at SAIT (graduating June 2026).
+          - SAIT 2026 - Software Development Program.
           - Actively seeking a New Grad Software Developer role.
-          - Refining and maintaining Uptime Monitor, Cover Craft, and Observability Hub projects.
+          - Refining and maintaining Uptime Monitor, Cover Craft, Dev Toolchain and Observability Hub projects.
 
       - title: Books & Learning
         items:
@@ -34,6 +34,6 @@ site:
 
       - title: Personal
         items:
-          - Based in Calgary, Alberta.
+          - Based in Greater Vancouver Metropolitan Area.
           - Staying consistent with daily exercise.
           - Exploring hardware and edge systems for future projects.

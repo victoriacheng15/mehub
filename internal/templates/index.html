@@ -44,27 +44,29 @@
 
     <section class="flex flex-col gap-6">
         <h2 class="text-sm font-bold text-violet-400 tracking-wider uppercase">Featured Projects</h2>
-        <ul class="flex flex-col gap-6 list-none ">
-            {{ range .Config.Projects }}
-            <li>
-                <article class="flex gap-6 p-6 bg-slate-900 border border-slate-800 rounded-xl">
-                    <span role="img" aria-label="{{ .Title }} icon" class="shrink-0 flex items-center justify-center w-16 h-16 bg-slate-800/50 rounded-lg text-4xl">
-                        {{ .Emoji }}
-                    </span>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 list-none">
+            {{ range $index, $project := .Config.Projects }}
+            <li class="{{ if ge $index 4 }}hidden additional-project transition-all duration-300{{ end }} h-full">
+                <article class="flex flex-col gap-4 p-6 bg-slate-900 border border-slate-800 rounded-xl h-full justify-between">
                     <div class="flex flex-col gap-4">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-xl font-bold text-slate-100">
-                                {{ .Title }}
+                        <div class="flex items-center gap-4">
+                            <span role="img" aria-label="{{ $project.Title }} icon" class="shrink-0 flex items-center justify-center w-12 h-12 bg-slate-800/50 rounded-lg text-2xl">
+                                {{ $project.Emoji }}
+                            </span>
+                            <h3 class="text-lg font-bold text-slate-100 leading-snug">
+                                {{ $project.Title }}
                             </h3>
                         </div>
-                        <p class="text-slate-400 leading-relaxed text-sm">{{ .ShortDescription }}</p>
-                        <ul class="flex flex-wrap gap-2 list-none ">
-                            {{ range (cleanYAMLList .Techs) }}
+                        <p class="text-slate-400 leading-relaxed text-sm">{{ $project.ShortDescription }}</p>
+                    </div>
+                    <div class="flex flex-col gap-4 mt-auto">
+                        <ul class="flex flex-wrap gap-2 list-none">
+                            {{ range (cleanYAMLList $project.Techs) }}
                             <li class="px-2 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded border border-slate-700">{{ . }}</li>
                             {{ end }}
                         </ul>
-                        <div class="mt-2 flex items-center gap-2">
-                            <a href="https://github.com/{{ if eq .Link "platform-actions" }}victoriacheng15hub{{ else }}victoriacheng15{{ end }}/{{ .Link }}#readme" target="_blank" rel="noopener noreferrer" 
+                        <div class="flex items-center gap-2">
+                            <a href="https://github.com/{{ if eq $project.Link "platform-actions" }}victoriacheng15hub{{ else }}victoriacheng15{{ end }}/{{ $project.Link }}#readme" target="_blank" rel="noopener noreferrer" 
                                class="text-violet-400 font-bold hover:text-violet-300 transition-colors group/link flex items-center gap-2 text-sm">
                                 View Project <span class="group-hover/link:translate-x-1 transition-transform">→</span>
                             </a>
@@ -74,6 +76,39 @@
             </li>
             {{ end }}
         </ul>
+
+        {{ if gt (len .Config.Projects) 4 }}
+        <div class="flex justify-center mt-4">
+            <button id="toggle-projects-btn" class="px-6 py-2.5 bg-slate-900 border border-slate-800 hover:border-violet-500/30 text-violet-400 hover:text-violet-300 font-semibold rounded-lg transition-all flex items-center gap-2 text-sm cursor-pointer">
+                <span>View More Projects</span>
+                <svg id="toggle-projects-icon" class="w-4 h-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+        </div>
+
+        <script>
+            document.getElementById('toggle-projects-btn').addEventListener('click', function() {
+                const additionalProjects = document.querySelectorAll('.additional-project');
+                const icon = document.getElementById('toggle-projects-icon');
+                const textSpan = this.querySelector('span');
+                const isHidden = additionalProjects[0].classList.contains('hidden');
+
+                additionalProjects.forEach(project => {
+                    project.classList.toggle('hidden');
+                });
+
+                if (isHidden) {
+                    textSpan.textContent = 'View Less';
+                    icon.classList.add('rotate-180');
+                } else {
+                    textSpan.textContent = 'View More Projects';
+                    icon.classList.remove('rotate-180');
+                    document.getElementById('toggle-projects-btn').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            });
+        </script>
+        {{ end }}
     </section>
 </div>
 {{ end }}
