@@ -1,15 +1,17 @@
 projects:
-  - title: Observability Hub
-    emoji: 📊
-    shortDescription: End-to-end Kubernetes observability system using Terraform and GitOps, with OpenTelemetry, eBPF networking, MCP diagnostics, HA data services, and incident workflows including ADRs and RCAs.
-    link: observability-hub
+  - title: LLM Telemetry Gateway
+    emoji: 📡
+    shortDescription: AIOps engine with PII masking monitoring a Go completions proxy and Python sidecar over UDS, utilizing a local Ollama LLM for automated root cause analysis on metric anomalies and chaos faults. 
+    link: llm-telemetry-gateway
     techs:
+      - Go
+      - Python
       - Kubernetes
-      - Observability
+      - Prometheus
+      - Grafana
       - OpenTelemetry
-      - ArgoCD
-      - PostgreSQL
-      - eBPF
+      - Chaos Mesh
+      - Ollama
   - title: Uptime Monitor
     emoji: 🛡️
     shortDescription: Serverless Go project on AWS that monitors multiple websites hourly with Lambda and EventBridge, stores status history in S3, and deploys infrastructure with Terraform and GitHub Actions.
@@ -37,6 +39,17 @@ projects:
       - Automation
       - Bash
       - Agentic Enablement
+  - title: Observability Hub
+    emoji: 📊
+    shortDescription: End-to-end Kubernetes observability system using Terraform and GitOps, with OpenTelemetry, eBPF networking, MCP diagnostics, HA data services, and incident workflows including ADRs and RCAs.
+    link: observability-hub
+    techs:
+      - Kubernetes
+      - Observability
+      - OpenTelemetry
+      - ArgoCD
+      - PostgreSQL
+      - eBPF
   - title: Echo (MCP server)
     emoji: 🗣️
     shortDescription: Engineered an MCP server to solve the LLM statelessness gap. Tracks Unit Economics and carbon impact via DuckDB while ensuring sub-10ms query via FTS5, WAL and knowledge refinement.
