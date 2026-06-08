@@ -2,7 +2,7 @@ GO_VERSION=1.25.0
 GO_TAR=go$(GO_VERSION).linux-amd64.tar.gz
 GO_DIR=./go-dist
 
-.PHONY: format update vet test test-cov setup-go
+.PHONY: format update vet test test-cov setup-go lint
 
 format:
 	go fmt ./...
