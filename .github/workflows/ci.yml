@@ -1,4 +1,4 @@
-name: CI - Go Linter and Tests
+name: Continuous Integration
 
 on:
   pull_request:
@@ -7,13 +7,36 @@ on:
       - '**/*.go'
       - 'go.mod'
       - 'go.sum'
+      - '**/*.md'
+  workflow_dispatch:
 
 env:
   go-version: '1.26'
+  node-version: '24'
 
 jobs:
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      go: ${{ steps.filter.outputs.go }}
+      markdown: ${{ steps.filter.outputs.markdown }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            go:
+              - '**/*.go'
+              - 'go.mod'
+              - 'go.sum'
+            markdown:
+              - '**/*.md'
+
   check:
     runs-on: ubuntu-latest
+    needs: changes
+    if: ${{ needs.changes.outputs.go == 'true' || github.event_name == 'workflow_dispatch' }}
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-go@v6
@@ -25,7 +48,8 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    needs: check
+    needs: [changes, check]
+    if: ${{ needs.changes.outputs.go == 'true' || github.event_name == 'workflow_dispatch' }}
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-go@v6
@@ -34,3 +58,16 @@ jobs:
 
       - name: Run Tests
         run: make test
+
+  markdownlint:
+    runs-on: ubuntu-latest
+    needs: changes
+    if: ${{ needs.changes.outputs.markdown == 'true' || github.event_name == 'workflow_dispatch' }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.node-version }}
+
+      - name: Run Markdown Lint
+        run: make md-lint
