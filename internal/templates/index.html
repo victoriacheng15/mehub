@@ -44,7 +44,7 @@
 
     <section class="flex flex-col gap-6">
         <h2 class="text-sm font-bold text-violet-400 tracking-wider uppercase">Featured Projects</h2>
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 list-none">
+        <ul class="flex flex-col gap-6 list-none">
             {{ range $index, $project := .Config.Projects }}
             <li class="{{ if ge $index 4 }}hidden additional-project transition-all duration-300{{ end }} h-full">
                 <article class="flex flex-col gap-4 p-6 bg-slate-900 border border-slate-800 rounded-xl h-full justify-between">
