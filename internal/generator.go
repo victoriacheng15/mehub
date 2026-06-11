@@ -104,7 +104,6 @@ func (g *SiteGenerator) GenerateStaticPages(distDir string, data *post.ContentDa
 		{"about.html", "about.html", "About", PageData{}},
 		{"now.html", "now.html", "Now", PageData{}},
 		{"404.html", "404.html", "404 - Not Found", PageData{}},
-		{"tags.html", "tags.html", "Tags", PageData{Tags: data.Tags, TagCounts: data.TagCounts}},
 		{"archive.html", "archive.html", "Archive", PageData{Archive: data.PostsByYear, ArchiveYears: data.ArchiveYears}},
 	}
 
@@ -132,6 +131,8 @@ func (g *SiteGenerator) GenerateBlogPagination(distDir string, data *post.Conten
 				Posts:       pagePosts,
 				CurrentPage: pageNumber,
 				TotalPages:  totalPages,
+				Tags:        data.Tags,
+				TagCounts:   data.TagCounts,
 			}); err != nil {
 				return err
 			}
@@ -142,6 +143,8 @@ func (g *SiteGenerator) GenerateBlogPagination(distDir string, data *post.Conten
 				CurrentPage: pageNumber,
 				TotalPages:  totalPages,
 				PathPrefix:  "../",
+				Tags:        data.Tags,
+				TagCounts:   data.TagCounts,
 			}); err != nil {
 				return err
 			}
@@ -156,6 +159,8 @@ func (g *SiteGenerator) GenerateTagPages(distDir string, data *post.ContentData)
 		if err := g.RenderPage(tagsDistDir, tag+".html", "blog.html", "#"+tag, PageData{
 			Posts:      tagPosts,
 			PathPrefix: "../",
+			Tags:       data.Tags,
+			TagCounts:  data.TagCounts,
 		}); err != nil {
 			return err
 		}
