@@ -33,7 +33,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("failed to load config: %v", err)
 	}
-	gen := internal.New(cfg)
+	gen := internal.New(cfg, "internal/templates")
 
 	// 3. Copy Static Assets
 	if _, err := os.Stat(publicDir); err == nil {
