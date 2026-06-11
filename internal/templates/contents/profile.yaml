@@ -3,7 +3,7 @@ site:
   title: Victoria's Tech Hub
   name: Victoria Cheng
   slogan: Backend systems, infrastructure, and the "why" behind them in practice.
-  status: "SAIT '26"
+  status: "CNCF LFX Mentee · SAIT '26"
   experience: Shopify · 4 years of engineering experience · Former Packaging Engineer
   focusAreas:
     - Backend Development
@@ -21,16 +21,16 @@ site:
     categories:
       - title: Work & Projects
         items:
+          - LFX Mentee @ CNCF - Chaos Mesh.
           - SAIT 2026 - Software Development Program.
           - Actively seeking a New Grad Software Developer role.
-          - Refining and maintaining Uptime Monitor, Cover Craft, Dev Toolchain and Observability Hub projects.
+          - Refining and maintaining LLM Telemetry Gateway, Uptime Monitor, Cover Craft and Dev Toolchain projects.
 
       - title: Books & Learning
         items:
           - Reading Power and Progress by Daron Acemoglu and Simon Johnson.
           - Building and refining cloud-native backend systems using Go and Kubernetes.
-          - Exploring system-level programming with Go.
-          - Exploring GitOps workflows and deployment patterns with ArgoCD.
+          - Exploring system-level programming in Go, GitOps workflows with ArgoCD, and chaos engineering with Chaos Mesh.
 
       - title: Personal
         items:

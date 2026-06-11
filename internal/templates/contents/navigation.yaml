@@ -6,8 +6,6 @@ navigation:
       text: Now
     - href: blog.html
       text: Blog
-    - href: tags.html
-      text: Tags
   footer:
     - href: about.html
       text: About
@@ -15,7 +13,5 @@ navigation:
       text: Now
     - href: blog.html
       text: Blog
-    - href: tags.html
-      text: Tags
     - href: archive.html
       text: Archive

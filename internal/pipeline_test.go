@@ -105,7 +105,6 @@ description: "A test post"
 		"about.html",
 		"now.html",
 		"404.html",
-		"tags.html",
 		"archive.html",
 		"blog.html",
 		"test.txt",
