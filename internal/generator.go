@@ -15,13 +15,15 @@ import (
 )
 
 type SiteGenerator struct {
-	Config  *contents.SiteConfig
-	FuncMap template.FuncMap
+	Config       *contents.SiteConfig
+	FuncMap      template.FuncMap
+	TemplatesDir string
 }
 
-func New(cfg *contents.SiteConfig) *SiteGenerator {
+func New(cfg *contents.SiteConfig, templatesDir string) *SiteGenerator {
 	return &SiteGenerator{
-		Config: cfg,
+		Config:       cfg,
+		TemplatesDir: templatesDir,
 		FuncMap: template.FuncMap{
 			"split":             strings.Split,
 			"replace":           strings.ReplaceAll,
@@ -63,9 +65,11 @@ func (g *SiteGenerator) RenderPage(dir, filename, tmplPath string, titlePrefix s
 		return fmt.Errorf("failed to create dir %s: %w", dir, err)
 	}
 
-	tmpl, err := template.New("base.html").Funcs(g.FuncMap).ParseFiles("internal/templates/base.html", tmplPath)
+	basePath := filepath.Join(g.TemplatesDir, "base.html")
+	fullTmplPath := filepath.Join(g.TemplatesDir, tmplPath)
+	tmpl, err := template.New("base.html").Funcs(g.FuncMap).ParseFiles(basePath, fullTmplPath)
 	if err != nil {
-		return fmt.Errorf("failed to parse templates for %s: %w", tmplPath, err)
+		return fmt.Errorf("failed to parse templates for %s: %w", fullTmplPath, err)
 	}
 
 	outputFile, err := os.Create(filepath.Join(dir, filename))
@@ -84,7 +88,7 @@ func (g *SiteGenerator) RenderPage(dir, filename, tmplPath string, titlePrefix s
 	data.Title = title
 
 	if err := tmpl.ExecuteTemplate(outputFile, "base.html", data); err != nil {
-		return fmt.Errorf("failed to execute template for %s: %w", tmplPath, err)
+		return fmt.Errorf("failed to execute template for %s: %w", fullTmplPath, err)
 	}
 	return nil
 }
@@ -96,12 +100,12 @@ func (g *SiteGenerator) GenerateStaticPages(distDir string, data *post.ContentDa
 		titlePrefix string
 		data        PageData
 	}{
-		{"index.html", "internal/templates/index.html", "", PageData{}},
-		{"about.html", "internal/templates/about.html", "About", PageData{}},
-		{"now.html", "internal/templates/now.html", "Now", PageData{}},
-		{"404.html", "internal/templates/404.html", "404 - Not Found", PageData{}},
-		{"tags.html", "internal/templates/tags.html", "Tags", PageData{Tags: data.Tags, TagCounts: data.TagCounts}},
-		{"archive.html", "internal/templates/archive.html", "Archive", PageData{Archive: data.PostsByYear, ArchiveYears: data.ArchiveYears}},
+		{"index.html", "index.html", "", PageData{}},
+		{"about.html", "about.html", "About", PageData{}},
+		{"now.html", "now.html", "Now", PageData{}},
+		{"404.html", "404.html", "404 - Not Found", PageData{}},
+		{"tags.html", "tags.html", "Tags", PageData{Tags: data.Tags, TagCounts: data.TagCounts}},
+		{"archive.html", "archive.html", "Archive", PageData{Archive: data.PostsByYear, ArchiveYears: data.ArchiveYears}},
 	}
 
 	for _, p := range pages {
@@ -124,7 +128,7 @@ func (g *SiteGenerator) GenerateBlogPagination(distDir string, data *post.Conten
 		pageNumber := i + 1
 
 		if pageNumber == 1 {
-			if err := g.RenderPage(distDir, "blog.html", "internal/templates/blog.html", "Blog", PageData{
+			if err := g.RenderPage(distDir, "blog.html", "blog.html", "Blog", PageData{
 				Posts:       pagePosts,
 				CurrentPage: pageNumber,
 				TotalPages:  totalPages,
@@ -133,7 +137,7 @@ func (g *SiteGenerator) GenerateBlogPagination(distDir string, data *post.Conten
 			}
 		} else {
 			pageDir := filepath.Join(distDir, "blog")
-			if err := g.RenderPage(pageDir, fmt.Sprintf("%d.html", pageNumber), "internal/templates/blog.html", fmt.Sprintf("Blog - Page %d", pageNumber), PageData{
+			if err := g.RenderPage(pageDir, fmt.Sprintf("%d.html", pageNumber), "blog.html", fmt.Sprintf("Blog - Page %d", pageNumber), PageData{
 				Posts:       pagePosts,
 				CurrentPage: pageNumber,
 				TotalPages:  totalPages,
@@ -149,7 +153,7 @@ func (g *SiteGenerator) GenerateBlogPagination(distDir string, data *post.Conten
 func (g *SiteGenerator) GenerateTagPages(distDir string, data *post.ContentData) error {
 	tagsDistDir := filepath.Join(distDir, "tags")
 	for tag, tagPosts := range data.PostsByTag {
-		if err := g.RenderPage(tagsDistDir, tag+".html", "internal/templates/blog.html", "#"+tag, PageData{
+		if err := g.RenderPage(tagsDistDir, tag+".html", "blog.html", "#"+tag, PageData{
 			Posts:      tagPosts,
 			PathPrefix: "../",
 		}); err != nil {
@@ -163,7 +167,7 @@ func (g *SiteGenerator) GeneratePostPages(distDir string, data *post.ContentData
 	blogDistDir := filepath.Join(distDir, "blog")
 	for _, post := range data.Posts {
 		p := post
-		if err := g.RenderPage(blogDistDir, post.Slug+".html", "internal/templates/post.html", post.Title, PageData{
+		if err := g.RenderPage(blogDistDir, post.Slug+".html", "post.html", post.Title, PageData{
 			Post:       &p,
 			PathPrefix: "../",
 		}); err != nil {

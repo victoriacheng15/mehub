@@ -58,7 +58,7 @@ func createTemplates(t *testing.T, dir string) {
 }
 
 func TestFuncMap(t *testing.T) {
-	gen := New(createConfig())
+	gen := New(createConfig(), "")
 
 	tests := []struct {
 		name     string
@@ -122,16 +122,12 @@ func TestFuncMap(t *testing.T) {
 }
 
 func TestRenderPage(t *testing.T) {
+	t.Parallel()
 	tmpDir := t.TempDir()
-	wd, _ := os.Getwd()
-	defer os.Chdir(wd)
-
-	if err := os.Chdir(tmpDir); err != nil {
-		t.Fatal(err)
-	}
 	createTemplates(t, tmpDir)
 
-	gen := New(createConfig())
+	templatesDir := filepath.Join(tmpDir, "internal", "templates")
+	gen := New(createConfig(), templatesDir)
 	distDir := filepath.Join(tmpDir, "dist")
 
 	tests := []struct {
@@ -146,7 +142,7 @@ func TestRenderPage(t *testing.T) {
 		{
 			name:        "Render Index",
 			filename:    "index.html",
-			tmplPath:    "internal/templates/index.html",
+			tmplPath:    "index.html",
 			titlePrefix: "Home",
 			data:        PageData{},
 			wantErr:     false,
@@ -160,7 +156,7 @@ func TestRenderPage(t *testing.T) {
 		{
 			name:     "Output Dir Creation Failure",
 			filename: "subdir/fail.html",
-			tmplPath: "internal/templates/index.html",
+			tmplPath: "index.html",
 			setup: func() {
 				os.MkdirAll(distDir, 0755)
 				os.WriteFile(filepath.Join(distDir, "subdir"), []byte("block"), 0644)
@@ -189,15 +185,12 @@ func TestRenderPage(t *testing.T) {
 }
 
 func TestGenerators(t *testing.T) {
+	t.Parallel()
 	tmpDir := t.TempDir()
-	wd, _ := os.Getwd()
-	defer os.Chdir(wd)
-	if err := os.Chdir(tmpDir); err != nil {
-		t.Fatal(err)
-	}
 	createTemplates(t, tmpDir)
 
-	gen := New(createConfig())
+	templatesDir := filepath.Join(tmpDir, "internal", "templates")
+	gen := New(createConfig(), templatesDir)
 	distDir := filepath.Join(tmpDir, "dist")
 
 	posts := []post.Post{
@@ -303,7 +296,7 @@ func TestGenerators(t *testing.T) {
 		{
 			name: "Failure - Missing Template",
 			fn: func() error {
-				if err := os.Remove(filepath.Join(tmpDir, "internal", "templates", "about.html")); err != nil {
+				if err := os.Remove(filepath.Join(templatesDir, "about.html")); err != nil {
 					return err
 				}
 				defer createTemplates(t, tmpDir) // Restore for next tests
@@ -329,10 +322,12 @@ func TestGenerators(t *testing.T) {
 }
 
 func TestBuild(t *testing.T) {
+	t.Parallel()
 	setup := func(t *testing.T) (string, *SiteGenerator, *post.ContentData) {
 		tmpDir := t.TempDir()
 		createTemplates(t, tmpDir)
-		gen := New(createConfig())
+		templatesDir := filepath.Join(tmpDir, "internal", "templates")
+		gen := New(createConfig(), templatesDir)
 		posts := []post.Post{{Slug: "test", Frontmatter: post.Frontmatter{Title: "T", Date: time.Now()}}}
 		data := &post.ContentData{Posts: posts}
 		return tmpDir, gen, data
@@ -360,11 +355,6 @@ func TestBuild(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			tmpDir, gen, data := setup(t)
-
-			// We need to change to tmpDir because RenderPage has hardcoded internal/templates
-			wd, _ := os.Getwd()
-			os.Chdir(tmpDir)
-			defer os.Chdir(wd)
 
 			tt.setup(t, tmpDir)
 
