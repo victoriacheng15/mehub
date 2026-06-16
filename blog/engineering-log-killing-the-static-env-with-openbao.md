@@ -2,7 +2,7 @@
 title: "[Engineering Log] Killing the Static .env with OpenBao"
 description: "Eliminating static .env files by centralizing secrets in OpenBao via a reusable internal/secrets module, decoupling credentials to streamline the Kubernetes migration phase."
 date: 2026-03-03
-tags: ["retrospective", "platform"]
+tags: ["kubernetes", "platform", "retrospective"]
 ---
 
 ## 1. Context (The "Why")

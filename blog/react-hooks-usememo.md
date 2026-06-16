@@ -2,7 +2,7 @@
 title: "React Hooks - useMemo"
 description: "Optimize React app performance with useMemo hook. Learn advantages disadvantages & see performance difference with before/after examples. Explore this comprehensive guide."
 date: 2023-01-11
-tags: ["frontend"]
+tags: ["frontend", "javascript"]
 ---
 
 ## What is useMemo?

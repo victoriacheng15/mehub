@@ -2,7 +2,7 @@
 title: "From Links to Reading Insights"
 description: "From article extractor to personal reading analytics dashboard—zero infrastructure, Go-powered metrics, and live visualizations on GitHub Pages. Dive into the full post."
 date: 2026-01-06
-tags: ["growth", "go"]
+tags: ["go", "growth"]
 ---
 
 ## What is From Links to Reading Insights?

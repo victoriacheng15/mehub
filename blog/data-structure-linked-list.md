@@ -2,7 +2,7 @@
 title: "Data Structure - Linked List"
 description: "Dive into the basics of linked lists: understand how they work, their operations, and explore two key types. Dive into this detailed tutorial to master the core concepts."
 date: 2024-05-07
-tags: ["dsa"]
+tags: ["data-structure"]
 ---
 
 ## What is a Linked List?

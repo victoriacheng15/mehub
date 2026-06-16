@@ -2,7 +2,7 @@
 title: "Optimizing Kubernetes Telemetry via eBPF"
 description: "Deploying eBPF, Cilium, and Kepler resolves the high CPU overhead of agent-based monitoring while establishing precise Joules-level sustainability telemetry in Kubernetes."
 date: 2026-06-09
-tags: ["kubernetes", "linux"]
+tags: ["kubernetes", "linux", "observability"]
 ---
 
 ## Kernel-Level Telemetry Architecture

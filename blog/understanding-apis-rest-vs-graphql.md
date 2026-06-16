@@ -2,7 +2,7 @@
 title: "Understanding APIs: REST vs GraphQL"
 description: "Learn the key differences between REST and GraphQL APIs, their pros and cons, and when to use each for your project. Read this comprehensive guide to learn much more."
 date: 2025-09-02
-tags: ["system-design"]
+tags: ["javascript", "system-design"]
 ---
 
 ## Introduction

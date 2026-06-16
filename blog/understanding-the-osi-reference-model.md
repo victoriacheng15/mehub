@@ -2,7 +2,7 @@
 title: "Understanding the OSI Reference Model"
 description: "Overview of the OSI Reference Model: Learn about the seven layers, their functions, and how they enable seamless network communication between diverse systems. Read on."
 date: 2024-07-09
-tags: ["platform"]
+tags: ["cloud", "platform"]
 ---
 
 ## What is the OSI Reference Model?

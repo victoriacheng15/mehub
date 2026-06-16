@@ -2,7 +2,7 @@
 title: React Hooks - useCallback
 description: "Boost React app performance with useCallback hook. Understand how it works, prevent re-renders & compare examples with/without useCallback. Read the full guide to learn."
 date: 2023-01-18
-tags: ["frontend"]
+tags: ["frontend", "javascript"]
 ---
 
 ## What is useCallback?

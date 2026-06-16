@@ -2,7 +2,7 @@
 title: "[Engineering Log] The Brittle JSON: Grafana Provisioning Failure"
 description: "Fixing Grafana dashboard provisioning by moving from brittle embedded JSON in values.yaml to standalone files, resolving 'invalid character' bugs once and for all."
 date: 2026-04-07
-tags: ["retrospective", "platform"]
+tags: ["kubernetes", "observability", "retrospective"]
 ---
 
 ## Context

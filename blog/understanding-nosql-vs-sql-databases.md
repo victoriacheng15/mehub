@@ -2,7 +2,7 @@
 title: "Understanding NoSQL vs SQL Databases"
 description: "Discover the contrasts between NoSQL and SQL databases: NoSQL for flexibility and scalability, SQL for relational integrity and transaction reliability. Read more to learn."
 date: 2024-06-11
-tags: ["backend"]
+tags: ["backend", "cloud"]
 ---
 
 ## NoSQL vs SQL

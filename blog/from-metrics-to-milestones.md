@@ -2,7 +2,7 @@
 title: "From Metrics to Milestones"
 description: "Visualizing a project’s journey: a product-first landing page and a timeline generated from a structured YAML history of milestones. Dive into this step-by-step tutorial."
 date: 2026-01-20
-tags: ["growth", "go"]
+tags: ["go", "growth"]
 ---
 
 ## What is From Metrics to Milestones?
