@@ -1,9 +1,8 @@
 ---
 title: "[Engineering Log] Measuring Memory Value in Echo"
 description: "Adding local FinOps and Knowledge ROI analytics to Echo so persistent memory can measure cost, hit rate, carbon estimates, and low-signal context before quality drifts."
-date: 2026-06-02
+date: 2026-06-16
 tags: ["go", "retrospective"]
-draft: true
 ---
 
 ## Context
