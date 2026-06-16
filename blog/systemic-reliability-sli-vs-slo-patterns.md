@@ -2,7 +2,7 @@
 title: "Systemic Reliability: SLI vs SLO Patterns"
 description: "An objective analysis of Service Level Indicators and Objectives, detailing the architectural transition from raw metrics to business-aligned reliability targets for scale."
 date: 2026-06-02
-tags: ["platform", "system-design"]
+tags: ["observability", "platform", "system-design"]
 ---
 
 ## The Operational Bottleneck of Subjectivity

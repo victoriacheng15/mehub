@@ -2,7 +2,7 @@
 title: "Unified Intelligence for Observability Hub"
 description: "Transitioning to Agentic Infrastructure via the Model Context Protocol unified gateway, providing specialized tools for automated RCA across telemetry, pods, network flows, and gateway capability state."
 date: 2026-05-05
-tags: ["observability", "mcp", "platform"]
+tags: ["mcp", "observability", "platform"]
 ---
 
 ## Solving the Cognitive Telemetry Gap

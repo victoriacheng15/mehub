@@ -2,7 +2,7 @@
 title: "MCP-Ready Ecosystem Refactor"
 description: "Transitioning from fragmented multi-module scripts to a library-first platform using a unified Go workspace."
 date: 2026-03-31
-tags: ["platform", "system-design", "go"]
+tags: ["go", "mcp", "system-design"]
 ---
 
 ## The Mission: Architectural Maturity

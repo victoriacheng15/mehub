@@ -2,7 +2,7 @@
 title: "[Engineering Log] Persistent AI Memory with Echo"
 description: "Building an MCP server with Go and SQLite to give AI agents scoped, local-first memory, reduce repeated context setup, and keep project decisions available in CLI sessions."
 date: 2026-04-14
-tags: ["go", "retrospective", "mcp"]
+tags: ["go", "mcp", "retrospective"]
 ---
 
 ## Context

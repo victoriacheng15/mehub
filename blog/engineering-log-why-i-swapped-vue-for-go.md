@@ -2,7 +2,7 @@
 title: "[Engineering Log] Swapping Vue for Go"
 description: "Rebuilding a Linktree-style Vue project as a Go static site generator to reduce npm maintenance, simplify builds, and learn Go through a small real-world publishing tool."
 date: 2026-04-21
-tags: ["retrospective", "go"]
+tags: ["go", "retrospective"]
 ---
 
 ## Context

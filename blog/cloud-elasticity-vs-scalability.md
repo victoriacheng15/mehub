@@ -2,7 +2,7 @@
 title: "🌩️ Cloud – Elasticity vs Scalability"
 description: "Learn the key differences between cloud scalability and elasticity, with clear examples and visual timelines showing how resources adjust over time. Read more to learn."
 date: 2025-10-21
-tags: ["platform", "cloud"]
+tags: ["cloud", "platform"]
 ---
 
 ## What is 🌩️ Cloud – Elasticity vs Scalability?

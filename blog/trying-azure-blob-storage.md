@@ -2,7 +2,7 @@
 title: "Trying Azure Blob Storage"
 description: "How I loaded CSV data from Azure Blob Storage in a school project—with local fallback and no hardcoded secrets. Dive into this detailed tutorial to master the core concepts."
 date: 2025-12-23
-tags: ["platform", "cloud"]
+tags: ["cloud", "platform", "python"]
 ---
 
 ## What is Azure Blob Storage?

@@ -2,7 +2,7 @@
 title: "Use Azure Key Vault for Secrets"
 description: "Securely manage app secrets in Azure using Key Vault—store credentials like GitHub OAuth IDs safely and handle local development with smart fallbacks. Read more to learn."
 date: 2025-12-09
-tags: ["platform", "cloud"]
+tags: ["cloud", "platform", "python"]
 ---
 
 ## What is Key Vault in Azure?

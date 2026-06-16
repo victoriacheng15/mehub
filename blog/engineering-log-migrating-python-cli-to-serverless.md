@@ -2,7 +2,7 @@
 title: "[Engineering Log] Migrating Python CLI to Serverless"
 description: "Why I migrated a local Python CLI script to an Azure Serverless Function to eliminate virtual environment friction and gain practical hands-on cloud experience."
 date: 2026-02-24
-tags: ["retrospective", "python", "cloud"]
+tags: ["cloud", "python", "retrospective"]
 ---
 
 ## 1. Context (The "Why")

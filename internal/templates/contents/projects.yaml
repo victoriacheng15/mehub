@@ -39,6 +39,7 @@ projects:
       - Automation
       - Bash
       - Agentic Enablement
+      - Developer Workflows
   - title: Observability Hub
     emoji: 📊
     shortDescription: End-to-end Kubernetes observability system using Terraform and GitOps, with OpenTelemetry, eBPF networking, MCP diagnostics, HA data services, and incident workflows including ADRs and RCAs.
