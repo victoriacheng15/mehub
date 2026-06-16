@@ -13,7 +13,7 @@ I learned that durable storage layers accumulate directives, facts, and artifact
 
 ### Past Logs
 
-- [\\[Engineering Log\\] Persistent AI Memory with Echo](https://victoriacheng15.dev/blog/engineering-log-persistent-ai-memory-with-echo)
+- [\[Engineering Log\] Persistent AI Memory with Echo](https://victoriacheng15.dev/blog/engineering-log-persistent-ai-memory-with-echo)
 
 ---
 
