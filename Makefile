@@ -27,7 +27,7 @@ help:
 	@echo "Setup:"
 	@echo "  setup-tailwind  Download Tailwind CLI (Linux x64)"
 	@echo "  setup-go        Download and setup Go locally"
-	@echo "  ssg-build       Setup Go and Tailwind, then build (for Vercel deployment)"
+	@echo "  ssg-build       Setup Go and Tailwind, then build the SSG"
 	@echo ""
 	@echo "Utility:"
 	@echo "  help            Show this help message"

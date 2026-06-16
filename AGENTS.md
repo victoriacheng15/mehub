@@ -6,7 +6,7 @@ This document provides context and instructions for AI agents working on the **M
 
 **Mehub** is a personal website and blog platform built with a custom Go-based SSG. It emphasizes performance, zero external runtime dependencies, and AI-first discoverability.
 
-- **Core Tech**: Go (Golang) 1.23.4
+- **Core Tech**: Go (Golang) 1.26
 - **Styling**: Tailwind CSS (standalone CLI)
 - **Content**: Markdown with YAML frontmatter
 - **Architecture**: Single-binary generator that renders templates into a `dist/` directory.
@@ -23,17 +23,38 @@ This document provides context and instructions for AI agents working on the **M
 
 ## 3. Build and Development
 
-The project uses a `Makefile` that automatically wraps commands in `nix-shell` if available.
+The project uses a `Makefile` to orchestrate build, test, and formatting tasks.
+
+### Site Generation
 
 | Command | Description |
 | :--- | :--- |
 | `make build` | **Primary Command**. Downloads Tailwind, builds the SSG, and generates the full site in `dist/`. |
-| `make test` | Runs all Go unit tests. |
-| `make check` | Verifies code formatting (`gofmt`) and static analysis (`go vet`). |
-| `make format` | Automatically formats all Go code. |
-| `make lint` | Lints all Markdown files using `markdownlint`. |
-| `make add-hr` | Helper script to insert horizontal rules (`---`) between H2 headings in blog posts. |
+
+### Development
+
+| Command | Description |
+| :--- | :--- |
 | `make update` | Updates Go dependencies and tidies `go.mod`. |
+| `make vet` | Verifies code formatting (`gofmt`) and static analysis (`go vet`) under `cmd/` and `internal/`. |
+| `make format` | Formats all Go code under `cmd/` and `internal/` using `go fmt` and `goimports`. |
+| `make test` | Runs Go unit tests under `internal/`. |
+| `make test-cov` | Runs Go unit tests with coverage report under `internal/`. |
+
+### Markdown Files
+
+| Command | Description |
+| :--- | :--- |
+| `make md-lint` | Lints all Markdown files using `markdownlint-cli`. |
+| `make md-format` | Automatically formats all Markdown files using `markdownlint-cli`. |
+
+### Setup
+
+| Command | Description |
+| :--- | :--- |
+| `make setup-tailwind` | Downloads and sets up the Tailwind CSS CLI locally. |
+| `make setup-go` | Downloads and sets up Go locally. |
+| `make ssg-build` | Sets up Go and Tailwind CLI, then builds the SSG. |
 
 ## 4. AI Discoverability & API Registries
 

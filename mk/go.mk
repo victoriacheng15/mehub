@@ -1,29 +1,30 @@
-GO_VERSION=1.25.0
+GO_VERSION=1.26.0
 GO_TAR=go$(GO_VERSION).linux-amd64.tar.gz
 GO_DIR=./go-dist
 
 .PHONY: format update vet test test-cov setup-go lint
 
-format:
-	go fmt ./...
-
 update:
 	go get -u ./... && go mod tidy
 
 vet:
-	@go vet ./...
-	@if [ -n "$$(gofmt -l .)" ]; then \
+	@go vet ./cmd/... ./internal/...
+	@if [ -n "$$(gofmt -l cmd/ internal/)" ]; then \
 		echo "Go code is not formatted. Please run 'make format':"; \
-		gofmt -l .; \
+		gofmt -l cmd/ internal/; \
 		exit 1; \
 	fi
 	@echo "✅ Go code is formatted correctly and vetted."
 
+format:
+	go fmt ./cmd/... ./internal/...
+	~/go/bin/goimports -local mehub -w cmd/ internal/
+
 test:
-	go test -v ./...
+	go test -v ./internal/...
 
 test-cov:
-	go test -coverprofile=coverage.out ./... && \
+	go test -coverprofile=coverage.out ./internal/... && \
 	go tool cover -func=coverage.out && \
 	rm coverage.out
 
