@@ -10,5 +10,5 @@ require (
 
 require (
 	github.com/alecthomas/chroma/v2 v2.26.1 // indirect
-	github.com/dlclark/regexp2/v2 v2.1.1 // indirect
+	github.com/dlclark/regexp2/v2 v2.2.2 // indirect
 )
