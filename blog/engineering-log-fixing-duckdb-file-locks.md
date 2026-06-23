@@ -3,7 +3,6 @@ title: "[Engineering Log] Fixing DuckDB File Locks"
 description: "Fixing DuckDB file locks in Echo by replacing the startup connection with on-demand database sessions that open, sync, query, and close during each analytics request."
 date: 2026-06-23
 tags: ["go", "retrospective", "mcp"]
-draft: true
 ---
 
 ## Context
