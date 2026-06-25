@@ -5,22 +5,20 @@ import (
 	"encoding/xml"
 	"fmt"
 	"html/template"
+	"io"
 	"os"
 	"path/filepath"
 	"strings"
 	"time"
-
-	"mehub/internal/contents"
-	"mehub/internal/post"
 )
 
 type SiteGenerator struct {
-	Config       *contents.SiteConfig
+	Config       *SiteConfig
 	FuncMap      template.FuncMap
 	TemplatesDir string
 }
 
-func New(cfg *contents.SiteConfig, templatesDir string) *SiteGenerator {
+func New(cfg *SiteConfig, templatesDir string) *SiteGenerator {
 	return &SiteGenerator{
 		Config:       cfg,
 		TemplatesDir: templatesDir,
@@ -93,7 +91,7 @@ func (g *SiteGenerator) RenderPage(dir, filename, tmplPath string, titlePrefix s
 	return nil
 }
 
-func (g *SiteGenerator) GenerateStaticPages(distDir string, data *post.ContentData) error {
+func (g *SiteGenerator) GenerateStaticPages(distDir string, data *ContentData) error {
 	pages := []struct {
 		filename    string
 		tmplPath    string
@@ -115,7 +113,7 @@ func (g *SiteGenerator) GenerateStaticPages(distDir string, data *post.ContentDa
 	return nil
 }
 
-func (g *SiteGenerator) GenerateBlogPagination(distDir string, data *post.ContentData, pageSize int) error {
+func (g *SiteGenerator) GenerateBlogPagination(distDir string, data *ContentData, pageSize int) error {
 	totalPages := (len(data.Posts) + pageSize - 1) / pageSize
 	for i := 0; i < totalPages; i++ {
 		startIdx := i * pageSize
@@ -153,7 +151,7 @@ func (g *SiteGenerator) GenerateBlogPagination(distDir string, data *post.Conten
 	return nil
 }
 
-func (g *SiteGenerator) GenerateTagPages(distDir string, data *post.ContentData) error {
+func (g *SiteGenerator) GenerateTagPages(distDir string, data *ContentData) error {
 	tagsDistDir := filepath.Join(distDir, "tags")
 	for tag, tagPosts := range data.PostsByTag {
 		if err := g.RenderPage(tagsDistDir, tag+".html", "blog.html", "#"+tag, PageData{
@@ -168,7 +166,7 @@ func (g *SiteGenerator) GenerateTagPages(distDir string, data *post.ContentData)
 	return nil
 }
 
-func (g *SiteGenerator) GeneratePostPages(distDir string, data *post.ContentData) error {
+func (g *SiteGenerator) GeneratePostPages(distDir string, data *ContentData) error {
 	blogDistDir := filepath.Join(distDir, "blog")
 	for _, post := range data.Posts {
 		p := post
@@ -182,7 +180,7 @@ func (g *SiteGenerator) GeneratePostPages(distDir string, data *post.ContentData
 	return nil
 }
 
-func (g *SiteGenerator) GenerateSearchIndex(distDir string, data *post.ContentData) error {
+func (g *SiteGenerator) GenerateSearchIndex(distDir string, data *ContentData) error {
 	var items []SearchItem
 	for _, post := range data.Posts {
 		items = append(items, SearchItem{
@@ -205,7 +203,7 @@ func (g *SiteGenerator) GenerateSearchIndex(distDir string, data *post.ContentDa
 	return nil
 }
 
-func (g *SiteGenerator) GenerateRSS(distDir string, posts []post.Post) error {
+func (g *SiteGenerator) GenerateRSS(distDir string, posts []Post) error {
 	f, err := os.Create(filepath.Join(distDir, "rss.xml"))
 	if err != nil {
 		return fmt.Errorf("failed to create rss.xml: %w", err)
@@ -252,7 +250,7 @@ func (g *SiteGenerator) GenerateRSS(distDir string, posts []post.Post) error {
 	return nil
 }
 
-func (g *SiteGenerator) GenerateSitemap(distDir string, posts []post.Post) error {
+func (g *SiteGenerator) GenerateSitemap(distDir string, posts []Post) error {
 	f, err := os.Create(filepath.Join(distDir, "sitemap.xml"))
 	if err != nil {
 		return fmt.Errorf("failed to create sitemap.xml: %w", err)
@@ -266,7 +264,7 @@ func (g *SiteGenerator) GenerateSitemap(distDir string, posts []post.Post) error
 	}
 
 	// Static Pages
-	pages := []string{"", "about.html", "now.html", "blog.html", "tags.html", "archive.html"}
+	pages := []string{"", "about.html", "now.html", "blog.html", "archive.html"}
 	for _, page := range pages {
 		if _, err := fmt.Fprintf(f, `  <url>
     <loc>%s%s</loc>
@@ -303,7 +301,7 @@ func (g *SiteGenerator) GenerateSitemap(distDir string, posts []post.Post) error
 	return nil
 }
 
-func (g *SiteGenerator) GenerateRegistries(distDir string, data *post.ContentData) error {
+func (g *SiteGenerator) GenerateRegistries(distDir string, data *ContentData) error {
 	apiDir := filepath.Join(distDir, "api")
 	if err := os.MkdirAll(apiDir, 0755); err != nil {
 		return fmt.Errorf("failed to create api dir %s: %w", apiDir, err)
@@ -368,7 +366,7 @@ func (g *SiteGenerator) GenerateRegistries(distDir string, data *post.ContentDat
 	return g.writeJSON(filepath.Join(apiDir, "manifest.json"), manifest)
 }
 
-func (g *SiteGenerator) Build(distDir string, data *post.ContentData) error {
+func (g *SiteGenerator) Build(distDir string, data *ContentData) error {
 	steps := []struct {
 		name string
 		fn   func() error
@@ -455,4 +453,51 @@ func (g *SiteGenerator) GenerateLLMsTxt(distDir string) error {
 	}
 
 	return nil
+}
+
+// CopyDir recursively copies a directory tree, attempting to preserve permissions.
+func CopyDir(src string, dst string) error {
+	return filepath.Walk(src, func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
+
+		relPath, err := filepath.Rel(src, path)
+		if err != nil {
+			return err
+		}
+		targetPath := filepath.Join(dst, relPath)
+
+		if info.IsDir() {
+			return os.MkdirAll(targetPath, info.Mode())
+		}
+
+		return CopyFile(path, targetPath)
+	})
+}
+
+// CopyFile copies a single file from src to dst, preserving file permissions.
+func CopyFile(src, dst string) error {
+	srcFile, err := os.Open(src)
+	if err != nil {
+		return err
+	}
+	defer srcFile.Close()
+
+	dstFile, err := os.Create(dst)
+	if err != nil {
+		return err
+	}
+	defer dstFile.Close()
+
+	_, err = io.Copy(dstFile, srcFile)
+	if err != nil {
+		return err
+	}
+
+	info, err := os.Stat(src)
+	if err != nil {
+		return err
+	}
+	return os.Chmod(dst, info.Mode())
 }

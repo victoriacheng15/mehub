@@ -4,10 +4,6 @@ import (
 	"fmt"
 	"log"
 	"os"
-
-	"mehub/internal/contents"
-	"mehub/internal/post"
-	"mehub/internal/utils"
 )
 
 // RunPipeline orchestrates the entire site generation flow.
@@ -21,7 +17,7 @@ func RunPipeline(distDir, configDir, templatesDir, blogDir, publicDir string) (i
 	}
 
 	// 2. Load Configuration and Initialize Generator
-	cfg, err := contents.LoadConfig(configDir)
+	cfg, err := LoadConfig(configDir)
 	if err != nil {
 		return 0, fmt.Errorf("failed to load config: %w", err)
 	}
@@ -29,17 +25,17 @@ func RunPipeline(distDir, configDir, templatesDir, blogDir, publicDir string) (i
 
 	// 3. Copy Static Assets
 	if _, err := os.Stat(publicDir); err == nil {
-		if err := utils.CopyDir(publicDir, distDir); err != nil {
+		if err := CopyDir(publicDir, distDir); err != nil {
 			log.Printf("Warning: Failed to copy public assets: %v", err)
 		}
 	}
 
 	// 4. Load and Process Content
-	rawPosts, err := post.GetPosts(blogDir)
+	rawPosts, err := GetPosts(blogDir)
 	if err != nil {
 		return 0, fmt.Errorf("failed to load posts: %w", err)
 	}
-	data := post.ProcessPosts(rawPosts)
+	data := ProcessPosts(rawPosts)
 
 	// 5. Build Site
 	if err := gen.Build(distDir, data); err != nil {
