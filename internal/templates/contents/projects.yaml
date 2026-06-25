@@ -10,7 +10,7 @@ projects:
       - Prometheus
       - Grafana
       - OpenTelemetry
-      - Chaos Mesh
+      - Chaos Engineering (Chaos Mesh)
       - Ollama
   - title: Uptime Monitor
     emoji: 🛡️
@@ -21,6 +21,7 @@ projects:
       - AWS
       - Terraform
       - GitHub Actions
+      - BDD (Cucumber/Godog)
   - title: Cover Craft
     emoji: 🎨
     shortDescription: TypeScript/React cover image generator with Azure Web Apps and Functions, automated deployment via GitHub Actions CI/CD, queue-based async processing, WCAG validation, telemetry, and analytics.
