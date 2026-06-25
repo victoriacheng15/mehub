@@ -2,7 +2,7 @@ GO_VERSION=1.26.0
 GO_TAR=go$(GO_VERSION).linux-amd64.tar.gz
 GO_DIR=./go-dist
 
-.PHONY: format update vet test test-cov setup-go lint
+.PHONY: format update vet test cov test-bdd setup-go lint
 
 update:
 	go get -u ./... && go mod tidy
@@ -23,10 +23,13 @@ format:
 test:
 	go test -v ./internal/...
 
-test-cov:
+cov:
 	go test -coverprofile=coverage.out ./internal/... && \
 	go tool cover -func=coverage.out && \
 	rm coverage.out
+
+test-bdd:
+	go test -v ./e2e/...
 
 setup-go:
 	@echo "Setting up Go $(GO_VERSION)..."

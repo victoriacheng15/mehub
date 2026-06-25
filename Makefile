@@ -3,7 +3,11 @@ include mk/go.mk
 include mk/tailwind.mk
 include mk/markdown.mk
 
-.PHONY: help
+.PHONY: help test-all
+
+test-all:
+	$(MAKE) test
+	$(MAKE) test-bdd
 
 help:
 	@echo "Mehub SSG Build System"
@@ -18,7 +22,9 @@ help:
 	@echo "  vet             Run Go vet and check formatting"
 	@echo "  format          Format Go code"
 	@echo "  test            Run all tests"
-	@echo "  test-cov        Run tests and show coverage report"
+	@echo "  cov             Run tests and show coverage report"
+	@echo "  test-bdd        Run BDD integration tests"
+	@echo "  test-all        Run unit and BDD tests"
 	@echo ""
 	@echo "Markdown:"
 	@echo "  md-lint         Lint Markdown files using npx"

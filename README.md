@@ -18,14 +18,25 @@ Mehub is a personal website, portfolio, and blog platform built on a custom, zer
 
 ## System Architecture
 
-```mermaid
-graph TD
-    A[Markdown Content /blog] --> G[Go SSG Engine]
-    B[YAML Configs /templates/contents] --> G
-    C[HTML Templates /templates] --> G
-    D[Tailwind CSS input.css] --> E[Tailwind CLI]
-    G -->|Generate HTML| F[dist/]
-    E -->|Compile Styles| F
+```text
+  ┌───────────────────────────┐
+  │   Markdown Content        │────────┐
+  │   (/blog)                 │        │
+  └───────────────────────────┘        │
+  ┌───────────────────────────┐        │       ┌───────────────────┐
+  │   YAML Configurations     │────────┼──────>│   Go SSG Engine   │───(Generate HTML)───┐
+  │   (/templates/contents)   │        │       │   (cmd/ssg)       │                     │
+  └───────────────────────────┘        │       └───────────────────┘                     │
+  ┌───────────────────────────┐        │                                                 │
+  │   HTML Templates          │────────┘                                                 ▼
+  │   (/templates)            │                                                      ┌───────┐
+  │                           │                                                      │ dist/ │
+  └───────────────────────────┘                                                      └───────┘
+                                                                                         ▲
+  ┌───────────────────────────┐                ┌───────────────────┐                     │
+  │   Tailwind CSS Input      │───────────────>│   Tailwind CLI    │───(Compile Styles)──┘
+  │   (input.css)             │                └───────────────────┘
+  └───────────────────────────┘
 ```
 
 ### Key Components
