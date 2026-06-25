@@ -16,8 +16,10 @@ This document provides context and instructions for AI agents working on the **M
 | Component | Path | Description |
 | :--- | :--- | :--- |
 | **Entry Point** | `cmd/ssg/main.go` | Orchestrates the build process and clean/setup tasks. |
-| **Generator** | `internal/generator.go` | Core logic for rendering HTML, RSS, Sitemaps, and API registries. |
-| **Content** | `internal/post/` | Markdown parsing (goldmark), tag processing, and post data structures. |
+| **Generator** | `internal/generator.go` | Core logic for rendering HTML, RSS, Sitemaps, file copy helpers, and API registries. |
+| **Schemas** | `internal/schema.go` | Unified definitions of data structures, site configurations, and post models. |
+| **Content Parsing** | `internal/content.go` | Config loaders and Markdown parsing (goldmark), tag grouping, and post processing. |
+| **E2E Tests** | `e2e/` | BDD (Cucumber/Godog) end-to-end integration feature tests. |
 | **Config & Metadata** | `internal/templates/contents/` | YAML configuration for site metadata, projects, and skills. |
 | **Templates & Assets** | `internal/templates/` | Go HTML templates, Tailwind CSS, and static assets (icons, images). |
 
@@ -39,7 +41,9 @@ The project uses a `Makefile` to orchestrate build, test, and formatting tasks.
 | `make vet` | Verifies code formatting (`gofmt`) and static analysis (`go vet`) under `cmd/` and `internal/`. |
 | `make format` | Formats all Go code under `cmd/` and `internal/` using `go fmt` and `goimports`. |
 | `make test` | Runs Go unit tests under `internal/`. |
-| `make test-cov` | Runs Go unit tests with coverage report under `internal/`. |
+| `make cov` | Runs Go unit tests with coverage report under `internal/`. |
+| `make test-bdd` | Runs Cucumber/Godog E2E BDD feature integration tests under `e2e/`. |
+| `make test-all` | Executes both Go unit tests and E2E BDD integration tests. |
 
 ### Markdown Files
 
