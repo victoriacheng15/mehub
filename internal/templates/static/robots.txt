@@ -4,4 +4,4 @@ Allow: /api/
 Disallow: /404.html
 
 # Sitemap
-Sitemap: https://victoriacheng15.vercel.app/sitemap.xml
+Sitemap: https://victoriacheng15.dev/sitemap.xml

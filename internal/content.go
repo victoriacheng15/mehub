@@ -1,4 +1,4 @@
-package post
+package internal
 
 import (
 	"bytes"
@@ -7,7 +7,6 @@ import (
 	"regexp"
 	"sort"
 	"strings"
-	"time"
 
 	"github.com/yuin/goldmark"
 	highlighting "github.com/yuin/goldmark-highlighting/v2"
@@ -16,37 +15,36 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-type Frontmatter struct {
-	Title       string    `yaml:"title"`
-	Description string    `yaml:"description"`
-	Date        time.Time `yaml:"date"`
-	Tags        []string  `yaml:"tags"`
-	Draft       bool      `yaml:"draft"`
-}
-
-type RelatedPost struct {
-	Title string
-	Slug  string
-}
-
-type Post struct {
-	Frontmatter
-	Slug         string
-	Content      string
-	RelatedPosts []RelatedPost
-}
-
-type ContentData struct {
-	Posts        []Post
-	PostsByTag   map[string][]Post
-	PostsByYear  map[int][]Post
-	Tags         []string
-	TagCounts    map[string]int
-	ArchiveYears []int
-}
-
 var mermaidRegex = regexp.MustCompile(`(?s)<pre><code class="language-mermaid">.*?</code></pre>`)
 
+// LoadConfig reads and parses all YAML files under configDir, populating a SiteConfig.
+func LoadConfig(configDir string) (*SiteConfig, error) {
+	var config SiteConfig
+
+	files := []string{
+		"profile.yaml",
+		"navigation.yaml",
+		"socials.yaml",
+		"projects.yaml",
+		"skills.yaml",
+	}
+
+	for _, file := range files {
+		path := filepath.Join(configDir, file)
+		data, err := os.ReadFile(path)
+		if err != nil {
+			return nil, err
+		}
+
+		if err := yaml.Unmarshal(data, &config); err != nil {
+			return nil, err
+		}
+	}
+
+	return &config, nil
+}
+
+// ParsePost reads a Markdown file, decodes its frontmatter, and parses Markdown to HTML.
 func ParsePost(path string) (*Post, error) {
 	data, err := os.ReadFile(path)
 	if err != nil {
@@ -96,6 +94,7 @@ func ParsePost(path string) (*Post, error) {
 	}, nil
 }
 
+// GetPosts scans contentDir for markdown files, parsing and sorting them descending by date.
 func GetPosts(contentDir string) ([]Post, error) {
 	var posts []Post
 
@@ -123,6 +122,7 @@ func GetPosts(contentDir string) ([]Post, error) {
 	return posts, nil
 }
 
+// ProcessPosts groups loaded blog posts by year and tags, and computes related post links.
 func ProcessPosts(posts []Post) *ContentData {
 	data := &ContentData{
 		Posts:       posts,
@@ -178,7 +178,7 @@ func ProcessPosts(posts []Post) *ContentData {
 			}
 		}
 
-		// Sort related matches descending by shared tags. Tie-breaker is date (which inherently sorts by array index since GetPosts sorts date desc)
+		// Sort related matches descending by shared tags.
 		sort.SliceStable(scores, func(a, b int) bool {
 			return scores[a].score > scores[b].score
 		})
