@@ -38,13 +38,44 @@ To answer these, I moved beyond raw data and built a metrics engine that compute
 
 Here is how it works today:
 
-```mermaid
-graph TD
-    A["Article Extraction<br/>Python"] -->|Extract & Deduplicate| B["Google Sheets<br/>(Central Reading List)"]
-    B -->|Read Articles| C["Metrics Calculation<br/>(Go → metrics/YYYY-MM-DD.json)"]
-    C -->|Load Latest| D["Dashboard Generator<br/>Go + html/template"]
-    D -->|Render HTML| E["Static HTML Page"]
-    E -->|Deploy| F["GitHub Pages"]
+```text
+  ┌──────────────────────┐
+  │  Article Extraction  │
+  │       (Python)       │
+  └──────────────────────┘
+             │
+             │ (Extract & Deduplicate)
+             ▼
+  ┌──────────────────────┐
+  │    Google Sheets     │
+  │ (Central Read List)  │
+  └──────────────────────┘
+             │
+             │ (Read Articles)
+             ▼
+  ┌──────────────────────┐
+  │ Metrics Calculation  │
+  │  (Go → metrics.json) │
+  └──────────────────────┘
+             │
+             │ (Load Latest)
+             ▼
+  ┌──────────────────────┐
+  │ Dashboard Generator  │
+  │ (Go + html/template) │
+  └──────────────────────┘
+             │
+             │ (Render HTML)
+             ▼
+  ┌──────────────────────┐
+  │   Static HTML Page   │
+  └──────────────────────┘
+             │
+             │ (Deploy)
+             ▼
+  ┌──────────────────────┐
+  │     GitHub Pages     │
+  └──────────────────────┘
 ```
 
 ---

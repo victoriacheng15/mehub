@@ -65,65 +65,69 @@ How entities relate to each other. For example, a `User` can have many `Orders`.
 
 ### Conceptual Model Diagram
 
-```mermaid
-erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--o{ PRODUCT : contains
-    CUSTOMER {
-        string Name
-        string Email
-    }
-    PRODUCT {
-        string ProductName
-        float Price
-    }
-
+```text
+  +--------------+          places          +-----------+
+  |   CUSTOMER   | 1 ----------------- 0..* |   ORDER   |
+  +--------------+                          +-----------+
+  | string Name  |                                | 1
+  | string Email |                                |
+  +--------------+                                | contains
+                                                  |
+                                            0..*  v
+                                            +--------------+
+                                            |   PRODUCT    |
+                                            +--------------+
+                                            | string Name  |
+                                            | float Price  |
+                                            +--------------+
 ```
 
 ### Logical Model Diagram
 
-```mermaid
-erDiagram
-    Customer {
-        int CustomerID PK
-        string Name
-        string Email
-    }
-    Order {
-        int OrderID PK
-        date OrderDate
-        int CustomerID FK
-    }
-    Product {
-        int ProductID PK
-        string ProductName
-        decimal Price
-    }
-    Customer ||--o{ Order : places
-    Order ||--o{ Product : contains
+```text
+  +------------------+          places          +------------------+
+  |     Customer     | 1 ----------------- 0..* |      Order       |
+  +------------------+                          +------------------+
+  | CustomerID (PK)  |                          | OrderID (PK)     |
+  | Name             |                          | OrderDate        |
+  | Email            |                          | CustomerID (FK)  |
+  +------------------+                          +------------------+
+                                                          | 1
+                                                          |
+                                                          | contains
+                                                          |
+                                                    0..*  v
+                                                    +------------------+
+                                                    |     Product      |
+                                                    +------------------+
+                                                    | ProductID (PK)   |
+                                                    | ProductName      |
+                                                    | Price            |
+                                                    +------------------+
 ```
 
 ### Physical Model Diagram
 
-```mermaid
-erDiagram
-    customers {
-        SERIAL customer_id PK
-        VARCHAR name
-        VARCHAR email
-    }
-    orders {
-        SERIAL order_id PK
-        DATE order_date
-        INT customer_id FK
-    }
-    products {
-        SERIAL product_id PK
-        VARCHAR product_name
-        NUMERIC price
-    }
-    customers ||--o{ orders : places
-    orders ||--o{ products : contains
+```text
+  +--------------------+          places          +--------------------+
+  |     customers      | 1 ----------------- 0..* |       orders       |
+  +--------------------+                          +--------------------+
+  | customer_id (PK)   |                          | order_id (PK)      |
+  | name (VARCHAR)     |                          | order_date (DATE)  |
+  | email (VARCHAR)    |                          | customer_id (FK)   |
+  +--------------------+                          +--------------------+
+                                                             | 1
+                                                             |
+                                                             | contains
+                                                             |
+                                                       0..*  v
+                                                       +--------------------+
+                                                       |     products       |
+                                                       +--------------------+
+                                                       | product_id (PK)    |
+                                                       | product_name (VAR) |
+                                                       | price (NUMERIC)    |
+                                                       +--------------------+
 ```
 
 ---

@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"os"
 	"path/filepath"
-	"regexp"
 	"sort"
 	"strings"
 
@@ -14,8 +13,6 @@ import (
 	"github.com/yuin/goldmark/renderer/html"
 	"gopkg.in/yaml.v3"
 )
-
-var mermaidRegex = regexp.MustCompile(`(?s)<pre><code class="language-mermaid">.*?</code></pre>`)
 
 // LoadConfig reads and parses all YAML files under configDir, populating a SiteConfig.
 func LoadConfig(configDir string) (*SiteConfig, error) {
@@ -79,11 +76,6 @@ func ParsePost(path string) (*Post, error) {
 	}
 
 	content := buf.String()
-	content = mermaidRegex.ReplaceAllStringFunc(content, func(m string) string {
-		inner := strings.TrimPrefix(m, `<pre><code class="language-mermaid">`)
-		inner = strings.TrimSuffix(inner, `</code></pre>`)
-		return `<div class="mermaid">` + inner + `</div>`
-	})
 
 	slug := strings.TrimSuffix(filepath.Base(path), ".md")
 

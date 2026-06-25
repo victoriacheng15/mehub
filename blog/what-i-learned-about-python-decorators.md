@@ -83,12 +83,20 @@ Decorators let you move that shared logic into one place.
 
 Here’s the overall idea:
 
-```mermaid
-flowchart TD
-    A[You call your function] --> B[Decorator intercepts the call]
-    B --> C[Run extra logic like validation, logging]
-    C --> D[Execute original function]
-    D --> E[Return decorated result]
+```text
+  [ You call your function ]
+              |
+              v
+ [ Decorator intercepts call ]
+              |
+              v
+ [ Run extra logic (e.g. logs) ]
+              |
+              v
+ [ Execute original function ]
+              |
+              v
+ [ Return decorated result ]
 ```
 
 Decorators are perfect for things like:

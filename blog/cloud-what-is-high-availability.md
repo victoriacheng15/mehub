@@ -45,14 +45,14 @@ This design ensures that the system continues to operate — maybe with slightly
 
 Here’s a simplified view of how that looks:
 
-```mermaid
-graph LR
-  A[User Requests] --> LB[Load Balancer]
-  LB --> S1[Server - Zone A]
-  LB --> S2[Server - Zone B]
-  S1 --> DB[(Database Cluster)]
-  S2 --> DB
-  DB --> B[(Backup Storage)]
+```text
+  ┌──────┐      ┌───────────────┐      ┌─────────────────┐
+  │ User │ ───> │               │ ───> │ Server - Zone A │ ───┐
+  └──────┘      │               │      └─────────────────┘    │
+                │ Load Balancer │                             │ ──> ┌──────────────────┐      ┌────────────────┐
+                │               │      ┌─────────────────┐    │     │ Database Cluster │ ───> │ Backup Storage │
+                │               │ ───> │ Server - Zone B │ ───┘     └──────────────────┘      └────────────────┘
+                └───────────────┘      └─────────────────┘
 ```
 
 ✅ **Explanation:**  

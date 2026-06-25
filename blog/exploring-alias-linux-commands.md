@@ -15,14 +15,33 @@ The basic syntax of the `alias` command:
 alias new_command="original_command"
 ```
 
-```mermaid
-graph TD
-    A[Create Alias] --> B{Where is it defined?}
-    B -->|Command Line| C[Temporary Alias]
-    C --> D[Lost on Terminal Close]
-    B -->|Configuration File| E[Permanent Alias]
-    E -->|e.g., ~/.bashrc or ~/.zshrc| F[Loads on New Session]
-    F --> G[Persists Across Sessions]
+```text
+                     ┌──────────────┐
+                     │ Create Alias │
+                     └──────────────┘
+                             │
+                             ▼
+                 /───────────────────────\
+                <  Where is it defined?   >
+                 \───────────────────────/
+                   /                   \
+         (Command Line)             (Configuration File)
+                 /                       \
+                ▼                         ▼
+      ┌─────────────────┐       ┌─────────────────┐
+      │ Temporary Alias │       │ Permanent Alias │
+      └─────────────────┘       └─────────────────┘
+                │                         │
+                ▼                         ▼
+      ┌─────────────────┐       ┌─────────────────┐
+      │ Lost on Close   │       │ Loads on New    │
+      └─────────────────┘       │ Session         │
+                                └─────────────────┘
+                                          │
+                                          ▼
+                                ┌─────────────────┐
+                                │ Persists        │
+                                └─────────────────┘
 ```
 
 ---

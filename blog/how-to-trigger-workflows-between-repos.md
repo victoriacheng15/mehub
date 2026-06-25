@@ -154,16 +154,32 @@ jobs:
 
 ### How it Works (Diagram)
 
-```mermaid
-flowchart TD
-    A[Draft Blog Repo: Issue Created with 'trigger' Label] --> B[Trigger: Workflow in Draft Repo]
-    B --> C[Send repository_dispatch to Public Blog Repo]
-    C --> D[Public Blog Repo Workflow Runs]
-    D --> E[Fetch Blog Content via API]
-    E --> F[Create Branch & Commit Post]
-    F --> G{PR Exists?}
-    G -- Yes --> H[Do Nothing]
-    G -- No --> I[Create Pull Request for New Blog Post]
+```text
+[Draft Blog Repo: Issue Created with 'trigger' Label]
+                        |
+                        v
+          [Trigger: Workflow in Draft Repo]
+                        |
+                        v
+    [Send repository_dispatch to Public Blog Repo]
+                        |
+                        v
+        [Public Blog Repo Workflow Runs]
+                        |
+                        v
+          [Fetch Blog Content via API]
+                        |
+                        v
+         [Create Branch & Commit Post]
+                        |
+                        v
+                 /-------------\
+                <  PR Exists?   >
+                 \-------------/
+                   /         \
+            Yes   /           \  No
+                 v             v
+          [Do Nothing]    [Create Pull Request]
 ```
 
 ---

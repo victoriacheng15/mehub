@@ -23,12 +23,14 @@ Imagine you run a web app on a single server. As traffic grows, you deploy a sec
 
 #### Diagram: Scalability (grows but doesn’t shrink)
 
-```mermaid
-timeline
-    title Scalability Timeline (4 Hours)
-    0h : Server1 runs
-    2h : Server2 added (peak traffic)
-    4h : End (Server2 remains)
+```text
+Scalability Timeline (4 Hours)
+┌───────┬─────────────────┬───────────────────────────────┬───────────────────────────────┐
+│ Time  │ 0h              │ 2h (Peak Traffic)             │ 4h (End)                      │
+├───────┼─────────────────┼───────────────────────────────┼───────────────────────────────┤
+│ State │ [Server 1] runs │ [Server 2] added              │ [Server 2] remains            │
+│       │                 │ [Server 1] runs               │ [Server 1] runs               │
+└───────┴─────────────────┴───────────────────────────────┴───────────────────────────────┘
 ```
 
 ---
@@ -45,15 +47,14 @@ On Black Friday, your cloud app might automatically scale from 5 servers to 50 s
 
 #### Diagram: Elasticity (auto scale up and down)
 
-```mermaid
-timeline
-    title Elasticity Timeline (4 Hours)
-    0h : Server1 runs
-    2h : Server2 added
-    2h : Server3 added
-    3h : Server2 removed
-    3h : Server3 removed
-    4h : End (only Server1 remains)
+```text
+Elasticity Timeline (4 Hours)
+┌───────┬─────────────────┬─────────────────────────────────┬─────────────────────────────────┬───────────────────┐
+│ Time  │ 0h              │ 2h                              │ 3h                              │ 4h (End)          │
+├───────┼─────────────────┼─────────────────────────────────┼─────────────────────────────────┼───────────────────┤
+│ State │ [Server 1] runs │ [Server 2] & [Server 3] added   │ [Server 2] & [Server 3] removed │ [Server 1] remains│
+│       │                 │ [Server 1] runs                 │ [Server 1] runs                 │                   │
+└───────┴─────────────────┴─────────────────────────────────┴─────────────────────────────────┴───────────────────┘
 ```
 
 ---
