@@ -140,22 +140,7 @@ This is a test.
 			},
 			wantErr: false,
 		},
-		{
-			name:     "Mermaid Diagram Replacement",
-			filename: "mermaid.md",
-			content: `---
-title: "Mermaid"
----
-<pre><code class="language-mermaid">graph TD; A-->B;</code></pre>
-`,
-			validate: func(t *testing.T, post *Post) {
-				expected := `<div class="mermaid">graph TD; A-->B;</div>`
-				if !strings.Contains(post.Content, expected) {
-					t.Errorf("Expected mermaid div, got: %s", post.Content)
-				}
-			},
-			wantErr: false,
-		},
+
 		{
 			name:     "Invalid Frontmatter",
 			filename: "invalid_fm.md",

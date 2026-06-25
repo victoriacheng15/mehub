@@ -23,10 +23,8 @@ The fix was to add a custom build workflow that installs Playwright so Astro can
 
 I used `rehype-mermaid` to transform code blocks into diagrams during the build:
 
-```mermaid
-graph LR
-  A --> B
-  B --> C
+```text
+  [ A ] ──> [ B ] ──> [ C ]
 ```
 
 But once deployed, the page went blank. Not just the diagram — all content disappeared. No errors. No warnings.

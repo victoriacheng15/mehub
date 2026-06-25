@@ -23,13 +23,22 @@ chgrp developers project.txt
 
 This command changes the group ownership of `project.txt` to the `developers` group.
 
-```mermaid
-graph LR
-    A[File/Directory] --> B(User/Owner)
-    A --> C(Group)
-    A --> D(Others)
-    C -->|Permissions Match| E[Group Members]
-    C -.->|Admin Modified via| F[chgrp Command]
+```text
+                      ┌───────────────┐
+                ┌───> │  User/Owner   │
+                │     └───────────────┘
+                │     ┌───────────────┐       ┌───────────────┐
+  ┌──────────┐  ├───> │     Group     │ ────> │ Group Members │
+  │   File   │  │     └───────────────┘       └───────────────┘
+  │    or    │  │             :
+  │Directory │  │             : (Admin Modified via)
+  └──────────┘  │             v
+                │     ┌───────────────┐
+                ├───> │   chgrp Cmd   │
+                │     └───────────────┘
+                │     ┌───────────────┐
+                └───> │    Others     │
+                      └───────────────┘
 ```
 
 ---
