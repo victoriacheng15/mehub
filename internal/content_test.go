@@ -18,37 +18,31 @@ func TestLoadConfig(t *testing.T) {
 		{
 			name: "Happy Path - All files valid",
 			files: map[string]string{
-				"profile.yaml": `
-site:
+				"config.yaml": `
+landing:
   title: "My Site"
   description: "A cool site"
-  about:
-    paragraphs:
-      - Hello world
-`,
-				"navigation.yaml": `
+about:
+  paragraphs:
+    - Hello world
 navigation:
   header:
     - href: "/"
       text: "Home"
-`,
-				"socials.yaml": `
 socials:
   - name: "GitHub"
     href: "https://github.com"
+skills:
+  - name: "Go"
 `,
 				"projects.yaml": `
 projects:
   - title: "Project A"
 `,
-				"skills.yaml": `
-skills:
-  - name: "Go"
-`,
 			},
 			validate: func(t *testing.T, cfg *SiteConfig) {
-				if cfg.Site.Title != "My Site" {
-					t.Errorf("Expected Site.Title to be 'My Site', got '%s'", cfg.Site.Title)
+				if cfg.Landing.Title != "My Site" {
+					t.Errorf("Expected Landing.Title to be 'My Site', got '%s'", cfg.Landing.Title)
 				}
 				if len(cfg.Navigation.Header) != 1 {
 					t.Errorf("Expected 1 header nav item, got %d", len(cfg.Navigation.Header))
@@ -62,7 +56,7 @@ skills:
 		{
 			name: "Missing File",
 			files: map[string]string{
-				"profile.yaml": `site: { title: "Test" }`,
+				"projects.yaml": `projects: []`,
 			},
 			validate: nil,
 			wantErr:  true,
@@ -70,8 +64,8 @@ skills:
 		{
 			name: "Invalid YAML",
 			files: map[string]string{
-				"profile.yaml": `
-site:
+				"config.yaml": `
+landing:
 	title: "Invalid Tab"
 `,
 			},

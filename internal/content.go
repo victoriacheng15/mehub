@@ -19,11 +19,8 @@ func LoadConfig(configDir string) (*SiteConfig, error) {
 	var config SiteConfig
 
 	files := []string{
-		"profile.yaml",
-		"navigation.yaml",
-		"socials.yaml",
+		"config.yaml",
 		"projects.yaml",
-		"skills.yaml",
 	}
 
 	for _, file := range files {

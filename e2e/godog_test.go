@@ -87,24 +87,21 @@ func (tc *testContext) setupValidConfig() error {
 		return err
 	}
 
-	profileYAML := `
-site:
+	configYAML := `
+landing:
   title: "E2E Test Site"
   url: "https://example.com/"
-  about:
-    paragraphs:
-      - "hello e2e"
-`
-	navigationYAML := `
+about:
+  paragraphs:
+    - "hello e2e"
 navigation:
   header: []
+skills: []
+socials: []
 `
 	configs := map[string]string{
-		"profile.yaml":    profileYAML,
-		"navigation.yaml": navigationYAML,
-		"socials.yaml":    `socials: []`,
-		"projects.yaml":   `projects: []`,
-		"skills.yaml":     `skills: []`,
+		"config.yaml":   configYAML,
+		"projects.yaml": `projects: []`,
 	}
 	for file, content := range configs {
 		if err := os.WriteFile(filepath.Join(tc.configDir, file), []byte(content), 0644); err != nil {
@@ -140,10 +137,7 @@ func (tc *testContext) setupMissingConfig() error {
 		return err
 	}
 	configs := map[string]string{
-		"navigation.yaml": `navigation: { header: [] }`,
-		"socials.yaml":    `socials: []`,
-		"projects.yaml":   `projects: []`,
-		"skills.yaml":     `skills: []`,
+		"projects.yaml": `projects: []`,
 	}
 	for file, content := range configs {
 		if err := os.WriteFile(filepath.Join(tc.configDir, file), []byte(content), 0644); err != nil {

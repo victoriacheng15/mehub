@@ -1,0 +1,133 @@
+landing:
+  url: "https://victoriacheng15.dev/"
+  title: Victoria's Tech Hub
+  name: Victoria Cheng
+  slogan: Backend systems, infrastructure, and the "why" behind them in practice.
+  status: "CNCF LFX Mentee · SAIT '26"
+  experience: Shopify · 4 years of engineering experience · Former Packaging Engineer
+  focusAreas:
+    - Backend Development
+    - Platform Engineering
+    - DevOps
+    - Observability
+
+navigation:
+  header:
+    - href: about.html
+      text: About
+    - href: now.html
+      text: Now
+    - href: blog.html
+      text: Blog
+  footer:
+    - href: about.html
+      text: About
+    - href: now.html
+      text: Now
+    - href: blog.html
+      text: Blog
+    - href: archive.html
+      text: Archive
+
+about:
+  image: avatar.png
+  paragraphs:
+    - I transitioned from Packaging Engineering, where I designed for real-world constraints and physical systems, to Software Engineering, applying the same structured thinking to cloud infrastructure and distributed systems. I trade CAD drawings for CI/CD pipelines and shift from physical limitations to designing for scalability, reliability, and failure in software.
+    - My time at Shopify reinforced a 'measure twice, cut once' mindset. Working on systems supporting millions of users shaped how I approach engineering, focusing on preventing regressions, designing for correctness early, and ensuring systems remain resilient under high concurrency and real-world production load.
+    - This site is where architectural logic meets the reality of continuous learning. I document the 'why' behind decisions, the trade-offs of every stack, and the reasoning behind system design choices, driven by curiosity and a desire to understand how things work beneath the surface.
+
+now:
+  lastUpdated: June 2026
+  categories:
+    - title: Work & Projects
+      items:
+        - LFX Mentee @ CNCF - Chaos Mesh.
+        - SAIT 2026 - Software Development Program.
+        - Actively seeking a New Grad Software Developer role.
+        - Refining and maintaining LLM Telemetry Gateway, Uptime Monitor, Cover Craft and Dev Toolchain projects.
+
+    - title: Books & Learning
+      items:
+        - Reading Power and Progress by Daron Acemoglu and Simon Johnson.
+        - Building and refining cloud-native backend systems using Go and Kubernetes.
+        - Exploring system-level programming in Go, GitOps workflows with ArgoCD, and chaos engineering with Chaos Mesh.
+
+    - title: Personal
+      items:
+        - Based in Greater Vancouver Metropolitan Area.
+        - Staying consistent with daily exercise.
+        - Exploring hardware and edge systems for future projects.
+
+skills:
+# 📝 Programming Languages
+  - name: Go
+    icon: go.svg
+  - name: Python
+    icon: python.svg
+  - name: TypeScript
+    icon: typescript.svg
+  - name: Rust
+    icon: rust.svg
+
+# ☁️ Cloud & Infrastructure
+  - name: Kubernetes
+    icon: kubernetes.svg
+  - name: Terraform
+    icon: terraform.svg
+  - name: ArgoCD
+    icon: argo.svg
+  - name: Docker
+    icon: docker.svg
+  - name: Azure
+    icon: azure.svg
+  - name: AWS
+    icon: aws.svg
+
+# ⚙️ Observability
+  - name: OpenTelemetry
+    icon: opentelemetry.svg
+  - name: Prometheus
+    icon: prometheus.svg
+  - name: Grafana
+    icon: grafana.svg
+
+  # Systems & Security
+  - name: Cilium (eBPF)
+    icon: cilium.svg
+  - name: GitHub Actions
+    icon: githubactions.svg
+  - name: Linux
+    icon: linux.svg
+  - name: Tailscale
+    icon: tailscale.svg
+
+# 🛠 Backend & Frontend
+  - name: PostgreSQL
+    icon: postgresql.svg
+  - name: MongoDB
+    icon: mongodb.svg
+  - name: React
+    icon: react.svg
+  - name: Tailwind CSS
+    icon: tailwindcss.svg
+
+# 🤖 AI & MCP
+  - name: Model Context Protocol (MCP)
+    icon: modelcontextprotocol.svg
+
+socials:
+  - name: GitHub
+    href: "https://github.com/victoriacheng15"
+    icon: github.svg
+  - name: LinkedIn
+    href: "https://www.linkedin.com/in/victoriacheng15"
+    icon: linkedin.svg
+  - name: YouTube
+    href: "https://www.youtube.com/@victoriacheng15"
+    icon: youtube.svg
+  - name: Buy Me a Coffee
+    href: "https://www.buymeacoffee.com/victoriacheng15"
+    icon: buymeacoffee.svg
+  - name: rss
+    href: /rss.xml
+    icon: rss.svg
