@@ -12,7 +12,7 @@ import (
 // Helper to create a dummy config
 func createConfig() *SiteConfig {
 	return &SiteConfig{
-		Site: SiteMetadata{
+		Landing: LandingConfig{
 			Title: "Test Site",
 			URL:   "http://example.com/",
 		},

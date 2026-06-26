@@ -19,28 +19,23 @@ func TestRunPipeline(t *testing.T) {
 	if err := os.MkdirAll(configDir, 0755); err != nil {
 		t.Fatal(err)
 	}
-	profileYAML := `
-site:
+	configYAML := `
+landing:
   title: "Integration Test Site"
   url: "https://example.com/"
-  about:
-    paragraphs:
-      - "hello integration"
-`
-	navigationYAML := `
+about:
+  paragraphs:
+    - "hello integration"
 navigation:
   header: []
+skills: []
+socials: []
 `
-	socialsYAML := `socials: []`
 	projectsYAML := `projects: []`
-	skillsYAML := `skills: []`
 
 	configs := map[string]string{
-		"profile.yaml":    profileYAML,
-		"navigation.yaml": navigationYAML,
-		"socials.yaml":    socialsYAML,
-		"projects.yaml":   projectsYAML,
-		"skills.yaml":     skillsYAML,
+		"config.yaml":   configYAML,
+		"projects.yaml": projectsYAML,
 	}
 	for file, content := range configs {
 		if err := os.WriteFile(filepath.Join(configDir, file), []byte(content), 0644); err != nil {

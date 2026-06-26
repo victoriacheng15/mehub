@@ -7,15 +7,15 @@
     <!-- SEO -->
     <title>{{ .Title }}</title>
     <meta name="description"
-        content="{{ if .Post }}{{ .Post.Description }}{{ else }}{{ .Config.Site.Slogan }}{{ end }}">
-    <link rel="canonical" href="{{ .Config.Site.URL }}{{ if .Post }}blog/{{ .Post.Slug }}.html{{ end }}">
+        content="{{ if .Post }}{{ .Post.Description }}{{ else }}{{ .Config.Landing.Slogan }}{{ end }}">
+    <link rel="canonical" href="{{ .Config.Landing.URL }}{{ if .Post }}blog/{{ .Post.Slug }}.html{{ end }}">
     <!-- Open Graph / Social -->
     <meta property="og:type" content="{{ if .Post }}article{{ else }}website{{ end }}">
-    <meta property="og:url" content="{{ .Config.Site.URL }}{{ if .Post }}blog/{{ .Post.Slug }}.html{{ end }}">
+    <meta property="og:url" content="{{ .Config.Landing.URL }}{{ if .Post }}blog/{{ .Post.Slug }}.html{{ end }}">
     <meta property="og:title" content="{{ .Title }}">
     <meta property="og:description"
-        content="{{ if .Post }}{{ .Post.Description }}{{ else }}{{ .Config.Site.Slogan }}{{ end }}">
-    <meta property="og:image" content="{{ .Config.Site.URL }}avatar.png">
+        content="{{ if .Post }}{{ .Post.Description }}{{ else }}{{ .Config.Landing.Slogan }}{{ end }}">
+    <meta property="og:image" content="{{ .Config.Landing.URL }}avatar.png">
     <!-- JSON-LD Structured Data Schema -->
     {{ if .Post }}
     <script type="application/ld+json">
@@ -26,15 +26,15 @@
       "description": "{{ .Post.Description }}",
       "author": {
         "@type": "Person",
-        "name": "{{ .Config.Site.Name }}"
+        "name": "{{ .Config.Landing.Name }}"
       },
       "datePublished": "{{ .Post.Date.Format `2006-01-02T15:04:05Z07:00` }}",
-      "url": "{{ .Config.Site.URL }}blog/{{ .Post.Slug }}.html"
+      "url": "{{ .Config.Landing.URL }}blog/{{ .Post.Slug }}.html"
     }
     </script>
     {{ end }}
     <!-- RSS Feed Discovery -->
-    <link rel="alternate" type="application/rss+xml" title="{{ .Config.Site.Title }} RSS Feed"
+    <link rel="alternate" type="application/rss+xml" title="{{ .Config.Landing.Title }} RSS Feed"
         href="{{ .PathPrefix }}rss.xml">
 
     <link rel="icon" type="image/svg+xml" href="{{ .PathPrefix }}favicon.svg">
@@ -58,7 +58,7 @@
     <div class="flex flex-col items-center sm:items-start">
         <a href="{{ .PathPrefix }}index.html"
             class="text-2xl font-bold text-violet-400 hover:text-violet-300 transition-colors">
-            {{ .Config.Site.Title }}
+            {{ .Config.Landing.Title }}
         </a>
     </div>
     <nav aria-label="Main Navigation">
@@ -88,7 +88,7 @@
             </ul>
         </nav>
         <div class="flex flex-col gap-2 text-[10px] font-mono uppercase tracking-widest text-slate-400">
-            <p>&copy; {{ .CurrentYear }} 🐧 {{ .Config.Site.Title }}. All rights reserved.</p>
+            <p>&copy; {{ .CurrentYear }} 🐧 {{ .Config.Landing.Title }}. All rights reserved.</p>
         </div>
     </div>
     <div class="flex flex-col items-center sm:items-end gap-6">

@@ -61,23 +61,23 @@ type NowConfig struct {
 	Categories  []NowCategory `yaml:"categories"`
 }
 
-// SiteMetadata gathers primary context on site-wide branding, status, experience, and biographic data.
-type SiteMetadata struct {
-	URL        string      `yaml:"url"`
-	Title      string      `yaml:"title"`
-	Name       string      `yaml:"name"`
-	Slogan     string      `yaml:"slogan"`
-	Experience string      `yaml:"experience"`
-	Status     string      `yaml:"status"`
-	FocusAreas []string    `yaml:"focusAreas"`
-	About      AboutConfig `yaml:"about"`
-	Now        NowConfig   `yaml:"now"`
+// LandingConfig gathers primary profile highlights and hero section metadata.
+type LandingConfig struct {
+	URL        string   `yaml:"url"`
+	Title      string   `yaml:"title"`
+	Name       string   `yaml:"name"`
+	Slogan     string   `yaml:"slogan"`
+	Experience string   `yaml:"experience"`
+	Status     string   `yaml:"status"`
+	FocusAreas []string `yaml:"focusAreas"`
 }
 
 // SiteConfig represents the full composite profile parsed from YAML configurations in the repository.
 type SiteConfig struct {
-	Site       SiteMetadata     `yaml:"site"`
+	Landing    LandingConfig    `yaml:"landing"`
 	Navigation NavigationConfig `yaml:"navigation"`
+	About      AboutConfig      `yaml:"about"`
+	Now        NowConfig        `yaml:"now"`
 	Socials    []Social         `yaml:"socials"`
 	Projects   []Project        `yaml:"projects"`
 	Skills     []Skill          `yaml:"skills"`

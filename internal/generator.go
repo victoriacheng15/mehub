@@ -76,7 +76,7 @@ func (g *SiteGenerator) RenderPage(dir, filename, tmplPath string, titlePrefix s
 	}
 	defer outputFile.Close()
 
-	title := g.Config.Site.Title
+	title := g.Config.Landing.Title
 	if titlePrefix != "" {
 		title = titlePrefix + " | " + title
 	}
@@ -221,16 +221,16 @@ func (g *SiteGenerator) GenerateRSS(distDir string, posts []Post) error {
 	if _, err := fmt.Fprint(f, `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>`+escape(g.Config.Site.Title)+`</title>
-  <link>`+g.Config.Site.URL+`</link>
-  <description>`+escape(g.Config.Site.Slogan)+`</description>
+  <title>`+escape(g.Config.Landing.Title)+`</title>
+  <link>`+g.Config.Landing.URL+`</link>
+  <description>`+escape(g.Config.Landing.Slogan)+`</description>
   <language>en-us</language>
 `); err != nil {
 		return err
 	}
 
 	for _, post := range posts {
-		link := g.Config.Site.URL + "blog/" + post.Slug + ".html"
+		link := g.Config.Landing.URL + "blog/" + post.Slug + ".html"
 		if _, err := fmt.Fprintf(f, `  <item>
     <title>%s</title>
     <link>%s</link>
@@ -270,7 +270,7 @@ func (g *SiteGenerator) GenerateSitemap(distDir string, posts []Post) error {
     <loc>%s%s</loc>
     <lastmod>%s</lastmod>
   </url>
-`, g.Config.Site.URL, page, time.Now().Format("2006-01-02")); err != nil {
+`, g.Config.Landing.URL, page, time.Now().Format("2006-01-02")); err != nil {
 			return err
 		}
 	}
@@ -281,7 +281,7 @@ func (g *SiteGenerator) GenerateSitemap(distDir string, posts []Post) error {
     <loc>%sblog/%s.html</loc>
     <lastmod>%s</lastmod>
   </url>
-`, g.Config.Site.URL, post.Slug, post.Date.Format("2006-01-02")); err != nil {
+`, g.Config.Landing.URL, post.Slug, post.Date.Format("2006-01-02")); err != nil {
 			return err
 		}
 	}
@@ -291,7 +291,7 @@ func (g *SiteGenerator) GenerateSitemap(distDir string, posts []Post) error {
     <loc>%sapi/manifest.json</loc>
     <lastmod>%s</lastmod>
   </url>
-`, g.Config.Site.URL, time.Now().Format("2006-01-02")); err != nil {
+`, g.Config.Landing.URL, time.Now().Format("2006-01-02")); err != nil {
 		return err
 	}
 
@@ -313,7 +313,7 @@ func (g *SiteGenerator) GenerateRegistries(distDir string, data *ContentData) er
 		blogItems = append(blogItems, BlogItem{
 			Title:       post.Title,
 			Description: post.Description,
-			URL:         g.Config.Site.URL + "blog/" + post.Slug + ".html",
+			URL:         g.Config.Landing.URL + "blog/" + post.Slug + ".html",
 			Date:        post.Date.Format(time.RFC3339),
 			Tags:        post.Tags,
 		})
@@ -340,21 +340,21 @@ func (g *SiteGenerator) GenerateRegistries(distDir string, data *ContentData) er
 	// Unified MCP Manifest
 	manifest := Manifest{
 		MCPVersion: "1.0",
-		Name:       g.Config.Site.Title,
-		URL:        g.Config.Site.URL,
+		Name:       g.Config.Landing.Title,
+		URL:        g.Config.Landing.URL,
 		UpdatedAt:  time.Now().Format(time.RFC3339),
 		Profile: ProfileRegistry{
-			URL:        g.Config.Site.URL,
-			Title:      g.Config.Site.Title,
-			Name:       g.Config.Site.Name,
-			Slogan:     g.Config.Site.Slogan,
-			Experience: g.Config.Site.Experience,
-			Status:     g.Config.Site.Status,
-			FocusAreas: g.Config.Site.FocusAreas,
+			URL:        g.Config.Landing.URL,
+			Title:      g.Config.Landing.Title,
+			Name:       g.Config.Landing.Name,
+			Slogan:     g.Config.Landing.Slogan,
+			Experience: g.Config.Landing.Experience,
+			Status:     g.Config.Landing.Status,
+			FocusAreas: g.Config.Landing.FocusAreas,
 			About: ProfileAbout{
-				Paragraphs: g.Config.Site.About.Paragraphs,
+				Paragraphs: g.Config.About.Paragraphs,
 			},
-			Now: g.Config.Site.Now,
+			Now: g.Config.Now,
 		},
 		Skills:   allSkills,
 		Projects: projectItems,
@@ -405,17 +405,17 @@ func (g *SiteGenerator) GenerateLLMsTxt(distDir string) error {
 	var sb strings.Builder
 
 	// Role & Identity
-	sb.WriteString("# " + g.Config.Site.Name + " - Technical Portfolio\n\n")
+	sb.WriteString("# " + g.Config.Landing.Name + " - Technical Portfolio\n\n")
 	sb.WriteString("## Role & Identity\n\n")
-	sb.WriteString(g.Config.Site.Slogan + "\n\n")
+	sb.WriteString(g.Config.Landing.Slogan + "\n\n")
 
 	// Recruiting Signals
 	sb.WriteString("## Recruiting Signals\n\n")
-	if g.Config.Site.Status != "" {
-		sb.WriteString("- **Status**: " + g.Config.Site.Status + "\n")
+	if g.Config.Landing.Status != "" {
+		sb.WriteString("- **Status**: " + g.Config.Landing.Status + "\n")
 	}
-	sb.WriteString("- **Experience**: " + g.Config.Site.Experience + "\n")
-	sb.WriteString("- **Focus Areas**: " + strings.Join(g.Config.Site.FocusAreas, ", ") + "\n\n")
+	sb.WriteString("- **Experience**: " + g.Config.Landing.Experience + "\n")
+	sb.WriteString("- **Focus Areas**: " + strings.Join(g.Config.Landing.FocusAreas, ", ") + "\n\n")
 
 	// Technical Skills
 	sb.WriteString("## Technical Skills\n\n")
@@ -435,7 +435,7 @@ func (g *SiteGenerator) GenerateLLMsTxt(distDir string) error {
 	// Discovery Registry
 	sb.WriteString("## Discovery Registry\n\n")
 	sb.WriteString("The following endpoint provides unified technical context for AI agents (Model Context Protocol):\n\n")
-	sb.WriteString("- **Unified Manifest**: " + g.Config.Site.URL + "api/manifest.json\n\n")
+	sb.WriteString("- **Unified Manifest**: " + g.Config.Landing.URL + "api/manifest.json\n\n")
 
 	// Contact
 	sb.WriteString("## Contact\n\n")
