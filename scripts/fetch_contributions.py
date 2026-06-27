@@ -50,18 +50,19 @@ def query_github_api(url: str) -> dict:
 
 def fetch_external_pull_requests() -> list[dict]:
     """Retrieve all external pull requests authored by the user from GitHub API."""
-    search_query = urllib.parse.quote(f"author:{USERNAME} type:pr -user:{USERNAME}")
     pull_requests = []
     
-    # Iterate through pagination pages (max 10 pages)
-    for page in range(1, 11):
-        url = f"https://api.github.com/search/issues?q={search_query}&per_page=100&page={page}"
-        payload = query_github_api(url)
-        page_items = payload.get("items", [])
-        pull_requests.extend(page_items)
-        if len(page_items) < 100:
-            break
-            
+    # Query open and merged PRs separately to exclude closed/unmerged ones
+    for state_filter in ["is:open", "is:merged"]:
+        search_query = urllib.parse.quote(f"author:{USERNAME} type:pr -user:{USERNAME} {state_filter}")
+        for page in range(1, 11):
+            url = f"https://api.github.com/search/issues?q={search_query}&per_page=100&page={page}"
+            payload = query_github_api(url)
+            page_items = payload.get("items", [])
+            pull_requests.extend(page_items)
+            if len(page_items) < 100:
+                break
+                
     return pull_requests
 
 
