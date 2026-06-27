@@ -37,6 +37,20 @@ type Project struct {
 	Emoji            string   `yaml:"emoji"`
 }
 
+// PullRequest represents an open source pull request contribution.
+type PullRequest struct {
+	Number int    `yaml:"number"`
+	Title  string `yaml:"title"`
+}
+
+// Contribution outlines external open-source repository contributions.
+type Contribution struct {
+	Repo        string        `yaml:"repo"`
+	Link        string        `yaml:"link"`
+	Description string        `yaml:"description"`
+	PRs         []PullRequest `yaml:"prs"`
+}
+
 // Skill represents a technology tag paired with a matching display icon or CSS utility.
 type Skill struct {
 	Name string `yaml:"name"`
@@ -74,13 +88,14 @@ type LandingConfig struct {
 
 // SiteConfig represents the full composite profile parsed from YAML configurations in the repository.
 type SiteConfig struct {
-	Landing    LandingConfig    `yaml:"landing"`
-	Navigation NavigationConfig `yaml:"navigation"`
-	About      AboutConfig      `yaml:"about"`
-	Now        NowConfig        `yaml:"now"`
-	Socials    []Social         `yaml:"socials"`
-	Projects   []Project        `yaml:"projects"`
-	Skills     []Skill          `yaml:"skills"`
+	Landing       LandingConfig    `yaml:"landing"`
+	Navigation    NavigationConfig `yaml:"navigation"`
+	About         AboutConfig      `yaml:"about"`
+	Now           NowConfig        `yaml:"now"`
+	Socials       []Social         `yaml:"socials"`
+	Projects      []Project        `yaml:"projects"`
+	Skills        []Skill          `yaml:"skills"`
+	Contributions []Contribution   `yaml:"contributions"`
 }
 
 // ============================================================================
