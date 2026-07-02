@@ -13,8 +13,8 @@ Keeping these databases separate made sense because they do different work. SQLi
 
 ### Past Logs
 
-- [\\[Engineering Log\\] Persistent AI Memory with Echo](https://victoriacheng15.dev/blog/engineering-log-persistent-ai-memory-with-echo)
-- [\\[Engineering Log\\] Measuring Memory Value in Echo](https://victoriacheng15.dev/blog/engineering-log-measuring-memory-value-in-echo)
+- [\[Engineering Log\] Persistent AI Memory with Echo](https://victoriacheng15.dev/blog/engineering-log-persistent-ai-memory-with-echo)
+- [\[Engineering Log\] Measuring Memory Value in Echo](https://victoriacheng15.dev/blog/engineering-log-measuring-memory-value-in-echo)
 
 ---
 

@@ -14,9 +14,9 @@ Echo already had the right human workflow: retrieve, confirm, act. The weak poin
 
 ### Past Logs
 
-- [\\[Engineering Log\\] Persistent AI Memory with Echo](https://victoriacheng15.dev/blog/engineering-log-persistent-ai-memory-with-echo)
-- [\\[Engineering Log\\] Measuring Memory Value in Echo](https://victoriacheng15.dev/blog/engineering-log-measuring-memory-value-in-echo)
-- [\\[Engineering Log\\] Fixing DuckDB File Locks](https://victoriacheng15.dev/blog/engineering-log-fixing-duckdb-file-locks)
+- [\[Engineering Log\] Persistent AI Memory with Echo](https://victoriacheng15.dev/blog/engineering-log-persistent-ai-memory-with-echo)
+- [\[Engineering Log\] Measuring Memory Value in Echo](https://victoriacheng15.dev/blog/engineering-log-measuring-memory-value-in-echo)
+- [\[Engineering Log\] Fixing DuckDB File Locks](https://victoriacheng15.dev/blog/engineering-log-fixing-duckdb-file-locks)
 
 ---
 
@@ -119,5 +119,3 @@ The change was small, but it moved the trust boundary. Echo did not just make de
 The useful lesson was that verification workflows can fail at the final step. Confirmation matters, but confirmation alone is not enough if the act step uses fuzzy identifiers. Destructive tools need stable targets.
 
 This is especially important for AI memory. Lost context can change future behavior, and ambiguous deletion creates unnecessary risk. ID-based operations make the system easier to trust because the confirmed record and deleted record are the same row.
-
-
