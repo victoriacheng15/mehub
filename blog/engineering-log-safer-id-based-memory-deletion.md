@@ -3,7 +3,6 @@ title: "[Engineering Log] Safer ID-Based Memory Deletion"
 description: "A mid-level developer retrospective on shifting Echo memory deletion from content matching to ID-based operations to ensure AI tools target database rows with no ambiguity."
 date: 2026-06-30
 tags: ["go", "retrospective", "mcp"]
-draft: true
 ---
 
 ## Context
