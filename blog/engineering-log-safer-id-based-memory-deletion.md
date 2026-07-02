@@ -13,9 +13,9 @@ Echo already had the right human workflow: retrieve, confirm, act. The weak poin
 
 ### Past Logs
 
-- [\\[Engineering Log\\] Persistent AI Memory with Echo](https://victoriacheng15.dev/blog/engineering-log-persistent-ai-memory-with-echo)
-- [\\[Engineering Log\\] Measuring Memory Value in Echo](https://victoriacheng15.dev/blog/engineering-log-measuring-memory-value-in-echo)
-- [\\[Engineering Log\\] Fixing DuckDB File Locks](https://victoriacheng15.dev/blog/engineering-log-fixing-duckdb-file-locks)
+- [\[Engineering Log\] Persistent AI Memory with Echo](https://victoriacheng15.dev/blog/engineering-log-persistent-ai-memory-with-echo)
+- [\[Engineering Log\] Measuring Memory Value in Echo](https://victoriacheng15.dev/blog/engineering-log-measuring-memory-value-in-echo)
+- [\[Engineering Log\] Fixing DuckDB File Locks](https://victoriacheng15.dev/blog/engineering-log-fixing-duckdb-file-locks)
 
 ---
 
