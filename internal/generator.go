@@ -100,7 +100,6 @@ func (g *SiteGenerator) GenerateStaticPages(distDir string, data *ContentData) e
 	}{
 		{"index.html", "index.html", "", PageData{}},
 		{"about.html", "about.html", "About", PageData{}},
-		{"now.html", "now.html", "Now", PageData{}},
 		{"404.html", "404.html", "404 - Not Found", PageData{}},
 		{"archive.html", "archive.html", "Archive", PageData{Archive: data.PostsByYear, ArchiveYears: data.ArchiveYears}},
 	}
@@ -264,7 +263,7 @@ func (g *SiteGenerator) GenerateSitemap(distDir string, posts []Post) error {
 	}
 
 	// Static Pages
-	pages := []string{"", "about.html", "now.html", "blog.html", "archive.html"}
+	pages := []string{"", "about.html", "blog.html", "archive.html"}
 	for _, page := range pages {
 		if _, err := fmt.Fprintf(f, `  <url>
     <loc>%s%s</loc>
@@ -352,9 +351,10 @@ func (g *SiteGenerator) GenerateRegistries(distDir string, data *ContentData) er
 			Status:     g.Config.Landing.Status,
 			FocusAreas: g.Config.Landing.FocusAreas,
 			About: ProfileAbout{
-				Paragraphs: g.Config.About.Paragraphs,
+				Timeline:    g.Config.About.Timeline,
+				LastUpdated: g.Config.About.LastUpdated,
+				Currently:   g.Config.About.Currently,
 			},
-			Now: g.Config.Now,
 		},
 		Skills:   allSkills,
 		Projects: projectItems,

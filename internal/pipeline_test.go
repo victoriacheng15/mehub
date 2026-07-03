@@ -53,7 +53,7 @@ socials: []
 	if err := os.WriteFile(filepath.Join(templatesDir, "base.html"), []byte(baseHTML), 0644); err != nil {
 		t.Fatal(err)
 	}
-	templateFiles := []string{"index.html", "about.html", "now.html", "404.html", "tags.html", "archive.html", "blog.html", "post.html"}
+	templateFiles := []string{"index.html", "about.html", "404.html", "tags.html", "archive.html", "blog.html", "post.html"}
 	for _, f := range templateFiles {
 		if err := os.WriteFile(filepath.Join(templatesDir, f), []byte(pageHTML), 0644); err != nil {
 			t.Fatal(err)
@@ -98,7 +98,6 @@ description: "A test post"
 	expectedOutputs := []string{
 		"index.html",
 		"about.html",
-		"now.html",
 		"404.html",
 		"archive.html",
 		"blog.html",

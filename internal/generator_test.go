@@ -46,7 +46,7 @@ func createTemplates(t *testing.T, dir string) {
 		t.Fatal(err)
 	}
 
-	files := []string{"index.html", "about.html", "now.html", "404.html", "tags.html", "archive.html", "blog.html", "post.html"}
+	files := []string{"index.html", "about.html", "404.html", "tags.html", "archive.html", "blog.html", "post.html"}
 	for _, f := range files {
 		if err := os.WriteFile(filepath.Join(tmplDir, f), []byte(pageTmpl), 0644); err != nil {
 			t.Fatal(err)
