@@ -57,22 +57,12 @@ type Skill struct {
 	Icon string `yaml:"icon"`
 }
 
-// NowCategory partitions recent activity or interests under a specific topic heading.
-type NowCategory struct {
-	Title string   `yaml:"title"`
-	Items []string `yaml:"items"`
-}
-
-// AboutConfig specifies self-descriptive imagery and multi-paragraph bio details.
+// AboutConfig specifies self-descriptive imagery, milestones, and current status updates.
 type AboutConfig struct {
-	Image      string   `yaml:"image"`
-	Paragraphs []string `yaml:"paragraphs"`
-}
-
-// NowConfig aggregates dynamic recent status information, logs, and categories.
-type NowConfig struct {
-	LastUpdated string        `yaml:"lastUpdated"`
-	Categories  []NowCategory `yaml:"categories"`
+	Image       string   `yaml:"image"`
+	Timeline    []string `yaml:"timeline"`
+	LastUpdated string   `yaml:"lastUpdated"`
+	Currently   []string `yaml:"currently"`
 }
 
 // LandingConfig gathers primary profile highlights and hero section metadata.
@@ -91,7 +81,6 @@ type SiteConfig struct {
 	Landing       LandingConfig    `yaml:"landing"`
 	Navigation    NavigationConfig `yaml:"navigation"`
 	About         AboutConfig      `yaml:"about"`
-	Now           NowConfig        `yaml:"now"`
 	Socials       []Social         `yaml:"socials"`
 	Projects      []Project        `yaml:"projects"`
 	Skills        []Skill          `yaml:"skills"`
@@ -189,7 +178,9 @@ type BlogRegistry struct {
 
 // ProfileAbout defines paragraphs of bio context on the public manifest.
 type ProfileAbout struct {
-	Paragraphs []string `json:"paragraphs"`
+	Timeline    []string `json:"timeline"`
+	LastUpdated string   `json:"lastUpdated"`
+	Currently   []string `json:"currently"`
 }
 
 // ProfileRegistry lists professional information and latest status details for AI queries.
@@ -202,7 +193,6 @@ type ProfileRegistry struct {
 	Status     string       `json:"status"`
 	FocusAreas []string     `json:"focusAreas"`
 	About      ProfileAbout `json:"about"`
-	Now        NowConfig    `json:"now"`
 }
 
 // Manifest defines the top-level Model Context Protocol (MCP) compatible structure describing the site context.
