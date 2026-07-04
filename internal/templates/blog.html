@@ -2,7 +2,7 @@
 <div class="flex flex-col gap-10">
     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
         {{ if stringsHasPrefix .Title "#" }}
-        {{ $tag := index (split .Title " | ") 0 }}
+        {{ $tag := stringsTrimPrefix (index (split .Title " | ") 0) "#" }}
         <h1 class="text-3xl font-bold text-violet-400">Tag: {{ $tag }}</h1>
         {{ else }}
         <h1 class="text-3xl font-bold text-violet-400">Blog</h1>
@@ -25,7 +25,7 @@
         {{ range .Tags }}
         {{ $active := false }}
         {{ if stringsHasPrefix $.Title "#" }}
-            {{ $currentTag := stringsTrimPrefix $.Title "#" }}
+            {{ $currentTag := stringsTrimPrefix (index (split $.Title " | ") 0) "#" }}
             {{ if eq $currentTag . }}
                 {{ $active = true }}
             {{ end }}
