@@ -53,3 +53,25 @@ projects:
       - OpenTelemetry
       - PostgreSQL
       - eBPF
+
+contributions:
+  - repo: chaos-mesh/chaos-mesh
+    link: https://github.com/chaos-mesh/chaos-mesh
+    description: "A Chaos Engineering Platform for Kubernetes."
+    items:
+      - type: PR
+        number: 5016
+        title: "fix(dashboard): support serving UI under a configurable subpath"
+        status: merged
+      - type: PR
+        number: 5013
+        title: "feat(e2e-test): implement gherkin BDD runner and podkill scenarios"
+        status: open
+      - type: Issue
+        number: 4096
+        title: "Remove old workflow interfaces in UI"
+        status: closed
+      - type: Issue
+        number: 2503
+        title: "workflow ui: duplicate names detected"
+        status: open

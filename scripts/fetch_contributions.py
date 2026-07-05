@@ -77,23 +77,50 @@ def fetch_repo_description(repo_name: str) -> str:
         return ""
 
 
-def organize_contributions(raw_prs: list[dict]) -> dict[str, list[dict]]:
-    """Group pull requests by repository name and filter by featured list."""
+def organize_prs(raw_prs: list[dict]) -> dict[str, list[dict]]:
+    """Group pull requests by repository name and sort by number descending."""
     contributions = {}
     for item in raw_prs:
-        # Extract owner/repo name from repository URL
         repo_url = item["repository_url"]
         repo_name = repo_url.split("/repos/")[1]
         
         if REPOS and repo_name not in REPOS:
             continue
             
+        is_closed = item.get("state") == "closed"
+        status = "merged" if is_closed else "open"
         contributions.setdefault(repo_name, []).append({
+            "type": "PR",
             "number": item["number"],
             "title": item["title"],
+            "status": status,
         })
         
-    # Sort pull requests in descending order by number (latest first)
+    for repo in contributions:
+        contributions[repo].sort(key=lambda x: x["number"], reverse=True)
+        
+    return contributions
+
+
+def organize_issues(raw_issues: list[dict]) -> dict[str, list[dict]]:
+    """Group issues by repository name and sort by number descending."""
+    contributions = {}
+    for item in raw_issues:
+        repo_url = item["repository_url"]
+        repo_name = repo_url.split("/repos/")[1]
+        
+        if REPOS and repo_name not in REPOS:
+            continue
+            
+        is_closed = item.get("state") == "closed"
+        status = "closed" if is_closed else "open"
+        contributions.setdefault(repo_name, []).append({
+            "type": "Issue",
+            "number": item["number"],
+            "title": item["title"],
+            "status": status,
+        })
+        
     for repo in contributions:
         contributions[repo].sort(key=lambda x: x["number"], reverse=True)
         
@@ -164,18 +191,49 @@ def generate_contributions_yaml(contributions: list[dict]) -> str:
         yaml_lines.append(f"    link: {contrib['link']}")
         escaped_desc = escape_yaml_string(contrib['description'])
         yaml_lines.append(f"    description: \"{escaped_desc}\"")
-        yaml_lines.append("    prs:")
-        for pr in contrib["prs"]:
-            yaml_lines.append(f"      - number: {pr['number']}")
-            escaped_title = escape_yaml_string(pr['title'])
+        yaml_lines.append("    items:")
+        for item in contrib["items"]:
+            yaml_lines.append(f"      - type: {item['type']}")
+            yaml_lines.append(f"        number: {item['number']}")
+            escaped_title = escape_yaml_string(item['title'])
             yaml_lines.append(f"        title: \"{escaped_title}\"")
+            yaml_lines.append(f"        status: {item['status']}")
     return "\n".join(yaml_lines) + "\n"
+
+
+def fetch_external_issues() -> list[dict]:
+    """Retrieve issues authored or commented on by the user from GitHub API."""
+    issues_map = {}
+    repo_filters = " ".join(f"repo:{repo}" for repo in REPOS)
+    
+    # Query authored and commented issues separately to bypass API query limitations
+    for filter_term in [f"author:{USERNAME}", f"commenter:{USERNAME}"]:
+        search_query = urllib.parse.quote(f"type:issue {filter_term} {repo_filters}".strip())
+        for page in range(1, 6):
+            url = f"https://api.github.com/search/issues?q={search_query}&per_page=100&page={page}"
+            payload = query_github_api(url)
+            page_items = payload.get("items", [])
+            for item in page_items:
+                issues_map[item["html_url"]] = item
+            if len(page_items) < 100:
+                break
+    return list(issues_map.values())
 
 
 def main() -> None:
     print("Fetching external contributions from GitHub...", file=sys.stderr)
     raw_prs = fetch_external_pull_requests()
-    contributions_map = organize_contributions(raw_prs)
+    print("Fetching external issues from GitHub...", file=sys.stderr)
+    raw_issues = fetch_external_issues()
+
+    prs_map = organize_prs(raw_prs)
+    issues_map = organize_issues(raw_issues)
+
+    # Combine PRs and Issues maps by repo name (PRs first, then Issues)
+    all_repos = set(prs_map.keys()) | set(issues_map.keys())
+    contributions_map = {}
+    for repo in all_repos:
+        contributions_map[repo] = prs_map.get(repo, []) + issues_map.get(repo, [])
 
     if not os.path.exists(PROJECTS_YAML_PATH):
         print(f"Error: {PROJECTS_YAML_PATH} not found.", file=sys.stderr)
@@ -200,7 +258,7 @@ def main() -> None:
             "repo": repo_name,
             "link": meta.get("link") or f"https://github.com/{repo_name}",
             "description": description,
-            "prs": prs
+            "items": prs
         }
         updated_contributions.append(updated_contrib)
 
@@ -211,7 +269,7 @@ def main() -> None:
                 "repo": repo_name,
                 "link": meta.get("link") or f"https://github.com/{repo_name}",
                 "description": meta.get("description") or "",
-                "prs": []
+                "items": []
             }
             updated_contributions.append(updated_contrib)
 
@@ -227,6 +285,7 @@ def main() -> None:
         f.write(final_yaml)
 
     print("Successfully updated projects.yaml with latest contributions.", file=sys.stderr)
+
 
 
 if __name__ == "__main__":
