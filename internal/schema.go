@@ -37,18 +37,20 @@ type Project struct {
 	Emoji            string   `yaml:"emoji"`
 }
 
-// PullRequest represents an open source pull request contribution.
-type PullRequest struct {
+// ContributionItem represents an open source pull request or issue contribution.
+type ContributionItem struct {
+	Type   string `yaml:"type"`
 	Number int    `yaml:"number"`
 	Title  string `yaml:"title"`
+	Status string `yaml:"status"`
 }
 
 // Contribution outlines external open-source repository contributions.
 type Contribution struct {
-	Repo        string        `yaml:"repo"`
-	Link        string        `yaml:"link"`
-	Description string        `yaml:"description"`
-	PRs         []PullRequest `yaml:"prs"`
+	Repo        string             `yaml:"repo"`
+	Link        string             `yaml:"link"`
+	Description string             `yaml:"description"`
+	Items       []ContributionItem `yaml:"items"`
 }
 
 // Skill represents a technology tag paired with a matching display icon or CSS utility.
