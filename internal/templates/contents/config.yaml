@@ -31,13 +31,13 @@ about:
     - CNCF LFX - Chaos Mesh Mentee
     - Shopify - Software Engineering Intern
     - SAIT '26 - Software Development Graduate
-    - Packaging Development Engineer (4 years)
+    - Packaging Development Engineer
     - Rochester Institute of Technology
-  lastUpdated: June 2026
+  lastUpdated: July 2026
   currently:
-    - Refining and maintaining LLM Telemetry Gateway, Uptime Monitor, Cover Craft and Dev Toolchain projects.
+    - Maintaining LLM Telemetry Gateway, Uptime Monitor, Cover Craft and Dev Toolchain projects.
     - Reading Power and Progress by Daron Acemoglu and Simon Johnson.
-    - Exploring system-level programming in Go, GitOps workflows with ArgoCD, and chaos engineering with Chaos Mesh.
+    - Exploring Chaos Engineering with Chaos Mesh and Kubernetes.
 
 skills:
 # 📝 Programming Languages
