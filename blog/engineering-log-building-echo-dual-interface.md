@@ -3,7 +3,6 @@ title: "[Engineering Log] Building Echo Dual Interface"
 description: "Turning Echo from an MCP-only memory server into a dual-interface local tool with agent workflows, CLI inspection, shared services, and direct maintenance paths for humans."
 date: 2026-07-07
 tags: ["go", "retrospective", "mcp"]
-draft: true
 ---
 
 ## Context
@@ -14,10 +13,10 @@ Once a system stores durable knowledge, the database is no longer just an implem
 
 ### Past Logs
 
-- [\\[Engineering Log\\] Persistent AI Memory with Echo](LINK)
-- [\\[Engineering Log\\] Measuring Memory Value in Echo](LINK)
-- [\\[Engineering Log\\] Fixing DuckDB File Locks](LINK)
-- [\\[Engineering Log\\] Safer ID-Based Memory Deletion](LINK)
+- [\[Engineering Log\] Persistent AI Memory with Echo](https://victoriacheng15.dev/blog/engineering-log-persistent-ai-memory-with-echo)
+- [\[Engineering Log\] Measuring Memory Value in Echo](https://victoriacheng15.dev/blog/engineering-log-measuring-memory-value-in-echo)
+- [\[Engineering Log\] Fixing DuckDB File Locks](https://victoriacheng15.dev/blog/engineering-log-fixing-duckdb-file-locks)
+- [\[Engineering Log\] Safer ID-Based Memory Deletion](https://victoriacheng15.dev/blog/engineering-log-safer-id-based-memory-deletion)
 
 ---
 
