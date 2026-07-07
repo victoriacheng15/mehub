@@ -3,7 +3,6 @@ title: "[Engineering Log] Building Echo Dual Interface"
 description: "Turning Echo from an MCP-only memory server into a dual-interface local tool with agent workflows, CLI inspection, shared services, and direct maintenance paths for humans."
 date: 2026-07-07
 tags: ["go", "retrospective", "mcp"]
-draft: true
 ---
 
 ## Context
