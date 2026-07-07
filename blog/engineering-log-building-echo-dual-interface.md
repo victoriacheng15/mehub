@@ -22,17 +22,17 @@ Once a system stores durable knowledge, the database is no longer just an implem
 
 ## Challenge
 
-An MCP-only interface fit the first use case, but it had practical limits. Manual inspection required either raw SQL or a conversational round trip. Maintenance tasks like FTS5 rebuilds and analytics sync were awkward as chat operations.
+An MCP-only interface fit the initial use case, but it lacked operational choice. Developers needed the option to let either the active agent or themselves manage maintenance and inspection. Tasks like database curation and index rebuilds were awkward as chat operations.
 
-The challenge was adding human control without creating a second application. A separate CLI with copied logic would create two policy surfaces. Echo needed two interfaces, but one service layer.
+Providing this choice without duplicating logic across separate tools was the core constraint. A separate CLI would create fragmented verification and policy surfaces. The system required a single binary that supports both agent and developer entry points.
 
 ---
 
 ## Investigation
 
-The architecture moved toward a single binary with smart routing. If no subcommand is provided and stdin is not a terminal, Echo assumes an MCP host is launching it and starts the stdio server. If stdin is a terminal, it prints human-facing usage.
+The architecture moved toward a single binary with dynamic routing. If no subcommand is provided and stdin is not a terminal, the binary starts the stdio MCP server for agent integration. When executed in an interactive terminal or with specific subcommands, the binary runs as a CLI tool.
 
-Known subcommands route to the CLI. That lets one installed `echo` binary support agent workflows and human workflows without separate deployment steps. The routing rule also keeps MCP stdout protocol-clean by sending logs and usage behavior to the right path.
+This approach gives operators the option to select the interface based on invocation arguments. Known subcommands route to the CLI to bypass the stdio server entirely. That lets one installed `echo` binary support both workflows without separate deployment steps.
 
 The important design point was avoiding duplicate business logic:
 
@@ -58,6 +58,6 @@ The shared service layer kept behavior consistent. Content limits, `context_key`
 
 The dual-interface work changed Echo's identity. It stopped being only an MCP server and became a local memory system with an agent interface and an operator interface. That distinction mattered because persistent AI memory became something humans needed to maintain directly.
 
-The useful lesson was that agent-facing systems still need human affordances. A memory server that only an agent can operate is hard to debug, hard to trust, and hard to recover. Durable knowledge needs a control plane.
+The useful lesson was that local tools can combine interfaces for both agents and humans in a single system. This structure lets developers choose the appropriate control plane based on active workflows. Durable knowledge is more maintainable when both automated agents and human operators have direct access.
 
 The CLI is not a fallback. It is the human side of the same system. MCP gives agents access to memory during work, and CLI gives humans access to the memory after it becomes operational state.
