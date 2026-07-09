@@ -11,7 +11,7 @@ import (
 	highlighting "github.com/yuin/goldmark-highlighting/v2"
 	"github.com/yuin/goldmark/extension"
 	"github.com/yuin/goldmark/renderer/html"
-	"gopkg.in/yaml.v3"
+	"go.yaml.in/yaml/v4"
 )
 
 // LoadConfig reads and parses all YAML files under configDir, populating a SiteConfig.
@@ -30,7 +30,7 @@ func LoadConfig(configDir string) (*SiteConfig, error) {
 			return nil, err
 		}
 
-		if err := yaml.Unmarshal(data, &config); err != nil {
+		if err := yaml.Load(data, &config); err != nil {
 			return nil, err
 		}
 	}
@@ -51,7 +51,7 @@ func ParsePost(path string) (*Post, error) {
 	}
 
 	var fm Frontmatter
-	if err := yaml.Unmarshal([]byte(parts[1]), &fm); err != nil {
+	if err := yaml.Load([]byte(parts[1]), &fm); err != nil {
 		return nil, err
 	}
 
