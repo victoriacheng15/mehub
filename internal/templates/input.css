@@ -3,30 +3,19 @@
 
 @theme {
   /* Foundation (Slate) */
-  --color-slate-50: #f8fafc;
   --color-slate-100: #f1f5f9;
   --color-slate-200: #e2e8f0;
   --color-slate-300: #cbd5e1;
   --color-slate-400: #94a3b8;
-  --color-slate-50: #64748b;
-  --color-slate-600: #475569;
   --color-slate-700: #334155;
   --color-slate-800: #1e293b;
   --color-slate-900: #0f172a;
   --color-slate-950: #020617;
 
   /* Accent (Violet) */
-  --color-violet-50: #f5f3ff;
-  --color-violet-100: #ede9fe;
-  --color-violet-200: #ddd6fe;
   --color-violet-300: #c4b5fd;
   --color-violet-400: #a78bfa;
   --color-violet-500: #8b5cf6;
-  --color-violet-600: #7c3aed;
-  --color-violet-700: #6d28d9;
-  --color-violet-800: #5b21b6;
-  --color-violet-900: #4c1d95;
-  --color-violet-950: #2e1065;
 
   /* Typography Colors (Prose Overrides for Violet Theme) */
   --tw-prose-body: var(--color-slate-200);
