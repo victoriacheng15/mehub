@@ -1,6 +1,7 @@
 package internal
 
 import (
+	"bytes"
 	"encoding/json"
 	"encoding/xml"
 	"fmt"
@@ -10,18 +11,26 @@ import (
 	"path/filepath"
 	"strings"
 	"time"
+
+	"github.com/tdewolff/minify/v2"
+	"github.com/tdewolff/minify/v2/html"
 )
 
 type SiteGenerator struct {
 	Config       *SiteConfig
 	FuncMap      template.FuncMap
 	TemplatesDir string
+	minifier     *minify.M
 }
 
 func New(cfg *SiteConfig, templatesDir string) *SiteGenerator {
+	m := minify.New()
+	m.AddFunc("text/html", html.Minify)
+
 	return &SiteGenerator{
 		Config:       cfg,
 		TemplatesDir: templatesDir,
+		minifier:     m,
 		FuncMap: template.FuncMap{
 			"split":             strings.Split,
 			"replace":           strings.ReplaceAll,
@@ -85,8 +94,18 @@ func (g *SiteGenerator) RenderPage(dir, filename, tmplPath string, titlePrefix s
 	data.CurrentYear = time.Now().Year()
 	data.Title = title
 
-	if err := tmpl.ExecuteTemplate(outputFile, "base.html", data); err != nil {
+	var buf bytes.Buffer
+	if err := tmpl.ExecuteTemplate(&buf, "base.html", data); err != nil {
 		return fmt.Errorf("failed to execute template for %s: %w", fullTmplPath, err)
+	}
+
+	minifiedHTML, err := g.minifier.Bytes("text/html", buf.Bytes())
+	if err != nil {
+		return fmt.Errorf("failed to minify HTML for %s: %w", filename, err)
+	}
+
+	if _, err := outputFile.Write(minifiedHTML); err != nil {
+		return fmt.Errorf("failed to write minified HTML to %s: %w", filename, err)
 	}
 	return nil
 }

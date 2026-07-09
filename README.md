@@ -4,8 +4,8 @@ Mehub is a personal website, portfolio, and blog platform built on a custom, zer
 
 ## Design Philosophy & "Why"
 
-- **Zero-Dependency Core**: Replaced Astro/JS framework toolchains to eliminate dependency churn and NPM package updates.
-- **High-Performance Compilation**: Compiles and renders the entire site (HTML pages, XML sitemaps, RSS feeds, and JSON APIs) in under 10 seconds.
+- **Simplified Toolchain**: Replaced Astro/JS framework toolchains to eliminate NPM package updates and complex dependencies.
+- **Fast Compilation**: Compiles and renders the entire site (HTML pages, XML sitemaps, RSS feeds, and JSON APIs) in under 10 seconds.
 
 ## Built With
 
@@ -67,8 +67,9 @@ Build targets are automated through the root Makefile.
 
 Following this philosophy, the automation pipelines handle repetitive tasks while keeping integration decisions manual:
 
-- `ci.yml`: Unifies Go formatting/vetting, Markdown linting, and unit tests under optimized path filters.
-- `sync-blog-post.yml`: Automates pulling draft content from APIs and staging it as a local branch/PR.
-- `publish-blog-post.yml`: Automatically processes due blog drafts by stripping draft flags and opening release PRs.
+- `ci.yml`: Runs tests, code vetting, and formatting checks.
+- `sync-blog-post.yml`: Imports new blog drafts from remote APIs.
+- `publish-blog-post.yml`: Publishes scheduled blog drafts by opening pull requests.
+- `update-contributions.yml`: Updates open-source contribution metrics from GitHub.
 
 All automated PRs require manual review and merging to preserve final content judgment.
