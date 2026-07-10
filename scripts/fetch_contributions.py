@@ -19,7 +19,7 @@ import urllib.request
 # Configuration settings
 USERNAME = os.environ.get("GITHUB_USER", "victoriacheng15")
 API_TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
-REPOS = ["chaos-mesh/chaos-mesh"]
+REPOS = ["chaos-mesh/chaos-mesh",  "cncf/open-community-groups", "cucumber/godog"]
 
 # API base headers (preserving custom User-Agent)
 HEADERS = {
@@ -202,22 +202,19 @@ def generate_contributions_yaml(contributions: list[dict]) -> str:
 
 
 def fetch_external_issues() -> list[dict]:
-    """Retrieve issues authored or commented on by the user from GitHub API."""
-    issues_map = {}
+    """Retrieve issues authored by the user from GitHub API."""
+    issues = []
     repo_filters = " ".join(f"repo:{repo}" for repo in REPOS)
     
-    # Query authored and commented issues separately to bypass API query limitations
-    for filter_term in [f"author:{USERNAME}", f"commenter:{USERNAME}"]:
-        search_query = urllib.parse.quote(f"type:issue {filter_term} {repo_filters}".strip())
-        for page in range(1, 6):
-            url = f"https://api.github.com/search/issues?q={search_query}&per_page=100&page={page}"
-            payload = query_github_api(url)
-            page_items = payload.get("items", [])
-            for item in page_items:
-                issues_map[item["html_url"]] = item
-            if len(page_items) < 100:
-                break
-    return list(issues_map.values())
+    search_query = urllib.parse.quote(f"type:issue author:{USERNAME} {repo_filters}".strip())
+    for page in range(1, 6):
+        url = f"https://api.github.com/search/issues?q={search_query}&per_page=100&page={page}"
+        payload = query_github_api(url)
+        page_items = payload.get("items", [])
+        issues.extend(page_items)
+        if len(page_items) < 100:
+            break
+    return issues
 
 
 def main() -> None:
