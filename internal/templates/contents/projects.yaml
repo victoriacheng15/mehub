@@ -72,26 +72,22 @@ contributions:
         title: "feat(e2e-test): implement gherkin BDD runner and podkill scenarios"
         status: merged
       - type: Issue
-        number: 5028
-        title: "refactor(e2e-test): integrate gherkin in CI and migrate namespace setup"
+        number: 5031
+        title: "[Bug]: TypeError: Cannot read properties of undefined (reading 'selector')"
         status: open
+  - repo: cncf/open-community-groups
+    link: https://github.com/cncf/open-community-groups
+    description: "Open source events platform for communities and organizations"
+    items:
       - type: Issue
-        number: 5016
-        title: "fix(dashboard): support serving UI under a configurable subpath"
-        status: closed
-      - type: Issue
-        number: 5013
-        title: "feat(e2e-test): implement gherkin BDD runner and podkill scenarios"
-        status: closed
+        number: 582
+        title: "Display event times in logged-in user's preferred timezone"
+        status: open
   - repo: cucumber/godog
     link: https://github.com/cucumber/godog
     description: "Cucumber for golang"
     items:
       - type: PR
-        number: 760
-        title: "fix(hooks): wrap errors to preserve sentinel values"
-        status: open
-      - type: Issue
         number: 760
         title: "fix(hooks): wrap errors to preserve sentinel values"
         status: open
