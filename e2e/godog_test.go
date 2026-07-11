@@ -68,6 +68,7 @@ func InitializeScenario(sc *godog.ScenarioContext) {
 	sc.Step(`^a configuration directory with a missing profile$`, tc.setupMissingConfig)
 	sc.Step(`^a blog directory containing (\d+) published post$`, tc.setupSinglePost)
 	sc.Step(`^a blog directory containing (\d+) published post and (\d+) draft post$`, tc.setupMixedPosts)
+	sc.Step(`^a static assets directory containing a file "([^"]*)"$`, tc.setupStaticAsset)
 	sc.Step(`^the build pipeline is executed$`, tc.runPipeline)
 	sc.Step(`^the output directory should contain "([^"]*)"$`, tc.checkFileExists)
 	sc.Step(`^the output directory should not contain "([^"]*)"$`, tc.checkFileMissing)
@@ -143,6 +144,19 @@ func (tc *testContext) setupMissingConfig() error {
 		if err := os.WriteFile(filepath.Join(tc.configDir, file), []byte(content), 0644); err != nil {
 			return err
 		}
+	}
+	return nil
+}
+
+// setupStaticAsset creates a static directory and writes a dummy asset file into it.
+func (tc *testContext) setupStaticAsset(filename string) error {
+	tc.publicDir = filepath.Join(tc.tmpDir, "static")
+	if err := os.MkdirAll(tc.publicDir, 0755); err != nil {
+		return err
+	}
+	content := "User-agent: *\nDisallow: /"
+	if err := os.WriteFile(filepath.Join(tc.publicDir, filename), []byte(content), 0644); err != nil {
+		return err
 	}
 	return nil
 }
