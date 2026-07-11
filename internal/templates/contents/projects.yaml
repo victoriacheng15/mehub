@@ -60,18 +60,34 @@ contributions:
     description: "A Chaos Engineering Platform for Kubernetes."
     items:
       - type: PR
+        number: 5028
+        title: "refactor(e2e-test): integrate gherkin in CI and migrate namespace setup"
+        status: open
+      - type: PR
         number: 5016
         title: "fix(dashboard): support serving UI under a configurable subpath"
         status: merged
       - type: PR
         number: 5013
         title: "feat(e2e-test): implement gherkin BDD runner and podkill scenarios"
+        status: merged
+      - type: Issue
+        number: 5031
+        title: "[Bug]: TypeError: Cannot read properties of undefined (reading 'selector')"
         status: open
+  - repo: cncf/open-community-groups
+    link: https://github.com/cncf/open-community-groups
+    description: "Open source events platform for communities and organizations"
+    items:
       - type: Issue
-        number: 4096
-        title: "Remove old workflow interfaces in UI"
-        status: closed
-      - type: Issue
-        number: 2503
-        title: "workflow ui: duplicate names detected"
+        number: 582
+        title: "Display event times in logged-in user's preferred timezone"
+        status: open
+  - repo: cucumber/godog
+    link: https://github.com/cucumber/godog
+    description: "Cucumber for golang"
+    items:
+      - type: PR
+        number: 760
+        title: "fix(hooks): wrap errors to preserve sentinel values"
         status: open
