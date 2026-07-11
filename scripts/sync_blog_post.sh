@@ -29,19 +29,16 @@ curl -s \
   sed -e 's/^date: "\(.*\)"/date: \1/' > blog/$SLUG.md
 
 # ==== Branch, commit, and push ====
-git switch -C "blog/$SLUG"
+TIMESTAMP=$(date +%s)
+BRANCH_NAME="blog/${SLUG}-${TIMESTAMP}"
+git switch -C "$BRANCH_NAME"
 git add "blog/$SLUG.md"
 git commit -m "Sync blog post: $BLOG_TITLE"
-git push --force-with-lease origin "blog/$SLUG"
+git push --force-with-lease origin "$BRANCH_NAME"
 
-# Check if a PR already exists for this branch to avoid errors on re-runs.
-if gh pr view "blog/$SLUG" &>/dev/null; then
-  echo "A pull request for blog/$SLUG already exists."
-else
-  gh pr create \
-    --base main \
-    --head "blog/$SLUG" \
-    --title "Sync Blog Post: $BLOG_TITLE" \
-    --body "This PR syncs the blog post titled **$BLOG_TITLE** with the content from the API. 🎉" \
-    --label "blog"
-fi
+gh pr create \
+  --base main \
+  --head "$BRANCH_NAME" \
+  --title "Sync Blog Post: $BLOG_TITLE" \
+  --body "This PR syncs the blog post titled **$BLOG_TITLE** from the API. 🎉" \
+  --label "blog"
