@@ -4,12 +4,12 @@ landing:
   name: Victoria Cheng
   slogan: Backend systems, infrastructure, and the "why" behind them in practice.
   status: "CNCF LFX Mentee · SAIT '26"
-  experience: Shopify · Former Packaging Engineer (4 years)
+  experience: "Prev. Software Engineering Intern at Shopify & Packaging Development Engineer"
   focusAreas:
     - Backend Development
-    - Platform Engineering
     - DevOps
-    - Observability
+    - Platform Engineering
+    - Site Reliability Engineering (SRE)
 
 navigation:
   header:
