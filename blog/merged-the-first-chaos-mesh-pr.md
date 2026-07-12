@@ -54,8 +54,8 @@ Certain trade-offs exist in this initial release. Test setup is confined to the 
 
 ### Related Links
 
-- PR: <https://github.com/chaos-mesh/chaos-mesh/pull/5013>
-- Issue: <https://github.com/chaos-mesh/chaos-mesh/issues/4902>
+- PR: https://github.com/chaos-mesh/chaos-mesh/pull/5013
+- Issue: https://github.com/chaos-mesh/chaos-mesh/issues/4902
 
 ---
 
