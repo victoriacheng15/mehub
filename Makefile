@@ -2,6 +2,7 @@
 include mk/go.mk
 include mk/tailwind.mk
 include mk/markdown.mk
+include mk/docker.mk
 
 .PHONY: help test-all
 
@@ -34,6 +35,11 @@ help:
 	@echo "  setup-tailwind  Download Tailwind CLI (Linux x64)"
 	@echo "  setup-go        Download and setup Go locally"
 	@echo "  ssg-build       Setup Go and Tailwind, then build the SSG"
+	@echo ""
+	@echo "Local Dev (Podman):"
+	@echo "  dev-build       Build the dev container image"
+	@echo "  dev-run         Start an interactive shell with repo mounted"
+	@echo "  dev-clean       Remove the dev container image"
 	@echo ""
 	@echo "Utility:"
 	@echo "  help            Show this help message"

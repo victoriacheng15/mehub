@@ -1,0 +1,23 @@
+# Exclude generated output and toolchain downloads from build context
+dist/
+go-dist/
+tailwindcss
+.air-tmp/
+
+# VCS
+.git/
+.github/
+
+# Editor artifacts
+.vscode/
+.idea/
+
+# Test artifacts
+coverage.out
+coverage.*
+*.coverprofile
+
+# Python
+__pycache__/
+*.py[codz]
+.venv/

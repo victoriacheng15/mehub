@@ -1,0 +1,41 @@
+# Usage:
+#   make dev-build   # Build the image
+#   make dev-run     # Start the hot-reload watcher with repo mounted
+#   make dev-clean   # Remove the image
+
+# =============================================================================
+# STAGE 1: tools
+# Builds and downloads all binaries. Nothing from this stage leaks into dev.
+# =============================================================================
+FROM golang:1.26-alpine AS tools
+
+RUN apk add --no-cache curl
+
+RUN go install github.com/air-verse/air@latest && \
+    go install golang.org/x/tools/cmd/goimports@latest
+
+RUN curl -sL https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64 \
+    -o /usr/local/bin/tailwindcss && chmod +x /usr/local/bin/tailwindcss
+
+# =============================================================================
+# STAGE 2: dev
+# Lean runtime. Copies binaries from tools, adds only what air needs to run
+# make targets and shell scripts.
+# =============================================================================
+FROM golang:1.26-alpine AS dev
+
+# make + bash: required to run Makefile targets inside air's build cmd
+# gcompat + libgcc + libstdc++: runtime deps for the Tailwind v4 Bun binary on Alpine/musl
+RUN apk add --no-cache make bash gcompat libgcc libstdc++
+
+COPY --from=tools /go/bin/air                /usr/local/bin/air
+COPY --from=tools /go/bin/goimports          /usr/local/bin/goimports
+COPY --from=tools /usr/local/bin/tailwindcss /usr/local/bin/tailwindcss
+
+WORKDIR /workspace
+COPY go.mod go.sum ./
+RUN go mod download
+
+EXPOSE 8080
+
+CMD ["air"]
