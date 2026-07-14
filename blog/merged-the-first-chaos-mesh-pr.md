@@ -3,7 +3,6 @@ title: "Merged the First Chaos Mesh PR"
 description: "A first LFX Chaos Mesh milestone initiates the Ginkgo to Gherkin migration, proving a readable BDD test path in Kubernetes e2e tests with the first merged pull request."
 date: 2026-07-14
 tags: ["go", "kubernetes", "cncf"]
-draft: true
 ---
 
 ## The First Merge Landed
@@ -54,8 +53,8 @@ Certain trade-offs exist in this initial release. Test setup is confined to the 
 
 ### Related Links
 
-- PR: https://github.com/chaos-mesh/chaos-mesh/pull/5013
-- Issue: https://github.com/chaos-mesh/chaos-mesh/issues/4902
+- [Issue - [LFX Mentorship] Refactor PodChaos and NetworkChaos E2E Tests into Gherkin-based BDD Scenarios](https://github.com/chaos-mesh/chaos-mesh/issues/4902)
+- [PR - feat(e2e-test): implement gherkin BDD runner and podkill scenarios](https://github.com/chaos-mesh/chaos-mesh/pull/5013)
 
 ---
 
