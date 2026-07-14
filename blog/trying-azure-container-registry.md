@@ -2,7 +2,7 @@
 title: "Trying Azure Container Registry"
 description: "Learn how I used Azure Container Registry to securely store Docker images from a personal project, with GitHub Actions CI and zero hardcoded secrets. Read more to learn."
 date: 2025-12-16
-tags: ["cloud", "platform"]
+tags: ["cloud", "docker", "platform"]
 ---
 
 ## What is Azure Container Registry?

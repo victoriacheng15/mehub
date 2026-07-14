@@ -2,7 +2,7 @@
 title: "The SRE Era: Standardizing OpenTelemetry"
 description: "Mastering SRE principles by transitioning from ad-hoc data collection to a standardized OpenTelemetry ecosystem using Prometheus, Grafana Tempo, and MinIO for persistence."
 date: 2026-03-24
-tags: ["cloud", "kubernetes", "observability"]
+tags: ["kubernetes", "observability", "sre"]
 ---
 
 ## The Shift: From "Working" to "Standardized"

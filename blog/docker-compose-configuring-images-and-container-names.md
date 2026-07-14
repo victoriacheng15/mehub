@@ -2,7 +2,7 @@
 title: "Docker Compose - Configuring Images and Container Names"
 description: "Enhance Docker deployment with custom names for organized images and containers. Explore efficient file transfers using the 'docker cp' command. Dive into the full post."
 date: 2024-02-01
-tags: ["platform"]
+tags: ["docker", "platform"]
 ---
 
 
