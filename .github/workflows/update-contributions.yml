@@ -10,7 +10,6 @@ permissions:
   pull-requests: write
 
 env:
-  BRANCH_NAME: automation/update-contributions
   PYTHON_VERSION: '3.12'
   PROJECTS_YAML_PATH: internal/templates/contents/projects.yaml
   UPDATE_MESSAGE: 'chore(contribution): update open source contributions'
@@ -27,9 +26,12 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
+      - name: Set branch name
+        run: echo "BRANCH_NAME=chore/update-contributions-$(date +%s)" >> "$GITHUB_ENV"
+
       - name: Fetch latest contributions
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SYNC_BLOG_TOKEN }}
         run: python3 scripts/fetch_contributions.py
 
       - name: Check for changes
