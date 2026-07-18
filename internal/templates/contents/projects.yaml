@@ -60,6 +60,10 @@ contributions:
     description: "A Chaos Engineering Platform for Kubernetes."
     items:
       - type: PR
+        number: 5034
+        title: "fix(dashboard): fix TypeError crash on Workflow schedule details"
+        status: open
+      - type: PR
         number: 5028
         title: "refactor(e2e-test): integrate gherkin in CI and migrate namespace setup"
         status: open
