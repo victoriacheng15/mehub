@@ -30,7 +30,7 @@
     </section>
 
     <section class="flex flex-col gap-6">
-        <h2 class="text-sm font-bold text-violet-400 tracking-wider uppercase">Tech Stack</h2>
+        <h2 class="font-bold text-violet-400 tracking-wider uppercase">Tech Stack</h2>
         <ul class="flex flex-wrap gap-3 list-none ">
             {{ range .Config.Skills }}
             <li class="flex items-center gap-3 px-4 py-2 bg-slate-900 border border-slate-800 rounded-lg hover:border-violet-500/30 transition-colors group">
@@ -42,11 +42,14 @@
         </ul>
     </section>
 
-    {{ if .Config.Contributions }}
+    {{ if .Config.Contributions.Items }}
     <section class="flex flex-col gap-6">
-        <h2 class="text-sm font-bold text-violet-400 tracking-wider uppercase">Open Source Contributions</h2>
+        <div class="flex flex-col gap-1">
+            <span class="text-xs text-slate-500 font-normal uppercase tracking-wider">Last updated: {{ .Config.Contributions.LastUpdated }}</span>
+            <h2 class="font-bold text-violet-400 tracking-wider uppercase">Open Source Contributions</h2>
+        </div>
         <ul class="flex flex-col gap-6 list-none">
-            {{ range $cIndex, $contrib := .Config.Contributions }}
+            {{ range $cIndex, $contrib := .Config.Contributions.Items }}
             <li>
                 <article class="flex flex-col gap-4 p-6 bg-slate-900 border border-slate-800 rounded-xl">
                     <div class="flex flex-col gap-2">
@@ -120,7 +123,7 @@
     {{ end }}
 
     <section class="flex flex-col gap-6">
-        <h2 class="text-sm font-bold text-violet-400 tracking-wider uppercase">Featured Projects</h2>
+        <h2 class="font-bold text-violet-400 tracking-wider uppercase">Featured Projects</h2>
         <ul class="flex flex-col gap-6 list-none">
             {{ range $index, $project := .Config.Projects }}
             <li class="{{ if ge $index 4 }}hidden additional-project transition-all duration-300{{ end }} h-full">

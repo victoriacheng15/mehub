@@ -65,6 +65,7 @@ func InitializeScenario(sc *godog.ScenarioContext) {
 	})
 
 	sc.Step(`^a configuration directory with a valid profile$`, tc.setupValidConfig)
+	sc.Step(`^a configuration directory with a valid profile containing contributions$`, tc.setupValidConfigWithContributions)
 	sc.Step(`^a configuration directory with a missing profile$`, tc.setupMissingConfig)
 	sc.Step(`^a blog directory containing (\d+) published post$`, tc.setupSinglePost)
 	sc.Step(`^a blog directory containing (\d+) published post and (\d+) draft post$`, tc.setupMixedPosts)
@@ -129,6 +130,46 @@ socials: []
 	}
 
 	return nil
+}
+
+// setupValidConfigWithContributions creates a valid profile environment loaded with open source contributions.
+func (tc *testContext) setupValidConfigWithContributions() error {
+	if err := tc.setupValidConfig(); err != nil {
+		return err
+	}
+	if err := tc.setupSinglePost(1); err != nil {
+		return err
+	}
+	projectsYAML := `projects: []
+contributions:
+  lastUpdated: "2026-07-18"
+  items:
+    - repo: "test-repo"
+      link: "https://github.com/test-repo"
+      description: "Test description"
+      items:
+        - type: "PR"
+          number: 123
+          title: "Test PR"
+          status: "merged"
+`
+	if err := os.WriteFile(filepath.Join(tc.configDir, "projects.yaml"), []byte(projectsYAML), 0644); err != nil {
+		return err
+	}
+
+	indexHTML := `{{ define "content" }}
+	<h1>{{ .Title }}</h1>
+	{{ if .Config.Contributions.Items }}
+		<h2>Open Source Contributions</h2>
+		<span>Last updated: {{ .Config.Contributions.LastUpdated }}</span>
+		<ul>
+			{{ range .Config.Contributions.Items }}
+				<li>{{ .Repo }}</li>
+			{{ end }}
+		</ul>
+	{{ end }}
+	{{ end }}`
+	return os.WriteFile(filepath.Join(tc.templatesDir, "index.html"), []byte(indexHTML), 0644)
 }
 
 // setupMissingConfig creates a contents directory with navigation/metadata but missing the critical profile.yaml.

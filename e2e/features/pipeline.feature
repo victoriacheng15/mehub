@@ -30,3 +30,10 @@ Feature: Site Generation Pipeline
     Given a configuration directory with a missing profile
     When the build pipeline is executed
     Then the build pipeline execution should fail
+
+  Scenario: Render open source contributions on the home page
+    Given a configuration directory with a valid profile containing contributions
+    When the build pipeline is executed
+    Then the output file "index.html" should contain "Open Source Contributions"
+    And the output file "index.html" should contain "Last updated: 2026-07-18"
+    And the output file "index.html" should contain "test-repo"
