@@ -7,7 +7,6 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
-	"strconv"
 	"strings"
 	"time"
 
@@ -16,25 +15,26 @@ import (
 
 const port = ":8080"
 
-// buildID is set once at startup. Because air restarts the process on every
-// rebuild, each new server has a different ID. The browser detects the change
-// and reloads.
-var buildID = strconv.FormatInt(time.Now().UnixMilli(), 10)
-
 // liveReloadSnippet is injected before </body> in every HTML response.
-// It polls /dev-reload every second and reloads when the build ID changes.
+// It opens an SSE connection to /dev-reload. When the connection drops
+// (because the server is restarting), it polls until the new server is up,
+// then reloads the page.
 const liveReloadSnippet = `<script>
-(function() {
-	var id = null;
-	setInterval(function() {
-		fetch('/dev-reload')
-			.then(function(r) { return r.text(); })
-			.then(function(v) {
-				if (id === null) { id = v; return; }
-				if (v !== id) { location.reload(); }
-			})
-			.catch(function() {});
-	}, 1000);
+(() => {
+	function connect() {
+		const es = new EventSource('/dev-reload');
+		es.onerror = () => {
+			es.close();
+			const interval = setInterval(async () => {
+				try {
+					await fetch('/dev-reload');
+					clearInterval(interval);
+					location.reload();
+				} catch (e) {}
+			}, 200);
+		};
+	}
+	connect();
 })();
 </script>`
 
@@ -44,7 +44,7 @@ func main() {
 	}
 
 	mux := http.NewServeMux()
-	mux.HandleFunc("/dev-reload", devReloadHandler)
+	mux.HandleFunc("/dev-reload", sseHandler)
 	mux.HandleFunc("/", serveHandler)
 
 	log.Printf("dev server → http://localhost%s", port)
@@ -53,12 +53,34 @@ func main() {
 	}
 }
 
-// devReloadHandler returns the current build ID as plain text.
-// The browser compares successive responses and reloads on change.
-func devReloadHandler(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "text/plain")
+// sseHandler holds an SSE stream open. The browser reload is triggered
+// when the connection drops during a server restart.
+func sseHandler(w http.ResponseWriter, r *http.Request) {
+	flusher, ok := w.(http.Flusher)
+	if !ok {
+		http.Error(w, "streaming not supported", http.StatusInternalServerError)
+		return
+	}
+
+	w.Header().Set("Content-Type", "text/event-stream")
 	w.Header().Set("Cache-Control", "no-cache")
-	fmt.Fprint(w, buildID)
+	w.Header().Set("Connection", "keep-alive")
+
+	fmt.Fprintf(w, "data: connected\n\n")
+	flusher.Flush()
+
+	ticker := time.NewTicker(10 * time.Second)
+	defer ticker.Stop()
+
+	for {
+		select {
+		case <-r.Context().Done():
+			return
+		case <-ticker.C:
+			fmt.Fprintf(w, "event: heartbeat\ndata: \n\n")
+			flusher.Flush()
+		}
+	}
 }
 
 // serveHandler serves files from dist/. HTML files have the live-reload script
@@ -92,7 +114,7 @@ func serveHTML(w http.ResponseWriter, r *http.Request, path string) {
 		return
 	}
 
-	body := strings.Replace(string(content), "</body>", liveReloadSnippet+"</body>", 1)
+	body := string(content) + liveReloadSnippet
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	fmt.Fprint(w, body)
 }
