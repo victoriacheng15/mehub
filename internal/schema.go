@@ -53,6 +53,12 @@ type Contribution struct {
 	Items       []ContributionItem `yaml:"items"`
 }
 
+// ContributionsSection represents the contributions block containing the last updated timestamp and the list of contribution items.
+type ContributionsSection struct {
+	LastUpdated string         `yaml:"lastUpdated"`
+	Items       []Contribution `yaml:"items"`
+}
+
 // Skill represents a technology tag paired with a matching display icon or CSS utility.
 type Skill struct {
 	Name string `yaml:"name"`
@@ -80,13 +86,13 @@ type LandingConfig struct {
 
 // SiteConfig represents the full composite profile parsed from YAML configurations in the repository.
 type SiteConfig struct {
-	Landing       LandingConfig    `yaml:"landing"`
-	Navigation    NavigationConfig `yaml:"navigation"`
-	About         AboutConfig      `yaml:"about"`
-	Socials       []Social         `yaml:"socials"`
-	Projects      []Project        `yaml:"projects"`
-	Skills        []Skill          `yaml:"skills"`
-	Contributions []Contribution   `yaml:"contributions"`
+	Landing       LandingConfig        `yaml:"landing"`
+	Navigation    NavigationConfig     `yaml:"navigation"`
+	About         AboutConfig          `yaml:"about"`
+	Socials       []Social             `yaml:"socials"`
+	Projects      []Project            `yaml:"projects"`
+	Skills        []Skill              `yaml:"skills"`
+	Contributions ContributionsSection `yaml:"contributions"`
 }
 
 // ============================================================================

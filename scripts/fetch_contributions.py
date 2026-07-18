@@ -9,6 +9,7 @@ Uses only the Python standard library (no pip dependencies required).
 
 from __future__ import annotations
 
+import datetime
 import json
 import os
 import sys
@@ -185,19 +186,24 @@ def escape_yaml_string(s: str) -> str:
 
 def generate_contributions_yaml(contributions: list[dict]) -> str:
     """Convert contributions list to formatted YAML string."""
-    yaml_lines = ["contributions:"]
+    current_date = datetime.date.today().isoformat()
+    yaml_lines = [
+        "contributions:",
+        f"  lastUpdated: \"{current_date}\"",
+        "  items:"
+    ]
     for contrib in contributions:
-        yaml_lines.append(f"  - repo: {contrib['repo']}")
-        yaml_lines.append(f"    link: {contrib['link']}")
+        yaml_lines.append(f"    - repo: {contrib['repo']}")
+        yaml_lines.append(f"      link: {contrib['link']}")
         escaped_desc = escape_yaml_string(contrib['description'])
-        yaml_lines.append(f"    description: \"{escaped_desc}\"")
-        yaml_lines.append("    items:")
+        yaml_lines.append(f"      description: \"{escaped_desc}\"")
+        yaml_lines.append("      items:")
         for item in contrib["items"]:
-            yaml_lines.append(f"      - type: {item['type']}")
-            yaml_lines.append(f"        number: {item['number']}")
+            yaml_lines.append(f"        - type: {item['type']}")
+            yaml_lines.append(f"          number: {item['number']}")
             escaped_title = escape_yaml_string(item['title'])
-            yaml_lines.append(f"        title: \"{escaped_title}\"")
-            yaml_lines.append(f"        status: {item['status']}")
+            yaml_lines.append(f"          title: \"{escaped_title}\"")
+            yaml_lines.append(f"          status: {item['status']}")
     return "\n".join(yaml_lines) + "\n"
 
 
