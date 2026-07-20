@@ -17,10 +17,12 @@ import (
 )
 
 type SiteGenerator struct {
-	Config       *SiteConfig
-	FuncMap      template.FuncMap
-	TemplatesDir string
-	minifier     *minify.M
+	Config            *SiteConfig
+	FuncMap           template.FuncMap
+	TemplatesDir      string
+	minifier          *minify.M
+	totalOriginalSize int64
+	totalMinifiedSize int64
 }
 
 func New(cfg *SiteConfig, templatesDir string) *SiteGenerator {
@@ -99,10 +101,15 @@ func (g *SiteGenerator) RenderPage(dir, filename, tmplPath string, titlePrefix s
 		return fmt.Errorf("failed to execute template for %s: %w", fullTmplPath, err)
 	}
 
+	originalSize := buf.Len()
 	minifiedHTML, err := g.minifier.Bytes("text/html", buf.Bytes())
 	if err != nil {
 		return fmt.Errorf("failed to minify HTML for %s: %w", filename, err)
 	}
+	minifiedSize := len(minifiedHTML)
+
+	g.totalOriginalSize += int64(originalSize)
+	g.totalMinifiedSize += int64(minifiedSize)
 
 	if _, err := outputFile.Write(minifiedHTML); err != nil {
 		return fmt.Errorf("failed to write minified HTML to %s: %w", filename, err)
@@ -406,6 +413,14 @@ func (g *SiteGenerator) Build(distDir string, data *ContentData) error {
 			return fmt.Errorf("failed to generate %s: %w", step.name, err)
 		}
 	}
+
+	if g.totalOriginalSize > 0 {
+		beforeMB := float64(g.totalOriginalSize) / 1000000.0
+		afterMB := float64(g.totalMinifiedSize) / 1000000.0
+		savings := float64(g.totalOriginalSize-g.totalMinifiedSize) / float64(g.totalOriginalSize) * 100
+		fmt.Printf("HTML minification:\nBefore: %d bytes (%.2f MB)\nAfter: %d bytes (%.2f MB)\nSavings: %.1f%%\n", g.totalOriginalSize, beforeMB, g.totalMinifiedSize, afterMB, savings)
+	}
+
 	return nil
 }
 
