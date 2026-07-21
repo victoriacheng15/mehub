@@ -3,7 +3,6 @@ title: "[Engineering Log] HTML Minification Network Savings"
 description: "Analyzing the impact of compile-time HTML minification as a static blog grows to over 240 posts, measuring build speeds, raw byte savings, and network packet reductions."
 date: 2026-07-21
 tags: ["go", "automation", "retrospective"]
-draft: true
 ---
 
 ## Context
