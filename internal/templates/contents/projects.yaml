@@ -55,12 +55,16 @@ projects:
       - eBPF
 
 contributions:
-  lastUpdated: "2026-07-18"
+  lastUpdated: "2026-07-21"
   items:
     - repo: chaos-mesh/chaos-mesh
       link: https://github.com/chaos-mesh/chaos-mesh
       description: "A Chaos Engineering Platform for Kubernetes."
       items:
+        - type: PR
+          number: 5042
+          title: "fix(multicluster): fix remote chaos monitor naming collision"
+          status: open
         - type: PR
           number: 5034
           title: "fix(dashboard): fix TypeError crash on Workflow schedule details"
