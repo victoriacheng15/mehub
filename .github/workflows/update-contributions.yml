@@ -2,7 +2,7 @@ name: Update Contributions
 
 on:
   schedule:
-    - cron: '30 0 * * 2,6'
+    - cron: '30 0 * * 1,5'
   workflow_dispatch:
 
 permissions:
@@ -48,7 +48,7 @@ jobs:
         run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
-          git checkout -B "$BRANCH_NAME"
+          git switch -c "$BRANCH_NAME"
           git add "$PROJECTS_YAML_PATH"
           git commit -m "$UPDATE_MESSAGE"
           git push --force-with-lease origin "$BRANCH_NAME"
