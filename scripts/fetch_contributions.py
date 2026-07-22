@@ -20,7 +20,7 @@ import urllib.request
 # Configuration settings
 USERNAME = os.environ.get("GITHUB_USER", "victoriacheng15")
 API_TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
-REPOS = ["chaos-mesh/chaos-mesh",  "cncf/open-community-groups", "cucumber/godog"]
+REPOS = ["chaos-mesh/chaos-mesh",  "cncf/open-community-groups", "meshery/meshery", "cucumber/godog"]
 
 # API base headers (preserving custom User-Agent)
 HEADERS = {
@@ -249,7 +249,7 @@ def main() -> None:
     updated_contributions = []
 
     # Map fetched contributions and merge existing descriptions
-    for repo_name, prs in sorted(contributions_map.items()):
+    for repo_name, prs in contributions_map.items():
         meta = existing_meta.get(repo_name, {})
         description = meta.get("description")
         
@@ -275,6 +275,15 @@ def main() -> None:
                 "items": []
             }
             updated_contributions.append(updated_contrib)
+
+    # Sort all contributions to match the order in REPOS
+    def get_sort_key(contrib: dict) -> tuple[int, str]:
+        repo = contrib["repo"]
+        if REPOS and repo in REPOS:
+            return (REPOS.index(repo), repo)
+        return (len(REPOS) if REPOS else 0, repo)
+
+    updated_contributions.sort(key=get_sort_key)
 
     # Assemble updated projects.yaml
     clean_yaml = strip_existing_contributions(yaml_text)
