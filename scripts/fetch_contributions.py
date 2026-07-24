@@ -20,7 +20,7 @@ import urllib.request
 # Configuration settings
 USERNAME = os.environ.get("GITHUB_USER", "victoriacheng15")
 API_TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
-REPOS = ["chaos-mesh/chaos-mesh",  "cncf/open-community-groups", "meshery/meshery", "cucumber/godog"]
+REPOS: list[str] = []
 
 # API base headers (preserving custom User-Agent)
 HEADERS = {
@@ -34,6 +34,7 @@ if API_TOKEN:
 # File location configurations
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECTS_YAML_PATH = os.path.join(SCRIPT_DIR, "..", "internal", "templates", "contents", "projects.yaml")
+CACHE_PATH = os.path.join(SCRIPT_DIR, "fork_cache.json")
 
 
 def query_github_api(url: str) -> dict:
@@ -47,6 +48,24 @@ def query_github_api(url: str) -> dict:
         raise SystemExit(f"GitHub API HTTP Error [{err.code}]: {error_details}")
     except urllib.error.URLError as err:
         raise SystemExit(f"GitHub API Network Connection Error: {err.reason}")
+
+
+def load_fork_parents() -> list[str]:
+    """Load parent repository names from scripts/fork_cache.json."""
+    if not os.path.exists(CACHE_PATH):
+        print(f"Error: {CACHE_PATH} not found. Please run scripts/update_fork_cache.py first.", file=sys.stderr)
+        sys.exit(1)
+        
+    try:
+        with open(CACHE_PATH, "r", encoding="utf-8") as f:
+            cache = json.load(f)
+        if isinstance(cache, dict):
+            return list(cache.values())
+    except Exception as err:
+        print(f"Error loading cache from {CACHE_PATH}: {err}", file=sys.stderr)
+        sys.exit(1)
+        
+    return []
 
 
 def fetch_external_pull_requests() -> list[dict]:
@@ -224,6 +243,10 @@ def fetch_external_issues() -> list[dict]:
 
 
 def main() -> None:
+    global REPOS
+    print("Loading active fork repositories from cache...", file=sys.stderr)
+    REPOS = load_fork_parents()
+
     print("Fetching external contributions from GitHub...", file=sys.stderr)
     raw_prs = fetch_external_pull_requests()
     print("Fetching external issues from GitHub...", file=sys.stderr)
@@ -276,14 +299,8 @@ def main() -> None:
             }
             updated_contributions.append(updated_contrib)
 
-    # Sort all contributions to match the order in REPOS
-    def get_sort_key(contrib: dict) -> tuple[int, str]:
-        repo = contrib["repo"]
-        if REPOS and repo in REPOS:
-            return (REPOS.index(repo), repo)
-        return (len(REPOS) if REPOS else 0, repo)
-
-    updated_contributions.sort(key=get_sort_key)
+    # Sort all contributions alphabetically by repository name to group by organization
+    updated_contributions.sort(key=lambda x: x["repo"].lower())
 
     # Assemble updated projects.yaml
     clean_yaml = strip_existing_contributions(yaml_text)
