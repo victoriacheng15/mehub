@@ -22,6 +22,7 @@ This document provides context and instructions for AI agents working on the **M
 | **E2E Tests** | `e2e/` | BDD (Cucumber/Godog) end-to-end integration feature tests. |
 | **Config & Metadata** | `internal/templates/contents/` | YAML configuration for site metadata, projects, and skills. |
 | **Templates & Assets** | `internal/templates/` | Go HTML templates, Tailwind CSS, and static assets (icons, images). |
+| **Helper Scripts** | `scripts/` | Python scripts for dynamic fork parent caching and contributions fetching. |
 
 ## 3. Build and Development
 
@@ -45,6 +46,21 @@ The project uses a `Makefile` to orchestrate build, test, and formatting tasks.
 | `make test-bdd` | Runs Cucumber/Godog E2E BDD feature integration tests under `e2e/`. |
 | `make test-all` | Executes both Go unit tests and E2E BDD integration tests. |
 
+### Local Dev Container
+
+| Command | Description |
+| :--- | :--- |
+| `make dev-build` | Builds the development container image (Podman/Docker). |
+| `make dev-run` | Starts an interactive container shell with the repository directory mounted. |
+| `make dev-clean` | Cleans up the development container image. |
+
+### Helper Scripts
+
+| Command | Description |
+| :--- | :--- |
+| `python3 scripts/update_fork_cache.py` | Queries GitHub to resolve active fork parent repositories and updates `scripts/fork_cache.json`. |
+| `python3 scripts/fetch_contributions.py` | Reads `scripts/fork_cache.json` and updates `projects.yaml` with latest pull requests and issues. |
+
 ### Markdown Files
 
 | Command | Description |
@@ -60,20 +76,7 @@ The project uses a `Makefile` to orchestrate build, test, and formatting tasks.
 | `make setup-go` | Downloads and sets up Go locally. |
 | `make ssg-build` | Sets up Go and Tailwind CLI, then builds the SSG. |
 
-## 4. AI Discoverability & API Registries
-
-Mehub is designed to be easily consumed by AI agents and recruitment systems via machine-readable endpoints generated in `dist/api/`.
-
-### API Registry Map
-
-- **Unified Context**: `/api/manifest.json` — Unified Context Hub for AI agents (Model Context Protocol). It consolidates profile, skills, projects, and blog metadata into a single queryable resource.
-
-### Discoverability Assets
-
-- **robots.txt**: Explicitly allows `/api/` for all crawlers.
-- **sitemap.xml**: Includes both HTML pages and the API registry JSON files to ensure thorough indexing.
-
-## 5. Guidelines
+## 4. Guidelines
 
 ### Go
 
@@ -85,7 +88,11 @@ Mehub is designed to be easily consumed by AI agents and recruitment systems via
 
 - Maintain valid YAML frontmatter in `blog/*.md`.
 - Ensure all posts have a `title`, `date` (YYYY-MM-DD), and `tags`.
-- Avoid em dashes; use commas or parentheses for clarity.
+
+### Python
+
+- Use only the Python standard library (avoid adding external `pip` dependencies).
+- Ensure scripts compile cleanly under Python 3 (`python3 -m py_compile`).
 
 ### Style
 

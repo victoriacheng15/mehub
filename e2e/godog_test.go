@@ -122,7 +122,7 @@ socials: []
 	if err := os.WriteFile(filepath.Join(tc.templatesDir, "base.html"), []byte(baseHTML), 0644); err != nil {
 		return err
 	}
-	templateFiles := []string{"index.html", "about.html", "now.html", "404.html", "tags.html", "archive.html", "blog.html", "post.html"}
+	templateFiles := []string{"index.html", "work.html", "about.html", "now.html", "404.html", "tags.html", "archive.html", "blog.html", "post.html"}
 	for _, f := range templateFiles {
 		if err := os.WriteFile(filepath.Join(tc.templatesDir, f), []byte(pageHTML), 0644); err != nil {
 			return err
@@ -157,10 +157,10 @@ contributions:
 		return err
 	}
 
-	indexHTML := `{{ define "content" }}
+	workHTML := `{{ define "content" }}
 	<h1>{{ .Title }}</h1>
 	{{ if .Config.Contributions.Items }}
-		<h2>Open Source Contributions</h2>
+		<h2>Open Source</h2>
 		<span>Last updated: {{ .Config.Contributions.LastUpdated }}</span>
 		<ul>
 			{{ range .Config.Contributions.Items }}
@@ -169,7 +169,7 @@ contributions:
 		</ul>
 	{{ end }}
 	{{ end }}`
-	return os.WriteFile(filepath.Join(tc.templatesDir, "index.html"), []byte(indexHTML), 0644)
+	return os.WriteFile(filepath.Join(tc.templatesDir, "work.html"), []byte(workHTML), 0644)
 }
 
 // setupMissingConfig creates a contents directory with navigation/metadata but missing the critical profile.yaml.
