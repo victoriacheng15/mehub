@@ -8,6 +8,7 @@ Feature: Site Generation Pipeline
     And a blog directory containing 1 published post
     When the build pipeline is executed
     Then the output directory should contain "index.html"
+    And the output directory should contain "work.html"
     And the output directory should contain "about.html"
     And the output directory should contain "blog.html"
     And the output directory should contain "404.html"
@@ -31,9 +32,9 @@ Feature: Site Generation Pipeline
     When the build pipeline is executed
     Then the build pipeline execution should fail
 
-  Scenario: Render open source contributions on the home page
+  Scenario: Render open source contributions on the work page
     Given a configuration directory with a valid profile containing contributions
     When the build pipeline is executed
-    Then the output file "index.html" should contain "Open Source Contributions"
-    And the output file "index.html" should contain "Last updated: 2026-07-18"
-    And the output file "index.html" should contain "test-repo"
+    Then the output file "work.html" should contain "Open Source"
+    And the output file "work.html" should contain "Last updated: 2026-07-18"
+    And the output file "work.html" should contain "test-repo"

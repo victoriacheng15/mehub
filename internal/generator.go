@@ -125,6 +125,7 @@ func (g *SiteGenerator) GenerateStaticPages(distDir string, data *ContentData) e
 		data        PageData
 	}{
 		{"index.html", "index.html", "", PageData{}},
+		{"work.html", "work.html", "Work", PageData{}},
 		{"about.html", "about.html", "About", PageData{}},
 		{"404.html", "404.html", "404 - Not Found", PageData{}},
 		{"archive.html", "archive.html", "Archive", PageData{Archive: data.PostsByYear, ArchiveYears: data.ArchiveYears}},
@@ -289,7 +290,7 @@ func (g *SiteGenerator) GenerateSitemap(distDir string, posts []Post) error {
 	}
 
 	// Static Pages
-	pages := []string{"", "about.html", "blog.html", "archive.html"}
+	pages := []string{"", "work.html", "about.html", "blog.html", "archive.html"}
 	for _, page := range pages {
 		if _, err := fmt.Fprintf(f, `  <url>
     <loc>%s%s</loc>

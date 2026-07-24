@@ -1,0 +1,168 @@
+{{ define "content" }}
+<div class="flex flex-col gap-10">
+    <section class="flex flex-col gap-4">
+        <h1 class="text-3xl font-bold text-violet-400 tracking-wider uppercase">Work</h1>
+        <p class="text-slate-400 leading-relaxed text-sm">Explore my open-source contributions and personal software projects.</p>
+    </section>
+
+    <!-- Tab Navigation -->
+    <div class="border-b border-slate-800">
+        <nav class="flex gap-8" aria-label="Work tabs" role="tablist">
+            <button id="tab-btn-opensource" class="py-4 px-1 border-b-2 border-violet-500 font-bold text-sm text-violet-400 tracking-wider uppercase focus:outline-none cursor-pointer transition-all duration-200">
+                Open Source
+            </button>
+            <button id="tab-btn-projects" class="py-4 px-1 border-b-2 border-transparent font-bold text-sm text-slate-400 hover:text-slate-200 tracking-wider uppercase focus:outline-none cursor-pointer transition-all duration-200">
+                Featured Projects
+            </button>
+        </nav>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="tab-content-opensource" class="block transition-all duration-300">
+        {{ if .Config.Contributions.Items }}
+        <div class="flex flex-col gap-1 mb-6">
+            <span class="text-xs text-slate-500 font-normal uppercase tracking-wider">Last updated: {{ .Config.Contributions.LastUpdated }}</span>
+        </div>
+        <ul class="flex flex-col gap-6 list-none">
+            {{ range $cIndex, $contrib := .Config.Contributions.Items }}
+            <li>
+                <article class="flex flex-col gap-4 p-6 bg-slate-900 border border-slate-800 rounded-xl">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-lg font-bold text-slate-200">
+                            <a href="{{ $contrib.Link }}" target="_blank" rel="noopener noreferrer" class="hover:text-violet-400 transition-colors">
+                                {{ $contrib.Repo }}
+                            </a>
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">{{ $contrib.Description }}</p>
+                    </div>
+
+                    <ul class="flex flex-col gap-3 list-none pl-4 border-l border-violet-500/40">
+                        {{ range $itemIndex, $item := $contrib.Items }}
+                        <li class="{{ if ge $itemIndex 3 }}hidden additional-pr-{{ $cIndex }} transition-all duration-300{{ end }}">
+                            <a href="{{ $contrib.Link }}/{{ if eq $item.Type "PR" }}pull{{ else }}issues{{ end }}/{{ $item.Number }}" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-2 text-sm">
+                                {{ if eq $item.Type "PR" }}
+                                <span class="{{ if eq $item.Status "merged" }}text-purple-400{{ else }}text-emerald-400{{ end }} shrink-0" title="{{ $item.Status }} Pull Request">
+                                    <svg class="w-4 h-4 shrink-0 mt-0.5" viewBox="0 0 16 16" version="1.1" fill="currentColor" aria-hidden="true">
+                                        <path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.67 1.88a.75.75 0 0 1 1.08-.08l2.25 2.25a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 1 1-1.06-1.06l.97-.97H5.75a.75.75 0 0 1 0-1.5h2.44l-.97-.97a.75.75 0 0 1-.08-1.08ZM13 5.372a2.25 2.25 0 1 1 1.5 0v5.256a2.25 2.25 0 1 1-1.5 0V5.372Zm-1.5-2.122a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0ZM3 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm10 0a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"></path>
+                                    </svg>
+                                </span>
+                                {{ else }}
+                                <span class="{{ if eq $item.Status "closed" }}text-purple-400{{ else }}text-emerald-400{{ end }} shrink-0" title="{{ $item.Status }} Issue">
+                                    <svg class="w-4 h-4 shrink-0 mt-0.5" viewBox="0 0 16 16" version="1.1" fill="currentColor" aria-hidden="true">
+                                        <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path>
+                                        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"></path>
+                                    </svg>
+                                </span>
+                                {{ end }}
+                                <span class="text-slate-500 font-mono shrink-0 group-hover:text-violet-400 transition-colors">#{{ $item.Number }}</span>
+                                <span class="text-slate-300 group-hover:text-violet-400 transition-colors leading-snug">{{ $item.Title }}</span>
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+
+                    {{ if gt (len $contrib.Items) 3 }}
+                    <div class="mt-2">
+                        <button class="toggle-prs-btn text-xs font-semibold text-violet-400 hover:text-violet-300 transition-colors cursor-pointer flex items-center gap-1"
+                                data-repo-index="{{ $cIndex }}">
+                            <span>see more ↓</span>
+                        </button>
+                    </div>
+                    {{ end }}
+                </article>
+            </li>
+            {{ end }}
+        </ul>
+        {{ else }}
+        <p class="text-slate-400">No open source contributions found.</p>
+        {{ end }}
+    </div>
+
+    <div id="tab-content-projects" class="hidden transition-all duration-300">
+        <ul class="flex flex-col gap-6 list-none">
+            {{ range $index, $project := .Config.Projects }}
+            <li>
+                <article class="flex flex-col gap-4 p-6 bg-slate-900 border border-slate-800 rounded-xl h-full justify-between">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-4">
+                            <span role="img" aria-label="{{ $project.Title }} icon" class="shrink-0 flex items-center justify-center w-12 h-12 bg-slate-800/50 rounded-lg text-2xl">
+                                {{ $project.Emoji }}
+                            </span>
+                            <h3 class="text-lg font-bold text-slate-200 leading-snug">
+                                {{ $project.Title }}
+                            </h3>
+                        </div>
+                        <p class="text-slate-400 leading-relaxed text-sm">{{ $project.ShortDescription }}</p>
+                    </div>
+                    <div class="flex flex-col gap-4 mt-auto">
+                        <ul class="flex flex-wrap gap-2 list-none">
+                            {{ range (cleanYAMLList $project.Techs) }}
+                            <li class="px-2 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded border border-slate-700">{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                        <div class="flex items-center gap-2">
+                            <a href="https://github.com/{{ if eq $project.Link "platform-actions" }}victoriacheng15hub{{ else }}victoriacheng15{{ end }}/{{ $project.Link }}#readme" target="_blank" rel="noopener noreferrer" 
+                               class="text-violet-400 font-bold hover:text-violet-300 transition-colors group/link flex items-center gap-2 text-sm">
+                                View Project <span class="group-hover/link:translate-x-1 transition-transform">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
+
+<script>
+    // Tab switching logic
+    const openSourceTabBtn = document.getElementById('tab-btn-opensource');
+    const projectsTabBtn = document.getElementById('tab-btn-projects');
+    const openSourceContent = document.getElementById('tab-content-opensource');
+    const projectsContent = document.getElementById('tab-content-projects');
+
+    function selectTab(activeBtn, inactiveBtn, activeContent, inactiveContent) {
+        // Toggle button styles
+        activeBtn.classList.remove('border-transparent', 'text-slate-400', 'hover:text-slate-200');
+        activeBtn.classList.add('border-violet-500', 'text-violet-400');
+        
+        inactiveBtn.classList.remove('border-violet-500', 'text-violet-400');
+        inactiveBtn.classList.add('border-transparent', 'text-slate-400', 'hover:text-slate-200');
+
+        // Toggle content visibility
+        activeContent.classList.remove('hidden');
+        activeContent.classList.add('block');
+        
+        inactiveContent.classList.remove('block');
+        inactiveContent.classList.add('hidden');
+    }
+
+    openSourceTabBtn.addEventListener('click', () => {
+        selectTab(openSourceTabBtn, projectsTabBtn, openSourceContent, projectsContent);
+    });
+
+    projectsTabBtn.addEventListener('click', () => {
+        selectTab(projectsTabBtn, openSourceTabBtn, projectsContent, openSourceContent);
+    });
+
+    // PR toggle logic
+    document.querySelectorAll('.toggle-prs-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const cIndex = this.getAttribute('data-repo-index');
+            const additionalPRs = document.querySelectorAll('.additional-pr-' + cIndex);
+            const textSpan = this.querySelector('span');
+            const isHidden = additionalPRs[0].classList.contains('hidden');
+
+            additionalPRs.forEach(pr => {
+                pr.classList.toggle('hidden');
+            });
+
+            if (isHidden) {
+                textSpan.textContent = 'see less ↑';
+            } else {
+                textSpan.textContent = 'see more ↓';
+            }
+        });
+    });
+</script>
+{{ end }}

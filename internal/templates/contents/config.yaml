@@ -15,11 +15,15 @@ navigation:
   header:
     - href: about.html
       text: About
+    - href: work.html
+      text: Work
     - href: blog.html
       text: Blog
   footer:
     - href: about.html
       text: About
+    - href: work.html
+      text: Work
     - href: blog.html
       text: Blog
     - href: archive.html
