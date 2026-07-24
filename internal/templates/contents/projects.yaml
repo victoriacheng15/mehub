@@ -55,7 +55,7 @@ projects:
       - eBPF
 
 contributions:
-  lastUpdated: "2026-07-21"
+  lastUpdated: "2026-07-24"
   items:
     - repo: chaos-mesh/chaos-mesh
       link: https://github.com/chaos-mesh/chaos-mesh
@@ -90,8 +90,24 @@ contributions:
       description: "Open source events platform for communities and organizations"
       items:
         - type: Issue
+          number: 613
+          title: "View joined groups on the User Dashboard"
+          status: open
+        - type: Issue
           number: 582
           title: "Display event times in logged-in user's preferred timezone"
+          status: open
+    - repo: meshery/meshery
+      link: https://github.com/meshery/meshery
+      description: "Meshery, the cloud native manager"
+      items:
+        - type: PR
+          number: 20899
+          title: "[UI] Fix dashboard detail view crash during loading"
+          status: open
+        - type: Issue
+          number: 20897
+          title: "[UI] TypeError: Cannot read properties of undefined (reading 'find') in dashboard"
           status: open
     - repo: cucumber/godog
       link: https://github.com/cucumber/godog
