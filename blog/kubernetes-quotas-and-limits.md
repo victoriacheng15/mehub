@@ -3,7 +3,6 @@ title: "Kubernetes Quotas and Limits"
 description: "Prevent cluster noisy neighbor issues by configuring resource quotas and container limit ranges to enforce resource boundary defaults in shared developer environments."
 date: 2026-07-28
 tags: ["kubernetes", "platform"]
-draft: true
 ---
 
 ## The Noisy Neighbor Problem in Shared Clusters
