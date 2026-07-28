@@ -55,7 +55,7 @@ projects:
       - eBPF
 
 contributions:
-  lastUpdated: "2026-07-24"
+  lastUpdated: "2026-07-27"
   items:
     - repo: chaos-mesh/chaos-mesh
       link: https://github.com/chaos-mesh/chaos-mesh
@@ -85,6 +85,14 @@ contributions:
           number: 5031
           title: "[Bug]: TypeError: Cannot read properties of undefined (reading 'selector')"
           status: open
+    - repo: chaos-mesh/website
+      link: https://github.com/chaos-mesh/website
+      description: "Source for Chaos Mesh website."
+      items:
+        - type: Issue
+          number: 449
+          title: "[Docs]: Document supported/tested Kubernetes versions in Helm installation prerequisites"
+          status: open
     - repo: cncf/open-community-groups
       link: https://github.com/cncf/open-community-groups
       description: "Open source events platform for communities and organizations"
@@ -96,6 +104,14 @@ contributions:
         - type: Issue
           number: 582
           title: "Display event times in logged-in user's preferred timezone"
+          status: open
+    - repo: cucumber/godog
+      link: https://github.com/cucumber/godog
+      description: "Cucumber for golang"
+      items:
+        - type: PR
+          number: 760
+          title: "fix(hooks): wrap errors to preserve sentinel values"
           status: open
     - repo: meshery/meshery
       link: https://github.com/meshery/meshery
@@ -109,11 +125,15 @@ contributions:
           number: 20897
           title: "[UI] TypeError: Cannot read properties of undefined (reading 'find') in dashboard"
           status: open
-    - repo: cucumber/godog
-      link: https://github.com/cucumber/godog
-      description: "Cucumber for golang"
+    - repo: meshery/meshery.io
+      link: https://github.com/meshery/meshery.io
+      description: "Website for Meshery"
       items:
         - type: PR
-          number: 760
-          title: "fix(hooks): wrap errors to preserve sentinel values"
-          status: open
+          number: 2832
+          title: "[Website] Fix community calendar script loading path"
+          status: merged
+        - type: Issue
+          number: 2826
+          title: "[Website] Community Calendar does not load"
+          status: closed
