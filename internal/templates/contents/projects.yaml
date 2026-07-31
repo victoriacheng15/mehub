@@ -55,12 +55,16 @@ projects:
       - eBPF
 
 contributions:
-  lastUpdated: "2026-07-27"
+  lastUpdated: "2026-07-31"
   items:
     - repo: chaos-mesh/chaos-mesh
       link: https://github.com/chaos-mesh/chaos-mesh
       description: "A Chaos Engineering Platform for Kubernetes."
       items:
+        - type: PR
+          number: 5046
+          title: "fix(ui): resolve token validation and lockout loop"
+          status: open
         - type: PR
           number: 5042
           title: "fix(multicluster): fix remote chaos monitor naming collision"
@@ -100,7 +104,7 @@ contributions:
         - type: Issue
           number: 613
           title: "View joined groups on the User Dashboard"
-          status: open
+          status: closed
         - type: Issue
           number: 582
           title: "Display event times in logged-in user's preferred timezone"
@@ -112,7 +116,7 @@ contributions:
         - type: PR
           number: 760
           title: "fix(hooks): wrap errors to preserve sentinel values"
-          status: open
+          status: merged
     - repo: meshery/meshery
       link: https://github.com/meshery/meshery
       description: "Meshery, the cloud native manager"
