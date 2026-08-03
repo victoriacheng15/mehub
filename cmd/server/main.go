@@ -123,6 +123,10 @@ func serveHTML(w http.ResponseWriter, r *http.Request, path string) {
 func build() error {
 	start := time.Now()
 
+	if err := runAuditTags(); err != nil {
+		return fmt.Errorf("audit tags: %w", err)
+	}
+
 	count, err := internal.RunPipeline(
 		"dist",
 		"internal/templates/contents",
@@ -139,6 +143,16 @@ func build() error {
 	}
 
 	log.Printf("✅ built %d posts in %v", count, time.Since(start))
+	return nil
+}
+
+// runAuditTags executes the Python tag audit script.
+func runAuditTags() error {
+	cmd := exec.Command("python3", "scripts/audit_tags.py")
+	out, err := cmd.CombinedOutput()
+	if err != nil {
+		return fmt.Errorf("%w\n%s", err, out)
+	}
 	return nil
 }
 

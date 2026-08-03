@@ -109,4 +109,4 @@ jobs:
           node-version: ${{ env.node-version }}
 
       - name: Run Markdown Lint
-        run: make md-lint
+        run: make lint-md

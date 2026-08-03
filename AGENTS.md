@@ -41,6 +41,7 @@ The project uses a `Makefile` to orchestrate build, test, and formatting tasks.
 | `make update` | Updates Go dependencies and tidies `go.mod`. |
 | `make vet` | Verifies code formatting (`gofmt`) and static analysis (`go vet`) under `cmd/` and `internal/`. |
 | `make format` | Formats all Go code under `cmd/` and `internal/` using `go fmt` and `goimports`. |
+| `make format-all` | Runs formatting for both Go code and Markdown files. |
 | `make test` | Runs Go unit tests under `internal/`. |
 | `make cov` | Runs Go unit tests with coverage report under `internal/`. |
 | `make test-bdd` | Runs Cucumber/Godog E2E BDD feature integration tests under `e2e/`. |
@@ -65,8 +66,8 @@ The project uses a `Makefile` to orchestrate build, test, and formatting tasks.
 
 | Command | Description |
 | :--- | :--- |
-| `make md-lint` | Lints all Markdown files using `markdownlint-cli`. |
-| `make md-format` | Automatically formats all Markdown files using `markdownlint-cli`. |
+| `make lint-md` | Lints all Markdown files using `markdownlint-cli`. |
+| `make format-md` | Automatically formats all Markdown files using `markdownlint-cli`. |
 
 ### Setup
 
