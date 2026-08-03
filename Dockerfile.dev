@@ -26,7 +26,7 @@ FROM golang:1.26-alpine AS dev
 
 # make + bash: required to run Makefile targets inside air's build cmd
 # gcompat + libgcc + libstdc++: runtime deps for the Tailwind v4 Bun binary on Alpine/musl
-RUN apk add --no-cache make bash gcompat libgcc libstdc++
+RUN apk add --no-cache make bash gcompat libgcc libstdc++ python3
 
 COPY --from=tools /go/bin/air                /usr/local/bin/air
 COPY --from=tools /go/bin/goimports          /usr/local/bin/goimports

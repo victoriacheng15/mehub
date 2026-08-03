@@ -56,8 +56,9 @@ Build targets are automated through the root Makefile.
 | `make test` | Executes Go unit tests. |
 | `make lint` | Validates Go code styling and execution safety via `go vet`. |
 | `make format` | Formats all Go codebase files using `go fmt`. |
-| `make md-lint` | Analyzes Markdown consistency using `markdownlint-cli`. |
-| `make md-format` | Corrects style inconsistencies in Markdown files. |
+| `make format-all` | Runs both Go and Markdown codebase formatters. |
+| `make lint-md` | Analyzes Markdown consistency using `markdownlint-cli`. |
+| `make format-md` | Corrects style inconsistencies in Markdown files. |
 
 ---
 
