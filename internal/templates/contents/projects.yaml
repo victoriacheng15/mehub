@@ -55,7 +55,7 @@ projects:
       - eBPF
 
 contributions:
-  lastUpdated: "2026-07-31"
+  lastUpdated: "2026-08-03"
   items:
     - repo: chaos-mesh/chaos-mesh
       link: https://github.com/chaos-mesh/chaos-mesh
@@ -71,12 +71,12 @@ contributions:
           status: open
         - type: PR
           number: 5034
-          title: "fix(dashboard): fix TypeError crash on Workflow schedule details"
-          status: open
+          title: "fix(dashboard): TypeError crash on Workflow schedule details"
+          status: merged
         - type: PR
           number: 5028
           title: "refactor(e2e-test): integrate gherkin in CI and migrate namespace setup"
-          status: open
+          status: merged
         - type: PR
           number: 5016
           title: "fix(dashboard): support serving UI under a configurable subpath"
@@ -88,7 +88,7 @@ contributions:
         - type: Issue
           number: 5031
           title: "[Bug]: TypeError: Cannot read properties of undefined (reading 'selector')"
-          status: open
+          status: closed
     - repo: chaos-mesh/website
       link: https://github.com/chaos-mesh/website
       description: "Source for Chaos Mesh website."
