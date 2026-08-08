@@ -2,9 +2,9 @@
 
 Mehub is a personal website, portfolio, and blog platform built on a custom, zero-runtime-dependency Go-based Static Site Generator (SSG).
 
-## Design Philosophy & "Why"
+## Design Philosophy
 
-- **Simplified Toolchain**: Replaced Astro/JS framework toolchains to eliminate NPM package updates and complex dependencies.
+- **Simplified Toolchain**: Replaced JS framework toolchains to eliminate NPM runtime dependencies and continuous package maintenance overhead.
 - **Fast Compilation**: Compiles and renders the entire site (HTML pages, XML sitemaps, RSS feeds, and JSON APIs) in under 10 seconds.
 
 ## Built With
@@ -21,19 +21,18 @@ Mehub is a personal website, portfolio, and blog platform built on a custom, zer
 ```text
   ┌───────────────────────────┐
   │   Markdown Content        │────────┐
-  │   (/blog)                 │        │
+  │   (blog/)                 │        │
   └───────────────────────────┘        │
   ┌───────────────────────────┐        │       ┌───────────────────┐
   │   YAML Configurations     │────────┼──────>│   Go SSG Engine   │───(Generate HTML)───┐
-  │   (/templates/contents)   │        │       │   (cmd/ssg)       │                     │
+  │   (templates/contents)    │        │       │   (cmd/ssg)       │                     │
   └───────────────────────────┘        │       └───────────────────┘                     │
   ┌───────────────────────────┐        │                                                 │
   │   HTML Templates          │────────┘                                                 ▼
-  │   (/templates)            │                                                      ┌───────┐
-  │                           │                                                      │ dist/ │
-  └───────────────────────────┘                                                      └───────┘
-                                                                                         ▲
-  ┌───────────────────────────┐                ┌───────────────────┐                     │
+  │   (templates)             │                                                      ┌───────┐
+  └───────────────────────────┘                                                      │ dist/ │
+                                                                                     └───────┘
+  ┌───────────────────────────┐                ┌───────────────────┐                     ▲
   │   Tailwind CSS Input      │───────────────>│   Tailwind CLI    │───(Compile Styles)──┘
   │   (input.css)             │                └───────────────────┘
   └───────────────────────────┘
@@ -41,24 +40,64 @@ Mehub is a personal website, portfolio, and blog platform built on a custom, zer
 
 ### Key Components
 
-- **SSG Entrypoint**: `cmd/ssg/main.go` orchestrates parsing, content compiling, and distribution directory generation.
-- **Core Generator**: `internal/generator.go` renders HTML layouts, RSS feeds, and JSON endpoints.
-- **Templates & Styling**: Handled via Go's standard `html/template` packages and a standalone Tailwind CSS CLI pipeline.
+- **SSG Entrypoint (`cmd/ssg/main.go`)**: Orchestrates content parsing, site compilation, and distribution directory generation.
+- **Core Generator (`internal/generator.go`)**: Renders HTML layouts, RSS feeds, sitemaps, and JSON API registries.
+- **Content Engine (`internal/content.go`)**: Parses YAML configuration and Markdown posts with Goldmark.
+- **Templates & Styling**: Standard Go `html/template` layouts paired with standalone Tailwind CSS CLI compilation.
+
+---
 
 ## Local Development & Build Commands
 
 Build targets are automated through the root Makefile.
 
+### Environment Setup
+
 | Command | Action |
 | :--- | :--- |
-| `make build` | Primary build task. Downloads Tailwind CSS, compiles Go SSG, and builds static site into `dist/`. |
-| `make ssg-build` | Continuous integration task. Prepares Go, Tailwind, compiles, and packages production assets. |
-| `make test` | Executes Go unit tests. |
-| `make lint` | Validates Go code styling and execution safety via `go vet`. |
-| `make format` | Formats all Go codebase files using `go fmt`. |
-| `make format-all` | Runs both Go and Markdown codebase formatters. |
-| `make lint-md` | Analyzes Markdown consistency using `markdownlint-cli`. |
-| `make format-md` | Corrects style inconsistencies in Markdown files. |
+| `make update` | Updates Go dependencies and tidies `go.mod`. |
+
+### Local Dev Container
+
+| Command | Action |
+| :--- | :--- |
+| `make dev-build` | Builds the development container image (Podman/Docker). |
+| `make dev-run` | Starts an interactive container shell with the repository mounted. |
+| `make dev-clean` | Removes the local development container image. |
+
+### Quality Checks & Formatting
+
+| Command | Action |
+| :--- | :--- |
+| `make vet` | Validates Go code formatting (`gofmt`) and static analysis (`go vet`). |
+| `make format` | Formats all Go codebase files using `go fmt` and `goimports`. |
+| `make format-all` | Formats all Go and Markdown files across the codebase. |
+| `make lint-md` | Lints Markdown files using `markdownlint-cli`. |
+| `make format-md` | Automatically formats and fixes Markdown files. |
+
+### Testing
+
+| Command | Action |
+| :--- | :--- |
+| `make test` | Runs Go unit tests under `internal/`. |
+| `make cov` | Runs unit tests with test coverage reporting. |
+| `make test-bdd` | Executes Cucumber/Godog E2E BDD integration tests under `e2e/`. |
+| `make test-all` | Executes both Go unit tests and BDD integration tests. |
+
+### Site Generation & Build
+
+| Command | Action |
+| :--- | :--- |
+| `make build` | Primary build command. Downloads Tailwind CSS, executes the SSG, and generates the site in `dist/`. |
+| `make ssg-build` | Prepares local Go and Tailwind tooling, then builds the SSG. |
+
+### Helper Scripts
+
+| Command | Action |
+| :--- | :--- |
+| `python3 scripts/audit_tags.py` | Audits and validates tags across blog posts. |
+| `python3 scripts/update_fork_cache.py` | Queries GitHub for fork parent repositories and updates `scripts/fork_cache.json`. |
+| `python3 scripts/fetch_contributions.py` | Updates `projects.yaml` with latest pull requests and issues. |
 
 ---
 
@@ -66,11 +105,30 @@ Build targets are automated through the root Makefile.
 
 > **Philosophy**: *Automate repetition. Preserve judgment.*
 
-Following this philosophy, the automation pipelines handle repetitive tasks while keeping integration decisions manual:
+```text
+  ┌────────────────────────────┐
+  │ sync-blog-post.yml         │────(Import Drafts)──────────────┐
+  └────────────────────────────┘                                 ▼
+  ┌────────────────────────────┐                          ┌─────────────┐
+  │ publish-blog-post.yml      │──────(Publish PR)───────>│    blog/    │
+  └────────────────────────────┘                          └─────────────┘
 
-- `ci.yml`: Runs tests, code vetting, and formatting checks.
+  ┌────────────────────────────┐                          ┌───────────────────────────────┐
+  │ update-contributions.yml   │──(Fetch Contributions)──>│ templates/contents/           │
+  │ (fetch_contributions.py)   │                          │ projects.yaml                 │
+  └────────────────────────────┘                          └───────────────────────────────┘
+  ┌────────────────────────────┐                          ┌───────────────────────────────┐
+  │ update-fork-cache.yml      │──────(Cache Forks)──────>│ scripts/fork_cache.json       │
+  │ (update_fork_cache.py)     │                          │                               │
+  └────────────────────────────┘                          └───────────────────────────────┘
+```
+
+Automated pipelines handle repetitive tasks while keeping merge decisions manual:
+
 - `sync-blog-post.yml`: Imports new blog drafts from remote APIs.
-- `publish-blog-post.yml`: Publishes scheduled blog drafts by opening pull requests.
-- `update-contributions.yml`: Updates open-source contribution metrics from GitHub.
+- `publish-blog-post.yml`: Publishes scheduled blog drafts by creating pull requests.
+- `update-contributions.yml`: Updates open-source contribution metrics from GitHub into `projects.yaml`.
+- `update-fork-cache.yml`: Queries GitHub API to cache parent repository metadata for forks.
+- `ci.yml`: Runs tests, static analysis (`go vet`), formatting checks, and markdown linting.
 
-All automated PRs require manual review and merging to preserve final content judgment.
+All automated pull requests require manual review and merging to preserve final content judgment.

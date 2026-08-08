@@ -1,101 +1,94 @@
-# Agent Guide for Mehub
+# AGENTS.md
 
-This document provides context and instructions for AI agents working on the **Mehub** project, a custom Static Site Generator (SSG) written in Go.
+This file provides guidance to AI coding agents when working with code in this repository.
 
-## 1. Project Overview
+## Project Overview
 
-**Mehub** is a personal website and blog platform built with a custom Go-based SSG. It emphasizes performance, zero external runtime dependencies, and AI-first discoverability.
+Mehub is a personal website and blog platform built with a custom Go-based Static Site Generator (SSG). It emphasizes performance, zero external runtime dependencies, and AI-first discoverability.
 
 - **Core Tech**: Go (Golang) 1.26
 - **Styling**: Tailwind CSS (standalone CLI)
 - **Content**: Markdown with YAML frontmatter
 - **Architecture**: Single-binary generator that renders templates into a `dist/` directory.
 
-## 2. Project Architecture
+## Development Commands
 
-| Component | Path | Description |
-| :--- | :--- | :--- |
-| **Entry Point** | `cmd/ssg/main.go` | Orchestrates the build process and clean/setup tasks. |
-| **Generator** | `internal/generator.go` | Core logic for rendering HTML, RSS, Sitemaps, file copy helpers, and API registries. |
-| **Schemas** | `internal/schema.go` | Unified definitions of data structures, site configurations, and post models. |
-| **Content Parsing** | `internal/content.go` | Config loaders and Markdown parsing (goldmark), tag grouping, and post processing. |
-| **E2E Tests** | `e2e/` | BDD (Cucumber/Godog) end-to-end integration feature tests. |
-| **Config & Metadata** | `internal/templates/contents/` | YAML configuration for site metadata, projects, and skills. |
-| **Templates & Assets** | `internal/templates/` | Go HTML templates, Tailwind CSS, and static assets (icons, images). |
-| **Helper Scripts** | `scripts/` | Python scripts for dynamic fork parent caching and contributions fetching. |
+### Environment Setup
 
-## 3. Build and Development
-
-The project uses a `Makefile` to orchestrate build, test, and formatting tasks.
-
-### Site Generation
-
-| Command | Description |
-| :--- | :--- |
-| `make build` | **Primary Command**. Downloads Tailwind, builds the SSG, and generates the full site in `dist/`. |
-
-### Development
-
-| Command | Description |
-| :--- | :--- |
-| `make update` | Updates Go dependencies and tidies `go.mod`. |
-| `make vet` | Verifies code formatting (`gofmt`) and static analysis (`go vet`) under `cmd/` and `internal/`. |
-| `make format` | Formats all Go code under `cmd/` and `internal/` using `go fmt` and `goimports`. |
-| `make format-all` | Runs formatting for both Go code and Markdown files. |
-| `make test` | Runs Go unit tests under `internal/`. |
-| `make cov` | Runs Go unit tests with coverage report under `internal/`. |
-| `make test-bdd` | Runs Cucumber/Godog E2E BDD feature integration tests under `e2e/`. |
-| `make test-all` | Executes both Go unit tests and E2E BDD integration tests. |
+```bash
+make update          # Update Go dependencies and tidy go.mod
+```
 
 ### Local Dev Container
 
-| Command | Description |
-| :--- | :--- |
-| `make dev-build` | Builds the development container image (Podman/Docker). |
-| `make dev-run` | Starts an interactive container shell with the repository directory mounted. |
-| `make dev-clean` | Cleans up the development container image. |
+```bash
+make dev-build   # Build development container image (Podman/Docker)
+make dev-run     # Start interactive container shell with repository mounted
+make dev-clean   # Remove development container image
+```
+
+### Quality Checks & Formatting
+
+```bash
+make vet         # Run go vet and verify formatting with gofmt
+make format      # Format Go code with go fmt and goimports
+make lint-md     # Lint Markdown files using markdownlint-cli
+make format-md   # Format Markdown files using markdownlint-cli
+make format-all  # Format all codebase files (Go and Markdown)
+```
+
+### Testing
+
+```bash
+make test        # Run Go unit tests under internal/
+make cov         # Run Go unit tests with coverage report
+make test-bdd    # Run Cucumber/Godog E2E BDD integration tests under e2e/
+make test-all    # Execute both Go unit tests and E2E BDD integration tests
+```
+
+### Site Generation & Build
+
+```bash
+make build       # Primary build: download Tailwind, run SSG, and generate site in dist/
+make ssg-build   # Setup Go and Tailwind CLI, then build the SSG
+```
 
 ### Helper Scripts
 
-| Command | Description |
-| :--- | :--- |
-| `python3 scripts/update_fork_cache.py` | Queries GitHub to resolve active fork parent repositories and updates `scripts/fork_cache.json`. |
-| `python3 scripts/fetch_contributions.py` | Reads `scripts/fork_cache.json` and updates `projects.yaml` with latest pull requests and issues. |
+```bash
+python3 scripts/audit_tags.py            # Audit and validate tags across blog posts
+python3 scripts/update_fork_cache.py     # Query GitHub for fork parent repositories and update scripts/fork_cache.json
+python3 scripts/fetch_contributions.py   # Update projects.yaml with latest pull requests and issues
+```
 
-### Markdown Files
+## Architecture
 
-| Command | Description |
-| :--- | :--- |
-| `make lint-md` | Lints all Markdown files using `markdownlint-cli`. |
-| `make format-md` | Automatically formats all Markdown files using `markdownlint-cli`. |
+### Key Components
 
-### Setup
+- **Entry Point (`cmd/ssg/main.go`)**: Orchestrates the build process and clean/setup tasks.
+- **Generator (`internal/generator.go`)**: Core logic for rendering HTML, RSS feeds, sitemaps, file copying, and API registries.
+- **Content Parsing (`internal/content.go`)**: Configuration loaders, Markdown parsing (Goldmark), tag grouping, and post processing.
+- **Schemas (`internal/schema.go`)**: Unified definitions of data structures, site configurations, and post models.
 
-| Command | Description |
-| :--- | :--- |
-| `make setup-tailwind` | Downloads and sets up the Tailwind CSS CLI locally. |
-| `make setup-go` | Downloads and sets up Go locally. |
-| `make ssg-build` | Sets up Go and Tailwind CLI, then builds the SSG. |
+### Key Directories
 
-## 4. Guidelines
+- `cmd/ssg/`: Application entry point.
+- `internal/`: Core SSG engine, templates, and content parsing logic.
+- `internal/templates/`: Go HTML templates, Tailwind CSS input (`input.css`), and static assets.
+- `internal/templates/contents/`: YAML configuration files for site metadata, projects, and skills.
+- `blog/`: Markdown posts with YAML frontmatter.
+- `e2e/`: BDD (Cucumber/Godog) end-to-end integration feature tests.
+- `scripts/`: Python helper scripts for data fetching and validation.
 
-### Go
+## Development Workflow
 
-- Use idiomatic Go and prefer the standard library.
-- Code **must** pass `make vet` before completion.
-- Handle all errors explicitly.
+1. **Before Making Changes**: Ensure dependencies are installed and test runs pass (`make test-all`).
+2. **Code Standards**: Run `make vet` before committing to ensure Go formatting and static checks pass.
+3. **Markdown Updates**: Maintain valid YAML frontmatter in `blog/*.md` (all posts require `title`, `date` in `YYYY-MM-DD`, and `tags`). Run `make format-md` after editing Markdown.
 
-### Markdown
+## Common Pitfalls
 
-- Maintain valid YAML frontmatter in `blog/*.md`.
-- Ensure all posts have a `title`, `date` (YYYY-MM-DD), and `tags`.
-
-### Python
-
-- Use only the Python standard library (avoid adding external `pip` dependencies).
-- Ensure scripts compile cleanly under Python 3 (`python3 -m py_compile`).
-
-### Style
-
-- Use Tailwind utility classes in templates.
-- Avoid inline styles or custom CSS blocks outside of `internal/templates/input.css`.
+1. **Go Best Practices**: Use idiomatic Go and prefer the standard library. Handle all errors explicitly.
+2. **Styling Constraints**: Use Tailwind utility classes in templates. Avoid inline styles or custom CSS blocks outside of `internal/templates/input.css`.
+3. **Python Standard Library**: Helper scripts must use only the Python standard library with no external pip dependencies, and must compile cleanly under Python 3 (`python3 -m py_compile`).
+4. **Punctuation Rules**: Do not use em dashes in documentation or templates. Use commas, parentheses, or periods instead.
