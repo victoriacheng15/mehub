@@ -29,6 +29,7 @@ projects:
     techs:
       - TypeScript
       - React (Next.js)
+      - Go
       - Azure
       - GitHub Actions
       - MongoDB Atlas
