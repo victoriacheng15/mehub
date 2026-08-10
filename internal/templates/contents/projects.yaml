@@ -12,9 +12,21 @@ projects:
       - OpenTelemetry
       - Chaos Engineering (Chaos Mesh)
       - Ollama
+  - title: Cover Craft
+    emoji: 🎨
+    shortDescription: Full-stack TS React and Go serverless cover image generator on Azure Web Apps & Functions, automated deployment via GitHub Actions CI/CD, queue-based async processing, WCAG validation, and analytics.
+    link: cover-craft
+    techs:
+      - TypeScript
+      - React (Next.js)
+      - Go
+      - Azure
+      - OpenAPI
+      - GitHub Actions
+      - MongoDB Atlas
   - title: Uptime Monitor
     emoji: 🛡️
-    shortDescription: Serverless Go project on AWS that monitors multiple websites hourly with Lambda and EventBridge, stores status history in S3, and deploys infrastructure with Terraform and GitHub Actions.
+    shortDescription: 'Full-stack serverless uptime monitoring platform in Go: custom SSG status dashboard, AWS Lambda checks, EventBridge hourly scheduling, S3 metrics, and automated Terraform/GitHub Actions deployments.'
     link: uptime-monitor
     techs:
       - Go
@@ -22,17 +34,6 @@ projects:
       - Terraform
       - GitHub Actions
       - BDD (Cucumber/Godog)
-  - title: Cover Craft
-    emoji: 🎨
-    shortDescription: TypeScript/React cover image generator with Azure Web Apps and Functions, automated deployment via GitHub Actions CI/CD, queue-based async processing, WCAG validation, telemetry, and analytics.
-    link: cover-craft
-    techs:
-      - TypeScript
-      - React (Next.js)
-      - Go
-      - Azure
-      - GitHub Actions
-      - MongoDB Atlas
   - title: Dev Toolchain
     emoji: 🛠️
     shortDescription: A portable library of reusable AI agent skills and helper scripts, structured under the SKILL.md open standard to orchestrate consistent developer workflows across compatible LLM clients. 
