@@ -32,11 +32,11 @@ navigation:
 about:
   image: avatar.png
   timeline:
-    - CNCF LFX - Chaos Mesh Mentee
+    - CNCF LFX - Chaos Mesh Mentee & Contributor
     - Shopify - Software Engineering Intern
-    - SAIT '26 - Software Development Graduate
+    - Southern Alberta Institute of Technology (SAIT) - Software Development Diploma
     - Packaging Development Engineer
-    - Rochester Institute of Technology
+    - Rochester Institute of Technology (RIT) - BS & MS
   lastUpdated: July 2026
   currently:
     - Maintaining LLM Telemetry Gateway, Uptime Monitor, Cover Craft and Dev Toolchain projects.
