@@ -3,7 +3,6 @@ title: "Kubernetes Placement and Network Controls"
 description: "Configure advanced pod placement using node affinity and taints, and secure container traffic using namespace network policies inside local microservice sandboxes."
 date: 2026-08-11
 tags: ["kubernetes", "platform"]
-draft: true
 ---
 
 ## Unconstrained Placement and Exposed Services
