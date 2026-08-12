@@ -5,12 +5,16 @@ on:
     - cron: "30 0 * * 2"
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
     env:
-      AUTHOR_NAME: '${{ github.actor }}'
-      AUTHOR_EMAIL: '${{ github.actor }}@users.noreply.github.com'
+      AUTHOR_NAME: 'github-actions[bot]'
+      AUTHOR_EMAIL: '41898282+github-actions[bot]@users.noreply.github.com'
     steps:
       - uses: actions/checkout@v7
         with:
