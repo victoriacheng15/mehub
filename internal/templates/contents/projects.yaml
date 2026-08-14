@@ -57,7 +57,7 @@ projects:
       - eBPF
 
 contributions:
-  lastUpdated: "2026-08-10"
+  lastUpdated: "2026-08-14"
   items:
     - repo: chaos-mesh/chaos-mesh
       link: https://github.com/chaos-mesh/chaos-mesh
@@ -95,6 +95,10 @@ contributions:
           number: 5013
           title: "feat(e2e-test): implement gherkin BDD runner and podkill scenarios"
           status: merged
+        - type: Issue
+          number: 5062
+          title: "[Bug]: Total Experiments Status chart shrinks on page navigation"
+          status: open
         - type: Issue
           number: 5031
           title: "[Bug]: TypeError: Cannot read properties of undefined (reading 'selector')"
