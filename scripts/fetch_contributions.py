@@ -60,6 +60,8 @@ def load_fork_parents() -> list[str]:
         with open(CACHE_PATH, "r", encoding="utf-8") as f:
             cache = json.load(f)
         if isinstance(cache, dict):
+            if "forks" in cache:
+                return list(cache["forks"].values())
             return list(cache.values())
     except Exception as err:
         print(f"Error loading cache from {CACHE_PATH}: {err}", file=sys.stderr)
@@ -203,12 +205,11 @@ def escape_yaml_string(s: str) -> str:
     return s.replace('\\', '\\\\').replace('"', '\\"').replace('\n', ' ')
 
 
-def generate_contributions_yaml(contributions: list[dict]) -> str:
+def generate_contributions_yaml(contributions: list[dict], date_str: str) -> str:
     """Convert contributions list to formatted YAML string."""
-    current_date = datetime.date.today().isoformat()
     yaml_lines = [
         "contributions:",
-        f"  lastUpdated: \"{current_date}\"",
+        f"  lastUpdated: \"{date_str}\"",
         "  items:"
     ]
     for contrib in contributions:
@@ -240,6 +241,64 @@ def fetch_external_issues() -> list[dict]:
         if len(page_items) < 100:
             break
     return issues
+
+
+
+def save_contributions(yaml_text: str, updated_contributions: list[dict]) -> None:
+    """Save contributions to PROJECTS_YAML_PATH, updating lastUpdated date only if contents changed."""
+    # Extract the existing contributions block
+    existing_contributions_block = ""
+    in_contributions = False
+    contributions_lines = []
+    for line in yaml_text.splitlines():
+        if line.startswith("contributions:"):
+            in_contributions = True
+        if in_contributions:
+            contributions_lines.append(line)
+    if contributions_lines:
+        existing_contributions_block = "\n".join(contributions_lines) + "\n"
+
+    # Find the existing lastUpdated date
+    existing_date = None
+    for line in contributions_lines:
+        if "lastUpdated:" in line:
+            existing_date = line.split(":", 1)[1].strip().strip('"\'')
+            break
+
+    def strip_last_updated(text: str) -> str:
+        return "\n".join([l for l in text.splitlines() if "lastUpdated:" not in l]).strip()
+
+    # Generate a candidate new contributions block with today's date
+    today_str = datetime.date.today().isoformat()
+    if updated_contributions:
+        new_contributions_block = generate_contributions_yaml(updated_contributions, today_str)
+    else:
+        new_contributions_block = ""
+
+    # Compare and decide the target date
+    is_updated = True
+    target_date = today_str
+
+    if existing_date is not None:
+        if strip_last_updated(existing_contributions_block) == strip_last_updated(new_contributions_block):
+            target_date = existing_date
+            is_updated = False
+
+    # Assemble updated projects.yaml
+    clean_yaml = strip_existing_contributions(yaml_text)
+    if updated_contributions:
+        contributions_yaml = generate_contributions_yaml(updated_contributions, target_date)
+        final_yaml = f"{clean_yaml}\n{contributions_yaml}"
+    else:
+        final_yaml = clean_yaml
+
+    with open(PROJECTS_YAML_PATH, "w", encoding="utf-8") as f:
+        f.write(final_yaml)
+
+    if is_updated:
+        print(f"Successfully updated projects.yaml with latest contributions (lastUpdated: {target_date}).", file=sys.stderr)
+    else:
+        print(f"No changes detected in contributions. projects.yaml lastUpdated date kept: {target_date}.", file=sys.stderr)
 
 
 def main() -> None:
@@ -302,19 +361,7 @@ def main() -> None:
     # Sort all contributions alphabetically by repository name to group by organization
     updated_contributions.sort(key=lambda x: x["repo"].lower())
 
-    # Assemble updated projects.yaml
-    clean_yaml = strip_existing_contributions(yaml_text)
-    if updated_contributions:
-        contributions_yaml = generate_contributions_yaml(updated_contributions)
-        final_yaml = f"{clean_yaml}\n{contributions_yaml}"
-    else:
-        final_yaml = clean_yaml
-
-    with open(PROJECTS_YAML_PATH, "w", encoding="utf-8") as f:
-        f.write(final_yaml)
-
-    print("Successfully updated projects.yaml with latest contributions.", file=sys.stderr)
-
+    save_contributions(yaml_text, updated_contributions)
 
 
 if __name__ == "__main__":

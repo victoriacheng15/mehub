@@ -1,14 +1,17 @@
 {
-  "victoriacheng15/argo-cd": "argoproj/argo-cd",
-  "victoriacheng15/chaos-mesh": "chaos-mesh/chaos-mesh",
-  "victoriacheng15/contribute-site": "cncf/contribute-site",
-  "victoriacheng15/godog": "cucumber/godog",
-  "victoriacheng15/headlamp": "kubernetes-sigs/headlamp",
-  "victoriacheng15/kepler": "sustainable-computing-io/kepler",
-  "victoriacheng15/kubeedge": "kubeedge/kubeedge",
-  "victoriacheng15/meshery": "meshery/meshery",
-  "victoriacheng15/meshery.io": "meshery/meshery.io",
-  "victoriacheng15/open-community-groups": "cncf/open-community-groups",
-  "victoriacheng15/opentofu": "opentofu/opentofu",
-  "victoriacheng15/website": "chaos-mesh/website"
+  "updated_date": "2026-08-15",
+  "forks": {
+    "victoriacheng15/argo-cd": "argoproj/argo-cd",
+    "victoriacheng15/chaos-mesh": "chaos-mesh/chaos-mesh",
+    "victoriacheng15/contribute-site": "cncf/contribute-site",
+    "victoriacheng15/godog": "cucumber/godog",
+    "victoriacheng15/headlamp": "kubernetes-sigs/headlamp",
+    "victoriacheng15/kepler": "sustainable-computing-io/kepler",
+    "victoriacheng15/kubeedge": "kubeedge/kubeedge",
+    "victoriacheng15/meshery": "meshery/meshery",
+    "victoriacheng15/meshery.io": "meshery/meshery.io",
+    "victoriacheng15/open-community-groups": "cncf/open-community-groups",
+    "victoriacheng15/opentofu": "opentofu/opentofu",
+    "victoriacheng15/website": "chaos-mesh/website"
+  }
 }
