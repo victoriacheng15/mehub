@@ -5,6 +5,7 @@ Resolves active (non-archived) forks owned by the user and finds their upstream 
 Uses only the Python standard library.
 """
 
+import datetime
 import json
 import os
 import sys
@@ -39,6 +40,47 @@ def query_github_api(url: str) -> dict:
         raise SystemExit(f"GitHub API Network Connection Error: {err.reason}")
 
 
+def save_fork_cache(cache: dict[str, str]) -> None:
+    """Save the fork cache to CACHE_PATH, updating the date only if contents changed."""
+    # Sort the cache by fork name to ensure deterministic comparison and output format
+    cache = {k: cache[k] for k in sorted(cache.keys())}
+
+    existing_forks = {}
+    existing_date = None
+    if os.path.exists(CACHE_PATH):
+        try:
+            with open(CACHE_PATH, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            if isinstance(data, dict):
+                if "forks" in data and "updated_date" in data:
+                    existing_forks = data["forks"]
+                    existing_date = data["updated_date"]
+                else:
+                    existing_forks = data
+        except Exception as err:
+            print(f"Warning: Failed to read existing cache: {err}", file=sys.stderr)
+
+    if cache == existing_forks and existing_date is not None:
+        updated_date = existing_date
+        is_updated = False
+    else:
+        updated_date = datetime.date.today().isoformat()
+        is_updated = True
+
+    output_data = {
+        "updated_date": updated_date,
+        "forks": cache
+    }
+
+    with open(CACHE_PATH, "w", encoding="utf-8") as f:
+        json.dump(output_data, f, indent=2)
+
+    if is_updated:
+        print(f"Successfully updated cache with {len(cache)} active parents in {CACHE_PATH} (updated_date: {updated_date})", file=sys.stderr)
+    else:
+        print(f"No changes detected in active fork repositories. Cache not updated (kept updated_date: {updated_date})", file=sys.stderr)
+
+
 def main() -> None:
     print("Fetching active fork repositories from GitHub...", file=sys.stderr)
     url = f"https://api.github.com/users/{USERNAME}/repos?per_page=100"
@@ -61,9 +103,7 @@ def main() -> None:
             except Exception as err:
                 print(f"Warning: Failed to fetch parent for {repo_name}: {err}", file=sys.stderr)
 
-    with open(CACHE_PATH, "w", encoding="utf-8") as f:
-        json.dump(cache, f, indent=2)
-    print(f"Successfully updated cache with {len(cache)} active parents in {CACHE_PATH}", file=sys.stderr)
+    save_fork_cache(cache)
 
 
 if __name__ == "__main__":
