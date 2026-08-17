@@ -57,7 +57,7 @@ projects:
       - eBPF
 
 contributions:
-  lastUpdated: "2026-08-14"
+  lastUpdated: "2026-08-17"
   items:
     - repo: chaos-mesh/chaos-mesh
       link: https://github.com/chaos-mesh/chaos-mesh
@@ -138,11 +138,11 @@ contributions:
         - type: PR
           number: 20899
           title: "[UI] Fix dashboard detail view crash during loading"
-          status: open
+          status: merged
         - type: Issue
           number: 20897
           title: "[UI] TypeError: Cannot read properties of undefined (reading 'find') in dashboard"
-          status: open
+          status: closed
     - repo: meshery/meshery.io
       link: https://github.com/meshery/meshery.io
       description: "Website for Meshery"
