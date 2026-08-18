@@ -3,7 +3,6 @@ title: "[Engineering Log] Accessibility as System Constraint"
 description: "Making Cover Craft accessibility part of the image generation contract by enforcing WCAG contrast rules, shared validation, safe random colors, and stable analytics payloads."
 date: 2026-08-18
 tags: ["retrospective", "platform", "frontend"]
-draft: true
 ---
 
 ## Context
