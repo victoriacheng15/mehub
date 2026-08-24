@@ -1,24 +1,16 @@
 {{ define "content" }}
-<div class="flex flex-col gap-10">
-    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
-        {{ if stringsHasPrefix .Title "#" }}
-        {{ $tag := stringsTrimPrefix (index (split .Title " | ") 0) "#" }}
-        <h1 class="text-3xl font-bold text-violet-400">Tag: {{ $tag }}</h1>
-        {{ else }}
-        <h1 class="text-3xl font-bold text-violet-400">Blog</h1>
-
-        <div class="relative w-full sm:max-w-xs">
-            <input type="text" id="search-input" placeholder="Search posts..." 
-                class="w-full px-4 py-2 bg-slate-900 border border-slate-800 rounded-md text-slate-200 focus:outline-none focus:border-violet-500/40 transition-colors">
-            <div id="search-results-count" class="absolute right-3 top-2.5 text-xs text-slate-500 font-bold"></div>
-        </div>
-        {{ end }}
-    </div>
+<div class="flex flex-col gap-10" id="blog-page-root" data-path-prefix="{{ .PathPrefix }}" data-title="{{ .Title }}">
+    {{ if stringsHasPrefix .Title "#" }}
+    {{ $tag := stringsTrimPrefix (index (split .Title " | ") 0) "#" }}
+    <h1 id="blog-title" class="text-3xl font-bold text-violet-400">Tag: {{ $tag }}</h1>
+    {{ else }}
+    <h1 id="blog-title" class="text-3xl font-bold text-violet-400">Blog</h1>
+    {{ end }}
 
     <!-- Topic Filters -->
     <ul class="flex flex-wrap gap-3 list-none">
         <li>
-            <a href="{{ .PathPrefix }}blog.html" class="px-3 py-1.5 text-xs font-bold rounded-full border transition-all {{ if not (stringsHasPrefix .Title "#") }}bg-violet-500/10 border-violet-500/30 text-violet-400{{ else }}bg-slate-900 border-slate-800 text-slate-400 hover:text-violet-400 hover:border-violet-500/30{{ end }}">
+            <a id="tag-all" href="{{ .PathPrefix }}blog.html" class="px-3 py-1.5 text-xs font-bold rounded-full border transition-all {{ if not (stringsHasPrefix .Title "#") }}bg-violet-500/10 border-violet-500/30 text-violet-400{{ else }}bg-slate-900 border-slate-800 text-slate-400 hover:text-violet-400 hover:border-violet-500/30{{ end }}">
                 All
             </a>
         </li>
@@ -31,12 +23,18 @@
             {{ end }}
         {{ end }}
         <li>
-            <a href="{{ $.PathPrefix }}tags/{{ . }}.html" class="px-3 py-1.5 text-xs font-bold rounded-full border transition-all {{ if $active }}bg-violet-500/10 border-violet-500/30 text-violet-400{{ else }}bg-slate-900 border-slate-800 text-slate-400 hover:text-violet-400 hover:border-violet-500/30{{ end }}">
+            <a data-tag="{{ . }}" href="{{ $.PathPrefix }}tags/{{ . }}.html" class="tag-link px-3 py-1.5 text-xs font-bold rounded-full border transition-all {{ if $active }}bg-violet-500/10 border-violet-500/30 text-violet-400{{ else }}bg-slate-900 border-slate-800 text-slate-400 hover:text-violet-400 hover:border-violet-500/30{{ end }}">
                 #{{ . }} <span class="text-[10px] opacity-60">({{ index $.TagCounts . }})</span>
             </a>
         </li>
         {{ end }}
     </ul>
+
+    <div class="relative w-full">
+        <input type="text" id="search-input" placeholder="Search posts..." 
+            class="w-full px-4 py-2 bg-slate-900 border border-slate-800 rounded-md text-slate-200 focus:outline-none focus:border-violet-500/40 transition-colors">
+        <div id="search-results-count" class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-500 font-bold"></div>
+    </div>
     
     <ul id="default-list" class="flex flex-col gap-6 list-none ">
         {{ range .Posts }}
@@ -59,11 +57,9 @@
         {{ end }}
     </ul>
 
-    {{ if not (stringsHasPrefix .Title "#") }}
     <ul id="search-results" class="hidden flex-col gap-6 list-none ">
         <!-- JS will populate this -->
     </ul>
-    {{ end }}
 
     {{ if gt .TotalPages 1 }}
     <nav id="pagination-nav" class="flex justify-between items-center pt-6 border-t border-slate-800">
@@ -88,7 +84,6 @@
     {{ end }}
 </div>
 
-{{ if not (stringsHasPrefix .Title "#") }}
 <script>
     let searchIndex = null;
     const searchInput = document.getElementById('search-input');
@@ -96,48 +91,132 @@
     const defaultList = document.getElementById('default-list');
     const paginationNav = document.getElementById('pagination-nav');
     const resultsCount = document.getElementById('search-results-count');
-    const pathPrefix = "{{ .PathPrefix }}";
+    const blogTitle = document.getElementById('blog-title');
+
+    const root = document.getElementById('blog-page-root');
+    const pathPrefix = root.getAttribute('data-path-prefix');
+    const pageTitle = root.getAttribute('data-title');
+
+    const selectedTags = new Set();
+    if (pageTitle.startsWith('#')) {
+        const initialTag = pageTitle.split(' | ')[0].substring(1);
+        if (initialTag) {
+            selectedTags.add(initialTag);
+        }
+    }
 
     async function loadIndex() {
         if (searchIndex) return;
         try {
             const resp = await fetch(pathPrefix + 'search-index.json');
             searchIndex = await resp.json();
+            if (searchInput.value.trim() !== '' || selectedTags.size > 0) {
+                updateFilter();
+            }
         } catch (e) {
             console.error("Failed to load search index:", e);
         }
     }
 
-    searchInput.addEventListener('focus', loadIndex);
-    
-    searchInput.addEventListener('input', (e) => {
-        const query = e.target.value.toLowerCase().trim();
-        
-        if (query === '') {
+    const tagLinks = document.querySelectorAll('.tag-link');
+    const tagAll = document.getElementById('tag-all');
+
+    tagLinks.forEach(link => {
+        link.addEventListener('click', async (e) => {
+            e.preventDefault();
+            await loadIndex();
+            if (!searchIndex) {
+                window.location.href = link.href;
+                return;
+            }
+            const tag = link.getAttribute('data-tag');
+            if (selectedTags.has(tag)) {
+                selectedTags.delete(tag);
+            } else {
+                if (selectedTags.size < 3) {
+                    selectedTags.add(tag);
+                } else {
+                    return;
+                }
+            }
+            updateFilter();
+        });
+    });
+
+    if (tagAll) {
+        tagAll.addEventListener('click', async (e) => {
+            e.preventDefault();
+            await loadIndex();
+            if (!searchIndex) {
+                window.location.href = tagAll.href;
+                return;
+            }
+            selectedTags.clear();
+            updateFilter();
+        });
+    }
+
+    function updateFilter() {
+        const query = searchInput.value.toLowerCase().trim();
+
+        tagLinks.forEach(link => {
+            const tag = link.getAttribute('data-tag');
+            if (selectedTags.has(tag)) {
+                link.className = "tag-link px-3 py-1.5 text-xs font-bold rounded-full border transition-all bg-violet-500/10 border-violet-500/30 text-violet-400";
+            } else {
+                link.className = "tag-link px-3 py-1.5 text-xs font-bold rounded-full border transition-all bg-slate-900 border-slate-800 text-slate-400 hover:text-violet-400 hover:border-violet-500/30";
+            }
+        });
+
+        if (tagAll) {
+            if (selectedTags.size === 0) {
+                tagAll.className = "px-3 py-1.5 text-xs font-bold rounded-full border transition-all bg-violet-500/10 border-violet-500/30 text-violet-400";
+            } else {
+                tagAll.className = "px-3 py-1.5 text-xs font-bold rounded-full border transition-all bg-slate-900 border-slate-800 text-slate-400 hover:text-violet-400 hover:border-violet-500/30";
+            }
+        }
+
+        if (blogTitle) {
+            if (selectedTags.size === 0) {
+                blogTitle.textContent = "Blog";
+            } else {
+                blogTitle.textContent = "Tags: " + Array.from(selectedTags).join(", ");
+            }
+        }
+
+        if (selectedTags.size === 0 && query === '') {
             defaultList.classList.remove('hidden');
             defaultList.classList.add('flex');
             if (paginationNav) paginationNav.classList.remove('hidden');
             searchResults.classList.add('hidden');
             searchResults.classList.remove('flex');
             searchResults.innerHTML = '';
-            resultsCount.textContent = '';
+            if (resultsCount) resultsCount.textContent = '';
             return;
         }
 
         if (!searchIndex) return;
 
-        const filtered = searchIndex.filter(item => 
-            item.title.toLowerCase().includes(query) || 
-            item.description.toLowerCase().includes(query) ||
-            item.tags.some(t => t.toLowerCase().includes(query))
-        );
+        const filtered = searchIndex.filter(item => {
+            const matchesTags = Array.from(selectedTags).every(t =>
+                item.tags.some(itemTag => itemTag.toLowerCase() === t.toLowerCase())
+            );
+            const matchesSearch = query === '' ||
+                item.title.toLowerCase().includes(query) ||
+                item.description.toLowerCase().includes(query) ||
+                item.tags.some(t => t.toLowerCase().includes(query));
+            return matchesTags && matchesSearch;
+        });
 
         defaultList.classList.add('hidden');
         defaultList.classList.remove('flex');
         if (paginationNav) paginationNav.classList.add('hidden');
         searchResults.classList.remove('hidden');
         searchResults.classList.add('flex');
-        resultsCount.textContent = filtered.length > 0 ? filtered.length + ' found' : 'No results';
+        
+        if (resultsCount) {
+            resultsCount.textContent = filtered.length > 0 ? filtered.length + ' found' : 'No results';
+        }
 
         searchResults.innerHTML = filtered.map(item => `
             <li>
@@ -155,7 +234,11 @@
                 </article>
             </li>
         `).join('');
-    });
+    }
+
+    searchInput.addEventListener('focus', loadIndex);
+    searchInput.addEventListener('input', updateFilter);
+
+    loadIndex();
 </script>
-{{ end }}
 {{ end }}
