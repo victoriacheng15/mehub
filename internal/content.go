@@ -10,6 +10,7 @@ import (
 	"github.com/yuin/goldmark"
 	highlighting "github.com/yuin/goldmark-highlighting/v2"
 	"github.com/yuin/goldmark/extension"
+	"github.com/yuin/goldmark/parser"
 	"github.com/yuin/goldmark/renderer/html"
 	"go.yaml.in/yaml/v4"
 )
@@ -62,6 +63,9 @@ func ParsePost(path string) (*Post, error) {
 			highlighting.NewHighlighting(
 				highlighting.WithStyle("monokai"),
 			),
+		),
+		goldmark.WithParserOptions(
+			parser.WithAutoHeadingID(),
 		),
 		goldmark.WithRendererOptions(
 			html.WithUnsafe(),

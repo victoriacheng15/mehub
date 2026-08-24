@@ -128,8 +128,8 @@ This is a test.
 				if len(post.Tags) != 2 {
 					t.Errorf("Expected 2 tags, got %d", len(post.Tags))
 				}
-				if !strings.Contains(post.Content, "<h1>Hello</h1>") {
-					t.Errorf("Expected HTML content to contain <h1>Hello</h1>, got %s", post.Content)
+				if !strings.Contains(post.Content, "<h1 id=\"hello\">Hello</h1>") {
+					t.Errorf("Expected HTML content to contain <h1 id=\"hello\">Hello</h1>, got %s", post.Content)
 				}
 			},
 			wantErr: false,
