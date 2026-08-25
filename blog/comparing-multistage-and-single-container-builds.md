@@ -3,7 +3,6 @@ title: "Comparing Multistage and Single Container Builds"
 description: "An empirical analysis of build times and image sizes comparing isolated multi-stage container compilation against single-stage builds for Next.js and serverless APIs."
 date: 2026-08-25
 tags: ["platform", "linux"]
-draft: true
 ---
 
 ## Comparing Container Build Strategies
