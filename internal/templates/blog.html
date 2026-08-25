@@ -97,6 +97,29 @@
     const pathPrefix = root.getAttribute('data-path-prefix');
     const pageTitle = root.getAttribute('data-title');
 
+    function escapeHTML(str) {
+        return str.replace(/[&<>'"]/g, 
+            tag => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                "'": '&#39;',
+                '"': '&quot;'
+            }[tag] || tag)
+        );
+    }
+
+    function highlight(text, query) {
+        const escapedText = escapeHTML(text);
+        if (!query) return escapedText;
+        const escapedQuery = escapeHTML(query).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(`(&[a-zA-Z0-9#]+;)|(${escapedQuery})`, 'gi');
+        return escapedText.replace(regex, (match, entity, q) => {
+            if (entity) return entity;
+            return `<mark class="bg-violet-500/20 text-violet-300 px-0.5 rounded">${q}</mark>`;
+        });
+    }
+
     const selectedTags = new Set();
     if (pageTitle.startsWith('#')) {
         const initialTag = pageTitle.split(' | ')[0].substring(1);
@@ -156,9 +179,7 @@
         });
     }
 
-    function updateFilter() {
-        const query = searchInput.value.toLowerCase().trim();
-
+    function updateTagStyles() {
         tagLinks.forEach(link => {
             const tag = link.getAttribute('data-tag');
             if (selectedTags.has(tag)) {
@@ -175,39 +196,28 @@
                 tagAll.className = "px-3 py-1.5 text-xs font-bold rounded-full border transition-all bg-slate-900 border-slate-800 text-slate-400 hover:text-violet-400 hover:border-violet-500/30";
             }
         }
+    }
 
-        if (blogTitle) {
-            if (selectedTags.size === 0) {
-                blogTitle.textContent = "Blog";
-            } else {
-                blogTitle.textContent = "Tags: " + Array.from(selectedTags).join(", ");
-            }
+    function updateTitleText() {
+        if (!blogTitle) return;
+        if (selectedTags.size === 0) {
+            blogTitle.textContent = "Blog";
+        } else {
+            blogTitle.textContent = "Tags: " + Array.from(selectedTags).join(", ");
         }
+    }
 
-        if (selectedTags.size === 0 && query === '') {
-            defaultList.classList.remove('hidden');
-            defaultList.classList.add('flex');
-            if (paginationNav) paginationNav.classList.remove('hidden');
-            searchResults.classList.add('hidden');
-            searchResults.classList.remove('flex');
-            searchResults.innerHTML = '';
-            if (resultsCount) resultsCount.textContent = '';
-            return;
-        }
+    function resetToDefaultList() {
+        defaultList.classList.remove('hidden');
+        defaultList.classList.add('flex');
+        if (paginationNav) paginationNav.classList.remove('hidden');
+        searchResults.classList.add('hidden');
+        searchResults.classList.remove('flex');
+        searchResults.innerHTML = '';
+        if (resultsCount) resultsCount.textContent = '';
+    }
 
-        if (!searchIndex) return;
-
-        const filtered = searchIndex.filter(item => {
-            const matchesTags = Array.from(selectedTags).every(t =>
-                item.tags.some(itemTag => itemTag.toLowerCase() === t.toLowerCase())
-            );
-            const matchesSearch = query === '' ||
-                item.title.toLowerCase().includes(query) ||
-                item.description.toLowerCase().includes(query) ||
-                item.tags.some(t => t.toLowerCase().includes(query));
-            return matchesTags && matchesSearch;
-        });
-
+    function renderResults(filtered, query) {
         defaultList.classList.add('hidden');
         defaultList.classList.remove('flex');
         if (paginationNav) paginationNav.classList.add('hidden');
@@ -224,9 +234,9 @@
                     <a href="${pathPrefix}blog/${item.slug}.html" class="flex flex-col gap-3 p-6 bg-slate-900 border border-slate-800 hover:border-violet-500/30 transition-all group rounded-xl">
                         <time class="text-sm text-slate-500 uppercase tracking-wider font-bold">${item.date}</time>
                         <h2 class="text-2xl font-bold text-slate-200 group-hover:text-violet-400 transition-colors">
-                            ${item.title}
+                            ${highlight(item.title, query)}
                         </h2>
-                        <p class="text-slate-400 leading-relaxed text-sm">${item.description}</p>
+                        <p class="text-slate-400 leading-relaxed text-sm">${highlight(item.description, query)}</p>
                         <ul class="flex flex-wrap gap-3 list-none">
                             ${item.tags.map(tag => `<li class="px-2 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded border border-slate-700">#${tag}</li>`).join('')}
                         </ul>
@@ -234,6 +244,33 @@
                 </article>
             </li>
         `).join('');
+    }
+
+    function updateFilter() {
+        const query = searchInput.value.toLowerCase().trim();
+
+        updateTagStyles();
+        updateTitleText();
+
+        if (selectedTags.size === 0 && query === '') {
+            resetToDefaultList();
+            return;
+        }
+
+        if (!searchIndex) return;
+
+        const filtered = searchIndex.filter(item => {
+            const matchesTags = Array.from(selectedTags).every(t =>
+                item.tags.some(itemTag => itemTag.toLowerCase() === t.toLowerCase())
+            );
+            const matchesSearch = query === '' ||
+                item.title.toLowerCase().includes(query) ||
+                item.description.toLowerCase().includes(query) ||
+                item.tags.some(t => t.toLowerCase().includes(query));
+            return matchesTags && matchesSearch;
+        });
+
+        renderResults(filtered, query);
     }
 
     searchInput.addEventListener('focus', loadIndex);
