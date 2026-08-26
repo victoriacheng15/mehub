@@ -20,7 +20,31 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set branch name
+        run: echo "BRANCH_NAME=publish-post-$(date +%s)" >> "$GITHUB_ENV"
+
       - name: Run Publish Post Script
-        env:
-          GH_TOKEN: ${{ secrets.SYNC_BLOG_TOKEN }}
+        id: publish_script
         run: ./scripts/publish_blog_post.sh
+
+      # The 'changed' and 'post_title' outputs are set dynamically inside ./scripts/publish_blog_post.sh
+      - name: Commit and push changes
+        if: steps.publish_script.outputs.changed == 'true'
+        run: |
+          git config --local user.name "${{ env.AUTHOR_NAME }}"
+          git config --local user.email "${{ env.AUTHOR_EMAIL }}"
+          git switch -c "$BRANCH_NAME"
+          git add blog/
+          git commit -m "chore: publish post ${{ steps.publish_script.outputs.post_title }} ! 🎉"
+          git push --force-with-lease origin "$BRANCH_NAME"
+
+      - name: Open pull request
+        if: steps.publish_script.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr create \
+            --base main \
+            --head "$BRANCH_NAME" \
+            --title "Publish Post: ${{ steps.publish_script.outputs.post_title }}" \
+            --body "This publishes the post titled **${{ steps.publish_script.outputs.post_title }}**. 🎉"
