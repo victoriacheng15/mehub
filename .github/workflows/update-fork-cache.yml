@@ -9,14 +9,13 @@ permissions:
   contents: write
   pull-requests: write
 
-env:
-  PYTHON_VERSION: '3.12'
-  CACHE_FILE_PATH: scripts/fork_cache.json
-  UPDATE_MESSAGE: 'chore(cache): update fork cache'
-
 jobs:
   update-cache:
     runs-on: ubuntu-latest
+    env:
+      PYTHON_VERSION: '3.12'
+      CACHE_FILE_PATH: scripts/fork_cache.json
+      UPDATE_MESSAGE: 'chore(cache): update fork cache'
 
     steps:
       - uses: actions/checkout@v7

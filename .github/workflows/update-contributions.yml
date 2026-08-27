@@ -9,14 +9,13 @@ permissions:
   contents: write
   pull-requests: write
 
-env:
-  PYTHON_VERSION: '3.12'
-  PROJECTS_YAML_PATH: internal/templates/contents/projects.yaml
-  UPDATE_MESSAGE: 'chore(contribution): update open source contributions'
-
 jobs:
   update-contributions:
     runs-on: ubuntu-latest
+    env:
+      PYTHON_VERSION: '3.12'
+      PROJECTS_YAML_PATH: internal/templates/contents/projects.yaml
+      UPDATE_MESSAGE: 'chore(contribution): update open source contributions'
 
     steps:
       - uses: actions/checkout@v7
