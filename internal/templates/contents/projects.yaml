@@ -57,12 +57,16 @@ projects:
       - eBPF
 
 contributions:
-  lastUpdated: "2026-08-21"
+  lastUpdated: "2026-08-28"
   items:
     - repo: chaos-mesh/chaos-mesh
       link: https://github.com/chaos-mesh/chaos-mesh
       description: "A Chaos Engineering Platform for Kubernetes."
       items:
+        - type: PR
+          number: 5077
+          title: "fix(ui): prevent total status chart from shrinking on dashboard nav"
+          status: open
         - type: PR
           number: 5075
           title: "[WIP] build(images): migrate chaos-daemon base image from debian to alpine"
@@ -100,6 +104,10 @@ contributions:
           title: "feat(e2e-test): implement gherkin BDD runner and podkill scenarios"
           status: merged
         - type: Issue
+          number: 5080
+          title: "[Bug]: Grafana Dashboard 15918 Namespace variable query is broken"
+          status: open
+        - type: Issue
           number: 5062
           title: "[Bug]: Total Experiments Status chart shrinks on page navigation"
           status: open
@@ -131,6 +139,10 @@ contributions:
       link: https://github.com/cucumber/godog
       description: "Cucumber for golang"
       items:
+        - type: PR
+          number: 771
+          title: "fix(formatters): export PickleStepResult and PickleAttachment"
+          status: open
         - type: PR
           number: 760
           title: "fix(hooks): wrap errors to preserve sentinel values"
