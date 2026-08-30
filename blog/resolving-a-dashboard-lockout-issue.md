@@ -59,6 +59,10 @@ By cleaning up the token before opening the popup, background queries stop insta
 
 One of the maintainers also optimized the logic inside the global error checker. The final code analyzes the error type field first to bypass unnecessary comparisons. This prevents redundant processing steps when handling validation failures. The co-authored changes ensure a highly maintainable request handler.
 
+### Related Links
+
+- [PR - fix(ui): resolve token validation and lockout loop](https://github.com/chaos-mesh/chaos-mesh/pull/5046)
+
 ---
 
 ## Conclusion
