@@ -57,7 +57,7 @@ projects:
       - eBPF
 
 contributions:
-  lastUpdated: "2026-08-28"
+  lastUpdated: "2026-08-31"
   items:
     - repo: chaos-mesh/chaos-mesh
       link: https://github.com/chaos-mesh/chaos-mesh
@@ -69,7 +69,7 @@ contributions:
           status: open
         - type: PR
           number: 5075
-          title: "[WIP] build(images): migrate chaos-daemon base image from debian to alpine"
+          title: "build(images): migrate chaos-daemon base image from debian to alpine"
           status: open
         - type: PR
           number: 5061
