@@ -3,7 +3,6 @@ title: "Resolving a Dashboard Lockout Issue"
 description: "Resolving a three-year-old dashboard lockout bug caused by expired browser tokens. Learn how route gating and global request checkers prevent infinite error popup loops."
 date: 2026-09-01
 tags: ["platform", "cncf"]
-draft: true
 ---
 
 ## UI Lockout from Polling Loops
