@@ -4,7 +4,7 @@
     {{ $tag := stringsTrimPrefix (index (split .Title " | ") 0) "#" }}
     <h1 id="blog-title" class="text-3xl font-bold text-violet-400">Tag: {{ $tag }}</h1>
     {{ else }}
-    <h1 id="blog-title" class="text-3xl font-bold text-violet-400">Blog</h1>
+    <h1 id="blog-title" class="heading-typeout text-3xl font-bold text-violet-400 font-mono">Blog</h1>
     {{ end }}
 
     <!-- Topic Filters -->

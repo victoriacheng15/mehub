@@ -46,3 +46,33 @@
     color: var(--tw-prose-links-hover);
   }
 }
+
+.heading-typeout {
+  display: inline-block;
+}
+
+.heading-typeout::after {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  margin-left: 4px;
+  vertical-align: -0.1em;
+  background-color: var(--color-violet-400);
+  animation: cursorBlink 0.75s step-end 4 forwards;
+}
+
+@keyframes cursorBlink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heading-typeout::after {
+    display: none !important;
+  }
+}
