@@ -50,6 +50,21 @@
 
         {{ template "footer" . }}
     </div>
+    <script>
+    (() => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        document.querySelectorAll('.heading-typeout').forEach(el => {
+            const text = el.textContent.trim();
+            el.textContent = '';
+            let i = 0;
+            const timer = setInterval(() => {
+                el.textContent += text[i];
+                i++;
+                if (i >= text.length) clearInterval(timer);
+            }, 45);
+        });
+    })();
+    </script>
 </body>
 
 </html>

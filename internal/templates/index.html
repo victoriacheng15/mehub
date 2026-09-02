@@ -2,19 +2,7 @@
 <div class="flex flex-col gap-16">
     <section class="flex flex-col gap-6">
         <div class="flex flex-col gap-2">
-            <pre class="text-violet-500 text-[clamp(8px,2.7vw,16px)] leading-tight font-mono">
-█   █ ███  ███  █████  ███  ████  ███  ███  
-█   █  █  █       █   █   █ █   █  █  █   █ 
-█   █  █  █       █   █   █ ████   █  █████ 
- █ █   █  █       █   █   █ █  █   █  █   █ 
-  █   ███  ███    █    ███  █   █ ███ █   █ 
-
- ███  █   █ █████ █   █  ███  
-█     █   █ █     ██  █ █     
-█     █████ ████  █ █ █ █  ██ 
-█     █   █ █     █  ██ █   █ 
- ███  █   █ █████ █   █  ███  
-            </pre>
+            <img src="{{ .PathPrefix }}hero.svg" alt="Victoria Cheng" class="w-full max-w-md h-auto" width="448" height="242" fetchpriority="high">
             <p class="text-xl text-slate-400">{{ .Config.Landing.Slogan }}</p>
         </div>
 
@@ -31,7 +19,7 @@
 
     <section class="flex flex-col gap-6">
         <h2 class="font-bold text-violet-400 tracking-wider uppercase">Tech Stack</h2>
-        <ul class="flex flex-wrap gap-3 list-none ">
+        <ul class="flex flex-wrap gap-3 list-none">
             {{ range .Config.Skills }}
             <li class="flex items-center gap-3 px-4 py-2 bg-slate-900 border border-slate-800 rounded-lg hover:border-violet-500/30 transition-colors group">
                 <div class="w-5 h-5 bg-violet-400 group-hover:scale-110 transition-transform" 

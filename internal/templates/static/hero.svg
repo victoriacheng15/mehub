@@ -1,0 +1,311 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 242" role="img" aria-label="Victoria Cheng - victoria@mehub:~$ whoami">
+  <title>Victoria Cheng</title>
+  <style>
+    :root {
+      --hero-color: #8b5cf6;
+    }
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    .prompt-text {
+      font-size: 14px;
+      line-height: 1;
+    }
+    .prompt-prefix {
+      fill: #34d399;
+      font-weight: 600;
+    }
+    .prompt-path {
+      fill: #94a3b8;
+    }
+    .cmd-char {
+      fill: #f1f5f9;
+      font-weight: 500;
+      opacity: 0;
+    }
+    .letter {
+      fill: var(--hero-color, currentColor);
+      opacity: 0;
+    }
+    .cmd-0 {
+      animation: cmdAnim-0 8.00s infinite;
+    }
+    @keyframes cmdAnim-0 {
+      0%, 0.6% { opacity: 0; }
+      0.9%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .cmd-1 {
+      animation: cmdAnim-1 8.00s infinite;
+    }
+    @keyframes cmdAnim-1 {
+      0%, 1.0% { opacity: 0; }
+      1.3%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .cmd-2 {
+      animation: cmdAnim-2 8.00s infinite;
+    }
+    @keyframes cmdAnim-2 {
+      0%, 1.5% { opacity: 0; }
+      1.7%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .cmd-3 {
+      animation: cmdAnim-3 8.00s infinite;
+    }
+    @keyframes cmdAnim-3 {
+      0%, 1.9% { opacity: 0; }
+      2.1%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .cmd-4 {
+      animation: cmdAnim-4 8.00s infinite;
+    }
+    @keyframes cmdAnim-4 {
+      0%, 2.3% { opacity: 0; }
+      2.5%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .cmd-5 {
+      animation: cmdAnim-5 8.00s infinite;
+    }
+    @keyframes cmdAnim-5 {
+      0%, 2.7% { opacity: 0; }
+      3.0%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .l-0 {
+      animation: letterAnim-0 8.00s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes letterAnim-0 {
+      0%, 4.1% { opacity: 0; }
+      4.5%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .l-1 {
+      animation: letterAnim-1 8.00s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes letterAnim-1 {
+      0%, 4.9% { opacity: 0; }
+      5.3%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .l-2 {
+      animation: letterAnim-2 8.00s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes letterAnim-2 {
+      0%, 5.8% { opacity: 0; }
+      6.1%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .l-3 {
+      animation: letterAnim-3 8.00s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes letterAnim-3 {
+      0%, 6.6% { opacity: 0; }
+      6.9%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .l-4 {
+      animation: letterAnim-4 8.00s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes letterAnim-4 {
+      0%, 7.4% { opacity: 0; }
+      7.8%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .l-5 {
+      animation: letterAnim-5 8.00s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes letterAnim-5 {
+      0%, 8.2% { opacity: 0; }
+      8.6%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .l-6 {
+      animation: letterAnim-6 8.00s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes letterAnim-6 {
+      0%, 9.0% { opacity: 0; }
+      9.4%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .l-7 {
+      animation: letterAnim-7 8.00s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes letterAnim-7 {
+      0%, 9.8% { opacity: 0; }
+      10.2%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .l-8 {
+      animation: letterAnim-8 8.00s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes letterAnim-8 {
+      0%, 11.3% { opacity: 0; }
+      11.7%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .l-9 {
+      animation: letterAnim-9 8.00s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes letterAnim-9 {
+      0%, 12.1% { opacity: 0; }
+      12.5%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .l-10 {
+      animation: letterAnim-10 8.00s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes letterAnim-10 {
+      0%, 12.9% { opacity: 0; }
+      13.3%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .l-11 {
+      animation: letterAnim-11 8.00s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes letterAnim-11 {
+      0%, 13.7% { opacity: 0; }
+      14.1%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    .l-12 {
+      animation: letterAnim-12 8.00s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes letterAnim-12 {
+      0%, 14.6% { opacity: 0; }
+      14.9%, 85.0% { opacity: 1; }
+      92.5%, 100% { opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .cmd-char, .letter {
+        opacity: 1 !important;
+        animation: none !important;
+      }
+    }
+  </style>
+  <g transform="translate(4, 6)">
+    <text x="0" y="16" class="prompt-text"><tspan class="prompt-prefix">victoria@mehub</tspan><tspan class="prompt-path">:~$ </tspan><tspan class="cmd-char cmd-0">w</tspan><tspan class="cmd-char cmd-1">h</tspan><tspan class="cmd-char cmd-2">o</tspan><tspan class="cmd-char cmd-3">a</tspan><tspan class="cmd-char cmd-4">m</tspan><tspan class="cmd-char cmd-5">i</tspan></text>
+    <g class="letter l-0" data-char="V" transform="translate(0, 32)">
+      <rect x="0" y="0" width="10" height="18" rx="1" />
+      <rect x="40" y="0" width="10" height="18" rx="1" />
+      <rect x="0" y="18" width="10" height="18" rx="1" />
+      <rect x="40" y="18" width="10" height="18" rx="1" />
+      <rect x="0" y="36" width="10" height="18" rx="1" />
+      <rect x="40" y="36" width="10" height="18" rx="1" />
+      <rect x="10" y="54" width="10" height="18" rx="1" />
+      <rect x="30" y="54" width="10" height="18" rx="1" />
+      <rect x="20" y="72" width="10" height="18" rx="1" />
+    </g>
+    <g class="letter l-1" data-char="I" transform="translate(60, 32)">
+      <rect x="0" y="0" width="30" height="18" rx="1" />
+      <rect x="10" y="18" width="10" height="18" rx="1" />
+      <rect x="10" y="36" width="10" height="18" rx="1" />
+      <rect x="10" y="54" width="10" height="18" rx="1" />
+      <rect x="0" y="72" width="30" height="18" rx="1" />
+    </g>
+    <g class="letter l-2" data-char="C" transform="translate(100, 32)">
+      <rect x="10" y="0" width="30" height="18" rx="1" />
+      <rect x="0" y="18" width="10" height="18" rx="1" />
+      <rect x="0" y="36" width="10" height="18" rx="1" />
+      <rect x="0" y="54" width="10" height="18" rx="1" />
+      <rect x="10" y="72" width="30" height="18" rx="1" />
+    </g>
+    <g class="letter l-3" data-char="T" transform="translate(160, 32)">
+      <rect x="0" y="0" width="50" height="18" rx="1" />
+      <rect x="20" y="18" width="10" height="18" rx="1" />
+      <rect x="20" y="36" width="10" height="18" rx="1" />
+      <rect x="20" y="54" width="10" height="18" rx="1" />
+      <rect x="20" y="72" width="10" height="18" rx="1" />
+    </g>
+    <g class="letter l-4" data-char="O" transform="translate(220, 32)">
+      <rect x="10" y="0" width="30" height="18" rx="1" />
+      <rect x="0" y="18" width="10" height="18" rx="1" />
+      <rect x="40" y="18" width="10" height="18" rx="1" />
+      <rect x="0" y="36" width="10" height="18" rx="1" />
+      <rect x="40" y="36" width="10" height="18" rx="1" />
+      <rect x="0" y="54" width="10" height="18" rx="1" />
+      <rect x="40" y="54" width="10" height="18" rx="1" />
+      <rect x="10" y="72" width="30" height="18" rx="1" />
+    </g>
+    <g class="letter l-5" data-char="R" transform="translate(280, 32)">
+      <rect x="0" y="0" width="40" height="18" rx="1" />
+      <rect x="0" y="18" width="10" height="18" rx="1" />
+      <rect x="40" y="18" width="10" height="18" rx="1" />
+      <rect x="0" y="36" width="40" height="18" rx="1" />
+      <rect x="0" y="54" width="10" height="18" rx="1" />
+      <rect x="30" y="54" width="10" height="18" rx="1" />
+      <rect x="0" y="72" width="10" height="18" rx="1" />
+      <rect x="40" y="72" width="10" height="18" rx="1" />
+    </g>
+    <g class="letter l-6" data-char="I" transform="translate(340, 32)">
+      <rect x="0" y="0" width="30" height="18" rx="1" />
+      <rect x="10" y="18" width="10" height="18" rx="1" />
+      <rect x="10" y="36" width="10" height="18" rx="1" />
+      <rect x="10" y="54" width="10" height="18" rx="1" />
+      <rect x="0" y="72" width="30" height="18" rx="1" />
+    </g>
+    <g class="letter l-7" data-char="A" transform="translate(380, 32)">
+      <rect x="10" y="0" width="30" height="18" rx="1" />
+      <rect x="0" y="18" width="10" height="18" rx="1" />
+      <rect x="40" y="18" width="10" height="18" rx="1" />
+      <rect x="0" y="36" width="50" height="18" rx="1" />
+      <rect x="0" y="54" width="10" height="18" rx="1" />
+      <rect x="40" y="54" width="10" height="18" rx="1" />
+      <rect x="0" y="72" width="10" height="18" rx="1" />
+      <rect x="40" y="72" width="10" height="18" rx="1" />
+    </g>
+    <g class="letter l-8" data-char="C" transform="translate(0, 140)">
+      <rect x="10" y="0" width="30" height="18" rx="1" />
+      <rect x="0" y="18" width="10" height="18" rx="1" />
+      <rect x="0" y="36" width="10" height="18" rx="1" />
+      <rect x="0" y="54" width="10" height="18" rx="1" />
+      <rect x="10" y="72" width="30" height="18" rx="1" />
+    </g>
+    <g class="letter l-9" data-char="H" transform="translate(60, 140)">
+      <rect x="0" y="0" width="10" height="18" rx="1" />
+      <rect x="40" y="0" width="10" height="18" rx="1" />
+      <rect x="0" y="18" width="10" height="18" rx="1" />
+      <rect x="40" y="18" width="10" height="18" rx="1" />
+      <rect x="0" y="36" width="50" height="18" rx="1" />
+      <rect x="0" y="54" width="10" height="18" rx="1" />
+      <rect x="40" y="54" width="10" height="18" rx="1" />
+      <rect x="0" y="72" width="10" height="18" rx="1" />
+      <rect x="40" y="72" width="10" height="18" rx="1" />
+    </g>
+    <g class="letter l-10" data-char="E" transform="translate(120, 140)">
+      <rect x="0" y="0" width="50" height="18" rx="1" />
+      <rect x="0" y="18" width="10" height="18" rx="1" />
+      <rect x="0" y="36" width="40" height="18" rx="1" />
+      <rect x="0" y="54" width="10" height="18" rx="1" />
+      <rect x="0" y="72" width="50" height="18" rx="1" />
+    </g>
+    <g class="letter l-11" data-char="N" transform="translate(180, 140)">
+      <rect x="0" y="0" width="10" height="18" rx="1" />
+      <rect x="40" y="0" width="10" height="18" rx="1" />
+      <rect x="0" y="18" width="20" height="18" rx="1" />
+      <rect x="40" y="18" width="10" height="18" rx="1" />
+      <rect x="0" y="36" width="10" height="18" rx="1" />
+      <rect x="20" y="36" width="10" height="18" rx="1" />
+      <rect x="40" y="36" width="10" height="18" rx="1" />
+      <rect x="0" y="54" width="10" height="18" rx="1" />
+      <rect x="30" y="54" width="20" height="18" rx="1" />
+      <rect x="0" y="72" width="10" height="18" rx="1" />
+      <rect x="40" y="72" width="10" height="18" rx="1" />
+    </g>
+    <g class="letter l-12" data-char="G" transform="translate(240, 140)">
+      <rect x="10" y="0" width="30" height="18" rx="1" />
+      <rect x="0" y="18" width="10" height="18" rx="1" />
+      <rect x="0" y="36" width="10" height="18" rx="1" />
+      <rect x="30" y="36" width="20" height="18" rx="1" />
+      <rect x="0" y="54" width="10" height="18" rx="1" />
+      <rect x="40" y="54" width="10" height="18" rx="1" />
+      <rect x="10" y="72" width="30" height="18" rx="1" />
+    </g>
+  </g>
+</svg>
