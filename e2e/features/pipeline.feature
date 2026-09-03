@@ -19,6 +19,9 @@ Feature: Site Generation Pipeline
     And the output directory should contain "api/manifest.json"
     And the output directory should contain "blog"
     And the output directory should contain "tags"
+    And the output directory should contain "archive.html"
+    And the output directory should contain "blog/test.html"
+    And the output directory should contain "tags/e2e.html"
 
   Scenario: Copy static assets successfully
     Given a configuration directory with a valid profile
@@ -38,3 +41,12 @@ Feature: Site Generation Pipeline
     Then the output file "work.html" should contain "Open Source"
     And the output file "work.html" should contain "Last updated: 2026-07-18"
     And the output file "work.html" should contain "test-repo"
+
+  Scenario: Validate content syndication and AI discovery contracts
+    Given a configuration directory with a valid profile
+    And a blog directory containing 1 published post
+    When the build pipeline is executed
+    Then the output file "sitemap.xml" should contain "blog/test.html"
+    And the output file "api/manifest.json" should contain "E2E Post"
+    And the output file "llms.txt" should contain "api/manifest.json"
+    And the output file "tags/e2e.html" should contain "#e2e"
