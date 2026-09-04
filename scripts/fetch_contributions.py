@@ -21,6 +21,10 @@ import urllib.request
 USERNAME = os.environ.get("GITHUB_USER", "victoriacheng15")
 API_TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
 REPOS: list[str] = []
+EXCLUDED_REPOS = {
+    "chaos-mesh/website",
+    "meshery/meshery.io",
+}
 
 # API base headers (preserving custom User-Agent)
 HEADERS = {
@@ -61,8 +65,10 @@ def load_fork_parents() -> list[str]:
             cache = json.load(f)
         if isinstance(cache, dict):
             if "forks" in cache:
-                return list(cache["forks"].values())
-            return list(cache.values())
+                parents = list(cache["forks"].values())
+            else:
+                parents = list(cache.values())
+            return [repo for repo in parents if repo not in EXCLUDED_REPOS]
     except Exception as err:
         print(f"Error loading cache from {CACHE_PATH}: {err}", file=sys.stderr)
         sys.exit(1)
@@ -243,6 +249,50 @@ def fetch_external_issues() -> list[dict]:
     return issues
 
 
+def build_contribution_entry(
+    repo_name: str,
+    meta: dict[str, str],
+    items: list[dict],
+    description: str = "",
+) -> dict:
+    """Construct a standardized contribution dictionary."""
+    return {
+        "repo": repo_name,
+        "link": meta.get("link") or f"https://github.com/{repo_name}",
+        "description": description or meta.get("description") or "",
+        "items": items,
+    }
+
+
+def merge_contributions(
+    contributions_map: dict[str, list[dict]],
+    existing_meta: dict[str, dict[str, str]],
+    excluded_repos: set[str],
+) -> list[dict]:
+    """Merge fetched activity with existing YAML metadata, filtering excluded repositories."""
+    updated = []
+
+    # Map fetched contributions and resolve missing descriptions
+    for repo_name, prs in contributions_map.items():
+        if repo_name in excluded_repos:
+            continue
+        meta = existing_meta.get(repo_name, {})
+        desc = meta.get("description")
+        if not desc:
+            print(f"Fetching metadata for {repo_name}...", file=sys.stderr)
+            desc = fetch_repo_description(repo_name)
+
+        updated.append(build_contribution_entry(repo_name, meta, prs, description=desc))
+
+    # Preserve manual contributions lacking fetched activity
+    for repo_name, meta in existing_meta.items():
+        if repo_name in excluded_repos or repo_name in contributions_map:
+            continue
+        updated.append(build_contribution_entry(repo_name, meta, []))
+
+    updated.sort(key=lambda x: x["repo"].lower())
+    return updated
+
 
 def save_contributions(yaml_text: str, updated_contributions: list[dict]) -> None:
     """Save contributions to PROJECTS_YAML_PATH, updating lastUpdated date only if contents changed."""
@@ -328,39 +378,7 @@ def main() -> None:
         yaml_text = f.read()
 
     existing_meta = parse_existing_contributions(yaml_text)
-    updated_contributions = []
-
-    # Map fetched contributions and merge existing descriptions
-    for repo_name, prs in contributions_map.items():
-        meta = existing_meta.get(repo_name, {})
-        description = meta.get("description")
-        
-        if not description:
-            print(f"Fetching metadata for {repo_name}...", file=sys.stderr)
-            description = fetch_repo_description(repo_name)
-
-        updated_contrib = {
-            "repo": repo_name,
-            "link": meta.get("link") or f"https://github.com/{repo_name}",
-            "description": description,
-            "items": prs
-        }
-        updated_contributions.append(updated_contrib)
-
-    # Maintain existing manual contributions that had no fetched PRs
-    for repo_name, meta in existing_meta.items():
-        if repo_name not in contributions_map:
-            updated_contrib = {
-                "repo": repo_name,
-                "link": meta.get("link") or f"https://github.com/{repo_name}",
-                "description": meta.get("description") or "",
-                "items": []
-            }
-            updated_contributions.append(updated_contrib)
-
-    # Sort all contributions alphabetically by repository name to group by organization
-    updated_contributions.sort(key=lambda x: x["repo"].lower())
-
+    updated_contributions = merge_contributions(contributions_map, existing_meta, EXCLUDED_REPOS)
     save_contributions(yaml_text, updated_contributions)
 
 
