@@ -57,7 +57,7 @@ projects:
       - eBPF
 
 contributions:
-  lastUpdated: "2026-08-31"
+  lastUpdated: "2026-09-04"
   items:
     - repo: chaos-mesh/chaos-mesh
       link: https://github.com/chaos-mesh/chaos-mesh
@@ -151,6 +151,10 @@ contributions:
       link: https://github.com/meshery/meshery
       description: "Meshery, the cloud native manager"
       items:
+        - type: PR
+          number: 21718
+          title: "[CI] Add readiness probe gate to E2E test workflow"
+          status: open
         - type: PR
           number: 20899
           title: "[UI] Fix dashboard detail view crash during loading"
