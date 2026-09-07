@@ -5,7 +5,7 @@ go 1.26
 require (
 	github.com/cucumber/godog v0.16.0
 	github.com/tdewolff/minify/v2 v2.24.17
-	github.com/yuin/goldmark v1.8.5
+	github.com/yuin/goldmark v1.8.6
 	github.com/yuin/goldmark-highlighting/v2 v2.0.0-20230729083705-37449abec8cc
 	go.yaml.in/yaml/v4 v4.0.0-rc.6
 )
