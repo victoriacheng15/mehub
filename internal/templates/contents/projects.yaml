@@ -57,7 +57,7 @@ projects:
       - eBPF
 
 contributions:
-  lastUpdated: "2026-09-04"
+  lastUpdated: "2026-09-07"
   items:
     - repo: chaos-mesh/chaos-mesh
       link: https://github.com/chaos-mesh/chaos-mesh
@@ -115,14 +115,6 @@ contributions:
           number: 5031
           title: "[Bug]: TypeError: Cannot read properties of undefined (reading 'selector')"
           status: closed
-    - repo: chaos-mesh/website
-      link: https://github.com/chaos-mesh/website
-      description: "Source for Chaos Mesh website."
-      items:
-        - type: Issue
-          number: 449
-          title: "[Docs]: Document supported/tested Kubernetes versions in Helm installation prerequisites"
-          status: open
     - repo: cncf/open-community-groups
       link: https://github.com/cncf/open-community-groups
       description: "Open source events platform for communities and organizations"
@@ -152,6 +144,10 @@ contributions:
       description: "Meshery, the cloud native manager"
       items:
         - type: PR
+          number: 21805
+          title: "[Models] Add CacheSubnetGroup edge rules in aws-elasticache-controller"
+          status: open
+        - type: PR
           number: 21718
           title: "[CI] Add readiness probe gate to E2E test workflow"
           status: open
@@ -162,16 +158,4 @@ contributions:
         - type: Issue
           number: 20897
           title: "[UI] TypeError: Cannot read properties of undefined (reading 'find') in dashboard"
-          status: closed
-    - repo: meshery/meshery.io
-      link: https://github.com/meshery/meshery.io
-      description: "Website for Meshery"
-      items:
-        - type: PR
-          number: 2832
-          title: "[Website] Fix community calendar script loading path"
-          status: merged
-        - type: Issue
-          number: 2826
-          title: "[Website] Community Calendar does not load"
           status: closed
