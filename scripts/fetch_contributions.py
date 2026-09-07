@@ -25,6 +25,7 @@ EXCLUDED_REPOS = {
     "chaos-mesh/website",
     "meshery/meshery.io",
 }
+MIN_PR_COUNT = 1  # Repositories must have more than 1 PR to be listed
 
 # API base headers (preserving custom User-Agent)
 HEADERS = {
@@ -268,27 +269,27 @@ def merge_contributions(
     contributions_map: dict[str, list[dict]],
     existing_meta: dict[str, dict[str, str]],
     excluded_repos: set[str],
+    min_prs: int = MIN_PR_COUNT,
 ) -> list[dict]:
-    """Merge fetched activity with existing YAML metadata, filtering excluded repositories."""
+    """Merge fetched activity with existing YAML metadata, requiring more than min_prs PRs."""
     updated = []
 
     # Map fetched contributions and resolve missing descriptions
-    for repo_name, prs in contributions_map.items():
+    for repo_name, items in contributions_map.items():
         if repo_name in excluded_repos:
             continue
+
+        pr_count = sum(1 for item in items if item.get("type") == "PR")
+        if pr_count <= min_prs:
+            continue
+
         meta = existing_meta.get(repo_name, {})
         desc = meta.get("description")
         if not desc:
             print(f"Fetching metadata for {repo_name}...", file=sys.stderr)
             desc = fetch_repo_description(repo_name)
 
-        updated.append(build_contribution_entry(repo_name, meta, prs, description=desc))
-
-    # Preserve manual contributions lacking fetched activity
-    for repo_name, meta in existing_meta.items():
-        if repo_name in excluded_repos or repo_name in contributions_map:
-            continue
-        updated.append(build_contribution_entry(repo_name, meta, []))
+        updated.append(build_contribution_entry(repo_name, meta, items, description=desc))
 
     updated.sort(key=lambda x: x["repo"].lower())
     return updated
