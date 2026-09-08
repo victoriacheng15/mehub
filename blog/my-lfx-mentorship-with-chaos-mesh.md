@@ -3,7 +3,6 @@ title: "My LFX Mentorship With Chaos Mesh"
 description: "Exploring my LFX Mentorship with Chaos Mesh, refactoring E2E tests into Gherkin BDD scenarios, contributing UI fixes, and growing into an active open-source contributor."
 date: 2026-09-02
 tags: ["kubernetes", "go", "cncf"]
-draft: true
 ---
 
 ## Why Chaos Mesh?
