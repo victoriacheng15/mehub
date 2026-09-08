@@ -291,7 +291,13 @@ def merge_contributions(
 
         updated.append(build_contribution_entry(repo_name, meta, items, description=desc))
 
-    updated.sort(key=lambda x: x["repo"].lower())
+    # Sort by PR count descending, tie-break alphabetically by repo name
+    updated.sort(
+        key=lambda x: (
+            -sum(1 for item in x["items"] if item.get("type") == "PR"),
+            x["repo"].lower(),
+        )
+    )
     return updated
 
 
