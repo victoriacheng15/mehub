@@ -36,25 +36,13 @@ projects:
       - BDD (Cucumber/Godog)
   - title: Dev Toolchain
     emoji: 🛠️
-    shortDescription: A portable library of reusable AI agent skills and helper scripts, structured under the SKILL.md open standard to orchestrate consistent developer workflows across compatible LLM clients. 
+    shortDescription: A personal collection of standardized AI agent skills and bash automation built on the SKILL.md open standard. Standardizes my daily developer workflows across diverse LLM clients.
     link: dev-toolchain
     techs:
       - Automation
       - Bash
       - Agentic Enablement
       - Developer Workflows
-  - title: Observability Hub
-    emoji: 📊
-    shortDescription: End-to-end Kubernetes observability system using Terraform and GitOps, with OpenTelemetry, eBPF networking, MCP diagnostics, HA data services, and incident workflows including ADRs and RCAs.
-    link: observability-hub
-    techs:
-      - ArgoCD
-      - Kubernetes
-      - Terraform
-      - Observability
-      - OpenTelemetry
-      - PostgreSQL
-      - eBPF
 
 contributions:
   lastUpdated: "2026-09-11"
