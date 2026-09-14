@@ -78,4 +78,3 @@ Backend logs use structured `JSON` formatting to simplify local searches. Consis
 The main takeaway was learning how to design a dashboard to be as informative as possible. Showing an overview of user choices makes it easy to understand user behavior at a glance. Putting thought into this presentation helps identify what the product actually needs next.
 
 Now, this custom observability serves as the foundation for the product roadmap. Analyzing these usage patterns directly guides future design decisions and feature improvements. Learning how to translate user data into next steps is the core benefit of this setup. Find the source code in the [cover-craft](https://github.com/victoriacheng15/cover-craft) repository.
-
