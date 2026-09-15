@@ -3,7 +3,6 @@ title: "[Engineering Log] Building Product Observability"
 description: "Building Cover Craft analytics into a lightweight observability loop that tracks image generation, latency, accessibility, UI usage, and structured backend behavior."
 date: 2026-09-15
 tags: ["retrospective", "platform", "system-design"]
-draft: true
 ---
 
 ## Context
