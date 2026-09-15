@@ -1,0 +1,97 @@
+name: "Commit and Open PR"
+description: "Detects file changes, commits with bot attribution, pushes a timestamped branch, and idempotently creates a pull request."
+
+inputs:
+  path:
+    description: "File or directory path to check, stage, and commit (e.g., 'scripts/fork_cache.json' or 'blog/')"
+    required: true
+  branch_prefix:
+    description: "Branch prefix (e.g., 'chore/update-contributions' or 'blog/my-post')"
+    required: true
+  commit_message:
+    description: "Commit message conforming to conventional commits"
+    required: true
+  pr_title:
+    description: "Title of the pull request"
+    required: true
+  pr_body:
+    description: "Description body of the pull request in markdown"
+    required: true
+  pr_label:
+    description: "Optional label to attach to the pull request (e.g., 'blog')"
+    required: false
+    default: ""
+  github_token:
+    description: "Token with repository write and pull-request write permissions"
+    required: true
+
+outputs:
+  changed:
+    description: "Whether modifications or new files were detected ('true' or 'false')"
+    value: ${{ steps.diff.outputs.changed }}
+  branch_name:
+    description: "Name of the branch generated and pushed"
+    value: ${{ steps.commit_push.outputs.branch_name }}
+  pr_url:
+    description: "URL of the created pull request (empty if no changes or PR already existed)"
+    value: ${{ steps.create_pr.outputs.pr_url }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Detect Changes
+      id: diff
+      shell: bash
+      run: |
+        if [ -z "$(git status --porcelain -- "${{ inputs.path }}")" ]; then
+          echo "changed=false" >> "$GITHUB_OUTPUT"
+          echo "No changes detected in ${{ inputs.path }}."
+        else
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "Changes detected in ${{ inputs.path }}."
+        fi
+
+    - name: Commit and Push
+      id: commit_push
+      if: steps.diff.outputs.changed == 'true'
+      shell: bash
+      run: |
+        BRANCH_NAME="${{ inputs.branch_prefix }}-$(date +%s)"
+        echo "branch_name=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
+
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+        git switch -c "$BRANCH_NAME"
+        git add "${{ inputs.path }}"
+        git commit -m "${{ inputs.commit_message }}"
+        git push --force-with-lease origin "$BRANCH_NAME"
+
+    - name: Open Pull Request
+      id: create_pr
+      if: steps.diff.outputs.changed == 'true'
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.github_token }}
+      run: |
+        BRANCH_NAME="${{ steps.commit_push.outputs.branch_name }}"
+
+        if gh pr view "$BRANCH_NAME" --base main --json number --jq .number >/dev/null 2>&1; then
+          echo "Pull request already exists for $BRANCH_NAME."
+          exit 0
+        fi
+
+        LABEL_FLAG=""
+        if [ -n "${{ inputs.pr_label }}" ]; then
+          LABEL_FLAG="--label ${{ inputs.pr_label }}"
+        fi
+
+        PR_URL=$(gh pr create \
+          --base main \
+          --head "$BRANCH_NAME" \
+          --title "${{ inputs.pr_title }}" \
+          --body "${{ inputs.pr_body }}" \
+          $LABEL_FLAG)
+
+        echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
+        echo "Created pull request: $PR_URL"
