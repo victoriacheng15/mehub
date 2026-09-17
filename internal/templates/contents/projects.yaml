@@ -45,7 +45,7 @@ projects:
       - Developer Workflows
 
 contributions:
-  lastUpdated: "2026-09-11"
+  lastUpdated: "2026-09-17"
   items:
     - repo: chaos-mesh/chaos-mesh
       link: https://github.com/chaos-mesh/chaos-mesh
@@ -130,11 +130,11 @@ contributions:
         - type: PR
           number: 35571
           title: "fix(scaffolder): explicitly define github:repo:create inputs"
-          status: open
+          status: merged
         - type: PR
           number: 35567
           title: "feat(core-components): allow configuring CopyTextButton visual variant"
-          status: open
+          status: merged
     - repo: cucumber/godog
       link: https://github.com/cucumber/godog
       description: "Cucumber for golang"
