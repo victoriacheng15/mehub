@@ -53,10 +53,18 @@ type Contribution struct {
 	Items       []ContributionItem `yaml:"items"`
 }
 
-// ContributionsSection represents the contributions block containing the last updated timestamp and the list of contribution items.
+// ContributionSummary holds aggregate open-source contribution metrics.
+type ContributionSummary struct {
+	TotalContributions int `yaml:"totalContributions"`
+	PRsAuthored        int `yaml:"prsAuthored"`
+	TriageAndReviews   int `yaml:"triageAndReviews"`
+}
+
+// ContributionsSection represents the contributions block containing the last updated timestamp, summary metrics, and the list of contribution items.
 type ContributionsSection struct {
-	LastUpdated string         `yaml:"lastUpdated"`
-	Items       []Contribution `yaml:"items"`
+	LastUpdated string              `yaml:"lastUpdated"`
+	Summary     ContributionSummary `yaml:"summary"`
+	Items       []Contribution      `yaml:"items"`
 }
 
 // Skill represents a technology tag paired with a matching display icon or CSS utility.

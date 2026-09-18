@@ -22,6 +22,7 @@ USERNAME = os.environ.get("GITHUB_USER", "victoriacheng15")
 API_TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
 REPOS: list[str] = []
 EXCLUDED_REPOS = {
+    "career-ops-hq/career-ops",
     "chaos-mesh/website",
     "meshery/meshery.io",
 }
@@ -212,13 +213,24 @@ def escape_yaml_string(s: str) -> str:
     return s.replace('\\', '\\\\').replace('"', '\\"').replace('\n', ' ')
 
 
-def generate_contributions_yaml(contributions: list[dict], date_str: str) -> str:
+def generate_contributions_yaml(
+    contributions: list[dict],
+    date_str: str,
+    summary: dict[str, int] | None = None,
+) -> str:
     """Convert contributions list to formatted YAML string."""
     yaml_lines = [
         "contributions:",
         f"  lastUpdated: \"{date_str}\"",
-        "  items:"
     ]
+    if summary:
+        yaml_lines.extend([
+            "  summary:",
+            f"    totalContributions: {summary['totalContributions']}",
+            f"    prsAuthored: {summary['prsAuthored']}",
+            f"    triageAndReviews: {summary['triageAndReviews']}",
+        ])
+    yaml_lines.append("  items:")
     for contrib in contributions:
         yaml_lines.append(f"    - repo: {contrib['repo']}")
         yaml_lines.append(f"      link: {contrib['link']}")
@@ -248,6 +260,24 @@ def fetch_external_issues() -> list[dict]:
         if len(page_items) < 100:
             break
     return issues
+
+
+def fetch_external_issues_commented_count() -> int:
+    """Retrieve total count of external issues commented on by the user for summary stats."""
+    repo_filters = " ".join(f"repo:{repo}" for repo in REPOS)
+    search_query = urllib.parse.quote(f"type:issue commenter:{USERNAME} -author:{USERNAME} {repo_filters}".strip())
+    url = f"https://api.github.com/search/issues?q={search_query}&per_page=1"
+    payload = query_github_api(url)
+    return payload.get("total_count", 0)
+
+
+def fetch_external_pr_reviews_count() -> int:
+    """Retrieve total count of external pull requests reviewed by the user for summary stats."""
+    repo_filters = " ".join(f"repo:{repo}" for repo in REPOS)
+    search_query = urllib.parse.quote(f"type:pr reviewed-by:{USERNAME} -author:{USERNAME} {repo_filters}".strip())
+    url = f"https://api.github.com/search/issues?q={search_query}&per_page=1"
+    payload = query_github_api(url)
+    return payload.get("total_count", 0)
 
 
 def build_contribution_entry(
@@ -301,7 +331,11 @@ def merge_contributions(
     return updated
 
 
-def save_contributions(yaml_text: str, updated_contributions: list[dict]) -> None:
+def save_contributions(
+    yaml_text: str,
+    updated_contributions: list[dict],
+    summary: dict[str, int] | None = None,
+) -> None:
     """Save contributions to PROJECTS_YAML_PATH, updating lastUpdated date only if contents changed."""
     # Extract the existing contributions block
     existing_contributions_block = ""
@@ -328,7 +362,7 @@ def save_contributions(yaml_text: str, updated_contributions: list[dict]) -> Non
     # Generate a candidate new contributions block with today's date
     today_str = datetime.date.today().isoformat()
     if updated_contributions:
-        new_contributions_block = generate_contributions_yaml(updated_contributions, today_str)
+        new_contributions_block = generate_contributions_yaml(updated_contributions, today_str, summary)
     else:
         new_contributions_block = ""
 
@@ -344,7 +378,7 @@ def save_contributions(yaml_text: str, updated_contributions: list[dict]) -> Non
     # Assemble updated projects.yaml
     clean_yaml = strip_existing_contributions(yaml_text)
     if updated_contributions:
-        contributions_yaml = generate_contributions_yaml(updated_contributions, target_date)
+        contributions_yaml = generate_contributions_yaml(updated_contributions, target_date, summary)
         final_yaml = f"{clean_yaml}\n{contributions_yaml}"
     else:
         final_yaml = clean_yaml
@@ -363,13 +397,29 @@ def main() -> None:
     print("Loading active fork repositories from cache...", file=sys.stderr)
     REPOS = load_fork_parents()
 
-    print("Fetching external contributions from GitHub...", file=sys.stderr)
+    print("Fetching external pull requests from GitHub...", file=sys.stderr)
     raw_prs = fetch_external_pull_requests()
     print("Fetching external issues from GitHub...", file=sys.stderr)
     raw_issues = fetch_external_issues()
 
+    print("Fetching summary stats (reviews and commented issues)...", file=sys.stderr)
+    reviews_count = fetch_external_pr_reviews_count()
+    commented_issues_count = fetch_external_issues_commented_count()
+
     prs_map = organize_prs(raw_prs)
     issues_map = organize_issues(raw_issues)
+
+    prs_authored_count = sum(len(prs) for prs in prs_map.values())
+    issues_authored_count = sum(len(issues) for issues in issues_map.values())
+    issues_triaged_count = issues_authored_count + commented_issues_count
+    triage_and_reviews_count = issues_triaged_count + reviews_count
+    total_contributions_count = prs_authored_count + triage_and_reviews_count
+
+    summary_data = {
+        "totalContributions": total_contributions_count,
+        "prsAuthored": prs_authored_count,
+        "triageAndReviews": triage_and_reviews_count,
+    }
 
     # Combine PRs and Issues maps by repo name (PRs first, then Issues)
     all_repos = set(prs_map.keys()) | set(issues_map.keys())
@@ -386,7 +436,7 @@ def main() -> None:
 
     existing_meta = parse_existing_contributions(yaml_text)
     updated_contributions = merge_contributions(contributions_map, existing_meta, EXCLUDED_REPOS)
-    save_contributions(yaml_text, updated_contributions)
+    save_contributions(yaml_text, updated_contributions, summary=summary_data)
 
 
 if __name__ == "__main__":
