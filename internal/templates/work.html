@@ -8,21 +8,39 @@
     <!-- Tab Navigation -->
     <div class="border-b border-slate-800">
         <nav class="flex gap-8" aria-label="Work tabs" role="tablist">
-            <button id="tab-btn-opensource" class="py-4 px-1 border-b-2 border-violet-500 font-bold text-sm text-violet-400 tracking-wider uppercase focus:outline-none cursor-pointer transition-all duration-200">
+            <button id="tab-btn-opensource" role="tab" aria-selected="true" aria-controls="tab-content-opensource" class="py-4 px-1 border-b-2 border-violet-500 font-bold text-sm text-violet-400 tracking-wider uppercase focus:outline-none cursor-pointer transition-all duration-200">
                 Open Source
             </button>
-            <button id="tab-btn-projects" class="py-4 px-1 border-b-2 border-transparent font-bold text-sm text-slate-400 hover:text-slate-200 tracking-wider uppercase focus:outline-none cursor-pointer transition-all duration-200">
+            <button id="tab-btn-projects" role="tab" aria-selected="false" aria-controls="tab-content-projects" class="py-4 px-1 border-b-2 border-transparent font-bold text-sm text-slate-400 hover:text-slate-200 tracking-wider uppercase focus:outline-none cursor-pointer transition-all duration-200">
                 Featured Projects
             </button>
         </nav>
     </div>
 
     <!-- Tab Contents -->
-    <div id="tab-content-opensource" class="block transition-all duration-300">
+    <div id="tab-content-opensource" role="tabpanel" aria-labelledby="tab-btn-opensource" class="block transition-all duration-300">
         {{ if .Config.Contributions.Items }}
         <div class="flex flex-col gap-1 mb-6">
             <span class="text-xs text-slate-500 font-normal uppercase tracking-wider">Last updated: {{ .Config.Contributions.LastUpdated }}</span>
         </div>
+
+        {{ if .Config.Contributions.Summary.TotalContributions }}
+        <dl class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+            <div class="p-5 bg-slate-900 border border-slate-800 rounded-xl flex flex-col items-center text-center gap-1">
+                <dt class="text-xs uppercase tracking-wider text-slate-500 font-semibold">Total Contributions</dt>
+                <dd class="m-0 text-3xl font-bold font-mono text-violet-400">{{ .Config.Contributions.Summary.TotalContributions }}</dd>
+            </div>
+            <div class="p-5 bg-slate-900 border border-slate-800 rounded-xl flex flex-col items-center text-center gap-1">
+                <dt class="text-xs uppercase tracking-wider text-slate-500 font-semibold">PRs Authored</dt>
+                <dd class="m-0 text-3xl font-bold font-mono text-violet-400">{{ .Config.Contributions.Summary.PRsAuthored }}</dd>
+            </div>
+            <div class="p-5 bg-slate-900 border border-slate-800 rounded-xl flex flex-col items-center text-center gap-1">
+                <dt class="text-xs uppercase tracking-wider text-slate-500 font-semibold">Triage & Code Reviews</dt>
+                <dd class="m-0 text-3xl font-bold font-mono text-violet-400">{{ .Config.Contributions.Summary.TriageAndReviews }}</dd>
+            </div>
+        </dl>
+        {{ end }}
+
         <ul class="flex flex-col gap-6 list-none">
             {{ range $cIndex, $contrib := .Config.Contributions.Items }}
             <li>
@@ -80,7 +98,7 @@
         {{ end }}
     </div>
 
-    <div id="tab-content-projects" class="hidden transition-all duration-300">
+    <div id="tab-content-projects" role="tabpanel" aria-labelledby="tab-btn-projects" class="hidden transition-all duration-300">
         <ul class="flex flex-col gap-6 list-none">
             {{ range $index, $project := .Config.Projects }}
             <li>
@@ -104,8 +122,8 @@
                         </ul>
                         <div class="flex items-center gap-2">
                             <a href="https://github.com/{{ if eq $project.Link "platform-actions" }}victoriacheng15hub{{ else }}victoriacheng15{{ end }}/{{ $project.Link }}#readme" target="_blank" rel="noopener noreferrer" 
-                               class="text-violet-400 font-bold hover:text-violet-300 transition-colors group/link flex items-center gap-2 text-sm">
-                                View Project <span class="group-hover/link:translate-x-1 transition-transform">→</span>
+                                class="text-violet-400 font-bold hover:text-violet-300 transition-colors group/link flex items-center gap-2 text-sm">
+                                View Project <span class="group-hover/link:translate-x-1 transition-transform" aria-hidden="true">→</span>
                             </a>
                         </div>
                     </div>
@@ -124,12 +142,14 @@
     const projectsContent = document.getElementById('tab-content-projects');
 
     function selectTab(activeBtn, inactiveBtn, activeContent, inactiveContent) {
-        // Toggle button styles
+        // Toggle button styles and accessibility attributes
         activeBtn.classList.remove('border-transparent', 'text-slate-400', 'hover:text-slate-200');
         activeBtn.classList.add('border-violet-500', 'text-violet-400');
+        activeBtn.setAttribute('aria-selected', 'true');
         
         inactiveBtn.classList.remove('border-violet-500', 'text-violet-400');
         inactiveBtn.classList.add('border-transparent', 'text-slate-400', 'hover:text-slate-200');
+        inactiveBtn.setAttribute('aria-selected', 'false');
 
         // Toggle content visibility
         activeContent.classList.remove('hidden');

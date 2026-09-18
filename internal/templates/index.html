@@ -10,7 +10,7 @@
             {{ range .Config.Socials }}
             <li class="p-2 rounded-md bg-slate-900 border border-slate-800 hover:border-violet-500/30 transition-colors">
                 <a href="{{ .Href }}" target="_blank" rel="noopener noreferrer" class="" aria-label="{{ .Name }}">
-                    <img src="{{ $.PathPrefix }}socials/{{ .Icon }}" alt="{{ .Name }}" class="w-5 h-5 brightness-0 invert opacity-90 hover:opacity-100 transition-opacity">
+                    <img src="{{ $.PathPrefix }}socials/{{ .Icon }}" alt="" aria-hidden="true" class="w-5 h-5 brightness-0 invert opacity-90 hover:opacity-100 transition-opacity">
                 </a>
             </li>
             {{ end }}
@@ -36,7 +36,7 @@
             I actively contribute to cloud-native open source projects (like Chaos Mesh and Meshery) and build end-to-end full-stack systems with a focus on backend scalability, observability, and platform automation.
         </p>
         <a href="{{ .PathPrefix }}work.html" class="self-start inline-flex items-center gap-2 px-5 py-2.5 bg-violet-600 hover:bg-violet-500 text-white font-bold rounded-lg transition-all text-sm">
-            Explore My Work & Contributions <span>→</span>
+            Explore My Work & Contributions <span aria-hidden="true">→</span>
         </a>
     </section>
 </div>
