@@ -2,7 +2,7 @@
 title: "From Pi to Cloud Automation"
 description: "Automate content gathering with a Python script and GitHub Actions. No servers, no Pi—just daily updates straight to your Google Sheet. Explore this comprehensive guide."
 date: 2025-08-05
-tags: ["growth", "python"]
+tags: ["cloud", "python"]
 ---
 
 ## From Pi to Cloud Automation?

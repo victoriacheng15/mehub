@@ -2,7 +2,7 @@
 title: "Atomic Habits - Transforming Lives with Lasting Habits"
 description: "Atomic Habits by Clear offers a practical guide to harnessing the power of small habits for remarkable personal transformation. Discover essential tips and practical guides."
 date: 2023-06-24
-tags: ["growth"]
+tags: ["productivity"]
 ---
 
 ## What is Atomic Habits?

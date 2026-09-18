@@ -2,7 +2,7 @@
 title: "Continuous Improvement - Lessons from The Phoenix Project"
 description: "Discover valuable insights on driving continuous improvement in organizations through the compelling lessons learned from The Phoenix Project. Read the full guide to learn."
 date: 2023-07-15
-tags: ["growth"]
+tags: ["platform"]
 ---
 
 ## What is the Phoenix Project?

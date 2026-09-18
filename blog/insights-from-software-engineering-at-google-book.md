@@ -2,7 +2,7 @@
 title: "Insights from Software Engineering at Google Book"
 description: "Learn from Google's engineering culture: data-driven decisions, code reviews, scalability, collaboration, and innovation. Boost productivity and reliability. Read on."
 date: 2023-08-19
-tags: ["growth"]
+tags: ["system-design"]
 ---
 
 ## What is Software Engineering at Google?

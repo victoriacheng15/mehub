@@ -2,7 +2,7 @@
 title: "Clean Architecture - Building Robust Systems"
 description: "Clean architecture focuses on modular, maintainable software design. It emphasizes clear separation of concerns and business logic centrality. Read the full guide to learn."
 date: 2023-09-16
-tags: ["growth"]
+tags: ["backend", "system-design"]
 ---
 
 ## What is Clean Architecture?

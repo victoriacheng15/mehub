@@ -2,7 +2,7 @@
 title: "Jumpstart Your Day with 'Eat That Frog' Wisdom"
 description: "Discover practical strategies for boosting productivity and time management while aligning with effective planning, akin to Atomic Habits and Deep Work. Read more to learn."
 date: 2023-10-07
-tags: ["growth"]
+tags: ["productivity"]
 ---
 
 ## What is Eat that Frog?
