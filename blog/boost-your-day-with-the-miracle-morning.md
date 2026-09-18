@@ -2,7 +2,7 @@
 title: "Boost Your Day with The Miracle Morning"
 description: "Discover SAVERS for productive days and SLUMBERS for restful nights. Learn to manage stress, read daily, and focus on what you control. Explore this comprehensive guide."
 date: 2024-06-08
-tags: ["growth"]
+tags: ["productivity"]
 ---
 
 ## What is the Miracle Morning book?

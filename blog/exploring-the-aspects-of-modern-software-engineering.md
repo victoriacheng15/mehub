@@ -2,7 +2,7 @@
 title: "Exploring the Aspects of Modern Software Engineering"
 description: "Modern Software Engineering by David Farley: Explore the foundational aspects of software engineering and enhance your skills. Discover essential tips and practical guides."
 date: 2023-12-16
-tags: ["growth"]
+tags: ["backend"]
 ---
 
 ## What is the Modern Software Engineering book?

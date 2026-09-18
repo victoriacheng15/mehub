@@ -2,7 +2,7 @@
 title: "Unignorable Mastery - So Good They Can't Ignore You"
 description: "Explore a fresh career path with 'So Good They Can't Ignore You' by Cal Newport. Personalize your path to success. The choice is yours! Explore this comprehensive guide."
 date: 2023-12-23
-tags: ["growth"]
+tags: ["productivity"]
 ---
 
 ## What is the So Good They Can’t Ignore You book?

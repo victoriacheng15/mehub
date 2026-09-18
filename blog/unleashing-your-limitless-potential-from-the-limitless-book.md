@@ -2,7 +2,7 @@
 title: Unleashing Your Limitless Potential from the Limitless Book
 description: "Unlock your brain's potential, learn faster, and embrace a positive mindset with practical techniques from the Limitless book. Discover essential tips and practical guides."
 date: 2023-06-14
-tags: ["growth"]
+tags: ["productivity"]
 ---
 
 ## What is the Limitless book?

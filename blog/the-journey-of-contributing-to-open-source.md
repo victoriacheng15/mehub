@@ -2,7 +2,7 @@
 title: The Journey of Contributing to Open Source
 description: "Guide to contributing to open source: Covers Git, GitHub, finding good first issues. Personal journey of writer's first pull request, tips to start. Read more to learn."
 date: 2022-06-10
-tags: ["growth"]
+tags: ["career", "git"]
 ---
 
 ## What is open source??

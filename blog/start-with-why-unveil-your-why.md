@@ -2,7 +2,7 @@
 title: "Start with Why - Unveil Your Why"
 description: "Explore 'Start with Why' by Simon Sinek. Clarify your personal purpose, inspire meaningful action, and redefine success with this insightful guide. Dive into the full post."
 date: 2024-03-09
-tags: ["growth"]
+tags: ["productivity"]
 ---
 
 ## What is Start with Why book?

@@ -2,7 +2,7 @@
 title: "Steal Like an Artist - Navigating Inspiration and Innovation"
 description: "Revolutionize your approach to creativity with 'Steal Like an Artist.' Transform influence into innovation for a truly unique journey of yours. Dive into the full post."
 date: 2024-01-13
-tags: ["growth"]
+tags: ["productivity"]
 ---
 
 ## What is the Steal Like An Artist book?

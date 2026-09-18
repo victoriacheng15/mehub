@@ -2,7 +2,7 @@
 title: "The Path to Clean Code - Insights from Robert Martin"
 description: "Master the art of clean code: Improve readability, reduce duplication, apply SOLID principles, and embrace continuous refactoring. Dive into this step-by-step tutorial."
 date: 2023-07-08
-tags: ["growth"]
+tags: ["backend"]
 ---
 
 ## What is Clean Code

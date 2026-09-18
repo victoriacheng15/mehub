@@ -2,7 +2,7 @@
 title: "Unleashing the 12-Week Plan - The Road to Accomplishment"
 description: "Embark on a transformative journey of accomplishment with the powerful 12-Week Plan. Unleash your potential and achieve your goals like never before. Read more to learn."
 date: 2023-07-22
-tags: ["growth"]
+tags: ["productivity"]
 ---
 
 ## What is 12 Week Year?

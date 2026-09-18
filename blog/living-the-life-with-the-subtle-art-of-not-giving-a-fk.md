@@ -2,7 +2,7 @@
 title: "Living the Life with The Subtle Art of Not Giving a Fk"
 description: "Unconventional self-help. Embrace authenticity. The Subtle Art of Not Giving a F*ck challenges norms. Find fulfillment in Mark Manson's book. Read the full guide to learn."
 date: 2023-07-29
-tags: ["growth"]
+tags: ["productivity"]
 ---
 
 ## What is The Subtle Art of Not Giving a Fk?

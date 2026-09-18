@@ -23,13 +23,14 @@ MAX_TAGS = 3
 
 KNOWN_TAGS = {
     "backend",
+    "career",
     "cloud",
     "cncf",
     "data-structure",
     "docker",
     "frontend",
+    "git",
     "go",
-    "growth",
     "javascript",
     "kubernetes",
     "linux",
@@ -37,6 +38,7 @@ KNOWN_TAGS = {
     "monthly-log",
     "observability",
     "platform",
+    "productivity",
     "python",
     "retrospective",
     "sre",

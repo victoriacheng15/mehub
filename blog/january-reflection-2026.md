@@ -2,7 +2,7 @@
 title: "January Reflection 2026"
 description: "Reflecting on a shift from chatting with AI to refining context files. Learning to treat instructions as code and using the RFC process for better agent collaboration."
 date: 2026-01-27
-tags: ["growth"]
+tags: ["monthly-log"]
 ---
 
 ## The Shift: From "Chatting" to "Refining"

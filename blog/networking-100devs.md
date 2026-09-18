@@ -2,7 +2,7 @@
 title: Networking 100Devs
 description: "Networking is building professional relationships to achieve career goals. Land job offers by attending events, joining groups, and meeting new people. Read more to learn."
 date: 2022-02-08
-tags: ["growth"]
+tags: ["career"]
 ---
 
 ## Introduction
