@@ -17,12 +17,13 @@ The problem compounds as the taxonomy expands. A post tagged `kubernets` instead
 ## Writing the Audit Script
 
 The solution is a lightweight script at `scripts/audit_tags.py`. It inspects every `.md` file in `blog/`, parses frontmatter metadata, and enforces four constraints:
+
 1. Verifies all tags exist within a defined `KNOWN_TAGS` set.
 2. Caps tags at three per post to prevent taxonomy bloat.
 3. Enforces that all `engineering-log-*.md` posts carry the `retrospective` tag.
 4. Ensures standard posts do not inadvertently carry `retrospective`.
 
-```
+```text
 blog/*.md
     ├── KNOWN_TAGS check      → catches unknown tag names
     ├── max 3 tags check      → enforces tag ceiling
@@ -47,7 +48,7 @@ The audit also established an accurate baseline: 21 unique tags were in active u
 
 A standalone audit script provides visibility, but relying on manual execution creates a clear failure mode: if I forget to invoke the script before committing, invalid metadata still slips into the generated site. The pragmatic solution is wiring the audit directly into `make build` and the local development server. Any frontmatter violation halts site generation immediately before templates render.
 
-```
+```text
 make build / dev server
     └── python3 scripts/audit_tags.py
             ├── exit 0  → generate static site in dist/
