@@ -14,8 +14,6 @@ jobs:
     env:
       ID: ${{ github.event.client_payload.issue_id }}
       BLOG_TITLE: ${{ github.event.client_payload.issue_title }}
-      AUTHOR_NAME: 'github-actions[bot]'
-      AUTHOR_EMAIL: '41898282+github-actions[bot]@users.noreply.github.com'
       SYNC_BLOG_TOKEN: ${{ secrets.SYNC_BLOG_TOKEN }}
       API_LINK: ${{ vars.API_LINK }}
     steps:
@@ -30,28 +28,14 @@ jobs:
         id: sync_script
         run: ./scripts/sync_blog_post.sh
 
-      - name: Set branch name
+      - name: Commit and open pull request
         if: steps.sync_script.outputs.slug != ''
-        run: echo "BRANCH_NAME=blog/${{ steps.sync_script.outputs.slug }}-$(date +%s)" >> "$GITHUB_ENV"
-
-      - name: Commit and push changes
-        if: steps.sync_script.outputs.slug != ''
-        run: |
-          git config --local user.name "${{ env.AUTHOR_NAME }}"
-          git config --local user.email "${{ env.AUTHOR_EMAIL }}"
-          git switch -c "$BRANCH_NAME"
-          git add "blog/"
-          git commit -m "Sync blog post: ${{ steps.sync_script.outputs.post_title }}"
-          git push --force-with-lease origin "$BRANCH_NAME"
-
-      - name: Open pull request
-        if: steps.sync_script.outputs.slug != ''
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh pr create \
-            --base main \
-            --head "$BRANCH_NAME" \
-            --title "Sync Blog Post: ${{ steps.sync_script.outputs.post_title }}" \
-            --body "This PR syncs the blog post titled **${{ steps.sync_script.outputs.post_title }}** from the API. 🎉" \
-            --label "blog"
+        uses: ./.github/actions/commit-and-pr
+        with:
+          path: blog/
+          branch_prefix: "blog/${{ steps.sync_script.outputs.slug }}"
+          commit_message: "Sync blog post: ${{ steps.sync_script.outputs.post_title }}"
+          pr_title: "Sync Blog Post: ${{ steps.sync_script.outputs.post_title }}"
+          pr_body: "This PR syncs the blog post titled **${{ steps.sync_script.outputs.post_title }}** from the API. 🎉"
+          pr_label: blog
+          github_token: ${{ secrets.GITHUB_TOKEN }}
