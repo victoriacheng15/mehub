@@ -3,7 +3,6 @@ title: "Automated Tag Validation for Static Blogs"
 description: "A zero-dependency Python audit script integrated into the local build pipeline enforces frontmatter schema consistency and eliminates tag drift across static blog posts."
 date: 2026-09-22
 tags: ["platform", "python"]
-draft: true
 ---
 
 ## No Visibility Into What Tags Exist
