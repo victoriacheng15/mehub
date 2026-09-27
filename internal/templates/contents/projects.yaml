@@ -12,9 +12,18 @@ projects:
       - OpenTelemetry
       - Chaos Engineering (Chaos Mesh)
       - Ollama
+  - title: Serverless Ingestion Engine
+    emoji: ⚡
+    shortDescription: Event-driven serverless ingestion engine with zero-NAT ECS Fargate, SQS buffering, idempotent DynamoDB dispatch, and codified CloudWatch SLOs. Automated via Terraform & GitHub Actions.
+    link: serverless-ingestion-engine
+    techs:
+      - Python
+      - AWS
+      - Terraform
+      - GitHub Actions
   - title: Cover Craft
     emoji: 🎨
-    shortDescription: Full-stack TS React and Go serverless cover image generator on Azure Web Apps & Functions, automated deployment via GitHub Actions CI/CD, queue-based async processing, WCAG validation, and analytics.
+    shortDescription: Serverless media engine (Go, Next.js, Azure) for covers, carousels, and GIFs. Provisioned with Terraform, featuring async queue processing, WCAG AA checks, and rootless Podman Dev Containers.
     link: cover-craft
     techs:
       - TypeScript
@@ -22,18 +31,9 @@ projects:
       - Go
       - Azure
       - OpenAPI
-      - GitHub Actions
-      - MongoDB Atlas
-  - title: Uptime Monitor
-    emoji: 🛡️
-    shortDescription: 'Full-stack serverless uptime monitoring platform in Go: custom SSG status dashboard, AWS Lambda checks, EventBridge hourly scheduling, S3 metrics, and automated Terraform/GitHub Actions deployments.'
-    link: uptime-monitor
-    techs:
-      - Go
-      - AWS
       - Terraform
       - GitHub Actions
-      - BDD (Cucumber/Godog)
+      - MongoDB Atlas
   - title: Dev Toolchain
     emoji: 🛠️
     shortDescription: A personal collection of standardized AI agent skills and bash automation built on the SKILL.md open standard. Standardizes my daily developer workflows across diverse LLM clients.
