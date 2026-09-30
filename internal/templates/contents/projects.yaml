@@ -1,4 +1,25 @@
 projects:
+  - title: Cover Craft
+    emoji: 🎨
+    shortDescription: Serverless media engine (Go, Next.js, Azure) for covers, carousels, and GIFs. Provisioned with Terraform, featuring async queue processing, WCAG AA checks, and rootless Podman Dev Containers.
+    link: cover-craft
+    techs:
+      - TypeScript
+      - React (Next.js)
+      - Go
+      - Azure
+      - Terraform
+      - GitHub Actions
+      - MongoDB Atlas
+  - title: Serverless Ingestion Engine
+    emoji: ⚡
+    shortDescription: Event-driven serverless ingestion engine with zero-NAT ECS Fargate, SQS buffering, idempotent DynamoDB dispatch, and codified CloudWatch SLOs. Automated via Terraform & GitHub Actions.
+    link: serverless-ingestion-engine
+    techs:
+      - Python
+      - AWS
+      - Terraform
+      - GitHub Actions
   - title: LLM Telemetry Gateway
     emoji: 📡
     shortDescription: AIOps engine with PII masking monitoring a Go completions proxy and Python sidecar over UDS, utilizing a local Ollama LLM for automated root cause analysis on metric anomalies and chaos faults. 
@@ -12,35 +33,24 @@ projects:
       - OpenTelemetry
       - Chaos Engineering (Chaos Mesh)
       - Ollama
-  - title: Serverless Ingestion Engine
-    emoji: ⚡
-    shortDescription: Event-driven serverless ingestion engine with zero-NAT ECS Fargate, SQS buffering, idempotent DynamoDB dispatch, and codified CloudWatch SLOs. Automated via Terraform & GitHub Actions.
-    link: serverless-ingestion-engine
+  - title: SLO Alert Pipeline
+    emoji: 🚨
+    shortDescription: Kubernetes multi-tenant SLO alert pipeline with multi-window multi-burn-rate alerting, topology-aware alert inhibition on node failures, and an automated end-to-end chaos verification drill.
+    link: slo-alert-pipeline
     techs:
+      - Kubernetes
+      - Prometheus
+      - Grafana
       - Python
-      - AWS
-      - Terraform
-      - GitHub Actions
-  - title: Cover Craft
-    emoji: 🎨
-    shortDescription: Serverless media engine (Go, Next.js, Azure) for covers, carousels, and GIFs. Provisioned with Terraform, featuring async queue processing, WCAG AA checks, and rootless Podman Dev Containers.
-    link: cover-craft
-    techs:
-      - TypeScript
-      - React (Next.js)
       - Go
-      - Azure
-      - OpenAPI
-      - Terraform
-      - GitHub Actions
-      - MongoDB Atlas
+      - Chaos Engineering
+      - Bash / Shell Script
   - title: Dev Toolchain
     emoji: 🛠️
-    shortDescription: A personal collection of standardized AI agent skills and bash automation built on the SKILL.md open standard. Standardizes my daily developer workflows across diverse LLM clients.
+    shortDescription: A portable library of standardized AI agent skills built on the SKILL.md open standard. Enforces commit discipline, ADRs, table-driven tests, and triage across diverse LLM clients.
     link: dev-toolchain
     techs:
       - Automation
-      - Bash
       - Agentic Enablement
       - Developer Workflows
 
