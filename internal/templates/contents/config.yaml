@@ -51,8 +51,6 @@ skills:
     icon: python.svg
   - name: TypeScript
     icon: typescript.svg
-  - name: Rust
-    icon: rust.svg
 
 # ☁️ Cloud & Infrastructure
   - name: Kubernetes
