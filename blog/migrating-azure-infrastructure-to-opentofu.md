@@ -3,7 +3,6 @@ title: "Migrating Azure Infrastructure to OpenTofu"
 description: "Migrating Cover Craft Azure infrastructure to OpenTofu brings git version control to cloud resources, prevents concurrent state drift, and automates CI deployment runs."
 date: 2026-10-06
 tags: ["terraform", "cloud", "automation"]
-draft: true
 ---
 
 ## Configuration Drift and Portal Fragility
