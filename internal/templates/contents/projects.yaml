@@ -55,11 +55,11 @@ projects:
       - Developer Workflows
 
 contributions:
-  lastUpdated: "2026-10-03"
+  lastUpdated: "2026-10-15"
   summary:
-    totalContributions: 42
-    prsAuthored: 16
-    triageAndReviews: 26
+    totalContributions: 44
+    prsAuthored: 17
+    triageAndReviews: 27
   items:
     - repo: chaos-mesh/chaos-mesh
       link: https://github.com/chaos-mesh/chaos-mesh
@@ -84,7 +84,7 @@ contributions:
         - type: PR
           number: 5042
           title: "fix(multicluster): fix remote chaos monitor naming collision"
-          status: open
+          status: merged
         - type: PR
           number: 5034
           title: "fix(dashboard): TypeError crash on Workflow schedule details"
@@ -113,6 +113,22 @@ contributions:
           number: 5031
           title: "[Bug]: TypeError: Cannot read properties of undefined (reading 'selector')"
           status: closed
+    - repo: backstage/backstage
+      link: https://github.com/backstage/backstage
+      description: "Backstage is an open framework for building developer portals"
+      items:
+        - type: PR
+          number: 36160
+          title: "fix(config): safe fallback traversal for optional config lookups"
+          status: open
+        - type: PR
+          number: 35571
+          title: "fix(scaffolder): explicitly define github:repo:create inputs"
+          status: merged
+        - type: PR
+          number: 35567
+          title: "feat(core-components): allow configuring CopyTextButton visual variant"
+          status: merged
     - repo: meshery/meshery
       link: https://github.com/meshery/meshery
       description: "Meshery, the cloud native manager"
@@ -133,18 +149,6 @@ contributions:
           number: 20897
           title: "[UI] TypeError: Cannot read properties of undefined (reading 'find') in dashboard"
           status: closed
-    - repo: backstage/backstage
-      link: https://github.com/backstage/backstage
-      description: "Backstage is an open framework for building developer portals"
-      items:
-        - type: PR
-          number: 35571
-          title: "fix(scaffolder): explicitly define github:repo:create inputs"
-          status: merged
-        - type: PR
-          number: 35567
-          title: "feat(core-components): allow configuring CopyTextButton visual variant"
-          status: merged
     - repo: cucumber/godog
       link: https://github.com/cucumber/godog
       description: "Cucumber for golang"
