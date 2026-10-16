@@ -6,7 +6,7 @@ This file provides guidance to AI coding agents when working with code in this r
 
 Mehub is a personal website and blog platform built with a custom Go-based Static Site Generator (SSG). It emphasizes performance, zero external runtime dependencies, and AI-first discoverability.
 
-- **Core Tech**: Go (Golang) 1.26
+- **Core Tech**: Go (Golang) (check go.mod for version)
 - **Styling**: Tailwind CSS (standalone CLI)
 - **Content**: Markdown with YAML frontmatter
 - **Architecture**: Single-binary generator that renders templates into a `dist/` directory.

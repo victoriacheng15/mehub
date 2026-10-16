@@ -44,7 +44,7 @@ help:
 # ==============================================================================
 # Go Build & Toolchain Targets
 # ==============================================================================
-GO_VERSION=1.26.0
+GO_VERSION ?= $(shell awk '/^go / {print $$2}' go.mod)
 GO_TAR=go$(GO_VERSION).linux-amd64.tar.gz
 GO_DIR=./go-dist
 
@@ -147,7 +147,7 @@ DEV_CONTAINER=mehub-dev
 
 ## dev-build: Build the local development container image.
 dev-build:
-	podman build -f Dockerfile.dev -t $(DEV_IMAGE) .
+	podman build --build-arg GO_VERSION=$(GO_VERSION) -f Dockerfile.dev -t $(DEV_IMAGE) .
 
 ## dev-run: Run an interactive shell inside the dev container with the repo mounted.
 dev-run:
