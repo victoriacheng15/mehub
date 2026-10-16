@@ -3,11 +3,13 @@
 #   make dev-run     # Start the hot-reload watcher with repo mounted
 #   make dev-clean   # Remove the image
 
+ARG GO_VERSION=1.27.2
+
 # =============================================================================
 # STAGE 1: tools
 # Builds and downloads all binaries. Nothing from this stage leaks into dev.
 # =============================================================================
-FROM golang:1.26-alpine AS tools
+FROM golang:${GO_VERSION}-alpine AS tools
 
 RUN apk add --no-cache curl
 
@@ -22,7 +24,7 @@ RUN curl -sL https://github.com/tailwindlabs/tailwindcss/releases/latest/downloa
 # Lean runtime. Copies binaries from tools, adds only what air needs to run
 # make targets and shell scripts.
 # =============================================================================
-FROM golang:1.26-alpine AS dev
+FROM golang:${GO_VERSION}-alpine AS dev
 
 # make + bash: required to run Makefile targets inside air's build cmd
 # gcompat + libgcc + libstdc++: runtime deps for the Tailwind v4 Bun binary on Alpine/musl
