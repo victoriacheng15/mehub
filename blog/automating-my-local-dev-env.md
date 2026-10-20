@@ -3,7 +3,6 @@ title: "Automating My Local Dev Env"
 description: "Containerizing a static site workflow with Podman, Go, and live reloading automates manual rebuild loops and eliminates repetitive local development environment friction."
 date: 2026-10-20
 tags: ["platform", "go", "automation"]
-draft: true
 ---
 
 ## Containerizing the Build Toolchain
