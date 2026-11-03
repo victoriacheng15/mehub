@@ -3,7 +3,6 @@ title: "Migrating Serverless Workloads to Go"
 description: "Rewriting the Cover Craft serverless API in Go eliminated node_modules packaging bloat, cut deployment sizes by 73 percent, and reduced CI build durations by two minutes."
 date: 2026-11-03
 tags: ["go", "platform", "cloud"]
-draft: true
 ---
 
 ## The Serverless Node.js Packaging Tax
