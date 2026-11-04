@@ -1,12 +1,11 @@
 {
-  "updated_date": "2026-09-16",
+  "updated_date": "2026-11-04",
   "forks": {
     "victoriacheng15/backstage": "backstage/backstage",
     "victoriacheng15/career-ops": "career-ops-hq/career-ops",
     "victoriacheng15/chaos-mesh": "chaos-mesh/chaos-mesh",
     "victoriacheng15/contribute-site": "cncf/contribute-site",
     "victoriacheng15/godog": "cucumber/godog",
-    "victoriacheng15/litmus": "litmuschaos/litmus",
     "victoriacheng15/meshery": "meshery/meshery",
     "victoriacheng15/meshery.io": "meshery/meshery.io",
     "victoriacheng15/open-community-groups": "cncf/open-community-groups",
