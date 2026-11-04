@@ -52,15 +52,27 @@ skills:
   - name: TypeScript
     icon: typescript.svg
 
-# ☁️ Cloud & Infrastructure
+# ☁️ Cloud, Systems & Infrastructure
   - name: Kubernetes
     icon: kubernetes.svg
-  - name: Terraform
-    icon: terraform.svg
+  - name: Cilium (eBPF)
+    icon: cilium.svg
   - name: ArgoCD
     icon: argo.svg
+  - name: Terraform
+    icon: terraform.svg
+  - name: Ansible
+    icon: ansible.svg
+  - name: Proxmox
+    icon: proxmox.svg
   - name: Docker
     icon: docker.svg
+  - name: Linux
+    icon: linux.svg
+  - name: Tailscale
+    icon: tailscale.svg
+  - name: GitHub Actions
+    icon: githubactions.svg
   - name: Azure
     icon: azure.svg
   - name: AWS
@@ -73,16 +85,6 @@ skills:
     icon: prometheus.svg
   - name: Grafana
     icon: grafana.svg
-
-  # Systems & Security
-  - name: Cilium (eBPF)
-    icon: cilium.svg
-  - name: GitHub Actions
-    icon: githubactions.svg
-  - name: Linux
-    icon: linux.svg
-  - name: Tailscale
-    icon: tailscale.svg
 
 # 🛠 Backend & Frontend
   - name: PostgreSQL

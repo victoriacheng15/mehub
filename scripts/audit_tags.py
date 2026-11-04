@@ -2,16 +2,19 @@
 """
 Audit blog post tags.
 
-- Prints all unique tags across the blog directory.
+- Extracts tags dynamically from all blog markdown files.
+- Validates tag naming format (lowercase kebab-case).
+- Detects spelling typos and near-duplicate tag collisions across the corpus.
 - Validates that every engineering log post carries the 'retrospective' tag.
 - Validates that no non-engineering-log post carries the 'retrospective' tag.
 - Validates that no post exceeds MAX_TAGS tags.
-- Validates that all tags belong to the known tag list.
 - Exits with code 1 if any violations are found.
 """
 
 from __future__ import annotations
 
+from collections import Counter
+import difflib
 import os
 import re
 import sys
@@ -20,35 +23,11 @@ BLOG_DIR = os.path.join(os.path.dirname(__file__), "..", "blog")
 ENGINEERING_LOG_PREFIX = "engineering-log-"
 REQUIRED_TAG = "retrospective"
 MAX_TAGS = 3
-
-KNOWN_TAGS = {
-    "backend",
-    "career",
-    "cloud",
-    "cncf",
-    "data-structure",
-    "docker",
-    "frontend",
-    "git",
-    "go",
-    "javascript",
-    "kubernetes",
-    "linux",
-    "mcp",
-    "monthly-log",
-    "observability",
-    "platform",
-    "productivity",
-    "python",
-    "retrospective",
-    "sre",
-    "system-design",
-    "terraform",
-    "typescript",
-}
+TYPO_CUTOFF = 0.8
 
 TAG_PATTERN = re.compile(r'^tags:\s*\[([^\]]+)\]', re.MULTILINE)
 SINGLE_TAG = re.compile(r'"([^"]+)"')
+KEBAB_CASE = re.compile(r'^[a-z0-9]+(-[a-z0-9]+)*$')
 
 
 def parse_tags(content: str) -> list[str]:
@@ -58,7 +37,38 @@ def parse_tags(content: str) -> list[str]:
     return SINGLE_TAG.findall(match.group(1))
 
 
-def run_checks(filename: str, tags: list[str]) -> list[str]:
+def check_tag_spelling(
+    tag: str,
+    tag_counts: Counter[str],
+    all_tags: set[str],
+) -> list[str]:
+    """Validate tag format and check for near-duplicate typos across all blog tags."""
+    issues = []
+
+    # Format check: must be lowercase kebab-case.
+    if not KEBAB_CASE.match(tag):
+        suggested = re.sub(r'[^a-z0-9]+', '-', tag.lower()).strip('-')
+        if suggested:
+            issues.append(f"tag '{tag}' must be lowercase kebab-case (did you mean '{suggested}'?)")
+        else:
+            issues.append(f"tag '{tag}' is invalid: must be lowercase alphanumeric with hyphens")
+        return issues
+
+    # Fuzzy typo check: compare against other tags in the blog corpus.
+    candidates = [t for t in all_tags if t != tag and tag_counts[t] >= tag_counts[tag]]
+    matches = difflib.get_close_matches(tag, candidates, n=1, cutoff=TYPO_CUTOFF)
+    if matches:
+        issues.append(f"possible typo in tag '{tag}' (did you mean '{matches[0]}'?)")
+
+    return issues
+
+
+def run_checks(
+    filename: str,
+    tags: list[str],
+    tag_counts: Counter[str],
+    all_tags: set[str],
+) -> list[str]:
     """Return a list of violation strings for a single post."""
     issues = []
 
@@ -74,29 +84,36 @@ def run_checks(filename: str, tags: list[str]) -> list[str]:
     if len(tags) > MAX_TAGS:
         issues.append(f"exceeds {MAX_TAGS} tags ({len(tags)} found: {tags})")
 
-    # Unknown tags.
-    unknown = sorted(set(tags) - KNOWN_TAGS)
-    if unknown:
-        issues.append(f"unknown tag(s): {unknown}")
+    # Spelling and format checks.
+    for tag in tags:
+        issues.extend(check_tag_spelling(tag, tag_counts, all_tags))
 
     return issues
 
 
 def main() -> int:
-    all_tags: set[str] = set()
+    all_tags_list: list[str] = []
+    parsed_posts: list[tuple[str, list[str]]] = []
     violations: dict[str, list[str]] = {}
 
     posts = sorted(f for f in os.listdir(BLOG_DIR) if f.endswith(".md"))
 
+    # Pass 1: Dynamically extract all tags from the blog markdown files.
     for filename in posts:
         path = os.path.join(BLOG_DIR, filename)
         with open(path, encoding="utf-8") as fh:
             content = fh.read()
 
         tags = parse_tags(content)
-        all_tags.update(tags)
+        all_tags_list.extend(tags)
+        parsed_posts.append((filename, tags))
 
-        issues = run_checks(filename, tags)
+    tag_counts = Counter(all_tags_list)
+    all_tags = set(all_tags_list)
+
+    # Pass 2: Run validation checks across posts and tag corpus.
+    for filename, tags in parsed_posts:
+        issues = run_checks(filename, tags, tag_counts, all_tags)
         if issues:
             violations[filename] = issues
 
@@ -108,12 +125,13 @@ def main() -> int:
         f"engineering log posts carry '{REQUIRED_TAG}'",
         f"no non-engineering-log posts carry '{REQUIRED_TAG}'",
         f"no post exceeds {MAX_TAGS} tags",
-        "all tags are known",
+        "all tags follow lowercase kebab-case format",
+        "no spelling typos or near-duplicate tag collisions detected",
     ]
 
     print("\n=== Tag audit ===")
     if violations:
-        print(f"FAIL — {len(violations)} post(s) with violations:\n")
+        print(f"FAIL: {len(violations)} post(s) with violations:\n")
         for filename, issues in violations.items():
             print(f"  {filename}")
             for issue in issues:
@@ -121,7 +139,7 @@ def main() -> int:
         return 1
 
     for check in checks:
-        print(f"OK — {check}")
+        print(f"OK: {check}")
     return 0
 
 

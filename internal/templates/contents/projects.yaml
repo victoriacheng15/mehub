@@ -20,9 +20,22 @@ projects:
       - AWS
       - Terraform
       - GitHub Actions
+  - title: Kubernetes Homelab
+    emoji: ☸️
+    shortDescription: Bare-metal dual-node Proxmox VE cluster with OpenTofu IaC, Ansible OS baselines, Cilium eBPF overlay networking, declarative ArgoCD GitOps, and an external Raspberry Pi quorum tiebreaker.
+    link: kubernetes-homelab
+    techs:
+      - Proxmox VE
+      - Ansible
+      - IaC
+      - Kubernetes
+      - Cilium (eBPF)
+      - ArgoCD
+      - Prometheus
+      - Grafana
   - title: LLM Telemetry Gateway
     emoji: 📡
-    shortDescription: AIOps engine with PII masking monitoring a Go completions proxy and Python sidecar over UDS, utilizing a local Ollama LLM for automated root cause analysis on metric anomalies and chaos faults. 
+    shortDescription: AIOps engine with PII masking monitoring a Go completions proxy and Python sidecar over UDS, utilizing a local Ollama LLM for automated root cause analysis on metric anomalies and chaos faults.
     link: llm-telemetry-gateway
     techs:
       - Go
