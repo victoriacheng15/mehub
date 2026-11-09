@@ -7,7 +7,7 @@ require (
 	github.com/tdewolff/minify/v2 v2.24.24
 	github.com/yuin/goldmark v1.8.7
 	github.com/yuin/goldmark-highlighting/v2 v2.0.0-20230729083705-37449abec8cc
-	go.yaml.in/yaml/v4 v4.0.0-rc.6
+	go.yaml.in/yaml/v4 v4.0.0
 )
 
 require (
