@@ -3,7 +3,6 @@ title: "Deciphering Linux File System Access Permissions"
 description: "A breakdown of how to read and calculate local Linux file permissions, decoding the symbolic rwx triplets and octal numeric codes to clearly define system access levels."
 date: 2026-11-17
 tags: ["linux", "platform"]
-draft: true
 ---
 
 ## Understanding Permissions Friction
